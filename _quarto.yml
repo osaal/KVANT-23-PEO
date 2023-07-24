@@ -1,9 +1,6 @@
 project:
   type: book
   output-dir: docs
-  
-execute:
-  freeze: auto
 
 book:
   title: "Kvantitatiiviset menetelmät, syksy 2023"
