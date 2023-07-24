@@ -11,6 +11,9 @@ book:
     - index.qmd
     - intro.qmd
     - summary.qmd
+    - part: "Tilastotiede"
+      chapters:
+      - sijaintiluvut.qmd
     - part: "Excel-toiminnot"
       chapters:
       - perustoiminnot.qmd

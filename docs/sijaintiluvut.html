@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Oliver Saal">
 
-<title>Kvantitatiiviset menetelmät, syksy 2023</title>
+<title>Kvantitatiiviset menetelmät, syksy 2023 - 3&nbsp; Sijaintiluvut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./perustoiminnot.html" rel="next">
+<link href="./summary.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +61,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -73,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Aluksi</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sijaintiluvut.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./sijaintiluvut.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
@@ -100,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aluksi</span></a>
   </div>
 </li>
@@ -127,8 +129,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">sijaintiluvut.html</span></span></a>
+  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
       </ul>
@@ -166,10 +168,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#aluksi" id="toc-aluksi" class="nav-link active" data-scroll-target="#aluksi">Aluksi</a>
-  <ul class="collapse">
-  <li><a href="#tekijänoikeudet" id="toc-tekijänoikeudet" class="nav-link" data-scroll-target="#tekijänoikeudet">Tekijänoikeudet</a></li>
-  </ul></li>
+  <li><a href="#moodi" id="toc-moodi" class="nav-link active" data-scroll-target="#moodi"><span class="header-section-number">3.1</span> Moodi</a></li>
+  <li><a href="#mediaani" id="toc-mediaani" class="nav-link" data-scroll-target="#mediaani"><span class="header-section-number">3.2</span> Mediaani</a></li>
+  <li><a href="#fraktiilit" id="toc-fraktiilit" class="nav-link" data-scroll-target="#fraktiilit"><span class="header-section-number">3.3</span> Fraktiilit</a></li>
+  <li><a href="#keskiarvo" id="toc-keskiarvo" class="nav-link" data-scroll-target="#keskiarvo"><span class="header-section-number">3.4</span> Keskiarvo</a></li>
+  <li><a href="#moodin-mediaanin-ja-keskiarvon-yhteys" id="toc-moodin-mediaanin-ja-keskiarvon-yhteys" class="nav-link" data-scroll-target="#moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">3.5</span> Moodin, mediaanin ja keskiarvon yhteys</a></li>
   </ul>
 </nav>
     </div>
@@ -178,26 +181,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kvantitatiiviset menetelmät, syksy 2023</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Tekijä</div>
-    <div class="quarto-title-meta-contents">
-             <p>Oliver Saal </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Julkaistu</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">24. heinäkuuta 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -205,17 +196,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="aluksi" class="level1 unnumbered">
-<h1 class="unnumbered">Aluksi</h1>
-<p>Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille <em>Kvantitatiiviset menetelmät</em>.</p>
-<p>Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).</p>
-<p>Mukavia tilastollisia työhetkiä!</p>
-<section id="tekijänoikeudet" class="level2">
-<h2 class="anchored" data-anchor-id="tekijänoikeudet">Tekijänoikeudet</h2>
-<p>Tämä verkkokirja käyttää <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen</a> (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.</p>
+<section id="moodi" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="moodi"><span class="header-section-number">3.1</span> Moodi</h2>
+<p><strong>Mittausasteikot</strong>: Kaikki</p>
+<p><strong>Moodi</strong> on jakauman tyypillisin arvo. Moodin voi saada laskemalla jokaisen arvon esiintymisen, jolloin eniten esiintyvä arvo on jakauman moodi.</p>
+<p>Jakauma voi olla <strong>unimodaalinen</strong> (yksi moodi), <strong>bimodaalinen</strong> (kaksi moodia) tai <strong>multimodaalinen</strong> (kolme moodia). Alla olevat kuvat näyttävät nämä modaalisuudet.</p>
+<p>Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja. Positiivisen ja negatiivisen vinouman normaalijakaumissa moodi pysyy samana, mutta keskiarvo ja mediaani muuttuvat. Kurtoosi ei vaikuta normaalijakauman moodiin.</p>
+<p>Uniformijakaumassa kaikki datapisteet ovat jakauman moodeja, koska jokainen esiintyy yhtä useasti.</p>
+<p>Moodi kirjoitetaan useimmiten merkeillä <span class="math inline">\(\text{Mo}\)</span>.</p>
+</section>
+<section id="mediaani" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="mediaani"><span class="header-section-number">3.2</span> Mediaani</h2>
+<p><strong>Mittausasteikot</strong>: Järjestys-, välimatka- ja suhdeasteikko</p>
+<p><strong>Mediaani</strong> on jakauman keskipistearvo. Mediaanin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla janan kahteen tasakokoiseen osaan. Jos jakaumaan kuuluu pariton määrä arvoja, mediaani on janan keskipiste. Jos jakaumaan kuuluu parillinen määrä arvoja, mediaani on kahden keskeisimmän arvon keskiarvo, <span class="math inline">\(\frac{a+b}{2}\)</span>.</p>
+<p>Jakaumassa voi aina olla vain yksi mediaani.</p>
+<p>Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja. Mediaaniin vaikuttaa vinouma, joskin ei yhtä paljon kuin keskiarvoon. Kurtoosi ei vaikuta normaalijakauman mediaaniin.</p>
+<p>Mediaani kirjoitetaan useimmiten merkeillä <span class="math inline">\(\text{Md}\)</span> tai <span class="math inline">\(\text{M}\)</span>.</p>
+</section>
+<section id="fraktiilit" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="fraktiilit"><span class="header-section-number">3.3</span> Fraktiilit</h2>
+<p><strong>Mittausasteikot</strong>: Järjestys-, välimatka- ja suhdeasteikko</p>
+<p><strong>Fraktiilit</strong> (sanasta <em>fraction</em>; vaihtoehtoisesti kvantiilit, sanasta <em>quantity</em>) ovat yleistyksiä mediaanista. Fraktiileja löytyy useampia, joista yleisimmät ovat <strong>kvartiilit</strong> (neljäsosat), <strong>kvintiilit</strong> (viidesosat), <strong>desiilit</strong> (kymmenesosat) ja <strong>persentiilit</strong> (sadasosat).</p>
+<p>Fraktiilin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla jana tiettyyn määrään samankokoisiin osiin. Fraktiilin nimi kertoo, kuinka monta osaa: kvartiilit edustavat neljää osaa, kvintiilit viittä osaa, desiilit kymmentä osaa ja persintiilit sataa osaa.</p>
+<p>Fraktiilit ilmaistaan numerosarjana jossa on <span class="math inline">\(k-1\)</span> numeroa. Kvartiileille ilmaistaan siis kolme arvoa (ensimmäinen, toinen ja kolmas kvartiili), desiileille yhdeksän arvoa, ja persentiileille 99 arvoa. Käytännössä yleensä ilmaistaan vain ne, joista ollaan kiinnostuneita, varsinkin persentiilien kohdalla.</p>
+<p>Kvartiileille toinen kvartiili on sama kuin mediaani. Jos ensimmäinen kvartiili on pienimmät 25 % jakaumasta, ja toinen kvartiili on seuraavat 25 %, niin yhteensä ne edustavat 50 % jakaumasta, samoin kuin mediaani.</p>
+<p>Fraktiili voi olla <em>inklusiivisia</em> tai <em>ekslusiivisia</em>. Inklusiivinen fraktiili sisältää raja-arvon, ekslusiivinen fraktiili ei sisällä raja-arvoa. Joka tapauksessa fraktiilin arvo edustaa arvoa, jonka <em>alle</em> jää X määrä jakaumasta.</p>
+<p>Esimerkkinä septiilit, eli seitsemännesosat. Ensimmäinen septiili (inklusiivinen) edustaa prosenttiosuuksia 0-7 %, toinen septiili prosenttiosuuksia 8-14 %, jne., ja kuudes septiili osuuksia 94-100 %. Tällöin toisen septiilin alle jää 14 % kaikesta datasta ja ylle jää <span class="math inline">\(100-14 = 86\%\)</span>. Yleistäen voi siis sanoa, että N:n septiilin alle jää aina <span class="math inline">\((7*N)\%\)</span> ja ylle jää <span class="math inline">\(100-(7*N)\%\)</span>.</p>
+<p>Kvartiilit kirjoitetaan useimmiten muotoon <span class="math inline">\(Q_n\)</span>, jossa <span class="math inline">\(n\)</span> on kvartiilin järjestysnumero. Ensimmäinen kvartiili on <span class="math inline">\(Q_1\)</span>, toinen kvartiili (mediaani) on <span class="math inline">\(Q_2\)</span>, ja kolmas kvartiili on <span class="math inline">\(Q_3\)</span>. Muille fraktiileille ei löydy yleistä kirjoitusmuotoa.</p>
+</section>
+<section id="keskiarvo" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="keskiarvo"><span class="header-section-number">3.4</span> Keskiarvo</h2>
+<p><strong>Mittausasteikot</strong>: Välimatka- ja suhdeasteikko</p>
+<p>(Aritmeettinen) <strong>Keskiarvo</strong> on jakauman painoitettu keskipiste, jossa painona käytetään jokaisen datapisteen esiintymistä. Keskiarvo lasketaan summaamalla kaikki datapisteet yhteen ja jakamalla tulos datapisteiden määrällä, <span class="math inline">\(N\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<p><span class="math display">\[\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_k}{N} = \frac{1}{N}(\sum_{i = 1}^{k}x_i)\]</span></p>
+<p>Keskiarvo ei ole robusti sijaintimitta. Se vaikuttuu suuresti ääripääarvoista. Normaalijakaumassa mediaani, keskiarvo ja moodi ovat kaikki samoja. Vinouman myötä keskiarvo siirtyy vinouman suuntaan (oikealle positiivisessa ja vasemmalle negatiivisessa vinoumassa). Kurtoosi ei vaikuta keskiarvoon.</p>
+<p>Keskiarvo on kuitenkin erittäin oleellinen useimmissa tilastollisissa malleissa. Keskiarvoa käytetään niin sanottuna <strong>nollamallina</strong>, eli datajakaumaa “huonoiten” kuvaavana mallina. Useimmiten hypoteeseilla testataan siksi, eroaako jokin malli keskiarvon selitekyvystä. Jos ei, malli ei ole keskiarvoa parempi (eli on huono).</p>
+<p>Vakaampana keskiarvomittarina voidaan käyttää <strong>rajattua keskiarvoa</strong> (engl. <em>trimmed mean</em>). Tällöin poistetaan ensin tietty prosenttiosuus jakauman ääripäistä, ja lasketaan sitten keskiarvo jäljelle jäävälle datalle. Yleinen prosenttiraja on 95 %, eli poistetaan 5 % (kaksi ja puoli prosenttia molemmista päistä) ja lasketaan keskiarvo jäljelle jäävälle osuudelle. Jos rajattu keskiarvo on hyvin samanlainen kuin keskiarvo, ääripääarvot eivät vaikuta suuresti keskiarvoon.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</section>
+<section id="moodin-mediaanin-ja-keskiarvon-yhteys" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">3.5</span> Moodin, mediaanin ja keskiarvon yhteys</h2>
 
 
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Jonkun arvon jakaminen <span class="math inline">\(N\)</span>:llä on sama kuin sen kertominen luvulla <span class="math inline">\(1/N\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Tämä pätee vain keskiarvolle, ja vain yksinmuuttujakontekstissa. Monimuuttujakontekstissa ääripääarvot voivat olla ongelmallisia vaikka eivät vaikuttaisi yksittäisen muuttujan keskiarvoon. Rajatun ja tavallisen keskiarvon samankokoisuus ei siis takaa luotettavia analyyseja itsessään!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -454,10 +482,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./summary.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./perustoiminnot.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
