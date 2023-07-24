@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+/_book/
+
+*.Rproj
+*.pdf
+
+/.quarto/
+

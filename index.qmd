@@ -1,0 +1,11 @@
+# Aluksi {.unnumbered}
+
+Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille *Kvantitatiiviset menetelmät*.
+
+Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).
+
+Mukavia tilastollisia työhetkiä!
+
+## Tekijänoikeudet
+
+Tämä verkkokirja käyttää [Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen](https://creativecommons.org/licenses/by-nc/4.0/deed.fi) (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.

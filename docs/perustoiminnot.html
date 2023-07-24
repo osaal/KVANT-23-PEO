@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Kvantitatiiviset menetelmät, syksy 2023 - 3&nbsp; Funktiot</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./summary.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./perustoiminnot.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./perustoiminnot.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funktiot</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aluksi</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Excel-toiminnot</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sisällysluettelo</h2>
+   
+  <ul>
+  <li><a href="#tietofunktiot" id="toc-tietofunktiot" class="nav-link active" data-scroll-target="#tietofunktiot"><span class="header-section-number">3.1</span> Tietofunktiot</a>
+  <ul class="collapse">
+  <li><a href="#on-toiminnot" id="toc-on-toiminnot" class="nav-link" data-scroll-target="#on-toiminnot"><span class="header-section-number">3.1.1</span> ON-toiminnot</a></li>
+  <li><a href="#puuttuu" id="toc-puuttuu" class="nav-link" data-scroll-target="#puuttuu"><span class="header-section-number">3.1.2</span> PUUTTUU</a></li>
+  <li><a href="#solu" id="toc-solu" class="nav-link" data-scroll-target="#solu"><span class="header-section-number">3.1.3</span> SOLU</a></li>
+  </ul></li>
+  <li><a href="#loogiset-funktiot" id="toc-loogiset-funktiot" class="nav-link" data-scroll-target="#loogiset-funktiot"><span class="header-section-number">3.2</span> Loogiset funktiot</a>
+  <ul class="collapse">
+  <li><a href="#tosi-ja-epätosi" id="toc-tosi-ja-epätosi" class="nav-link" data-scroll-target="#tosi-ja-epätosi"><span class="header-section-number">3.2.1</span> TOSI ja EPÄTOSI</a></li>
+  <li><a href="#ja" id="toc-ja" class="nav-link" data-scroll-target="#ja"><span class="header-section-number">3.2.2</span> JA</a></li>
+  <li><a href="#jos-funktiot" id="toc-jos-funktiot" class="nav-link" data-scroll-target="#jos-funktiot"><span class="header-section-number">3.2.3</span> JOS-funktiot</a></li>
+  <li><a href="#ei" id="toc-ei" class="nav-link" data-scroll-target="#ei"><span class="header-section-number">3.2.4</span> EI</a></li>
+  <li><a href="#tai-ja-ehdoton.tai" id="toc-tai-ja-ehdoton.tai" class="nav-link" data-scroll-target="#tai-ja-ehdoton.tai"><span class="header-section-number">3.2.5</span> TAI ja EHDOTON.TAI</a></li>
+  <li><a href="#lambda" id="toc-lambda" class="nav-link" data-scroll-target="#lambda"><span class="header-section-number">3.2.6</span> LAMBDA</a></li>
+  <li><a href="#bycol-byrow-ja-map" id="toc-bycol-byrow-ja-map" class="nav-link" data-scroll-target="#bycol-byrow-ja-map"><span class="header-section-number">3.2.7</span> BYCOL, BYROW ja MAP</a></li>
+  </ul></li>
+  <li><a href="#haku--ja-viitefunktiot" id="toc-haku--ja-viitefunktiot" class="nav-link" data-scroll-target="#haku--ja-viitefunktiot"><span class="header-section-number">3.3</span> Haku- ja viitefunktiot</a></li>
+  <li><a href="#matemaattiset-ja-trigonometriset-funktiot" id="toc-matemaattiset-ja-trigonometriset-funktiot" class="nav-link" data-scroll-target="#matemaattiset-ja-trigonometriset-funktiot"><span class="header-section-number">3.4</span> Matemaattiset ja trigonometriset funktiot</a></li>
+  <li><a href="#tilastolliset-funktiot" id="toc-tilastolliset-funktiot" class="nav-link" data-scroll-target="#tilastolliset-funktiot"><span class="header-section-number">3.5</span> Tilastolliset funktiot</a></li>
+  <li><a href="#tekstifunktiot" id="toc-tekstifunktiot" class="nav-link" data-scroll-target="#tekstifunktiot"><span class="header-section-number">3.6</span> Tekstifunktiot</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funktiot</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout callout-style-default callout-note callout-titled" title="Lähde">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lähde
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Funktioiden määritelmät ja käyttökuvaukset ovat haettu Excelin dokumentaatiosta. Dokumentaatiosta löytyy enemmän funktioita; kuvailen tässä ne, jotka voivat olla eniten hyödyllisiä työssäsi. Löydät kaikki Excelin funktiot ryhmitettynä luokkiin täältä: <a href="https://support.microsoft.com/fi-fi/office/excelin-funktiot-luokittain-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">Excelin funktiot (luokittain)</a></p>
+</div>
+</div>
+<section id="tietofunktiot" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="tietofunktiot"><span class="header-section-number">3.1</span> Tietofunktiot</h2>
+<section id="on-toiminnot" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="on-toiminnot"><span class="header-section-number">3.1.1</span> ON-toiminnot</h3>
+<p><code>=FUNKTIO(soluarvo)</code></p>
+<p>ON-toiminnot palauttavat totuusarvon <code>TOSI</code>, jos niiden vaatimus solulle täyttyy. Jos vaatimus ei täyty, toiminnot palauttavat totuusarvon <code>EPÄTOSI</code>.</p>
+<p>Soluarvo voi olla arvo itsessään tai viittaus toiseen soluun.</p>
+<p>Toiminnot ja niiden vaatimukset:</p>
+<ul>
+<li>ONTYHJÄ: Onko soluarvo tyhjä?</li>
+<li>ONVIRH: Onko soluarvo jotain muuta, kuin <code>#PUUTTUU!</code>? (Eli ONPUUTTUU-toiminnon vastakohta)</li>
+<li>ONVIRHE: Onko soluarvo jokin virhearvo? (<code>#PUUTTUU!, #ARVO!, #VIITTAUS!, #JAKO/0!, #LUKU!, #NIMI?, #TYHJÄ!</code>)</li>
+<li>ONTOTUUS: Onko soluarvo totuusarvo? (<code>TOSI</code> tai <code>EPÄTOSI</code>)</li>
+<li>ONPUUTTUU: Onko soluarvo virhearvo <code>#PUUTTUU!</code>? (Eli ONVIRH-toiminnon vastakohta)</li>
+<li>ONEI_TEKSTI: Onko soluarvo jotain muuta kun tekstiä? Palauttaa TOSI, jos soluarvo on tyhjä solu.</li>
+<li>ONLUKU: Onko soluarvo luku?</li>
+<li>ONVIITT: Onko soluarvo viittaus toiseen paikkaan?</li>
+<li>ONTEKSTI: Onko soluarvo tekstiä?</li>
+<li>ONPARILLINEN: Onko soluarvo parillinen? (Eli ONPARITON-toiminnon vastakohta)</li>
+<li>ONPARITON: Onko soluarvo pariton? (Eli ONPARILLINEN-toiminnon vastakohta)</li>
+<li>ONKAAVA: Onko soluarvo kaava?</li>
+</ul>
+</section>
+<section id="puuttuu" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="puuttuu"><span class="header-section-number">3.1.2</span> PUUTTUU</h3>
+<p><code>=PUUTTUU()</code></p>
+<p>Palauttaa virhearvon <code>#PUUTTUU!</code>.</p>
+</section>
+<section id="solu" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="solu"><span class="header-section-number">3.1.3</span> SOLU</h3>
+<p><code>=SOLU(kuvaus_laji; viittaus)</code></p>
+<p>Palauttaa tietoa soluviittauksesta.</p>
+<p>Viittausalue määritellään <code>viittaus</code>-kohdassa. Tietopyyntö määritellään <code>kuvaus_laji</code>-kohdassa.</p>
+<p>Tietopyyntöjen eri määritelmät:</p>
+<table class="table">
+<caption>SOLU-funktion <code>kuvaus_laji</code>-avainsanat</caption>
+<thead>
+<tr class="header">
+<th>Avainsana</th>
+<th>Palautus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“osoite”</td>
+<td>Soluviittauksen osoite tekstinä (esim. A2)</td>
+</tr>
+<tr class="even">
+<td>“sarake”</td>
+<td>Solun sarake numerona (esim. 2 sarakkeelle B)</td>
+</tr>
+<tr class="odd">
+<td>“väri”</td>
+<td>Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.</td>
+</tr>
+<tr class="even">
+<td>“sisältö”</td>
+<td>Solun arvon (esim. 1000 tai “Hei”)</td>
+</tr>
+<tr class="odd">
+<td>“tiedostonimi”</td>
+<td>Solun sisältävän tiedoston nimen. Palauttaa tyhjää “” jos tiedostoa ei ole tallennettu.</td>
+</tr>
+<tr class="even">
+<td>“muoto”</td>
+<td>Solun lukumuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot <a href="https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf">funktion apusivuilta</a></td>
+</tr>
+<tr class="odd">
+<td>“sulkeet”</td>
+<td>Arvo 1, jos solun positiiviset/kaikki arvot esitetään sulkeissa. Muuten arvo 0.</td>
+</tr>
+<tr class="even">
+<td>“etuliite”</td>
+<td>Solun tasausmuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot <a href="https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf">funktion apusivuilta</a></td>
+</tr>
+<tr class="odd">
+<td>“suojaus”</td>
+<td>Arvo 1, jos solu on lukittu, tai arvo 0, jos solua ei ole lukittu.</td>
+</tr>
+<tr class="even">
+<td>“rivi”</td>
+<td>Solun rivi numerona (esim. 2 riville 2)</td>
+</tr>
+<tr class="odd">
+<td>“tyyppi”</td>
+<td>Solun sisällön tyyppi erityisenä merkkijonona. Palauttaa “h” jos solu on tyhjä, “o” jos solussa on tekstivakio, ja muuten “r”.</td>
+</tr>
+<tr class="even">
+<td>“leveys”</td>
+<td>Palauttaa kaksikohteisen matriisin. Ensimmäisessä kohteessa on solun sarakeleveys. Toisessa kohteessa on totuusarvo TOSI, jos kyseinen leveys on oletusarvo, ja EPÄTOSI jos leveyttä on muutettu käyttäjän toimesta.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="loogiset-funktiot" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="loogiset-funktiot"><span class="header-section-number">3.2</span> Loogiset funktiot</h2>
+<section id="tosi-ja-epätosi" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="tosi-ja-epätosi"><span class="header-section-number">3.2.1</span> TOSI ja EPÄTOSI</h3>
+<p><code>=TOSI()</code>, <code>=EPÄTOSI()</code></p>
+<p>Palauttavat totuusarvot TOSI tai EPÄTOSI, nimensä mukaan. Voit vaihtoehtoisesti käyttää sanoja TOSI tai EPÄTOSI funktioiden sijaan.</p>
+</section>
+<section id="ja" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="ja"><span class="header-section-number">3.2.2</span> JA</h3>
+<p><code>=JA(arg1; arg2; ...)</code></p>
+<p>Palauttaa totuusarvon TOSI, jos kaikki funktion argumenttien arvot ovat TOSI. Palauttaa EPÄTOSI, jos vähintään yksi funktion argumenteista on EPÄTOSI.</p>
+<p>TAI-funktion vastakohta.</p>
+<p>Argumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.</p>
+<p>Funktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.</p>
+<p>Käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.</p>
+</section>
+<section id="jos-funktiot" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="jos-funktiot"><span class="header-section-number">3.2.3</span> JOS-funktiot</h3>
+<p><code>=JOS(arvioitava; jostosi; josepätosi)</code></p>
+<p>Arvioi loogisen funktion argumentissa <code>arvioitava</code>. Käyttäjä määrittelee mitä palautetaan, jos <code>arvioitava</code>-funktion tulos on tosi (argumentti <code>jostosi</code>), sekä jos tulos on epätosi (argumentti <code>josepätosi</code>).</p>
+<p><code>=JOSVIRHE(arvioitava; josvirhe)</code></p>
+<p>Arvioi loogisen funktion argumentissa <code>arvioitava</code>. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon (argumentti <code>josvirhe</code>).</p>
+<p><code>=JOSPUUTTUU(arvioitava; jospuuttuu)</code></p>
+<p>Arvioi loogisen funktion argumentissa <code>arvioitava</code>. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon <code>#PUUTTUU!</code> (argumentti <code>jospuuttuu</code>).</p>
+<p><code>=JOS.JOUKKO(arvioitava1; jostosi1; arvioitava2; jostosi2; ...)</code></p>
+<p>Arvioi yhden tai useamman (korkeintaan 127) loogisen funktion ja palauttaa sitä vastaavan totuusfunktion <code>jostosiN</code>, jos <code>arvioitavaN</code>-funktion tulos on tosi.</p>
+<p>Jokaiselle arvioitavalle funktiolle tulee syöttää yksi TOSI-ehdon alla tuotettava arvo, eli argumentit syötetään pareissa. Yksi ehto arvioidaan kahdella argumentilla (<code>arvioitava1</code>, <code>jostosi1</code>); kaksi ehtoa arvioidaan neljällä argumentilla (<code>arvioitava1</code>, <code>jostosi1</code>, <code>arvioitava2</code>, <code>jostosi2</code>); ja niin edelleen.</p>
+</section>
+<section id="ei" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="ei"><span class="header-section-number">3.2.4</span> EI</h3>
+<p><code>=EI(arvioitava)</code></p>
+<p>Palauttaa argumentin <code>arvioitava</code> totuustuloksen vastakohdan, eli EPÄTOSI jos argumentin tulos on TOSI tai toisinpäin.</p>
+</section>
+<section id="tai-ja-ehdoton.tai" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="tai-ja-ehdoton.tai"><span class="header-section-number">3.2.5</span> TAI ja EHDOTON.TAI</h3>
+<p><code>=TAI(arg1; arg2; ...)</code></p>
+<p>Palauttaa totuusarvon TOSI, jos vähintään yksi funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot on EPÄTOSI.</p>
+<p>JA-funktion vastakohta.</p>
+<p>Argumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.</p>
+<p>Funktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.</p>
+<p>Käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.</p>
+<p><code>=EHDOTON.TAI(arg1; arg2; ...)</code></p>
+<p>Palauttaa totuusarvon TOSI, jos vähintään yksi <em>mutta ei kaikki</em> funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot ovat joko TOSI tai EPÄTOSI.</p>
+<p>Ehdoton versio TAI-funktiosta. Toimii samalla tavalla.</p>
+</section>
+<section id="lambda" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="lambda"><span class="header-section-number">3.2.6</span> LAMBDA</h3>
+<p><code>=LAMBDA(par1; par2; ...; parN; laskutoimitus)</code></p>
+<p>LAMBDA-toiminnolla voit laatia omia funktioitasi. Voit määritellä enintään 253 parametria (vähintään nolla) joita funktioisi käyttää. Voit sitten määritellä mitä funktiosi tekee argumentilla <code>laskutoimitus</code>.</p>
+<p>Toimivan LAMBDA-funktion toteuttamisen jälkeen voit rekisteröidä funktion nimen <strong>Nimien hallinta</strong> -tilassa, jolloin funktiota pystyy käyttämään koko työkirjassa (tai työlehtiössä, jos olet rajannut käytön. Ks. LUKU NIMIEN HALLINNASTA).</p>
+<p>LAMBDA-toiminto kannattaa tehdä kolmessa askeleessa:</p>
+<ol type="1">
+<li>Testaa, että <code>laskutoimitus</code>-kaavasi toimii. Muista luoda sille tapoja reagoida virheisiin (käytä tietofunktioita!)</li>
+<li>Testaa, että koko LAMBDA-funktio toimii. Kirjoita se kokonaisuudessaan soluun, ja lisää loppuun testiarvot omaan sulkuun: <code>=LAMBDA(x; y; x+y+1)(1;2)</code> määrittelee funktion ja ajaa sen testiarvoilla x = 1 ja y = 2.</li>
+<li>Lisää funktio <strong>Nimien hallinta</strong>-tilaan. Muista määritellä oikea käyttöalue (työkirja tai yksittäiset taulukot) sekä antaa kuvaileva nimi ja kommentti. Katso lisää nimien hallinnasta luvusta LUKU NIMIEN HALLINNASTA).</li>
+</ol>
+</section>
+<section id="bycol-byrow-ja-map" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="bycol-byrow-ja-map"><span class="header-section-number">3.2.7</span> BYCOL, BYROW ja MAP</h3>
+<p><code>=BYCOL(matriisi; LAMBDA(sarake))</code>, <code>=BYROW(matriisi; LAMBDA(rivi))</code>, <code>=MAP(matriisi; LAMBDA(solu)</code></p>
+<p>Funktioilla voit suorittaa LAMBDA-funktion määritetyn matriisialueen jokaiselle riville (<code>BYROW</code>), sarakkeelle (<code>BYCOL</code>) tai yksittäiselle solulle (<code>MAP</code>).</p>
+<p>Argumentilla <code>matriisi</code> määrittelet data-alueen, jonka datalla haluat toimittaa LAMBDA-funktion.</p>
+<p>Argumentilla <code>LAMBDA()</code> määrittelet LAMBDA-funktion, mikä tulee ajaa haluamasi data-alueella.</p>
+<p>Määrittele LAMBDA-funktio niin kuin tekisit oman funktion, mutta älä rekisteröi sen nimeä - funktiota käytetään vain tässä kontekstissa.</p>
+<p>Funktiopari <code>BYCOL</code> ja <code>BYROW</code> palauttaa matriisiin kooltaan 1*N, jossa N on kuinka monta kertaa funktio ajettiin. Funktio <code>MAP</code> taas palauttaa matriisin, jonka koko vastaa alkuperäistä data-aluetta (koska funktion LAMBDA-funktio lasketaan jokaiselle solulle).</p>
+<p>Jos määritelty data-alue sisältäisi neljä saraketta, <code>BYCOL</code> palauttaisi 1*4-matriisin. Jos määritelty data-alue taas sisältäisi kolme riviä, <code>BYROW</code> palauttaisi 1*3-matriisin. Jos määritelty data-alue sisältää neljä saraketta ja kolme riviä, <code>MAP</code> palauttaisi 4*3-matriisin.</p>
+<p><code>MAP</code>-funktio osaa myös yhdistää monia solujonoja yhteen. Tällöin funktio palauttaa 1*N-matriisin, jossa N on yhdistettävien solujonojen määrä. Esimerkiksi <code>=MAP(A1:A5; B1:B5; C1:C5; LAMBDA()</code> palauttaa 1*3-matriisin, jossa jokainen solu on LAMBDA-funktion lopputulos kullekin solujonolle (ensin A1:A5, sitten B1:B5, ja viimeiseksi C1:C5).</p>
+<p>Ole tarkkana kun syötät <code>MAP</code>-funktiolle dataa! Jos yhdistät solujonoja, funktiot ajetaan <em>per solujono</em>, mutta jos syötät kokonaisen matriisin, funktiot ajetaan <em>per solu</em>.</p>
+<p>Esimerkki:</p>
+<p><code>=BYCOL(A1:C2; LAMBDA(sarake; MAKS(sarake))</code> palauttaa 1*3-matriisin (koska data-alueella on kolme saraketta, A, B ja C). Jokaisessa solussa on LAMBDA-funktion lopputulos sille sarakkeelle (ensimmäisessä solussa tulos A-sarakkeelle, toisessa B-sarakkeelle ja kolmannessa C-sarakkeelle). Laskettava funktio on <code>MAKS(sarake)</code>, mikä palauttaa sarakkeen suurimman arvon.</p>
+</section>
+</section>
+<section id="haku--ja-viitefunktiot" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="haku--ja-viitefunktiot"><span class="header-section-number">3.3</span> Haku- ja viitefunktiot</h2>
+</section>
+<section id="matemaattiset-ja-trigonometriset-funktiot" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="matemaattiset-ja-trigonometriset-funktiot"><span class="header-section-number">3.4</span> Matemaattiset ja trigonometriset funktiot</h2>
+</section>
+<section id="tilastolliset-funktiot" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="tilastolliset-funktiot"><span class="header-section-number">3.5</span> Tilastolliset funktiot</h2>
+</section>
+<section id="tekstifunktiot" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="tekstifunktiot"><span class="header-section-number">3.6</span> Tekstifunktiot</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopioitu!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopioitu!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./summary.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Viiteluettelo</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

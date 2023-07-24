@@ -1,0 +1,177 @@
+# Funktiot
+
+::: {.callout-note title="Lähde"}
+Funktioiden määritelmät ja käyttökuvaukset ovat haettu Excelin dokumentaatiosta. Dokumentaatiosta löytyy enemmän funktioita; kuvailen tässä ne, jotka voivat olla eniten hyödyllisiä työssäsi. Löydät kaikki Excelin funktiot ryhmitettynä luokkiin täältä: [Excelin funktiot (luokittain)](https://support.microsoft.com/fi-fi/office/excelin-funktiot-luokittain-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
+:::
+
+## Tietofunktiot
+
+### ON-toiminnot
+
+`=FUNKTIO(soluarvo)`
+
+ON-toiminnot palauttavat totuusarvon `TOSI`, jos niiden vaatimus solulle täyttyy. Jos vaatimus ei täyty, toiminnot palauttavat totuusarvon `EPÄTOSI`.
+
+Soluarvo voi olla arvo itsessään tai viittaus toiseen soluun.
+
+Toiminnot ja niiden vaatimukset:
+
+-   ONTYHJÄ: Onko soluarvo tyhjä?
+-   ONVIRH: Onko soluarvo jotain muuta, kuin `#PUUTTUU!`? (Eli ONPUUTTUU-toiminnon vastakohta)
+-   ONVIRHE: Onko soluarvo jokin virhearvo? (`#PUUTTUU!, #ARVO!, #VIITTAUS!, #JAKO/0!, #LUKU!, #NIMI?, #TYHJÄ!`)
+-   ONTOTUUS: Onko soluarvo totuusarvo? (`TOSI` tai `EPÄTOSI`)
+-   ONPUUTTUU: Onko soluarvo virhearvo `#PUUTTUU!`? (Eli ONVIRH-toiminnon vastakohta)
+-   ONEI_TEKSTI: Onko soluarvo jotain muuta kun tekstiä? Palauttaa TOSI, jos soluarvo on tyhjä solu.
+-   ONLUKU: Onko soluarvo luku?
+-   ONVIITT: Onko soluarvo viittaus toiseen paikkaan?
+-   ONTEKSTI: Onko soluarvo tekstiä?
+-   ONPARILLINEN: Onko soluarvo parillinen? (Eli ONPARITON-toiminnon vastakohta)
+-   ONPARITON: Onko soluarvo pariton? (Eli ONPARILLINEN-toiminnon vastakohta)
+-   ONKAAVA: Onko soluarvo kaava?
+
+### PUUTTUU
+
+`=PUUTTUU()`
+
+Palauttaa virhearvon `#PUUTTUU!`.
+
+### SOLU
+
+`=SOLU(kuvaus_laji; viittaus)`
+
+Palauttaa tietoa soluviittauksesta.
+
+Viittausalue määritellään `viittaus`-kohdassa. Tietopyyntö määritellään `kuvaus_laji`-kohdassa.
+
+Tietopyyntöjen eri määritelmät:
+
+| Avainsana | Palautus |
+|------|------|
+|"osoite"|Soluviittauksen osoite tekstinä (esim. A2)|
+|"sarake"|Solun sarake numerona (esim. 2 sarakkeelle B)|
+|"väri"|Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.|
+|"sisältö"|Solun arvon (esim. 1000 tai "Hei")|
+|"tiedostonimi"|Solun sisältävän tiedoston nimen. Palauttaa tyhjää "" jos tiedostoa ei ole tallennettu.|
+|"muoto"|Solun lukumuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf)|
+|"sulkeet"|Arvo 1, jos solun positiiviset/kaikki arvot esitetään sulkeissa. Muuten arvo 0.|
+|"etuliite"|Solun tasausmuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf)|
+|"suojaus"|Arvo 1, jos solu on lukittu, tai arvo 0, jos solua ei ole lukittu.|
+|"rivi"|Solun rivi numerona (esim. 2 riville 2)|
+|"tyyppi"|Solun sisällön tyyppi erityisenä merkkijonona. Palauttaa "h" jos solu on tyhjä, "o" jos solussa on tekstivakio, ja muuten "r".|
+|"leveys"|Palauttaa kaksikohteisen matriisin. Ensimmäisessä kohteessa on solun sarakeleveys. Toisessa kohteessa on totuusarvo TOSI, jos kyseinen leveys on oletusarvo, ja EPÄTOSI jos leveyttä on muutettu käyttäjän toimesta.|
+
+: SOLU-funktion `kuvaus_laji`-avainsanat
+
+## Loogiset funktiot
+
+### TOSI ja EPÄTOSI
+
+`=TOSI()`, `=EPÄTOSI()`
+
+Palauttavat totuusarvot TOSI tai EPÄTOSI, nimensä mukaan. Voit vaihtoehtoisesti käyttää sanoja TOSI tai EPÄTOSI funktioiden sijaan.
+
+### JA
+
+`=JA(arg1; arg2; ...)`
+
+Palauttaa totuusarvon TOSI, jos kaikki funktion argumenttien arvot ovat TOSI. Palauttaa EPÄTOSI, jos vähintään yksi funktion argumenteista on EPÄTOSI.
+
+TAI-funktion vastakohta.
+
+Argumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.
+
+Funktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.
+
+Käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.
+
+### JOS-funktiot
+
+`=JOS(arvioitava; jostosi; josepätosi)`
+
+Arvioi loogisen funktion argumentissa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos `arvioitava`-funktion tulos on tosi (argumentti `jostosi`), sekä jos tulos on epätosi (argumentti `josepätosi`).
+
+`=JOSVIRHE(arvioitava; josvirhe)`
+
+Arvioi loogisen funktion argumentissa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon (argumentti `josvirhe`).
+
+`=JOSPUUTTUU(arvioitava; jospuuttuu)`
+
+Arvioi loogisen funktion argumentissa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon `#PUUTTUU!` (argumentti `jospuuttuu`).
+
+`=JOS.JOUKKO(arvioitava1; jostosi1; arvioitava2; jostosi2; ...)`
+
+Arvioi yhden tai useamman (korkeintaan 127) loogisen funktion ja palauttaa sitä vastaavan totuusfunktion `jostosiN`, jos `arvioitavaN`-funktion tulos on tosi.
+
+Jokaiselle arvioitavalle funktiolle tulee syöttää yksi TOSI-ehdon alla tuotettava arvo, eli argumentit syötetään pareissa. Yksi ehto arvioidaan kahdella argumentilla (`arvioitava1`, `jostosi1`); kaksi ehtoa arvioidaan neljällä argumentilla (`arvioitava1`, `jostosi1`, `arvioitava2`, `jostosi2`); ja niin edelleen.
+
+### EI
+
+`=EI(arvioitava)`
+
+Palauttaa argumentin `arvioitava` totuustuloksen vastakohdan, eli EPÄTOSI jos argumentin tulos on TOSI tai toisinpäin.
+
+### TAI ja EHDOTON.TAI
+
+`=TAI(arg1; arg2; ...)`
+
+Palauttaa totuusarvon TOSI, jos vähintään yksi funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot on EPÄTOSI.
+
+JA-funktion vastakohta.
+
+Argumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.
+
+Funktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.
+
+Käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.
+
+`=EHDOTON.TAI(arg1; arg2; ...)`
+
+Palauttaa totuusarvon TOSI, jos vähintään yksi *mutta ei kaikki* funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot ovat joko TOSI tai EPÄTOSI.
+
+Ehdoton versio TAI-funktiosta. Toimii samalla tavalla.
+
+### LAMBDA
+
+`=LAMBDA(par1; par2; ...; parN; laskutoimitus)`
+
+LAMBDA-toiminnolla voit laatia omia funktioitasi. Voit määritellä enintään 253 parametria (vähintään nolla) joita funktioisi käyttää. Voit sitten määritellä mitä funktiosi tekee argumentilla `laskutoimitus`.
+
+Toimivan LAMBDA-funktion toteuttamisen jälkeen voit rekisteröidä funktion nimen **Nimien hallinta** -tilassa, jolloin funktiota pystyy käyttämään koko työkirjassa (tai työlehtiössä, jos olet rajannut käytön. Ks. LUKU NIMIEN HALLINNASTA).
+
+LAMBDA-toiminto kannattaa tehdä kolmessa askeleessa:
+
+1.  Testaa, että `laskutoimitus`-kaavasi toimii. Muista luoda sille tapoja reagoida virheisiin (käytä tietofunktioita!)
+2.  Testaa, että koko LAMBDA-funktio toimii. Kirjoita se kokonaisuudessaan soluun, ja lisää loppuun testiarvot omaan sulkuun: `=LAMBDA(x; y; x+y+1)(1;2)` määrittelee funktion ja ajaa sen testiarvoilla x = 1 ja y = 2.
+3.  Lisää funktio **Nimien hallinta**-tilaan. Muista määritellä oikea käyttöalue (työkirja tai yksittäiset taulukot) sekä antaa kuvaileva nimi ja kommentti. Katso lisää nimien hallinnasta luvusta LUKU NIMIEN HALLINNASTA).
+
+### BYCOL, BYROW ja MAP
+
+`=BYCOL(matriisi; LAMBDA(sarake))`, `=BYROW(matriisi; LAMBDA(rivi))`, `=MAP(matriisi; LAMBDA(solu)`
+
+Funktioilla voit suorittaa LAMBDA-funktion määritetyn matriisialueen jokaiselle riville (`BYROW`), sarakkeelle (`BYCOL`) tai yksittäiselle solulle (`MAP`).
+
+Argumentilla `matriisi` määrittelet data-alueen, jonka datalla haluat toimittaa LAMBDA-funktion.
+
+Argumentilla `LAMBDA()` määrittelet LAMBDA-funktion, mikä tulee ajaa haluamasi data-alueella.
+
+Määrittele LAMBDA-funktio niin kuin tekisit oman funktion, mutta älä rekisteröi sen nimeä - funktiota käytetään vain tässä kontekstissa.
+
+Funktiopari `BYCOL` ja `BYROW` palauttaa matriisiin kooltaan 1\*N, jossa N on kuinka monta kertaa funktio ajettiin. Funktio `MAP` taas palauttaa matriisin, jonka koko vastaa alkuperäistä data-aluetta (koska funktion LAMBDA-funktio lasketaan jokaiselle solulle).
+
+Jos määritelty data-alue sisältäisi neljä saraketta, `BYCOL` palauttaisi 1\*4-matriisin. Jos määritelty data-alue taas sisältäisi kolme riviä, `BYROW` palauttaisi 1\*3-matriisin. Jos määritelty data-alue sisältää neljä saraketta ja kolme riviä, `MAP` palauttaisi 4\*3-matriisin.
+
+`MAP`-funktio osaa myös yhdistää monia solujonoja yhteen. Tällöin funktio palauttaa 1\*N-matriisin, jossa N on yhdistettävien solujonojen määrä. Esimerkiksi `=MAP(A1:A5; B1:B5; C1:C5; LAMBDA()` palauttaa 1\*3-matriisin, jossa jokainen solu on LAMBDA-funktion lopputulos kullekin solujonolle (ensin A1:A5, sitten B1:B5, ja viimeiseksi C1:C5).
+
+Ole tarkkana kun syötät `MAP`-funktiolle dataa! Jos yhdistät solujonoja, funktiot ajetaan *per solujono*, mutta jos syötät kokonaisen matriisin, funktiot ajetaan *per solu*.
+
+Esimerkki:
+
+`=BYCOL(A1:C2; LAMBDA(sarake; MAKS(sarake))` palauttaa 1\*3-matriisin (koska data-alueella on kolme saraketta, A, B ja C). Jokaisessa solussa on LAMBDA-funktion lopputulos sille sarakkeelle (ensimmäisessä solussa tulos A-sarakkeelle, toisessa B-sarakkeelle ja kolmannessa C-sarakkeelle). Laskettava funktio on `MAKS(sarake)`, mikä palauttaa sarakkeen suurimman arvon.
+
+## Haku- ja viitefunktiot
+
+## Matemaattiset ja trigonometriset funktiot
+
+## Tilastolliset funktiot
+
+## Tekstifunktiot
