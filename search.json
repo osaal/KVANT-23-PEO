@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kvantitatiiviset menetelmät, syksy 2023",
+    "section": "",
+    "text": "Aluksi\nTämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille Kvantitatiiviset menetelmät.\nKirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).\nMukavia tilastollisia työhetkiä!"
+  },
+  {
+    "objectID": "index.html#tekijänoikeudet",
+    "href": "index.html#tekijänoikeudet",
+    "title": "Kvantitatiiviset menetelmät, syksy 2023",
+    "section": "Tekijänoikeudet",
+    "text": "Tekijänoikeudet\nTämä verkkokirja käyttää Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. ”Literate Programming”. Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "perustoiminnot.html#tietofunktiot",
+    "href": "perustoiminnot.html#tietofunktiot",
+    "title": "3  Funktiot",
+    "section": "3.1 Tietofunktiot",
+    "text": "3.1 Tietofunktiot\n\n3.1.1 ON-toiminnot\n=FUNKTIO(soluarvo)\nON-toiminnot palauttavat totuusarvon TOSI, jos niiden vaatimus solulle täyttyy. Jos vaatimus ei täyty, toiminnot palauttavat totuusarvon EPÄTOSI.\nSoluarvo voi olla arvo itsessään tai viittaus toiseen soluun.\nToiminnot ja niiden vaatimukset:\n\nONTYHJÄ: Onko soluarvo tyhjä?\nONVIRH: Onko soluarvo jotain muuta, kuin #PUUTTUU!? (Eli ONPUUTTUU-toiminnon vastakohta)\nONVIRHE: Onko soluarvo jokin virhearvo? (#PUUTTUU!, #ARVO!, #VIITTAUS!, #JAKO/0!, #LUKU!, #NIMI?, #TYHJÄ!)\nONTOTUUS: Onko soluarvo totuusarvo? (TOSI tai EPÄTOSI)\nONPUUTTUU: Onko soluarvo virhearvo #PUUTTUU!? (Eli ONVIRH-toiminnon vastakohta)\nONEI_TEKSTI: Onko soluarvo jotain muuta kun tekstiä? Palauttaa TOSI, jos soluarvo on tyhjä solu.\nONLUKU: Onko soluarvo luku?\nONVIITT: Onko soluarvo viittaus toiseen paikkaan?\nONTEKSTI: Onko soluarvo tekstiä?\nONPARILLINEN: Onko soluarvo parillinen? (Eli ONPARITON-toiminnon vastakohta)\nONPARITON: Onko soluarvo pariton? (Eli ONPARILLINEN-toiminnon vastakohta)\nONKAAVA: Onko soluarvo kaava?\n\n\n\n3.1.2 PUUTTUU\n=PUUTTUU()\nPalauttaa virhearvon #PUUTTUU!.\n\n\n3.1.3 SOLU\n=SOLU(kuvaus_laji; viittaus)\nPalauttaa tietoa soluviittauksesta.\nViittausalue määritellään viittaus-kohdassa. Tietopyyntö määritellään kuvaus_laji-kohdassa.\nTietopyyntöjen eri määritelmät:\n\nSOLU-funktion kuvaus_laji-avainsanat\n\n\nAvainsana\nPalautus\n\n\n\n\n“osoite”\nSoluviittauksen osoite tekstinä (esim. A2)\n\n\n“sarake”\nSolun sarake numerona (esim. 2 sarakkeelle B)\n\n\n“väri”\nArvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.\n\n\n“sisältö”\nSolun arvon (esim. 1000 tai “Hei”)\n\n\n“tiedostonimi”\nSolun sisältävän tiedoston nimen. Palauttaa tyhjää “” jos tiedostoa ei ole tallennettu.\n\n\n“muoto”\nSolun lukumuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot funktion apusivuilta\n\n\n“sulkeet”\nArvo 1, jos solun positiiviset/kaikki arvot esitetään sulkeissa. Muuten arvo 0.\n\n\n“etuliite”\nSolun tasausmuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot funktion apusivuilta\n\n\n“suojaus”\nArvo 1, jos solu on lukittu, tai arvo 0, jos solua ei ole lukittu.\n\n\n“rivi”\nSolun rivi numerona (esim. 2 riville 2)\n\n\n“tyyppi”\nSolun sisällön tyyppi erityisenä merkkijonona. Palauttaa “h” jos solu on tyhjä, “o” jos solussa on tekstivakio, ja muuten “r”.\n\n\n“leveys”\nPalauttaa kaksikohteisen matriisin. Ensimmäisessä kohteessa on solun sarakeleveys. Toisessa kohteessa on totuusarvo TOSI, jos kyseinen leveys on oletusarvo, ja EPÄTOSI jos leveyttä on muutettu käyttäjän toimesta."
+  },
+  {
+    "objectID": "perustoiminnot.html#loogiset-funktiot",
+    "href": "perustoiminnot.html#loogiset-funktiot",
+    "title": "3  Funktiot",
+    "section": "3.2 Loogiset funktiot",
+    "text": "3.2 Loogiset funktiot\n\n3.2.1 TOSI ja EPÄTOSI\n=TOSI(), =EPÄTOSI()\nPalauttavat totuusarvot TOSI tai EPÄTOSI, nimensä mukaan. Voit vaihtoehtoisesti käyttää sanoja TOSI tai EPÄTOSI funktioiden sijaan.\n\n\n3.2.2 JA\n=JA(arg1; arg2; ...)\nPalauttaa totuusarvon TOSI, jos kaikki funktion argumenttien arvot ovat TOSI. Palauttaa EPÄTOSI, jos vähintään yksi funktion argumenteista on EPÄTOSI.\nTAI-funktion vastakohta.\nArgumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.\nFunktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.\nKäytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.\n\n\n3.2.3 JOS-funktiot\n=JOS(arvioitava; jostosi; josepätosi)\nArvioi loogisen funktion argumentissa arvioitava. Käyttäjä määrittelee mitä palautetaan, jos arvioitava-funktion tulos on tosi (argumentti jostosi), sekä jos tulos on epätosi (argumentti josepätosi).\n=JOSVIRHE(arvioitava; josvirhe)\nArvioi loogisen funktion argumentissa arvioitava. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon (argumentti josvirhe).\n=JOSPUUTTUU(arvioitava; jospuuttuu)\nArvioi loogisen funktion argumentissa arvioitava. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon #PUUTTUU! (argumentti jospuuttuu).\n=JOS.JOUKKO(arvioitava1; jostosi1; arvioitava2; jostosi2; ...)\nArvioi yhden tai useamman (korkeintaan 127) loogisen funktion ja palauttaa sitä vastaavan totuusfunktion jostosiN, jos arvioitavaN-funktion tulos on tosi.\nJokaiselle arvioitavalle funktiolle tulee syöttää yksi TOSI-ehdon alla tuotettava arvo, eli argumentit syötetään pareissa. Yksi ehto arvioidaan kahdella argumentilla (arvioitava1, jostosi1); kaksi ehtoa arvioidaan neljällä argumentilla (arvioitava1, jostosi1, arvioitava2, jostosi2); ja niin edelleen.\n\n\n3.2.4 EI\n=EI(arvioitava)\nPalauttaa argumentin arvioitava totuustuloksen vastakohdan, eli EPÄTOSI jos argumentin tulos on TOSI tai toisinpäin.\n\n\n3.2.5 TAI ja EHDOTON.TAI\n=TAI(arg1; arg2; ...)\nPalauttaa totuusarvon TOSI, jos vähintään yksi funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot on EPÄTOSI.\nJA-funktion vastakohta.\nArgumenttien tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.\nFunktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.\nKäytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.\n=EHDOTON.TAI(arg1; arg2; ...)\nPalauttaa totuusarvon TOSI, jos vähintään yksi mutta ei kaikki funktion argumenteista ovat TOSI. Palauttaa EPÄTOSI, jos kaikki funktion argumenttien totuusarvot ovat joko TOSI tai EPÄTOSI.\nEhdoton versio TAI-funktiosta. Toimii samalla tavalla.\n\n\n3.2.6 LAMBDA\n=LAMBDA(par1; par2; ...; parN; laskutoimitus)\nLAMBDA-toiminnolla voit laatia omia funktioitasi. Voit määritellä enintään 253 parametria (vähintään nolla) joita funktioisi käyttää. Voit sitten määritellä mitä funktiosi tekee argumentilla laskutoimitus.\nToimivan LAMBDA-funktion toteuttamisen jälkeen voit rekisteröidä funktion nimen Nimien hallinta -tilassa, jolloin funktiota pystyy käyttämään koko työkirjassa (tai työlehtiössä, jos olet rajannut käytön. Ks. LUKU NIMIEN HALLINNASTA).\nLAMBDA-toiminto kannattaa tehdä kolmessa askeleessa:\n\nTestaa, että laskutoimitus-kaavasi toimii. Muista luoda sille tapoja reagoida virheisiin (käytä tietofunktioita!)\nTestaa, että koko LAMBDA-funktio toimii. Kirjoita se kokonaisuudessaan soluun, ja lisää loppuun testiarvot omaan sulkuun: =LAMBDA(x; y; x+y+1)(1;2) määrittelee funktion ja ajaa sen testiarvoilla x = 1 ja y = 2.\nLisää funktio Nimien hallinta-tilaan. Muista määritellä oikea käyttöalue (työkirja tai yksittäiset taulukot) sekä antaa kuvaileva nimi ja kommentti. Katso lisää nimien hallinnasta luvusta LUKU NIMIEN HALLINNASTA).\n\n\n\n3.2.7 BYCOL, BYROW ja MAP\n=BYCOL(matriisi; LAMBDA(sarake)), =BYROW(matriisi; LAMBDA(rivi)), =MAP(matriisi; LAMBDA(solu)\nFunktioilla voit suorittaa LAMBDA-funktion määritetyn matriisialueen jokaiselle riville (BYROW), sarakkeelle (BYCOL) tai yksittäiselle solulle (MAP).\nArgumentilla matriisi määrittelet data-alueen, jonka datalla haluat toimittaa LAMBDA-funktion.\nArgumentilla LAMBDA() määrittelet LAMBDA-funktion, mikä tulee ajaa haluamasi data-alueella.\nMäärittele LAMBDA-funktio niin kuin tekisit oman funktion, mutta älä rekisteröi sen nimeä - funktiota käytetään vain tässä kontekstissa.\nFunktiopari BYCOL ja BYROW palauttaa matriisiin kooltaan 1*N, jossa N on kuinka monta kertaa funktio ajettiin. Funktio MAP taas palauttaa matriisin, jonka koko vastaa alkuperäistä data-aluetta (koska funktion LAMBDA-funktio lasketaan jokaiselle solulle).\nJos määritelty data-alue sisältäisi neljä saraketta, BYCOL palauttaisi 1*4-matriisin. Jos määritelty data-alue taas sisältäisi kolme riviä, BYROW palauttaisi 1*3-matriisin. Jos määritelty data-alue sisältää neljä saraketta ja kolme riviä, MAP palauttaisi 4*3-matriisin.\nMAP-funktio osaa myös yhdistää monia solujonoja yhteen. Tällöin funktio palauttaa 1*N-matriisin, jossa N on yhdistettävien solujonojen määrä. Esimerkiksi =MAP(A1:A5; B1:B5; C1:C5; LAMBDA() palauttaa 1*3-matriisin, jossa jokainen solu on LAMBDA-funktion lopputulos kullekin solujonolle (ensin A1:A5, sitten B1:B5, ja viimeiseksi C1:C5).\nOle tarkkana kun syötät MAP-funktiolle dataa! Jos yhdistät solujonoja, funktiot ajetaan per solujono, mutta jos syötät kokonaisen matriisin, funktiot ajetaan per solu.\nEsimerkki:\n=BYCOL(A1:C2; LAMBDA(sarake; MAKS(sarake)) palauttaa 1*3-matriisin (koska data-alueella on kolme saraketta, A, B ja C). Jokaisessa solussa on LAMBDA-funktion lopputulos sille sarakkeelle (ensimmäisessä solussa tulos A-sarakkeelle, toisessa B-sarakkeelle ja kolmannessa C-sarakkeelle). Laskettava funktio on MAKS(sarake), mikä palauttaa sarakkeen suurimman arvon."
+  },
+  {
+    "objectID": "perustoiminnot.html#haku--ja-viitefunktiot",
+    "href": "perustoiminnot.html#haku--ja-viitefunktiot",
+    "title": "3  Funktiot",
+    "section": "3.3 Haku- ja viitefunktiot",
+    "text": "3.3 Haku- ja viitefunktiot"
+  },
+  {
+    "objectID": "perustoiminnot.html#matemaattiset-ja-trigonometriset-funktiot",
+    "href": "perustoiminnot.html#matemaattiset-ja-trigonometriset-funktiot",
+    "title": "3  Funktiot",
+    "section": "3.4 Matemaattiset ja trigonometriset funktiot",
+    "text": "3.4 Matemaattiset ja trigonometriset funktiot"
+  },
+  {
+    "objectID": "perustoiminnot.html#tilastolliset-funktiot",
+    "href": "perustoiminnot.html#tilastolliset-funktiot",
+    "title": "3  Funktiot",
+    "section": "3.5 Tilastolliset funktiot",
+    "text": "3.5 Tilastolliset funktiot"
+  },
+  {
+    "objectID": "perustoiminnot.html#tekstifunktiot",
+    "href": "perustoiminnot.html#tekstifunktiot",
+    "title": "3  Funktiot",
+    "section": "3.6 Tekstifunktiot",
+    "text": "3.6 Tekstifunktiot"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Viiteluettelo",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]
