@@ -16,6 +16,7 @@ book:
       - sijaintiluvut.qmd
     - part: "Excel-toiminnot"
       chapters:
+      - excelinperusteet.qmd
       - perustoiminnot.qmd
     - references.qmd
   sidebar:
@@ -30,6 +31,9 @@ format:
     - united
     - custom.scss
     lang: fi
+    toc: true
+    toc-depth: 3
+    toc-expand: true
 
 
 
