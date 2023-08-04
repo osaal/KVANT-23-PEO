@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./perustoiminnot.html" rel="next">
+<link href="./excelinperusteet.html" rel="next">
 <link href="./summary.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -147,8 +147,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
   </div>
 </li>
       </ul>
@@ -165,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
@@ -236,6 +242,82 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="moodin-mediaanin-ja-keskiarvon-yhteys" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">3.5</span> Moodin, mediaanin ja keskiarvon yhteys</h2>
+<p>Koska moodi, mediaani ja keskiarvo kuvaavat kaikki jakauman sijaintia, niillä on yhteys toisiinsa. Täydellisessä normaalijakaumassa moodi, mediaani ja keskiarvo ovat kaikki samat (ks. <a href="#fig-normaalijakauma">Kuva&nbsp;<span>3.1</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-normaalijakauma" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sijaintiluvut_files/figure-html/fig-normaalijakauma-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.1: Normaalijakauma. Keskiarvo, mediaani ja moodi ovat kaikki samoja, eli nolla.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Tämä tasapaino pätee kuitenkin vain <strong>täydelliselle</strong> normaalijakaumalle. Kun kyseessä on otanta, muuttujan jakauma voi muistuttaa (lähestyä) normaalijakaumaa, mutta ei täydellisesti. Pieniä eroja siis on, vaikka muuttuja muuten olisi otanta populaatiosta, jossa muuttujan todellinen jakauma on normaalijakauma.</p>
+<p>Jos jakauma nojaa johonkin suuntaan (eli jakaumalla on enemmän tai vähemmän vinoumaa), sijaintiluvut siirtyvät, mutta eri tahtiin (ks. <a href="#fig-gamma-ja-beta">Kuva&nbsp;<span>3.2</span></a>).</p>
+<div id="fig-gamma-ja-beta" class="cell quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-gamma-ja-beta-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sijaintiluvut_files/figure-html/fig-gamma-ja-beta-1.png" class="img-fluid figure-img" data-ref-parent="fig-gamma-ja-beta" width="672"></p>
+<figcaption class="figure-caption">(a) Betajakauma, alfa = 2 ja beta = 5</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-gamma-ja-beta-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sijaintiluvut_files/figure-html/fig-gamma-ja-beta-2.png" class="img-fluid figure-img" data-ref-parent="fig-gamma-ja-beta" width="672"></p>
+<figcaption class="figure-caption">(b) Betajakauma, alfa = 5 ja beta = 2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;3.2: Kaksi jakaumaa, jotka nojaavat eri suuntiin. Keskiarvo on merkitty punaisella katkoviivalla, mediaani oranssilla pisteviivalla, ja moodi lilalla viivalla.</figcaption><p></p>
+</figure>
+</div>
+<p>Muutoksen näkee sekä kuvasta että arvoista:</p>
+<div id="tbl-sijainti-ja-vinouma" class="anchored">
+<table class="table">
+<caption>Taulukko&nbsp;3.1: Kahden betajakauman sijaintiluvut. Kirjaimet suluissa viittaavat yllä olevan kuvan jakaumiin.</caption>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sijaintiluku</th>
+<th>(a) Negatiivista vinoumaa</th>
+<th>(b) Positiivista vinoumaa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Moodi</td>
+<td>0.2</td>
+<td>0.8</td>
+</tr>
+<tr class="even">
+<td>Mediaani</td>
+<td>0.26</td>
+<td>0.74</td>
+</tr>
+<tr class="odd">
+<td>Keskiarvo</td>
+<td>0.29</td>
+<td>0.71</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Negatiivisessa vinoumassa keskiarvo siirtyy eniten oikealle moodista nähtynä, mediaani hieman vähemmän. Positiivisessa vinoumassa käy toisinpäin.</p>
+<p>Kokeille alla olevassa interaktiivisessa applikaatiossa muuttaa jakauman muotoa, niin näet miten sijaintiluvut muuttuvat!</p>
+<div class="border">
+<iframe id="esimerkki" src="https://oliversaal.shinyapps.io/sijantilukujen-suhteet/" style="border: none; width: 100%; height: 500px" frameborder="0"> </iframe>
+</div>
 
 
 </section>
@@ -488,8 +570,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./perustoiminnot.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./excelinperusteet.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
