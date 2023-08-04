@@ -77,13 +77,11 @@ ggplot(
   aes(x = x)) + 
   stat_function(fun = dnorm) +
   geom_segment(
-    aes(
-      x = 0,
-      y = 0,
-      xend = 0,
-      yend = 0.4,
-      col = "c5b568"
-    )
+    x = 0,
+    y = 0,
+    xend = 0,
+    yend = 0.4,
+    col = "#c5b568"
   ) + 
   annotate(
     "text",
@@ -193,3 +191,11 @@ Muutoksen näkee sekä kuvasta että arvoista:
 : Kahden betajakauman sijaintiluvut. Kirjaimet suluissa viittaavat yllä olevan kuvan jakaumiin. {#tbl-sijainti-ja-vinouma}
 
 Negatiivisessa vinoumassa keskiarvo siirtyy eniten oikealle moodista nähtynä, mediaani hieman vähemmän. Positiivisessa vinoumassa käy toisinpäin.
+
+Kokeille alla olevassa interaktiivisessa applikaatiossa muuttaa jakauman muotoa, niin näet miten sijaintiluvut muuttuvat!
+
+::: {.border}
+``` {=html}
+<iframe id="esimerkki" src="https://oliversaal.shinyapps.io/sijantilukujen-suhteet/" style="border: none; width: 100%; height: 500px" frameborder="0"> </iframe>
+```
+:::

@@ -1,0 +1,12 @@
+name: sijantilukujen-suhteet
+title: sijantilukujen-suhteet
+username: oliversaal
+account: oliversaal
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9555026
+bundleId: 7531574
+url: https://oliversaal.shinyapps.io/sijantilukujen-suhteet/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

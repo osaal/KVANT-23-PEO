@@ -62,7 +62,7 @@ Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritell�
 Tietopyyntökomentojen eri määritelmät:
 
 | Komento        | Palautus                                                                                                                                                                                                                 |
-|------------------------------------|------------------------------------|
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | "osoite"       | Soluviittauksen osoite tekstinä (esim. A2)                                                                                                                                                                               |
 | "sarake"       | Solun sarake numerona (esim. 2 sarakkeelle B)                                                                                                                                                                            |
 | "väri"         | Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.                                                                                                                                                 |
