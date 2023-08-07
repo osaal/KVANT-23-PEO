@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät, syksy 2023 - 8&nbsp; Excelin käyttöliittymä</title>
+<title>Kvantitatiiviset menetelmät, syksy 2023 - 4&nbsp; Tilastotyökalut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./perustoiminnot.html" rel="next">
-<link href="./sijaintiluvut.html" rel="prev">
+<link href="./dmptuuli.html" rel="next">
+<link href="./webropol.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./excelinperusteet.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./webropol.html">Työkalut</a></li><li class="breadcrumb-item"><a href="./muuttilastotyökalut.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
+  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
@@ -180,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link active">
+  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
@@ -208,17 +208,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#perusnäkymä" id="toc-perusnäkymä" class="nav-link active" data-scroll-target="#perusnäkymä"><span class="header-section-number">8.1</span> Perusnäkymä</a></li>
-  <li><a href="#navigointipalkin-työkalut" id="toc-navigointipalkin-työkalut" class="nav-link" data-scroll-target="#navigointipalkin-työkalut"><span class="header-section-number">8.2</span> Navigointipalkin työkalut</a>
-  <ul class="collapse">
-  <li><a href="#aloitus-välilehti" id="toc-aloitus-välilehti" class="nav-link" data-scroll-target="#aloitus-välilehti"><span class="header-section-number">8.2.1</span> Aloitus-välilehti</a></li>
-  <li><a href="#lisää-välilehti" id="toc-lisää-välilehti" class="nav-link" data-scroll-target="#lisää-välilehti"><span class="header-section-number">8.2.2</span> Lisää-välilehti</a></li>
-  <li><a href="#sivun-asettelu--välilehti" id="toc-sivun-asettelu--välilehti" class="nav-link" data-scroll-target="#sivun-asettelu--välilehti"><span class="header-section-number">8.2.3</span> Sivun asettelu -välilehti</a></li>
-  <li><a href="#kaavat-välilehti" id="toc-kaavat-välilehti" class="nav-link" data-scroll-target="#kaavat-välilehti"><span class="header-section-number">8.2.4</span> Kaavat-välilehti</a></li>
-  <li><a href="#tiedot-välilehti" id="toc-tiedot-välilehti" class="nav-link" data-scroll-target="#tiedot-välilehti"><span class="header-section-number">8.2.5</span> Tiedot-välilehti</a></li>
-  <li><a href="#tarkista-välilehti" id="toc-tarkista-välilehti" class="nav-link" data-scroll-target="#tarkista-välilehti"><span class="header-section-number">8.2.6</span> Tarkista-välilehti</a></li>
-  <li><a href="#näytä-välilehti" id="toc-näytä-välilehti" class="nav-link" data-scroll-target="#näytä-välilehti"><span class="header-section-number">8.2.7</span> Näytä-välilehti</a></li>
-  </ul></li>
+  <li><a href="#ibm-spss-statistics-ja-pspp" id="toc-ibm-spss-statistics-ja-pspp" class="nav-link active" data-scroll-target="#ibm-spss-statistics-ja-pspp"><span class="header-section-number">4.1</span> IBM SPSS Statistics ja PSPP</a></li>
+  <li><a href="#jamovi" id="toc-jamovi" class="nav-link" data-scroll-target="#jamovi"><span class="header-section-number">4.2</span> Jamovi</a></li>
+  <li><a href="#r-ohjelmointikieli" id="toc-r-ohjelmointikieli" class="nav-link" data-scroll-target="#r-ohjelmointikieli"><span class="header-section-number">4.3</span> R-ohjelmointikieli</a></li>
+  <li><a href="#python-ohjelmointikieli" id="toc-python-ohjelmointikieli" class="nav-link" data-scroll-target="#python-ohjelmointikieli"><span class="header-section-number">4.4</span> Python-ohjelmointikieli</a></li>
   </ul>
 </nav>
     </div>
@@ -227,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></h1>
 </div>
 
 
@@ -242,123 +235,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen <strong>aloitusnäkymän</strong> (<a href="#fig-excelin-aloitusnäkymä">Kuva&nbsp;<span>8.1</span></a>). Näkymästä voit avata uuden <strong>työkirjan</strong> painamalla “Tyhjä työkirja”-kuvaketta ylävasemmalla. Hakupalkin alle tulee listaus viimeisimpiä työkirjoja, joita olet avannut. Voit avata olemassa olevan työkirjan painamalla “Avaa”-nappia oikeanpuoleisesta valikosta, ja hakemalla työkirjan tietokoneeltasi.</p>
-<div id="fig-excelin-aloitusnäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_aloitusnäkymä.PNG" class="img-fluid figure-img" alt="Excelin aloitusnäkymä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.1: Excelin aloitusnäkymä</figcaption>
-</figure>
-</div>
-<section id="perusnäkymä" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="perusnäkymä"><span class="header-section-number">8.1</span> Perusnäkymä</h2>
-<p><strong>Työkirja</strong> on Excel-tiedosto, joka sisältää kaikki analyysisi ja tietosi. Avaamalla tyhjän työkirjan pääset Excelin <strong>perusnäkymään</strong> (<a href="#fig-excelin-perusnäkymä">Kuva&nbsp;<span>8.2</span></a>).</p>
-<div id="fig-excelin-perusnäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_perusnäkymä.PNG" class="img-fluid figure-img" alt="Tyhjä työkirja avattuna Excelissä."></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.2: Excelin perusnäkymä</figcaption>
-</figure>
-</div>
-<p>Perusnäkymä voidaan jakaa kolmeen osaan, ylhäältä alas. Ylimpänä löydät <strong>navigointipalkin</strong>, joka on jaettu useaan eri <strong>välilehteen</strong>. Välilehtien määrä voi vaihdella riippuen Excel-versiostasi ja asennetuista lisäosista, mutta sinulla on ainakin seuraavat välilehdet: <code>Aloitus, Lisää, Sivun asettelu, Kaavat, Tiedot, Tarkista, Näytä</code> ja <code>Ohje</code>. Välilehdet muuttavat, mitä työkaluja näet navigointipalkissa.</p>
-<p>Navigointipalkin alla löydät <strong>työlehtiönäkymän</strong>. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun <strong>riveihin</strong> ja <strong>sarakkeisiin</strong>. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi.</p>
-<p>Työlehtiönäkymän alla on <strong>taulukonvalitsin</strong>, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, “Taul1”, mutta voit laatia uusia lehtiöitä painamalla +-merkkiä viimeisen lehtiön nimen vieressä.</p>
-<p>Oikeaklikkaamalla työlehtiön nimeä saat esille lehtiön muokkausmenun (<a href="#fig-excel-lehtiöpalkki-oikeamenu">Kuva&nbsp;<span>8.3</span></a>).</p>
-<div id="fig-excel-lehtiöpalkki-oikeamenu" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_lehtiöpalkki_oikeamenu.png" class="img-fluid figure-img" alt="Työlehtiön muokkausmenu avattuna."></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.3: Työlehtiön muokkausmenu</figcaption>
-</figure>
-</div>
-<p>Muokkausmenusta löytyy seuraavat kätevät valinnat:</p>
-<ul>
-<li><p><code>Poista</code> Poista valittu työlehtiö.</p></li>
-<li><p><code>Nimeä uudelleen</code> Muuta valitun työlehtiön nimeä</p></li>
-<li><p><code>Siirrä tai kopioi...</code> Avaa menun, jossa voit vaihtaa lehtiöiden järjestystä, sekä luoda kopion olemassa olevasta lehtiöstä. Voit myös siirtää ja kopioida lehtiöitä avointen työkirjojen välillä, jos sinulla on auki useampi kuin yksi työkirja.</p></li>
-<li><p><code>Taulukonvalitsimen väri</code> Vaihda työlehtiön väri taulukonvalitsimessa. Voi auttaa, jos sinulla on monia työlehtiöitä etkä pysy kärryillä niistä.</p></li>
-<li><p><code>Piilota</code> ja <code>Näytä...</code> Voit piilottaa työlehtiön näkyvistä. Piilotetut lehtiöt löytyvät <code>Näytä...</code>-toiminnosta, josta voit tuoda ne takaisin näkyville. Toiminnot eivät poista lehtiöitä.</p></li>
-</ul>
+<p>Tämä osio esittelee erinäisiä tilastotyökaluja, jotka ovat laajemmassa käytössä. Koska kurssi keskittyy Excelin käyttöön, emme käytä näitä tällä kertaa. Jos kuitenkin olet kiinnostunut tilastollisesta työskentelystä, suosittelen näihin tutustumista omalla ajalla.</p>
+<p>Työkalut esitellään hyvin lyhyesti. Jokaisessa osiossa on linkkejä tai tietoa työkalun oppimiseen - en kuitenkaan ole jokaisen työkalun ammattiosaaja, joten suosittelen myös eri resurssien googlaamista.</p>
+<section id="ibm-spss-statistics-ja-pspp" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="ibm-spss-statistics-ja-pspp"><span class="header-section-number">4.1</span> IBM SPSS Statistics ja PSPP</h2>
+<p>Yhteiskuntatieteissä ehkä suosituin työkalu on <a href="https://www.ibm.com/spss">IBM SPSS Statistics</a>. Lyhytnimeltään SPSS on suhteellisen helppokäyttöinen tilastotyökalu, jolla voit tehdä haastaviakin tilastollisia malleja sekä tuottaa alkeellista grafiikkaa ja automatisoida analyyseja.</p>
+<p>SPSS on aika helppokäyttöinen, kunhan sen käyttöliittymään tutustuu. Sen suosio lienee historiallinen, sekä osittain se seikka, ettei käyttöliittymä ja yleiskäyttökokemus itsessään ole juurikaan muuttunut vuosikymmeniin.</p>
+<p>SPSS on kuitenkin maksullinen (ja aika kallis sen lisäksi!). Sen graafiset ominaisuudet ovat hieman heikot, varsinkin joustavuudessaan, ja käyttöliittymään tottuminen vie aikaa. Sen lisäksi SPSS yksinkertaistaa analyysien teon sille tasolle, että tottumaton käyttäjä voi helposti tehdä virheellisiä analyyseja vain koska järjestelmä sallii niiden teon.</p>
+<p>SPSS:lle on olemassa yksinkertaisempi avoimen lähdekoodin versio, <a href="https://www.gnu.org/software/pspp/">PSPP</a>. Versiossa on kaikki SPSS:n perustoiminnot, sekä kohtalainen yhteistuki SPSS-tiedostojen kanssa. Siitä kuitenkin puuttuu varsinkin uusimmat ominaisuudet. PSPP on joka tapauksessa oiva vaihtoehto, jos yhteistyökumppanisi vaativat SPSS:n käyttöä, mutta sinulla tai kotiorganisaatiollasi ei ole varaa/mahdollisuutta hankkia SPSS-lisenssiä.</p>
 </section>
-<section id="navigointipalkin-työkalut" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="navigointipalkin-työkalut"><span class="header-section-number">8.2</span> Navigointipalkin työkalut</h2>
-<p>Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien sijainnit.</p>
-<section id="aloitus-välilehti" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="aloitus-välilehti"><span class="header-section-number">8.2.1</span> Aloitus-välilehti</h3>
-<p>Aloitus-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (<a href="#fig-excel-aloitus-välilehti">Kuva&nbsp;<span>8.4</span></a>).</p>
-<div id="fig-excel-aloitus-välilehti" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_aloitus_välilehti.png" class="img-fluid figure-img" alt="Aloitus-välilehden työkalut, jaattuna kolmelle riville."></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.4: Aloitus-välilehden työkalut</figcaption>
-</figure>
-</div>
-<p><strong>Leikepöytä</strong>-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa: <code>Ctrl+C</code> (kopioi), <code>Ctrl+V</code> (liitä) ja <code>Ctrl+X</code> (leikkaa). Excelissä on myös oma toiminto nimeltä <strong>Liitä määräten</strong>, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Saat tämän auki käyttämällä komentoa <code>Ctrl+Alt+V</code> yleisen liittämiskomennon sijaan. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.</p>
-<p><strong>Fontti</strong>-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).</p>
-<p><strong>Tasaus</strong>-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi <strong>Yhdistä ja keskitä</strong>-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta. <strong>Rivitä teksti</strong>-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan.</p>
-<p><strong>Numero</strong>-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot vaikka mihin muotoihin, mutta tällä alueella voit itse sanoa Excelille, “Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!”. Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p><strong>Tyylit</strong>-alueella voit tehdä erinäisiä muotoilutyylejä, muuttaa taulukkoja helposti haettaviksi taulukoiksi, ja muotoilla soluja valmiilla tyylillä. Tutustu omassa rauhassasi, emme tule käyttämään näitä sen kummemmin kurssilla.</p>
-<p><strong>Solut</strong>-alueella voit lisätä, poistaa tai muotoilla soluja.</p>
-<p><strong>Muokkaus</strong>-alueella löytyy erinäisiä muokkaustyökaluja, joista <strong>Lajittele ja suodata</strong> on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot.</p>
+<section id="jamovi" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="jamovi"><span class="header-section-number">4.2</span> Jamovi</h2>
+<p>SPSS:n uudeksi haastajaksi on kehittynyt <a href="https://www.jamovi.org/">Jamovi</a>-työkalu. Jamovi on alun perin australialaisten tutkijoiden kehittämä vaihtoehto SPSS:n ja SAS:in tapaisille suljetuille ja hintaville työkaluille. Vaikka työkalulla ei tässä vaiheessa vielä ole suurta suosiota, sen helppokäyttöisyys, avoimuus ja nopea kehitys tullaan varmasti huomaamaan lähitulevaisuudessa.</p>
+<p>Jamovin käyttöliittymä on erittäin yksinkertainen, mutta järjestelmä tukee vaativiakin tilastollisia analyyseja. Jamovi on rakennettu R-kielen pohjalta, joten periaatteessa tilastollisten menetelmien tuen rajana on R-kielen omat menetelmätuet - eli käytännössä rajaton. Jamovi ei kuitenkaan vaadi ollenkaan R-osaamista, joten aloittelijatkin voivat käyttää sitä.</p>
+<p>Jamovin huonoina puolina voidaan nähdä sen vahvuus, eli avoin lähdekoodi. Tämä tarkoittaa, ettei kehitys aina tapahdu systemaattisesti tai suuryrityksen vaatimalla aikataululla. Avoin lähdekoodi voi, mutta ei missään nimessä tarvitse, tarkoittaa kyseenalaistettavaa tietoturvaa, mutta on huomioitava, että avoimen lähdekoodin työskentelyssä tietoturva-asiantuntijoita voi olla tuhansia ja lähdekoodin tarkastaminen on kaikille mahdollista. Myös Jamovin nuoruus voi tarkoittaa, että tukea ja ohjeita löytyy vähemmän kuin suuremmalle ohjelmistolle.</p>
 </section>
-<section id="lisää-välilehti" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="lisää-välilehti"><span class="header-section-number">8.2.2</span> Lisää-välilehti</h3>
-<p>Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavioita (<a href="#fig-excel-lisää-välilehti">Kuva&nbsp;<span>8.5</span></a>).</p>
-<div id="fig-excel-lisää-välilehti" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_lisää_välilehti.png" class="img-fluid figure-img" alt="Lisää-välilehden työkalut, kahdella rivillä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.5: Lisää-välilehden työkalut</figcaption>
-</figure>
-</div>
-<p><strong>Taulukot</strong>-alueelta löydät työkalut Pivot-taulukkojen tekemiseen. Emme käytä näytä kurssilla, mutta ne ovat erittäin tehokkaita työkaluja datan analysointiin ja visualisointiin.</p>
-<p><strong>Kuvat</strong>-alueella voit lisätä kuvia, geometrisiä muotoja, SmartArt-kaavioita ja muita visuaalisia elementtejä. Nämä eivät kuitenkaan reagoi dataasi, eli ne ovat ihan vain visuaalisuutta lisääviä asioita.</p>
-<p><strong>Apuohjelmat</strong>-alueella voit avata ja asentaa lisätoimintoja.</p>
-<p><strong>Kaaviot</strong>-alueella löydät kaikki Excelin kaaviomuodot grafiikan tekoa varten. Tulet käyttämään näitä useasti.</p>
-<p>Muista alueista tärkeimmät ovat <strong>Kommentit</strong>, josta löydät kommentointityökalun, sekä <strong>Teksti</strong>, josta voit lisätä vapaamuotoisia tekstiruutuja omia muistiinpanoja tai selitteitä varten. Voit myös lisätä matemaattisia kaavoja <strong>Merkit</strong>-alueen <strong>Kaava</strong>-työkalulla, jos haluat näyttää älykkäältä. Nämä kaavat eivät tee mitään Excelissä - laskelmia varten käytetään Excelin omia funktioita.</p>
+<section id="r-ohjelmointikieli" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="r-ohjelmointikieli"><span class="header-section-number">4.3</span> R-ohjelmointikieli</h2>
+<p>Joskus valmiit tilastotyökalut eivät riitä. Työkaluihin lisätään toimintoja suht hitaasti, ja varsinkin uusimmat menetelmälliset kehitykset eivät esiinny ohjelmistopaketeissa aikaisessa vaiheessa. Näitä varten löytyy tilastolliset ohjelmointikielet, josta <a href="https://www.r-project.org/">R-kieli</a> on yksi suosituimmista.</p>
+<p>Tilastollinen ohjelmointi on, niin kuin nimi sanoo, ohjelmointia. Se vaatii siis jonkin verran ohjelmointiosaamista tai -oppimista. R:n vahvuutena (tai heikkoutena, jos kysyt ohjelmoijilta) on, että sen kehityksen takaa löytyy tutkijoita, ei ohjelmoijia. Toisin sanoen, R-kielen logiikka on lähempänä ihmiskieltä kuin moni muu ohjelmointikieli, eikä R vaadi yhtä paljon ohjelmointityötä kuin muut kielet.</p>
+<p>R:n erityisvahvuutena on graafinen työ: R-kielellä voit laatia vaikka minkä moisia käppyröitä, tehdä interaktiivisia esityksiä, ja jopa kirjoittaa kokonaisia kirjoja. Tämä verkkokirja on kirjoitettu R-pohjaisessa Markdown-kielessä, ja monet tämän kirjan kuvista ja interaktiivisista testeistä on tehty R:ssä!</p>
+<p>R-kielestä löydät suunnaton määrä eri <strong>paketteja</strong>. Nämä implementoivat usein upouusia menetelmiä, joten pääset käsiksi ihan avant gardiin. Toisaalta, tämä tarkoittaa myös heikkoa dokumentaatiota - jos lähdet R-kielen polulle, sinun tulee tottua pitkiin googlaussessioihin ja foorumien läpikahlontaan.</p>
+<p>R-kieli on ilmainen ja avoin, mutta vaatii aika paljon opettelua. Jos jaksat ja pystyt pääsemään alkukynnyksen yli, työkalu on kuitenkin paljon valmiita ohjelmistoja tehokkaampi. Voit käytännössä tehdä minkä tahansa analyysin, automatisoida mitä tahansa, ja tuottaa mitä tahansa muotoja suoraan yhdestä ohjelmasta.</p>
 </section>
-<section id="sivun-asettelu--välilehti" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="sivun-asettelu--välilehti"><span class="header-section-number">8.2.3</span> Sivun asettelu -välilehti</h3>
-<p>Sivun asettelu -välilehdeltä löydät työkaluja, joilla muotoilet työkirjan tulostusnäkymää (<a href="#fig-excel-sivunasettelu-välilehti">Kuva&nbsp;<span>8.6</span></a>).</p>
-<div id="fig-excel-sivunasettelu-välilehti" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_sivunasettelu_välilehti.png" class="img-fluid figure-img" alt="Sivun asettelu -välilehden työkalut"></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.6: Sivun asettelu -välilehden työkalut</figcaption>
-</figure>
-</div>
-<p>Tärkeimmät työkalut löytyvät <strong>Sivun asetukset</strong>-alueelta. Näillä voit muuttaa työlehden muotoilua tulostusnäkymässä, jos haluat tulostaa työlehtesi ja vaikkapa ripustaa sen seinälle.</p>
-<p>Joskus sattuu niin, että grafiikkasi ovat päällekäisiä etkä näe kaikkea kunnolla. Voit vaihtaa kaavojen ja kuvien välistä järjestystä <strong>Järjestä</strong>-alueella, sekä tasata niitä samaan riviin eri tavoin.</p>
-</section>
-<section id="kaavat-välilehti" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="kaavat-välilehti"><span class="header-section-number">8.2.4</span> Kaavat-välilehti</h3>
-<p>Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (<a href="#fig-excel-kaavat-välilehti">Kuva&nbsp;<span>8.7</span></a>). Täältä löytyy myös erittäin tärkeä <strong>Nimien hallinta</strong> -osio (ks. LUKU NIMIEN HALLINNASTA).</p>
-<div id="fig-excel-kaavat-välilehti" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/excel_kaavat_välilehti.png" class="img-fluid figure-img" alt="Kaavat-välilehden työkalut, kahdessa rivissä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;8.7: Kaavat-välilehden työkalut</figcaption>
-</figure>
-</div>
-<p>Ensimmäinen alue on nimeltään <strong>Funktiokirjasto</strong>, ja sisältää luettelon kaikista Excelin funktioista. Jos et muista funktion nimeä, voit hakea sen käsiisi täältä. Voit myös hakea funktioita sanoilla <strong>Lisää funktio</strong>-työkalulla.</p>
-<p>Seuraavaksi tulee <strong>Määritetyt nimet</strong>-alue, josta pääset <strong>nimien hallintaan</strong>. Täällä voit määritellä omia “lempinimiä” solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa “sukupuoli”, ja viitata suoraan siihen nimeen!</p>
-<p>Jotkut funktiot eivät automaattisesti päivity kun teet muutoksia työlehtiössäsi. Voit päivittää kaikki funktiot ja laskutoimitukset <strong>Laskutoimitukset</strong>-alueelta painamalla <strong>Laske heti</strong> tai <strong>Laske taulukko</strong>.</p>
-</section>
-<section id="tiedot-välilehti" class="level3" data-number="8.2.5">
-<h3 data-number="8.2.5" class="anchored" data-anchor-id="tiedot-välilehti"><span class="header-section-number">8.2.5</span> Tiedot-välilehti</h3>
-<p>Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut. Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.</p>
-</section>
-<section id="tarkista-välilehti" class="level3" data-number="8.2.6">
-<h3 data-number="8.2.6" class="anchored" data-anchor-id="tarkista-välilehti"><span class="header-section-number">8.2.6</span> Tarkista-välilehti</h3>
-<p>Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen. Näistä useimmiten käytetyt lienee <strong>Kommentit</strong>-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.</p>
-</section>
-<section id="näytä-välilehti" class="level3" data-number="8.2.7">
-<h3 data-number="8.2.7" class="anchored" data-anchor-id="näytä-välilehti"><span class="header-section-number">8.2.7</span> Näytä-välilehti</h3>
-<p>Näytä-välilehdellä voit muuttaa Excelin näkymää hieman.</p>
-<p>Voit vaihtaa tulostusnäkymän ja normaalin näkymän välillä <strong>Työkirjanäkymät</strong>-alueella.</p>
-<p>Erittäin hyödyllinen toiminto on myös <strong>Ikkuna</strong>-alue, jolla voit avata saman työkirjan useampaan eri ikkunaan. Näin voit nähdä eri työlehtiöitä tai alueita samaan aikaan samalla näytöllä. Voit myös kiinnittää ensimmäisen rivin/sarakkeen, jotta ne pysyvät näkyvillä vaikka siirryt muualle.</p>
+<section id="python-ohjelmointikieli" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="python-ohjelmointikieli"><span class="header-section-number">4.4</span> Python-ohjelmointikieli</h2>
+<p>Ohjelmoinnista kiinnostuneille löytyy myös <a href="https://www.python.org/">Python</a>-ohjelmointikieli. Python on osittain samanlainen kuin R, eli erittäin helppokäyttöinen ja (suhteellisesti) nopeasti opittava ohjelmointikieli. Python on kuitenkin yleisohjelmointikieli, ei <em>tilastollinen</em> ohjelmointikieli. Tämä tarkoittaa, että Pythonilla voi tehdä paljon muutakin kuin tilastollista ohjelmointia - esim. pelejä, tietokoneapplikaatioita, serveriautomatisointia, ja paljon muuta.</p>
+<p>Pythonille löytyy oma “akateeminen” julkaisupaketti nimeltä <a href="https://www.anaconda.com/">Anaconda</a>. Paketti sisältää kaikki tilastolliselle työskentelylle vaaditut paketit, sekä ohjelmistoja, jotka auttavat koodin kirjoittamisessa ja testaamisessa.</p>
+<p>Python on erittäin suosittu datatieteilijöiden parissa, ehkä juurikin sen koneoppimistyökalujen vuoksi. Jos sinua kiinnostaa tekoäly, koneoppiminen ja neuroverkot, Python on hyvä aloitus työlle. Myös luonnollisten kielten mallinnus ja tekstinkäsittely on helpohkoa Pythonilla.</p>
+<p>Heikkoina puolina voi nähdä ohjelmointikielen oppimisen vaikeudet ja mahdolliset heikkoudet avoimen lähdekoodin työkaluissa. Koska Python on yleiskieli, se ei aina toimi tavalla, joka olisi luonnollista tilastojen käsittelylle, joten ota myös tämä huomioon. Python on kuitenkin data-alan konkari, jos ala kiinnostaa omassa työssäsi.</p>
 
 
-</section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy virheitä ja ongelmia!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -597,13 +504,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sijaintiluvut.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span>
+      <a href="./webropol.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Webropol</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./perustoiminnot.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./dmptuuli.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
