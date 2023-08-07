@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Kvantitatiiviset menetelmät, syksy 2023 - 3&nbsp; Webropol</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./muuttilastotyökalut.html" rel="next">
+<link href="./summary.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./webropol.html">Työkalut</a></li><li class="breadcrumb-item"><a href="./webropol.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Webropol</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aluksi</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Työkalut</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./webropol.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Tilastotiede</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Excel-toiminnot</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Vaihda osio">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Sisällysluettelo</h2>
+   
+  <ul>
+  <li><a href="#webropoliin-kirjautuminen" id="toc-webropoliin-kirjautuminen" class="nav-link active" data-scroll-target="#webropoliin-kirjautuminen"><span class="header-section-number">3.1</span> Webropoliin kirjautuminen</a></li>
+  <li><a href="#yleisnäkymä-ja-kyselyn-luominen" id="toc-yleisnäkymä-ja-kyselyn-luominen" class="nav-link" data-scroll-target="#yleisnäkymä-ja-kyselyn-luominen"><span class="header-section-number">3.2</span> Yleisnäkymä ja kyselyn luominen</a></li>
+  <li><a href="#muokkaa-näkymä" id="toc-muokkaa-näkymä" class="nav-link" data-scroll-target="#muokkaa-näkymä"><span class="header-section-number">3.3</span> Muokkaa-näkymä</a></li>
+  <li><a href="#kysymysten-muokkaus" id="toc-kysymysten-muokkaus" class="nav-link" data-scroll-target="#kysymysten-muokkaus"><span class="header-section-number">3.4</span> Kysymysten muokkaus</a></li>
+  <li><a href="#kerää-vastauksia--näkymä" id="toc-kerää-vastauksia--näkymä" class="nav-link" data-scroll-target="#kerää-vastauksia--näkymä"><span class="header-section-number">3.5</span> Kerää vastauksia -näkymä</a></li>
+  <li><a href="#seuranta-näkymä" id="toc-seuranta-näkymä" class="nav-link" data-scroll-target="#seuranta-näkymä"><span class="header-section-number">3.6</span> Seuranta-näkymä</a></li>
+  <li><a href="#raportointi-näkymä" id="toc-raportointi-näkymä" class="nav-link" data-scroll-target="#raportointi-näkymä"><span class="header-section-number">3.7</span> Raportointi-näkymä</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Webropol</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Tällä sivulla käydään läpi, miten Webropol-työkalun käyttö toimii. Lisää ohjeita löytyy myös Pelastusopiston intraverkosta.</p>
+<p>Webropol on suomalainen kyselytyökalu, jolla voit tuottaa erimuotoisia kyselyjä ja lähettää ne vastaajillesi.</p>
+<section id="webropoliin-kirjautuminen" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="webropoliin-kirjautuminen"><span class="header-section-number">3.1</span> Webropoliin kirjautuminen</h2>
+<p>Kirjaudu Webropoliin osoitteessa <a href="https://webropol.fi/">webropol.fi</a>. Käytä Pelastusopiston tunnuksia päästäksesi sisään, jolloin saat käyttöösi myös opiston omat grafiikat.</p>
+</section>
+<section id="yleisnäkymä-ja-kyselyn-luominen" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="yleisnäkymä-ja-kyselyn-luominen"><span class="header-section-number">3.2</span> Yleisnäkymä ja kyselyn luominen</h2>
+<p>Kirjautuessasi Webropoliin näet yleisnäkymän (<a href="#fig-webropol-aloitusnäkymä">Kuva&nbsp;<span>3.1</span></a>). Jos olet luonut kyselyn aikaisemmin käyttäjätililläsi, näet sen listattuna “Oikotiet viimeisimpiin kyselyihin ja raportteihin”-osioissa. Yläoikealla löydät uuden kyselyn luomisen työkalu “Luo uusi kysely” sekä linkin sivulle, josta löydät omat kyselysi, “Kyselyt”.</p>
+<div id="fig-webropol-aloitusnäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_aloitusnäkymä.png" class="img-fluid figure-img" alt="Webropolin aloitusnäkymä uudelle käyttäjälle."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.1: Webropolin yleisnäkymä</figcaption>
+</figure>
+</div>
+<p>Valitse “Luo uusi kysely” yläpalkista tai oikotiealueen oranssista napista luodaksesi uuden kyselyn. Siirryt kyselyn luontilomakkeeseen (<a href="#fig-webropol-luouusikysely">Kuva&nbsp;<span>3.2</span></a>).</p>
+<div id="fig-webropol-luouusikysely" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_luouusikysely.png" class="img-fluid figure-img" alt="Kyselyn luontilomake. Kaikki alueet ovat tyhjät."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.2: Kyselyn luontilomake</figcaption>
+</figure>
+</div>
+<p>Voit nimetä kyselysi sekä valita, mihin kansioon haluat laittaa sen. Tämä vaikuttaa vain siihen, miten järjestelet omat kyselysi tililläsi, eikä näy vastaajille.</p>
+<p>Tällä alueella voit myös määritellä ulkonäkömallin. Myöhemmin voit vapaasti muuttaa ulkonäköä, mutta valitse jo tässä hetkessä malli, joka on tarpeeksi lähellä lopullista versiotasi. Näet esikatselun kyselyn ulkonäöstä tietokoneruudulla sivun alaosassa.</p>
+<p>Kun olet nimennyt kyselyn ja valinnut mallin (voit käyttää oletusasetusta), paina “Luo kysely”-painiketta sivun oikealla puolella. Siirryt silloin kyselyn muokkausnäkymään (<a href="#fig-webropol-muokkausnäkymä">Kuva&nbsp;<span>3.3</span></a>).</p>
+<div id="fig-webropol-muokkausnäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_muokkausnäkymä.png" class="img-fluid figure-img" alt="Webropolin kyselyn muokkausnäkymä, jossa on tyhjä kysely nimeltä 'testikysely'."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.3: Muokkausnäkymä</figcaption>
+</figure>
+</div>
+<p>Webropolin kyselyillä on neljä näkymää, jotka löydät sivun ylävasemmalta: Muokkaa, Kerää vastauksia, Seuranta ja Raportointi. Nimensä mukaisesti muokkaat kyselyä Muokkaa-näkymässä, määrittelet keräystavat Kerää vastauksia -näkymässä, seuraat vastaamisprosessia Seuranta-näkymässä ja tarkastelet vastauksia sekä tallennat ne tietokoneellesi Raportointi-näkymässä.</p>
+</section>
+<section id="muokkaa-näkymä" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="muokkaa-näkymä"><span class="header-section-number">3.3</span> Muokkaa-näkymä</h2>
+<p>Muokkaa-näkymässä muokkaat ja laadit kyselylomakkeesi (<a href="#fig-webropol-muokkausnäkymä">Kuva&nbsp;<span>3.3</span></a>). Sivun vasemmalla puolella näet luettelon kyselyn sivuista. Voit (ja onkin suotavaa) jaata kyselysi useammalle sivulle, jotta vastaajien ei tarvitse rullata suurta sivua ylös ja alas.</p>
+<p>Sivun yläkohdassa, näkymien valikon alla, löytyy muokkaustyökalut (<a href="#fig-webropol-muokkaustyökalut">Kuva&nbsp;<span>3.4</span></a>). Käymme läpi kaikki työkalut, aloittaen ensin kyselypohjista.</p>
+<div id="fig-webropol-muokkaustyökalut" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_muokkaustyökalut.png" class="img-fluid figure-img" alt="Muokkaa-näkymän muokkaustyökalut. Nämä ovat: Lisää kysymys, kyselypohjat, lisää uusi sivu, kielet, kuvapankki, ulkoasu, henkilötiedot, asetukset ja esikatselu."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.4: Muokkaa-näkymän muokkaustyökalut</figcaption>
+</figure>
+</div>
+<p><strong>Kyselypohjat</strong>-painikkeesta voit tallentaa kysymyksiä valmiiseen kirjastoon, jos käytät niitä usein. Voit myös hakea kirjastosta valmiita kysymyksiä. Tämä on hyödyllinen jos tuotat saman kyselyn monesti, tai jos uudelleenhyödynnät kysymyksiä kyselystä toiseen.</p>
+<p><strong>Lisää uusi sivu</strong> -painikkeella voit lisätä sivun. Voit tehdä tämän vasta, kun ensimmäisellä sivulla on jotain sisältöä.</p>
+<p><strong>Kielet</strong>-painikkeella voit määritellä kyselyn kielen sekä lisätä muita kielivaihtoehtoja. Jokaiselle kielivaihtoehdolle joudut itse kääntämään kaikki vastaukset, mutta Webropol yhdistää sitten tiedot yhdeksi datatiedostoksi myöhemmin, joten et joudu tekemään erillisiä kyselyjä useammalle kielelle. Kääntäminen kannattaa tehdä vasta, kun olet tehnyt ensimmäisen version valmiiksi, koska Webropol tuottaa Excel-tiedoston, johon käännökset tulee laittaa.</p>
+<p><strong>Kuvapankki</strong>-painikkeesta voit lisätä valmiita kuvia kyselyysi Pelastusopiston kuvapankista. Muista huomioida tekijänoikeudet!</p>
+<p><strong>Ulkoasu</strong>-painikkeella voit muuttaa kyselyn ulkonäköä. Voit muuttaa käytännössä minkä tahansa elementin muotoilua ja värejä, lisätä taustoja tai logoja, muuttaa fontteja, ja niin eteenpäin. Voit myös luoda ja hakea valmiita ulkoasupohjia. Jos teet useasti kyselyjä samalle organisaatiolle, ulkoasupohjan luominen onkin suotavaa nopeuttaakseen työtä.</p>
+<p><strong>Henkilötiedot</strong>-painikkeella voit määritellä, mitkä kyselyn alueet keräävät henkilötietoja. Tämä auttaa yleisen tietosuoja-asetuksen noudattamisessa. Voit myös automatisoida henkilötietojen poiston - erittäin suositeltavaa, varsinkin jos keräät suoria henkilötietoja tai tietoja erityisistä henkilöryhmistä. Muista määritellä henkilötietojen käsittely tutkimussuunnitelmassasi, mahdollisessa tietojenkäsittelysuunnitelmassasi sekä loppuraportissasi!</p>
+<p><strong>Asetukset</strong>-painikkeesta löytyy erinäisiä asetuksia kyselylomakkeelle. Täältä voit esim. määritellä, viedäänkö vastaaja kiitossivun jälkeen automaattisesti toiselle sivulle (esim. arvontalomake, tutkimuksen kotisivu), asettaa kyselyn pakolliset vastaukset, rajata anonymiteettiä ja satunnaisjärjestää kysymyksiä tai vastausvaihtoehtoja.</p>
+<p><strong>Esikatselu</strong>-painikkeesta avautuu uusi välilehti, jossa voit esikatsella kyselyäsi eri laitteilla. Voit myös ladata kyselysi PDF- tai Word-tiedostona tietokoneellesi.</p>
+<p><strong>Lisää kysymys</strong> -painikkeesta avautuu pieni alue, josta voit valita, millaisen kysymyksen haluat lisätä kyselyysi (<a href="#fig-webropol-lisääkysymys">Kuva&nbsp;<span>3.5</span></a>).</p>
+<div id="fig-webropol-lisääkysymys" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_lisääkysymys.png" class="img-fluid figure-img" alt="Lisää kysymys -painikkeesta avautuva valinta-alue. Alueella on monia eri kysymysvaihtoehtoja, jaoteltuna ryhmiin Teksti, Valinta, Matriisi sekä Muu."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.5: Lisää kysymys -alue</figcaption>
+</figure>
+</div>
+<p>Kysymysvaihtoehtoja on monia, ja suosittelenkin niiden kokeilua ja ihmettelyä omalla ajalla. Tärkeimmät ovat ehkä avoin kysymys ja tekstikenttä, numeerinen kenttä (esim. puhelinnumeron, vuositulojen tai postinumeron keräämiseksi), valinta ja monivalinta sekä matriisi. Voit myös pyytää vastaajia jättämään liitteitä, valitsemaan eri kuvista, laittamaan asioita numerojärjestykseen, ja paljon muuta.</p>
+</section>
+<section id="kysymysten-muokkaus" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="kysymysten-muokkaus"><span class="header-section-number">3.4</span> Kysymysten muokkaus</h2>
+<p>Valitsin “Valinta”-kysymyksen, mikä lisäsi kysymyksen suoraan kyselyn ensimmäiselle sivulle (<a href="#fig-webropol-uusivalintakysymys">Kuva&nbsp;<span>3.6</span></a>).</p>
+<div id="fig-webropol-uusivalintakysymys" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_uusivalintakysymys.png" class="img-fluid figure-img" alt="Kysely nimeltä 'testikysely', johon on lisätty tyhjä valintakysymys."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.6: Tyhjä valintakysymys</figcaption>
+</figure>
+</div>
+<p>Voit nyt kirjoittaa kysymyksen “Lisää kysymys” -kenttään. Lisää vastausvaihtoehtoja painamalla “Lisää yksi vastausvaihtoehto”, tai jos sinulla on valmiiksi useita, “Lisää tai muokkaa useita vastausvaihtoehtoja”. Voit kirjoittaa vastausvaihtoehdot suoraan kyselyyn.</p>
+<div id="fig-webropol-uusivalintakysymys-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_uusivalintakysymys_vaihtoehdot.png" class="img-fluid figure-img" alt="Kysymys 'Maitoa vai mehua?', jolla on neljä vastausvaihtoehtoa: maitoa, mehua, molemmat sekä ei kumpaakaan. Ensimmäisen vaihtoehdon kohdalla näkyy neljä muokkaustyökalua ikoneina."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.7: Vastausvaihtoehtojen muokkaus</figcaption>
+</figure>
+</div>
+<p>Voit myös tehdä erityisiä muokkauksia vastausvaihtoehdoille siirtämällä hiiren vastausvaihtoehdon päälle (<a href="#fig-webropol-uusivalintakysymys-2">Kuva&nbsp;<span>3.7</span></a>). Toinen ikoni oikealta, jossa on useampi nuoli, määrittelee hypyn kyselyssä. Voit tehdä hyppyjä, kunhan sinulla on kysymys, josta hypätään, sekä kysymys, johon hypätään. Voit myös asettaa vastausvaihtoehtojen asetuksia kolmannesta ikonista, esim. mikä vaihtoehto on esivalittuna tai jos haluat satunnaisjärjestää vastausvaihtoehdot.</p>
+<p>Jokaisen kysymyksen alla voit helposti lisätä kysymyksiä, kuvailevaa tekstiä tai kuvia, sekä sivunvaihtoja painikkeista (<a href="#fig-webropol-uusivalintakysymys">Kuva&nbsp;<span>3.6</span></a>). Kokeile lisätä omia kysymyksiä, määritellä hyppyjä, sekä tehdä satunnaisjärjestämistä kysymyspatteristoille!</p>
+</section>
+<section id="kerää-vastauksia--näkymä" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="kerää-vastauksia--näkymä"><span class="header-section-number">3.5</span> Kerää vastauksia -näkymä</h2>
+<p>Ennen kun olet valmis keräämään vastauksia populaatioltasi, muista tarkistaa ainakin:</p>
+<ul>
+<li>Henkilötietoasetukset</li>
+<li>Saatekirje (muista oikeus julkaista dataa!)</li>
+<li>Loppusanat</li>
+<li>Kysymysten muotoilu, oikeinkirjoitus</li>
+<li>Hyppyjen toiminnallisuus (kokeille niitä esikatselulla)</li>
+</ul>
+<p>Sivun ylävasemmalta voit siirtyä Kerää vastauksia -näkymään (<a href="#fig-webropol-keräysnäkymä">Kuva&nbsp;<span>3.8 (a)</span></a>).</p>
+<div id="fig-keräysnäkymä" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-webropol-keräysnäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_keräysnäkymä.png" class="img-fluid figure-img" alt="Webropolin Kerää vastauksia -näkymä. Vaihtoehtoina on sähköpostikysely, nettilinkki sekä tekstiviestikysely." data-ref-parent="fig-keräysnäkymä"></p>
+<figcaption class="figure-caption">(a) Kerää vastauksia -näkymä</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-webropol-keräysnäkymä-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_keräysnäkymä_nettilinkki.png" class="img-fluid figure-img" alt="Nettilinkin asetukset." data-ref-parent="fig-keräysnäkymä"></p>
+<figcaption class="figure-caption">(b) Nettilinkin luominen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;3.8: Kerää vastauksia -näkymä ja nettilinkin luominen</figcaption><p></p>
+</figure>
+</div>
+<p>Voit kerätä vastauksia kolmella eri tavalla: henkilökohtaisilla sähköpostilinkeillä tai tekstiviestilinkeillä, sekä julkisella nettilinkillä. Jos tarvitset henkilökohtaiset linkit jostain syystä, käytä sähköposti- tai tekstiviestitoimintoa. Yleensä kuitenkin helpointa on lähettää linkki kyselyyn eri kanavien kautta, joten näytän tässä sen toiminnon.</p>
+<p>Jos painat “Nettilinkki - Julkinen linkki” -painiketta, voit avata uuden nettilinkin. Huomaathan, että avaamisen jälkeen et enää voi muokata kysymyksiä! Kun olet hyväksynyt tämän tosiasian, pääset nettilinkin muokkausnäkymään (<a href="#fig-webropol-keräysnäkymä-2">Kuva&nbsp;<span>3.8 (b)</span></a>). Tästä löydät kyselyn julkisen linkin, ja voit laatia QR-koodin sille jos haluat. Voit myös ajastaa linkin toiminnan. Toinen hyödyllinen ominaisuus on salasanasuojaus sekä CAPTCHA-robottitunnistus, jolla voit rajata kyselyn vastaamista sekä vaatia käyttäjän tekemään CAPTCHA-kokeen vähentääksesi robottivastauksia (jos niitä esiintyy). Voit jopa määritellä kysymyksen, jonka pohjalta vastaajan tulee antaa tietty salasana päästäkseen eteenpäin kyselyssä - hyödyllistä, jos esim. haluat varmistaa että tietyt ryhmät pääsevät vastaamaan vain heille suunnattuihin kysymyksiin tai että ryhmät erotellaan automaattisesti heti kyselyn alussa.</p>
+<p>Kun olet määritellyt linkin toiminnan valmiiksi, voit lähettää linkin eteenpäin vastaajillesi. Näin kyselysi on auki!</p>
+</section>
+<section id="seuranta-näkymä" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="seuranta-näkymä"><span class="header-section-number">3.6</span> Seuranta-näkymä</h2>
+<p>Kyselyn avattua sinua voi kiinnostaa, kuinka moni vastaa tai jättää vastaamatta. Voit nähdä nämä tilastot Seuranta-näkymästä (<a href="#fig-webropol-seurantanäkymä">Kuva&nbsp;<span>3.9</span></a>).</p>
+<div id="fig-webropol-seurantanäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_seurantanäkymä.png" class="img-fluid figure-img" alt="Webropolin Seuranta-näkymä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.9: Seuranta-näkymä</figcaption>
+</figure>
+</div>
+<p>Tästä voit näkeä vastauskadon määrässä ja prosenteissa: kuinka moni vastaajista on avannut kyselyn, mutta sulki sen heti? Voit myös nähdä määrän vastaajia, jotka aloittivat vastaamisen, mutta eivät välttämättä suorittaneet sitä loppuun. Vastaajan tilastot -välilehdeltä voit myös tarkistaa kuinka kauan vastaamisessa kestää. Tämä on hyödyllinen varsinkin jatkokehitystä varten, koska saat suoran käsityksen kyselyn ajallisesta pituudesta.</p>
+</section>
+<section id="raportointi-näkymä" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="raportointi-näkymä"><span class="header-section-number">3.7</span> Raportointi-näkymä</h2>
+<p>Jossain vaiheessa haluat varmaankin myös nähdä kyselyn tulokset. Nämä löytyvät Raportointi-näkymästä (<a href="#fig-webropol-raportointinäkymä">Kuva&nbsp;<span>3.10</span></a>).</p>
+<div id="fig-webropol-raportointinäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_raportointinäkymä.png" class="img-fluid figure-img" alt="Webropolin Raportointi-näkymä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.10: Raportointi-näkymä</figcaption>
+</figure>
+</div>
+<p>Näkymä näyttää sinulle jokaisen kysymyksen vastausjakaumat numeroissa sekä käyrinä. Näistä voit saada nopean käsityksen kyselysi vastauksista, mutta älä käytä näitä suoraan raportissasi!</p>
+<p>Raportointityökalut löytyvät yläoikealta, ja niitä on moneksi. Tärkein kuitenkin on Vie &amp; Jaa -painike, josta saat asetukset tulosten tallentamiseksi tietokoneellesi ().</p>
+<div id="fig-webropol-vientinäkymä" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/webropol/webropol_vientinäkymä.png" class="img-fluid figure-img" alt="Webropolin Vie &amp; Jaa -painikkeen näkymä. Excel-vaihtoehto on valittuna."></p>
+<figcaption class="figure-caption">Kuva&nbsp;3.11: Vie &amp; Jaa -näkymä</figcaption>
+</figure>
+</div>
+<p>Voit viedä raportointinäkymän tulokset suoraan PowerPoint-esitykseen, jos haluat nopeasti saada tulokset ulos ilman kummempia raportointeja. Jatkokäsittelyä varten voit tallentaa tulokset Excel-, CSV- sekä SPSS-muotoihin. Voit myös tallentaa tulokset sellaisenaan PDF- tai Word-tiedostoihin.</p>
+<p>Voit myös jakaa Webropolin tekemän raportin oikean puolen painikkeista, esim. vastaajille tai yhteistyökumppaneille. Muista kuitenkin, että raportissa voi olla arkaluontoisia tietoja, joten tarkista aina kaikki tiedot ennen kuin jaat niitä muille! Muista myös, että sinulla tulee olla lupa jaata tietoja eteenpäin kyseisille tahoille vastaajilta - muistithan kysyä lupaa saatekirjeessä…?</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopioitu!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopioitu!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./summary.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./muuttilastotyökalut.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

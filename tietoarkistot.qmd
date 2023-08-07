@@ -1,0 +1,61 @@
+# Tietoarkistot
+
+Tällä osiolla esitellään kahta tietoarkistoa: [Tietoarkisto Aila](https://services.fsd.tuni.fi/index) sekä [Zenodo](https://zenodo.org/). Tietoarkistoja löytyy useita eri, sekä generalisti- että spesialistiarkistoja (yleinen tai aihealueittain) ja useilta eri tieteenalalta.
+
+## Tietoarkisto Aila
+
+[Tietoarkisto Aila](https://services.fsd.tuni.fi/index) on FSD ja Tampereen yliopiston ylläpitämä, pääsääntöisesti yhteiskuntatieteellistä tietoarkistointia varten olemassa oleva palvelu. Palvelun käyttö on ilmaista suomalaisten tutkimusorganisaatioiden tutkijoille sekä osittain myös rivikansalaisille.
+
+Voit kirjautua tietoarkistoon Pelastusopiston tunnuksillasi HAKA-kirjautumisen kautta. Joitain tietovarantoja voi myös selailla ja ladata ilman kirjautumista, mutta useimmat vaativat kirjautumisen.
+
+![Tietoarkisto Ailan etusivu](pics/aila.png){#fig-aila fig-alt="Tietoarkisto Ailan etusivu."}
+
+Voit selailla aineistoja "Ainestot"-sivulla ja tehdä hakuja "Haku"-sivulla. Kirjoitusajankohdalla Ailasta löytyy 1866 aineistokuvailua, eli tavaraa riittää!
+
+Kaikilla aineistoilla on määritelty saatavuus neljään luokkaan: Vapaasti käytettävissä lisenssillä CC-BY 4.0 (A), käytettävissä tutkimukseen, opetukseen ja opiskeluun (B), käytettävissä tutkimukseen ja ylempiin opennäytteisiin (C), sekä käytettävissä vain luovuttajan luvalla (D). Tällä kurssilla, sekä omissa opinnäytteissänne, voitte siis käyttää kaikkia A- tai B-luokiteltuja materiaaleja. Korkeampiin luokituksiin vaaditaan tutkijan positiota tai ylemmän AMK:in/pro gradun kirjoittajuutta.
+
+Aineistot ovat myös luokitelty kahteen tyyppiin: kvantitatiivinen ja kvalitatiivinen. Ensimmäinen on pääsääntöisesti numerodataa, joskin tekstiä voi esiintyä; toinen on pääsääntöisesti tekstidataa, joskin numeroita voi esiintyä. 
+
+Esimerkkinä toimii "Pelastuspalveluasenteet 2014", eli [Suomalaisten pelastusasenteet 2014](https://urn.fi/urn:nbn:fi:fsd:T-FSD2969) -materiaali.
+
+![Pelastuspalveluasenteet 2014, Aila-tietoarkistossa](pics/aila_pelastusasenteet.png){#fig-aila-pelastusasenteet fig-alt="Tietovaranto 'Pelastuspalveluasenteet 2014' Aila-tietoarkistossa, yhteenvetosivu. Sivulla lukee tekijät, asiasanat ja sisällön kuvaus. Sivun linkki on: https://urn.fi/urn:nbn:fi:T-FSD2969"}
+
+Yhteenvetosivulla näkee mm. tietovarannon käyttötaso (B), sisällön kuvaus sekä asiasanat. Löydät myös pysyvän linkin tietovarantoon sivun lopusta, jota kannattaa käyttää viittauksessa.
+
+Koko kuvailu -välilehdeltä löydät tarkempaa tietoa tutkimuksen tuottamisesta. Datan uudelleenkäytön vuoksi tärkeimmät tiedot ovat mm. kohdealue, havaintoyksikkötyyppi, perusjoukko ja otos, aikaulottuvuudet, sekä otanta- ja keruumenetelmät. Löydät myös malliviittauksen tältä sivulta, jos käytät tietovarantoa.
+
+Muuttujat-välilehdeltä voit selailla tietovarannon kaikkia muuttujia yksitellen. Voit avata ne tarkistaaksesi muuttujan kysymystekstin ja vastausvaihtoehdot, sekä yleiset tunnusluvut ja frekvenssijakauman.
+
+Julkaisut-välilehdeltä löytyy listaus Ailaan raportoiduista julkaisuista, jotka käyttävät kyseistä tietovarantoa. On aina tutkijan omalla vastuulla raportoida Ailalle kaikista julkaisuista, jotta he voivat lisätä ne tähän osuuteen sekä seurata tietovarantojen käyttöä.
+
+Lataa aineisto-välilehdeltä voit ladata koko aineiston käyttöösi. Jos aineisto vaatii kirjautumista, järjestelmä ilmoittaa sinulle asiasta. Kun valitset latauksen, siirryt sivulle, jossa sinun tulee ilmoittaa, mihin käyttöön lataat tiedoston. Tämä tieto välittyy (tietääkseni) suoraan aineiston toimittajalle ja/tai Aila-palvelulle, jotta ne voivat pysyä kartalla aineistojen käytöstä. Vaikka lomake näyttää lupa-anomukselta, saat kuitenkin aineiston suoraan käyttöösi (jos aineisto ei ole D-luokiteltu, jolloin joudut odottamaan käyttöoikeutta).
+
+Ailan kaikki aineistot sisältävät useita tiedostoja. Tärkeimmät ovat:
+
+*   `.csv`-tiedosto: Tämä on datatiedosto, jonka voit avata Excelissä.
+*   `.html`-tiedosto: Tämä on tuloste SPSS:n koodikirjatoiminnosta, josta löydät jokaisen muuttujan koodit ja niiden kyselylomakevastaavuudet. Käytä tätä koodikirjana, tai kirjoita se puhtaaksi Word-tiedostoon jos haluat.
+*   `.pdf`-tiedostoja: Näistä löydät alkuperäisen kyselylomakkeen ja/tai puhtaaksi kirjoitetun koodikirjan. Voit käyttää näitä html-tiedoston sijaan, jos ne löytyvät.
+
+Ailan käytännöt metadatakoodauksessa ja tiedostomuodoissa ovat vaihdelleet ajan myötä jonkin verran. Löydät luultavasti myös `.por`-tiedoston, joka on SPSS-ohjelmiston oma tiedostomuoto jota ei pysty avaamaan Excelissä.
+
+Muista poistaa ladatut datatiedostot tietokoneeltasi (sekä kaikki kopiot!) kun olet valmis tutkimuksesi kanssa. Jos tutkimuksestasi julkaistaan jotain, ilmoitathan sen Tietoarkistoon - he kuulevat mielellään asiasta!
+
+## Zenodo
+
+[Zenodo](https://zenodo.org/) on CERN:in ylläpitämä, EU:n osarahoittama tieteellinen arkisto. Zenodosta löydät tietovarantoja, mutta myös esim. esipainoksia, analyysiprotokollia, muistiinpanoja, kuvia, sekä paljon muuta. Zenodo-palveluun ei tarvitse kirjautua, mutta voit laatia oman kirjautumisprofiilisi jos aiot myöhemmin itse julkaista tietovarantoja tai muuta aiheellista palvelussa. Zenodon käyttö on ilmaista.
+
+Zenodon etusivun ylälaidassa löytyy hakukenttä. Haun jälkeen voit rajata hakua käyttöoikeuksilla, tiedostotyypeillä, avainsanoilla ja julkaisutyypillä.
+
+Esimerkkinä toimii ["Dataset for: Thermal characterization of firebrand piles"](https://zenodo.org/record/1406207).
+
+![Tietovaranto "Dataset for: Thermal characterization of firebrand piles" Zenodo-palvelussa.](pics/zenodo.png){#fig-zenodo fig-alt="Tietovaranto 'Dataset for: Thermal characterization of firebrand piles' Zenodo-palvelussa. Linkki tietovarantoon: https://zenodo.org/record/1406207"}
+
+Tietovarannon sivulta voit tarkastaa tekijät, abstraktin sekä rahoittajainfon. Sivulta löytyy myös julkaisutietoja ja lisenssi, josta voit päätellä, saatko käyttää materiaalia vai et. Zenodossa käytetään pääsääntöisesti avoimia lisenssejä, mutta tarkista aina kyseisen tietovarannon lisenssi varmuuden vuoksi.
+
+Zenodo on yleinen tietoarkisto, joten sisältö voi vaihdella suurestikin eri tietovarantojen välillä. Sivulta löytyy kuitenkin yleensä kuvaus tietovarannosta, esimerkki viitteestä sekä kansiorakenne ladattavista tiedostoista. Tiedostot voivat olla hyvin vaihtelevissa muodoissa, joten tarkista kansiorakenteesta, pystytkö edes avaamaan ne Excelissä tai muussa ohjelmistossa!
+
+Esimerkkitietovarannossa tiedot näyttävät löytyvän kahdessa eri muodossa: `.csv`- sekä `.mat`-tiedostoina. CSV-tiedostot ovat Excelissä luettavia, mutta MAT-tiedostot toimivat ainoastaan MATLAB-ohjelmistossa.
+
+Jos haluat ladata tiedoston Zenodosta, löydät sen "Files"-alueelta kansioston alta. "Preview"-napilla näet mitä lataat, ja "Download"-napilla lataat tiedoston tietokoneellesi.
+
+Zenodon hyvä puoli on sen joustavuus ja erittäin laaja skaala - sieltä löytyy vaikka mitä dataa. Huonona puolena on laadunvarmistaminen: tietovarannon ei tarvitse olla laadukkaasti kerätty, eikä metadataa tarvitse löytyä melkein ollenkaan. Tarkista aina ensin tietovarannon ilmoittamasta julkaisuviitteestä, saatko tarpeeksi tietoa irti tietovarannon keräysmenetelmistä jotta pystyt luotettavasti käyttämään sitä. Sinulla on tutkijana vastuu käytetyn tutkimustiedon oikeellisuudesta, *vaikka* jokin kolmas osapuoli olisi kerännyt tiedon! Et voi siis vedota toisiin tekijöihin jos julkaiset tutkimuksen käyttäen tietoa, joka osoittautuukin vääräksi tai valheelliseksi.
