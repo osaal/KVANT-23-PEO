@@ -41,19 +41,6 @@
       ],
       "Hash": "31262fd18481fab05c5e7258dac163ca"
     },
-    "MatrixModels": {
-      "Package": "MatrixModels",
-      "Version": "0.5-2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "Matrix",
-        "R",
-        "methods",
-        "stats"
-      ],
-      "Hash": "26749bd5c7c4123dd23aeb9159be22d6"
-    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -85,19 +72,15 @@
       ],
       "Hash": "ae6cbbe1492f4de79c45fce06f967ce8"
     },
-    "SparseM": {
-      "Package": "SparseM",
-      "Version": "1.81",
+    "askpass": {
+      "Package": "askpass",
+      "Version": "1.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
-        "R",
-        "graphics",
-        "methods",
-        "stats",
-        "utils"
+        "sys"
       ],
-      "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
+      "Hash": "e8a22846fff485f0be3770c2da758713"
     },
     "base64enc": {
       "Package": "base64enc",
@@ -183,6 +166,16 @@
         "utils"
       ],
       "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+    },
+    "curl": {
+      "Package": "curl",
+      "Version": "5.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "2118af9cb164c8d2dddc7b89eaf732d9"
     },
     "digest": {
       "Package": "digest",
@@ -505,16 +498,6 @@
       ],
       "Hash": "18e9c28c1d3ca1560ce30658b22ce104"
     },
-    "mnormt": {
-      "Package": "mnormt",
-      "Version": "2.1.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "c83992ef63553d1e4b97162a4a753470"
-    },
     "munsell": {
       "Package": "munsell",
       "Version": "0.5.0",
@@ -540,15 +523,27 @@
       ],
       "Hash": "0984ce8da8da9ead8643c5cbbb60f83e"
     },
-    "numDeriv": {
-      "Package": "numDeriv",
-      "Version": "2016.8-1.1",
+    "openssl": {
+      "Package": "openssl",
+      "Version": "2.1.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
-        "R"
+        "askpass"
       ],
-      "Hash": "df58958f293b166e4ab885ebcad90e02"
+      "Hash": "273a6bb4a9844c296a459d2176673270"
+    },
+    "packrat": {
+      "Package": "packrat",
+      "Version": "0.9.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "tools",
+        "utils"
+      ],
+      "Hash": "481428983c19a7c443f7ea1beff0a2de"
     },
     "pillar": {
       "Package": "pillar",
@@ -591,24 +586,6 @@
         "stats"
       ],
       "Hash": "4ab2c43adb4d4699cf3690acd378d75d"
-    },
-    "quantreg": {
-      "Package": "quantreg",
-      "Version": "5.96",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "MASS",
-        "Matrix",
-        "MatrixModels",
-        "R",
-        "SparseM",
-        "graphics",
-        "methods",
-        "stats",
-        "survival"
-      ],
-      "Hash": "47a0047c3082b2a285434db2eb418dcc"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -664,6 +641,35 @@
         "yaml"
       ],
       "Hash": "79f14e53725f28900d936f692bfdd69f"
+    },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "curl",
+        "digest",
+        "jsonlite",
+        "lifecycle",
+        "openssl",
+        "packrat",
+        "renv",
+        "rlang",
+        "rstudioapi",
+        "tools",
+        "yaml"
+      ],
+      "Hash": "00bed55b8a510c8a6b5bfe331ff03032"
+    },
+    "rstudioapi": {
+      "Package": "rstudioapi",
+      "Version": "0.15.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5564500e25cffad9e22244ced1379887"
     },
     "sass": {
       "Package": "sass",
@@ -731,22 +737,6 @@
       ],
       "Hash": "f7f201522eedbc95f10ef323b100ff29"
     },
-    "sn": {
-      "Package": "sn",
-      "Version": "2.1.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "methods",
-        "mnormt",
-        "numDeriv",
-        "quantreg",
-        "stats4",
-        "utils"
-      ],
-      "Hash": "a712c6e210dd94cc2bb947c7c1c48699"
-    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7-1",
@@ -787,21 +777,12 @@
       ],
       "Hash": "671a4d384ae9d32fc47a14e98bfa3dc8"
     },
-    "survival": {
-      "Package": "survival",
-      "Version": "3.5-5",
+    "sys": {
+      "Package": "sys",
+      "Version": "3.4.2",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Matrix",
-        "R",
-        "graphics",
-        "methods",
-        "splines",
-        "stats",
-        "utils"
-      ],
-      "Hash": "d683341b1fa2e8d817efde27d6e6d35b"
+      "Repository": "RSPM",
+      "Hash": "3a1be13d68d47a8cd0bfd74739ca1555"
     },
     "tibble": {
       "Package": "tibble",

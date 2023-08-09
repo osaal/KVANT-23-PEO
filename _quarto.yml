@@ -20,6 +20,8 @@ book:
     - part: "Tilastotiede"
       chapters:
       - sijaintiluvut.qmd
+      - hajontaluvut.qmd
+      - merkitsevyysluvut.qmd
     - part: "Excel-toiminnot"
       chapters:
       - excelinperusteet.qmd
@@ -40,6 +42,7 @@ format:
     toc: true
     toc-depth: 3
     toc-expand: true
+    reference-location: margin
 
 
 

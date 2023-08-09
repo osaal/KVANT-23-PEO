@@ -1,0 +1,95 @@
+# Hajontaluvut {#sec-hajontaluvut-teoria}
+
+## Vinouma {#sec-vinouma-teoria}
+
+**Mittausasteikot:** Järjestysasteikosta ylöspäin
+
+**Vinouma** kertoo jakauman "häntäisyydestä", eli nojaako jakauma jompaan kumpaan suuntaan. Voidaan myös puhua relatiivisesta hajonnasta keskiarvon ympärillä. Vinouma voi olla **positiivinen** tai **negatiivinen**.
+
+Positiivinen vinouma tarkoittaa, että jakaumassa on yleisemmin esiintyviä arvoja keskiarvon oikealla puolella (suurempia arvoja) kuin vasemmalla puolella.
+
+Negatiivinen vinouma tarkoittaa vastakohtaa, että jakaumassa esiintyy yleisemmin keskiarvoa pienempiä arvoja keskiarvon vasemmalla puolella.
+
+Vinoumalla on suora yhteys moodiin: kun vinouma on positiivinen, moodi on keskiarvoa suurempi, ja toisin päin jos vinouma on negatiivinen.
+
+## Kurtoosi {#sec-kurtoosi-teoria}
+
+**Mittausasteikot:** Järjestysasteikosta ylöspäin.
+
+**Kurtoosi** kertoo jakauman "terävyydestä". Tarkalleen ottaen kurtoosi kertoo jakauman häntien koosta. Kurtoosi liittyy jakauman ääripisteiden kokoon. Kurtoosi voi olla positiivinen tai negatiivinen.
+
+Negatiivinen kurtoosi, eli **platykurtoosi**, tarkoittaa, että ääripisteiden suhde keskiarvoon on pienempi, joko niiden koon tai määrän takia. Tämä tasoittaa jakauman hajontaa, eli erot häntien ja keskiarvon esiintymisasteiden välillä ovat pienempiä. Usein sanotaan, että platykurtoottinen jakauma on tasaisempi tai litteämpi kuin normaalijakauma, mutta kuten todettu, kurtoosi teknisesti ottaen liittyy jakauman ääripisteisiin, ei jakauman terävyyteen. Pienin mahdollinen kurtoosi on -2, mikä saadaan Bernoullijakaumasta ($p = 1/2$) - esimerkiksi kolikon heiton jakauma.
+
+Nollakurtoosi, eli **mesokurtoosi**, tarkoittaa, että ääripisteitä on yhtä paljon kuin normaalijakaumassa. Tällöin liikakurtoosi (ks. alla) on nolla.
+
+Positiivinen kurtoosi, eli **leptokurtoosi**, tarkoittaa, että ääripisteiden suhde keskiarvoon on suurempi. Tämä keskittää jakaumaa entistä enemmän keskiarvon ympärille, eli erot häntien ja keskiarvon esiintymisasteiden välillä ovat normaalijakaumaa suurempia. Tasajakauma (engl. *uniform distribution*) on esimerkki äärimmäisen platykurtoottisesti jakautunut, koska tasajakaumassa ei ole ollenkaan ääripisteitä - kaikki arvot ovat yhtä todennäköisiä.
+
+Kurtoosi ilmaistaan usein **liikakurtoosina**, jolloin arvo on keskitetty nollalle. Tällöin negatiivinen kurtoosi on aina negatiivinen arvo, ja toisin päin. Kurtoosin raaka-arvo keskittyy kuitenkin kolmeen: normaalijakauman Pearsonin kurtoosiarvo on 3, negatiivinen kurtoosi on alle kolmen ja positiivinen kurtoosi yli kolmen.
+
+## Vaihteluväli {#sec-vaihteluväli-teoria}
+
+**Mittausasteikot**: Järjestysasteikosta ylöspäin.
+
+**Vaihteluvälillä** tarkoitetaan jakauman suurimpia ja pienimpiä arvoja, sekä näiden välinen ero.
+
+**Suurin** arvo on yksinkertaisesti jakauman suurin esiintyvä arvo, **pienin** arvo on vastaavasti pienin esiintyvä arvo. Jakauman **pituus** (engl. *range*) on suurimman ja pienimmän arvon ero, eli kuinka laajalla skaalalla arvoja esiintyy.
+
+Esimerkkinä voidaan ajatella datajakaumaa, jossa on viisi datapistettä: $[1, 2, 3, 4, 5]$. Sen suurin arvo on $5$ ja pienin arvo on $1$. Jakauman pituus on siten $5-1 = 4$.
+
+## Poikkeamasumma {#sec-poikkeamasumma-teoria}
+
+**Mittausasteikot:** Välimatka-asteikosta ylöspäin.
+
+Poikkeamasummalla (engl. *deviance*) summataan yhteen jakauman jokaisen datapisteen ero keskiarvoon. Poikkeamasumma lasketaan kaavalla:
+
+$$
+\text{deviance} = \sum_{i = 1}^{n}{ x_i - \bar{x} }
+$$ {#eq-poikkeamasumma}
+
+Jossa $x_i$ on datapisteen $i$ arvo, $\bar{x}$ on jakauman aritmeettinen keskiarvo, ja $n$ on datapisteiden määrä.
+
+Poikkeamasumma on aina nolla jokaiselle datajakaumalle. Koska keskiarvo asettuu jakauman keskipisteeseen, positiiviset ja negatiiviset erot keskiarvoon tasoittavat toisensa, joten kaavan tulokseksi tulee aina arvo $0$. Poikkeamasumma ei siten ole hyödyllinen työkalu itsessään, mutta käytetään oikaistun neliösumman laskemiseen.
+
+Esimerkkinä sama datajakauma $[1, 2, 3, 4, 5]$. Jakauman keskiarvo on $\bar{x} = \frac{1+2+3+4+5}{5} = 15/5 = 3$. Jakauman poikkeamasumma lasketaan siten $(1-3) + (2-3) + (3-3) + (4-3) + (5-3) = -2-1+0+1+2 = 0$.
+
+## Oikaistu neliösumma {#sec-oikaistu-neliösumma-teoria}
+
+**Mittausasteikot:** Välimatka-asteikosta ylöspäin.
+
+**Oikaistu neliösumma** (engl. *sum of squared errors*) on jatkolasku poikkeamasummalle. Erona poikkeamasummaan oikaistussa neliösummassa kaikki datapisteiden erot keskiarvoon nostetaan toiseen potenssiin, eli otetaan niiden neliö, ennen summaamista. Tällöin saadaan arvo, joka ei ole nolla. Oikaistu neliösumma lyhennetään muotoon $SS$, parametrin englanninkielisestä nimestä. Oikaistun neliösumman kaava on:
+
+$$
+\text{SS} = \sum{(x-\bar{x})^2}
+$$ {#eq-oikaistu-neliösumma}
+
+Esimerkkinä sama datajakauma kuin aikaisemmin, eli $[1, 2, 3, 4, 5]$, jonka keskiarvo on $3$. Oikaistu neliösumma on $(1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2 = 4 + 1 + 0 + 1 + 4 = 10$.
+
+## Varianssi {#sec-varianssi-teoria}
+
+**Mittausasteikot:** Välimatka-asteikosta ylöspäin.
+
+**Varianssi** on datajakauman oikaistu neliösumma jaattuna mittarin vapausasteilla. Varianssin vapausaste on $N-1$, eli jakauman datapisteiden määrä minus yksi. Varianssi lyhennetään muotoon $s^2$, mutta muita nimimuotoja ovat myös $\sigma^2$ , $Var(X)$ tai $V(X)$. Varianssin kaava on:
+
+$$
+s^2 = \frac{SS}{\text{df}} = \frac{\sum{(x-\bar{x})^2}} {N-1}
+$$ {#eq-varianssi}
+
+Jatketaan samalla esimerkkillä kuin aikaisemmin. Datajakauman $[1, 2, 3, 4, 5]$ oikaistu neliösumma on $SS = 10$. Täten datajakauman varianssi on $s^2 = 10/(N-1) = 10/4 = 2.5$.
+
+Varianssin mitta on alkuperäisen datajakauman mitta, mutta neliönä. Jos datajakauman alkuperäinen mitta on euroa, varianssi ilmaistaan neliöeurona - vaikka tämä ei itsessään merkitse mitään (mikä "neliöeuro" edes olisi?).
+
+## Keskihajonta {#sec-keskihajonta-teoria}
+
+**Mittausasteikko:** Välimatka-asteikosta eteenpäin.
+
+**Keskihajonta** on jatkoa varianssille. Keskihajonnassa neliö poistetaan neliöjuurella, jolloin saadaan jakauman keskivertainen ero keskiarvoon - eli kuinka paljon jokainen datapiste keskimäärin eroaa keskiarvosta. Keskihajonta ilmaistaan joko tekstillä $SD$ (englannin nimestä *standard deviation*), tai matemaattisilla symboleilla $\sigma$ (populaation keskihajonta) ja $s$ (otoksen keskihajonta). Keskihajonta lasketaan kaavalla:
+
+$$
+s = \sqrt{s^2} = \sqrt{\frac{\sum{(x-\bar{x})^2}} {N-1}}
+$$ {#eq-keskihajonta}
+
+Aikaisemmassa esimerkissä datajakauman varianssi oli $s^2 = 2.5$, jolloin sen keskihajonnaksi saadaan $s = \sqrt{2.5} \approx 1.58$.
+
+Keskihajonta ilmaistaan samassa mittayksikössä kuin datajakauma. Jos esimerkkijakaumamme edustaa euroja, voidaan siis sanoa, että sen keskihajonta on 1,58 euroa.
+
+Mitä isompi keskihajonta, sitä enemmän vaihtelua keskiarvosta datajakaumassa esiintyy. Sama pätee pieneen keskihajontaan. Määrittely, onko jokin keskihajonta "suuri" tai "pieni" on suhteellinen ja riippuu itse mittayksiköstä ja sen keskiarvosta: koska keskiarvomme esimerkissä oli kolme euroa, voidaankin sanoa että puolentoista euron keskihajonta on suhteellisen suuri.
