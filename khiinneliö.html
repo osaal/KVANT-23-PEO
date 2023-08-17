@@ -87,7 +87,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -106,13 +106,10 @@ div.csl-indent {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./pics/logo_lapinakyva.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
     </div>
@@ -229,14 +226,20 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
       </ul>
@@ -271,7 +274,7 @@ div.csl-indent {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -432,7 +435,7 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <section id="todellisten-arvojen-taulukko" class="level3" data-number="10.3.1">
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="todellisten-arvojen-taulukko"><span class="header-section-number">10.3.1</span> Todellisten arvojen taulukko</h3>
 <p>Rakenna taulukko, jonka riveissä on yhden muuttujan kaikki kategoriat, ja sarakkeissa on toisen muuttujan kaikki kategoriat.</p>
-<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="exceltoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;13.4</span></a>).</p>
+<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="exceltoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;14.4</span></a>).</p>
 <p>Solujen arvot voit laskea funktiolla:</p>
 <p><code>=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)</code></p>
 <p>Voit käyttää lukitustoimintoa <code>$</code> lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää Excelin vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!</p>
@@ -456,7 +459,7 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <section id="lopputuloslaskut" class="level3" data-number="10.3.4">
 <h3 data-number="10.3.4" class="anchored" data-anchor-id="lopputuloslaskut"><span class="header-section-number">10.3.4</span> Lopputuloslaskut</h3>
 <p>Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen.</p>
-<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="exceltoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;13.3</span></a>; <a href="perustoiminnot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;12.5.9</span></a>).</p>
+<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="exceltoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;14.3</span></a>; <a href="perustoiminnot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;13.5.9</span></a>).</p>
 <p>Laske khiin neliön oikeahäntäinen todennäköisyysarvo <em>p</em> kaavalla:</p>
 <p><code>=CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)</code></p>
 <p>Jos haluat, voit vielä laskea Cramérin V-suureen laskutoimituksella:</p>
@@ -730,7 +733,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./merkitsevyysluvut.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span>
