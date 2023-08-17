@@ -22,13 +22,17 @@ book:
       - sijaintiluvut.qmd
       - hajontaluvut.qmd
       - merkitsevyysluvut.qmd
+      - khiinneliö.qmd
     - part: "Excel-toiminnot"
       chapters:
       - excelinperusteet.qmd
       - perustoiminnot.qmd
+      - exceltoimintoja.qmd
     - references.qmd
   sidebar:
     style: docked
+    logo: "pics/logo_lapinakyva.png"
+  favicon: "pics/logo_lapinakyva.png"
 
 bibliography: references.bib
 citation: true
@@ -43,6 +47,6 @@ format:
     toc-depth: 3
     toc-expand: true
     reference-location: margin
-
+    page-layout: full
 
 

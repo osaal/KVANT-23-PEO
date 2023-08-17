@@ -1,0 +1,105 @@
+# Yleisiä toimintoja Excelissä {#sec-yleisiä-toimintoja-excelissä}
+
+Tällä sivulla esitetään yleisiä toimintoja ja menetelmiä Excelissä. Luettavuuden kannalta jokaisen funktion sulun sisältö on ympäröity välilyönnellä: `( tekstiä ( lisää tekstiä ))` Tämä ei ole tarpeellista Excelissä omassa työssäsi. Joissain tilanteissä tämä voi myös rikkoa laskukaavan, eli ole varovainen näiden kanssa!
+
+::: callout-caution
+## Wordin lainausmerkit eivät toimi Excelissä
+
+Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta ("). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta ("). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa.
+
+Koska Excelissä voi olla hankalaa kirjoittaa pitkiä kaavoja, voi joskus kuitenkin olla tarpeen kirjoittaa kaavat ensin jossain tekstinkäsittelyohjelmassa ja sitten kopioida ne Exceliin. Suosittelen tähän **Muistio**-ohjelmaa (*Notepad*), mikä löytyy Windows-käyttöjärjestelmästä valmiina. Jos käytät Mac OS X- tai Linux-käyttöjärjestelmiä, voit käyttää jotain toista raakatekstin käsittelyohjelmaa. Älä kuitenkaan käytä ohjelmia, joissa tekstiä automaattisesti formatoidaan ohjelman puolesta - näissä voi esiintyä samoja ongelmia kuin Excelin ja Wordin välillä.
+:::
+
+## Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja {#sec-toiminto01}
+
+Jos tarvitset poistaa kaikki epätäydelliset rivit jotain analyysia varten, voit käyttää seuraavan tapaista kaavaa:
+
+`=SUODATA( alue; ( Muuttuja1 <> "" ) * ( Muuttuja2 <> "" ) * ( ... ))`
+
+[Jokainen muuttujan tyhjien poisto määritellään sulkujen sisällä]{.underline}, muodossa `(Muuttuja <> "")`. Merkkijono `<>` on boolen logiikkaa, ja tarkoittaa samaa kuin "ei ole yhtä kuin". Merkkijono `""` esittää tyhjää solua, eli lainausmerkkien välillä ei ole mitään sisältöä. Toisin sanoen, jokainen suodatusehto sanoo "Valitse ne rivit, joiden arvo muuttujalla X ei ole yhtä kuin tyhjä merkki.
+
+[Voit määritellä niin monta ehtomuuttujaa kuin haluat]{.underline}. Ne lisätään peräkkäin ja kerrotaan yhteen (`*`). Tämä käytännössä toimii samalla tavalla kuin boolen logiikan `JA`-toiminto, eli kertominen määrittelee, että kaikkien ehtojen tulee täyttyä jotta rivi otetaan mukaan.
+
+[Suodatus kannattaa aina tehdä tarpeen mukaan]{.underline}. Jos mahdollista, kannattaa myös käyttää SUODATA-funktiota suoraan seuraavan analyysin funktion sisällä. Monet funktiot eivät nimittäin osaa tulkita SUODATA-funktion tuloksia oikein[^exceltoimintoja-1].
+
+[^exceltoimintoja-1]: Ongelma liittyy dynaamisiin matriisikaavoihin ja levittyineisiin matriiseihin, jotka voivat olla hankalia ymmärtää. Jos haluat lukea lisää, tietoa löytyy [Microsoftin apusivuilta](https://support.microsoft.com/fi-fi/office/dynaamiset-matriisikaavat-ja-levittyneen-matriisin-toiminta-205c6b06-03ba-4151-89a1-87a7eb36e531).
+
+::: callout-important
+Jos suodatuksen jälkeen riveillä vielä on tyhjiä soluja jossain (eli ei olla vaadittu täydellistä datamatriisia), SUODATA-funktio täyttää nämä arvolla `0`. Jos yrität suodattaa tätä tulosta uudelleen yllä olevalla tavalla, funktio ei enää löydä tyhjiä soluja jotka täyttäisivät ehdot - nolla-arvo ei ole sama asia kuin tyhjä arvo.
+:::
+
+## Hae kaikkien muuttujien nimet riveihin {#sec-toiminto02}
+
+Jos haluat kaikki muuttujasi nimet erillisille rivelle, esimerkiksi sijantilukutaulukkoa varten, voit käyttää seuraavaa kaavaa:
+
+`=TRANSPONOI( AINUTKERTAISET.ARVOT( VALITSERIVIT( taulukko; 1 )))`
+
+[Jotta toiminto toimisi]{.underline}, sinun tulee ensin varmistaa seuraavat asiat:
+
+-   Datamatriisin ensimmäisellä rivillä on muuttujien nimet.
+
+-   Jos olet määritellyt nimen koko datamatriisille, varmista että määrittely *sisältää* nimirivin.
+
+Kaava valitsee ensin ensimmäisen rivin datamatriisista (`VALITSERIVIT(taulukko; 1)`). Sen jälkeen haetaan kaikki uniikit arvot tältä riviltä (`AINUTKERTAISET.ARVOT()`). Viimeiseksi tämä rivi transponoidaan sarakemuotoon (`TRANSPONOI()`).
+
+[Jos haluat pitää muuttujien nimet rivillä]{.underline} (eli jakaa ne sarakkeisiin, niin kuin ovat datamatriisissa), jätä pois `TRANSPONOI`-funktio.
+
+## Laske muuttujan ryhmien määrä (k) {#sec-toiminto03}
+
+Jos haluat laskea, kuinka monta uniikkia ryhmää muuttujassa on, voit käyttää kaavaa:
+
+`=LASKE.A( AINUTKERTAISET.ARVOT( VALITSESARAKKEET( alue; sarakenumero )))`
+
+Kaava valitsee ensin sarakkeen `VALITSESARAKKEET(alue; sarakenumero)`. Jos sinulla on valmiiksi nimetty sarake, voit korvata koko tämän osuuden sarakkeen nimellä (katso alla). Seuraavaksi kaava hakee kaikki uniikit arvot sarakkeesta `AINUTKERTAISET.ARVOT()`. Viimeiseksi kaavassa lasketaan, kuinka monta uniikkia arvoa esiintyi `LASKE.A()`.
+
+[Kaava toimii myös ei-numeroiden määrän laskemisessa]{.underline}, `LASKE.A()`-funktion avulla.
+
+[Jos olet jo määritellyt sarakkeen nimen]{.underline}, käytä tätä kaavaa:
+
+`=LASKE.A(AINUTKERTAISET.ARVOT(sarakenimi))`
+
+::: callout-important
+VALITSESARAKKEET-funktio toimii sarakkeen numerolla, ei nimellä tai kirjaimella!
+:::
+
+## Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin {#sec-toiminto04}
+
+Jos haluat listata muuttujan kaikki uniikit arvot nousevassa järjestyksessä, voit käyttää kaavoja:
+
+-   Riveihin: `=LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )`
+
+-   Sarakkeisiin: `=TRANSPONOI( LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )`
+
+Ensin kaava hakee kaikki uniikit arvot alueelta `AINUTKERTAISET.ARVOT()`. Seuraavaksi ne lajitellaan funktiolla `LAJITTELE()`. Tässä funktiossa on tärkeää muistaa **kaksi** puolipilkkua: ensimmäisenä argumenttina syötetään lajiteltava matriisi. Toinen argumentti määrittelee lajitteluindeksin, mutta sitä emme tarvitse tässä, joten jätämme sen tyhjäksi. Kolmas argumentti määrittelee lajittelujärjestyksen, ja se me haluamme määritellä arvoksi `1`, eli nousevaan järjestykseen.
+
+[Voit vaihtaa järjestyksen]{.underline} nousevan `1` ja laskevan `-1` välillä vapaasti.
+
+## Laske N yhdelle muuttujan kategorialle {#sec-toiminto05}
+
+Jos haluat laskea muuttujan kategorian määrän, voit käyttää kaavaa:
+
+`=LASKE.A( SUODATA( muuttuja; muuttuja = arvo ) )`
+
+Kaava suodattaa ensin muuttuja-alueen arvon mukaan `SUODATA()`, jonka jälkeen se laskee, kuinka monta arvoa suodatetussa muuttujassa on jäljellä `LASKE.A()`.
+
+[Kaava toimii myös tekstin kanssa]{.underline} `LASKE.A()`-funktion ansiosta.
+
+## Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä {#sec-toiminto06}
+
+Jos haluat laskea **kaikkien** muuttuja-arvojen määrät, voit käyttää seuraavaa kahta kaavaa:
+
+-   Ensimmäinen solu: `=LAJITTELE( AINUTKERTAISET.ARVOT( muuttuja-alue ) ; ; 1 )`
+
+-   Toinen solu, ensimmäisen solun oikealla: `=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )`
+
+Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. LUKU).
+
+Toisessa solussa käytetään `TAAJUUS`-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. "sukupuoli" tai eksplisiittinen viittaus, esim C2:C105) kuin ensimmäisen solun kaavassa.
+
+`TAAJUUS`-funktion toisena argumenttina käytämme ensimmäistä funktiota, mutta huomaa risuaidan `#` lisääminen soluviittauksen loppuun. Tämä kertoo Excelille, että soluviittaus on levitetty matriisialue, ei yksittäinen solu, jolloin Excel toimittaa funktion jokaiselle matriisissa määritetylle arvolle, ei vain yhdelle. Jos esimerkiksi ensimmäisen solun osoite on C2, kirjoita `C2#`.
+
+::: callout-important
+`TAAJUUS`-funktio tuottaa aina yhden solun enemmän kuin mitä sille syötettiin: esimerkiksi jos kategorioita on viisi, funktio palauttaa kuusi solua. Viimeinen solu sisältää määrän kaikista arvoista, jotka ylittävät suurimman määritetyn arvon. Tämä tuki löytyy, koska `TAAJUUS`-funktiota voi myös käyttää rakentaakseen kategorioita kvantitatiivisesta muuttujasta, jolloin kategoriat eivät välttämättä kata koko jakauman pituutta.
+
+Jos raportoit kategorisen muuttujan määriä, jätä pois viimeinen tyhjä solu, koska sitä ei ole mahdollista saada arvoksi.
+:::
