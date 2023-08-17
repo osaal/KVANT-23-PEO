@@ -26,12 +26,13 @@ book:
     - part: "Excel-toiminnot"
       chapters:
       - excelinperusteet.qmd
+      - nimienhallinta.qmd
       - perustoiminnot.qmd
       - exceltoimintoja.qmd
     - references.qmd
   sidebar:
-    style: docked
-    logo: "pics/logo_lapinakyva.png"
+    style: floating
+    align: right
   favicon: "pics/logo_lapinakyva.png"
 
 bibliography: references.bib
@@ -47,6 +48,10 @@ format:
     toc-depth: 3
     toc-expand: true
     reference-location: margin
-    page-layout: full
+    page-layout: article
+    grid:
+      sidebar-width: 250px
+      body-width: 1200px
+      margin-width: 200px
 
 
