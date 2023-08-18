@@ -17,6 +17,7 @@ book:
       - muuttilastotyökalut.qmd
       - dmptuuli.qmd
       - tietoarkistot.qmd
+      - zotero.qmd
     - part: "Tilastotiede"
       chapters:
       - sijaintiluvut.qmd
