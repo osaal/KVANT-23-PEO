@@ -1,0 +1,261 @@
+# Ohjeita viittaamiseen {#sec-ohjeita-viittaamiseen}
+
+Tässä luvussa käydään läpi, miten tieteellinen viittaaminen toimii käytännössä. Viitejärjestelmänä käytetään American Psychological Association -yhdistuksen APA-järjestelmän seitsemättä painosta. Voit tutustua tarkemmin järjestelmään esimerkiksi [Oulun yliopiston kirjaston](https://libguides.oulu.fi/tieteellinentiedonhankinta/apa) ohjesivulla.
+
+Tämän sivun lähde kokonaisuudessaan: Oulun yliopisto (2023). "Tieteellisen tiedonhankinnan opas: APA-viittaustyyli". https://libguides.oulu.fi/tieteellinentiedonhankinta/apa. Haettu 18. lokakuuta 2023.
+
+## Miksi viittaaminen? {#sec-miksi-viittaaminen}
+
+Yksi tieteen erityisominaisuuksista on sen *kollaboratiivinen* luonne. Tiedettä tehdään yhdessä, rakentuen aina aikaisempaan tietoon. Samaan aikaan tiede pyrkii avoimuuteen, jolloin on luontevaa jättää raha- ja talousmaailma toissijaiseksi.
+
+Täten yksittäisen tutkijan aikaansaamisia ei palkita rahalla, vaan maineella. Tutkijoiden urakehitys pohjautuu tutkimuksen tekoon ja tämän tunnistuksen saamiseen muilta tutkijoilta. Yksi muoto tunnistukselle on *viittaaminen*.
+
+Viittaamisella tarkoitetaan, että käytät jonkun toisen kehittämää tietoa ja otat tämän käytön huomioon mainitsemalla lähteen. Tämä on elintärkeää tieteen kehityksen kannalta, osittain yllä mainitusta tunnistussyystä. Osittain kyseessä on myös *toistettavuus*: jotta kanssatieteilijät voivat tarkistaa tuloksesi, ja siten varmentaa tiedon oikeellisuuden, heidän tulee tietää, mistä kaikkialta juuri sinun tutkimuksesi hakee tietoa.
+
+Viittaaminen on myös eettisesti vaadittua. Kaikki tuotoksessasi on sinun vastuullasi. Viittaamalla ilmaiset, että et ole itse kehittänyt kyseistä tietoa, vaan joku muu on tehnyt sen puolestasi. Toisten tutkimustulosten omiminen on eettinen rike, ja jopa rangaistavaa *plagiointina*. Jos viittaat tarkasti, varmistat ainakin, että mahdolliset virheet taustatiedossa ovat muiden "syytä", ei sinun - mutta samalla varmistat, että muiden huipputulokset ovat heidän, ei sinun.
+
+## Viittaamisen perusajatus {#sec-viittaamisen-perusajatus}
+
+Viittaaminen tehdään aina juoksevassa tekstissä. Näitä voidaan kutsua *sulkuviittauksiksi*, koska ne ilmaistaan suluissa tekstin seassa.[^viittaaminen-1]
+
+[^viittaaminen-1]: Vaihtoehtona löytyy myös numeroviittaukset, jolloin viite ilmaistaan numeroituna juoksevassa järjestyksessä. Nämä järjestelmät ovat yleisempiä luonnontieteiden puolella, mutta sulkuviittaukset taas löytyvät usein yhteiskunta- ja ihmistieteissä.
+
+Sulkuviittausten lisäksi jossain dokumentissasi (tekstin lopussa, videon kuvauksessa, blogin lopussa...) listaat myös *lähdeluettelon*. Lähdeluettelossa on kaikki teoksessa viitatut teokset listattuna, useimmiten ensimmäisen kirjoittajan sukunimen mukaan aakkosjärjestyksessä.
+
+Lähdeluetteloon laitetaan kaikki tarvittava tieto, jotta lukija voi löytää kyseisen teoksen ja varmentaa väitteesi todeksi. Sulkuviittaukset ovat lyhyempiä (useimmiten vain kirjoittajien sukunimet ja julkaisuvuosi), ja auttavat taas lukijaa tarkastamaan, mikä väite tulee mistäkin teoksesta.
+
+Ajatuksena on siten, että joka ikiselle väitteelle, joka ei tule sinulta suoraan (eli jonka ilmaiset tietona), löytyy jokin lähde ilmaistuna sekä sulkuviittauksena ja lähdeluettelossa. Ainoana poikkeuksena voidaan nähdä *yleinen tieto* (ns. maalaisjärki). Tällaista voi olla esimerkiksi että veden molekyylinimi on H2O. Yleiseen tietoon vetoamista tulee kuitenkin välttää - yksinkertaista selitettä sille, mikä milloinkin on yleistietoa, ei nimittäin ole!
+
+Viittaamisessa on useita eri tapoja ja muotoiluja, ja viitejärjestelmät vaihtelevat suurestikin. Tarkista aina ensisijaisesti, mitä julkaisukanava (esim. lehti, kustantaja, oppilaitos) vaatii, ja seuraa sitä. Kuitenkin tärkeintä on *selkeys* ja *johdonmukaisuus*. Ilmoita tarvittavat tiedot, jotta lukija voi tarkastaa lähteen oikeellisuuden, ja käytä samaa ilmoitusmenetelmää (viitejärjestelmää) koko dokumentissa.
+
+Helpottaaksesi työtäsi voit käyttää lähdehallintatyökalua, esimerkiksi Zoteroa (@sec-zotero-lähdehallintatyökalu).
+
+## Sulkuviitteiden muotoilu {#sec-sulkuviitteiden-muotoilu}
+
+### Kirjoittajien nimeäminen {#sec-kirjoittajien-nimeäminen}
+
+Tekstin seassa viitteet ilmaistaan aina suluissa. Esimerkkinä:
+
+> Suomalaiset osaavat hätänumeron hyvin (Saal & Puustinen, 2023).
+
+Sulku lisätään siihen lauseeseen, jossa viitattava tieto löytyy. Jos latelet useampia virkeitä samasta lähteestä, voit myös lisätä sulun koko kappaleen loppuun, jolloin se tulee "omana lauseenaan" kappaleen lopussa:
+
+> Suomalaiset osaavat \[...\]. Tätä on tulkittu siten, että \[...\]. Omatoiminen varautuminen nähdään siksi osana kokonaisturvallisuutta. (Saal & Puustinen, 2023).
+
+Sulkuvirkeeseen kuuluvat kaksi tärkeää osaa: kirjoittajien sukunimet ja julkaisuvuosi. Nämä erotetaan toisistaan pilkulla `,`. Kahden kirjoittajan kohdalla ensimmäinen ja toinen sukunimi erotetaan ampersandilla `&`.
+
+Jos kirjoittajia on useampi kuin kaksi[^viittaaminen-2], mainitaan ensimmäisen kirjoittajan sukunimi, ja lisätään perään `ym.`, eli "ynnä muut" lyhenteenä. Englanniksi ja ruotsiksi käytetään latinan sanontaa "et alii" ("ja muut"), lyhenteeltään `et al.`.
+
+[^viittaaminen-2]: APA-tyylin kuudenteen painokseen asti käytäntöä sovellettiin vasta kuuden kirjoittajan kohdalla. Seitsemännestä painoksesta alkaen ym-käytäntöä sovelletaan kuitenkin jo kolmen kohdalla.
+
+Jos kirjoittaja on yhteisö tai organisaatio, ja sillä on oma lyhenne, ensimmäisessä viittauksessa ilmaistaan yhteisön koko nimi sekä lyhenne hakasuluissa, ja seuraavissa viittauksissa vain lyhenne:
+
+> (Terveyden ja hyvinvoinnin laitos \[THL\], 2020)
+>
+> (THL, 2020)
+
+Ensisijaisesti viitataan aina henkilöiden (kirjoittajien) nimiin. Jos näitä ei ole ilmaistu, seuraavaksi käytetään organisaation nimeä. Jos sitäkään ei ole ilmaistu, voidaan käyttää esim. verkkosivun nimeä tai muuta vastaavaa - mutta jos tähän tullaan, voidaankin jo hieman kyseenalaistaa lähteen luotettavuutta.
+
+### Päiväys {#sec-päiväys}
+
+Ensisijaisesti sulkuviittauksen päiväys on lähteen julkaisuvuosi.
+
+Poikkeuksena tähän on uutislähteet, blogikirjoitukset tai muut nopean mediatuotannon lähteet (esim. YouTube-videot, twiitit/X:ät). Näissä tulee ilmaista tarkka julkaisupäivämäärä, muodossa pp.(k)k.vvvv:
+
+> Sähkön hinta on vielä vuoden 2023 syksyllä vaihteleva, mm. teknisten haittojen takia (Eromäki, 18.8.2023).
+>
+> Lähde: Eromäki, Veikko. (2023). "Pahimmillaan viikkoja kestävä triplahäiriö iski Suomen sähkömarkkinoille - Energiateollisuuden Leskelä: 'Hinnoissa hyvin suurta vaihtelua'". *Yle*, 18.8.2023. https://yle.fi/a/74-20045838. Haettu 18.8.2023.
+
+### Sivuviittaus ja tarkemmat viittaukset {#sec-sivuviittaus-ja-tarkemmat-viittaukset}
+
+Jos viittaat teokseen kokonaisuudessaan, sivunumerointia ei tarvita. Jos kuitenkin kyseessä on kirja, tai jos esim. viittaat kuvaan, alalukuun tai muuhun tarkempaan kohtaan, tulee sinun myös ilmaista tarkka sijainti.
+
+Sivunumerot ilmaistaan aina päiväyksen jälkeen: vuosiluvun jälkeen pilkku `,` ja sitten sivut muodossa `s. XX-YY`. Jos viittaat yhteen sivuun, yksi numero riittää, muutoin laita koko alue johon viittaat.[^viittaaminen-3]
+
+[^viittaaminen-3]: Vanhemmissa APA-versioissa, sekä joissain muissa viitejärjestelmiä, löytyy erikoismerkkejä joilla ilmaistaan esim. seuraava(t) sivu(t) ensimmäisestä sivuviittauksesta lähtien, esim. `s. 5ff` tai `s. 8f`. Nämä ovat kuitenkin jokseenkin epäselkeistä. Siksi suosittelen mielummin käyttämään tarkkoja sivuviittauksia.
+
+Jos viittaat kuvioon, taulukkoon tai muuhun numeroituun osuuteen, voit myös ilmaista tämän oman numeroinnin.
+
+> Suomalaiset osaavat hätänumeron hyvin (Saal & Puustinen, 2023, s. 31). Tuntemus onkin pysynyt erittäin korkealla jo kahden vuosikymmenen ajan (Saal & Puustinen, 2023, Kuvio 11).
+
+### Sulkuviittauksen jakaminen {#sec-sulkuviittauksen-jakaminen}
+
+Viittaaminen voidaan myös tehdä sujuvasti tekstissä. Tällöin viittaus muotoillaan osaksi virkettä, jotta luettavuus pysyisi mahdollisimman korkealla tasolla. Jos mainitset kirjoittajien nimet tekstissä, ja viite tulee heti näiden perässä, voit jättää pois kirjoittajien nimet sulkuviittauksesta. Voit myös jatkaa viittausta useamman virkeen, ja jättää tarkentavat sivunumeroinnit ym. koko virkesarjan loppuun.
+
+> Saalin ja Puustisen (2023) tutkimuksen mukaan suomalaisten omatoimisessa varautumisessa on parannettavaa. Eräänä mahdollisena syynä kirjoittajat näkevät viranomaisluottamuksen erittäin korkean tason, ja siten mahdollisen passivoitumisen (s. 70-72).
+
+### Tarkentava teksti sulkuviittauksissa {#sec-tarkentava-teksti-sulkuviittauksissa}
+
+Joskus voi olla tarpeen ilmaista, että sulkuviittauksessa ei ole kyse tavanomaisesta viittauksesta, vaan jostain muusta. Voit esimerkiksi vertailla toteamia ja viitteitä toisiinsa, huomauttaa epäsuorasta viittauksesta, tai muuten vaan lisätä tietoja sulkuun viittauksen yhteydessä.
+
+Yleisellä tasolla tätä tulee välttää. Lukija voi helposti tottua hyppäämään sulkuviittauksen yli lukiessaan, jolloin lisätieto jää lukematta. Tämän lisäksi erinäiset lisämerkinnät voivat olla vaikeasti ymmärrettävissä, varsinkin koska niitä käytetään vaihtelevin tarkoituksin tieteellisessä kirjallisuudessa.
+
+Jos vertaat virkeen väitettä toiseen lähteeseen, käytä lyhennettä `vrt.`.
+
+> Suomalaisten omatoiminen varautuminen on hyvällä tasolla (mutta vrt. Saal & Puustinen, 2023).
+
+Jos viittaat ideaan, jota olet jatkojalostanut lauseessa, mutta jonka lähde ei kuitenkaan ole sinä itse, käytä lyhennettä `ks.` ("katso").
+
+> Kriisinsietokyky voi olla yhteydessä yksilön osaamiseen ja käsitykseen omasta varautumismahdollisuudestaan (ks. Saal & Puustinen, 2023).
+
+Jos idea on todettu useammassa lähteessä (mieluisesti niin monessa, että se alkaa olla yleistä tietoa), käytä lyhennettä `mm.`.
+
+> Suomalaiset ovat viranomaisluottavaa kansaa (mm. Saal & Puustinen, 2023; Vuorensyrjä ym., 2023).
+
+### Useita sulkuviittauksia kerralla {#sec-useita-sulkuviittauksia-kerralla}
+
+Voit listata useamman sulkuviittauksen yhdessä sulussa erottamalla ne puolipilkulla `;`. Viittausten välinen järjestys voi olla joko vuosiluvuittain nousevassa järjestyksessä, ensimmäisen kirjoittajan sukunimen aakkosjärjestyksessä, tai molemmat.
+
+Jos kuitenkin huomaat tekeväsi useamman viittauksen sulkuviitteitä useasti, voi olla paikallaan keventää tekstiä. Yhdessä virkeessä tulisi olla vain yksi väite, jolloin viitteitä ei yleensä ole useampia!
+
+## Viiteluettelon muotoilu {#sec-viiteluettelon-muotoilu}
+
+Viiteluettelossa/lähdeluettelossa listataan kaikki teoksessa käytetyt viitteet laajemmilla tiedoilla. Viiteluetteloon **ei** lisätä "inspiraation lähteitä" tai muita epätieteellisin argumentein kerättyjä teoksia - vain ne viitteet, jotka oikeasti esiintyvät tekstissä!
+
+Viiteluettelo asetetaan APA-järjestelmässä aakkosjärjestykseen. Jos saman tekijän teoksiin viitataan useasti, järjestys määräytyy näin:
+
+-   Ensin tekijän yksin kirjoittamat teokset nousevassa julkaisujärjestyksessä.
+
+-   Sitten tekijän muiden kanssa kirjoittamat teokset, toisen kirjoittajan sukunimen mukaan aakkosjärjestyksessä.
+
+-   Jos useampi kirjoittaja on yhdessä kirjoittanut useamman teoksen, käytetään julkaisujärjestystä.
+
+-   Ensin kahden tekijän yhteiskirjoittamat, sitten kolmen, jne.
+
+### Kirjoittajan nimi {#sec-kirjoittajan-nimi}
+
+[Kirjoittajien nimet]{.underline} ilmaistaan aina muodossa `Sukunimi, A. B.` Toisin sanoen, ensin koko sukunimi, sitten pilkulla erotetaan kaikki tekijän käyttämien etunimien ensimmäiset kirjaimet. Käytä samaa muotoilua, jota tekijä itse käyttää - jos hän käyttää vain yhtä etunimeä, älä käytä muita vaikka löytäisit.
+
+Joissain kulttuureissa käytetään [useita sukunimiä]{.underline} (esim. Norjassa, Espanjassa). Käytä samaa määrää sukunimiä kuin kirjoittajat itse käyttävät, ja järjestä ensimmäisen sukunimen mukaan. Esimerkiksi `Asbjörn Thorvaldsen, O.` tulee ennen `Davidson, J.`, koska ensimmäinen sukunimi alkaa A:lla.
+
+### Kirjat (monografit ja antologiat) {#sec-kirjat}
+
+Kirjoille merkitään seuraavat tiedot:
+
+-   Tekijöiden nimet, esim. `Meikäläinen, M., & Teikäläinen, T.`
+
+    -   Jos teos on toimitettu (antologia), toimittajien nimien jälkeen lisätään `(toim.)`
+
+-   Kirjan julkaisuvuosi, esim. `(2018)` tai `(ei pvm.)` (jos vuotta ei löydy)
+
+-   Teoksen nimi *kursivoituna,* esim. *`ABC-kiria.`*
+
+-   Painos (jos muu kuin ensimmäinen): Esim. `(2. painos)`.
+
+-   Kustantaja[^viittaaminen-4], esim. `WSOY.`
+
+-   DOI tai URL (jos e-kirja), esim. `https://doi.org/XXXX.`
+
+[^viittaaminen-4]: APA-ohjeen seitsemännessä painoksessa ei enää merkitä kustannuspaikkaa. Aikaisemmissa tyyleissä ne merkitään, esim. `Porvoo: WSOY`.
+
+Esimerkkiviittaus:
+
+> Glaser, B. G., & Strauss, A. L. (1967). *The Discovery of Grounded Theory: Strategies for Qualitative Research*. Aldine Transaction.
+
+### Artikkeli/luku toimitetussa teoksessa (antologiassa) {#sec-artikkeliluku-toimitetussa-teoksessa}
+
+Toimitetuille artikkeleille ja kirjaluvuille merkitään seuraavat tiedot:
+
+-   Tekijöiden nimet, esim. `Meikäläinen, M., & Teikäläinen, T.`
+
+-   Teoksen julkaisuvuosi, esim. `(2018)` tai `(ei pvm.)` (jos vuotta ei löydy)
+
+-   Artikkelin nimi tavallisin kirjaimin, esim. `ABC-kiria.` (*HUOM*: Ei kursiivia!)
+
+-   Toimitetun teoksen tiedot: Aloita sanalla `Teoksessa`
+
+    -   Toimittajien nimet muodossa `M. Meikäläinen, T. Teikäläinen & T. Täkäläinen (toim.)`
+
+    -   Toimitetun teoksen nimi *kursivoituna*, esim. *`Agricolan toimitetut teokset`*`.`
+
+    -   Artikkelin sivunumerot teoksessa suluissa, esim. `(s. 1-16)`
+
+    -   Kustantaja, esim. `WSOY.`
+
+Esimerkkiviittaus:
+
+> Barnlund, D. C. (1970). A Transactional Model of Communication. Teoksessa J. Akin, A. Goldberg, G. Myers & J. Stewart (toim.) *Language Behavior: A Book of Readings in Communication* (s. 43-61). Mouton.
+
+### Artikkelit aikakauslehdissä {#sec-artikkelit-aikakauslehdissä}
+
+Tieteellisille aikakauslehtiartikkeleille merkitään seuraavat tiedot:
+
+-   Tekijöiden nimet (enintään 20 tekijää, muuten 19 ensimmäistä, sitten `...`, sitten viimeinen tekijä), esim. `Meikäläinen, M., & Teikäläinen, T.`
+
+-   Teoksen julkaisuvuosi, esim. `(2018)` tai `(ei pvm.)` (jos vuotta ei löydy)
+
+    -   Jos teos on vielä painossa, vuosi korvataan merkinnällä `(painossa)`
+
+-   Artikkelin nimi tavallisin kirjaimin, esim. `ABC-kiria.` (*HUOM*: Ei kursiivia!)
+
+-   Lehden tiedot
+
+    -   Lehden nimi kursiivilla, esim. *`Journal of Risk Analysis`*
+
+    -   Lehden vuosikerta ja painos, pilkku edellä, esim. `, 23(5)`. HUOM: Vuosikerta kirjoitetaan kursiivilla, mutta painos tavallisin merkein.
+
+    -   Sivunumerot, pilkku edellä, esim. `, 10-47`. HUOM: Ei käytetä etuliitettä `s.`!
+
+    -   Jos teos on käsikirjoitus, jota ei vielä olla julkaistu missään, korvataan lehden tiedot hakasulkutekstillä `[käsikirjoitus valmisteilla]`.
+
+    -   Jos teos on käsikirjoitus, joka on hyväksytty julkaistavaksi mutta ei vielä julkaistu, lehden tiedot korvataan tekstillä `[käsikirjoitus hyväksytty julkaistavaksi]`.
+
+-   DOI-numero, esim. `https://doi.org/XXXX`.
+
+Esimerkkiviittaus:
+
+> Abbate, C. E. (2021). The Epistemology of Meat-Eating. *Social Epistemology, 35*(1), 67-84. https://doi.org/10.1080/02691728.2020.1771794
+
+### Opinnäytetyöt ja väitöskirjat {#sec-opinnäytetyöt-ja-väitöskirjat}
+
+Oppareille ja väitöskirjoille merkitään seuraavat tiedot:
+
+-   Tekijöiden nimet, esim. `Meikäläinen, M., & Teikäläinen, T.`
+
+-   Teoksen julkaisuvuosi, esim. `(2018)` tai `(ei pvm.)` (jos vuotta ei löydy)
+
+-   Teoksen nimi *kursivoituna,* esim. *`ABC-kiria.`*
+
+-   Työn tyyppi ja koulutuslaitos, esim. `[pro gradu -työ, Åbo Akademi]`
+
+-   Julkaisukanava, esim. `Åbo Akademin julkaisuarkisto Doria`.
+
+-   Linkki työhön, esim. `https://www.XXXXXXX`
+
+Esimerkkiviittaus:
+
+> Saal, O. (2020). *Legitimating Academic Practice: Mapping the Diversity of Epistemic Logics in Finnish University Disciplines*. \[pro gradu-työ, Åbo Akademi\]. Åbo Akademin kirjasto. https://www.doria.fi/handle/10024/176872.
+
+### Elektroniset lähteet {#sec-elektroniset-lähteet}
+
+Elektronisille lähteille ei löydy aivan yhtenäistä tapaa viitata. Kaikissa kuitenkin tarvitaan vähintään:
+
+-   Tekijöiden nimet
+
+-   Julkaisuvuosi tai -päivämäärä
+
+-   Teoksen nimi tai otsikko
+
+-   Teoksen tyyppi, esim. `[YouTube-video]` tai `[blogikirjoitus`\]
+
+-   Linkki lähteeseen
+
+Linkin tulisi mieluiten olla ns. permalinkki, esimerkiksi DOI- tai URN-numero. Voi myös käyttää arkistoitua versiota lähteestä (esim. Internet Archivessa), jolloin kannattaa myös mainita arkistoidun lähteen päiväys sekä milloin hait linkin arkistosta.
+
+Näitä lähteitä voivat olla:
+
+-   Blogikirjoitukset
+
+-   Preprint-artikkelit
+
+-   Tekoälytekstit
+
+-   Tutkimus- ja data-aineistot
+
+-   Verkkosivut
+
+-   Uutisartikkelit verkossa
+
+-   Videot
+
+-   Sosiaalisen median tuotoksia

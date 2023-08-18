@@ -1,10 +1,10 @@
-# Zotero-lähdehallintatyökalu
+# Zotero-lähdehallintatyökalu {#sec-zotero-lähdehallintatyökalu}
 
 [Zotero](https://www.zotero.org/) on ilmainen lähdehallintatyökalu, jossa voit kerätä kaikki lähdeviittauksesi, organisoida ne haluamasi tavan mukaan, ja generoida lähdeluetteloita esimerkiksi Wordiin.
 
 Zoteron käyttö vaatii rekisteröitymistä, jonka jälkeen saat henkilökohtaisen profiilin, minne tallennat lähdeviittauksesi. Zoterolle löytyy tietokoneohjelma sekä plugin-sovellukset Google Chromeen ja Microsoft Wordiin, joita kannattaa käyttää yhdessä.
 
-## Zoteron tietokonesovelluksen yleiskäyttö
+## Zoteron tietokonesovelluksen yleiskäyttö {#sec-zoteron-tietokonesovelluksen-yleiskäyttö}
 
 Lataamalla Zoteron ja kirjautumalla sisään sovellukseen Zoteron käyttäjätunnuksellasi pääset Zoteron yleisnäkymään (@fig-zotero-yleisnäkymä)[^zotero-1].
 
@@ -36,7 +36,7 @@ Lataamalla Zoteron ja kirjautumalla sisään sovellukseen Zoteron käyttäjätun
 
 [Zoterossa on sisäänrakennettu PDF-lukija]{.underline}. Viitekirjauksella ei tarvitse olla alkuperäistä tekstiä, mutta jos lisäät sellaisen, pääset lukemaan tekstin suoraan Zoterossa kaksoisnapauttamalla lähdettä. Zoteron PDF-lukija on suht alkeellinen, mutta sisältää hyödyllisiä merkintätyökaluja, esim. käsinkirjoitus- ja merkkauskynätyökalu.
 
-## Viitteiden tuonti Zoteroon
+## Viitteiden tuonti Zoteroon {#sec-viitteiden-tuonti-zoteroon}
 
 Voit tuoda omia viitteitäsi Zoteroon eri tavoin. Yksinkertaisin, mutta myös työläin, on **lisätä viite käsin**. Painamalla vihreää `+`-painiketta ohjelman keskikohdan yläpalkissa pääset lisäämään viitteen. Valitse ensin viitteen tyyppi - yleisimmät löytyvät suoraan painikkeen avaamasta listasta, mutta "More"-valinnan alta löytyy listaus kaikista Zoteron tukemista viitetyypeistä.
 
@@ -55,7 +55,7 @@ Kolmas vaihtoehto on **pudottaa lataamasi PDF-tiedosto Zoteroon** ja antaa ohjel
 
 Neljäs, ja itse suosimani, vaihtoehto on **käyttää [Zotero Connector](https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc)-työkalua Google Chromessa**. Työkalulla voit selailla viitteitä verkossa, ja löytäessäsi kiinnostavan viitteen, painat yksinkertaisesti työkalun kuvaketta Chromen yläoikealla (osoitepalkin vieressä), jolloin Connector automaattisesti lisää viitteen ja tarvittavat metadatatiedot suoraan Zoteroon. Kuvakkeen ikoni vaihtuu viitetyypin mukaan, joten voit suoraan nähdä, millaiseksi Zotero mieltää verkkosivuviitteesi. Zotero ymmärtää siis suoraan aikakauslehtiartikkeleiden olevan näitä, vaikka lukisit niitä lehden verkkosivuilla.
 
-## Viitteiden käyttö Wordissa
+## Viitteiden käyttö Wordissa {#sec-viitteiden-käyttö-wordissa}
 
 Asentaessasi Zoteron tietokoneellesi, se myös automaattisesti asentaa plugin-ohjelman Wordiin, jolla voit lisätä viitteitä suoraan tekstiisi[^zotero-2]. Plugin-ohjelma löytyy omana välilehtenään Wordista, yleensä välilehtiluettelon lopusta. Jotta voit käyttää toimintoa, sinulla tulee olla Zoteron tietokoneohjelma auki taustalla - muuten viitteiden lisääminen ja muokkaaminen ei toimi!
 
