@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät, syksy 2023 - 15&nbsp; Webropol</title>
+<title>Kvantitatiiviset menetelmät, syksy 2023 - 13&nbsp; Grafiikka Excelissä</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./muuttilastotyökalut.html" rel="next">
-<link href="./perustoiminnot.html" rel="prev">
+<link href="./perustoiminnot.html" rel="next">
+<link href="./exceltoimintoja.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./webropol.html">Työkalut</a></li><li class="breadcrumb-item"><a href="./webropol.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./excelgrafiikka.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
+  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
   </div>
 </li>
@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link active">
+  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
   </div>
 </li>
@@ -282,13 +282,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#webropoliin-kirjautuminen" id="toc-webropoliin-kirjautuminen" class="nav-link active" data-scroll-target="#webropoliin-kirjautuminen"><span class="header-section-number">15.1</span> Webropoliin kirjautuminen</a></li>
-  <li><a href="#yleisnäkymä-ja-kyselyn-luominen" id="toc-yleisnäkymä-ja-kyselyn-luominen" class="nav-link" data-scroll-target="#yleisnäkymä-ja-kyselyn-luominen"><span class="header-section-number">15.2</span> Yleisnäkymä ja kyselyn luominen</a></li>
-  <li><a href="#muokkaa-näkymä" id="toc-muokkaa-näkymä" class="nav-link" data-scroll-target="#muokkaa-näkymä"><span class="header-section-number">15.3</span> Muokkaa-näkymä</a></li>
-  <li><a href="#kysymysten-muokkaus" id="toc-kysymysten-muokkaus" class="nav-link" data-scroll-target="#kysymysten-muokkaus"><span class="header-section-number">15.4</span> Kysymysten muokkaus</a></li>
-  <li><a href="#kerää-vastauksia--näkymä" id="toc-kerää-vastauksia--näkymä" class="nav-link" data-scroll-target="#kerää-vastauksia--näkymä"><span class="header-section-number">15.5</span> Kerää vastauksia -näkymä</a></li>
-  <li><a href="#seuranta-näkymä" id="toc-seuranta-näkymä" class="nav-link" data-scroll-target="#seuranta-näkymä"><span class="header-section-number">15.6</span> Seuranta-näkymä</a></li>
-  <li><a href="#raportointi-näkymä" id="toc-raportointi-näkymä" class="nav-link" data-scroll-target="#raportointi-näkymä"><span class="header-section-number">15.7</span> Raportointi-näkymä</a></li>
+  <li><a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" id="toc-sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="nav-link active" data-scroll-target="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">13.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</a></li>
+  <li><a href="#sec-kaavion-lisääminen" id="toc-sec-kaavion-lisääminen" class="nav-link" data-scroll-target="#sec-kaavion-lisääminen"><span class="header-section-number">13.2</span> Kaavion lisääminen</a></li>
+  <li><a href="#sec-kaavion-muokkaaminen" id="toc-sec-kaavion-muokkaaminen" class="nav-link" data-scroll-target="#sec-kaavion-muokkaaminen"><span class="header-section-number">13.3</span> Kaavion muokkaaminen</a></li>
   </ul>
 </nav>
     </div>
@@ -297,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></h1>
+<h1 class="title"><span id="sec-grafiikka-excelissä" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></h1>
 </div>
 
 
@@ -312,155 +308,85 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Tällä sivulla käydään läpi, miten Webropol-työkalun käyttö toimii. Lisää ohjeita löytyy myös Pelastusopiston intraverkosta.</p>
-<p>Webropol on suomalainen kyselytyökalu, jolla voit tuottaa erimuotoisia kyselyjä ja lähettää ne vastaajillesi.</p>
-<section id="webropoliin-kirjautuminen" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="webropoliin-kirjautuminen"><span class="header-section-number">15.1</span> Webropoliin kirjautuminen</h2>
-<p>Kirjaudu Webropoliin osoitteessa <a href="https://webropol.fi/">webropol.fi</a>. Käytä Pelastusopiston tunnuksia päästäksesi sisään, jolloin saat käyttöösi myös opiston omat grafiikat.</p>
+<p>Grafiikan teko Excelissä on suht yksinkertaista (verrattuna moneen muuhun tilastotyökaluun). Helpointa on valita data-alue, jonka haluaa esitellä kuvissa, valita mieluinen graaffinen esittely, ja muokata se sopivaan muotoon.</p>
+<p>Tässä luvussa käydään läpi, miten tuotat Excelissä yleisimmät graaffiset asettelut: pylväskuvio, pistekuvio ja piiraskuvio. Jos et ole tutustunut tiedon visualisointiin yleisemmin, lue <a href="grafiikka.html"><span>Luku&nbsp;3</span></a>.</p>
+<section id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">13.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</h2>
+<ol type="1">
+<li>Laske tilastot, jotka haluat esittää kaavassa, esim. kategoriamäärät (ks. <a href="exceltoimintoja.html#sec-toiminto06"><span>Alaluku&nbsp;12.6</span></a>).</li>
+<li>Maalaa lasketut tilastot, ml. mahdolliset otsikot ja selitteet.</li>
+<li><code>Lisää &gt; Suositellut kaaviot</code>, valitse mieluisesi kaavio</li>
+<li>Muokkaa kaaviota sopivaksi.</li>
+<li>Leikkaa ja liimaa kaavio Wordiin, tai oikeaklikkaa kaaviota ja valitse <code>Tallenna kuvana...</code></li>
+</ol>
+<p>Kaavioita voi tuottaa myös suoraan tilastoista, hyödyntäen power-kaaviomenetelmää. Emme kuitenkaan käytä näitä tällä kurssilla.</p>
 </section>
-<section id="yleisnäkymä-ja-kyselyn-luominen" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="yleisnäkymä-ja-kyselyn-luominen"><span class="header-section-number">15.2</span> Yleisnäkymä ja kyselyn luominen</h2>
-<p>Kirjautuessasi Webropoliin näet yleisnäkymän (<a href="#fig-webropol-aloitusnäkymä">Kuva&nbsp;<span>15.1</span></a>). Jos olet luonut kyselyn aikaisemmin käyttäjätililläsi, näet sen listattuna “Oikotiet viimeisimpiin kyselyihin ja raportteihin”-osioissa. Yläoikealla löydät uuden kyselyn luomisen työkalu “Luo uusi kysely” sekä linkin sivulle, josta löydät omat kyselysi, “Kyselyt”.</p>
-<div id="fig-webropol-aloitusnäkymä" class="quarto-figure quarto-figure-center anchored">
+<section id="sec-kaavion-lisääminen" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="sec-kaavion-lisääminen"><span class="header-section-number">13.2</span> Kaavion lisääminen</h2>
+<p>Aloita valitsemalla haluamasi tilastot (kohta 2, <a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span>Alaluku&nbsp;13.1</span></a>).</p>
+<p>Navigoi sitten työkaluvälilehdessä kohtaan <code>Lisää &gt; Suositellut kaaviot</code>. Ikkuna avautuu suositeltuihin kaavioihin, joista löydät Excelin suosittamia kaavioita data-alueellesi. Voit myös valita kaikkien kaavioiden välillä “Kaikki kaaviot”-välilehdestä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi pohjautuvan esikatselun kaavion ulkonäöstä (<a href="#fig-grafiikka-lisääkaavio">Kuva&nbsp;<span>13.1</span></a>).</p>
+<div id="fig-grafiikka-lisääkaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="pics/webropol/webropol_aloitusnäkymä.png" class="img-fluid figure-img" alt="Webropolin aloitusnäkymä uudelle käyttäjälle."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.1: Webropolin yleisnäkymä</figcaption>
+<p><img src="pics/grafiikka/grafiikka_lisääkaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Lisää kaavio -ikkunasta. Välilehti &quot;Kaikki kaaviot&quot; on auki, kohdassa &quot;Pylväskaavio&quot;."></p>
+<figcaption class="figure-caption">Kuva&nbsp;13.1: Lisää kaavio -ikkuna.</figcaption>
 </figure>
 </div>
-<p>Valitse “Luo uusi kysely” yläpalkista tai oikotiealueen oranssista napista luodaksesi uuden kyselyn. Siirryt kyselyn luontilomakkeeseen (<a href="#fig-webropol-luouusikysely">Kuva&nbsp;<span>15.2</span></a>).</p>
-<div id="fig-webropol-luouusikysely" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_luouusikysely.png" class="img-fluid figure-img" alt="Kyselyn luontilomake. Kaikki alueet ovat tyhjät."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.2: Kyselyn luontilomake</figcaption>
-</figure>
-</div>
-<p>Voit nimetä kyselysi sekä valita, mihin kansioon haluat laittaa sen. Tämä vaikuttaa vain siihen, miten järjestelet omat kyselysi tililläsi, eikä näy vastaajille.</p>
-<p>Tällä alueella voit myös määritellä ulkonäkömallin. Myöhemmin voit vapaasti muuttaa ulkonäköä, mutta valitse jo tässä hetkessä malli, joka on tarpeeksi lähellä lopullista versiotasi. Näet esikatselun kyselyn ulkonäöstä tietokoneruudulla sivun alaosassa.</p>
-<p>Kun olet nimennyt kyselyn ja valinnut mallin (voit käyttää oletusasetusta), paina “Luo kysely”-painiketta sivun oikealla puolella. Siirryt silloin kyselyn muokkausnäkymään (<a href="#fig-webropol-muokkausnäkymä">Kuva&nbsp;<span>15.3</span></a>).</p>
-<div id="fig-webropol-muokkausnäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_muokkausnäkymä.png" class="img-fluid figure-img" alt="Webropolin kyselyn muokkausnäkymä, jossa on tyhjä kysely nimeltä 'testikysely'."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.3: Muokkausnäkymä</figcaption>
-</figure>
-</div>
-<p>Webropolin kyselyillä on neljä näkymää, jotka löydät sivun ylävasemmalta: Muokkaa, Kerää vastauksia, Seuranta ja Raportointi. Nimensä mukaisesti muokkaat kyselyä Muokkaa-näkymässä, määrittelet keräystavat Kerää vastauksia -näkymässä, seuraat vastaamisprosessia Seuranta-näkymässä ja tarkastelet vastauksia sekä tallennat ne tietokoneellesi Raportointi-näkymässä.</p>
+<p>Kun olet löytänyt mieluisen (tai tarpeeksi mieluisen) kaavion, valitse se ja paina <code>OK</code>. Excel lisää kaavion työlehtiöön.</p>
+<p>Kaaviot ovat siinä mielessä erityisiä, että vaikka ne elävät työlehtiöissä, niitä voi siirrellä vapaasti mihin tahansa lehtiön sisällä (tai jopa lehtiöiden välissä). Voit siis asettaa sen johonkin kohtaan lehtiötä, jossa se ei peitä muita työn alla olevia soluja.</p>
 </section>
-<section id="muokkaa-näkymä" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="muokkaa-näkymä"><span class="header-section-number">15.3</span> Muokkaa-näkymä</h2>
-<p>Muokkaa-näkymässä muokkaat ja laadit kyselylomakkeesi (<a href="#fig-webropol-muokkausnäkymä">Kuva&nbsp;<span>15.3</span></a>). Sivun vasemmalla puolella näet luettelon kyselyn sivuista. Voit (ja onkin suotavaa) jaata kyselysi useammalle sivulle, jotta vastaajien ei tarvitse rullata suurta sivua ylös ja alas.</p>
-<p>Sivun yläkohdassa, näkymien valikon alla, löytyy muokkaustyökalut (<a href="#fig-webropol-muokkaustyökalut">Kuva&nbsp;<span>15.4</span></a>). Käymme läpi kaikki työkalut, aloittaen ensin kyselypohjista.</p>
-<div id="fig-webropol-muokkaustyökalut" class="quarto-figure quarto-figure-center anchored">
+<section id="sec-kaavion-muokkaaminen" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="sec-kaavion-muokkaaminen"><span class="header-section-number">13.3</span> Kaavion muokkaaminen</h2>
+<p>Kun olet lisännyt kaavion, Excel tuottaa hyvin alkeellisen version siitä (<a href="#fig-grafiikka-raakapylväskaavio">Kuva&nbsp;<span>13.2</span></a>). Ennen kuin voit käyttää tätä, sinun tulee lisätä selitteitä ja muokata ulkonäköä sopivaksi. Jos kaksoisnäpäytät kaaviota jossain sen tyhjällä alueella, saat esille kaavioalueen muokkauspaneelin Excelin oikealle puolelle.</p>
+<div id="fig-grafiikka-raakapylväskaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="pics/webropol/webropol_muokkaustyökalut.png" class="img-fluid figure-img" alt="Muokkaa-näkymän muokkaustyökalut. Nämä ovat: Lisää kysymys, kyselypohjat, lisää uusi sivu, kielet, kuvapankki, ulkoasu, henkilötiedot, asetukset ja esikatselu."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.4: Muokkaa-näkymän muokkaustyökalut</figcaption>
+<p><img src="pics/grafiikka/grafiikka_raakapylväskaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus pylväskaaviosta Excelistä. Kaavio esittää muuttujan taajuuksia, jossa on neljä kategoriaa ja niitä vastaavat taajuusarvot. Kaavio on sininen pylväskaavio, ja sen otsikkona on &quot;Kaavion otsikko&quot;."></p>
+<figcaption class="figure-caption">Kuva&nbsp;13.2: Pylväskaavio Excelissä. Kaavion data-alueet ovat määriteltynä kaavion oikealla puolella, violetilla ja sinisellä alueella.</figcaption>
 </figure>
 </div>
-<p><strong>Kyselypohjat</strong>-painikkeesta voit tallentaa kysymyksiä valmiiseen kirjastoon, jos käytät niitä usein. Voit myös hakea kirjastosta valmiita kysymyksiä. Tämä on hyödyllinen jos tuotat saman kyselyn monesti, tai jos uudelleenhyödynnät kysymyksiä kyselystä toiseen.</p>
-<p><strong>Lisää uusi sivu</strong> -painikkeella voit lisätä sivun. Voit tehdä tämän vasta, kun ensimmäisellä sivulla on jotain sisältöä.</p>
-<p><strong>Kielet</strong>-painikkeella voit määritellä kyselyn kielen sekä lisätä muita kielivaihtoehtoja. Jokaiselle kielivaihtoehdolle joudut itse kääntämään kaikki vastaukset, mutta Webropol yhdistää sitten tiedot yhdeksi datatiedostoksi myöhemmin, joten et joudu tekemään erillisiä kyselyjä useammalle kielelle. Kääntäminen kannattaa tehdä vasta, kun olet tehnyt ensimmäisen version valmiiksi, koska Webropol tuottaa Excel-tiedoston, johon käännökset tulee laittaa.</p>
-<p><strong>Kuvapankki</strong>-painikkeesta voit lisätä valmiita kuvia kyselyysi Pelastusopiston kuvapankista. Muista huomioida tekijänoikeudet!</p>
-<p><strong>Ulkoasu</strong>-painikkeella voit muuttaa kyselyn ulkonäköä. Voit muuttaa käytännössä minkä tahansa elementin muotoilua ja värejä, lisätä taustoja tai logoja, muuttaa fontteja, ja niin eteenpäin. Voit myös luoda ja hakea valmiita ulkoasupohjia. Jos teet useasti kyselyjä samalle organisaatiolle, ulkoasupohjan luominen onkin suotavaa nopeuttaakseen työtä.</p>
-<p><strong>Henkilötiedot</strong>-painikkeella voit määritellä, mitkä kyselyn alueet keräävät henkilötietoja. Tämä auttaa yleisen tietosuoja-asetuksen noudattamisessa. Voit myös automatisoida henkilötietojen poiston - erittäin suositeltavaa, varsinkin jos keräät suoria henkilötietoja tai tietoja erityisistä henkilöryhmistä. Muista määritellä henkilötietojen käsittely tutkimussuunnitelmassasi, mahdollisessa tietojenkäsittelysuunnitelmassasi sekä loppuraportissasi!</p>
-<p><strong>Asetukset</strong>-painikkeesta löytyy erinäisiä asetuksia kyselylomakkeelle. Täältä voit esim. määritellä, viedäänkö vastaaja kiitossivun jälkeen automaattisesti toiselle sivulle (esim. arvontalomake, tutkimuksen kotisivu), asettaa kyselyn pakolliset vastaukset, rajata anonymiteettiä ja satunnaisjärjestää kysymyksiä tai vastausvaihtoehtoja.</p>
-<p><strong>Esikatselu</strong>-painikkeesta avautuu uusi välilehti, jossa voit esikatsella kyselyäsi eri laitteilla. Voit myös ladata kyselysi PDF- tai Word-tiedostona tietokoneellesi.</p>
-<p><strong>Lisää kysymys</strong> -painikkeesta avautuu pieni alue, josta voit valita, millaisen kysymyksen haluat lisätä kyselyysi (<a href="#fig-webropol-lisääkysymys">Kuva&nbsp;<span>15.5</span></a>).</p>
-<div id="fig-webropol-lisääkysymys" class="quarto-figure quarto-figure-center anchored">
+<p>Jokaiselle kaavion osalle löytyy oma muokkausnäkymä, jonka saat esille näpäyttämällä muokkauspaneelin pudotusvalikkoa ylävasemmalla (<a href="#fig-grafiikka-muokkauspaneeli">Kuva&nbsp;<span>13.3</span></a>). Voit myös näpäyttää mitä tahansa kaavion osaa nähdäksesi sen osan muokkausnäkymä paneelissa, kunhan paneeli on auki.</p>
+<div id="fig-grafiikka-muokkauspaneeli" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="pics/webropol/webropol_lisääkysymys.png" class="img-fluid figure-img" alt="Lisää kysymys -painikkeesta avautuva valinta-alue. Alueella on monia eri kysymysvaihtoehtoja, jaoteltuna ryhmiin Teksti, Valinta, Matriisi sekä Muu."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.5: Lisää kysymys -alue</figcaption>
+<p><img src="pics/grafiikka/grafiikka_muokkauspaneeli.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelistä kaavion muokkauspaneelista. Muokkauspaneelin näkymä on &quot;Kaavion asetukset&quot;, ja näkymien pudotusvalikko on auki."></p>
+<figcaption class="figure-caption">Kuva&nbsp;13.3: Kaavion muokkauspaneeli.</figcaption>
 </figure>
 </div>
-<p>Kysymysvaihtoehtoja on monia, ja suosittelenkin niiden kokeilua ja ihmettelyä omalla ajalla. Tärkeimmät ovat ehkä avoin kysymys ja tekstikenttä, numeerinen kenttä (esim. puhelinnumeron, vuositulojen tai postinumeron keräämiseksi), valinta ja monivalinta sekä matriisi. Voit myös pyytää vastaajia jättämään liitteitä, valitsemaan eri kuvista, laittamaan asioita numerojärjestykseen, ja paljon muuta.</p>
-</section>
-<section id="kysymysten-muokkaus" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="kysymysten-muokkaus"><span class="header-section-number">15.4</span> Kysymysten muokkaus</h2>
-<p>Valitsin “Valinta”-kysymyksen, mikä lisäsi kysymyksen suoraan kyselyn ensimmäiselle sivulle (<a href="#fig-webropol-uusivalintakysymys">Kuva&nbsp;<span>15.6</span></a>).</p>
-<div id="fig-webropol-uusivalintakysymys" class="quarto-figure quarto-figure-center anchored">
+<p>Uusia osia kuvaan voit lisätä painamalla ensin kaaviota kerran, ja sitten painamalla vihreää <code>+</code>-painiketta kaavion oikealla puolella. Lisäämisen jälkeen voit kaksoisnäpäyttää lisättyjä elementtejä (esim. akseleiden tai arvopisteiden otsikoita) muokataksesi niiden ulkonäköä ja sijoitusta.</p>
+<p>Tärkeimmät muokattavat osuudet ovat:</p>
+<ol type="1">
+<li>Selkeä otsikko kaaviolle. Jos raportoit tieteellisen aikakauslehteen, voit usein jättää kaavion otsikon pois ja lisätä se Wordissa kaavion alle (tarkista lehden muotoiluvaatimukset ensin!).</li>
+<li>Arvopisteiden otsikot. Vaikka visuaalisuus auttaa lukemisessa, usein tarkkojen arvojen näkeminen kaaviosta on hankalaa. Lisää siis jokaisen pylvään/piirasosuuden/pisteen arvot kuvioon, kunhan niitä ei ole liikaa. Jos kuvio on täynnä tekstiä, harkitse jotain muuta muotoilua arvojen esittämiseksi.</li>
+<li>Akseleiden otsikot. Kaaviossa tulee aina olla akseliotsikot (pois lukien piiraskaavioissa), jotka kertovat, mitä akseli esittää sekä millä mitalla se on.</li>
+<li>Akseleiden koko. Yksimuuttujakaavioiden pystyakseli tulee aina alkaa nollasta, kaksimuuttujakaavioissa ei välttämättä.</li>
+<li>Värit. Vaihda aina värit saavutettaviksi. Hyödynnä kaksoisesittämistä, jolloin esität jokaisen kategorian sekä väreillä että graafisilla kuvioilla. Tällöin kuvio on paremmin luettavissa harmaaskaalaisena tai värisokealle henkilölle. Tarkista myös, että värien välinen kontrasti on tarpeeksi suuri - vaaleanharmaan ja valkoisen välillä voi olla hyvin vaikeaa erottaa (jopa henkilölle, jolla on täydellinen värinäkö!), kuten esim. erisävyisten värien välillä.</li>
+</ol>
+<p>Alla on esimerkki kaaviosta, jonka olen muotoillut valmiiseen muotoon (<a href="#fig-grafiikka-valmispylväskaavio">Kuva&nbsp;<span>13.4</span></a>).</p>
+<div id="fig-grafiikka-valmispylväskaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="pics/webropol/webropol_uusivalintakysymys.png" class="img-fluid figure-img" alt="Kysely nimeltä 'testikysely', johon on lisätty tyhjä valintakysymys."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.6: Tyhjä valintakysymys</figcaption>
+<p><img src="pics/grafiikka/grafiikka_valmispylväskaavio.png" class="img-fluid figure-img" alt="Pylväskuvio, joka esittää palotarkastuksen koettua hyötyä. Vastausvaihtoehdot ovat neljän pisteen Likert-asteikolla erittäin hyödyttömästä erittäin hyödylliseen, ilman neutraalia vaihtoehtoa. 44 vastaajaa valitsivat melko hyödyllisen, ja vain 2 vastaajaa erittäin hyödyttömän. Hyödyllisiä on selkeästi enemmän kuin hyödyttömiä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;13.4: Valmis versio pylväskaaviosta.</figcaption>
 </figure>
 </div>
-<p>Voit nyt kirjoittaa kysymyksen “Lisää kysymys” -kenttään. Lisää vastausvaihtoehtoja painamalla “Lisää yksi vastausvaihtoehto”, tai jos sinulla on valmiiksi useita, “Lisää tai muokkaa useita vastausvaihtoehtoja”. Voit kirjoittaa vastausvaihtoehdot suoraan kyselyyn.</p>
-<div id="fig-webropol-uusivalintakysymys-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_uusivalintakysymys_vaihtoehdot.png" class="img-fluid figure-img" alt="Kysymys 'Maitoa vai mehua?', jolla on neljä vastausvaihtoehtoa: maitoa, mehua, molemmat sekä ei kumpaakaan. Ensimmäisen vaihtoehdon kohdalla näkyy neljä muokkaustyökalua ikoneina."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.7: Vastausvaihtoehtojen muokkaus</figcaption>
-</figure>
-</div>
-<p>Voit myös tehdä erityisiä muokkauksia vastausvaihtoehdoille siirtämällä hiiren vastausvaihtoehdon päälle (<a href="#fig-webropol-uusivalintakysymys-2">Kuva&nbsp;<span>15.7</span></a>). Toinen ikoni oikealta, jossa on useampi nuoli, määrittelee hypyn kyselyssä. Voit tehdä hyppyjä, kunhan sinulla on kysymys, josta hypätään, sekä kysymys, johon hypätään. Voit myös asettaa vastausvaihtoehtojen asetuksia kolmannesta ikonista, esim. mikä vaihtoehto on esivalittuna tai jos haluat satunnaisjärjestää vastausvaihtoehdot.</p>
-<p>Jokaisen kysymyksen alla voit helposti lisätä kysymyksiä, kuvailevaa tekstiä tai kuvia, sekä sivunvaihtoja painikkeista (<a href="#fig-webropol-uusivalintakysymys">Kuva&nbsp;<span>15.6</span></a>). Kokeile lisätä omia kysymyksiä, määritellä hyppyjä, sekä tehdä satunnaisjärjestämistä kysymyspatteristoille!</p>
-</section>
-<section id="kerää-vastauksia--näkymä" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="kerää-vastauksia--näkymä"><span class="header-section-number">15.5</span> Kerää vastauksia -näkymä</h2>
-<p>Ennen kun olet valmis keräämään vastauksia populaatioltasi, muista tarkistaa ainakin:</p>
+<p>Seuraavassa oletetaan, että muokkauspaneeli on auki. Jos se ei ole, kaksoisnäpäytä kaavion tyhjää aluetta avataksesi sen.</p>
 <ul>
-<li>Henkilötietoasetukset</li>
-<li>Saatekirje (muista oikeus julkaista dataa!)</li>
-<li>Loppusanat</li>
-<li>Kysymysten muotoilu, oikeinkirjoitus</li>
-<li>Hyppyjen toiminnallisuus (kokeille niitä esikatselulla)</li>
+<li><p>Lisäsin kuvion otsikon, akseleiden otsikot sekä arvopisteiden otsikot:</p>
+<ul>
+<li><p>Lisääminen: Paina kaavaa &gt; Paina vihreää <code>+</code>-kuvaketta &gt; <code>Kaavion otsikko, Akselien otsikot, Arvopisteiden otsikot</code></p></li>
+<li><p>Tekstin muokkaaminen: Kaksoisnäpäytä haluttua tekstiä ja kirjoita uusi teksti.</p></li>
+</ul></li>
+<li><p>Arvopisteiden otsikkojen taustaväriksi on valittu vaaleanharmaa, jotta se erottuisi hieman paremmin valkoisesta taustasta.</p>
+<ul>
+<li>Näpäytä jotain arvopisteotsikkoa &gt; Valitse maalipurkki-ikoni &gt; Avaa <code>Täyttö</code>-pudotusvalikko &gt; <code>Tasainen täyttö</code> &gt; Määrittele <code>Väri</code>.</li>
+</ul></li>
+<li><p>Väriksi on valittu Pelastusopiston punainen, sopiakseen Pelastusopiston graafiseen ulkonäköön. Hyödynnä opiston graafista ohjeistusta tähän!</p>
+<ul>
+<li>Näpäytä jotain palkkia &gt; Valitse maalipurkki-ikoni &gt; Avaa <code>Täyttö</code>-pudotusvalikko &gt; <code>Tasainen täyttö</code> &gt; Määrittele <code>Väri</code>.</li>
+</ul></li>
+<li><p>Vaihdoin kaavan selitealueen.</p>
+<ul>
+<li><p>Kirjoita selitteet omiin soluihin jonnekin työlehtiöön (esim. arvojen viereen). Kirjoita ne samassa järjestyksessä, kuin ne ovat kaaviossa!</p></li>
+<li><p>Selitealueen vaihtaminen: Oikeaklikkaa kaaviota &gt; <code>Valitse tiedot...</code> &gt; Vaaka-akselin ruudussa paina <code>Muokkaa</code> &gt; Valitse alue, johon olet kirjoittanut selitteet &gt; <code>OK</code> &gt; <code>OK</code>.</p></li>
+</ul></li>
 </ul>
-<p>Sivun ylävasemmalta voit siirtyä Kerää vastauksia -näkymään (<a href="#fig-webropol-keräysnäkymä">Kuva&nbsp;<span>15.8 (a)</span></a>).</p>
-<div id="fig-keräysnäkymä" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-webropol-keräysnäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_keräysnäkymä.png" class="img-fluid figure-img" alt="Webropolin Kerää vastauksia -näkymä. Vaihtoehtoina on sähköpostikysely, nettilinkki sekä tekstiviestikysely." data-ref-parent="fig-keräysnäkymä"></p>
-<figcaption class="figure-caption">(a) Kerää vastauksia -näkymä</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-webropol-keräysnäkymä-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_keräysnäkymä_nettilinkki.png" class="img-fluid figure-img" alt="Nettilinkin asetukset." data-ref-parent="fig-keräysnäkymä"></p>
-<figcaption class="figure-caption">(b) Nettilinkin luominen</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;15.8: Kerää vastauksia -näkymä ja nettilinkin luominen</figcaption><p></p>
-</figure>
-</div>
-<p>Voit kerätä vastauksia kolmella eri tavalla: henkilökohtaisilla sähköpostilinkeillä tai tekstiviestilinkeillä, sekä julkisella nettilinkillä. Jos tarvitset henkilökohtaiset linkit jostain syystä, käytä sähköposti- tai tekstiviestitoimintoa. Yleensä kuitenkin helpointa on lähettää linkki kyselyyn eri kanavien kautta, joten näytän tässä sen toiminnon.</p>
-<p>Jos painat “Nettilinkki - Julkinen linkki” -painiketta, voit avata uuden nettilinkin. Huomaathan, että avaamisen jälkeen et enää voi muokata kysymyksiä! Kun olet hyväksynyt tämän tosiasian, pääset nettilinkin muokkausnäkymään (<a href="#fig-webropol-keräysnäkymä-2">Kuva&nbsp;<span>15.8 (b)</span></a>). Tästä löydät kyselyn julkisen linkin, ja voit laatia QR-koodin sille jos haluat. Voit myös ajastaa linkin toiminnan. Toinen hyödyllinen ominaisuus on salasanasuojaus sekä CAPTCHA-robottitunnistus, jolla voit rajata kyselyn vastaamista sekä vaatia käyttäjän tekemään CAPTCHA-kokeen vähentääksesi robottivastauksia (jos niitä esiintyy). Voit jopa määritellä kysymyksen, jonka pohjalta vastaajan tulee antaa tietty salasana päästäkseen eteenpäin kyselyssä - hyödyllistä, jos esim. haluat varmistaa että tietyt ryhmät pääsevät vastaamaan vain heille suunnattuihin kysymyksiin tai että ryhmät erotellaan automaattisesti heti kyselyn alussa.</p>
-<p>Kun olet määritellyt linkin toiminnan valmiiksi, voit lähettää linkin eteenpäin vastaajillesi. Näin kyselysi on auki!</p>
-</section>
-<section id="seuranta-näkymä" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="seuranta-näkymä"><span class="header-section-number">15.6</span> Seuranta-näkymä</h2>
-<p>Kyselyn avattua sinua voi kiinnostaa, kuinka moni vastaa tai jättää vastaamatta. Voit nähdä nämä tilastot Seuranta-näkymästä (<a href="#fig-webropol-seurantanäkymä">Kuva&nbsp;<span>15.9</span></a>).</p>
-<div id="fig-webropol-seurantanäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_seurantanäkymä.png" class="img-fluid figure-img" alt="Webropolin Seuranta-näkymä."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.9: Seuranta-näkymä</figcaption>
-</figure>
-</div>
-<p>Tästä voit näkeä vastauskadon määrässä ja prosenteissa: kuinka moni vastaajista on avannut kyselyn, mutta sulki sen heti? Voit myös nähdä määrän vastaajia, jotka aloittivat vastaamisen, mutta eivät välttämättä suorittaneet sitä loppuun. Vastaajan tilastot -välilehdeltä voit myös tarkistaa kuinka kauan vastaamisessa kestää. Tämä on hyödyllinen varsinkin jatkokehitystä varten, koska saat suoran käsityksen kyselyn ajallisesta pituudesta.</p>
-</section>
-<section id="raportointi-näkymä" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="raportointi-näkymä"><span class="header-section-number">15.7</span> Raportointi-näkymä</h2>
-<p>Jossain vaiheessa haluat varmaankin myös nähdä kyselyn tulokset. Nämä löytyvät Raportointi-näkymästä (<a href="#fig-webropol-raportointinäkymä">Kuva&nbsp;<span>15.10</span></a>).</p>
-<div id="fig-webropol-raportointinäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_raportointinäkymä.png" class="img-fluid figure-img" alt="Webropolin Raportointi-näkymä."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.10: Raportointi-näkymä</figcaption>
-</figure>
-</div>
-<p>Näkymä näyttää sinulle jokaisen kysymyksen vastausjakaumat numeroissa sekä käyrinä. Näistä voit saada nopean käsityksen kyselysi vastauksista, mutta älä käytä näitä suoraan raportissasi!</p>
-<p>Raportointityökalut löytyvät yläoikealta, ja niitä on moneksi. Tärkein kuitenkin on Vie &amp; Jaa -painike, josta saat asetukset tulosten tallentamiseksi tietokoneellesi ().</p>
-<div id="fig-webropol-vientinäkymä" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="pics/webropol/webropol_vientinäkymä.png" class="img-fluid figure-img" alt="Webropolin Vie &amp; Jaa -painikkeen näkymä. Excel-vaihtoehto on valittuna."></p>
-<figcaption class="figure-caption">Kuva&nbsp;15.11: Vie &amp; Jaa -näkymä</figcaption>
-</figure>
-</div>
-<p>Voit viedä raportointinäkymän tulokset suoraan PowerPoint-esitykseen, jos haluat nopeasti saada tulokset ulos ilman kummempia raportointeja. Jatkokäsittelyä varten voit tallentaa tulokset Excel-, CSV- sekä SPSS-muotoihin. Voit myös tallentaa tulokset sellaisenaan PDF- tai Word-tiedostoihin.</p>
-<p>Voit myös jakaa Webropolin tekemän raportin oikean puolen painikkeista, esim. vastaajille tai yhteistyökumppaneille. Muista kuitenkin, että raportissa voi olla arkaluontoisia tietoja, joten tarkista aina kaikki tiedot ennen kuin jaat niitä muille! Muista myös, että sinulla tulee olla lupa jaata tietoja eteenpäin kyseisille tahoille vastaajilta - muistithan kysyä lupaa saatekirjeessä…?</p>
 
 
 </section>
@@ -701,13 +627,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./perustoiminnot.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></span>
+      <a href="./exceltoimintoja.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./muuttilastotyökalut.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./perustoiminnot.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
