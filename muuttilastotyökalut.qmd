@@ -1,10 +1,10 @@
-# Tilastotyökalut
+# Tilastotyökalut {#sec-tilastotyökalut}
 
 Tämä osio esittelee erinäisiä tilastotyökaluja, jotka ovat laajemmassa käytössä. Koska kurssi keskittyy Excelin käyttöön, emme käytä näitä tällä kertaa. Jos kuitenkin olet kiinnostunut tilastollisesta työskentelystä, suosittelen näihin tutustumista omalla ajalla.
 
 Työkalut esitellään hyvin lyhyesti. Jokaisessa osiossa on linkkejä tai tietoa työkalun oppimiseen - en kuitenkaan ole jokaisen työkalun ammattiosaaja, joten suosittelen myös eri resurssien googlaamista.
 
-## IBM SPSS Statistics ja PSPP
+## IBM SPSS Statistics ja PSPP {#sec-ibm-spss-statistics-ja-pspp}
 
 Yhteiskuntatieteissä ehkä suosituin työkalu on [IBM SPSS Statistics](https://www.ibm.com/spss). Lyhytnimeltään SPSS on suhteellisen helppokäyttöinen tilastotyökalu, jolla voit tehdä haastaviakin tilastollisia malleja sekä tuottaa alkeellista grafiikkaa ja automatisoida analyyseja.
 
@@ -14,7 +14,7 @@ SPSS on kuitenkin maksullinen (ja aika kallis sen lisäksi!). Sen graafiset omin
 
 SPSS:lle on olemassa yksinkertaisempi avoimen lähdekoodin versio, [PSPP](https://www.gnu.org/software/pspp/). Versiossa on kaikki SPSS:n perustoiminnot, sekä kohtalainen yhteistuki SPSS-tiedostojen kanssa. Siitä kuitenkin puuttuu varsinkin uusimmat ominaisuudet. PSPP on joka tapauksessa oiva vaihtoehto, jos yhteistyökumppanisi vaativat SPSS:n käyttöä, mutta sinulla tai kotiorganisaatiollasi ei ole varaa/mahdollisuutta hankkia SPSS-lisenssiä.
 
-## Jamovi
+## Jamovi {#sec-jamovi}
 
 SPSS:n uudeksi haastajaksi on kehittynyt [Jamovi](https://www.jamovi.org/)-työkalu. Jamovi on alun perin australialaisten tutkijoiden kehittämä vaihtoehto SPSS:n ja SAS:in tapaisille suljetuille ja hintaville työkaluille. Vaikka työkalulla ei tässä vaiheessa vielä ole suurta suosiota, sen helppokäyttöisyys, avoimuus ja nopea kehitys tullaan varmasti huomaamaan lähitulevaisuudessa.
 
@@ -22,7 +22,7 @@ Jamovin käyttöliittymä on erittäin yksinkertainen, mutta järjestelmä tukee
 
 Jamovin huonoina puolina voidaan nähdä sen vahvuus, eli avoin lähdekoodi. Tämä tarkoittaa, ettei kehitys aina tapahdu systemaattisesti tai suuryrityksen vaatimalla aikataululla. Avoin lähdekoodi voi, mutta ei missään nimessä tarvitse, tarkoittaa kyseenalaistettavaa tietoturvaa, mutta on huomioitava, että avoimen lähdekoodin työskentelyssä tietoturva-asiantuntijoita voi olla tuhansia ja lähdekoodin tarkastaminen on kaikille mahdollista. Myös Jamovin nuoruus voi tarkoittaa, että tukea ja ohjeita löytyy vähemmän kuin suuremmalle ohjelmistolle.
 
-## R-ohjelmointikieli
+## R-ohjelmointikieli {#sec-r-ohjelmointikieli}
 
 Joskus valmiit tilastotyökalut eivät riitä. Työkaluihin lisätään toimintoja suht hitaasti, ja varsinkin uusimmat menetelmälliset kehitykset eivät esiinny ohjelmistopaketeissa aikaisessa vaiheessa. Näitä varten löytyy tilastolliset ohjelmointikielet, josta [R-kieli](https://www.r-project.org/) on yksi suosituimmista.
 
@@ -34,7 +34,7 @@ R-kielestä löydät suunnaton määrä eri **paketteja**. Nämä implementoivat
 
 R-kieli on ilmainen ja avoin, mutta vaatii aika paljon opettelua. Jos jaksat ja pystyt pääsemään alkukynnyksen yli, työkalu on kuitenkin paljon valmiita ohjelmistoja tehokkaampi. Voit käytännössä tehdä minkä tahansa analyysin, automatisoida mitä tahansa, ja tuottaa mitä tahansa muotoja suoraan yhdestä ohjelmasta.
 
-## Python-ohjelmointikieli
+## Python-ohjelmointikieli {#sec-python-ohjelmointikieli}
 
 Ohjelmoinnista kiinnostuneille löytyy myös [Python](https://www.python.org/)-ohjelmointikieli. Python on osittain samanlainen kuin R, eli erittäin helppokäyttöinen ja (suhteellisesti) nopeasti opittava ohjelmointikieli. Python on kuitenkin yleisohjelmointikieli, ei *tilastollinen* ohjelmointikieli. Tämä tarkoittaa, että Pythonilla voi tehdä paljon muutakin kuin tilastollista ohjelmointia - esim. pelejä, tietokoneapplikaatioita, serveriautomatisointia, ja paljon muuta.
 
@@ -43,4 +43,3 @@ Pythonille löytyy oma "akateeminen" julkaisupaketti nimeltä [Anaconda](https:/
 Python on erittäin suosittu datatieteilijöiden parissa, ehkä juurikin sen koneoppimistyökalujen vuoksi. Jos sinua kiinnostaa tekoäly, koneoppiminen ja neuroverkot, Python on hyvä aloitus työlle. Myös luonnollisten kielten mallinnus ja tekstinkäsittely on helpohkoa Pythonilla.
 
 Heikkoina puolina voi nähdä ohjelmointikielen oppimisen vaikeudet ja mahdolliset heikkoudet avoimen lähdekoodin työkaluissa. Koska Python on yleiskieli, se ei aina toimi tavalla, joka olisi luonnollista tilastojen käsittelylle, joten ota myös tämä huomioon. Python on kuitenkin data-alan konkari, jos ala kiinnostaa omassa työssäsi.
-

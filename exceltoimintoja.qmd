@@ -24,6 +24,8 @@ Jos tarvitset poistaa kaikki epätäydelliset rivit jotain analyysia varten, voi
 
 [^exceltoimintoja-1]: Ongelma liittyy dynaamisiin matriisikaavoihin ja levittyineisiin matriiseihin, jotka voivat olla hankalia ymmärtää. Jos haluat lukea lisää, tietoa löytyy [Microsoftin apusivuilta](https://support.microsoft.com/fi-fi/office/dynaamiset-matriisikaavat-ja-levittyneen-matriisin-toiminta-205c6b06-03ba-4151-89a1-87a7eb36e531).
 
+[Funktio ei osaa käsitellä virhearvoa `#TYHJÄ!`.]{.underline} Jos syötät alueen, jossa kyseinen virhearvo esiintyy, funktio palauttaa `#TYHJÄ!`-virheen (engl. `#NULL!`). Muuta ensin alueen virhearvot joksin muuksi arvoksi (esim. `""` eli oikeasti tyhjä solu; ks. @sec-toiminto07), ja suodata sitten tämä tulos.
+
 ::: callout-important
 Jos suodatuksen jälkeen riveillä vielä on tyhjiä soluja jossain (eli ei olla vaadittu täydellistä datamatriisia), SUODATA-funktio täyttää nämä arvolla `0`. Jos yrität suodattaa tätä tulosta uudelleen yllä olevalla tavalla, funktio ei enää löydä tyhjiä soluja jotka täyttäisivät ehdot - nolla-arvo ei ole sama asia kuin tyhjä arvo.
 :::
@@ -103,3 +105,15 @@ Toisessa solussa käytetään `TAAJUUS`-funktiota. Funktion ensimmäinen argumen
 
 Jos raportoit kategorisen muuttujan määriä, jätä pois viimeinen tyhjä solu, koska sitä ei ole mahdollista saada arvoksi.
 :::
+
+## Muuta kaikki virheelliset arvot tyhjiksi soluiksi {#sec-toiminto07}
+
+Jos sinulla on virhearvoja data-alueellasi (esim. `#TYHJÄ!`, `#JAKO/0!`), useimmat kaavat eivät toimi alueen kanssa. Silloin sinun kannattaa tehdä uusi muuttuja data-alueellesi, jonka soluihin syötät seuraavan kaavan:
+
+`=JOS( ONLUKU (solu) ; solu ; "" )`
+
+Kaava tarkistaa, onko tarkistettu solu luku (muuta tämä `ONTEKSTI`-funktioksi, jos suodatat tekstiä). Jos se on luku, kaava palauttaa alkuperäisen solun arvon. Jos ei ole luku (esim. virhearvo), kaava palauttaa tyhjän solun `""`.
+
+Lisää kaava ensimmäiseen soluun ja levitä se kaikkien rivien yli vetotoiminnolla.
+
+Voit halutessasi vaihtaa palautettavan arvon, jos Excel ei löydä lukua. Useimmiten kuitenkin tyhjä solu on helposti käsiteltävissä (esim. `ONTYHJÄ`-funktiolla), joten sen käyttö voi olla suositeltavaa, etteivät arvot mene sekaisin analyysissa.

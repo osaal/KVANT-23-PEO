@@ -1,113 +1,189 @@
-# Excelin käyttöliittymä
+# Excelin perusteet {#sec-excelin-perusteet}
 
-Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen **aloitusnäkymän** (@fig-excelin-aloitusnäkymä). Näkymästä voit avata uuden **työkirjan** painamalla "Tyhjä työkirja"-kuvaketta ylävasemmalla. Hakupalkin alle tulee listaus viimeisimpiä työkirjoja, joita olet avannut. Voit avata olemassa olevan työkirjan painamalla "Avaa"-nappia oikeanpuoleisesta valikosta, ja hakemalla työkirjan tietokoneeltasi.
+Microsoft Excel on **taulukkolaskentaohjelma**. Tällä tarkoitetaan, että kaikki työ tehdään **taulukoissa**, joita Excel kutsuu myös **työkirjoiksi**. Työkirjan tunnistaa päätteestä `.xlsx`[^excelinperusteet-1]. Jokainen työkirja sisältää yhden tai useamman **työlehtiön**, joiden sisältä löytyy **taulukkoalue**.
 
-![Excelin aloitusnäkymä](pics/excel_aloitusnäkymä.PNG){#fig-excelin-aloitusnäkymä fig-alt="Excelin aloitusnäkymä"}
+[^excelinperusteet-1]: Aikaisemmissa Excel-versioissa myös `.xls`. Toinen yleinen taulukkomuoto on `.csv`.
 
-## Perusnäkymä
+Taulukkoalue jaetaan **soluihin**, joihin viitataan niiden **rivi- ja sarakeosoitteella**. Excelissä rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet merkitään kirjaimilla A-Z. Jos sarakkeita on useampi kuin 26, Excel automaattisesti aloittaa seuraavan sarakesarjan nimen AA, AB, ja niin eteenpäin.
 
-**Työkirja** on Excel-tiedosto, joka sisältää kaikki analyysisi ja tietosi. Avaamalla tyhjän työkirjan pääset Excelin **perusnäkymään** (@fig-excelin-perusnäkymä).
+Excelissä kaikki työ tehdään taulukkoalueella. Voit lisätä ja poistaa **arvoja** (numeroita, tekstiä, verkko-osoitteita, melkein mitä tahansa), tehdä laskentoja arvoille, tuottaa kuvioita, automatisoida analyysia, ja vaikka mitä.
 
-![Excelin perusnäkymä](pics/excel_perusnäkymä.PNG){#fig-excelin-perusnäkymä fig-alt="Tyhjä työkirja avattuna Excelissä."}
+## Arvotyypit {#sec-arvotyypit}
 
-Perusnäkymä voidaan jakaa kolmeen osaan, ylhäältä alas. Ylimpänä löydät **navigointipalkin**, joka on jaettu useaan eri **välilehteen**. Välilehtien määrä voi vaihdella riippuen Excel-versiostasi ja asennetuista lisäosista, mutta sinulla on ainakin seuraavat välilehdet: `Aloitus, Lisää, Sivun asettelu, Kaavat, Tiedot, Tarkista, Näytä` ja `Ohje`. Välilehdet muuttavat, mitä työkaluja näet navigointipalkissa.
+Excelissä on neljä **alkeellista** arvo- tai datatyyppiä: numerot, teksti, loogiset ja virheet.
 
-Navigointipalkin alla löydät **työlehtiönäkymän**. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun **riveihin** ja **sarakkeisiin**. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi.
+**Numerodata** on, kuten nimi ehdottaa, numeroita. Ne voivat olla desimaalilukuja (esim. `0.5`), kokonaislukuja (`13`), prosentteja (`15%`), päivämääriä (`16/03/2005`) tai jopa puhelinnumeroita (`+358501234567`). Koska Exceliä ei sinänsä kiinnosta millainen numeroarvo on kyseessä, voi joskus tapahtua hassuja odottamattomuuksia. Excel antaa esimerkiksi sinun ynnätä päivämäärän ja prosentin yhteen - mutta mitä tulos on, sen tietää vain Excel itse.
 
-Työlehtiönäkymän alla on **taulukonvalitsin**, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, "Taul1", mutta voit laatia uusia lehtiöitä painamalla +-merkkiä viimeisen lehtiön nimen vieressä.
+**Tekstidata** on ihmisluettavaa tekstiä, kuten lauseita, sanoja, merkkejä tai fyysisiä osoitteita. Näille löytyy omat työkalut Excelissä, joten työkalulla pystyt myös käsittelemään tekstidataa koneella.
 
-Oikeaklikkaamalla työlehtiön nimeä saat esille lehtiön muokkausmenun (@fig-excel-lehtiöpalkki-oikeamenu).
+**Loogisia tai totuusarvoja** ovat arvot `TOSI` ja `EPÄTOSI`. Näitä käytetään paljon Excelissä, myöskin funktioiden sisällä, joten niiden tunnistaminen on tärkeää. Jos yrität ynnätä loogisia arvoja yhteen, Excel yleensä pakottaa ne numeromuotoon: `TOSI = 1, EPÄTOSI = 0`. Loogisille arvoille löytyy neljä perustoimintoa: `JA, TAI, EHDOTON.TAI, EI`. Näistä lisää kohdassa @sec-loogisten-ehtojen-totuustaulukot.
 
-![Työlehtiön muokkausmenu](pics/excel_lehtiöpalkki_oikeamenu.png){#fig-excel-lehtiöpalkki-oikeamenu fig-alt="Työlehtiön muokkausmenu avattuna."}
+**Virhearvot** ovat Excelin erikoisuus. Jos Excel tunnistaa jonkun laskuvirheen tai muun teknisen virheen, se palauttaa yleensä virhearvon. Näitä voi myös itse tuottaa virhearvofunktioilla, jos on tarvetta. Virhearvot ovat:
 
-Muokkausmenusta löytyy seuraavat kätevät valinnat:
+-   **#NIMI?** Soluviittaus ei ole oikein, kirjoitusvirhe funktiossa tai puuttuvat lainausmerkit.
 
--   `Poista` Poista valittu työlehtiö.
+-   **#JAKO/0** Yrität jakaa jonkun numeron nollalla, mikä ei ole mahdollista.
 
--   `Nimeä uudelleen` Muuta valitun työlehtiön nimeä
+-   **#VIITE!** Viittaus menee jotenkin pieleen.
 
--   `Siirrä tai kopioi...` Avaa menun, jossa voit vaihtaa lehtiöiden järjestystä, sekä luoda kopion olemassa olevasta lehtiöstä. Voit myös siirtää ja kopioida lehtiöitä avointen työkirjojen välillä, jos sinulla on auki useampi kuin yksi työkirja.
+-   **#NUMERO!** Arvo, jonka Excel yrittää laskea, on liian iso yhdelle solulle. Voi myös esiintyä virheellisesti kirjoitetussa funktiossa.
 
--   `Taulukonvalitsimen väri` Vaihda työlehtiön väri taulukonvalitsimessa. Voi auttaa, jos sinulla on monia työlehtiöitä etkä pysy kärryillä niistä.
+-   **#N/A** Voit käyttää tätä arvoa itse, jos haluat Excelin hyppäävän yli jonkun solun tilapäisesti. Joskus Excel myös automaattisesti korvaa tämän arvon jollain muulla. Ole siis varovainen sen käytön kanssa!
 
--   `Piilota` ja `Näytä...` Voit piilottaa työlehtiön näkyvistä. Piilotetut lehtiöt löytyvät `Näytä...`-toiminnosta, josta voit tuoda ne takaisin näkyville. Toiminnot eivät poista lehtiöitä.
+-   **#ARVO!** Yrität tehdä jotain arvotyypille, jota sille ei voi tehdä. Esimerkiksi ynnäät tekstiä ja numeroita yhteen.
 
-## Navigointipalkin työkalut
+-   **#TYHJÄ!** Yrität hakea kahden matriisin risteämiskohtia, mutta sellaista ei ole. Esiintyy myös jos merkitset useamman solualueen ilman puolipilkkua välissä, sekä joissain muissa tilanteissa.
 
-Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien sijainnit.
+## Arvojen manipulointi Excelissä
 
-### Aloitus-välilehti
+"Manipulointi" voi kuulostaa pahaenteiseltä, mutta tässä kontekstissa tarkoitetaan yksinkertaisesti arvojen muokkaamista, muuttamista ja hyödyntämistä laskennoissa.
 
-Aloitus-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (@fig-excel-aloitus-välilehti).
+Excelin operaattorit voidaan jakaa neljään kategoriaan: aritmeettiset, vertailevat, tekstiä yhdistävät ja viittausoperaattorit. Alla olevassa taulukossa selitetään kaikki operaattorit ja niiden toiminnat.
 
-![Aloitus-välilehden työkalut](pics/excel_aloitus_välilehti.png){#fig-excel-aloitus-välilehti fig-alt="Aloitus-välilehden työkalut, jaattuna kolmelle riville."}
+| Merkki                              | Merkitys                                                                                   | Esimerkki                                                                          |
+|-------------------------------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| **Aritmeettiset operaattorit**      |                                                                                            |                                                                                    |
+| `+` (plus)                          | Ynnääminen                                                                                 | `2 + 3 = 5`                                                                        |
+| `-` (minus)                         | Vähentäminen                                                                               | `2 - 5 = -3`                                                                       |
+| `*` (tähti)                         | Kertominen                                                                                 | `4 * 2 = 8`                                                                        |
+| `/` (vinoviiva)                     | Jakaminen                                                                                  | `8 / 4 = 2`                                                                        |
+| `%` (prosentti)                     | Prosentti                                                                                  | `20%`                                                                              |
+| `^` (karetti)                       | Potenssi                                                                                   | `5 ^ 2 = 25`                                                                       |
+| **Vertailevat operaattorit**        |                                                                                            |                                                                                    |
+| `=` (yhtäläisyys)                   | Yhtä kuin                                                                                  | `1 = 2` (epätosi)                                                                  |
+| `>` (suuruus)                       | Suurempi kuin                                                                              | `5 > 1` (tosi)                                                                     |
+| `<` (pienuus)                       | Pienempi kuin                                                                              | `6 < 9` (tosi)                                                                     |
+| `>=` (suuruus ja yhtäläisyys)       | Suurempi tai yhtä kuin                                                                     | `1 >= 2` (epätosi)                                                                 |
+| `<=` (pienuus ja yhtäläisyys)       | Pienempi tai yhtä kuin                                                                     | `6 <= 6` (tosi)                                                                    |
+| `<>` (pienuus ja suuruus)           | Ei yhtä kuin / eri kuin                                                                    | `7 <> 9` (tosi)                                                                    |
+| **Tekstiä yhdistävät operaattorit** |                                                                                            |                                                                                    |
+| `&` (ampersandi)                    | Yhdistää kaksi tekstiarvoa yhdeksi. HUOM: Ei lisää välilyöntejä tai muita merkkejä väliin! | `"Pelastus"&"laitos" = "Pelastuslaitos"`                                           |
+| **Viiteoperaattorit**               |                                                                                            |                                                                                    |
+| `:` (kaksoispiste)                  | Solualue                                                                                   | `A1:A4 = A1, A2, A3, A4`                                                           |
+| `;` (puolipilkku)                   | Yhdistää kaksi solualuetta yhdeksi                                                         | `A1:A3;B1:B3 = A1, A2, A3, B1, B2, B3`                                             |
+| (välilyönti)                        | Hakee kahden solualueen yhteisen alueen viitteen                                           | `A1:D1 C1:C4 = C1` (ainoa solu, joka löytyy molemmista janoista)                   |
+| `#` (risuaita)                      | Viittaa dynaamiseen matriisiin                                                             | `A1#` = Niin monta solua, kuin dynaaminen funktio solussa `A1` tuottaa             |
+| `!` (huutomerkki)                   | Ilmaisee solualueen sijaitsevan jossain muualla                                            | `Taul1!A1` hakee solun `A1` työlehtiöstä `Taul1`, vaikka olisit lehtiössä `Taul4`. |
 
-**Leikepöytä**-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa: `Ctrl+C` (kopioi), `Ctrl+V` (liitä) ja `Ctrl+X` (leikkaa). Excelissä on myös oma toiminto nimeltä **Liitä määräten**, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Saat tämän auki käyttämällä komentoa `Ctrl+Alt+V` yleisen liittämiskomennon sijaan. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.
+: Excelin operaattorit
 
-**Fontti**-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).
+Näiden lisäksi Excelissä voi käyttää sulkuja `( )` laskentajärjestyksen määrittelyyn. Tämä on erittäin suositeltavaa, sillä **Excel ei aina noudata perinteistä laskentajärjestystä**! Excel laskee vasemmalta oikealle, tietyn suosiojärjestyksen mukaan. Voit kuitenkin aina itse määritellä järjestyksen suluilla.
 
-**Tasaus**-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi **Yhdistä ja keskitä**-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta. **Rivitä teksti**-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan.
+**Aritmeettisia ja vertailevia operaattoreita** käytetään kuten matematiikassa yleensä. Huomioi kuitenkin eri-kuin-operaattori `<>`, joka muotoillaan eri tavalla kuin monessa muussa kontekstissa.
 
-**Numero**-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot vaikka mihin muotoihin, mutta tällä alueella voit itse sanoa Excelille, "Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!". Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä[^excelinperusteet-1].
+Kun määrittelet soluun jotain laskettavaksi, eteen tulee aina **yhtäläisyysmerkki** `=`. Tämä kertoo Excelille, että seuraavaksi lasketaan jotain.
 
-[^excelinperusteet-1]: Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy virheitä ja ongelmia!
+## Loogisten ehtojen totuustaulukot {#sec-loogisten-ehtojen-totuustaulukot}
 
-**Tyylit**-alueella voit tehdä erinäisiä muotoilutyylejä, muuttaa taulukkoja helposti haettaviksi taulukoiksi, ja muotoilla soluja valmiilla tyylillä. Tutustu omassa rauhassasi, emme tule käyttämään näitä sen kummemmin kurssilla.
+Kun käsittelemme loogisia ehtoja, voimme hyödyntää niin sanottuja **totuustaulukoita**. Nämä kertovat meille, mikä lopputulos on kun kaksi totuusarvoa yhdistetään tietyllä ehdolla.
 
-**Solut**-alueella voit lisätä, poistaa tai muotoilla soluja.
+`JA`-ehto täyttyy, kun molemmat totuusarvot ovat `TOSI`. Sen totuustaulukko on:
 
-**Muokkaus**-alueella löytyy erinäisiä muokkaustyökaluja, joista **Lajittele ja suodata** on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot.
+|               |               |            |
+|---------------|---------------|------------|
+| `JA`-ehto     | `a = EPÄTOSI` | `a = TOSI` |
+| `b = EPÄTOSI` | `EPÄTOSI`     | `EPÄTOSI`  |
+| `b = TOSI`    | `EPÄTOSI`     | `TOSI`     |
 
-### Lisää-välilehti
+: `JA`-ehdon totuustaulukko {#tbl-ja-totuus .striped .hover}
 
-Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavioita (@fig-excel-lisää-välilehti).
+`TAI`-ehto täyttyy, kun jompikumpi totuusarvoista on `TOSI` (tai molemmat). sen totuustaulukko on:
 
-![Lisää-välilehden työkalut](pics/excel_lisää_välilehti.png){#fig-excel-lisää-välilehti fig-alt="Lisää-välilehden työkalut, kahdella rivillä"}
+|               |               |            |
+|---------------|---------------|------------|
+| `TAI`-ehto    | `a = EPÄTOSI` | `a = TOSI` |
+| `b = EPÄTOSI` | `EPÄTOSI`     | `TOSI`     |
+| `b = TOSI`    | `TOSI`        | `TOSI`     |
 
-**Taulukot**-alueelta löydät työkalut Pivot-taulukkojen tekemiseen. Emme käytä näytä kurssilla, mutta ne ovat erittäin tehokkaita työkaluja datan analysointiin ja visualisointiin.
+: `TAI`-ehdon totuustaulukko {#tbl-tai-totuus .striped .hover}
 
-**Kuvat**-alueella voit lisätä kuvia, geometrisiä muotoja, SmartArt-kaavioita ja muita visuaalisia elementtejä. Nämä eivät kuitenkaan reagoi dataasi, eli ne ovat ihan vain visuaalisuutta lisääviä asioita.
+`EHDOTON.TAI`-ehto täyttyy, kun jompikumpi totuusarvoista on `TOSI` (mutta ei molemmat!). Sen totuustaulukko on:
 
-**Apuohjelmat**-alueella voit avata ja asentaa lisätoimintoja.
+|                    |               |            |
+|--------------------|---------------|------------|
+| `EHDOTON.TAI`-ehto | `a = EPÄTOSI` | `a = TOSI` |
+| `b = EPÄTOSI`      | `EPÄTOSI`     | `TOSI`     |
+| `b = TOSI`         | `TOSI`        | `EPÄTOSI`  |
 
-**Kaaviot**-alueella löydät kaikki Excelin kaaviomuodot grafiikan tekoa varten. Tulet käyttämään näitä useasti.
+: `EHDOTON.TAI`-ehdon totuustaulukko {#tbl-ehdotontai-totuus .striped .hover}
 
-Muista alueista tärkeimmät ovat **Kommentit**, josta löydät kommentointityökalun, sekä **Teksti**, josta voit lisätä vapaamuotoisia tekstiruutuja omia muistiinpanoja tai selitteitä varten. Voit myös lisätä matemaattisia kaavoja **Merkit**-alueen **Kaava**-työkalulla, jos haluat näyttää älykkäältä. Nämä kaavat eivät tee mitään Excelissä - laskelmia varten käytetään Excelin omia funktioita.
+`EI`-ehto täyttyy, kun annettu ehto on `EPÄTOSI`. Toisin sanoen, tämä ehto kääntää totuusarvon toisinpäin. Sen totuustaulukko on:
 
-### Sivun asettelu -välilehti
+|           |               |            |
+|-----------|---------------|------------|
+| `EI`-ehto | `a = EPÄTOSI` | `a = TOSI` |
+|           | `TOSI`        | `EPÄTOSI`  |
 
-Sivun asettelu -välilehdeltä löydät työkaluja, joilla muotoilet työkirjan tulostusnäkymää (@fig-excel-sivunasettelu-välilehti).
+: `EI`-ehdon totuustaulukko {#tbl-ei-totuus .striped .hover}
 
-![Sivun asettelu -välilehden työkalut](pics/excel_sivunasettelu_välilehti.png){#fig-excel-sivunasettelu-välilehti fig-alt="Sivun asettelu -välilehden työkalut"}
+## Solujen muokkaaminen
 
-Tärkeimmät työkalut löytyvät **Sivun asetukset**-alueelta. Näillä voit muuttaa työlehden muotoilua tulostusnäkymässä, jos haluat tulostaa työlehtesi ja vaikkapa ripustaa sen seinälle.
+## Viittaaminen ja osoitteet
 
-Joskus sattuu niin, että grafiikkasi ovat päällekäisiä etkä näe kaikkea kunnolla. Voit vaihtaa kaavojen ja kuvien välistä järjestystä **Järjestä**-alueella, sekä tasata niitä samaan riviin eri tavoin.
+Yksinkertaisimmillaan viittaaminen toiseen soluun onnistuu Excelissä samoin kuin yleisen laskennan kirjoittaminen.
 
-### Kaavat-välilehti
+::: {#fig-viit-esimerkki01 layout-nrow="2" layout-align="center"}
+![Arvot näkyvissä](pics/viittaaminen/viit_esimerkki01a.png){#fig-viit-esimerkki01a}
 
-Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (@fig-excel-kaavat-välilehti). Täältä löytyy myös erittäin tärkeä **Nimien hallinta** -osio (ks. LUKU NIMIEN HALLINNASTA).
+![Kaavat näkyvissä](pics/viittaaminen/viit_esimerkki01b.png){#fig-viit-esimerkki01b}
 
-![Kaavat-välilehden työkalut](pics/excel_kaavat_välilehti.png){#fig-excel-kaavat-välilehti fig-alt="Kaavat-välilehden työkalut, kahdessa rivissä"}
+Viittaaminen
+:::
 
-Ensimmäinen alue on nimeltään **Funktiokirjasto**, ja sisältää luettelon kaikista Excelin funktioista. Jos et muista funktion nimeä, voit hakea sen käsiisi täältä. Voit myös hakea funktioita sanoilla **Lisää funktio**-työkalulla.
+Kuvan [-@fig-viit-esimerkki01b] solussa B1 tehdään suora viittaus solun A1 sisältöön: `=A1`[^excelinperusteet-2]. Excel osaa silloin täyttää solun B1 solun A1 sisällöllä, mitä tahansa se on.
 
-Seuraavaksi tulee **Määritetyt nimet**-alue, josta pääset **nimien hallintaan**. Täällä voit määritellä omia "lempinimiä" solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa "sukupuoli", ja viitata suoraan siihen nimeen!
+[^excelinperusteet-2]: Voit asettaa kaavat näkyville tai pois näkyvistä kohdasta `Kaavat > Näytä kaavat`.
 
-Jotkut funktiot eivät automaattisesti päivity kun teet muutoksia työlehtiössäsi. Voit päivittää kaikki funktiot ja laskutoimitukset **Laskutoimitukset**-alueelta painamalla **Laske heti** tai **Laske taulukko**.
+[Vittaukset voivat olla pitkäkin ketju]{.underline} - B1 voi viitata A1:een, joka viittaa C4:ään, joka viittaa jonnekin muualle, ja niin eteenpäin. On kuitenkin suositeltavaa pitää viittausketju lyhyenä, koska sen seuraaminen voi olla hankalaa ketjun pidentyessä.
 
-### Tiedot-välilehti
+[Kaksoispisteillä `:` voit viitata solualueeseen]{.underline}. Tällöin Excel osaa hakea kaikki solut ensimmäisen ja toisen soluviittauksen välillä. Esimerkissä solussa C1 on summafunktio, jonka parametriksi on asetettu alue `A1:A3`. Excel hakee silloin kaikki arvot soluissa `{A1, A2, A3}`[^excelinperusteet-3], ja palauttaa ne summafunktiolle. Summafunktio laskee sitten palautetut solut yhteen, ja palauttaa lopputuloksen.
 
-Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut. Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.
+[^excelinperusteet-3]: Voit määritellä Excelissä arvojanan käyttäen aaltosulkeita `{ }`. Tämä on hyödyllistä, jos haluat esimerkiksi kokeilla jotain kaavaa tilapäisellä tiedolla, mutta et jostain syystä voi lisätä tietoa soluihin ja viitata niihin. Käytän aaltosulkeita tässä kirjassa sekä Excelin muodossa että matemaattisena merkintänä, mutta tulkinta on aina sama: arvot sulkujen välillä ovat yksiulotteinen matriisi, eli lista arvoja.
 
-### Tarkista-välilehti
+Esimerkkikuvassa solussa D1 on käytetty `JAKOJ`-funktiota, joka palauttaa jonkun jakolaskun jäännöksen. Sen ensimmäinen parametri on jakolaskun jaettava luku ja toinen parametri on laskun jakaja. Koska funktio viittaa soluihin `A3; A1`, Excel ajaa funktion asetuksilla `=JAKOJ(7; 5)`, jolloin tulokseksi tulee `2`.
 
-Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen. Näistä useimmiten käytetyt lienee **Kommentit**-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.
+[Viittaaminen voidaan siis ymmärtää eräänlaisena osoitteiden käyttönä]{.underline}. Jokaisella solulla on oma osoite, joka merkitään solun sarakekirjaimen ja rivinumeron avulla: solu `B7` löytyy sarakkeesta B, riviltä 7.
 
-### Näytä-välilehti
+## Funktiot
 
-Näytä-välilehdellä voit muuttaa Excelin näkymää hieman.
+Excelin laskennat tehdään **funktioilla**. Funktio on vähän kuin tehdas, joka ottaa sisään jonkun raakamateriaalin (arvon), tekee sille jotain (laskennan tai muunnoksen), ja sylkäisee ulos uuden tuotteen (uuden arvon).
 
-Voit vaihtaa tulostusnäkymän ja normaalin näkymän välillä **Työkirjanäkymät**-alueella.
+Funktio aloitetaan aina yhtäsuuruusmerkillä `=`. Sen jälkeen tulee funktion nimi ISOILLA KIRJAIMILLA, esim. `SUMMA` tai `AINUTKERTAISET.ARVOT`. Jos funktiossa on useampi sana nimessä, ne erotellaan pisteellä `.`
 
-Erittäin hyödyllinen toiminto on myös **Ikkuna**-alue, jolla voit avata saman työkirjan useampaan eri ikkunaan. Näin voit nähdä eri työlehtiöitä tai alueita samaan aikaan samalla näytöllä. Voit myös kiinnittää ensimmäisen rivin/sarakkeen, jotta ne pysyvät näkyvillä vaikka siirryt muualle.
+Funktion lopussa on sulut `()`. Näiden sisälle asetetaan funktion **parametrit**, eli määritellään, mille arvolle jotain tulisi tehdä sekä muita funktion asetuksia.
+
+Kun funktio suoritetaan, voidaan sanoa että funktio **kutsutaan**. Kun funktio on kutsuttu, se **palauttaa** jonkun arvon.
+
+[Esimerkkinä voidaan ottaa summafunktio]{.underline}:
+
+`=SUMMA(A1:A4)`
+
+Summafunktio ottaa yhden parametrin, jota voidaan kutsua `alue`-nimellä. Tämä parametri osoittaa funktiolle, mikä solualue pitäisi summata yhteen. Yllä olevassa esimerkissä tämä on määritelty alueeksi `A1:A4`, eli kaikki solut A1:n ja A4:n väliltä: `A1 + A2 + A3 + A3`.
+
+Funktioihin voi syöttää joko suoran arvon tai viittauksen toiseen soluun, jossa on sopiva arvo. Jotkut funktiot, kuten summafunktio, ottavat **matriisin** parametrinä, jolloin määritellään useampi solu. Toiset, kuten `=ONVIRH()`, ottavat vain yhden arvon, eli yhden solun. Jotkut funktiot eivät ota mitään parametrejä, kuten funktio `TOSI()` (joka palauttaa totuusarvon `TOSI`, eli 1).
+
+## Dynaamiset matriisit
+
+Excelin O365-versiossa uutena toimintona ovat **dynaamiset matriisit**. Vaikka nimi kuulostaakin hieman vaikealta, näiden käyttö on aika yksinkertaista.
+
+[Dynaaminen matriisi on tulos, jonka kaava on asetettu vain yhteen soluun, mutta joka **levittyy** useamman solun ylitse]{.underline}. Esimerkkinä voidaan käyttää `SUODATA`-funktiota. Funktio ottaa data-alueen sekä jonkun ehdon, ja palauttaa kaikki solut data-alueelta joiden rivit täyttävät kyseisen ehdon. Tämä tarkoittaa, että funktio voi palauttaa erikokoisia matriiseja, riippuen ehdosta.
+
+Ennen vanhaan, Excelissä piti määritellä, kuinka suurelle alueelle matriisi palautetaan. Dynaamisten matriisien myötä näin ei enää ole! Yllä kuvailtu `SUODATA`-funktio palauttaa nyt niin suuren matriisin, kuin tarvitaan.
+
+Dynaamisissa matriiseissa erikoisuus on, että [matriisin palauttava funktio löytyy **vain** ensimmäisestä solusta]{.underline} (ylävasemmasta solusta, jos kyseessä on kaksiulotteinen matriisi; ylimmästä solusta, jos kyseessä on rivimatriisi; vasemmanpuolisesta solusta, jos kyseessä on sarakematriisi).
+
+::: {#fig-viit-esimerkki02 layout-nrow="2" layout-align="center"}
+![Arvot näkyvissä](pics/viittaaminen/viit_esimerkki02a.png){#fig-viit-esimerkki02a}
+
+![Kaavat näkyvissä](pics/viittaaminen/viit_esimerkki02b.png){#fig-viit-esimerkki02b}
+
+Dynaamiset matriisit
+:::
+
+Kuvassa [-@fig-viit-esimerkki02] esiintyy kaksi saraketta, joissa on alkuperäisiä arvoja. A-sarakkeessa arvot vaihtelevat yhden ja kymmenen välillä, ja B-sarakkeessa arvot ovat joku arvoista `0, 1, -1`. Soluun D1 olen lisännyt `SUODATA`-funktion. Funktio ottaa kaikki arvot alueella `A1:A10`, ja palauttaa ne rivit, joiden vastaava arvo alueella `B1:B10` *ei ole* -1.
+
+Funktio palauttaa rivimatriisin, jossa on vähemmän rivejä kuin alkuperäisissä sarakkeissa - koska minähän suodatin pois kaikki joiden B-matriisin arvo on -1. Jos kuitenkin katsoo miten kaava esiintyy (@fig-viit-esimerkki02b), huomaa, että kaava on kirjoitettu vain ensimmäiseen soluun, D1. Koska `SUODATA`-funktio palauttaa dynaamisen matriisin, funktio levittyy tarvitsemalle alueelleen - tämän tunnistaa kuvasta haalean sinisestä laatikosta.
+
+Dynaamiset matriisit ovat erittäin tehokkaita, koska niiden avulla et tarvitse etukäteen tietää, kuinka suurelle alueelle matriisin tulisi levittäytyä.
+
+Dynaamisilla matriiseilla on ominaisvirhe: **#LEVITTYMINEN!** Tämä voi esiintyä mm. jos levittymisalueella on jokin arvo solussa, mikä estää levittymisen. Dynaamiset matriisit toimivat vain, jos koko levittymisalue on tyhjä!
