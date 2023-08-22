@@ -1,4 +1,4 @@
-# Nimeäminen Excelissä
+# Nimeäminen Excelissä {#sec-nimeäminen-excelissä}
 
 **Nimeäminen** on tehokas tapa organisoida eri alueita ja funktioita Excelissä. Sen sijaan, että joutuisit joka kerran kirjoittamaan saman funktion tai viittausalueen uudelleen, voit viitata siihen määrittelemälläsi nimellä. Tällöin virheiden tapahtuminen vähenee - kunhan olet huolellinen nimien lisäämisellä!
 
@@ -6,7 +6,7 @@ Löydät Nimien hallinnan Kaavat-välilehdestä (@fig-nimien-hallinta-palkki). A
 
 ![Nimien hallinta Kaavat-välilehdessä](pics/nimien_hallinta/nimien_hallinta_palkki.PNG){#fig-nimien-hallinta-palkki fig-alt="Kuvakaappaus Nimien hallinta -alueesta Kaavat-välilehdessä Excelissä."}
 
-## Nimien hallinta -toiminto
+## Nimien hallinta -toiminto {#sec-nimien-hallinta--toiminto}
 
 Painamalla `Nimien hallinta`-painiketta pääset ikkunaan, jossa voit tarkastella, lisätä ja poistaa nimettyjä alueita ja kaavoja (@fig-nimien-hallinta-ikkuna).
 
@@ -34,7 +34,7 @@ Jos sinulla on useampi määritettävä alue (esim. kokonainen datataulukko), jo
 
 ![Luo valinnasta -ikkuna. Maalaa ensin määritettävä alue rivi-/sarakenimineen, ja paina sitten `Luo valinnasta` Kaavat-välilehdeltä.](pics/nimien_hallinta/nimien_hallinta_luovalinnasta.png){#fig-nimien-hallinta-luovalinnasta fig-alt="Kuvakaappaus Nimien luominen valinnasta -ikkunasta."}
 
-## Vinkkejä nimeämiseen
+## Vinkkejä nimeämiseen {#sec-vinkkejä-nimeämiseen}
 
 Kun aloitat työskentelyn datalähteellä Excelissä, suosittelen nimeämään kaikki muuttujat `Luo valinnasta` -toiminnon avulla. Tällöin pystyt paljon helpommin hyödyntämään muuttujiasi laskukaavoissa.
 

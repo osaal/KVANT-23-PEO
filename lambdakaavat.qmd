@@ -1,5 +1,34 @@
 # LAMBDA-kaavoja {#sec-lambda-kaavoja}
 
+Tässä luvussa löydät valmiita LAMBDA-kaavoja joidenkin testisuureiden laskemiseen. Kaavat on testattu Excel O365-versiossa vertaamalla tuloksia IBM SPSS Statistics 28.0 -ohjelmiston tuloksiin, sekä laskemalla käsin.
+
+Jos löydät virheen kaavasta, ilmoita asiasta GitHubin Issuella, verkkokirjan etusivun palautelomakkeella tai suoraan minulle!
+
+## Kaavojen asentaminen
+
+1.  Avaa `Nimien hallinta`.
+2.  Laadi uusi nimi painikkeesta `Uusi...`.
+3.  Kopioi funktion Excel-nimi taulukosta kohtaan `Nimi`.
+4.  Kopioi funktion toimintokuvaus taulukosta kohtaan `Kommentti`.
+5.  Kopioi itse funktio kohtaan `Viittaus`.
+6.  Varmista, että nimen `Laajuus` on "Työkirja" (jos et halua käyttää funktiota vain yhdessä työlehtiössä)
+7.  Tallenna nimi painamalla `OK`.
+
+Jos tarvitset muistutusta nimien hallinnasta lue @sec-nimeäminen-excelissä.
+
+## Kaavojen käyttäminen
+
+Kun olet lisännyt kaavan Nimien hallintaan, käytön pitäisi toimia kirjoittamalla kaavan nimi soluun samalla tavalla kuin muut kaavat. Jos tämä ei kuitenkaan toimi, tarkista ensin nimien hallinnasta, onko nimi oikein ja laajuus sopiva. Voit myös koittaa syöttää kaavan suoraan toiminnolla `Lisää > Nimien hallinta > Käytä kaavassa` (kun muokkaat solua tai kaavaa).
+
 ## T-testi {#sec-t-testi-kaavat}
+
+| Excel-nimi       | Toiminto                                                                                      | Lambda-funktio                                                                                                                                                                           |
+|------------------|------------------|------------------------------------|
+| `RYHMVAR`        | Laskee kahden otoksen heteroskedastisen t-suuren ryhmitetyn varianssin ("pooled variance").   | `=LAMBDA(matriisi1;matriisi2; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2))`                                  |
+| `T.INDEP.POOLED` | Laskee kahden otoksen heteroskedastisen t-suureen. HUOM: Vaatii funktion RYHMVAR toimiakseen. | `=LAMBDA(matriisi1;matriisi2; (KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI((RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi1))+(RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi2))))`  |
+| `T.INDEP`        | Laskee kahden otoksen homoskedastisen t-suureen.                                              | `=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))` |
+| `T.DEP`          | Laskee parittaisen t-suureen.                                                                 | `=LAMBDA(matriisi1;matriisi2; ((SUMMA(matriisi1)-SUMMA(matriisi2))/LASKE(matriisi1))/(KESKIHAJONTA.S(matriisi1-matriisi2)/NELIÖJUURI(LASKE(matriisi1))))`                                |
+
+: Lambda-funktiot t-testisuuren laskemiseen {tbl-t-testi-kaavat}
 
 ## Luottamusväli {#sec-luottamusväli-kaavat}

@@ -19,6 +19,7 @@ book:
       - sijaintiluvut.qmd
       - hajontaluvut.qmd
       - merkitsevyysluvut.qmd
+      - ttesti.qmd
       - khiinneliö.qmd
     - part: "Excel-toiminnot"
       chapters:
@@ -27,7 +28,7 @@ book:
       - nimienhallinta.qmd
       - exceltoimintoja.qmd
       - excelgrafiikka.qmd
-      - perustoiminnot.qmd
+      - funktiot.qmd
       - lambdakaavat.qmd
     - part: "Työkalut"
       chapters:

@@ -1,8 +1,26 @@
 # Päivityshistoria {.unnumbered}
 
-## Päivitys 0
+Tällä sivulla näet verkkokirjan päivityshistorian. Yritän pitää tämän niin ajantasalla ja tarkkana kuin voin, mutta mahdolliset pienet korjaukset voivat vahingossa mennä sivu suun.
 
-## 0.9
+Julkaisunumerot ovat muodossa MAJOR.MINOR. MINOR-päivitykset voivat sisältää uusia lukuja, korjauksia ynnä muita viilauksia; MAJOR-päivitykset ovat suuria muutoksia kirjaan (joita ei taida tulla usein).
+
+Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pull Request on mergattu kirjaan^[Pahoittelen tätä englannin käyttöä...], päivitystiedoissa löytyy linkki kyseiseen Issueen tai Pull Requestiin.
+
+### 1.0
+
+**Julkaisupäivämäärä**: EI VIELÄ JULKAISTU.
+
+**Uudet luvut**:
+
+-   T-testin teoria ja toimeenpano Excelissä.
+
+**Muutokset**:
+
+-   Funktiot-luvun tiedostonimi uudelleennimetty vastaamaan luvun nimeä.
+-   T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.
+-   T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.
+
+### 0.9
 
 **Julkaisupäivämäärä**: 22.8.2023
 

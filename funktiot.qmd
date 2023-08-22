@@ -62,7 +62,7 @@ Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritell�
 Tietopyyntökomentojen eri määritelmät:
 
 | Komento        | Palautus                                                                                                                                                                                                                 |
-|------------|-----------------------------------------------------------|
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | "osoite"       | Soluviittauksen osoite tekstinä (esim. A2)                                                                                                                                                                               |
 | "sarake"       | Solun sarake numerona (esim. 2 sarakkeelle B)                                                                                                                                                                            |
 | "väri"         | Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.                                                                                                                                                 |
@@ -704,48 +704,7 @@ Ensimmäiset kaksi avainsanaa määrittelevät kaksi matriisia, joita halutaan v
 
 Huomaa, että laji 1 ei toimi, jos matriiseissa on eri määrät arvoja.
 
-**Funktio ei laske testisuuretta!** Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen (@eq-t-1) vai kahden otoksen t-testin, sekä oletatko saman (@eq-t-2) vai erisuuren (@eq-t-3) varianssin.
-
-**Parittaisen t-testin** kaava on:
-
-$$
-t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{N}}
-$$ {#eq-t-1}
-
-$1/n\sum{x-y}$ on erotuksen keskiarvo[^perustoiminnot-1], $\sigma$ on erotuksen keskihajonta, ja $\sqrt{N}$ on otoskoon neliöjuuri. Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.
-
-[^perustoiminnot-1]: Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon.
-
-**Kahden otoksen homoskedastisen t-testin** kaava on:
-
-$$
-t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}
-$$ {#eq-t-2}
-
-$\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ on erotuksen keskihajonta, joka koostuu useammasta asiasta. Voit kuitenkin laskea nämä helpommin Excelissä. Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.
-
-**Kahden otoksen heteroskedastisen t-testin** kaava on:
-
-$$
-\begin{split}
-t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}}
-\\
-s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2}
-\end{split}
-$$ {#eq-t-3}
-
-T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. *pooled variance*), $s^2_p$. Se koostuu molempien otosten otoskoista $n_1$ ja $n_2$, sekä otosten yksittäisistä variansseista $s_1$ ja $s_2$.
-
-Koska nämä funktiot ovat pitkiä ja hankalia, olen tehnyt valmiit lambda-funktiot Exceliin, joita voitte käyttää. Alla olevassa taulukossa on lambda-funktiot, kopioi ne Nimien hallintaan ja anna niille taulukossa esitetyt nimet.
-
-| Excel-nimi     | Toiminto                                                                                      | Lambda-funktio                                                                                                                                                                           |
-|--------------|-------------------|----------------------------------------|
-| RYHMVAR        | Laskee kahden otoksen heteroskedastisen t-suuren ryhmitetyn varianssin ("pooled variance").   | `=LAMBDA(matriisi1;matriisi2; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2))`                                  |
-| T.INDEP.POOLED | Laskee kahden otoksen heteroskedastisen t-suureen. HUOM: Vaatii funktion RYHMVAR toimiakseen. | `=LAMBDA(matriisi1;matriisi2; (KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI((RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi1))+(RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi2))))`  |
-| T.INDEP        | Laskee kahden otoksen homoskedastisen t-suureen.                                              | `=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))` |
-| T.DEP          | Laskee parittaisen t-suureen.                                                                 | `=LAMBDA(matriisi1;matriisi2; ((SUMMA(matriisi1)-SUMMA(matriisi2))/LASKE(matriisi1))/(KESKIHAJONTA.S(matriisi1-matriisi2)/NELIÖJUURI(LASKE(matriisi1))))`                                |
-
-: Lambda-funktiot t-testisuuren laskemiseen
+**Funktio ei laske testisuuretta!** Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat luvusta [-@sec-lambda-kaavoja].
 
 ## Tekstifunktiot {#sec-tekstifunktiot}
 

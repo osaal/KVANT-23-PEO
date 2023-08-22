@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./perustoiminnot.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./funktiot.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link active">
+  <a href="./funktiot.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
   </div>
 </li>
@@ -370,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -798,7 +798,7 @@ Lähde
 <p>Funktio pudottaa desimaalit annetulta luvulta. Oletusarvona funktio pudottaa kaikki desimaalit, mutta voit myös määritellä kuinka monta jätetään valinnaisella avainsanalla <code>numerot</code>. Huomaa, että funktio <strong>ei</strong> pyöristä, vaan tiputtaa vain pois desimaalit!</p>
 </section>
 </section>
-<section id="sec-tilastolliset-funktiot" class="level2 page-columns page-full" data-number="14.7">
+<section id="sec-tilastolliset-funktiot" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="sec-tilastolliset-funktiot"><span class="header-section-number">14.7</span> Tilastolliset funktiot</h2>
 <section id="sec-sijaintiluvut" class="level3" data-number="14.7.1">
 <h3 data-number="14.7.1" class="anchored" data-anchor-id="sec-sijaintiluvut"><span class="header-section-number">14.7.1</span> Sijaintiluvut</h3>
@@ -914,7 +914,7 @@ Lähde
 <p><strong>Funktio ei laske testisuuretta!</strong> Jotta voit raportoida koko testin, sinun tulee myös laskea testisuure käsin. Voit käyttää <code>NORMITA</code>-funktiota laskeaksesi <code>x</code>-arvon z-normitetun arvon, jonka raportoit yhteydessä z-testin palauttaman p-arvon kanssa.</p>
 </section>
 </section>
-<section id="sec-bivariaatit-testit" class="level3 page-columns page-full" data-number="14.7.4">
+<section id="sec-bivariaatit-testit" class="level3" data-number="14.7.4">
 <h3 data-number="14.7.4" class="anchored" data-anchor-id="sec-bivariaatit-testit"><span class="header-section-number">14.7.4</span> Bivariaatit testit</h3>
 <section id="sec-kovarianssi" class="level4" data-number="14.7.4.1">
 <h4 data-number="14.7.4.1" class="anchored" data-anchor-id="sec-kovarianssi"><span class="header-section-number">14.7.4.1</span> KOVARIANSSI</h4>
@@ -993,7 +993,7 @@ V = \sqrt{\frac{\chi^2-N}{min(k_{rivit}-1, k_{sarakkeet}-1)}}
 </table>
 </section>
 </section>
-<section id="sec-t-testi" class="level4 page-columns page-full" data-number="14.7.4.4">
+<section id="sec-t-testi" class="level4" data-number="14.7.4.4">
 <h4 data-number="14.7.4.4" class="anchored" data-anchor-id="sec-t-testi"><span class="header-section-number">14.7.4.4</span> T-testi</h4>
 <p><code>=T.TESTI(matriisi1; matriisi2; suunta; laji)</code></p>
 <p>Funktio laskee t-testin p-arvon.</p>
@@ -1004,64 +1004,7 @@ V = \sqrt{\frac{\chi^2-N}{min(k_{rivit}-1, k_{sarakkeet}-1)}}
 <li>Kahden otoksen t-testi, erisuuren varianssin oletus (heteroskedastinen; ns. between-groups)</li>
 </ol>
 <p>Huomaa, että laji 1 ei toimi, jos matriiseissa on eri määrät arvoja.</p>
-<p><strong>Funktio ei laske testisuuretta!</strong> Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen (<a href="#eq-t-1">Yhtälö&nbsp;<span>14.1</span></a>) vai kahden otoksen t-testin, sekä oletatko saman (<a href="#eq-t-2">Yhtälö&nbsp;<span>14.2</span></a>) vai erisuuren (<a href="#eq-t-3">Yhtälö&nbsp;<span>14.3</span></a>) varianssin.</p>
-<p><strong>Parittaisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-1"><span class="math display">\[
-t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{N}}
-\tag{14.1}\]</span></span></p>
-<div class="page-columns page-full"><p><span class="math inline">\(1/n\sum{x-y}\)</span> on erotuksen keskiarvo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="math inline">\(\sigma\)</span> on erotuksen keskihajonta, ja <span class="math inline">\(\sqrt{N}\)</span> on otoskoon neliöjuuri. Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon.</p></li></div></div>
-<p><strong>Kahden otoksen homoskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-2"><span class="math display">\[
-t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}
-\tag{14.2}\]</span></span></p>
-<p><span class="math inline">\(\bar{x} - \bar{y}\)</span> on molempien otosten keskiarvojen ero. <span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> on erotuksen keskihajonta, joka koostuu useammasta asiasta. Voit kuitenkin laskea nämä helpommin Excelissä. Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.</p>
-<p><strong>Kahden otoksen heteroskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-3"><span class="math display">\[
-\begin{split}
-t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}}
-\\
-s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2}
-\end{split}
-\tag{14.3}\]</span></span></p>
-<p>T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. <em>pooled variance</em>), <span class="math inline">\(s^2_p\)</span>. Se koostuu molempien otosten otoskoista <span class="math inline">\(n_1\)</span> ja <span class="math inline">\(n_2\)</span>, sekä otosten yksittäisistä variansseista <span class="math inline">\(s_1\)</span> ja <span class="math inline">\(s_2\)</span>.</p>
-<p>Koska nämä funktiot ovat pitkiä ja hankalia, olen tehnyt valmiit lambda-funktiot Exceliin, joita voitte käyttää. Alla olevassa taulukossa on lambda-funktiot, kopioi ne Nimien hallintaan ja anna niille taulukossa esitetyt nimet.</p>
-<table class="table">
-<caption>Lambda-funktiot t-testisuuren laskemiseen</caption>
-<colgroup>
-<col style="width: 5%">
-<col style="width: 31%">
-<col style="width: 62%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Excel-nimi</th>
-<th>Toiminto</th>
-<th>Lambda-funktio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>RYHMVAR</td>
-<td>Laskee kahden otoksen heteroskedastisen t-suuren ryhmitetyn varianssin (“pooled variance”).</td>
-<td><code>=LAMBDA(matriisi1;matriisi2; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2))</code></td>
-</tr>
-<tr class="even">
-<td>T.INDEP.POOLED</td>
-<td>Laskee kahden otoksen heteroskedastisen t-suureen. HUOM: Vaatii funktion RYHMVAR toimiakseen.</td>
-<td><code>=LAMBDA(matriisi1;matriisi2; (KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI((RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi1))+(RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi2))))</code></td>
-</tr>
-<tr class="odd">
-<td>T.INDEP</td>
-<td>Laskee kahden otoksen homoskedastisen t-suureen.</td>
-<td><code>=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))</code></td>
-</tr>
-<tr class="even">
-<td>T.DEP</td>
-<td>Laskee parittaisen t-suureen.</td>
-<td><code>=LAMBDA(matriisi1;matriisi2; ((SUMMA(matriisi1)-SUMMA(matriisi2))/LASKE(matriisi1))/(KESKIHAJONTA.S(matriisi1-matriisi2)/NELIÖJUURI(LASKE(matriisi1))))</code></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Funktio ei laske testisuuretta!</strong> Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat luvusta <a href="lambdakaavat.html"><span>13</span></a>.</p>
 </section>
 </section>
 </section>
@@ -1137,7 +1080,6 @@ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2}
 
 </section>
 </section>
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

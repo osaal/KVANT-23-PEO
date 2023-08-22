@@ -1,0 +1,118 @@
+# T-testi {#sec-t-testi}
+
+**Studentin T-testillä** voidaan testata kahden keskiarvon eroa tilastollisesti. Testillä tarkistetaan, onko mitattu ero tarpeeksi suuri, että voisimme luotettavasti hylätä nollahypoteesin (ettei eroa ole). Testi pohjautuu T-jakaumaan, jonka määrittelyyn käytetään jakauman vapausasteita:
+
+```{r}
+#| label: fig-t-jakauma
+#| fig-cap: T-jakauma, df = 10
+#| layout-ncol: 3
+#| fig-subcap: 
+#| - "df = 1"
+#| - "df = 10"
+#| - "df = 300"
+#| echo: false
+#| cache: true
+
+for (i in c(1, 10, 300) ) {
+  curve(
+    dt(x, df = i),
+    from = -4,
+    to = 4,
+    xlab = "Arvo",
+    ylab = "Todennäköisyystiheys"
+  )
+}
+
+```
+
+**Mittausasteikko:** Välimatka- ja suhdeasteikko.
+
+[Studentin T-testistä löytyy kaksi pääkategoriaa]{.underline}: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on laskennallinen, joten on tärkeää valita oikea testi!
+
+**Parittaisen otoksen t-testi** testaa kahden arvon välistä eroa, kun arvot tulevat **samasta** yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista interventiota, ja halutaan tarkastaa, oliko interventiolla vaikutusta.
+
+**Kahden otoksen t-testi** testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat **eri** yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla.
+
+Kahden otoksen testille löytyy vielä kaksi alaversiota, jotka riippuvat ryhmien välisestä varianssivaihtelusta: **homoskedastinen** ja **heteroskedastinen** testi.
+
+**Kahden otoksen homoskedastista t-testiä** voi käyttää kun molempien ryhmien varianssi on samankokoinen.
+
+**Kahden otoksen heteroskedastistia t-testiä** tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useammin heteroskedastista t-testiä.
+
+Heteroskedastisuutta voi testata mm. **Levenen testillä**. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Yleensä onkin helpompi olettaa, että ryhmien välillä on heteroskedastisuutta.
+
+## Mallioletukset
+
+### Normaalijakautuminen
+
+T-testi olettaa, että testattava arvo tulee normaalijakaumasta. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen, suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.
+
+Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta.
+
+### Homoskedastisiteetti
+
+T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta - eli että ovat samankokoisia.
+
+Voit testata oletusta useilla eri testeillä (ks. LUKU).
+
+Jos ne eivät ole, voit käyttää heteroskedastista testiversiota (ks. alla). Tämän rikkominen ei siis ole juurikaan ongelma.
+
+### Joko täysin samat tai täysin eri yksiköt
+
+T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä). T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.
+
+Tarkista tämä oletus miettimällä: ovatko kaikki tutkimusyksiköt samasta vai eri yksiköstä?
+
+Jos rikot olettamuksen, et voi käyttää t-testiä. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. *mixed models*), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.
+
+### Yhteenveto vaatimuksista
+
+Jos sinulla on isot otokset, ja tiedät, että molemmat muuttujat tulevat joko täysin samoista tai täysin eri yksiköistä, kaikki on hyvin ja voit jatkaa. Valitse kuitenkin oikea t-testi!
+
+Jos sinulla on pieni otos, t-testi on herkempi normaalijakautumisen vaatimukselle. Parempi vaihtoehto voi olla **ei-parametrinen testi**. Vastaavat testit t-testille ovat **Mann-Whitney'n U-testi** (kahden otoksen testit) sekä **Wilcoxonin signed-rank-testi** (parittainen t-testi).
+
+Jos et tiedä mitä yksikköjä on mitattu, sinun ei kannattaisi olla vielä testaamassa mitään. Tutustu dataasi enemmän ja selvitä mittaustavat!
+
+## T-testin laskeminen
+
+### Parittainen t-testi
+
+Parittaisen t-testin kaava on:
+
+$$ t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{N}} $$
+
+$1/n\sum{x-y}$ on erotuksen keskiarvo[^ttesti-1], $\sigma$ on erotuksen keskihajonta, ja $\sqrt{N}$ on otoskoon neliöjuuri. Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.
+
+[^ttesti-1]: Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon.
+
+### Kahden otoksen homoskedastinen t-testi
+
+**Kahden otoksen homoskedastisen t-testin** kaava on:
+
+$$ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
+
+$\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ on erotuksen keskihajonta, joka koostuu useammasta asiasta. Voit kuitenkin laskea nämä helpommin Excelissä. Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.
+
+### Kahden otoksen heteroskedastinen t-testi
+
+**Kahden otoksen heteroskedastisen t-testin** kaava on:
+
+$$ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split} $$
+
+T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. *pooled variance*), $s^2_p$. Se koostuu molempien otosten otoskoista $n_1$ ja $n_2$, sekä otosten yksittäisistä variansseista $s_1$ ja $s_2$.
+
+## T-testin laskeminen Excelissä
+
+Excelissä löytyy valmis kaava, jolla saat t-testin p-arvon:
+
+-   `T.TESTI(matriisi1; matriisi2; suunta; laji)`
+
+    -   Syötä kaavalle molemmat datamatriisit
+
+    -   `Suunta`-parametriin määrittelet, käytätkö yksisuuntaista `1` vai kaksisuuntaista `2` häntää
+
+    -   `Laji`-parametrilla määrittelet, teetkö parittaisen `1`, kahden otoksen homoskedastisen `2` vai kahden otoksen heteroskedastisen `3` t-testin
+
+Funktio: @sec-t-testi
+
+[Excelissä ei ole valmiita kaavoja testisuureen laskemiseen]{.underline}. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät [luvusta @sec-lambda-kaavoja]
