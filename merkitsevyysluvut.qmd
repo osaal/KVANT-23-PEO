@@ -1,8 +1,12 @@
 # Merkitsevyysluvut {#sec-merkitsevyysluvut-teoria}
 
-## Keskiarvon keskivirhe {#sec-keskiarvon-keskivirhe-teoria}
+Tässä luvussa käydään läpi merkitsevyyslukujen määritelmät, käyttö ja toteuttaminen Excelissä.
 
-**Mittausasteikko:** Välimatka-asteikosta ylöspäin.
+**Merkitsevyysluvut** kertovat jotain mittarin luotettavuudesta. Kuinka paljon me luotamme siihen, että mitattu arvo ei ole syntynyt satunnaisen vaihtelun vuoksi, vaan edustaa todellista eroa populaatiossa?
+
+Merkitsevyyslukuja, joita tässä kirjassa käydään läpi ovat: keskiarvon keskivirhe, Z-arvo, luottamusväli ja virhemarginaali. P-arvon voi myös laskea merkitsevyysluvuksi, mutta se edustaa todennäköisyyttä aina tietyssä kontekstissa. Täten sen läpikäyminen sopii paremmin hypoteesitestauksen yhteyteen (ks. @sec-hypoteesitestaus-teoria).
+
+## Keskiarvon keskivirhe {#sec-keskiarvon-keskivirhe-teoria}
 
 **Keskiarvon keskivirhe** (engl. *standard error of the mean*), tai vain **keskivirhe**[^merkitsevyysluvut-1], on osittaisesti merkitsevyysmitta. Keskivirhe estimoi kuinka hyvin otoksen keskiarvo edustaa todellista populaation keskiarvoa. Keskivirhe ilmaistaan useimmiten kirjaimilla $SE$ (englannin nimestä), mutta vaihtoehtoisesti voi myös käyttää matemaattisia symboleja $\hat{\sigma}_x^{-}$ tai $s_x^{-}$ . Keskivirhe lasketaan jakamalla keskihajonta datamäärän neliöjuurella:
 
@@ -12,7 +16,7 @@ $$
 \text{SE} = \frac{s}{\sqrt{N}} 
 $$ {#eq-keskiarvon-keskivirhe}
 
-Jos otos on tarpeeksi iso, keskivirhe edustaa suhteellisen luotettavasti keskiarvon edustavuuden laatua otoksessa. Mitä isompi keskivirhe, sitä huonommin otoksen keskiarvo edustaa populaation keskiarvoa. Voidaan sanoa, että keskivirhe edustaa mitatun keskiarvon etäisyyttä todellisesta keskiarvosta.
+Jos otos on tarpeeksi iso, keskivirhe edustaa suhteellisen luotettavasti keskiarvon edustavuuden laatua otoksessa. Mitä isompi keskivirhe, sitä huonommin otoksen keskiarvo edustaa populaation keskiarvoa. Voidaan sanoa, että [keskivirhe edustaa mitatun keskiarvon etäisyyttä todellisesta keskiarvosta]{.underline}.
 
 Keskivirhettä voidaan käyttää mm. luottamusvälin laskemiseen.
 
@@ -32,11 +36,19 @@ Aikasemmassa luvussa (@sec-hajontaluvut-teoria) käytettiin esimerkkinä datajak
 
 Näiden lukujen pohjalta datajakauman keskiarvon keskivirhe olisi $SE = \frac{1.58}{\sqrt{5}} \approx 0.71$. Koska datapisteitä on vain viisi, keskivirhe ei kuitenkaan ole hirveän luotettava mittari tässä tilanteessa; sen on osoitettu aliarvioivan todellista virhemittausta pienissä otoksissa.
 
+**Funktiot Excelissä:**
+
+Excelissä ei ole sisäänrakennettua keskivirheen laskufunktiota. Voit kuitenkin laskea sen seuraavasti:
+
+-   `VAR.S(alue) / NELIÖJUURI(datamäärä)`
+
+Datamäärän voit hakea käsin tai käyttäen `LASKE.A`-funktiota (ks. @sec-laske-funktiot).
+
 ## Z-arvo {#sec-z-arvo-teoria}
 
-**Mittausasteikko:** Välimatka-asteikosta ylöspäin.
+**Z-arvo** on tietyn datapisteen standardisoitu arvo. Jos kyseinen arvo on peräisin normaalijakautuneesta mittarista, Z-arvoa voidaan käyttää merkitsevyysmittarina.
 
-**Z-arvo** on tietyn datapisteen standardisoitu arvo. Jos kyseinen arvo on peräisin normaalijakautuneesta mittarista, Z-arvoa voidaan käyttää merkitsevyysmittarina. Z-arvo mitataan samalla asteikolla kuin normaalijakauma: Z-arvo $0$ edustaa normaalijakauman keskipistettä, positiiviset arvot edustavat datapisteitä normaalijakauman oikealla puolella ja negatiiviset jakauman vasemmalla puolella.
+[Z-arvo mitataan samalla asteikolla kuin normaalijakauma]{.underline}: Z-arvo $0$ edustaa normaalijakauman keskipistettä, positiiviset arvot edustavat datapisteitä normaalijakauman oikealla puolella ja negatiiviset jakauman vasemmalla puolella.
 
 Z-arvo lasketaan jakamalla datapisteen ja keskiarvon ero datajakauman keskihajonnalla:
 
@@ -46,13 +58,23 @@ $$ {#eq-z-arvo}
 
 Jatketaan aikaisemmalla esimerkkijakaumalla. Z-arvo voidaan laskea jokaiselle datapisteelle erikseen. Ensimmäisen datapisteen Z-arvo olisi tällöin $Z = (1-3)/1.85 \approx -1.1$. Kaikki datapisteet saavat järjestyksessä Z-arvon: $[-1.1, -0.5, 0, 0.5, 1.1]$. Voit kokeilla laskea nämä itse, tai vain luottaa minuun.
 
-Z-arvo ilmaistaan keskihajonnoissa: yllä olevan esimerkin ensimmäisen arvon Z-arvo on -1.1 keskihajontaa, eli se on noin yhden keskihajonnan verran alle keskiarvon. Voimme hyödyntää normaalijakauman muotoa tulkinnassa: normaalijakaumassa 95 prosenttia kaikesta datasta jää arvon $\pm 1.96$ sisälle; 99 prosenttia datasta on arvon $\pm 2.58$ sisällä, ja vain yksi promille (99,9 %) datasta on arvon $\pm 3.29$ ulkopuolella. Koska arvomme $1$ Z-arvo on alle $\pm 1.96$, sen (tai isomman) todennäköisyys (jos ottaisimme ääretön määrä otantoja populaatiosta) on suht iso esiintyä. Jos tämä johtopäätös jää epäselväksi, lue luku \[HYPOTEESITESTAUS\] tarkasti uudelleen!
+[Z-arvon yksikkö ilmaistaan keskihajonnoissa]{.underline}: yllä olevan esimerkin ensimmäisen arvon Z-arvo on -1.1 keskihajontaa, eli se on noin yhden keskihajonnan verran alle keskiarvon.
+
+[Voimme hyödyntää normaalijakauman muotoa tulkinnassa]{.underline}: normaalijakaumassa 95 prosenttia kaikesta datasta jää arvon $\pm 1.96$ sisälle; 99 prosenttia datasta on arvon $\pm 2.58$ sisällä, ja vain yksi promille (99,9 %) datasta on arvon $\pm 3.29$ ulkopuolella. Koska arvomme $1$ Z-arvo on alle $\pm 1.96$, sen (tai isomman) todennäköisyys (jos ottaisimme ääretön määrä otantoja populaatiosta) on suht iso esiintyä. Jos tämä johtopäätös jää epäselväksi, lue @sec-hypoteesitestaus-teoria tarkasti uudelleen!
+
+**Funktiot Excelissä:**
+
+-   `NORMITA(x; keskiarvo; keskihajonta)`
+
+    -   Syötä funktiolle arvon jonka haluat kääntää z-arvoksi `x`, keskiarvon sekä keskihajonnan.
+
+Funktiot: @sec-z-arvo.
 
 ## Luottamusväli {#sec-luottamusväli-teoria}
 
-**Mittausasteikko:** Välimatka-asteikosta ylöspäin.
+**Luottamusväli** (engl. *confidence interval*) on yleisesti käytetty merkitsevyysmitta, joka ilmaistaan väliestimaattina (kaksi arvoa) piste-estimaatin (yksi arvo) sijaan. Tulkinta on monimutkainen - jatka lukemista!
 
-**Luottamusväli** (engl. *confidence interval*) on yleisesti käytetty merkitsevyysmitta, joka ilmaistaan väliestimaattina (kaksi arvoa) piste-estimaatin (yksi arvo) sijaan. Luottamusvälillä ilmaistaan kuinka usein todellinen populaatiomitta esiintyisi otannan estimaattimittana, jos otanta toistettaisiin ääretön määrä kertoja. Luottamusväli ilmaistaan kirjaimilla $\text{CI}$, jotka tulevat englanninkielisestä nimestä. Sen lisäksi luottamusvälille ilmaistaan myös luottamustaso $1-p$ prosenteissa. Esimerkiksi $p = 0.05$ (5 prosenttia), jolloin luottamusväli ilmaistaisiin $95 \% \text{CI}$.
+Luottamusväli ilmaistaan kirjaimilla $\text{CI}$, jotka tulevat englanninkielisestä nimestä. Sen lisäksi luottamusvälille ilmaistaan myös luottamustaso $1-p$ prosenteissa. Esimerkiksi $p = 0.05$ (5 prosenttia), jolloin luottamusväli ilmaistaisiin $95 \% \text{ CI}$.
 
 Luottamusvälille löytyy kaksi laskentatapaa, yleiselle otannalle sekä pienelle otannalle. Yleinen kaava on:
 
@@ -66,13 +88,13 @@ $$
 \text{CI}_p = \bar{x} \pm (t_{n-1} \times \text{SE})
 $$ {#eq-luottamusväli-pieniotanta}
 
-Molemmissa tilanteissa laskukaava tuottaa kaksi arvoa: ylemmän ja alemman luottamusvälin rajan.
+[Molemmissa tilanteissa laskukaava tuottaa kaksi arvoa]{.underline}: ylemmän ja alemman luottamusvälin rajan.
 
 **Yleiselle luottamusvälille** tarvitaan jokin luottamustaso, jolle haetaan kaksisuuntainen z-arvo. Luottamusvälin voi laskea mille tahansa luottamustasolle, mutta yleisimmät tasot ovat 95 prosenttia, 99 prosenttia sekä 99,9 prosenttia. Näiden z-arvot ovat $1.96$, $2.58$ ja $3.29$ (ks. @sec-z-arvo-teoria). Korvaa siis $z_{ \frac{1-p}{2} }$ yllä olevassa kaavassa (@eq-luottamusväli-yleinen) valitsemallasi luottamustason z-arvolla.
 
 **Pienen otannan luottamusvälille** käytetään z-arvon sijaan t-testin koko valitulle luottamustasolle. Tätä varten tarvitset määritellä luottamustason (esim. 95 prosenttia, $p = 0.05$) sekä testin vapausasteen, $\text{df} = n-1$.
 
-Lasketaan esimerkkijakaumallemme molemmat luottamusvälit 95 prosentin luottamustasolla, aloittaen yleisestä luottamusvälistä:
+Lasketaan esimerkkijakaumallemme molemmat luottamusvälit 95 prosentin luottamustasolla, aloittaen [yleisestä luottamusvälistä]{.underline}:
 
 $$
 \begin{split}
@@ -85,13 +107,15 @@ $$
 \end{split}
 $$
 
-Tekstissä sanoisimme, että "jakauman keskiarvo on 3, 95% CI \[0,1; 6,1\]"[^merkitsevyysluvut-2]. Tällä tarkoitamme siis, että jos jakauman tuottanut otanta toistettaisiin äärettömästi uudelleen, niin 95 % kaikista lasketuista *luottamusväleistä* sisältäisi todellisen populaatiokeskiarvon.
+Tekstissä sanoisimme, että "jakauman keskiarvo on 3, 95% CI \[0,1; 6,1\]"[^merkitsevyysluvut-2]. Tällä tarkoitamme siis:
 
 [^merkitsevyysluvut-2]: Suomeksi desimaalierottajana käytetään pilkkua, jolloin erotamme luottamusvälin kaksi arvoa hakasuluissa puolipilkulla. Jos kirjoitat englanniksi, käytä pistettä desimaalierottimena ja pilkkua kahden arvon erottimena.
 
-Luottamusvälissä on erittäin tärkeä huomata nyanssierot: luottamusväli ei kerro mitään yksittäisen keskiarvon todennäköisyydessä olla oikein! Luottamusväli onkin hyödyllinen työkalu niin sanotussa **meta-analyysissa**, jolloin tutkijat tarkastavat useamman tutkimuksen tulokset yhdessä. Jos sama tutkimus toteutettaisiin uudelleen, niin jossain vaiheessa uskaltaisimme väittää jotain todellisen keskiarvon sijainnista, koska meillä olisi tarpeeksi luottamusvälejä nähdäksemme, mitkä arvot yleisimmin sisältyvät näihin väleihin.
+> Jos jakauman tuottanut otanta toistettaisiin äärettömästi uudelleen, niin 95 % kaikista lasketuista **luottamusväleistä** sisältäisi todellisen populaatiokeskiarvon.
 
-Koska otoksemme on erittäin pieni ($n = 5$), yleinen kaava ei kuitenkaan ole hyvin luotettava. Lasketaan luottamusväli uudelleen käyttäen pienen otannan luottamusväliä. Voimme laskea, että $\text{df} = n -1 = 5-1 = 4$, ja tarkistaa t-suureen raja-arvo taulukosta[^merkitsevyysluvut-3].
+[Luottamusvälissä on erittäin tärkeä huomata nyanssierot]{.underline}. Luottamusväli ei kerro mitään yksittäisen keskiarvon todennäköisyydestä olla oikein! Luottamusväli onkin hyödyllinen työkalu niin sanotussa **meta-analyysissa**, jolloin tutkijat tarkastavat useamman tutkimuksen tulokset yhdessä. Jos sama tutkimus toteutettaisiin uudelleen, niin jossain vaiheessa uskaltaisimme väittää jotain todellisen keskiarvon sijainnista, koska meillä olisi tarpeeksi luottamusvälejä nähdäksemme, mitkä arvot yleisimmin sisältyvät näihin väleihin.
+
+Koska otoksemme on erittäin pieni ($n = 5$), yleinen kaava ei kuitenkaan ole hyvin luotettava. Lasketaan luottamusväli uudelleen käyttäen [pienen otannan luottamusväliä]{.underline}. Voimme laskea, että $\text{df} = n -1 = 5-1 = 4$, ja tarkistaa t-suureen raja-arvo taulukosta[^merkitsevyysluvut-3].
 
 [^merkitsevyysluvut-3]: Hain t-suureen raja-arvot Scribbr-verkkosivun [valmiista taulukosta](https://www.scribbr.com/statistics/students-t-table/). Muista käyttää tässä kontekstissa kaksi-häntäistä t-suuretta (engl. *two-tailed t-test*)
 
@@ -108,15 +132,15 @@ $$
 
 Kuten tuloksesta näkee, luottamusväli kasvoi kun käytimme pienen otoksen kaavaa. Tämä tarkoittaa vain, että meidän otantakoolla ei voida hyvin luotettavasti rajata aluetta, jonka sisälle todellinen keskiarvo mahdollisesti osuisi. Tarvitsemme enemmän dataa.
 
+Luottamusvälille ei löydy suoraa kaavaa Excelissä. Sen sijaan voit implementoida yllä olevat yhtälöt itse, tai käyttää verkkokirjasta löytyviä LAMBDA-kaavoja (ks. @sec-luottamusväli-kaavat).
+
 ## Virhemarginaali {#sec-virhemarginaali-teoria}
 
-**Mittausasteikko:** Välimatka-asteikosta ylöspäin[^merkitsevyysluvut-4]
+**Virhemarginaali** on monelle tuttu merkitsevyysmitta. Virhemarginaali onkin hyvin lähellä luottamusväliä - mutta virhemarginaali ilmaistaan useimmiten prosenttieroille ja vain yhtenä arvona.
 
-[^merkitsevyysluvut-4]: Tässä mennään pilkunviilaukseen. Virhemarginaali lasketaan keskivirheellä, joten kaikkien sääntöjen mukaan se sopii vain välimatka- tai suhdeasteikon muuttujille. Kuitenkin voidaan laskea jonkun *eron* virhemarginaali (esimerkiksi kahden ryhmän prosenttiarvojen eron), jolloin voidaan myös käyttää esim. dikotomisia asteikkoja. Muilla datamuunnoilla voidaan myös soveltaa virhemarginaalia - ja oikeastaan kaikkia merkitsevyystestejä - muilla asteikoilla kuin välimatka- ja suhdeasteikoilla.
+[Virhemarginaali voidaan nähdä symmetrisenä luottamusvälinä]{.underline}, eli sen sijaan, että laskettaisiin kaksi arvoa (jotka voivat olla eri etäisyydellä parametrista), lasketaan vain yksi arvo, joka tulkitaan sijaitsevan molemmin puolin parametria. Toisin sanoen: jos parametri olisi vaikka `5 %`, CI = \[3%, 7%\] tarkoittaa samaa kuin että virhemarginaali olisi 2 %.
 
-**Virhemarginaali** on monelle tuttu merkitsevyysmitta. Virhemarginaali onkin hyvin lähellä luottamusväliä - mutta virhemarginaali ilmaistaan useimmiten prosenttieroille ja vain yhtenä arvona. Virhemarginaali voidaan nähdä symmetrisenä luottamusvälinä, eli sen sijaan, että laskettaisiin kaksi arvoa (jotka voivat olla eri etäisyydellä parametrista, jolle lasketaan virhemarginaali), lasketaan vain yksi arvo, joka tulkitaan sijaitsevan molemmin puolin parametria. Toisin sanoen: jos parametri olisi vaikka 5 %, CI = \[3%, 7%\] on sama kuin että virhemarginaali olisi 2 %.
-
-Kuten luottamusväli, virhemarginaali lasketaan tietylle luottamustasolle. Virhemarginaalin laskentakaava on hyvin yksinkertainen:
+[Kuten luottamusväli, virhemarginaali lasketaan tietylle luottamustasolle]{.underline}. Virhemarginaalin laskentakaava on hyvin yksinkertainen:
 
 $$
 \text{MOE}_p = z_p * SE
@@ -124,69 +148,14 @@ $$ {#eq-virhemarginaali}
 
 Toisin sanoen, muunnamme ensin prosenttiluvun z-arvoksi, sitten kerromme tuloksen prosenttiluvun keskivirheellä. Jos kyseessä on keskiarvo, käytämme keskiarvon keskivirhettä; muissa tapauksissa laskemme kyseiselle parametrille (esim. kahden ryhmän prosenttierolle) oman keskivirheen.
 
-Useasti, varsinkin viranomaisraporteissa ja median toteuttamissa gallup-tutkimuksissa, ilmaistaan vain yksi virhemarginaali. Tämä on (mielestäni!) harhaanjohtavaa: todellisuudessa virhemarginaali voidaan laskea kaikille mittareille, joita on mitatu tutkimuksessa. Kun kyseessä on vain yhden virhemarginaalin raportointi, tavan mukaan raportoidaan **suurin** tutkimuksessa esiintyvä virhemarginaali. Prosenttieroille tämä on suhteellisen helppoa määritellä: suurin on aina se virhemarginaali, jonka alla piilevä prosenttiero on lähimpänä 50 prosenttia.
+[Useasti, varsinkin viranomaisraporteissa ja median toteuttamissa gallup-tutkimuksissa, ilmaistaan vain yksi virhemarginaali]{.underline}. Tämä on jokseenkin harhaanjohtavaa. Todellisuudessa virhemarginaali voidaan laskea kaikille mittareille, joita on mitattu tutkimuksessa.
 
-Virhemarginaalia tulkitaan kuitenkin hyvin helposti väärin. Oiva esimerkki on miten virhemarginaali, aivan samoin kuin luottamusväli, ei mittaa yksittäisen mittauksen todennäköisyyttä. Sehän lasketaan melkein tismalleen samalla tavalla - joten sen tulkinta on myös sama! Virhemarginaali edustaa siis pitkän jakson todennäköisyyttä: jos toistaisimme otannan ääretön määrä kertoja, näkisimme todellisen prosenttieron virhemarginaalin sisällä (esimerkiksi) 95 prosenttia kerroista.
+Kun kyseessä on vain yhden virhemarginaalin raportointi, [tavan mukaan raportoidaan suurin tutkimuksessa esiintyvä virhemarginaali]{.underline}. Prosenttieroille tämä on suhteellisen helppoa määritellä. Suurin virhemarginaali on aina se marginaali, joka laskettiin prosenttierolle joka on lähimpänä 50 prosenttia.
+
+[Virhemarginaalia tulkitaan kuitenkin hyvin helposti väärin]{.underline}. Oiva esimerkki on miten virhemarginaali, aivan samoin kuin luottamusväli, ei mittaa yksittäisen mittauksen todennäköisyyttä. Sehän lasketaan melkein tismalleen samalla tavalla - joten sen tulkinta on myös sama!
+
+[Virhemarginaali edustaa siis pitkän jakson todennäköisyyttä]{.underline}. Jos toistaisimme otannan ääretön määrä kertoja, näkisimme todellisen prosenttieron virhemarginaalin sisällä (esimerkiksi) 95 prosenttia kerroista.
 
 Virhemarginaali on vaihtoehto luottamusvälille, mutta luottamusväli on tarkempi mitta jota myös käytetään useammin tieteellisessä tutkimuksessa. Suosittelen siis lukijalle, että välttäisit virhemarginaalin käyttöä sen harhaanjohtavuuden takia.
 
-## P-arvo
-
-**Mittausasteikko:** Riippuu testisuureen asteikosta.
-
-**P-arvo** edustaa yksittäisen mittauksen suhdetta nollahypoteesiin. P-arvolla määritellään todennäköisyys saada mitattu parametri tai isompi, jos nollahypoteesin ennustama parametri on todellinen. Käytännössä nollahypoteesi asetetaan nollaksi, esimerkiksi että kahden ryhmän välillä ei ole eroja parametrilla.
-
-P-arvon laskenta kohdistuu aina johonkin parametriin sekä todennäköisyysjakaumaan, josta parametri uskotaan olevan kotoisin. Voidaan esimerkiksi ajatella, että olemme mitanneet bruttovuosituloja kahden koulutustason välillä (toisen asteen suorittaneet vs. kolmannen asteen suorittaneet). Hypoteesipariksi asetetaan esimerkiksi:
-
-$$
-\begin{split}
-H_0: \text{Koulutustasojen välillä ei ole eroja bruttovuosituloissa.}
-\\
-H_1: \text{Koulutustasojen välillä on ero bruttovuosituloissa.}
-\end{split}
-$$
-
-Voimme vielä erottaa **suunnan** vastahypoteesissa, eli onko yhdellä ryhmällä isompi bruttovuositulo kuin toisella. Teoria, ja aikaisempi tutkimus, ehdottaisi, että korkeammalla koulutusasteen omaavilla on suurempi bruttovuositulo kuin matalemmalla, jolloin vastahypoteesimme olisi:
-
-$$
-H_{1+}: \text{Kolmannen asteen suorittaneilla on suurempi bruttovuositulo kuin toisen asteen suorittaneilla.}
-$$
-
-Nämä voidaan muuntaa suoraan numeroiksi. Kutsutaan bruttovuosituloa muuttujanimellä $y$, johon lisätään nimikkeet "korkea" (kolmannen asteen koulutustason omaavien bruttovuositulot" ja "matala" (vastaava toisen asteen koulutetuille). Tuolloin hypoteesiparista tulee:
-
-$$
-\begin{split}
-H_0: y_{\text{matala}} = y_{\text{korkea}}
-\\
-H_1: y_{\text{matala}} < y_{\text{korkea}}
-\end{split}
-$$
-
-Teemme otannan jossa on, sanotaan, 500 matalan koulutustason omaavia ja 500 korkean koulutustason omaavia henkilöitä. Kysymme heiltä (tai tarkistamme rekisteristä) heidän bruttovuositulonsa. Tämä tutkimus tuottaa meille kaksi muuttujaa: meillä on **riippuvainen muuttuja** joka mittaa bruttovuosituloja euroissa, ja **riippumaton muuttuja**, joka on joko 0 (toisen asteen koulutus) tai 1 (kolmannen asteen koulutus). Kuvassa olemme piirtäneet histogrammit molemmille ryhmille päällekkäin.
-
-```{r echo=FALSE, warning=FALSE, error=FALSE}
-library("ggplot2")
-library(tidyverse)
-toinen <- data.frame(tulot = rnorm(500, mean = 25000, sd = 2500))
-kolmas <- data.frame(tulot = rnorm(500, mean = 28000, sd = 1500))
-
-toinen$Koulutus <- 'Toinen aste'
-kolmas$Koulutus <- 'Kolmas aste'
-
-yhdistetty <- rbind(toinen, kolmas)
-keskiarvot <- yhdistetty %>%
-  group_by(Koulutus) %>%
-  summarise(ka = mean(tulot))
-
-ggplot(
-  yhdistetty,
-  aes(tulot, fill = Koulutus)) +
-  geom_density(alpha = 0.2) + 
-  geom_vline(data = keskiarvot, aes(xintercept = ka, col = Koulutus))
-```
-
-
-
-
-
-
+Virhemarginaalille ei löydy suoraa kaavaa Excelissä. Sen implementointi on kuitenkin yksinkertaista - `NORMITA(x; keskiarvo; keskihajonta) * (``VAR.S(alue) / NELIÖJUURI(datamäärä))` . Laske siis ensin `x`-arvon z-arvo, kerro se sitten keskivirheellä (joka lasketaan jakamalla varianssi datamäärän neliöjuurella).

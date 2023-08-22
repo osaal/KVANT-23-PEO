@@ -62,7 +62,7 @@ Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritell�
 Tietopyyntökomentojen eri määritelmät:
 
 | Komento        | Palautus                                                                                                                                                                                                                 |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------|-----------------------------------------------------------|
 | "osoite"       | Soluviittauksen osoite tekstinä (esim. A2)                                                                                                                                                                               |
 | "sarake"       | Solun sarake numerona (esim. 2 sarakkeelle B)                                                                                                                                                                            |
 | "väri"         | Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.                                                                                                                                                 |
@@ -514,11 +514,15 @@ Funktio hakee lukusarjan mediaanin. Jos mediaaneja on kaksi (eli sarja on parill
 
 `=KESKIARVO(alue)`
 
+`=KESKIARVO.TASATTU(alue; tasaus)`
+
 `=KESKIARVO.JOS(alue; ehto; keskiarvoalue)`
 
 `=KESKIARVO.JOS.JOUKKO(keskiarvoalue; ehtoalue1; ehto1; ehtoalue2; ehto2; ...)`
 
 Yleisen aritmeettisen keskiarvon voit laskea funktiolla `KESKIARVO`.
+
+Jos haluat laskea tasatun keskiarvon, käytä funktiota `KESKIARVO.TASATTU`. Määrittele `alue` jolle haluat laskea keskiarvon, sekä `tasaus`-prosentti desimaalilukuna (esim. 0.05 jos haluat jättää pois 5 prosenttia datan ääripäistä).
 
 Jos haluat ehdollistaa mitkä luvut valitaan keskiarvoon, voit käyttää funktiota `KESKIARVO.JOS`. Lisää ehto avainsanaan `ehto`. Ehto päteää alueeseen joka määriteltiin avainsanalla `alue`; jos haluat laskea keskiarvon jollekin muulle alueelle (esim. toiselle muuttujalle kuin ehtomuuttuja), määrittele se avainsanalla `keskiarvoalue`.
 
@@ -735,7 +739,7 @@ T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa o
 Koska nämä funktiot ovat pitkiä ja hankalia, olen tehnyt valmiit lambda-funktiot Exceliin, joita voitte käyttää. Alla olevassa taulukossa on lambda-funktiot, kopioi ne Nimien hallintaan ja anna niille taulukossa esitetyt nimet.
 
 | Excel-nimi     | Toiminto                                                                                      | Lambda-funktio                                                                                                                                                                           |
-|----------------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------|-------------------|----------------------------------------|
 | RYHMVAR        | Laskee kahden otoksen heteroskedastisen t-suuren ryhmitetyn varianssin ("pooled variance").   | `=LAMBDA(matriisi1;matriisi2; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2))`                                  |
 | T.INDEP.POOLED | Laskee kahden otoksen heteroskedastisen t-suureen. HUOM: Vaatii funktion RYHMVAR toimiakseen. | `=LAMBDA(matriisi1;matriisi2; (KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI((RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi1))+(RYHMVAR(matriisi1;matriisi2)/LASKE(matriisi2))))`  |
 | T.INDEP        | Laskee kahden otoksen homoskedastisen t-suureen.                                              | `=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))` |

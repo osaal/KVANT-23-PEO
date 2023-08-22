@@ -1,0 +1,5 @@
+# LAMBDA-kaavoja {#sec-lambda-kaavoja}
+
+## T-testi {#sec-t-testi-kaavat}
+
+## Luottamusväli {#sec-luottamusväli-kaavat}

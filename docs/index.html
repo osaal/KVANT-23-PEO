@@ -8,7 +8,7 @@
 
 <meta name="author" content="Oliver Saal">
 
-<title>Kvantitatiiviset menetelmät, syksy 2023</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./grafiikka.html" rel="next">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -91,7 +91,10 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-end sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
+      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,28 +110,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Aluksi</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Työkalut</span></a>
+ <span class="menu-text">Ohjeita</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -136,32 +121,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
   </div>
 </li>
       </ul>
@@ -177,26 +144,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
       </ul>
@@ -213,25 +186,84 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Työkalut</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
   </div>
 </li>
       </ul>
@@ -240,6 +272,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viiteluettelo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Versiohistoria</span></a>
   </div>
 </li>
     </ul>
@@ -252,19 +290,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#aluksi" id="toc-aluksi" class="nav-link active" data-scroll-target="#aluksi">Aluksi</a>
+  <li><a href="#sec-aluksi" id="toc-sec-aluksi" class="nav-link active" data-scroll-target="#sec-aluksi">Aluksi</a>
   <ul class="collapse">
-  <li><a href="#tekijänoikeudet" id="toc-tekijänoikeudet" class="nav-link" data-scroll-target="#tekijänoikeudet">Tekijänoikeudet</a></li>
+  <li><a href="#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" id="toc-sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" class="nav-link" data-scroll-target="#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet">Kirjan oikeellisuus ja mahdolliset virheet</a></li>
+  <li><a href="#lähdekoodi" id="toc-lähdekoodi" class="nav-link" data-scroll-target="#lähdekoodi">Lähdekoodi</a></li>
+  <li><a href="#sec-tekijänoikeudet" id="toc-sec-tekijänoikeudet" class="nav-link" data-scroll-target="#sec-tekijänoikeudet">Tekijänoikeudet</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kvantitatiiviset menetelmät, syksy 2023</h1>
+<h1 class="title">Kvantitatiiviset menetelmät -kurssin verkkokirja</h1>
 </div>
 
 
@@ -281,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Julkaistu</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">18. elokuuta 2023</p>
+      <p class="date">22. elokuuta 2023</p>
     </div>
   </div>
   
@@ -291,13 +331,25 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="aluksi" class="level1 unnumbered">
+<section id="sec-aluksi" class="level1 unnumbered">
 <h1 class="unnumbered">Aluksi</h1>
 <p>Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille <em>Kvantitatiiviset menetelmät</em>.</p>
 <p>Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).</p>
 <p>Mukavia tilastollisia työhetkiä!</p>
-<section id="tekijänoikeudet" class="level2">
-<h2 class="anchored" data-anchor-id="tekijänoikeudet">Tekijänoikeudet</h2>
+<p><strong>Kirjan versio</strong>: 0.9</p>
+<p><strong>Päivityshistoria</strong> löytyy kirjan viimeisestä luvusta.</p>
+<section id="sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kirjan-oikeellisuus-ja-mahdolliset-virheet">Kirjan oikeellisuus ja mahdolliset virheet</h2>
+<p>Verkkokirja on vielä kirjoitushetkellä työn alla. Siinä voi esiintyä virheitä ja muita ongelmia - vaikka toivon mukaan näin ei olisi.</p>
+<p>Jos huomaat virheen tai haluat kommentoida kirjaa, voit tehdä sen anonyymisti <a href="https://forms.gle/mVGjJKzTMVhhXoxX8">tässä kyselylomakkeessa</a>. Palautelomake ei tallenna mitään henkilötietoja, eikä siihen tule lisätä muitakaan tietoturvan vuoksi.</p>
+<p>Voit myös ehdottaa muutoksia tai raportoida ongelmia GitHubissa Issuena. Linkki löytyy jokaisen sivun oikealta puolelta, sisällysluettelon alla.</p>
+</section>
+<section id="lähdekoodi" class="level2">
+<h2 class="anchored" data-anchor-id="lähdekoodi">Lähdekoodi</h2>
+<p>Verkkokirjan lähdekoodi on saatavilla <a href="https://github.com/osaal/KVANT-23-PEO">GitHubissa</a>. Jos haluat ehdottaa muutoksia kirjaan, voit tehdä Pull Requestin GitHubissa tai avata Issuen.</p>
+</section>
+<section id="sec-tekijänoikeudet" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tekijänoikeudet">Tekijänoikeudet</h2>
 <p>Tämä verkkokirja käyttää <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen</a> (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.</p>
 
 
@@ -542,8 +594,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./grafiikka.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

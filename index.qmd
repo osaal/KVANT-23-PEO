@@ -1,4 +1,4 @@
-# Aluksi {.unnumbered}
+# Aluksi {#sec-aluksi .unnumbered}
 
 Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille *Kvantitatiiviset menetelmät*.
 
@@ -6,6 +6,22 @@ Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkist
 
 Mukavia tilastollisia työhetkiä!
 
-## Tekijänoikeudet
+**Kirjan versio**: {{< var version >}}
+
+**Päivityshistoria** löytyy kirjan viimeisestä luvusta.
+
+## Kirjan oikeellisuus ja mahdolliset virheet {#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet}
+
+Verkkokirja on vielä kirjoitushetkellä työn alla. Siinä voi esiintyä virheitä ja muita ongelmia - vaikka toivon mukaan näin ei olisi.
+
+Jos huomaat virheen tai haluat kommentoida kirjaa, voit tehdä sen anonyymisti [tässä kyselylomakkeessa](https://forms.gle/mVGjJKzTMVhhXoxX8). Palautelomake ei tallenna mitään henkilötietoja, eikä siihen tule lisätä muitakaan tietoturvan vuoksi.
+
+Voit myös ehdottaa muutoksia tai raportoida ongelmia GitHubissa Issuena. Linkki löytyy jokaisen sivun oikealta puolelta, sisällysluettelon alla.
+
+## Lähdekoodi
+
+Verkkokirjan lähdekoodi on saatavilla [GitHubissa](https://github.com/osaal/KVANT-23-PEO). Jos haluat ehdottaa muutoksia kirjaan, voit tehdä Pull Requestin GitHubissa tai avata Issuen.
+
+## Tekijänoikeudet {#sec-tekijänoikeudet}
 
 Tämä verkkokirja käyttää [Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen](https://creativecommons.org/licenses/by-nc/4.0/deed.fi) (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.

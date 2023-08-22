@@ -1,18 +1,121 @@
 # Sijaintiluvut
 
+Tässä luvussa käydään läpi sijaintilukujen määritelmät, käyttö ja toteuttaminen Excelissä.
+
+**Sijaintiluku** on yksittäinen luku, joka kertoo jotain muuttujan jakauman **keskeisyystendenssistä** (engl. *central tendency*). Toisin sanoen, ne kertovat mihin kohtaan jakauma sijoittuu.
+
+Sijaintilukuja, joita tässä kirjassa käydään läpi ovat: moodi, mediaani, fraktiilit ja aritmeettinen keskiarvo.
+
 ## Moodi
 
 **Mittausasteikot**: Kaikki
 
 **Moodi** on jakauman tyypillisin arvo. Moodin voi saada laskemalla jokaisen arvon esiintymisen, jolloin eniten esiintyvä arvo on jakauman moodi.
 
-Jakauma voi olla **unimodaalinen** (yksi moodi), **bimodaalinen** (kaksi moodia) tai **multimodaalinen** (kolme moodia). Alla olevat kuvat näyttävät nämä modaalisuudet.
+Jakauma voi olla **unimodaalinen** (yksi moodi), **bimodaalinen** (kaksi moodia) tai **multimodaalinen** (kolme tai useampi moodia). Katso kuvalliset esimerkit alla.
 
-Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja. Positiivisen ja negatiivisen vinouman normaalijakaumissa moodi pysyy samana, mutta keskiarvo ja mediaani muuttuvat. Kurtoosi ei vaikuta normaalijakauman moodiin.
+[Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja]{.underline}. Positiivisen ja negatiivisen vinouman normaalijakaumissa moodi pysyy samana, mutta keskiarvo ja mediaani muuttuvat. Kurtoosi ei vaikuta normaalijakauman moodiin.
 
 Uniformijakaumassa kaikki datapisteet ovat jakauman moodeja, koska jokainen esiintyy yhtä useasti.
 
 Moodi kirjoitetaan useimmiten merkeillä $\text{Mo}$.
+
+**Funktiot Excelissä**:
+
+-   `MOODI.YKSI(alue)`
+
+-   `MOODI.USEA(alue)`
+
+Lue lisää alaluvussa @sec-moodi.
+
+::: {#fig-moodi-esim .panel-tabset}
+### Unimodaalinen
+
+```{r}
+#| label: fig-moodi-esim-01
+#| fig-cap: "Unimodaalinen jakauma"
+#| echo: false
+#| cache: false
+
+set.seed(12345)
+data <- rnorm(10000)
+hist(
+  data,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)"
+  )
+
+```
+
+### Bimodaalinen
+
+```{r}
+#| label: fig-moodi-esim-02
+#| fig-cap: "Bimodaalinen jakauma"
+#| echo: false
+#| cache: true
+
+set.seed(12345)
+nn <- 1e4
+betas <- rbeta(nn, 2, 2)
+sims <- c(
+  betas[1:(nn/2)] * 2 + 1,
+  betas[(nn/2+1):nn] * 2 + 3
+)
+hist(
+  sims,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)")
+```
+
+### Multimodaalinen
+
+```{r}
+#| label: fig-moodi-esim-03
+#| fig-cap: "Multimodaalinen jakauma"
+#| echo: false
+#| cache: true
+
+set.seed(12345)
+nn <- 5e4
+betas <- rbeta(nn, 2, 2)
+sims <- c(
+  betas[1:(nn/3)] * 2 - 1,
+  betas[(nn/3+1):((nn/3)*2)] * 2 + 1,
+  betas[((nn/3*2)+1):nn] * 2 + 3
+)
+hist(
+  sims,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)")
+```
+
+### Uniformijakauma
+
+```{r}
+#| label: fig-moodi-esim-04
+#| fig-cap: "Uniformijakauma, jossa moodia ei teoriassa ole. Käytännössä tässä kuitenkin on moodi, koska jakauma on empiirinen."
+#| echo: false
+#| cache: true
+
+set.seed(12345)
+data <- runif(
+  100000,
+  min = -3,
+  max = 3
+)
+hist(
+  data,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)"
+)
+
+```
+:::
 
 ## Mediaani
 
@@ -20,11 +123,45 @@ Moodi kirjoitetaan useimmiten merkeillä $\text{Mo}$.
 
 **Mediaani** on jakauman keskipistearvo. Mediaanin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla janan kahteen tasakokoiseen osaan. Jos jakaumaan kuuluu pariton määrä arvoja, mediaani on janan keskipiste. Jos jakaumaan kuuluu parillinen määrä arvoja, mediaani on kahden keskeisimmän arvon keskiarvo, $\frac{a+b}{2}$.
 
-Jakaumassa voi aina olla vain yksi mediaani.
+[Jakaumassa voi aina olla vain yksi mediaani]{.underline}.
 
-Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja. Mediaaniin vaikuttaa vinouma, joskin ei yhtä paljon kuin keskiarvoon. Kurtoosi ei vaikuta normaalijakauman mediaaniin.
+[Normaalijakaumassa moodi, keskiarvo ja mediaani ovat kaikki samoja]{.underline}. Mediaaniin vaikuttaa vinouma, joskin ei yhtä paljon kuin keskiarvoon. Kurtoosi ei vaikuta normaalijakauman mediaaniin.
 
 Mediaani kirjoitetaan useimmiten merkeillä $\text{Md}$ tai $\text{M}$.
+
+**Funktiot Excelissä**:
+
+-   `MEDIAANI(alue)`
+
+Lue lisää alaluvussa @sec-mediaani.
+
+```{r}
+#| label: fig-mediaani-esim
+#| fig-cap: "Mediaani empiirisessä normaalijakaumassa"
+#| echo: false
+#| cache: false
+
+set.seed(12345)
+data <- rnorm(10000)
+med <- median(data)
+hist(
+  data,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)"
+  )
+abline(
+  v = med,
+  col = "orange",
+  lwd = 1.5,
+  lty = 3
+)
+text(
+  x = med + 1.5,
+  y = 1800,
+  labels = paste0("Mediaani = ", round(med, digits = 2))
+)
+```
 
 ## Fraktiilit
 
@@ -32,17 +169,60 @@ Mediaani kirjoitetaan useimmiten merkeillä $\text{Md}$ tai $\text{M}$.
 
 **Fraktiilit** (sanasta *fraction*; vaihtoehtoisesti kvantiilit, sanasta *quantity*) ovat yleistyksiä mediaanista. Fraktiileja löytyy useampia, joista yleisimmät ovat **kvartiilit** (neljäsosat), **kvintiilit** (viidesosat), **desiilit** (kymmenesosat) ja **persentiilit** (sadasosat).
 
-Fraktiilin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla jana tiettyyn määrään samankokoisiin osiin. Fraktiilin nimi kertoo, kuinka monta osaa: kvartiilit edustavat neljää osaa, kvintiilit viittä osaa, desiilit kymmentä osaa ja persintiilit sataa osaa.
+Fraktiilin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla jana tiettyyn määrään samankokoisiin osiin.
 
-Fraktiilit ilmaistaan numerosarjana jossa on $k-1$ numeroa. Kvartiileille ilmaistaan siis kolme arvoa (ensimmäinen, toinen ja kolmas kvartiili), desiileille yhdeksän arvoa, ja persentiileille 99 arvoa. Käytännössä yleensä ilmaistaan vain ne, joista ollaan kiinnostuneita, varsinkin persentiilien kohdalla.
+[Fraktiilin nimi kertoo, kuinka monta osaa]{.underline}: kvartiilit edustavat neljää osaa, kvintiilit viittä osaa, desiilit kymmentä osaa ja persintiilit sataa osaa.
 
-Kvartiileille toinen kvartiili on sama kuin mediaani. Jos ensimmäinen kvartiili on pienimmät 25 % jakaumasta, ja toinen kvartiili on seuraavat 25 %, niin yhteensä ne edustavat 50 % jakaumasta, samoin kuin mediaani.
+[Fraktiilit ilmaistaan numerosarjana]{.underline} jossa on $k-1$ numeroa. Kvartiileille ilmaistaan siis kolme arvoa (ensimmäinen, toinen ja kolmas kvartiili), desiileille yhdeksän arvoa, ja persentiileille 99 arvoa. Käytännössä yleensä ilmaistaan vain ne, joista ollaan kiinnostuneita, varsinkin persentiilien kohdalla.
 
-Fraktiili voi olla *inklusiivisia* tai *ekslusiivisia*. Inklusiivinen fraktiili sisältää raja-arvon, ekslusiivinen fraktiili ei sisällä raja-arvoa. Joka tapauksessa fraktiilin arvo edustaa arvoa, jonka *alle* jää X määrä jakaumasta.
+[Kvartiileille toinen kvartiili on sama kuin mediaani]{.underline}. Jos ensimmäinen kvartiili on pienimmät 25 % jakaumasta, ja toinen kvartiili on seuraavat 25 %, niin yhteensä ne edustavat 50 % jakaumasta, samoin kuin mediaani.
 
-Esimerkkinä septiilit, eli seitsemännesosat. Ensimmäinen septiili (inklusiivinen) edustaa prosenttiosuuksia 0-7 %, toinen septiili prosenttiosuuksia 8-14 %, jne., ja kuudes septiili osuuksia 94-100 %. Tällöin toisen septiilin alle jää 14 % kaikesta datasta ja ylle jää $100-14 = 86\%$. Yleistäen voi siis sanoa, että N:n septiilin alle jää aina $(7*N)\%$ ja ylle jää $100-(7*N)\%$.
+[Fraktiilit voivat olla *inklusiivisia* tai *ekslusiivisia*]{.underline}. Inklusiivinen fraktiili sisältää raja-arvon, ekslusiivinen fraktiili ei sisällä raja-arvoa.
+
+[Esimerkkinä septiilit, eli seitsemännesosat]{.underline}. Ensimmäinen septiili (inklusiivinen) edustaa prosenttiosuuksia 0-7 %, toinen septiili prosenttiosuuksia 8-14 %, jne., ja kuudes septiili osuuksia 94-100 %. Tällöin toisen septiilin alle jää 14 % kaikesta datasta ja ylle jää $100-14 = 86\%$. Yleistäen voi siis sanoa, että N:n septiilin alle jää aina $(7*N)\%$ ja ylle jää $100-(7*N)\%$.
 
 Kvartiilit kirjoitetaan useimmiten muotoon $Q_n$, jossa $n$ on kvartiilin järjestysnumero. Ensimmäinen kvartiili on $Q_1$, toinen kvartiili (mediaani) on $Q_2$, ja kolmas kvartiili on $Q_3$. Muille fraktiileille ei löydy yleistä kirjoitusmuotoa.
+
+**Funktiot Excelissä:**
+
+-   `PROSENTTIPISTE.SIS(alue; k) - PROSENTTIPISTE.ULK(alue; k)`
+
+    -   Valitse persentiili `k` desimaalina, sekä haluatko inklusiivisen (`SIS`) vai ekslusiivisen (`ULK`)
+
+-   `NELJÄNNES.SIS(alue; neljännes) - NELJÄNNES.ULK(alue; neljännes)`
+
+    -   Valitse, kuinka mones `neljännes`: Pienin arvo `0`, ensimmäinen neljännes `1`, mediaani `2`, kolmas neljännes `3`, suurin arvo `4`.
+
+Lue lisää alaluvussa @sec-pienin-suurin-ja-raja-arvot.
+
+```{r}
+#| label: fig-fraktiilit-esim
+#| fig-cap: "Laatikkokaavio, josta näkyy muuttujan ylä- ja alakvartiilit."
+#| echo: false
+#| cache: true
+
+set.seed(12345)
+data <- rnorm(10000)
+
+p <- boxplot(
+  data,
+  col = "orange"
+)
+
+text(
+  x = 1.2,
+  y = p$stats[[2]] - 0.3,
+  labels = paste0("Alakvartiili = ", round(p$stats[[2]], digits = 2)),
+  adj = 0
+)
+text(
+  x = 1.2,
+  y = p$stats[[4]] + 0.3,
+  labels = paste0("Yläkvartiili = ", round(p$stats[[4]], digits = 2)),
+  adj = 0
+)
+
+```
 
 ## Keskiarvo
 
@@ -54,22 +234,108 @@ Kvartiilit kirjoitetaan useimmiten muotoon $Q_n$, jossa $n$ on kvartiilin järje
 
 $$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_k}{N} = \frac{1}{N}(\sum_{i = 1}^{k}x_i)$$
 
-Keskiarvo ei ole robusti sijaintimitta. Se vaikuttuu suuresti ääripääarvoista. Normaalijakaumassa mediaani, keskiarvo ja moodi ovat kaikki samoja. Vinouman myötä keskiarvo siirtyy vinouman suuntaan (oikealle positiivisessa ja vasemmalle negatiivisessa vinoumassa). Kurtoosi ei vaikuta keskiarvoon.
+[Keskiarvo ei ole robusti sijaintimitta]{.underline}. Se vaikuttuu suuresti ääripääarvoista.
 
-Keskiarvo on kuitenkin erittäin oleellinen useimmissa tilastollisissa malleissa. Keskiarvoa käytetään niin sanottuna **nollamallina**, eli datajakaumaa "huonoiten" kuvaavana mallina. Useimmiten hypoteeseilla testataan siksi, eroaako jokin malli keskiarvon selitekyvystä. Jos ei, malli ei ole keskiarvoa parempi (eli on huono).
+[Normaalijakaumassa mediaani, keskiarvo ja moodi ovat kaikki samoja]{.underline}. Vinouman myötä keskiarvo siirtyy vinouman suuntaan (oikealle positiivisessa ja vasemmalle negatiivisessa vinoumassa). Kurtoosi ei vaikuta keskiarvoon.
 
-Vakaampana keskiarvomittarina voidaan käyttää **rajattua keskiarvoa** (engl. *trimmed mean*). Tällöin poistetaan ensin tietty prosenttiosuus jakauman ääripäistä, ja lasketaan sitten keskiarvo jäljelle jäävälle datalle. Yleinen prosenttiraja on 95 %, eli poistetaan 5 % (kaksi ja puoli prosenttia molemmista päistä) ja lasketaan keskiarvo jäljelle jäävälle osuudelle. Jos rajattu keskiarvo on hyvin samanlainen kuin keskiarvo, ääripääarvot eivät vaikuta suuresti keskiarvoon.[^sijaintiluvut-2]
+[Keskiarvo on kuitenkin erittäin oleellinen useimmissa tilastollisissa malleissa]{.underline}. Keskiarvoa käytetään niin sanottuna **nollamallina**, eli datajakaumaa "huonoiten" kuvaavana mallina. Useimmiten hypoteeseilla testataan siksi, eroaako jokin malli keskiarvon selitekyvystä. Jos ei, malli ei ole keskiarvoa parempi (eli on huono).
+
+Vakaampana keskiarvomittarina voidaan käyttää **tasattua keskiarvoa** (engl. *trimmed mean*). Tällöin poistetaan ensin tietty prosenttiosuus jakauman ääripäistä, ja lasketaan sitten keskiarvo jäljelle jäävälle datalle. Yleinen prosenttiraja on 95 %, eli poistetaan 5 % (kaksi ja puoli prosenttia molemmista päistä) ja lasketaan keskiarvo jäljelle jäävälle osuudelle. Jos tasattu keskiarvo on hyvin samanlainen kuin keskiarvo, ääripääarvot eivät vaikuta suuresti keskiarvoon.[^sijaintiluvut-2]
 
 [^sijaintiluvut-2]: Tämä pätee vain keskiarvolle, ja vain yksinmuuttujakontekstissa. Monimuuttujakontekstissa ääripääarvot voivat olla ongelmallisia vaikka eivät vaikuttaisi yksittäisen muuttujan keskiarvoon. Rajatun ja tavallisen keskiarvon samankokoisuus ei siis takaa luotettavia analyyseja itsessään!
 
+**Funktiot Excelissä**:
+
+-   `KESKIARVO(alue)`
+
+-   `KESKIARVO.TASATTU(alue; rajaus)`
+
+Lue lisää alaluvussa @sec-keskiarvo.
+
+::: panel-tabset
+### Keskiarvo
+
+```{r}
+#| label: fig-keskiarvo-esim-01
+#| fig-cap: "Keskiarvo empiirisessä normaalijakaumassa"
+#| echo: false
+#| cache: false
+
+set.seed(12345)
+data <- rnorm(10000)
+m <- mean(data)
+hist(
+  data,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)"
+  )
+abline(
+  v = m,
+  col = "orange",
+  lwd = 1.5,
+  lty = 3
+)
+text(
+  x = m + 1.5,
+  y = 1800,
+  labels = paste0("Keskiarvo = ", round(m, digits = 2))
+)
+```
+
+### Ääripääarvojen vaikutus
+
+```{r}
+#| label: fig-keskiarvo-esim-02
+#| fig-cap: "Keskiarvo ja 10 % tasattu keskiarvo tilanteessa, jossa on ääripääpisteitä"
+#| echo: false
+#| cache: false
+
+set.seed(12345)
+data <- c(rnorm(10000), rep.int(5, 1000))
+m <- mean(data)
+m.trimmed <- mean(data, trim = 0.1)
+hist(
+  data,
+  main = NULL,
+  xlab = "Arvo",
+  ylab = "Taajuus (n)"
+  )
+abline(
+  v = m,
+  col = "orange",
+  lwd = 1.5,
+  lty = 3
+)
+abline(
+  v = m.trimmed,
+  col = "red",
+  lwd = 1.5,
+  lty = 3
+)
+text(
+  x = m + 1.5,
+  y = 1800,
+  labels = paste0("Keskiarvo = ", round(m, digits = 2))
+)
+text(
+  x = m - 1.5,
+  y = 1800,
+  labels = paste0("10 % tasattu KA = ", round(m.trimmed, digits = 2)),
+  adj = 1
+)
+```
+:::
+
 ## Moodin, mediaanin ja keskiarvon yhteys
 
-Koska moodi, mediaani ja keskiarvo kuvaavat kaikki jakauman sijaintia, niillä on yhteys toisiinsa. Täydellisessä normaalijakaumassa moodi, mediaani ja keskiarvo ovat kaikki samat (ks. @fig-normaalijakauma).
+Koska moodi, mediaani ja keskiarvo kuvaavat kaikki jakauman sijaintia, niillä on yhteys toisiinsa. Täydellisessä normaalijakaumassa moodi, mediaani ja keskiarvo ovat kaikki samoja (ks. @fig-normaalijakauma).
 
 ```{r}
 #| label: fig-normaalijakauma
 #| fig-cap: "Normaalijakauma. Keskiarvo, mediaani ja moodi ovat kaikki samoja, eli nolla."
 #| echo: false
+#| cache: true
 library("ggplot2")
 
 ggplot(
@@ -93,7 +359,7 @@ ggplot(
   )
 ```
 
-Tämä tasapaino pätee kuitenkin vain **täydelliselle** normaalijakaumalle. Kun kyseessä on otanta, muuttujan jakauma voi muistuttaa (lähestyä) normaalijakaumaa, mutta ei täydellisesti. Pieniä eroja siis on, vaikka muuttuja muuten olisi otanta populaatiosta, jossa muuttujan todellinen jakauma on normaalijakauma.
+Tämä tasapaino pätee kuitenkin vain **täydelliselle** normaalijakaumalle. Kun kyseessä on otanta, muuttujan jakauma voi muistuttaa (**lähestyä**) normaalijakaumaa, mutta ei täydellisesti. Pieniä eroja siis on, vaikka muuttuja muuten olisi otanta populaatiosta, jossa muuttujan todellinen jakauma on normaalijakauma.
 
 Jos jakauma nojaa johonkin suuntaan (eli jakaumalla on enemmän tai vähemmän vinoumaa), sijaintiluvut siirtyvät, mutta eri tahtiin (ks. @fig-gamma-ja-beta).
 
@@ -105,6 +371,7 @@ Jos jakauma nojaa johonkin suuntaan (eli jakaumalla on enemmän tai vähemmän v
 #| - "Betajakauma, alfa = 5 ja beta = 2"
 #| echo: false
 #| layout-ncol: 2
+#| cache: true
 
 library("ggplot2")
 alpha1 <- beta2 <- 2
@@ -194,8 +461,8 @@ Negatiivisessa vinoumassa keskiarvo siirtyy eniten oikealle moodista nähtynä, 
 
 Kokeille alla olevassa interaktiivisessa applikaatiossa muuttaa jakauman muotoa, niin näet miten sijaintiluvut muuttuvat!
 
-::: {.border}
-``` {=html}
+::: border
+```{=html}
 <iframe id="esimerkki" src="https://oliversaal.shinyapps.io/sijantilukujen-suhteet/" style="border: none; width: 100%; height: 500px" frameborder="0"> </iframe>
 ```
 :::

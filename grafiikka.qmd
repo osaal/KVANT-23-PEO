@@ -1,8 +1,12 @@
 # Visualisoinnin alkeet {#sec-visualisoinnin-alkeet}
 
-**Visualisoinnilla** tarkoitetaan tilastodatan esittämistä visuaalisin menetelmin, eli kuvioilla, käppyröillä ja käyrillä. Visualisoinnin päätehtävänä on tehdä monimutkaisesta tiedosta helposti kulutettavaa, ymmärrettävää ja jäsennettävää. Vanha sanonta pitää paikkaansa: kuva kertoo enemmän kuin tuhat sanaa - mutta lisäisin siihen, "jos kuva on selkeä, ytimekäs ja saavutettava".
+**Visualisoinnilla** tarkoitetaan tilastodatan esittämistä visuaalisin menetelmin, eli kuvioilla, käppyröillä ja käyrillä. Visualisoinnin päätehtävänä on tehdä monimutkaisesta tiedosta helposti kulutettavaa, ymmärrettävää ja jäsennettävää. Vanha sanonta pitää paikkaansa: kuva kertoo enemmän kuin tuhat sanaa - mutta lisäisin siihen, "*jos* kuva on selkeä, ytimekäs ja saavutettava".
 
-Kuvan tekeminen on suhteellisen yksinkertaista. *Hyvän* kuvan tekeminen vaatii harjoittelua ja opiskelua! Sinun ei tarvitse olla viestinnän erityisosaaja tai omata mitään erityistä "visuaalista pelisilmää", mutta ohjeita kannattaa seurata ja kolleegoilta kannattaa pyytää palautetta. Hyödynnä myös työssäsi viestinnän ammattilaisten osaamista ja ohjeita - heillä on tarvittava erityisosaaminen!
+Kuvan tekeminen on suhteellisen yksinkertaista. *Hyvän* kuvan tekeminen vaatii harjoittelua ja opiskelua! Sinun ei tarvitse olla viestinnän erityisosaaja tai omata mitään erityistä "visuaalista pelisilmää", mutta ohjeita kannattaa seurata ja kollegoilta kannattaa pyytää palautetta. Hyödynnä myös työssäsi viestinnän ammattilaisten osaamista ja ohjeita - heillä on tarvittava erityisosaaminen!
+
+Jos tiedon visualisointi kiinnostaa enemmän, suosittelen tekemään ilmaisen verkkokoulutuksen [Tiedon visualisointi](https://www.eoppiva.fi/koulutukset/tiedon-visualisointi) valtionhallinnon eOppiva-ympäristössä (vaatii Virtu-kirjautumisen).
+
+Jos sinua kiinnostaa grafiikan teko Excelissä, lue @sec-grafiikka-excelissä.
 
 ## Graafinen selkeys {#sec-graafinen-selkeys}
 
@@ -38,23 +42,23 @@ Jotta kuva olisi selkeä, sen tulee olla ytimekäs. Kirjoittamisessa tärkein ti
 
 Tätä voi edesauttaa esimerkiksi näillä vinkeillä:
 
--   [Käytä kirkkaita värejä vain tärkeimmälle tiedolle]{.underline}. Jos esimerkiksi visualisoit korrelaation pistekuvioilla, käytä kirkasta väriä korrelaatioviivalle, ja jätä datapisteet "taustalle" haaleammalla värillä.
+-   [Käytä kirkkaita värejä vain tärkeimmälle tiedolle]{.underline}. Jos esimerkiksi visualisoit korrelaation pistekuvioilla, käytä kirkasta väriä korrelaatioviivalle, ja jätä datapisteet "taustalle" haaleammalla värillä. Katso esimerkiksi @fig-esim-pistekaavio.
 
--   [Poista kaikki turha kuvasta]{.underline}. Jos otsikoit kuvasi tekstinkäsittelyohjelmistossa (Wordissa), jätä otsikko pois itse kuvasta. Jos esität kuvion arvot arvopisteinä itse kuvassa, jätä pois mahdolliset taulukot (ja toisinpäin).
+-   [Poista kaikki turha kuvasta]{.underline}. Jos otsikoit kuvasi tekstinkäsittelyohjelmassa (Wordissa), jätä otsikko pois itse kuvasta. Jos esität kuvion arvot arvo-otsikkoina itse kuvassa, jätä pois mahdolliset taulukot kuvan sisällä (ja toisinpäin).
 
 ## Graafinen saavutettavuus {#sec-graafinen-saavutettavuus}
 
-[Jos kuva on selkeä ja ytimekäs, sen on mahdollista olla saavutettava]{.underline} - mutta saavutettavuus ei ole taattua! Saavutettavuudella tarkoitetaan usein tietyille ryhmille luettavaa, varsinkin näkö- ja kuuloaistin heikentyneelle omaaville henkilöille. Kuitenkin saavutettava kuva edesauttaa **kaikkia** lukijoita: selkeys ja ytimekkyys nousee, kun kuvasta tehdään saavutettava.
+[Jos kuva on selkeä ja ytimekäs, sen on mahdollista olla saavutettava]{.underline} - mutta saavutettavuus ei ole taattua! Saavutettavuudella tarkoitetaan usein että kuva on luettavissa tietyille ryhmille, esim. näkö- ja kuuloaistin heikentyneelle omaaville henkilöille. Kuitenkin saavutettava kuva edesauttaa **kaikkia** lukijoita: selkeys ja ytimekkyys nousee, kun kuvasta tehdään saavutettava.
 
-Mitä sitten saavutettavuus kuvassa voi olla? Tässä joitain esimerkkejä, joita suosittelen hyödyntämään:
+Tässä joitain esimerkkejä saavutettavuuden parantamiseksi:
 
--   [Jokaiselle kuvalle tulee olla koneluettava vaihtoehtokuvaus]{.underline}, jotta näytönlukusovellukset osaavat kuvailla kuvan käyttäjälle. Kuvailun tulee itsessään olla ytimekäs ja selkeä, ja keskittyä samoihin asioihin kuin mitä kuvan visuaalinen lukija huomaisi. Vaihtoehtokuvauksen kirjoittaminen ei tarvitse olla mikään erityistaakka, vaan se edesauttaa myös sinua kuvan selkeyttämisessä - jos kuva on tarpeeksi selkeä ja ytimekäs, vaihtoehtokuvauksen kirjoittaminen on erittäin helppoa; jos kirjoittaminen tuntuu hankalalta, kuvasi ei luultavasti ole tarpeeksi selkeä ja ytimekäs.
+-   [Jokaiselle kuvalle tulee olla koneluettava vaihtoehtokuvaus]{.underline}, jotta näytönlukusovellukset osaavat kuvailla kuvan käyttäjälle. Kuvailun tulee itsessään olla ytimekäs ja selkeä, ja keskittyä samoihin asioihin kuin mitä kuvan visuaalinen lukija huomaisi. Vaihtoehtokuvauksen kirjoittaminen ei tarvitse olla mikään erityistaakka, vaan se edesauttaa myös sinua kuvan selkeyttämisessä - jos kuva on tarpeeksi selkeä ja ytimekäs, vaihtoehtokuvauksen kirjoittaminen on erittäin helppoa; jos kirjoittaminen tuntuu hankalalta, kuvasi ei luultavasti ole tarpeeksi selkeä ja ytimekäs. Wordissa ja Excelissä vaihtoehtokuvauksen voi yleensä lisätä toiminnolla `Vaihtoehtokuvaus` (engl. *Alt text*).
 
 -   [Käytä kaksinkertaista visualisointia]{.underline}: jos käytät värejä erotellaksesi esimerkiksi ryhmiä, käytä myös kuvioita. Jos kuvassasi on punainen, oranssi ja musta palkki, niiden erottelu on helpompaa jos jokaiselle lisää oman kuvion (esim. liitukuvio, pistekuvio ja tasainen väritys). Jos sinulla ei riitä kuviot kaikkiin ryhmiin, sinulla luultavasti on liikaa materiaalia kuvassa joka tapauksessa!
 
 -   [Käytä saavutettavia värejä]{.underline}. Moni meistä on nähnyt puna-vihreä-kuvioita, ja moni värisokea meistä on nähnyt vain ruskeaa tai harmaata niissä kuvioissa. David Nichols [-@nichols] on kirjoittanut hyödyllisen blogitekstin, jossa käydään läpi eri värisokeuksien näkemiä versioita yleisistä väreistä. Sivulla on myös väripalettityökalu, jolla voit kokeilla, miltä vapaavalintainen väri näyttäisi eri värisokeuksille. Suomeksi mm. Anniina Nieminen [-@nieminen2020] on kirjoittanut opinnäytetyön, josta löytyy myös ohjeita puna-vihersokeuden huomioimiseksi visualisoinnissa.
 
--   [Käytä tarpeeksi suurta kontrastia]{.underline}. Myös kontrasti, eli eri värien välinnäinen koettu "vahvuusero", vaikuttaa suuresti luettavuuteen. Liian samankaltaiset värit eivät erotu hyvin edes perusnäköiselle henkilölle, joten erota värit selkeästi toisistaan. Älä siis käytä vaaleanpunaista ja haaleaa punaista vierekkäin! Toisaalta, liian *iso* kontrasti ärsyttää silmää. Niemisen opinnäytetyössä (ks. yllä) on hyviä esimerkkejä ongelmallisista käyristä ja niiden vaihtoehdoista.
+-   [Käytä tarpeeksi suurta kontrastia]{.underline}. Myös kontrasti, eli eri värien välinnäinen koettu vahvuusero, vaikuttaa suuresti luettavuuteen. Liian samankaltaiset värit eivät erotu hyvin edes perusnäköiselle henkilölle, joten erota värit selkeästi toisistaan. Älä siis käytä vaaleanpunaista ja haaleaa punaista vierekkäin! Toisaalta, liian *iso* kontrasti ärsyttää silmää. Niemisen opinnäytetyössä (ks. yllä) on hyviä esimerkkejä ongelmallisista käyristä ja niiden vaihtoehdoista.
 
 ## Kaavioita {#sec-kaavioita-teoria}
 
@@ -68,38 +72,40 @@ Luvussa esitetään pylväs-, viiva-, ympyrä-, piste-, kupla- ja laatikkokaavio
 
 **Pylväskaavio** on ehkä yleisin käytetty visualisointimuoto. Nimi tulee kaavion pylväistä, joilla esitetään jonkun muuttujan kategorioiden esiintymistä (taajuutta). Pylväskaaviota voi myös kutsua **histogrammiksi**.
 
-[Pylväskaaviota voi käyttää kaikilla mittausasteikoilla]{.underline}, mutta parhaiten se sopii luokittelu- ja järjestysasteikolle. Jos sinulla on useita kategorioita (esim. yli 10), kaavion lukeminen hankaloituu. Tällöin on parempi jakaa kaavio useampaan, yhdistää kategorioita, tai vaihtaa toiseen kaaviotyyppiin.
+[Pylväskaaviota voi käyttää kaikilla mittausasteikoilla]{.underline}, mutta parhaiten se sopii luokittelu- ja järjestysasteikolle. Jos sinulla on useita kategorioita (esim. yli 10), kaavion lukeminen hankaloituu. Tällöin on parempi jakaa kaavio useampaan kaavioon, yhdistää kategorioita, tai vaihtaa toiseen kaaviotyyppiin.
 
 Pylväskaaviota käytetään [yhden muuttujan tai muuttujaryhmän]{.underline} visualisointiin. Voit myös asettaa useampia muuttujia vierekkäin ja erotella ne väreillä/kuvioilla, mutta kaaviosta tulee nopeasti vaikeasti luettava.
 
-[Vaaka-akselilla]{.underline} on muuttujan kategoriat, yleensä suuruusjärjestyksessä tai muussa loogisessa järjestyksessä. Esimerkiksi Likert-asteikon muuttujalla loogisinta on aloittaa vasemmalla eniten negatiivisesta mielipiteestä, ja siirtyä oikealle kohti eniten positiivista mielipidettä, neutraali mielipide keskellä.
+[Vaaka-akselilla]{.underline} on muuttujan kategoriat, yleensä suuruusjärjestyksessä tai muussa loogisessa järjestyksessä. Esimerkiksi Likert-asteikon muuttujalla loogisinta[^grafiikka-1] on aloittaa vasemmalla eniten negatiivisesta mielipiteestä, ja siirtyä oikealle kohti eniten positiivista mielipidettä, neutraali mielipide keskellä.
+
+[^grafiikka-1]: Länsimaista kieltä puhuville. Jos puhut kieltä, joka kirjoitetaan oikealta vasemmalle, mielipiteesi voi erota tästä.
 
 [Pystyakselilla]{.underline} on taajuusmäärät, ilmaistuna yksikköinä tai prosentteina.
 
 [Pylväskaaviosta löytyy kaksi versiota]{.underline}, joille löytyy myös vaihtoehtoina absoluuttiset ja relatiiviset taajuudet:
 
 1.  **Perinteinen pylväskaavio**. Jokainen kategoria on eritelty vaaka-akselilla. Pystyakselilla on joko absoluuttiset (N) tai relatiiviset (%) määrät.
-2.  **Pinottu pylväskaavio**. Kategoriat pinotaan päällekäin, aloittaen arvosta, jolla on suhteellisesti eniten datapisteitä. Pystyakselilla on joko absoluuttiset (N) tai relatiiviset (%) määrät.
+2.  **Pinottu pylväskaavio**. Kategoriat pinotaan päällekäin, aloittaen arvosta, jolla on suhteellisesti eniten datapisteitä (ks. selitys alla). Pystyakselilla on joko absoluuttiset (N) tai relatiiviset (%) määrät.
 
 Yleisesti sanottuna perinteinen pylväskaavio toimii paremmin absoluuttisten määrien esittämisessä, ja pinottu pylväskaavio taas relatiivisilla määrillä.
 
-[Pinotulle pylväskaaviolle hyvä visuaalinen sääntö on "paino alas",]{.underline} eli suurin kategoria pohjalle. Joskus tämä voi kuitenkin olla harhaanjohtavaa, varsinkin jos esität useita pinottuja pylväskaavioita joissa kategoriat ovat samat. Pyri pitämään kategoriat samassa järjestyksessä ennemmin kuin seuraat "paino alas"-sääntöä.
+[Pinotulle pylväskaaviolle hyvä visuaalinen sääntö on "paino alas",]{.underline} eli suurin kategoria pohjalle. Joskus tämä voi kuitenkin olla harhaanjohtavaa, varsinkin jos esität useita pinottuja pylväskaavioita joissa kategoriat ovat samat. Pyri pitämään kategoriat samassa järjestyksessä ennemmin kuin "paino alas"-säännön seuraamista.
 
 [Älä käytä kolmiulotteisia pylväskaaviota]{.underline}. Niissä on turhaa luettavaa, mikä vaikeuttaa kaavion ymmärtämistä.
 
 ![Pylväskaavio tai histogrammi.](pics/visualisointi/esim_histogrammi.png){#fig-esim-histogrammi fig-alt="Pylväskaavio nimeltä \"z\". Muuttujien arvot ovat 1-5, ja absoluuttiset määrät ovat edustettuna pystyakselilla. Moodi on 4."}
 
-## Viivakaavio {#sec-viivakaavio-teoria}
+### Viivakaavio {#sec-viivakaavio-teoria}
 
-**Viivakaavio** näyttää jokseenkin samanlaiselta kuin pylväskaavio, paitsi että pylväiden sijaan jokainen kategoria merkitään pisteellä ja pisteet yhdistetään viivalla.
+**Viivakaavio** näyttää melkein samalta kuin pylväskaavio, paitsi että pylväiden sijaan jokainen kategoria merkitään pisteellä ja pisteet yhdistetään viivalla.
 
-[Viivakaaviota tulisi mieluisesti käyttää vain välimatka- ja suhdeasteikolla]{.underline}. Pisteiden väliset viivat antavat usein ymmärtää, että pisteiden välisellä suhteella (etäisyydellä) on merkitystä. Luokittelu- ja järjestysasteikoilla näin ei ole, joten viivakaavion käyttö voi olla harhaanjohtavaa.
+[Viivakaaviota tulisi mieluisesti käyttää vain välimatka- ja suhdeasteikolla]{.underline}. Pisteiden väliset viivat antavat usein ymmärtää, että pisteiden välisellä suhteella (etäisyydellä) olisi merkitystä. Luokittelu- ja järjestysasteikoilla näin ei ole, joten viivakaavion käyttö voi olla harhaanjohtavaa.
 
-[Viivakaaviota käytetään yhden muuttujan tai muuttujaryhmän visualisointiin]{.underline}, mutta useamman muuttujan visualisointi on myös mahdollista. Viivakaavio onkin parempi tapa visualisoida monta muuttujaa samaan aikaan kuin pylväskaavio - mutta huomioi, että heti kun lisäät toisen muuttujan, muuttujien välisestä suhteesta tulee kaavion tärkein osa.
+[Viivakaaviota käytetään yhden muuttujan tai muuttujaryhmän visualisointiin]{.underline}, mutta useamman muuttujan visualisointi on myös mahdollista. Viivakaavio onkin parempi tapa visualisoida monta muuttujaa samaan aikaan kuin pylväskaavio - mutta huomioi, että heti kun lisäät toisen muuttujan, [muuttujien välisestä suhteesta]{.underline} tulee kaavion tärkein osa.
 
 [Vaaka-akselilla]{.underline} on muuttujan kategoriat, suuruusjärjestyksessä. Huomioi muuttujien kategorioiden suhteet - säilytä oikea järjestys niiden välillä!
 
-[Pysty-akselilla]{.underline} on taajuusmäärät, joko absoluuttisena (N) tai relatiivisena (%) taajuutena.
+[Pysty-akselilla]{.underline} on taajuusmäärät, joko absoluuttisena (N) tai relatiivisena (%) taajuutena, tai muu visualisoitu arvo (esim. keskiarvo).
 
 Kuten pylväskaaviosta, [viivakaaviolle löytyy perinteinen ja pinottu versio]{.underline}, ja molemmilla voi esittää sekä absoluuttisia että relatiivisia taajuuksia. Samat säännöt pätevät kuin pylväskaaviolle.
 
@@ -107,13 +113,13 @@ Kuten pylväskaaviosta, [viivakaaviolle löytyy perinteinen ja pinottu versio]{.
 
 ![Viivakaavio.](pics/visualisointi/esim_viivakaavio.png){#fig-esim-viivakaavio fig-alt="Viivakaavio nimeltä \"z\". Vaaka-akselilla on mittausajankohta ja pystyakselilla arvo. Käyrä vaihtelee satunnaisesti. Kuvassa arvot ovat merkittynä pisteinä ja niitä yhdistää suorat viivat."}
 
-## Ympyrä- tai piiraskaavio {#sec-ympyrä--tai-piiraskaavio-teoria}
+### Ympyrä- tai piiraskaavio {#sec-ympyrä--tai-piiraskaavio-teoria}
 
 **Ympyrä- tai piiraskaavio** on suosittu visualisointityökalu. Kaaviossa muuttujan kategorioiden suhteellinen jakauma esitetään "piirakanpalan" muotoisina.
 
-[Piiraskaaviota voi käyttää kaikilla asteikoilla]{.underline}, mutta parhaiten se sopii luokittelu- ja järjestysasteikoille. Tärkeintä on, että kaaviossa ei ole useita kategorioita (mieluisesti noin 5-6 tai alle).
+[Piiraskaaviota tulisi kokonaan välttää]{.underline}. Vaikka se on suosittu työkalu, tieto ei jäsenny lukijalle yhtä helposti kuin muilla kaavioilla. Ihminen ei osaa tulkita pinta-aloja kovinkaan tarkkaan, jolloin pienet erot jäävät helposti näkemättä. Jos kuitenkin käytät kaaviota, pidä kategorioiden määrät pieninä, ja suosi muuttujia, joilla kategorioiden suhteelliset erot ovat suuria - esim. 10 %, 25 % ja 65 %. Näin edesautat lukijaa parhaiten.
 
-[Piiraskaaviota tulisi kokonaan välttää]{.underline}. Vaikka se on suosittu työkalu, tieto ei jäsenny lukijalle yhtä helposti kuin muilla kaavioilla. Ihminen ei osaa tulkita pinta-aloja kovinkaan tarkasti, jolloin pienet erot jäävät helposti näkemättä. Jos kuitenkin käytät, pidä kategorioiden määrät pieninä, ja suosi muuttujia, joilla kategorioiden suhteelliset erot ovat suuria - esim. 10 %, 25 % ja 65 %. Näin edesautat lukijaa parhaiten.
+[Piiraskaaviota voi käyttää kaikilla asteikoilla]{.underline}, mutta parhaiten se sopii luokittelu- ja järjestysasteikoille. Tärkeintä on, että kaaviossa ei ole monia kategorioita (mieluisesti noin 5-6 tai alle).
 
 [Piiraskaaviolla ei ole akseleita]{.underline}, vaan kaikki data esitetään yhdessä kehässä/kiekossa.
 
@@ -121,17 +127,17 @@ Kuten pylväskaaviosta, [viivakaaviolle löytyy perinteinen ja pinottu versio]{.
 
 ![Piiraskuvio.](pics/visualisointi/esim_piiraskuvio.png){#fig-esim-piiraskuvio fig-alt="Piiraskuvio nimeltä \"z\". Ympyrässä on kolme sektoria nimeltä 1, 2 ja 3. Sektoreiden kohdalla on absoluuttinen ja relatiivinen taajuus. 1-sektori on 25 (17 prosenttia), 2-sektori on 17 (33 prosenttia), ja 3-sektori on 19 (50 prosenttia)."}
 
-## Palkkikaavio {#sec-palkkikaavio-teoria}
+### Palkkikaavio {#sec-palkkikaavio-teoria}
 
 **Palkkikaavio** on sama kuin pylväskaavio, paitsi että akselit ovat käännettyjä. Pystyakselille sijoittuu muuttujan kategoriat, ja vaaka-akselille taajuudet. Samat säännöt pätevät palkkikaaviolle kuin pylväskaaviolle.
 
-[Palkkikaaviosta voi tehdä erikoisversion]{.underline}[^grafiikka-1], jossa nollapiste sijoitetaan keskelle ja palkit leviävät joko negatiiviselle tai positiiviselle puolelle. Tällaisella on hyvä esitellä esimerkiksi [muutosta]{.underline} jollain muuttujalla, jolloin pääset esittelemään monimuuttujatuloksia yksittäisten muuttujien sijaan.
+[Palkkikaaviosta voi tehdä erikoisversion]{.underline}[^grafiikka-2], jossa nollapiste sijoitetaan keskelle ja palkit leviävät joko negatiiviselle tai positiiviselle puolelle. Tällaisella on hyvä esitellä esimerkiksi [muutosta]{.underline} jollain muuttujalla, jolloin pääset esittelemään monimuuttujatuloksia yksittäisten muuttujien sijaan.
 
-[^grafiikka-1]: Käytännössä myös pylväskaaviosta voi tehdä nollakeskitetyn version.
+[^grafiikka-2]: Käytännössä myös pylväskaaviosta voi tehdä nollakeskitetyn version.
 
 ![Palkkikaavio.](pics/visualisointi/esim_palkkikaavio.png){#fig-esim-palkkikaavio fig-alt="Palkkikaavio nimeltä \"k\". Vaaka-akselilla on sijoitettu muuttujan arvot, pystyakselilla on mittausajankohdat yhdestä kymmeneen. Arvot vaihtelevat suuresti, reilun -2:n ja 2:n välillä."}
 
-## Pistekaavio {#sec-pistekaavio-teoria}
+### Pistekaavio {#sec-pistekaavio-teoria}
 
 **Pistekaavio** (engl. *scatter plot*) esittää kahden muuttujan välistä suhdetta. Tätä varten arvoilla ei tule olla omia kategorioita, eli parhaiten pistekaavio soveltuu **välimatka- ja suhdeasteikoille** (tai suurille summamuuttujille).
 
@@ -143,31 +149,33 @@ Kuten pylväskaaviosta, [viivakaaviolle löytyy perinteinen ja pinottu versio]{.
 
 [Suosi suoria viivoja pehmennettyjen viivojen sijaan]{.underline}. Pehmennystä ei ole olemassa datassa, jolloin sen käyttö voi olla harhaanjohtavaa.
 
-![Pistekaavio regressiokäyrällä. Seliteaste on merkitty oikeaan yläkulmaan.](pics/visualisointi/esim_pistekaavio.png){fig-alt="Pistekaavio nimeltä \"Suhde x:n ja y:n välillä\". Kaavioon on piirretty regressiokäyrä, jonka seliteaste on 0,0001."}
+![Pistekaavio regressiokäyrällä. Seliteaste on merkitty oikeaan yläkulmaan.](pics/visualisointi/esim_pistekaavio.png){#fig-esim-pistekaavio fig-alt="Pistekaavio nimeltä \"Suhde x:n ja y:n välillä\". Kaavioon on piirretty regressiokäyrä, jonka seliteaste on 0,0001."}
 
-## Kuplakaavio {#sec-kuplakaavio-teoria}
+### Kuplakaavio {#sec-kuplakaavio-teoria}
 
 **Kuplakaavio** (engl. *bubble plot*) esittää kolmen muuttujan välistä suhdetta. Kaavio toimii samalla tavalla kuin pistekaavio, mutta pisteiden koot määritellään kolmannen muuttujan avulla.
 
-Kuplakaaviossa ensimmäinen ja toinen muuttuja asettuvat vaaka- ja pystyakseleille, ja kolmas muuttuja esitetään kuplan koossa.
+Kuplakaaviossa ensimmäinen ja toinen muuttuja asettuvat vaaka- ja pystyakseleille, ja kolmas muuttuja esitetään [kuplan koolla]{.underline}.
 
-[Älä piirrä mitään muuta kaaviolle]{.underline}. Kuplakaavio alkaa jo olla hankalasti luettavissa heti alusta, ja elementtien lisääminen voi vaikeuttaa lukemista entiseltään. Voit toki lisätä muuttujien arvo-otsikot, varsinkin kolmannelle muuttujalle (koska ympyröiden pinta-alojen vertaaminen alkaa olla mahdotonta lukijoille).
+[Kolmas muuttuja voi myös olla kategorinen]{.underline}, jolloin jokainen kategoria esitetään omalla värillään kokomuutosten sijaan.
+
+[Älä piirrä mitään muuta kaaviolle]{.underline}. Kuplakaavio on hankalasti luettava, ja elementtien lisääminen voi vaikeuttaa lukemista entiseltään. Voit toki lisätä muuttujien arvo-otsikot, varsinkin kolmannelle muuttujalle (koska ympyröiden pinta-alojen tarkka vertaaminen on hyvin vaikeaa lukijalle).
 
 [Älä käytä kolmiulotteista kuplakaaviota]{.underline}.
 
 ![Kuplakaavio. Muuttuja c on esitettynä kuplan koossa.](pics/visualisointi/esim_kuplakaavio.png){#fig-esim-kuplakaavio fig-alt="Kuplakaavio nimeltä \"Suhde a:b, b:n ja c:n välillä\". Kuplat sijoittuvat a-muuttujan ylempiin arvoihin mutta vaihtelevat b-muuttujan arvojen mukaan. Koot ovat määriteltyjä muuttuja c:n mukaan, ja vaihtelevat yhden ja kymmenen välillä."}
 
-## Laatikkokaavio (ruutu ja jana) {#sec-laatikkokaavio-teoria}
+### Laatikkokaavio (ruutu ja jana) {#sec-laatikkokaavio-teoria}
 
 **Laatikkokaavio** (engl. *box plot*) on yhden muuttujan kuvaileva kaavio, jossa esitetään muuttujan jakauman sijaintilukuja. Laatikkokaavio on erinomainen tapa nopeasti esitellä muuttujan jakauma. Asettamalla monta laatikkoa vierekkäin voit myös vertailla muuttujien jakaumia.
 
-[Laatikkokaaviota voi käyttää vain välimatka- ja suhdeasteikolla]{.underline}, joskin sen käyttö järjestysasteikolla on vielä jokseenkin yleistä.
+[Laatikkokaaviota voi käyttää vain välimatka- ja suhdeasteikolla]{.underline}, joskin sen käyttö järjestysasteikolla on jokseenkin yleistä.
 
-[Laatikkokaaviossa käytetään yhtä muuttujaa]{.underline}, joskin useamman esittely vierekkän myös onnistuu. Varsinkin jos haluat esittää mahdollisia eroja muuttujilla, useamman laatikon käyttö on suotavaa.
+[Laatikkokaaviossa käytetään yhtä muuttujaa]{.underline}, joskin useamman esittely vierekkäin onnistuu myös. USsamman laatikon käyttö on suotavaa varsinkin jos haluat esittää mahdollisia eroja muuttujien jakaumien välillä.
 
-[Vaaka-akselilla on muuttuja(t).]{.underline} Yhden muuttujan laatikkokaaviossa vaaka-akseli ei kerro juurikaan mitään.
+[Vaaka-akselilla on muuttuja(t).]{.underline} Yhden muuttujan laatikkokaaviossa vaaka-akseli on valinnainen, mutta muista kirjata muuttujan nimi joka tapauksessa.
 
-[Pystyakselilla on muuttujan arvoasteikko]{.underline}, mitattuna alkuperäisissä mitoissa. Laatikkokaaviota tulisi käyttää vain absoluuttisilla mitoilla.
+[Pystyakselilla on muuttujan arvoasteikko]{.underline}, mitattuna alkuperäisissä mitoissa. Laatikkokaaviota tulisi käyttää vain absoluuttisilla mitoilla. Jos esität useampaa muuttujaa kerralla, kaikkien tulisi olla mitattuna samalla mitalla - älä siis sekoita eri tavoin mitattuja muuttujia (esim. euroja ja senttimetrejä).
 
 Laatikkokaaviossa on seuraavat elementit:
 
@@ -177,10 +185,10 @@ Laatikkokaaviossa on seuraavat elementit:
 
 -   Laatikko, joka esittää jakauman **kvartiiliväliä** (ala- ja yläkvartiilit)
 
--   Virheviivat, jotka esittävät jakauman **pienintä ja suurinta arvoa**
+-   Viivat laatikon alla ja yllä, jotka esittävät jakauman **pienintä ja suurinta arvoa**
 
 -   (Valinnainen): Pisteet laatikon ulkopuolella, jotka esittävät **ääripääarvoja.**
 
-Laatikkokaaviosta löytyy myös vaihtoehtoinen muoto, **viulukaavio** (engl. *violin plot*), jossa laatikon muoto kuvastaa jakauman suhteellista tiheyttä eri tasoilla. Mitä leveämpi kohta, sitä enemmän datapisteitä sillä tasolla pystyakselia. Nimi tulee viulun muodosta, jota muuttujan jakauma voi muistuttaa.
+Laatikkokaaviosta löytyy myös vaihtoehtoinen muoto, **viulukaavio** (engl. *violin plot*), jossa laatikon muoto kuvastaa jakauman suhteellista tiheyttä eri tasoilla. Mitä leveämpi kohta, sitä enemmän datapisteitä sillä tasolla pystyakselia.
 
-![Kolme laatikkokaaviota. HUOM: Merkintöjen ja laatikkojen väriero on liian pieni julkaisuun ja tulisi muuttaa.](pics/visualisointi/esim_laatikkokaavio.png){#fig-esim-laatikkokaavio fig-alt="Laatikkokaavio nimeltä \"Muuttujat a, b ja c\". Kuviossa on kolme laatikkokaaviota vierekkäin. B-muuttuja eroaa selkeästi muista. C-muuttujan keskiarvo ja mediaani on selkeästi muita korkeammalla."}
+![Kolme laatikkokaaviota. HUOM: Merkintöjen ja laatikkojen väriero on liian pieni jos tämän kuvion haluasi julkaista todellisessa tutkimuksessa.](pics/visualisointi/esim_laatikkokaavio.png){#fig-esim-laatikkokaavio fig-alt="Laatikkokaavio nimeltä \"Muuttujat a, b ja c\". Kuviossa on kolme laatikkokaaviota vierekkäin. B-muuttuja eroaa selkeästi muista. C-muuttujan keskiarvo ja mediaani on selkeästi muita korkeammalla."}
