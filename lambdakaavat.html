@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 11&nbsp; Yleisiä toimintoja Excelissä</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 14&nbsp; LAMBDA-kaavoja</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./excelgrafiikka.html" rel="next">
-<link href="./nimienhallinta.html" rel="prev">
+<link href="./webropol.html" rel="next">
+<link href="./perustoiminnot.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./exceltoimintoja.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./lambdakaavat.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -204,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link active">
+  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
@@ -222,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
   </div>
 </li>
@@ -291,22 +291,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-toiminto01" id="toc-sec-toiminto01" class="nav-link active" data-scroll-target="#sec-toiminto01"><span class="header-section-number">11.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</a></li>
-  <li><a href="#sec-toiminto02" id="toc-sec-toiminto02" class="nav-link" data-scroll-target="#sec-toiminto02"><span class="header-section-number">11.2</span> Hae kaikkien muuttujien nimet riveihin</a></li>
-  <li><a href="#sec-toiminto03" id="toc-sec-toiminto03" class="nav-link" data-scroll-target="#sec-toiminto03"><span class="header-section-number">11.3</span> Laske muuttujan ryhmien määrä (k)</a></li>
-  <li><a href="#sec-toiminto04" id="toc-sec-toiminto04" class="nav-link" data-scroll-target="#sec-toiminto04"><span class="header-section-number">11.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</a></li>
-  <li><a href="#sec-toiminto05" id="toc-sec-toiminto05" class="nav-link" data-scroll-target="#sec-toiminto05"><span class="header-section-number">11.5</span> Laske N yhdelle muuttujan kategorialle</a></li>
-  <li><a href="#sec-toiminto06" id="toc-sec-toiminto06" class="nav-link" data-scroll-target="#sec-toiminto06"><span class="header-section-number">11.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</a></li>
-  <li><a href="#sec-toiminto07" id="toc-sec-toiminto07" class="nav-link" data-scroll-target="#sec-toiminto07"><span class="header-section-number">11.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</a></li>
+  <li><a href="#sec-t-testi-kaavat" id="toc-sec-t-testi-kaavat" class="nav-link active" data-scroll-target="#sec-t-testi-kaavat"><span class="header-section-number">14.1</span> T-testi</a></li>
+  <li><a href="#sec-luottamusväli-kaavat" id="toc-sec-luottamusväli-kaavat" class="nav-link" data-scroll-target="#sec-luottamusväli-kaavat"><span class="header-section-number">14.2</span> Luottamusväli</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-yleisiä-toimintoja-excelissä" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></h1>
+<h1 class="title"><span id="sec-lambda-kaavoja" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></h1>
 </div>
 
 
@@ -321,130 +316,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Tällä sivulla esitetään yleisiä toimintoja ja menetelmiä Excelissä. Luettavuuden kannalta jokaisen funktion sulun sisältö on ympäröity välilyönnellä: <code>( tekstiä ( lisää tekstiä ))</code> Tämä ei ole tarpeellista Excelissä omassa työssäsi. Joissain tilanteissä tämä voi myös rikkoa laskukaavan, eli ole varovainen näiden kanssa!</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Wordin lainausmerkit eivät toimi Excelissä
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta (“). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta (”). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa.</p>
-<p>Koska Excelissä voi olla hankalaa kirjoittaa pitkiä kaavoja, voi joskus kuitenkin olla tarpeen kirjoittaa kaavat ensin jossain tekstinkäsittelyohjelmassa ja sitten kopioida ne Exceliin. Suosittelen tähän <strong>Muistio</strong>-ohjelmaa (<em>Notepad</em>), mikä löytyy Windows-käyttöjärjestelmästä valmiina. Jos käytät Mac OS X- tai Linux-käyttöjärjestelmiä, voit käyttää jotain toista raakatekstin käsittelyohjelmaa. Älä kuitenkaan käytä ohjelmia, joissa tekstiä automaattisesti formatoidaan ohjelman puolesta - näissä voi esiintyä samoja ongelmia kuin Excelin ja Wordin välillä.</p>
-</div>
-</div>
-<section id="sec-toiminto01" class="level2 page-columns page-full" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-toiminto01"><span class="header-section-number">11.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</h2>
-<p>Jos tarvitset poistaa kaikki epätäydelliset rivit jotain analyysia varten, voit käyttää seuraavan tapaista kaavaa:</p>
-<p><code>=SUODATA( alue; ( Muuttuja1 &lt;&gt; "" ) * ( Muuttuja2 &lt;&gt; "" ) * ( ... ))</code></p>
-<p><u>Jokainen muuttujan tyhjien poisto määritellään sulkujen sisällä</u>, muodossa <code>(Muuttuja &lt;&gt; "")</code>. Merkkijono <code>&lt;&gt;</code> on boolen logiikkaa, ja tarkoittaa samaa kuin “ei ole yhtä kuin”. Merkkijono <code>""</code> esittää tyhjää solua, eli lainausmerkkien välillä ei ole mitään sisältöä. Toisin sanoen, jokainen suodatusehto sanoo “Valitse ne rivit, joiden arvo muuttujalla X ei ole yhtä kuin tyhjä merkki.</p>
-<p><u>Voit määritellä niin monta ehtomuuttujaa kuin haluat</u>. Ne lisätään peräkkäin ja kerrotaan yhteen (<code>*</code>). Tämä käytännössä toimii samalla tavalla kuin boolen logiikan <code>JA</code>-toiminto, eli kertominen määrittelee, että kaikkien ehtojen tulee täyttyä jotta rivi otetaan mukaan.</p>
-<div class="page-columns page-full"><p><u>Suodatus kannattaa aina tehdä tarpeen mukaan</u>. Jos mahdollista, kannattaa myös käyttää SUODATA-funktiota suoraan seuraavan analyysin funktion sisällä. Monet funktiot eivät nimittäin osaa tulkita SUODATA-funktion tuloksia oikein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Ongelma liittyy dynaamisiin matriisikaavoihin ja levittyineisiin matriiseihin, jotka voivat olla hankalia ymmärtää. Jos haluat lukea lisää, tietoa löytyy <a href="https://support.microsoft.com/fi-fi/office/dynaamiset-matriisikaavat-ja-levittyneen-matriisin-toiminta-205c6b06-03ba-4151-89a1-87a7eb36e531">Microsoftin apusivuilta</a>.</p></li></div></div>
-<p><u>Funktio ei osaa käsitellä virhearvoa <code>#TYHJÄ!</code>.</u> Jos syötät alueen, jossa kyseinen virhearvo esiintyy, funktio palauttaa <code>#TYHJÄ!</code>-virheen (engl. <code>#NULL!</code>). Muuta ensin alueen virhearvot joksin muuksi arvoksi (esim. <code>""</code> eli oikeasti tyhjä solu; ks. <a href="#sec-toiminto07"><span>Alaluku&nbsp;11.7</span></a>), ja suodata sitten tämä tulos.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tärkeää
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Jos suodatuksen jälkeen riveillä vielä on tyhjiä soluja jossain (eli ei olla vaadittu täydellistä datamatriisia), SUODATA-funktio täyttää nämä arvolla <code>0</code>. Jos yrität suodattaa tätä tulosta uudelleen yllä olevalla tavalla, funktio ei enää löydä tyhjiä soluja jotka täyttäisivät ehdot - nolla-arvo ei ole sama asia kuin tyhjä arvo.</p>
-</div>
-</div>
+<section id="sec-t-testi-kaavat" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="sec-t-testi-kaavat"><span class="header-section-number">14.1</span> T-testi</h2>
 </section>
-<section id="sec-toiminto02" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="sec-toiminto02"><span class="header-section-number">11.2</span> Hae kaikkien muuttujien nimet riveihin</h2>
-<p>Jos haluat kaikki muuttujasi nimet erillisille rivelle, esimerkiksi sijantilukutaulukkoa varten, voit käyttää seuraavaa kaavaa:</p>
-<p><code>=TRANSPONOI( AINUTKERTAISET.ARVOT( VALITSERIVIT( taulukko; 1 )))</code></p>
-<p><u>Jotta toiminto toimisi</u>, sinun tulee ensin varmistaa seuraavat asiat:</p>
-<ul>
-<li><p>Datamatriisin ensimmäisellä rivillä on muuttujien nimet.</p></li>
-<li><p>Jos olet määritellyt nimen koko datamatriisille, varmista että määrittely <em>sisältää</em> nimirivin.</p></li>
-</ul>
-<p>Kaava valitsee ensin ensimmäisen rivin datamatriisista (<code>VALITSERIVIT(taulukko; 1)</code>). Sen jälkeen haetaan kaikki uniikit arvot tältä riviltä (<code>AINUTKERTAISET.ARVOT()</code>). Viimeiseksi tämä rivi transponoidaan sarakemuotoon (<code>TRANSPONOI()</code>).</p>
-<p><u>Jos haluat pitää muuttujien nimet rivillä</u> (eli jakaa ne sarakkeisiin, niin kuin ovat datamatriisissa), jätä pois <code>TRANSPONOI</code>-funktio.</p>
-</section>
-<section id="sec-toiminto03" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="sec-toiminto03"><span class="header-section-number">11.3</span> Laske muuttujan ryhmien määrä (k)</h2>
-<p>Jos haluat laskea, kuinka monta uniikkia ryhmää muuttujassa on, voit käyttää kaavaa:</p>
-<p><code>=LASKE.A( AINUTKERTAISET.ARVOT( VALITSESARAKKEET( alue; sarakenumero )))</code></p>
-<p>Kaava valitsee ensin sarakkeen <code>VALITSESARAKKEET(alue; sarakenumero)</code>. Jos sinulla on valmiiksi nimetty sarake, voit korvata koko tämän osuuden sarakkeen nimellä (katso alla). Seuraavaksi kaava hakee kaikki uniikit arvot sarakkeesta <code>AINUTKERTAISET.ARVOT()</code>. Viimeiseksi kaavassa lasketaan, kuinka monta uniikkia arvoa esiintyi <code>LASKE.A()</code>.</p>
-<p><u>Kaava toimii myös ei-numeroiden määrän laskemisessa</u>, <code>LASKE.A()</code>-funktion avulla.</p>
-<p><u>Jos olet jo määritellyt sarakkeen nimen</u>, käytä tätä kaavaa:</p>
-<p><code>=LASKE.A(AINUTKERTAISET.ARVOT(sarakenimi))</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tärkeää
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>VALITSESARAKKEET-funktio toimii sarakkeen numerolla, ei nimellä tai kirjaimella!</p>
-</div>
-</div>
-</section>
-<section id="sec-toiminto04" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="sec-toiminto04"><span class="header-section-number">11.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</h2>
-<p>Jos haluat listata muuttujan kaikki uniikit arvot nousevassa järjestyksessä, voit käyttää kaavoja:</p>
-<ul>
-<li><p>Riveihin: <code>=LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )</code></p></li>
-<li><p>Sarakkeisiin: <code>=TRANSPONOI( LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )</code></p></li>
-</ul>
-<p>Ensin kaava hakee kaikki uniikit arvot alueelta <code>AINUTKERTAISET.ARVOT()</code>. Seuraavaksi ne lajitellaan funktiolla <code>LAJITTELE()</code>. Tässä funktiossa on tärkeää muistaa <strong>kaksi</strong> puolipilkkua: ensimmäisenä argumenttina syötetään lajiteltava matriisi. Toinen argumentti määrittelee lajitteluindeksin, mutta sitä emme tarvitse tässä, joten jätämme sen tyhjäksi. Kolmas argumentti määrittelee lajittelujärjestyksen, ja se me haluamme määritellä arvoksi <code>1</code>, eli nousevaan järjestykseen.</p>
-<p><u>Voit vaihtaa järjestyksen</u> nousevan <code>1</code> ja laskevan <code>-1</code> välillä vapaasti.</p>
-</section>
-<section id="sec-toiminto05" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="sec-toiminto05"><span class="header-section-number">11.5</span> Laske N yhdelle muuttujan kategorialle</h2>
-<p>Jos haluat laskea muuttujan kategorian määrän, voit käyttää kaavaa:</p>
-<p><code>=LASKE.A( SUODATA( muuttuja; muuttuja = arvo ) )</code></p>
-<p>Kaava suodattaa ensin muuttuja-alueen arvon mukaan <code>SUODATA()</code>, jonka jälkeen se laskee, kuinka monta arvoa suodatetussa muuttujassa on jäljellä <code>LASKE.A()</code>.</p>
-<p><u>Kaava toimii myös tekstin kanssa</u> <code>LASKE.A()</code>-funktion ansiosta.</p>
-</section>
-<section id="sec-toiminto06" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="sec-toiminto06"><span class="header-section-number">11.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</h2>
-<p>Jos haluat laskea <strong>kaikkien</strong> muuttuja-arvojen määrät, voit käyttää seuraavaa kahta kaavaa:</p>
-<ul>
-<li><p>Ensimmäinen solu: <code>=LAJITTELE( AINUTKERTAISET.ARVOT( muuttuja-alue ) ; ; 1 )</code></p></li>
-<li><p>Toinen solu, ensimmäisen solun oikealla: <code>=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )</code></p></li>
-</ul>
-<p>Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. LUKU).</p>
-<p>Toisessa solussa käytetään <code>TAAJUUS</code>-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. “sukupuoli” tai eksplisiittinen viittaus, esim C2:C105) kuin ensimmäisen solun kaavassa.</p>
-<p><code>TAAJUUS</code>-funktion toisena argumenttina käytämme ensimmäistä funktiota, mutta huomaa risuaidan <code>#</code> lisääminen soluviittauksen loppuun. Tämä kertoo Excelille, että soluviittaus on levitetty matriisialue, ei yksittäinen solu, jolloin Excel toimittaa funktion jokaiselle matriisissa määritetylle arvolle, ei vain yhdelle. Jos esimerkiksi ensimmäisen solun osoite on C2, kirjoita <code>C2#</code>.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tärkeää
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>TAAJUUS</code>-funktio tuottaa aina yhden solun enemmän kuin mitä sille syötettiin: esimerkiksi jos kategorioita on viisi, funktio palauttaa kuusi solua. Viimeinen solu sisältää määrän kaikista arvoista, jotka ylittävät suurimman määritetyn arvon. Tämä tuki löytyy, koska <code>TAAJUUS</code>-funktiota voi myös käyttää rakentaakseen kategorioita kvantitatiivisesta muuttujasta, jolloin kategoriat eivät välttämättä kata koko jakauman pituutta.</p>
-<p>Jos raportoit kategorisen muuttujan määriä, jätä pois viimeinen tyhjä solu, koska sitä ei ole mahdollista saada arvoksi.</p>
-</div>
-</div>
-</section>
-<section id="sec-toiminto07" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="sec-toiminto07"><span class="header-section-number">11.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</h2>
-<p>Jos sinulla on virhearvoja data-alueellasi (esim. <code>#TYHJÄ!</code>, <code>#JAKO/0!</code>), useimmat kaavat eivät toimi alueen kanssa. Silloin sinun kannattaa tehdä uusi muuttuja data-alueellesi, jonka soluihin syötät seuraavan kaavan:</p>
-<p><code>=JOS( ONLUKU (solu) ; solu ; "" )</code></p>
-<p>Kaava tarkistaa, onko tarkistettu solu luku (muuta tämä <code>ONTEKSTI</code>-funktioksi, jos suodatat tekstiä). Jos se on luku, kaava palauttaa alkuperäisen solun arvon. Jos ei ole luku (esim. virhearvo), kaava palauttaa tyhjän solun <code>""</code>.</p>
-<p>Lisää kaava ensimmäiseen soluun ja levitä se kaikkien rivien yli vetotoiminnolla.</p>
-<p>Voit halutessasi vaihtaa palautettavan arvon, jos Excel ei löydä lukua. Useimmiten kuitenkin tyhjä solu on helposti käsiteltävissä (esim. <code>ONTYHJÄ</code>-funktiolla), joten sen käyttö voi olla suositeltavaa, etteivät arvot mene sekaisin analyysissa.</p>
+<section id="sec-luottamusväli-kaavat" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="sec-luottamusväli-kaavat"><span class="header-section-number">14.2</span> Luottamusväli</h2>
 
 
 </section>
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -682,13 +561,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./nimienhallinta.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span>
+      <a href="./perustoiminnot.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./excelgrafiikka.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./webropol.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
