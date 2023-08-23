@@ -1,1 +1,120 @@
 # Hypoteesitestaus {#sec-hypoteesitestaus-teoria}
+
+Tutkijan valittua otantakehyksensä ja populaationsa, hän kehittää seuraavaksi **hypoteesejä**. Hypoteesi on tieteellinen "arvaus" mahdollisesta tuloksesta, jonka tutkija tulee saamaan tutkimuksestaan. Tämän tarkoituksena on suojata tutkijaa mahdolliselta **vahvistusharhalta** (engl. *confirmation bias*), eli ihmisten taipumukselta valikoida tietoa tavalla, joka vahvistaa aikaisempia ennakkoluuloja.
+
+Hypoteesien toimintatapoja on useita, joista yleisin lienee **nollahypoteesimerkitsevyystestaus** (engl. *null hypothesis significance testing,* NHST). Tätä kutsutaan myös Neymanin ja Pearsonin hypoteesitestaukseksi, menetelmän kahden kehittäjän mukaan.
+
+## Nollahypoteesimerkitsevyystestaus (NHST) {#sec-nollahypoteesimerkitsevyystestaus-nhst}
+
+### Falsifikaatio {#sec-falsifikaatio-teoria}
+
+NHST pohjautuu kahteen ajatukseen:
+
+1.  Asetetaan hypoteesi etukäteen, jotta vältetään vahvistusharhaa.
+2.  Asioita voidaan vain osoittaa *vääräksi*, ei ikinä todeksi
+
+Toinen kohta juontuu filosofi Karl Popperin kehittämästä **falsifikaatiosta**. Yksinkertaisimmillaan falsifikaatioteoria sanoo, että mikään tieteellinen koe ei ikinä voi todentaa jotain väiteittä. Väitteen todentamiseksi tulisi jotenkin osoittaa vedenkestävästi, että väite on aina totta kaikissa tilanteissa.
+
+Klassinen falsifikaation esimerkki on joutsenten väri. Jos me väitämme, että:
+
+> Kaikki joutsenet ovat valkoisia.
+
+niin emme ikinä voi todistaa tätä väitettä. Meidän tulisi tavata joka ikinen joutsen joka ikinä on ollut olemassa tai tulee olemaan olemassa - tämä ei ole mahdollista.
+
+Falsifikaation ydin piilee siksi väitteen vääräksi toteamisessa. Jos me väitämme, että kaikki joutsenet ovat valkoisia, niin me tarvitsemme löytää vain *yhden* erivärisen joutsenen osoittaaksemme väitteen olevan väärässä.
+
+Toisin sanoen: tieteellisiä väitteitä voidaan todistaa olevan väärässä, mutta ei todentaa.
+
+### Nollahypoteesi falsifikaation työkaluna {#sec-nollahypoteesi-falsifikaation-työkaluna}
+
+NHST:ssa falsifikaation teoriaa sovelletaan **nollahypoteesin** $H_0$ avulla. Ensin ajattelemme, millaisen suhteen uskomme näkevän datassa. Esimerkiksi, että kaikki joutsenet ovat valkoisia. Tätä kutsutaan myös **vaihtoehtohypoteesiksi** $H_1$.
+
+[Sitten asetamme nollahypoteesin]{.underline}, joka edustaa vaihtoehtohypoteesin negaatiota, eli vääryyttä. On huomattava, että nollahypoteesi ei ole vain suhteen kääntämistä ympäri, vaan suhteen **puuttumista**.
+
+> $H_1$: Kaikki joutsenet ovat valkoisia.
+>
+> $H_0$: Vähintään yksi joutsen ei ole valkoinen.
+
+[Tämän jälkeen keräämme dataa]{.underline}, jolla voidaan osoittaa nollahypoteesi **vääräksi**. Esimerkissä kyseessä voisi olla monen joutsenen valokuvaaminen tai värin kirjaaminen vihkoon.
+
+[Sitten tulee oikea looginen mestariteos]{.underline}:
+
+> Jos löydämme vain valkoisia joutsenia, voimme laskea [kuinka todennäköistä]{.underline} olisi ollut löytää vain valkoisia joutsenia, jos nollahypoteesi onkin todellisuudessa oikeassa. Jos todennäköisyys on tarpeeksi pieni, voimme todeta luottavamme päätökseen, että [nollahypoteesi on väärässä]{.underline}.
+
+Tiede ei osoita vaihtoehtohypoteesien olevan oikeassa tai väärässä (sitä ei juurikaan voi tehdä) - tiede osoittaa **suhteen puuttumisen olevan tarpeeksi epätodennäköistä, että voimme uskoa suhteen olemassaoloon**.
+
+### Todistuksen puute ei ole puutteen todistamista {#sec-todistuksen-puute-ei-ole-puutteen-todistamista}
+
+Englanniksi sanotaan: [*absense of evidence is not evidence of absense*]{.underline}*.* Tällä tarkoitetaan siis, että nollahypoteesin epätodennäköisyyden osoittaminen ei tarkoita, että vaihtoehtohypoteesi olisi yhtään sitä todellisempi.
+
+[Vaihtoehtohypoteesejä voi käytännössä asettaa kuinka paljon tahansa]{.underline}. Jokaiselle suhteen puuttumisen epätodennäköisyydelle voi antaa vaihtoehtoisia selityksiä maan ja taivaan välillä.
+
+Esimerkissä emme löytäneet ei-valkoista joutsenta. Selitys sille *voisi* olla, että kaikki joutsenet ovat valkoisia. Se voisi myös olla jokin muu:
+
+-   Ehkä emme keränneet tarpeeksi dataa nähdäksemme ei-valkoisen joutsenen, koska ne ovat niin harvinaisia.
+
+-   Ehkä ihminen ei pysty näkemään joutsenten ei-valkoisuutta, koska ei-valkoiset joutsenet ovat väriltään jotain, jota ihmisen silmän tappisolut eivät pysty prosessoimaan.
+
+-   Ehkä ei-valkoiset joutsenet ovat näkymättömiä.
+
+Ja niin edespäin. Jotkut mahdollisista selityksistä tuntuvat tietysti absurdeilta tai mahdottomilta, mutta **datalla emme pysty osoittamaan sitä**. Selitys syntyy aina teorian kautta, vaikka sillä olisi jokin kaukainen suhde dataan.[^hypoteesitestaus-1]
+
+[^hypoteesitestaus-1]: Tämä näkemys tulee 1900-luvun tieteenfilosofiasta. Myös Karl Popper itse osoitti teorioiden syntyvän datan ja ei-empiirisen järjen kohtaamisesta. Jos aihe kiinnostaa enemmän, suosittelen lukemaan esim. Popperin *The Logic of Scientific Discovery* [-@popper1959] sekä tieteenfilosofin Imre Lakatosin esseekokoelman *Criticism and the Growth of Knowledge* [-@lakatos1970]. Englantilainen tieteenfilosofi Donald Gillies on kirjoittanut lähestyttävän teoksen tieteenfilosofian perusteista nimeltä *Philosophy in the 20th century* [-@gillies1993], ja suomeksi löytyy myös Kiikerin ja Ylikosken oppiteos *Tiede tutkimuskohteena* [-@kiikeri2004].
+
+Kun siis testaat tilastollisia suhteita, muista: [nollahypoteesin epätodennäköisyys ei sinänsä anna lisätodisteita vaihtoehtohypoteesille, koska selitykset eivät itsessään ole suorassa kytköksessä dataan]{.underline}.
+
+## Nollahypoteesin testaaminen {#sec-nollahypoteesin-testaaminen}
+
+Jotta me voimme testata tuloksemme todennäköisyyttä nollahypoteesin alla, käytämme usein jotain **tilastollista jakaumaa**.
+
+[Jakaumia käytetään satunnaisotannan yhteydessä]{.underline}. Voimme tehdä oletuksen, että jokainen otanta antaa sattumanvaraisesti tietyn tuloksen, mutta että tämä tulos noudattaa jotain jakaumaa. Yleisesti käytettyjä jakaumia ovat **normaalijakauma, khiin neliön jakauma, t-jakauma** ja **f-jakauma**.
+
+[Jakaumat ovat hyödyllisiä, koska erittäin osaavat tilastotieteilijät ovat rakentaneet kaiken maailman laskukaavoja]{.underline} niiden käyttämiseen. Yksi hyödyllisimmistä työkaluista on **todennäköisyystiheysfunktio**, joka kertoo meille jakauman todennäköisyyden aina tietyllä alueella jakaumaa.
+
+[Voimme käyttää tiheysfunktiota nollahypoteesin testauksessa]{.underline}. Laskemme ensin tuloksemme ja asetamme nollahypoteesimme. Muunnamme sitten tuloksemme johonkin muotoon, joka vastaa tiettyä jakaumaa, ja tarkistamme mihin kohtaan jakaumaa se asettuu.
+
+Sen jälkeen laskemme, kuinka paljon jakaumasta asettuu sille kohdalle tai korkeammalle (matalemmalle, jos kyseessä on negatiivinen arvo jakaumalla). Tämä kertoo meille, kuinka todennäköistä on saada meidän tulos tai suurempi, jos nollahypoteesi (että tuloksen pitäisi olla jakauman keskipisteessä) olisi totta.
+
+Tätä todennäköisyyttä kutsutaan **p-arvoksi**, ja muodon vuoksi annan määritelmän vielä kerran:
+
+> **P-arvo osoittaa todennäköisyyttä saada mitattu tulos tai suurempi, jos nollahypoteesi olisi totta ja tuloksen olisi pitänyt olla nolla.**
+
+### Alfa-arvot ja merkitsevyys {#sec-alfa-arvot-ja-merkitsevyys}
+
+Vaikka p-arvo osoittaa todennäköisyyttä, sinun pitää vielä määritellä yksi asia. Kuinka epätodennäköistä mitatun tuloksen saaminen nollahypoteesin alla tulisi olla, jotta se "kelpaa" tuloksena? Tätä rajaa kutsutaan **merkitsevyyden rajaksi**.[^hypoteesitestaus-2]
+
+[^hypoteesitestaus-2]: Binääristen rajatestausten aika alkaa olla ohi (ks. [Lakënsin verkkokirja](https://lakens.github.io/statistical_inferences/)). On monia erittäin hyviä syitä olla käyttämättä p-arvojen raja-arvoja, mutta vaihtoehdot ovat jokseenkin monimutkaisia ja vaativat tilastollisten kurssien täydellistä uudelleenmuotoilua. Ehkä jonain päivänä...
+
+Onneksi (ja osittain myös harmiksi) tutkijoilla on käytössä useita raja-arvoja, joita usein sovelletaan. Tavallisimmat rajat ovat: 5 %, 1 % ja 0,1 %. Näitä kutsutaan myös **alfa-arvoiksi**.
+
+[Toisin sanoen, tulos nähdään epätodennäköisenä nollahypoteesin alla]{.underline} jos sen tulisi esiintyä yksi kahdestakymmenestä, yksi sadasta tai yksi tuhannesta mittauskerrasta. Mitä pienempi raja-arvo, sitä epätodennäköisempi tulos nollahypoteesin alla.
+
+Kun teet tilastollisia testejä, käytä näitä raja-arvoja. Huomaa kuitenkin, että jos saat esimerkiksi $p = 0,051$, älä heitä tulosta "pois" vain sen takia että se ylitti raja-arvon![^hypoteesitestaus-3] Tarkista aina myös tuloksen koko (ks. merkittävyydestä alla), ja ole rehellinen epävarmuutesi suhteen.
+
+[^hypoteesitestaus-3]: Tilastotieteilijät Andrew Gelman ja Mel Stern ovatkin huomauttaneet, että ero merkitsevän ja ei-merkitsevän välillä on usein ei-merkitsevä [@gelman2006]. Toisin sanoen, raja-arvon käyttö voi johtaa vääriin tulkintoihin, jolloin joko todetaan positiivinen tai negatiivinen tulos nollatulokseksi (**väärä** **positiivi** tai **negatiivi**).
+
+### P-arvon väärinkäsittäminen {#sec-p-arvon-väärinkäsittäminen}
+
+Kuten monia muita tilastollisia menetelmiä, myös p-arvoa käsitetään usein väärin. Tilastotieteilijä Daniel Lakëns on kerännyt monia väärinkäsityksiä [mainioon verkkokirjaansa](https://lakens.github.io/statistical_inferences/), joten esitän ne tässä lyhyesti:
+
+1.  Ei-merkitsevä p-arvo tarkoittaa, että nollahypoteesi on oikeassa.
+2.  Merkitsevä p-arvo tarkoittaa, että nollahypoteesi on väärässä.
+3.  Merkitsevä p-arvo tarkoittaa, että tulos on merkittävä.
+
+[Ensinnäkin, p-arvo ei osoita nollahypoteesin oikeutta tai vääryyttä ylipäätänsä]{.underline}. P-arvo, kuten aikaisemmin todettu, esittää **tuloksen todennäköisyyttä** jos nollahypoteesi **olisi** oikeassa. Perinteisessä tilastotieteessä (frekvenssitilastotiede) ei testata hypoteesien todennäköisyyksiä, vaan tulosten todennäköisyyksiä - tässä moni ymmärtää tilastotieteen aseman väärin.
+
+[Toiseksi, p-arvo ei kerro meille mitään tuloksen **merkittävyydestä**]{.underline} (huomaa ero merkitsevyyteen!). Tuloksen merkittävyys on teoreettinen kysymys. Kuinka suuri jonkun eron pitäisi olla, että meitä ylipäätänsä kiinnostaa? Miten tehokkaasti lääkkeen tulisi vaikuttaa, että me haluaisimme käyttää sitä? Kuinka monta prosenttiyksikköä on "suuri" ero? Näihin kysymyksiin ei valitettavasti löydy tilastollista vastausta, koska ne ovat ei-empiirisiä kysymyksiä.
+
+## Tilastollisen testaamisen perusmenetelmä {#sec-tilastollisen-testaamisen-perusmenetelmä}
+
+Tähän asti olen enimmäkseen antanut pitkän listauksen asioista, joita ei tulisi tehdä. Mutta mitä sitten *tulisi* tehdä? Tässä kiteytys nollahypoteesimerkitsevyystestauksesta:
+
+1.  Päätä, mitä suhdetta haluat testata ja miksi.
+2.  Aseta vaihtoehtohypoteesi (mahdollinen tulos).
+3.  Aseta nollahypoteesi vaihtoehtohypoteesin negaationa.
+4.  Kerää data, joka edustaa suhdetta ja hypoteesejasi.
+5.  Suunnittele testi, joka voi osoittaa nollahypoteesisi "vääräksi" (eli hae tulos, joka voisi olla epätodennäköinen nollahypoteesin alla).
+6.  Määrittele, mitä tarkoitat "epätodennäköisellä" - aseta alfa-arvosi.
+7.  Tarkista testin todennäköisyysarvo (p-arvo).
+8.  Jos testin todennäköisyysarvo on **alle alfa-arvon**, voit todeta, että tulos olisi epätodennäköinen nollahypoteesin alla.
+9.  Jos testin todennäköisyys sen sijaan on **yli alfa-arvon**, et voi todeta tätä. Tätä kutsutaan **nollatulokseksi** - julkaise myös se!

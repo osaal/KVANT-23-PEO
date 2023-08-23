@@ -13,12 +13,20 @@ Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pu
 **Uudet luvut**:
 
 -   T-testin teoria ja toimeenpano Excelissä.
+-   Korrelaation teoria ja toimeenpano Excelissä. (EI KIRJOITETTU)
+-   Ei-parametristen testien teoria ja toimeenpano Excelissä. (EI KIRJOITETTU)
+-   Hypoteesitestauksen luku.
+-   Luku linearisten mallien oletuksista
 
 **Muutokset**:
 
 -   Funktiot-luvun tiedostonimi uudelleennimetty vastaamaan luvun nimeä.
 -   T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.
 -   T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.
+-   Lisätty README-tiedosto GitHubia varten.
+-   Lisätty verkkokirjan viittausohje etusivulle.
+-   Lisätty navigointitietoa etusivulle.
+-   Muutettu sivupalkin oletustasoa, jotta ikkunassa olisi enemmän tyhjää tilaa.
 
 ### 0.9
 

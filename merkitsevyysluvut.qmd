@@ -158,4 +158,4 @@ Kun kyseessä on vain yhden virhemarginaalin raportointi, [tavan mukaan raportoi
 
 Virhemarginaali on vaihtoehto luottamusvälille, mutta luottamusväli on tarkempi mitta jota myös käytetään useammin tieteellisessä tutkimuksessa. Suosittelen siis lukijalle, että välttäisit virhemarginaalin käyttöä sen harhaanjohtavuuden takia.
 
-Virhemarginaalille ei löydy suoraa kaavaa Excelissä. Sen implementointi on kuitenkin yksinkertaista - `NORMITA(x; keskiarvo; keskihajonta) * (``VAR.S(alue) / NELIÖJUURI(datamäärä))` . Laske siis ensin `x`-arvon z-arvo, kerro se sitten keskivirheellä (joka lasketaan jakamalla varianssi datamäärän neliöjuurella).
+Virhemarginaalille ei löydy suoraa kaavaa Excelissä. Sen implementointi on kuitenkin yksinkertaista - ``` NORMITA(x; keskiarvo; keskihajonta) * (``VAR.S(alue) / NELIÖJUURI(datamäärä)) ``` . Laske siis ensin `x`-arvon z-arvo, kerro se sitten keskivirheellä (joka lasketaan jakamalla varianssi datamäärän neliöjuurella).

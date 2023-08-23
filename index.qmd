@@ -4,6 +4,10 @@ Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille *Kvan
 
 Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).
 
+Kirjan vasemmalla puolella löytyy jokaisen sivun sisällysluettelo. Voit käyttää sitä hypätäksesi suoraan johonkin alalukuun.
+
+Jos siirrät hiiren jonkun luvun otsikon päälle, voit klikata pientä ketjuikonia, jolloin sivun osoitteeksi muuttuu suora linkki siihen otsikkoon. Tällä tavalla voit esimerkiksi lisätä kyseisen luvun tai alaluvun suoraan kirjanmerkkeihisi tai jakaa linkin muille. 
+
 Mukavia tilastollisia työhetkiä!
 
 **Kirjan versio**: {{< var version >}}
@@ -25,3 +29,9 @@ Verkkokirjan lähdekoodi on saatavilla [GitHubissa](https://github.com/osaal/KVA
 ## Tekijänoikeudet {#sec-tekijänoikeudet}
 
 Tämä verkkokirja käyttää [Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen](https://creativecommons.org/licenses/by-nc/4.0/deed.fi) (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.
+
+## Viittaaminen {#sec-viittaaminen-kirja}
+
+Voit viitata tähän kirjaan muodossa:
+
+> Saal, O. (2023). Kvantitatiiviset menetelmät -kurssin verkkokirja. \[Versio {{< var version >}}\]. https://osaal.github.io/KVANT-23-PEO/.
