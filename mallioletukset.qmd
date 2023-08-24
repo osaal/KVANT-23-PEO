@@ -2,7 +2,7 @@
 
 Tilastollisilla malleilla on **oletuksia** datasi muodosta ja käyttäytymisestä. Näihin oletuksiin on tärkeää vastata, sillä mallin matemaattinen toiminta on todettu vain tilanteissa, jossa oletukset täyttyvät. Jos jokin oletus ei täyty, se voi vaikuttaa hyvin eri tavoin mallin tuloksiin - ja pahimmassa tapauksessa johtaa täysin vääriin tuloksiin.
 
-## Lineaarisen mallin perusoletukset
+## Lineaarisen mallin perusoletukset {#sec-lineaarisen-mallin-perusoletukset}
 
 Kaikki tilastolliset testit joita sovelletaan tällä kurssilla tulevat niin sanotusta **lineaaristen mallien perheestä**. Tämä yksinkertaisesti tarkoittaa, että ne mallintavat kahden muuttujan välistä suhdetta suorana käyränä, eikä esim. parabolina tai potenssikäyränä.
 
@@ -16,7 +16,7 @@ Kaikille malleille, myös ei-lineaarisille, ensimmäinen ja ehkä tärkein virhe
 
 Näiden lisäksi lineaarisilla malleilla on seuraavat oletukset: **additiviteetti, lineariteetti, normaalijakautuminen, varianssihomogeniteetti** sekä **riippumattomuus**.
 
-### Additiviteetti ja lineariteetti
+### Additiviteetti ja lineariteetti {#sec-additiviteetti-ja-lineariteetti-teoria}
 
 Ensimmäiset oletukset ovat suhteellisen yksinkertaisia, mutta erittäin tärkeitä lineaarisille malleille.
 
@@ -24,7 +24,7 @@ Ensimmäiset oletukset ovat suhteellisen yksinkertaisia, mutta erittäin tärkei
 
 **Lineariteetilla** taas tarkoitetaan, että muuttujien välinen suhde tulisi olla selitettävissä **suoralla käyrällä**. Suhteen ei siis pidä olla parabolinen, eksponentiaalinen tai logaritminen. Tämän tunnistaa helpoiten piirtämällä **pistekaavion** muuttujista (ks. @sec-pistekaavio-teoria) ja tarkastamalla, asettuvatko pisteet jokseenkin suoralle viivalle. Jos suhde ei ole lineaarinen, lineaariset mallit eivät luonnollisesti kuvasta suhdetta varsin hyvin. Tämän voi korjata linearisoimalla data logaritmilla tai potenssilla (riippuen suhteen muodosta), tai vaihtamalla epälineaarisiin malleihin.
 
-### Normaalijakautuminen
+### Normaalijakautuminen {#sec-normaalijakautuminen-teoria}
 
 Lineaarisissa malleissa **jonkun asian** tulee olla normaalijakautunut, eli seurata normaalijakaumaa. Tämä ei kuitenkaan tarkoita itse dataa! Mitä tämä tarkoittaa, riippuu aina hieman itse mallista.
 
@@ -34,7 +34,7 @@ Lineaarisissa malleissa **jonkun asian** tulee olla normaalijakautunut, eli seur
 
 Monimuuttujamalleissa myös **virhemittauksen tulisi olla normaalijakautunut**. Koska tämä kurssi ei käsittele monimuuttujamalleja, tästä ei tarvitse kummemmin välittää.
 
-### Varianssihomogeniteetti
+### Varianssihomogeniteetti {#sec-varianssihomogeniteetti-teoria}
 
 **Varianssihomogeniteetti**, myös **homoskedastisiteetti**, on oikea hirviösana. Sillä tarkoitetaan, että muuttujan varianssi (vaihtelu) tulisi olla sama toisen muuttujan kaikilla kategorioilla. Jos piirrämme pistekaavion kahden muuttujan välisestä suhteesta, vaihtelu yhdellä muuttujalla tulisi siis pysyä jokseenkin samana kaikilla tasoilla toista muuttujaa. Tämän ymmärtää helpoiten kuvassa:
 
@@ -50,7 +50,7 @@ Skedastisuuden esimerkkejä. Molemmat kuvat ovat lisenssoitu CC-BY-SA 4.0 -lisen
 
 [Jos heteroskedastisuutta esiintyy (eli suhde ei ole varianssihomogeninen)]{.underline}, monet kaksimuuttujamitat voivat olla hieman väärässä. Näille löytyy kuitenkin usein **robusti** versio, tai toinen vaihtoehto. Tarkista aina jokaisen testin kohdalla, mitä tulisi tehdä jos testattava suhteesi on heteroskedastinen!
 
-### Riippumattomuus
+### Riippumattomuus {#sec-riippumattomuus-teoria}
 
 **Riippumattomuus** viittaa virhemittausten riippumattomuuten. Toisin sanoen, jokaisen muuttujan virhemittaus (ero suhteen mittariin, esim. korrelaatioon, regressioon tai keskiarvoon) tulisi olla riippumaton kaikista muista. Jos virheiden välillä esiintyy korrelaatiota, riippumattomuuden oletus on rikottu.
 

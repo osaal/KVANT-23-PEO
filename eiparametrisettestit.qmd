@@ -1,1 +1,7 @@
 # Ei-parametriset testit {#sec-ei-parametriset-testit}
+
+## Merkkitesti
+
+## Wilcoxonin signed-rank-testi
+
+## Mann-Whitney'n U-testi
