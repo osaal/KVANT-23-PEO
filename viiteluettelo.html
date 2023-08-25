@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - Päivityshistoria</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - Viiteluettelo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./viiteluettelo.html" rel="prev">
+<link href="./history.html" rel="next">
+<link href="./zotero.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -67,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -76,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./history.html">Päivityshistoria</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./viiteluettelo.html">Viiteluettelo</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -294,13 +314,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
+  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Viiteluettelo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link active">
+  <a href="./history.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Päivityshistoria</span></a>
   </div>
 </li>
@@ -310,21 +330,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
-    <h2 id="toc-title">Sisällysluettelo</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">1.0</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.9</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Päivityshistoria</h1>
+<h1 class="title">Viiteluettelo</h1>
 </div>
 
 
@@ -339,55 +352,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Tällä sivulla näet verkkokirjan päivityshistorian. Yritän pitää tämän niin ajantasalla ja tarkkana kuin voin, mutta mahdolliset pienet korjaukset voivat vahingossa mennä sivu suun.</p>
-<p>Julkaisunumerot ovat muodossa MAJOR.MINOR. MINOR-päivitykset voivat sisältää uusia lukuja, korjauksia ynnä muita viilauksia; MAJOR-päivitykset ovat suuria muutoksia kirjaan (joita ei taida tulla usein).</p>
-<div class="page-columns page-full"><p>Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pull Request on mergattu kirjaan<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, päivitystiedoissa löytyy linkki kyseiseen Issueen tai Pull Requestiin.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Pahoittelen tätä englannin käyttöä…</p></li></div></div>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">1.0</h3>
-<p><strong>Julkaisupäivämäärä</strong>: 25.8.2023.</p>
-<p><strong>Uudet luvut</strong>:</p>
-<ul>
-<li>T-testin teoria ja toimeenpano Excelissä.</li>
-<li>Korrelaation teoria ja toimeenpano Excelissä.</li>
-<li>Ei-parametristen testien teoria ja toimeenpano Excelissä.</li>
-<li>Hypoteesitestauksen luku.</li>
-<li>Luku linearisten mallien oletuksista</li>
-</ul>
-<p><strong>Muutokset</strong>:</p>
-<ul>
-<li>Kaikkien lukujen tiedostot uudelleennimetty vastaamaan luvun otsikkoa.</li>
-<li>Muutettu sivupalkin oletustasoa, jotta ikkunassa olisi enemmän tyhjää tilaa.</li>
-<li>Historiarakenne muutettu niin, että jokaisen version historia löytyy omasta tiedostostaan.</li>
-<li>Lisätty README-tiedosto GitHubia varten.</li>
-<li>Etusivulle lisätty verkkokirjan viittausohje, navigointitietoa, lähdekooditietoa sekä uusimman version päivityshistoria.</li>
-<li>T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.</li>
-<li>T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.</li>
-<li>Kahden otoksen heteroskedastisen t-suureen LAMBDA-kaavio laskee nyt ryhmitetyn varianssin automaattisesti, ilman toissijaista funktiota. <code>RYHMVAR</code>-funktiota kirjan aikaisemmasta versiosta ei tule käyttää enää.</li>
-<li>Lisätty LAMBDA-funktiot korrelaatiokertoimen todennäköisyyslaskennalle.</li>
-<li>Lisätty alaluku “Merkitsevyystestit” Funktiot-lukuun.</li>
-<li>Lisätty funktiot:
-<ul>
-<li><code>BINOMI.JAKAUMA</code> (“Merkitsevyystestit”)</li>
-<li><code>NORM_JAKAUMA.NORMITA</code> (“Merkitsevyystestit”)</li>
-<li><code>ARVON.MUKAAN.KESKIARVO</code> ja <code>ARVON.MUKAAN.TASAN</code> (“Järjestyslukujen laskeminen”)</li>
-</ul></li>
-</ul>
-</section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">0.9</h3>
-<p><strong>Julkaisupäivämäärä</strong>: 22.8.2023</p>
-<ul>
-<li>Kirjan esiversio julkaistu.</li>
-</ul>
-<p><strong>Tunnistetut ongelmat</strong>:</p>
-<ul>
-<li>Jotkut luvut ovat tyhjiä.</li>
-<li>Monista luvuista puuttuu lukuviittaukset.</li>
-<li>Kirjoitusvirheitä…</li>
-</ul>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cohen1988" class="csl-entry" role="listitem">
+Cohen, Jacob. 1988. <em>Statistical Power Analysis for the Behavioral
+Sciences</em>. 2nd ed. Hillsdale, NJ: Erlbaum.
+</div>
+<div id="ref-gelman2006" class="csl-entry" role="listitem">
+Gelman, Andrew, and Hal Stern. 2006. <span>“The Difference Between
+<span>“</span>Significant<span>”</span> and <span>“</span>Not
+Significant<span>”</span> Is Not Itself Statistically
+Significant.”</span> <em>The American Statistician</em> 60 (4): 328–31.
+<a href="https://doi.org/10.1198/000313006X152649">https://doi.org/10.1198/000313006X152649</a>.
+</div>
+<div id="ref-gillies1993" class="csl-entry" role="listitem">
+Gillies, Donald. 1993. <em>Philosophy of Science in the Twentieth
+Century: Four Central Themes</em>. Oxford: Blackwell Publishing.
+</div>
+<div id="ref-kiikeri2004" class="csl-entry" role="listitem">
+Kiikeri, Mika, and Petri Ylikoski. 2004. <em>Tiede Tutkimuskohteena.
+Filosofinen Johdatus Tieteentutkimukseen.</em> Helsinki: Gaudeamus.
+</div>
+<div id="ref-lakatos1970" class="csl-entry" role="listitem">
+Lakatos, Imre, and Alan Musgrave. 1970. <span>“Criticism and the Growth
+of Knowledge.”</span> In, 4:1–282. <a href="https://doi.org/10.1017/s0031819100017101">https://doi.org/10.1017/s0031819100017101</a>.
+</div>
+<div id="ref-nichols" class="csl-entry" role="listitem">
+Nichols, David. n.d. <span>“Coloring for Colorblindness.”</span> <a href="http://www.davidmathlogic.com/colorblind/">http://www.davidmathlogic.com/colorblind/</a>.
+</div>
+<div id="ref-nieminen2020" class="csl-entry" role="listitem">
+Nieminen, Anniina. 2020. <span>“Puna-vihersokeuden huomioiminen
+infografiikassa.”</span> Opinnäytetyö, Helsinki. <a href="https://www.theseus.fi/bitstream/handle/10024/347990/nieminen_anniina.pdf?sequence=2">https://www.theseus.fi/bitstream/handle/10024/347990/nieminen_anniina.pdf?sequence=2</a>.
+</div>
+<div id="ref-popper1959" class="csl-entry" role="listitem">
+Popper, Karl. 1959. <em>The Logic of Scientific Discovery</em>. London:
+Routledge.
+</div>
+</div>
 
-
-</section>
 
 
 </main> <!-- /main -->
@@ -626,15 +627,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./viiteluettelo.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viiteluettelo</span>
+      <a href="./zotero.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./history.html" class="pagination-link">
+        <span class="nav-page-text">Päivityshistoria</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></div></div></footer></body></html>
