@@ -11,8 +11,8 @@ book:
     - index.qmd
     - part: "Ohjeita"
       chapters:
-      - grafiikka.qmd
-      - viittaaminen.qmd
+      - visualisoinninalkeet.qmd
+      - ohjeitaviittaamiseen.qmd
     - part: "Tilastotiede"
       chapters:
       - hypoteesitestaus.qmd
@@ -28,19 +28,19 @@ book:
       chapters:
       - excelinperusteet.qmd
       - excelinkäyttöliittymä.qmd
-      - nimienhallinta.qmd
-      - exceltoimintoja.qmd
+      - nimeäminenexcelissä.qmd
+      - yleisiätoimintoja.qmd
       - excelgrafiikka.qmd
       - funktiot.qmd
       - lambdakaavat.qmd
     - part: "Työkalut"
       chapters:
       - webropol.qmd
-      - muuttilastotyökalut.qmd
+      - tilastotyökalut.qmd
       - dmptuuli.qmd
       - tietoarkistot.qmd
       - zotero.qmd
-    - references.qmd
+    - viiteluettelo.qmd
     - history.qmd
   sidebar:
     style: floating

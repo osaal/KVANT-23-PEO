@@ -1,0 +1,11 @@
+### 0.9
+
+**Julkaisupäivämäärä**: 22.8.2023
+
+-   Kirjan esiversio julkaistu.
+
+**Tunnistetut ongelmat**:
+
+-   Jotkut luvut ovat tyhjiä.
+-   Monista luvuista puuttuu lukuviittaukset.
+-   Kirjoitusvirheitä...

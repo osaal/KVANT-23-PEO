@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="prev">
+<link href="./viiteluettelo.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -120,13 +120,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
+  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
+  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
   </div>
 </li>
@@ -220,13 +220,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
@@ -267,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
+  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
@@ -293,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viiteluettelo</span></a>
   </div>
 </li>
@@ -343,18 +343,18 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-columns page-full"><p>Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pull Request on mergattu kirjaan<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, päivitystiedoissa löytyy linkki kyseiseen Issueen tai Pull Requestiin.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Pahoittelen tätä englannin käyttöä…</p></li></div></div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">1.0</h3>
-<p><strong>Julkaisupäivämäärä</strong>: EI VIELÄ JULKAISTU.</p>
+<p><strong>Julkaisupäivämäärä</strong>: 25.8.2023.</p>
 <p><strong>Uudet luvut</strong>:</p>
 <ul>
 <li>T-testin teoria ja toimeenpano Excelissä.</li>
 <li>Korrelaation teoria ja toimeenpano Excelissä.</li>
-<li>Ei-parametristen testien teoria ja toimeenpano Excelissä. (EI KIRJOITETTU)</li>
+<li>Ei-parametristen testien teoria ja toimeenpano Excelissä.</li>
 <li>Hypoteesitestauksen luku.</li>
 <li>Luku linearisten mallien oletuksista</li>
 </ul>
 <p><strong>Muutokset</strong>:</p>
 <ul>
-<li>Funktiot-luvun tiedostonimi uudelleennimetty vastaamaan luvun nimeä.</li>
+<li>Kaikkien lukujen tiedostot uudelleennimetty vastaamaan luvun otsikkoa.</li>
 <li>T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.</li>
 <li>T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.</li>
 <li>Kahden otoksen heteroskedastisen t-suureen LAMBDA-kaavio laskee nyt ryhmitetyn varianssin automaattisesti, ilman toissijaista funktiota. <code>RYHMVAR</code>-funktiota kirjan aikaisemmasta versiosta ei tule käyttää enää.</li>
@@ -363,6 +363,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Lisätty navigointitietoa etusivulle.</li>
 <li>Muutettu sivupalkin oletustasoa, jotta ikkunassa olisi enemmän tyhjää tilaa.</li>
 <li>Lisätty LAMBDA-funktiot korrelaatiokertoimen todennäköisyyslaskennalle.</li>
+<li>Lisätty funktiot:
+<ul>
+<li><code>BINOMI.JAKAUMA</code> (“Merkitsevyystestit”)</li>
+<li><code>NORM_JAKAUMA.NORMITA</code> (“Merkitsevyystestit”)</li>
+<li><code>ARVON.MUKAAN.KESKIARVO</code> ja <code>ARVON.MUKAAN.TASAN</code> (“Järjestyslukujen laskeminen”)</li>
+</ul></li>
+<li>Lisätty alaluku “Merkitsevyystestit” Funktiot-lukuun.</li>
+<li>Historiarakenne muutettu niin, että jokaisen version historia löytyy omasta tiedostostaan.</li>
 </ul>
 </section>
 <section id="section-1" class="level3">
@@ -618,7 +626,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./references.html" class="pagination-link">
+      <a href="./viiteluettelo.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viiteluettelo</span>
       </a>          
   </div>

@@ -4,40 +4,10 @@ Tällä sivulla näet verkkokirjan päivityshistorian. Yritän pitää tämän n
 
 Julkaisunumerot ovat muodossa MAJOR.MINOR. MINOR-päivitykset voivat sisältää uusia lukuja, korjauksia ynnä muita viilauksia; MAJOR-päivitykset ovat suuria muutoksia kirjaan (joita ei taida tulla usein).
 
-Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pull Request on mergattu kirjaan^[Pahoittelen tätä englannin käyttöä...], päivitystiedoissa löytyy linkki kyseiseen Issueen tai Pull Requestiin.
+Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pull Request on mergattu kirjaan[^history-1], päivitystiedoissa löytyy linkki kyseiseen Issueen tai Pull Requestiin.
 
-### 1.0
+[^history-1]: Pahoittelen tätä englannin käyttöä...
 
-**Julkaisupäivämäärä**: EI VIELÄ JULKAISTU.
+{{< include historia/_1.0.qmd >}}
 
-**Uudet luvut**:
-
--   T-testin teoria ja toimeenpano Excelissä.
--   Korrelaation teoria ja toimeenpano Excelissä.
--   Ei-parametristen testien teoria ja toimeenpano Excelissä. (EI KIRJOITETTU)
--   Hypoteesitestauksen luku.
--   Luku linearisten mallien oletuksista
-
-**Muutokset**:
-
--   Funktiot-luvun tiedostonimi uudelleennimetty vastaamaan luvun nimeä.
--   T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.
--   T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.
--   Kahden otoksen heteroskedastisen t-suureen LAMBDA-kaavio laskee nyt ryhmitetyn varianssin automaattisesti, ilman toissijaista funktiota. `RYHMVAR`-funktiota kirjan aikaisemmasta versiosta ei tule käyttää enää.
--   Lisätty README-tiedosto GitHubia varten.
--   Lisätty verkkokirjan viittausohje etusivulle.
--   Lisätty navigointitietoa etusivulle.
--   Muutettu sivupalkin oletustasoa, jotta ikkunassa olisi enemmän tyhjää tilaa.
--   Lisätty LAMBDA-funktiot korrelaatiokertoimen todennäköisyyslaskennalle.
-
-### 0.9
-
-**Julkaisupäivämäärä**: 22.8.2023
-
--   Kirjan esiversio julkaistu.
-
-**Tunnistetut ongelmat**:
-
--   Jotkut luvut ovat tyhjiä.
--   Monista luvuista puuttuu lukuviittaukset.
--   Kirjoitusvirheitä...
+{{< include historia/_0.9.qmd >}}

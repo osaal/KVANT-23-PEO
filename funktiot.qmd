@@ -62,7 +62,7 @@ Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritell�
 Tietopyyntökomentojen eri määritelmät:
 
 | Komento        | Palautus                                                                                                                                                                                                                 |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------|-----------------------------------------------------------|
 | "osoite"       | Soluviittauksen osoite tekstinä (esim. A2)                                                                                                                                                                               |
 | "sarake"       | Solun sarake numerona (esim. 2 sarakkeelle B)                                                                                                                                                                            |
 | "väri"         | Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.                                                                                                                                                 |
@@ -705,6 +705,30 @@ Ensimmäiset kaksi avainsanaa määrittelevät kaksi matriisia, joita halutaan v
 Huomaa, että laji 1 ei toimi, jos matriiseissa on eri määrät arvoja.
 
 **Funktio ei laske testisuuretta!** Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat luvusta [-@sec-lambda-kaavoja].
+
+#### Järjestyslukujen laskeminen
+
+`=ARVON.MUKAAN.TASAN(luku; alue; järjestys)`, `=ARVON.MUKAAN.KESKIARVO(luku; alue; järjestys)`
+
+Funktioilla lasket järjestysluvut jollekin lukusarjalle. Funktioiden erona on miten ne käsittelevät tasajärjestystä: `.TASAN` palauttaa saman järjestysluvun kaikille tasajärjestysluvuille, ja `.KESKIARVO` palauttaa tasajärjestyslukujen keskiarvon järjestyslukuna.
+
+Avainsana `luku` määrittelee, minkä luvun järjestysluvun haluat laskea. Avainsana `alue` määrittelee alueen, jossa haluat laskea järjestysluvut (eli kaikki luvut, joiden mukaan järjestysluku lasketaan). Valinnainen avainsana `järjestys` määrittelee nousevan `1` tai laskevan `0` järjestyksen; oletuksena on laskeva järjestys.
+
+### Merkitsevyystestit
+
+#### BINOMI.JAKAUMA
+
+`=BINOMI.JAKAUMA(luku; yritykset; todennäköisyys; kumulatiivinen)`
+
+Funktio hakee p-arvon määritetylle binomijakaumalle. Funktiota käytetään mm. merkkitestin toteuttamisessa. Avainsanalla `luku` määrittelet merkkimäärän, jota haluat testata. Avainsanalla `yritykset` määrittelet otoskoon. Avainsanalla `todennäköisyys` määrittelet todennäköisyysrajan - merkkitestissä aina `0,5`. Avainsanalla `kumulatiivinen` määrittelet, haluatko kumulatiivisen jakaumafunktion `EPÄTOSI` vai tiheysfunktion `TOSI` - merkkitestissä käytetään kumulatiivista jakaumaa.
+
+#### NORM_JAKAUMA.NORMITA
+
+`=NORM_JAKAUMA.NORMITA(z; kumulatiivinen)`
+
+Funktio hakee p-arvon määritetylle normaalijakauman z-arvolle.
+
+Avainsanalla `z` määrittelet z-arvon. Avainsanalla `kumulatiivinen` määrittelet, haetko kumulatiivisen jakaumafunktion `TOSI` vai todennäköisyystiheysfunktion `EPÄTOSI`. Yleensä haluat tällä kurssilla tiheysfunktion.
 
 ## Tekstifunktiot {#sec-tekstifunktiot}
 

@@ -1,0 +1,28 @@
+### 1.0
+
+**Julkaisupäivämäärä**: 25.8.2023.
+
+**Uudet luvut**:
+
+-   T-testin teoria ja toimeenpano Excelissä.
+-   Korrelaation teoria ja toimeenpano Excelissä.
+-   Ei-parametristen testien teoria ja toimeenpano Excelissä.
+-   Hypoteesitestauksen luku.
+-   Luku linearisten mallien oletuksista
+
+**Muutokset**:
+
+-   Kaikkien lukujen tiedostot uudelleennimetty vastaamaan luvun otsikkoa.
+-   Muutettu sivupalkin oletustasoa, jotta ikkunassa olisi enemmän tyhjää tilaa.
+-   Historiarakenne muutettu niin, että jokaisen version historia löytyy omasta tiedostostaan.
+-   Lisätty README-tiedosto GitHubia varten.
+-   Etusivulle lisätty verkkokirjan viittausohje, navigointitietoa, lähdekooditietoa sekä uusimman version päivityshistoria.
+-   T-testin tiedot siirretty uuteen lukuun, korjattu ja muotoiltu.
+-   T-testin LAMBDA-funktiot siirretty lukuun LAMBDA-kaavoista.
+-   Kahden otoksen heteroskedastisen t-suureen LAMBDA-kaavio laskee nyt ryhmitetyn varianssin automaattisesti, ilman toissijaista funktiota. `RYHMVAR`-funktiota kirjan aikaisemmasta versiosta ei tule käyttää enää.
+-   Lisätty LAMBDA-funktiot korrelaatiokertoimen todennäköisyyslaskennalle.
+-   Lisätty alaluku "Merkitsevyystestit" Funktiot-lukuun.
+-   Lisätty funktiot:
+    - `BINOMI.JAKAUMA` ("Merkitsevyystestit")
+    - `NORM_JAKAUMA.NORMITA` ("Merkitsevyystestit")
+    - `ARVON.MUKAAN.KESKIARVO` ja `ARVON.MUKAAN.TASAN` ("Järjestyslukujen laskeminen")

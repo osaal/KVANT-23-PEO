@@ -132,7 +132,7 @@ $$
 
 Kuten tuloksesta näkee, luottamusväli kasvoi kun käytimme pienen otoksen kaavaa. Tämä tarkoittaa vain, että meidän otantakoolla ei voida hyvin luotettavasti rajata aluetta, jonka sisälle todellinen keskiarvo mahdollisesti osuisi. Tarvitsemme enemmän dataa.
 
-Luottamusvälille ei löydy suoraa kaavaa Excelissä. Sen sijaan voit implementoida yllä olevat yhtälöt itse, tai käyttää verkkokirjasta löytyviä LAMBDA-kaavoja (ks. @sec-luottamusväli-kaavat).
+Luottamusvälille ei löydy suoraa kaavaa Excelissä. Sen sijaan voit implementoida yllä olevat yhtälöt itse - pystyt kyllä siihen!
 
 ## Virhemarginaali {#sec-virhemarginaali-teoria}
 

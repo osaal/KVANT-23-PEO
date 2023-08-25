@@ -12,7 +12,7 @@ Mukavia tilastollisia työhetkiä!
 
 **Kirjan versio**: {{< var version >}}
 
-**Päivityshistoria** löytyy kirjan viimeisestä luvusta.
+**Päivityshistoria** löytyy kirjan viimeisestä luvusta. Uusimman päivityksen tiedot löydät alla (@sec-uusin-paivitys).
 
 ## Kirjan oikeellisuus ja mahdolliset virheet {#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet}
 
@@ -35,3 +35,7 @@ Tämä verkkokirja käyttää [Creative Commons Nimeä-EiKaupallinen 4.0 Kansain
 Voit viitata tähän kirjaan muodossa:
 
 > Saal, O. (2023). Kvantitatiiviset menetelmät -kurssin verkkokirja. \[Versio {{< var version >}}\]. https://osaal.github.io/KVANT-23-PEO/.
+
+## Uusin päivitys {#sec-uusin-paivitys}
+
+{{< include historia/_1.0.qmd >}}
