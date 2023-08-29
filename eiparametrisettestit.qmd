@@ -1,20 +1,22 @@
 # Ei-parametriset testit {#sec-ei-parametriset-testit}
 
-**Ei-parametriset testit** ovat perhe testejä, joilla on vähemmän odotuksia datan jakaumalta ja vähemmän mallioletuksia kuin parametrisilla lineaarisilla testeillä. Näitä testejä voi käyttää useassa tapauksessa, jossa lineaarisen testin oletukset eivät täyty - esimerkiksi jos otoskoko on pieni.
+**Ei-parametriset testit** ovat testiperhe, jolla on vähemmän odotuksia datan jakaumalta ja vähemmän mallioletuksia kuin parametrisilla lineaarisilla testeillä. Näitä testejä voi käyttää useimmissa tapauksissa, joissa lineaarisen testin oletukset eivät täyty, esimerkiksi jos otoskoko on pieni.
 
-Yhteiskunta- ja ihmistieteissä **muut robustit mitat**, esimerkiksi bootstrap-mitat, ovat korvanneet ei-parametriset testit nykyään. Kuitenkaan mm. bootstrappingia on vaikea tehdä Excelissä, ja ei-parametrisiä testejä käytetään myös yleisesti luonnontieteissä, joten niiden osaaminen on tärkeää.
+Yhteiskunta- ja ihmistieteissä **muut robustit mitat**, esimerkiksi **bootstrap**-mitat, ovat pitkälti korvanneet ei-parametriset testit. Näitä on kuitenkin vaikea tehdä Excelissä, ja ei-parametrisiä testejä käytetään myös yleisesti luonnontieteissä, joten niiden osaaminen on tärkeää.
 
-Perusajatuksena ei-parametrisissa testeissä on, että data **järjestetään** ensin, ja merkitsevyys- sekä erotestit tuotetaan järjestysnumeroiden pohjalta. Tämä korjaa esimerkiksi ääripääarvojen ja vinouman vääristymiä (kahdeskymmenes datapiste on aina kahdeskymmenes datapiste, olkoon kuinka iso tahansa verrattuna muihin datapisteisiin!)
+Perusajatuksena ei-parametrisissa testeissä on, että data ensin **järjestetään**, jolloin merkitsevyys- sekä erotestit tuotetaan järjestysnumeroiden pohjalta. Tämä korjaa esimerkiksi ääripääarvojen ja vinouman vääristymiä.[^eiparametrisettestit-1]
+
+[^eiparametrisettestit-1]: Kahdeskymmenes datapiste on aina kahdeskymmenes datapiste, olkoon kuinka iso tahansa verrattuna muihin datapisteisiin!
 
 Ei-parametriset testit voivat kuulostaa loistavalta vaihtoehdolta: ne testaavat merkitsevyyttä, mutta ne eivät vaadi suuria otoskokoja tai useampien mallioletusten täyttymistä! [Negatiivisena puolena ei-parametrisillä testeillä on yleensä matalampi **tilastollinen voima** (engl. *statistical power*).]{.underline} Tilastollisella voimalla tarkoitetaan testin kykyä tunnistaa **todelliset positiiviset**, eli hylätä nollahypoteesi tilanteessa, jossa sen pitikin hylätä. Matalan voiman testeillä todellisia positiivisia tunnistetaan heikommin, jolloin tulee useammin vastaan tilanteita, joissa et pysty hylkäämään nollahypoteesia vaikka sen hylkääminen todellisuudessa olisi oikein.
 
 Tämän takia nyrkkisääntönä onkin, että [käytät parametrisia lineaarisia malleja jos ja kun mallioletukset täyttyvät]{.underline}, ja ei-parametrisia testejä vain jos mallioletukset eivät täyty.
 
-## Merkkitesti
+## Merkkitesti {#sec-merkkitesti-teoria}
 
 **Mittausasteikot**: Järjestysasteikosta ylöspäin
 
-**Merkkitesti** on yksimuuttujatesti, eli vastaa parametristä **yhden otoksen t-testiä**. Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettamana mediaani. T-testissä käytetään keskiarvoa, ja usein nollahypoteesille arvoa $0$; merkkitestissä käytetään mediaania, jonka lisäksi määritellään arvo, jota vastaan testataan.
+**Merkkitesti** on yksimuuttujatesti, eli vastaa parametristä **yhden otoksen t-testiä**. Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.
 
 [Merkkitestin voi toteuttaa **yksi-** tai **kaksihäntäisenä**]{.underline}. Tämän tunnistaa helpoiten nolla- ja vaihtoehtohypoteesin muotoilusta:
 
@@ -22,21 +24,21 @@ Tämän takia nyrkkisääntönä onkin, että [käytät parametrisia lineaarisia
 >
 > Jos vaihtoehtohypoteesisi ehdottaa suuntaa ja eroa ("populaatiomediaani on suurempi/pienempi kuin X"), merkkitesti tulee toteuttaa **yksihäntäisenä**.
 
-[Merkkitestin voi myös tehdä kahden muuttujan välillä]{.underline}, jolloin tarkastetaan erojen mediaani. Tällöin testi voi olla **parittainen** merkkitesti. Tämä on suoraan verrattavissa parittaiseen t-testiin. Huomioi, että merkkitestiä ei voi tehdä kahden otoksen ei-paritetulle muuttujaparille (tilanteeseen, jossa muuttujat edustavat esim. eri ryhmiä). Tällöin on käytettävä jotain muuta testiä, esim. Mann-Whitney'n U-testiä (ks. alla).
+[Merkkitestin voi myös tehdä kahden muuttujan välillä]{.underline}, jolloin tarkastetaan erojen mediaani. Tällöin testi voi olla **parittainen** merkkitesti. Tämä on suoraan verrattavissa **parittaiseen t-testiin**. Huomioi, että merkkitestiä ei voi tehdä kahden otoksen ei-paritetulle muuttujaparille (eli tilanteessa, jossa muuttujat edustavat eri ryhmiä). Tällöin on käytettävä jotain muuta testiä, esim. Mann-Whitney'n U-testiä (ks. @sec-mann-whitneyn-u-testi).
 
 [Merkkitestin ideana]{.underline} on, että tutkija määrittelee jokaiselle arvolle **merkin** $+$, $-$ tai $0$. Nämä osoittavat, onko arvo yli, ali vai sama kuin nollahypoteesin ehdottama arvo $k$. Jos esimerkiksi nollahypoteesi ehdottaa, että populaation mediaani on $5$, niin merkataan kaikki arvot yli viiden plus-merkillä, kaikki alle viiden minus-merkillä, ja kaikki viiden arvot nollalla.
 
-[Merkkauksen jälkeen kaikki plussat, minukset ja nollat lasketaan]{.underline}. Sitten käytetään **binomijakaumaa** hakeaksemme, kuinka todennäköistä oli saada niin monta plussaa/minusta kuin datamme näyttää, jos nollahypoteesi on tosi (ja plussien/minusten määrä tulisi olla sama ja mediaanin ympäröimä).
+[Merkkauksen jälkeen kaikki plussat, minukset ja nollat lasketaan]{.underline}. Sitten käytetään **binomijakaumaa** hakeaksemme, kuinka todennäköistä oli saada niin monta plussaa/minusta kuin datamme näyttää, jos nollahypoteesi on tosi (ja plussien/minusten määrä tulisi olla sama ja siten mediaanin ympäröimä).
 
-### Mallioletukset
+### Mallioletukset {#sec-merkkitesti-mallioletukset}
 
 Vaikka merkkitesti on ei-parametrinen testi, sillä on kuitenkin joitain mallioletuksia.
 
 [Kaikki merkkitestivariantit olettavat, että muuttuja(t) on/ovat **satunnaisesti otettuja populaatiosta**]{.underline}. Jos näin ei ole, testin jakaumaoletus ei välttämättä mallinna todellista suhdetta luotettavasti. Tämä oletus pätee käytännössä kaikkiin frekvenssitilastotieteen malleihin, joten sitä ei edes usein ilmaista oletuksena.
 
-[Parittainen merkkitesti olettaa, että muuttujat voidaan **parittaa riveittäin**]{.underline}. Toisin sanoen, muuttujien pitää olla riippuvaisia toisistaan.
+[Parittainen merkkitesti olettaa, että muuttujat voidaan **parittaa riveittäin**]{.underline}. Toisin sanoen, muuttujien pitää olla riippuvaisia toisistaan. Jokaiselle yksikölle tulee löytyä arvo molemmilla muuttujilla.
 
-### Merkkitestin toteuttaminen Excelissä
+### Merkkitestin toteuttaminen Excelissä {#sec-merkkitestin-toteuttaminen-excelissä}
 
 Merkkitesti toteutetaan Excelissä omilla laskuilla, koska laskukaavaa ei ole. Toteuttaminen käy vaiheissa:
 
@@ -44,19 +46,20 @@ Merkkitesti toteutetaan Excelissä omilla laskuilla, koska laskukaavaa ei ole. T
 2.  Määrittele vaihtoehtohypoteesin suunta (suurempi, pienempi vai eri).
     1.  Jos vain eri kuin nollahypoteesi, laske kaksihäntäinen merkkitesti.
     2.  Jos suurempi tai pienempi, laske yksihäntäinen merkkitesti.
-3.  Määrittele jokaiselle datapisteelle merkki `JOS`-funktiolla.
-    1.  Laskukaavio: `=JOS(solu > nollaraja; 1; JOS(solu = nollaraja; 0; -1))`
+3.  Määrittele jokaiselle datapisteelle merkki `JOS`-funktiolla: `=JOS(solu > nollaraja; 1; JOS(solu = nollaraja; 0; -1))`
 4.  Laske positiivisten ja negatiivisten merkkien määrät: `=LASKE.JOS(alue; -1)` ja `=LASKE.JOS(alue; 1)`
 5.  Laske vaihtoehtohypoteesia edustava otoskoko summaamalla positiivisten ja negatiivisten merkkien määrät yhteen.
 6.  Laske p-arvo:
     1.  Kaksihäntäinen merkkitesti: `=BINOMI.JAKAUMA(pienin_merkkimäärä; otoskoko; 0,5; TOSI) * 2`
     2.  Yksihäntäinen merkkitesti: `=BINOMI.JAKAUMA(merkkimäärä; otoskoko; 0,5; TOSI)`
 
-[P-arvon laskukaavio riippuu häntäisyydestä]{.underline}. **Kaksihäntäisessä testissä** käytetään joko negatiivisten tai positiivisten merkkien määrää, riippuen siitä, kumpi on pienempi. Koska testissä käytetään molempia häntiä, todennäköisyys kerrotaan kahdella. **Yksihäntäisessä testissä** käytetään sitä merkkimäärää, jota halutaan testata (positiiviset jos vaihtoehtohypoteesi ehdottaa suurempaa, negatiiviset jos pienempää), ja käytetään p-arvoa suoraan.
+[P-arvon laskukaavio riippuu häntäisyydestä]{.underline}. **Kaksihäntäisessä testissä** käytetään joko negatiivisten tai positiivisten merkkien määrää, riippuen siitä, kumpi on pienempi. Koska testissä käytetään molempia häntiä, todennäköisyys kerrotaan kahdella. **Yksihäntäisessä testissä** käytetään sitä merkkimäärää, jota halutaan testata (positiiviset jos vaihtoehtohypoteesi ehdottaa suurempaa, negatiiviset jos pienempää), ja p-arvo raportoidaan sellaisenaan.
 
-### Merkkitestin raportointi
+### Merkkitestin raportointi {#sec-merkkitestin-raportointi}
 
-Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin p-arvo. Sille tulee mieluisesti raportoida seuraavat:
+Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin p-arvo. Testille tulee mieluisesti raportoida seuraavat:
+
+-   Testattava mediaani $\text{Md}$
 
 -   Nollahypoteesin raja-arvo
 
@@ -72,21 +75,33 @@ Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin
 
 [Toisin sanottuna, raportoi käytännössä kaikki arvot]{.underline}, jotka laskit.
 
-## Wilcoxonin signed-rank-testi
+## Wilcoxonin signed-rank-testi {#sec-wilcoxonin-signed-rank-testi-teoria}
 
 **Mittausasteikot:** Välimatka- ja suhdeasteikko.
 
-**Wilcoxonin signed-rank-testi** (myös Wilcoxonin rankitesti parivertailulle[^eiparametrisettestit-1], tai vain Wilcoxonin testi[^eiparametrisettestit-2]) on ei-parametrinen vastine **parillisen otoksen t-testille**. Testillä testataan, eroavatko kaksi muuttujaa toisestaan merkitsevästi.
+**Wilcoxonin signed-rank-testi** (myös Wilcoxonin rankitesti parivertailulle[^eiparametrisettestit-2], tai vain Wilcoxonin testi[^eiparametrisettestit-3]) on ei-parametrinen vastine **parillisen otoksen t-testille**. Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.
 
-[^eiparametrisettestit-1]: Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.
+[^eiparametrisettestit-2]: Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.
 
-[^eiparametrisettestit-2]: Wilcoxonin testi voi joskus myös viitata **Wilcoxonin rankisummatestiin** (engl. *Wilcoxon rank-sum test*), joka on käytännössä sama kuin Mann-Whitney'n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin; kontekstista voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.
+[^eiparametrisettestit-3]: Wilcoxonin testi voi joskus myös viitata **Wilcoxonin rankisummatestiin** (engl. *Wilcoxon rank-sum test*), joka on käytännössä sama kuin Mann-Whitney'n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin. Tutkimusasetelmasta voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.
 
-Testi on jokseenkin samanlainen kuin merkkitesti, mutta kahdella tärkeällä erolla. Ensinnäkin testille lasketaan kahden muuttujan parien erot, ja toiseksi nämä asetetaan järjestykseen ennen testaamista.
+Testi on jokseenkin samanlainen kuin merkkitesti, mutta kahdella tärkeällä erolla. Ensinnäkin testille lasketaan kahden muuttujan parien **erot**, ja toiseksi nämä **asetetaan järjestykseen** ennen testaamista.
 
-Myös Wilcoxonin testin voi tehdä **yksi- tai kaksihäntäisenä**. Häntäisyysvalinta vaikuttaa merkitsevyyden hakemiseen.
+Myös Wilcoxonin testin voi tehdä **yksi-** tai **kaksihäntäisenä**. Häntäisyysvalinta vaikuttaa merkitsevyyden laskemiseen.
 
-Testin logiikka on yksinkertainen:
+### Mallioletukset {#sec-wilcoxonin-signed-rank-mallioletukset}
+
+Kuten merkkitesti, Wilcoxonin testi ei oleta paljoa.
+
+[Mittausasteikon tulisi olla välimatka- tai suhdeasteikko]{.underline} (koska laskemme eroja muuttujien välillä).
+
+Testi olettaa myös, että [mittaukset ovat paritettuja]{.underline}; jos mittauksesi on kahden otoksen ei-paritettu otanta, käytä Mann-Whitney'n U-testiä (ks. @sec-mann-whitneyn-u-testi).
+
+Kuten kaikissa ei-parametrisissa testeissä: jos täytät lineaarisen mallin vaatimukset, käytä sitä ei-parametrisen testin sijaan.
+
+### Wilcoxonin testin laskeminen {#sec-wilcoxonin-testin-laskeminen}
+
+[Testin logiikka on suoraviivainen]{.underline}:
 
 1.  Laske muuttujien väliset erot.
 2.  Merkitse niiden merkit (positiivinen vai negatiivinen; jätä pois nollat)
@@ -95,27 +110,21 @@ Testin logiikka on yksinkertainen:
 5.  Laske testin keskiarvo, keskihajonta ja z-arvot.
 6.  Vertaa z-arvoja kriittisiin arvoihin ja hae p-arvo.
 
-### Mallioletukset
-
-Kuten merkkitesti, Wilcoxonin testi ei oleta paljoa. Mittausasteikon tulisi olla välimatka- tai suhdeasteikko (koska laskemme eroja muuttujien välillä). Testi olettaa myös, että mittaukset ovat paritettuja; jos mittauksesi on kahden otoksen ei-paritettu otanta, käytä Mann-Whitney'n U-testiä.
-
-Kuten kaikissa ei-parametrisissa testeissä: jos täytät lineaarisen mallin vaatimukset, käytä sitä ei-parametrisen testin sijaan.
-
-### Wilcoxonin testin laskeminen
-
 [Muuttujien väliset erot lasketaan yksinkertaisesti]{.underline} $x_i - y_i$, jossa $i$ on rivin numero. Laske siis erot muuttujien välillä jokaiselle riville.
 
 [Näistä eroista jätetään pois kaikki nollat]{.underline}, eli ne voivat jäädä pois seuraavista laskuista kokonaan.
 
 [Aseta seuraavaksi positiiviset ja negatiiviset erot järjestyksiin]{.underline}; anna järjestysnumero $1$ pienimmälle, $2$ seuraavaksi isommalle, jne., kunnes kaikki ei-nollat arvot ovat järjestettyjä.
 
-[Jos kaksi tai useampi arvo saisi saman järjestysnumeron]{.underline}, anna niille ensin nousevat järjestysnumerot, ja laske sitten niiden keskiarvo. Kaikki samat arvot saavat silloin saman keskiarvojärjestysnumeron. Jatka sitten numerointia siitä kohtaa, mihin se olisi jäänyt, jos arvot eivät olisi samansuuruisia. Jos arvot esimerkiksi ovat $\{3, 4, 5, 5, 6\}$, niiden järjestysarvot olisivat $\{1, 2, (3), (4), 5\}$. Koska kaksi arvoa kuitenkin ovat samankokoisia, lasketaan niiden mahdollisten järjestysarvojen keskiarvo ja määritetään se järjestysnumeroksi: $(3+4)/2 = 7/2 = 3.5$. Täten saadaan lopulliset järjestysnumerot $\{1, 2, 3.5, 3.5, 5\}$. Huomaa, että viimeinen arvo sai järjestysnumeron, jonka se olisi saanut jos samanlaisia arvoja ei olisi ollut alkuperäisessä järjestyksessä.
+[Jos kaksi tai useampi arvo saisi saman järjestysnumeron]{.underline}, anna niille ensin nousevat järjestysnumerot, ja laske sitten niiden keskiarvo. Kaikki samat arvot saavat silloin saman keskiarvojärjestysnumeron. Jatka sitten numerointia siitä kohtaa, mihin se olisi jäänyt, jos arvot eivät olisi samansuuruisia.
+
+Jos arvot esimerkiksi ovat $\{3, 4, 5, 5, 6\}$, niiden järjestysarvot olisivat $\{1, 2, (3), (4), 5\}$. Koska kaksi arvoa kuitenkin ovat samankokoisia, lasketaan niiden mahdollisten järjestysarvojen keskiarvo ja määritetään se järjestysnumeroksi: $(3+4)/2 = 7/2 = 3.5$. Täten saadaan lopulliset järjestysnumerot $\{1, 2, 3.5, 3.5, 5\}$. Huomaa, että viimeinen arvo sai järjestysnumeron, jonka se olisi saanut jos samanlaisia arvoja ei olisi ollut alkuperäisessä järjestyksessä.
 
 [Summaa sitten järjestysnumerot yhteen kahdelle merkille erikseen]{.underline}: $T = \sum_{i=1}^n{J_i}$ , jossa $J_i$ on arvon $i$ järjestysnumero. $n$ on tässä tilanteessa positiivisten tai negatiivisten arvojen määrä, ilman nolla-arvoja.
 
 [Tässä vaiheessa voimme jo hakea merkitsevyyden kriittisten arvojen taulukosta]{.underline}. Merkitsevyys pohjautuu otoskokoon ja alfa-arvoon.
 
-[Jos kuitenkin otoskoko on yli noin 25]{.underline}, voimme myös käyttää z-normalisointia hakeaksemme tarkan (ja hieman voimakkaamman) p-arvon.
+[Jos kuitenkin otoskoko on yli noin 25]{.underline}, voimme myös käyttää **z-normalisointia** hakeaksemme tarkan (ja hieman voimakkaamman) p-arvon.
 
 [Tällöin lasketaan testin keskiarvo ja keskihajonta]{.underline}, jotka molemmat pohjautuvat testikokoon:
 
@@ -124,23 +133,23 @@ $$
 \bar{T} = \frac{n(n+1)}{4}
 \\ \text{SE}_{\bar{T}} = \sqrt{\frac{n(n+1)(2n+1)}{24}}
 \end{split}
-$$
+$$ {#eq-wilcoxonin-testi-keskiarvo-ja-keskihajonta}
 
 **Keskiarvo** lasketaan kertomalla otoskoko itsellään plus yksi, ja jakamalla tulos neljällä.
 
-**Keskihajonta** saadaan ensin kertomalla otoskoko, otoskoko plus yksi, sekä kaksi kertaa otoskoko plus yksi yhteen, jakamalla tulos kahdellakymmenelläneljällä, ja ottamalla tämän tuloksen neliöjuuri.
+**Keskihajonta** saadaan ensin kertomalla otoskoko, otoskoko plus yksi, sekä kaksi kertaa otoskoko plus yksi yhteen, jakamalla tulos 24:llä, ja ottamalla tämän tuloksen neliöjuuri.
 
-**HUOM: Otoskokoina käytetään ryhmän kokoa ilman nolla-arvoja!** Jos sinulla oli esim. kymmenen riviä, joista kaksi saivat erotuksessa nolla-arvon, otoskoko testille on kahdeksan.
+**Otoskokoina käytetään ryhmän kokoa ilman nolla-arvoja.** Jos sinulla oli esimerkiksi kymmenen riviä, joista kaksi saivat erotuksessa nolla-arvon, otoskoko testille on kahdeksan.
 
 [Viimeiseksi lasketaan z-arvot.]{.underline} Koska z-arvon yleiskaava on $z = \frac{X-\bar{X}}{s}$, voimme vain korvata symbolit laskemillamme arvoilla:\
 
 $$
 z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
-$$
+$$ {#eq-wilcoxonin-testi-z-normalisointi}
 
 Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai laskurilla.
 
-### Wilcoxonin testin toteuttaminen Excelissä
+### Wilcoxonin testin toteuttaminen Excelissä {#sec-wilcoxonin-testin-toteuttaminen-excelissä}
 
 [Kuten merkkitesti, Wilcoxonin testi toteutetaan käsin Excelissä]{.underline}:
 
@@ -151,7 +160,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
     1.  Tämä on sama kaavio kuin merkkitestille.
 4.  Laske absoluuttiset erot: `=ITSEISARVO(solu)`
 5.  Järjestä absoluuttiset arvot: `=JOS(solu = 0; ""; ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1))`
-    1.  Funktio kopioidaan kaikille riveille erikseen. Lukitse järjestysalue jotta vetotoiminto tai kopiointi ei siirrä aluetta.
+    1.  Funktio kopioidaan kaikille riveille erikseen. Lukitse järjestysalue jotta vetotoiminto tai kopiointi ei siirrä tätä aluetta.
 6.  Tee uudet sarakkeet, jonne merkitset positiivisten ja negatiivisten arvojen järjestysarvot erikseen.
     1.  Positiiviset arvot: `=JOS(alkuperäinen_arvo > 0; absoluuttinen_järjestys; "")`
     2.  Negatiiviset arvot: `=JOS(alkuperäinen_arvo < 0; absoluuttinen_järjestys; "")`
@@ -167,7 +176,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 12. Laske haluttavan häntäisyyden z-arvo.
 13. Hae z-arvon p-arvo: `=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)`
 
-### Wilcoxonin testin raportointi
+### Wilcoxonin testin raportointi {#sec-wilcoxonin-testin-raportointi}
 
 [Wilcoxonin testin suureena käytetään järjestysnumeroiden summaa]{.underline}. Valinta niiden välillä riippuu hypoteesirakennelmastasi/häntäisyydestä. Raportoi ainakin:
 
@@ -191,7 +200,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 -   Z-arvon p-arvo $p$
 
-## Mann-Whitney'n U-testi
+## Mann-Whitney'n U-testi {#sec-mann-whitneyn-u-testi}
 
 **Mittausasteikot:** Järjestysasteikosta ylöspäin
 
@@ -208,7 +217,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 [W-arvon pohjalta voidaan myös laskea z-arvo]{.underline} ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.
 
-### Mallioletukset
+### Mallioletukset {#sec-mann-whitneyn-u-mallioletukset}
 
 [U-testillä on hieman muita ei-parametrisiä testejä enemmän mallioletuksia]{.underline}, mutta kuitenkin vähemmän kuin lineaarisilla malleilla:
 
@@ -218,7 +227,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 -   **Otos on satunnaisesti haettu populaatiosta**. Tämä pätee kaikkiin frekvenssitilastotieteellisiin malleihin muutenkin.
 
-### U-testin laskeminen
+### U-testin laskeminen {#sec-u-testin-laskeminen}
 
 [Aloita järjestämällä kaikki arvot järjestykseen]{.underline}; pienin saa järjestysnumeron 1 ja suurin järjestysnumeron $n$.
 
@@ -230,7 +239,7 @@ Pienempi summista on $W$-arvo, jota voidaan käyttää myöhemmin todennäköisy
 
 $$
 U = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
-$$
+$$ {#eq-u-suure}
 
 Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän $W$-arvo.
 
@@ -241,7 +250,7 @@ $$
 \bar{W} = \frac{n_{k_1}(n_{k_1}+n_{k_2}+1)}{2}
 \\ \text{SE}_{\bar{W}} = \sqrt{\frac{n_{k_1}n_{k_2}(n_{k_1}+n_{k_2}+1)}{12}}
 \end{split}
-$$
+$$ {#eq-w-keskiarvo-ja-keskihajonta}
 
 Keskiarvo $\bar{W}$ lasketaan kertomalla ensimmäisen ryhmän otoskoko $n_{k_1}$ molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.
 
@@ -251,13 +260,13 @@ Keskihajonta $\text{SE}_{\bar{W}}$ lasketaan kertomalla molempien ryhmien otosko
 
 $$
 z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
-$$
+$$ {#eq-w-suure-z-normalisointi}
 
 jossa $W$ on pienempi kahdesta $W$-suureesta, $\bar{W}$ on aikaisemmin laskettu keskiarvo ja $\text{SE}_{\bar{W}}$ aikaisemmin laskettu keskihajonta.
 
 [Lopputuloksen z-arvon voit tarkistaa kriittisten arvojen taulukosta tai laskurilla]{.underline}.
 
-### U-testin toteuttaminen Excelissä
+### U-testin toteuttaminen Excelissä {#sec-u-testin-toteuttaminen-excelissä}
 
 Tunnistat varmaan käytännön tässä vaiheessa - [U-testi tehdään käsin Excelissä]{.underline}. Toimintatapa on hyvin samankaltainen kuin muille:
 
@@ -280,7 +289,7 @@ Olet valmis U-suureen laskemisessa! [Jos haluat laskea z-arvon]{.underline} ja h
 
 Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä.
 
-### U-testin raportoiminen
+### U-testin raportoiminen {#sec-u-testin-raportoiminen}
 
 U-testissä itse U-suure on testisuure. Raportoi siksi mieluisesti:
 
@@ -292,7 +301,7 @@ U-testissä itse U-suure on testisuure. Raportoi siksi mieluisesti:
 
 -   Z-arvo $z$ ja sen p-arvo $p$
 
-## Testikoot ei-parametrisille testeille
+## Testikoot ei-parametrisille testeille {#sec-testikoot-ei-parametrisille-testeille}
 
 [Yleisesti ottaen pitää aina raportoida mediaanit]{.underline}, joita on tarkasteltu. Ryhmävertailussa raportoidaan ryhmien mediaanit; yhden otoksen testissä otoksen mediaani. Näiden lisäksi on hyvä raportoida myös [nollahypoteesi sekä vaihtoehtohypoteesi]{.underline}.
 
@@ -300,6 +309,6 @@ Niille testeille, joille lasket z-arvon, [voit myös laskea Pearsonin]{.underlin
 
 $$
 r = \frac{z}{\sqrt{n}}
-$$
+$$ {#eq-r-suure-z-testistä}
 
 Jaa siis z-arvo otoskoon neliöjuurella. Otoskoolla tarkoitetaan sitä kokoa, jota käytit laskeaksesi z-arvon. Yleensä tämä on koko mittauksen otoskoko. Parittaiselle testille kyseessä on kaksi kertaa ryhmän koko (poislukien nolla-arvot). Jos alkuperäinen otos oli 10 yksikköä, ja mitasta poistui kaksi nolla-arvoa, otoskoko on $2*8 = 16$.

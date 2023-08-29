@@ -9,3 +9,4 @@
 **Muutokset**:
 
 -   Muutettu kirjan ulkonäköä ja navigointia.
+-   Kirjoitusvirheiden korjausta.
