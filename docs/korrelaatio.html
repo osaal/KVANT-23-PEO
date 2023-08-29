@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
@@ -79,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./korrelaatio.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -93,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -121,13 +122,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
+  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
+  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
   </div>
 </li>
@@ -221,13 +222,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
@@ -268,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
+  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
@@ -294,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viiteluettelo</span></a>
   </div>
 </li>
@@ -354,7 +355,7 @@ ul.task-list li input[type="checkbox"] {
 <p><u>Pearsonin korrelaatiokertoin</u> <span class="math inline">\(r\)</span> on standardisoitu versio kovarianssista. Jotta ymmärrtäisi Pearsonin kertoimen, on siis hyvä ensin ymmärtää kovarianssi.</p>
 <section id="kovarianssin-määritelmä" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="kovarianssin-määritelmä"><span class="header-section-number">10.1</span> Kovarianssin määritelmä</h2>
-<p>Muistutuksena (ks. <a href="hajontaluvut.html#sec-varianssi-teoria"><span>Alaluku&nbsp;4.6</span></a>), <u>varianssin määritelmä oli kaikkien arvopisteiden neliöerot keskiarvoon, jaattuna vapausasteilla</u>. Yhden muuttujan sijaan kovarianssi ilmaisee kahta muuttujaa. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:</p>
+<p>Muistutuksena (ks. <a href="hajontaluvut.html#sec-varianssi-teoria"><span>Alaluku&nbsp;6.6</span></a>), <u>varianssin määritelmä oli kaikkien arvopisteiden neliöerot keskiarvoon, jaattuna vapausasteilla</u>. Yhden muuttujan sijaan kovarianssi ilmaisee kahta muuttujaa. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:</p>
 <p><span id="eq-korr-1"><span class="math display">\[
 \text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {n-1}
 \tag{10.1}\]</span></span></p>
@@ -387,7 +388,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="10.2.4" class="anchored" data-anchor-id="normaalijakautuminen"><span class="header-section-number">10.2.4</span> Normaalijakautuminen</h3>
 <p>Pearsonin <span class="math inline">\(r\)</span>-suureen oikeellisuuden takaamiseksi <strong>molempien muuttujien keskiarvot tulisivat tulla normaalijakautumasta</strong>. Kuten aikaisemmin mainittu (@sec-normaalijakautuminen-teoria), tämä voidaan olettaa suurissa otoksissa.</p>
 <p><u>Jos otoksesi kuitenkin on pieni</u>, ei-parametrinen testi (esim. Spearmanin korrelaatiokertoin, Kendallin tau-b) on parempi vaihtoehto.</p>
-<p>Tämän lisäksi korrelaatiokertoin olettaa, että <strong>virhemittaus on normaalijakautunut</strong>. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. <a href="grafiikka.html#sec-pylväskaavio-teoria"><span>Alaluku&nbsp;1.4.1</span></a>). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti.</p>
+<p>Tämän lisäksi korrelaatiokertoin olettaa, että <strong>virhemittaus on normaalijakautunut</strong>. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. <a href="visualisoinninalkeet.html#sec-pylväskaavio-teoria"><span>Alaluku&nbsp;1.4.1</span></a>). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti.</p>
 <p><u>Jos näin ei ole, valitse taas ei-parametrinen testi</u>.</p>
 </section>
 <section id="lineariteetti" class="level3" data-number="10.2.5">

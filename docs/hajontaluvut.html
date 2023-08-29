@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 4&nbsp; Hajontaluvut</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 6&nbsp; Hajontaluvut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
@@ -76,10 +77,10 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sijaintiluvut.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./hajontaluvut.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./hajontaluvut.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -93,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -112,22 +113,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
+  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
+  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
   </div>
 </li>
@@ -144,128 +145,164 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viiteluettelo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Versiohistoria</span></a>
+ <span class="menu-text">Päivityshistoria</span></a>
   </div>
 </li>
     </ul>
@@ -278,13 +315,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-vinouma-teoria" id="toc-sec-vinouma-teoria" class="nav-link active" data-scroll-target="#sec-vinouma-teoria"><span class="header-section-number">4.1</span> Vinouma</a></li>
-  <li><a href="#sec-kurtoosi-teoria" id="toc-sec-kurtoosi-teoria" class="nav-link" data-scroll-target="#sec-kurtoosi-teoria"><span class="header-section-number">4.2</span> Kurtoosi</a></li>
-  <li><a href="#sec-vaihteluväli-teoria" id="toc-sec-vaihteluväli-teoria" class="nav-link" data-scroll-target="#sec-vaihteluväli-teoria"><span class="header-section-number">4.3</span> Vaihteluväli</a></li>
-  <li><a href="#sec-poikkeamasumma-teoria" id="toc-sec-poikkeamasumma-teoria" class="nav-link" data-scroll-target="#sec-poikkeamasumma-teoria"><span class="header-section-number">4.4</span> Poikkeamasumma</a></li>
-  <li><a href="#sec-oikaistu-neliösumma-teoria" id="toc-sec-oikaistu-neliösumma-teoria" class="nav-link" data-scroll-target="#sec-oikaistu-neliösumma-teoria"><span class="header-section-number">4.5</span> Oikaistu neliösumma</a></li>
-  <li><a href="#sec-varianssi-teoria" id="toc-sec-varianssi-teoria" class="nav-link" data-scroll-target="#sec-varianssi-teoria"><span class="header-section-number">4.6</span> Varianssi</a></li>
-  <li><a href="#sec-keskihajonta-teoria" id="toc-sec-keskihajonta-teoria" class="nav-link" data-scroll-target="#sec-keskihajonta-teoria"><span class="header-section-number">4.7</span> Keskihajonta</a></li>
+  <li><a href="#sec-vinouma-teoria" id="toc-sec-vinouma-teoria" class="nav-link active" data-scroll-target="#sec-vinouma-teoria"><span class="header-section-number">6.1</span> Vinouma</a></li>
+  <li><a href="#sec-kurtoosi-teoria" id="toc-sec-kurtoosi-teoria" class="nav-link" data-scroll-target="#sec-kurtoosi-teoria"><span class="header-section-number">6.2</span> Kurtoosi</a></li>
+  <li><a href="#sec-vaihteluväli-teoria" id="toc-sec-vaihteluväli-teoria" class="nav-link" data-scroll-target="#sec-vaihteluväli-teoria"><span class="header-section-number">6.3</span> Vaihteluväli</a></li>
+  <li><a href="#sec-poikkeamasumma-teoria" id="toc-sec-poikkeamasumma-teoria" class="nav-link" data-scroll-target="#sec-poikkeamasumma-teoria"><span class="header-section-number">6.4</span> Poikkeamasumma</a></li>
+  <li><a href="#sec-oikaistu-neliösumma-teoria" id="toc-sec-oikaistu-neliösumma-teoria" class="nav-link" data-scroll-target="#sec-oikaistu-neliösumma-teoria"><span class="header-section-number">6.5</span> Oikaistu neliösumma</a></li>
+  <li><a href="#sec-varianssi-teoria" id="toc-sec-varianssi-teoria" class="nav-link" data-scroll-target="#sec-varianssi-teoria"><span class="header-section-number">6.6</span> Varianssi</a></li>
+  <li><a href="#sec-keskihajonta-teoria" id="toc-sec-keskihajonta-teoria" class="nav-link" data-scroll-target="#sec-keskihajonta-teoria"><span class="header-section-number">6.7</span> Keskihajonta</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -293,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-hajontaluvut-teoria" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></h1>
+<h1 class="title"><span id="sec-hajontaluvut-teoria" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></h1>
 </div>
 
 
@@ -311,8 +348,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Tässä luvussa käydään läpi hajontalukujen määritelmät, käyttö ja toteuttaminen Excelissä.</p>
 <p><strong>Hajontaluku</strong> on yksittäinen luku, joka kertoo jotain jakauman jakautumisesta keskiarvon ympärille. Toisin sanoen, miten hajanaista jakauman data on verrattuna keskiarvoon?</p>
 <p>Hajontalukuja, joita tässä kirjassa käydään läpi ovat: vinouma, kurtoosi, vaihteluväli, poikkeamasumma, oikaistu neliösumma, varianssi ja keskihajonta.</p>
-<section id="sec-vinouma-teoria" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-vinouma-teoria"><span class="header-section-number">4.1</span> Vinouma</h2>
+<section id="sec-vinouma-teoria" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-vinouma-teoria"><span class="header-section-number">6.1</span> Vinouma</h2>
 <p><strong>Mittausasteikot:</strong> Järjestysasteikosta ylöspäin</p>
 <p><strong>Vinouma</strong> kertoo jakauman “häntäisyydestä”, eli nojaako jakauma jompaan kumpaan suuntaan. Voidaan myös puhua relatiivisesta hajonnasta keskiarvon ympärillä. Vinouma voi olla <strong>positiivinen</strong> tai <strong>negatiivinen</strong>.</p>
 <p>Positiivinen vinouma tarkoittaa, että jakaumassa on yleisemmin esiintyviä arvoja normaalijakauman keskiarvon oikealla puolella (suurempia arvoja) kuin vasemmalla puolella.</p>
@@ -321,7 +358,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>JAKAUMAN.VINOUMA(alue)</code></li>
 </ul>
-<p>Funktio: <a href="perustoiminnot.html#sec-kurtoosi-ja-vinouma"><span>Alaluku&nbsp;12.7.2.2</span></a>.</p>
+<p>Funktio: <a href="funktiot.html#sec-kurtoosi-ja-vinouma"><span>Alaluku&nbsp;17.7.2.2</span></a>.</p>
 <div id="fig-vinouma-esim" class="cell quarto-layout-panel" data-hash="hajontaluvut_cache/html/fig-vinouma-esim_12361b7be3f4933a85c9575954c92d41">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -350,12 +387,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;4.1: Esimerkkejä vinoumasta. Mustalla on piirretty käyrä eri vinoumilla, oranssilla on piirretty tavallinen normaalijakauma. Kuvassa (b) molemmat ovat samat, joten vain oranssi näkyy.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;6.1: Esimerkkejä vinoumasta. Mustalla on piirretty käyrä eri vinoumilla, oranssilla on piirretty tavallinen normaalijakauma. Kuvassa (b) molemmat ovat samat, joten vain oranssi näkyy.</figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="sec-kurtoosi-teoria" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="sec-kurtoosi-teoria"><span class="header-section-number">4.2</span> Kurtoosi</h2>
+<section id="sec-kurtoosi-teoria" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-kurtoosi-teoria"><span class="header-section-number">6.2</span> Kurtoosi</h2>
 <p><strong>Mittausasteikot:</strong> Järjestysasteikosta ylöspäin.</p>
 <p><strong>Kurtoosi</strong> kertoo jakauman häntien koosta, eli kuinka paljon ääripisteitä jakaumassa esiintyy verrattuna normaalijakaumaan. Kurtoosi voi olla positiivinen tai negatiivinen.</p>
 <p>Negatiivinen kurtoosi, eli <strong>platykurtoosi</strong>, tarkoittaa että ääripisteitä on paljon suhteessa normaalijakaumaan. Datapisteitä on siis suhteessa enemmän ääripääalueilla kuin keskellä, mitä keskiarvo ei ottaisi huomioon.</p>
@@ -366,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>KURT(alue)</code></li>
 </ul>
-<p>Funktio: <a href="perustoiminnot.html#sec-kurtoosi-ja-vinouma"><span>Alaluku&nbsp;12.7.2.2</span></a>.</p>
+<p>Funktio: <a href="funktiot.html#sec-kurtoosi-ja-vinouma"><span>Alaluku&nbsp;17.7.2.2</span></a>.</p>
 <div id="fig-kurtoosi-esim" class="cell quarto-layout-panel" data-hash="hajontaluvut_cache/html/fig-kurtoosi-esim_018b51fcd86ce1e92921fc545c6c9c9d">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -395,12 +432,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;4.2: Esimerkkejä kurtoosista. Kurtoosiarvot ovat Pearsonin arvoja, liikakurtoosi ilmaistu suluissa.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;6.2: Esimerkkejä kurtoosista. Kurtoosiarvot ovat Pearsonin arvoja, liikakurtoosi ilmaistu suluissa.</figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="sec-vaihteluväli-teoria" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-vaihteluväli-teoria"><span class="header-section-number">4.3</span> Vaihteluväli</h2>
+<section id="sec-vaihteluväli-teoria" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-vaihteluväli-teoria"><span class="header-section-number">6.3</span> Vaihteluväli</h2>
 <p><strong>Mittausasteikot</strong>: Järjestysasteikosta ylöspäin.</p>
 <p><strong>Vaihteluvälillä</strong> tarkoitetaan jakauman suurimpia ja pienimpiä arvoja, sekä näiden välistä eroa.</p>
 <p><strong>Suurin</strong> arvo on yksinkertaisesti jakauman suurin esiintyvä arvo, <strong>pienin</strong> arvo on vastaavasti pienin esiintyvä arvo. Jakauman <strong>pituus</strong> (engl. <em>range</em>) on suurimman ja pienimmän arvon ero, eli kuinka laajalla skaalalla arvoja esiintyy.</p>
@@ -409,51 +446,51 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>MIN(alue) - MAKS(alue)</code></li>
 </ul>
-<p>Funktiot: <a href="perustoiminnot.html#sec-pienin-suurin-ja-raja-arvot"><span>Alaluku&nbsp;12.7.2.1</span></a>.</p>
+<p>Funktiot: <a href="funktiot.html#sec-pienin-suurin-ja-raja-arvot"><span>Alaluku&nbsp;17.7.2.1</span></a>.</p>
 <div class="cell" data-hash="hajontaluvut_cache/html/fig-vaihteluväli-esim_6c8a4950f842b176559f474cc7a7ee9e">
 <div class="cell-output-display">
 <div id="fig-vaihteluväli-esim" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="hajontaluvut_files/figure-html/fig-vaihteluväli-esim-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;4.3: Empiirisen normaalijakauman vaihteluväli.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.3: Empiirisen normaalijakauman vaihteluväli.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="sec-poikkeamasumma-teoria" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="sec-poikkeamasumma-teoria"><span class="header-section-number">4.4</span> Poikkeamasumma</h2>
+<section id="sec-poikkeamasumma-teoria" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="sec-poikkeamasumma-teoria"><span class="header-section-number">6.4</span> Poikkeamasumma</h2>
 <p><strong>Mittausasteikot:</strong> Välimatka-asteikosta ylöspäin.</p>
 <p>Poikkeamasummalla (engl. <em>deviance</em>) summataan yhteen jakauman jokaisen datapisteen ero keskiarvoon. Poikkeamasumma lasketaan kaavalla:</p>
 <p><span id="eq-poikkeamasumma"><span class="math display">\[
 \text{poikkeamasumma} = \sum_{i = 1}^{n}{ x_i - \bar{x} }
-\tag{4.1}\]</span></span></p>
+\tag{6.1}\]</span></span></p>
 <p>Jossa <span class="math inline">\(x_i\)</span> on datapisteen <span class="math inline">\(i\)</span> arvo, <span class="math inline">\(\bar{x}\)</span> on jakauman aritmeettinen keskiarvo, ja <span class="math inline">\(n\)</span> on datapisteiden määrä.</p>
 <p><u>Poikkeamasumma on aina nolla jokaiselle datajakaumalle</u>. Koska keskiarvo asettuu jakauman keskipisteeseen, positiiviset ja negatiiviset erot keskiarvoon tasoittavat toisensa, joten kaavan tulokseksi tulee aina arvo <span class="math inline">\(0\)</span>. Poikkeamasumma ei siten ole hyödyllinen työkalu itsessään, mutta käytetään oikaistun neliösumman laskemiseen.</p>
 <p>Esimerkkinä sama datajakauma <span class="math inline">\([1, 2, 3, 4, 5]\)</span>. Jakauman keskiarvo on <span class="math inline">\(\bar{x} = \frac{1+2+3+4+5}{5} = 15/5 = 3\)</span>. Jakauman poikkeamasumma lasketaan siten <span class="math inline">\((1-3) + (2-3) + (3-3) + (4-3) + (5-3) = -2-1+0+1+2 = 0\)</span>.</p>
 <p>Poikkeamasummalle ei löydy Excel-kaaviota, koska sen suora käyttö on joka tapauksessa turhaa kun se aina tuottaa tuloksena nollan.</p>
 </section>
-<section id="sec-oikaistu-neliösumma-teoria" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="sec-oikaistu-neliösumma-teoria"><span class="header-section-number">4.5</span> Oikaistu neliösumma</h2>
+<section id="sec-oikaistu-neliösumma-teoria" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="sec-oikaistu-neliösumma-teoria"><span class="header-section-number">6.5</span> Oikaistu neliösumma</h2>
 <p><strong>Mittausasteikot:</strong> Välimatka-asteikosta ylöspäin.</p>
 <p><strong>Oikaistu neliösumma</strong> (engl. <em>sum of squared errors</em>) on jatkolasku poikkeamasummalle. Erona poikkeamasummaan oikaistussa neliösummassa kaikki datapisteiden erot keskiarvoon nostetaan toiseen potenssiin, eli otetaan niiden neliö, ennen summaamista. Tällöin saadaan arvo, joka ei ole nolla. Oikaistu neliösumma lyhennetään muotoon <span class="math inline">\(SS\)</span>, parametrin englanninkielisestä nimestä. Oikaistun neliösumman kaava on:</p>
 <p><span id="eq-oikaistu-neliösumma"><span class="math display">\[
 \text{SS} = \sum{(x-\bar{x})^2}
-\tag{4.2}\]</span></span></p>
+\tag{6.2}\]</span></span></p>
 <p>Esimerkkinä sama datajakauma kuin aikaisemmin, eli <span class="math inline">\([1, 2, 3, 4, 5]\)</span>, jonka keskiarvo on <span class="math inline">\(3\)</span>. Oikaistu neliösumma on <span class="math inline">\((1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2 = 4 + 1 + 0 + 1 + 4 = 10\)</span>.</p>
 <p><strong>Funktiot Excelissä:</strong></p>
 <ul>
 <li><code>OIKAISTU.NELIÖSUMMA(alue)</code></li>
 </ul>
-<p>Funktio: <a href="perustoiminnot.html#sec-oikaistu-neliösumma"><span>Alaluku&nbsp;12.7.2.4</span></a>.</p>
+<p>Funktio: <a href="funktiot.html#sec-oikaistu-neliösumma"><span>Alaluku&nbsp;17.7.2.4</span></a>.</p>
 </section>
-<section id="sec-varianssi-teoria" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="sec-varianssi-teoria"><span class="header-section-number">4.6</span> Varianssi</h2>
+<section id="sec-varianssi-teoria" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="sec-varianssi-teoria"><span class="header-section-number">6.6</span> Varianssi</h2>
 <p><strong>Mittausasteikot:</strong> Välimatka-asteikosta ylöspäin.</p>
 <p><strong>Varianssi</strong> on datajakauman oikaistu neliösumma jaattuna varianssin vapausasteella. Varianssin vapausaste on <span class="math inline">\(N-1\)</span>, eli jakauman datapisteiden määrä minus yksi. Varianssi lyhennetään muotoon <span class="math inline">\(s^2\)</span>, mutta muita nimimuotoja ovat myös <span class="math inline">\(\sigma^2\)</span> , <span class="math inline">\(Var(X)\)</span> tai <span class="math inline">\(V(X)\)</span>. Varianssin kaava on:</p>
 <p><span id="eq-varianssi"><span class="math display">\[
 s^2 = \frac{SS}{\text{df}} = \frac{\sum{(x-\bar{x})^2}} {N-1}
-\tag{4.3}\]</span></span></p>
+\tag{6.3}\]</span></span></p>
 <p>Jatketaan samalla esimerkkillä kuin aikaisemmin. Datajakauman <span class="math inline">\([1, 2, 3, 4, 5]\)</span> oikaistu neliösumma on <span class="math inline">\(SS = 10\)</span>. Täten datajakauman varianssi on <span class="math inline">\(s^2 = 10/(N-1) = 10/4 = 2.5\)</span>.</p>
 <p><u>Varianssin mittayksikkö on alkuperäisen datajakauman yksikkö, mutta neliönä</u>. Jos datajakauman alkuperäinen yksikkö on euroa, varianssi ilmaistaan neliöeurona - vaikka tämä ei itsessään merkitse mitään (mikä “neliöeuro” edes olisi?).</p>
 <p><strong>Funktiot Excelissä:</strong></p>
@@ -463,16 +500,16 @@ s^2 = \frac{SS}{\text{df}} = \frac{\sum{(x-\bar{x})^2}} {N-1}
 <li>Käytä <code>VAR.S</code> jos kyseessä on otos, <code>VAR.P</code> jos kyseessä on koko populaatio.</li>
 </ul></li>
 </ul>
-<p>Funktiot: <a href="perustoiminnot.html#sec-varianssi"><span>Alaluku&nbsp;12.7.2.5</span></a>.</p>
+<p>Funktiot: <a href="funktiot.html#sec-varianssi"><span>Alaluku&nbsp;17.7.2.5</span></a>.</p>
 </section>
-<section id="sec-keskihajonta-teoria" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="sec-keskihajonta-teoria"><span class="header-section-number">4.7</span> Keskihajonta</h2>
+<section id="sec-keskihajonta-teoria" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="sec-keskihajonta-teoria"><span class="header-section-number">6.7</span> Keskihajonta</h2>
 <p><strong>Mittausasteikko:</strong> Välimatka-asteikosta eteenpäin.</p>
 <p><strong>Keskihajonta</strong> on jatkoa varianssille. Keskihajonnassa neliö poistetaan neliöjuurella, jolloin saadaan jakauman keskivertainen ero keskiarvoon - eli kuinka paljon jokainen datapiste keskimäärin eroaa keskiarvosta.</p>
 <p>Keskihajonta ilmaistaan joko tekstillä <span class="math inline">\(SD\)</span> (englannin nimestä <em>standard deviation</em>), tai matemaattisilla symboleilla <span class="math inline">\(\sigma\)</span> (populaation keskihajonta) ja <span class="math inline">\(s\)</span> (otoksen keskihajonta). Keskihajonta lasketaan kaavalla:</p>
 <p><span id="eq-keskihajonta"><span class="math display">\[
 s = \sqrt{s^2} = \sqrt{\frac{\sum{(x-\bar{x})^2}} {N-1}}
-\tag{4.4}\]</span></span></p>
+\tag{6.4}\]</span></span></p>
 <p>Aikaisemmassa esimerkissä datajakauman varianssi oli <span class="math inline">\(s^2 = 2.5\)</span>, jolloin sen keskihajonnaksi saadaan <span class="math inline">\(s = \sqrt{2.5} \approx 1.58\)</span>.</p>
 <p>Keskihajonta ilmaistaan samassa mittayksikössä kuin datajakauma. Jos esimerkkijakaumamme edustaa euroja, voidaan siis sanoa, että sen keskihajonta on 1,58 euroa.</p>
 <p><u>Mitä isompi keskihajonta, sitä enemmän vaihtelua keskiarvosta datajakaumassa esiintyy</u>. Sama pätee pieneen keskihajontaan. Määrittely, onko jokin keskihajonta “suuri” tai “pieni” on suhteellinen ja riippuu itse mittayksiköstä ja sen keskiarvosta: koska keskiarvomme esimerkissä oli kolme euroa, voidaankin sanoa että puolentoista euron keskihajonta on suhteellisen suuri.</p>
@@ -483,7 +520,7 @@ s = \sqrt{s^2} = \sqrt{\frac{\sum{(x-\bar{x})^2}} {N-1}}
 <li>Käytä <code>KESKIHAJONTA.S</code> jos kyseessä on otos, <code>KESKIHAJONTA.P</code> jos kyseessä on koko populaatio.</li>
 </ul></li>
 </ul>
-<p>Funktiot: <a href="perustoiminnot.html#sec-keskihajonta"><span>Alaluku&nbsp;12.7.2.6</span></a>.</p>
+<p>Funktiot: <a href="funktiot.html#sec-keskihajonta"><span>Alaluku&nbsp;17.7.2.6</span></a>.</p>
 
 
 </section>
@@ -725,12 +762,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./sijaintiluvut.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./merkitsevyysluvut.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

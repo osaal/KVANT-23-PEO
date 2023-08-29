@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät, syksy 2023 - 12&nbsp; Grafiikka Excelissä</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 16&nbsp; Grafiikka Excelissä</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./perustoiminnot.html" rel="next">
-<link href="./exceltoimintoja.html" rel="prev">
+<link href="./funktiot.html" rel="next">
+<link href="./yleisiätoimintoja.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
@@ -76,10 +77,10 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinkäyttöliittymä.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./excelgrafiikka.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./excelgrafiikka.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -91,7 +92,10 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-end sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
+      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,50 +111,50 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Aluksi</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
@@ -171,8 +175,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
       </ul>
@@ -188,81 +210,99 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viiteluettelo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Päivityshistoria</span></a>
   </div>
 </li>
     </ul>
@@ -275,18 +315,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" id="toc-sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="nav-link active" data-scroll-target="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">12.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</a></li>
-  <li><a href="#sec-kaavion-lisääminen" id="toc-sec-kaavion-lisääminen" class="nav-link" data-scroll-target="#sec-kaavion-lisääminen"><span class="header-section-number">12.2</span> Kaavion lisääminen</a></li>
-  <li><a href="#sec-kaavion-muokkaaminen" id="toc-sec-kaavion-muokkaaminen" class="nav-link" data-scroll-target="#sec-kaavion-muokkaaminen"><span class="header-section-number">12.3</span> Kaavion muokkaaminen</a></li>
+  <li><a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" id="toc-sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="nav-link active" data-scroll-target="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">16.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</a></li>
+  <li><a href="#sec-kaavion-lisääminen" id="toc-sec-kaavion-lisääminen" class="nav-link" data-scroll-target="#sec-kaavion-lisääminen"><span class="header-section-number">16.2</span> Kaavion lisääminen</a></li>
+  <li><a href="#sec-kaavion-muokkaaminen" id="toc-sec-kaavion-muokkaaminen" class="nav-link" data-scroll-target="#sec-kaavion-muokkaaminen"><span class="header-section-number">16.3</span> Kaavion muokkaaminen</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-grafiikka-excelissä" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></h1>
+<h1 class="title"><span id="sec-grafiikka-excelissä" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></h1>
 </div>
 
 
@@ -302,11 +342,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Grafiikan teko Excelissä on suht yksinkertaista (verrattuna moneen muuhun tilastotyökaluun). Helpointa on valita data-alue, jonka haluaa esitellä kuvissa, valita mieluinen graaffinen esittely, ja muokata se sopivaan muotoon.</p>
-<p>Tässä luvussa käydään läpi, miten tuotat Excelissä yleisimmät graaffiset asettelut: pylväskuvio, pistekuvio ja piiraskuvio. Jos et ole tutustunut tiedon visualisointiin yleisemmin, lue <a href="grafiikka.html"><span>Luku&nbsp;3</span></a>.</p>
-<section id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">12.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</h2>
+<p>Tässä luvussa käydään läpi, miten tuotat Excelissä yleisimmät graaffiset asettelut: pylväskuvio, pistekuvio ja piiraskuvio. Jos et ole tutustunut tiedon visualisointiin yleisemmin, lue <a href="visualisoinninalkeet.html"><span>Luku&nbsp;1</span></a>.</p>
+<section id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span class="header-section-number">16.1</span> Yleiset periaatteet kuvioiden teossa Excelissä</h2>
 <ol type="1">
-<li>Laske tilastot, jotka haluat esittää kaavassa, esim. kategoriamäärät (ks. <a href="exceltoimintoja.html#sec-toiminto06"><span>Alaluku&nbsp;15.6</span></a>).</li>
+<li>Laske tilastot, jotka haluat esittää kaavassa, esim. kategoriamäärät (ks. <a href="yleisiätoimintoja.html#sec-toiminto06"><span>Alaluku&nbsp;15.6</span></a>).</li>
 <li>Maalaa lasketut tilastot, ml. mahdolliset otsikot ja selitteet.</li>
 <li><code>Lisää &gt; Suositellut kaaviot</code>, valitse mieluisesi kaavio</li>
 <li>Muokkaa kaaviota sopivaksi.</li>
@@ -314,33 +354,33 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Kaavioita voi tuottaa myös suoraan tilastoista, hyödyntäen power-kaaviomenetelmää. Emme kuitenkaan käytä näitä tällä kurssilla.</p>
 </section>
-<section id="sec-kaavion-lisääminen" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="sec-kaavion-lisääminen"><span class="header-section-number">12.2</span> Kaavion lisääminen</h2>
-<p>Aloita valitsemalla haluamasi tilastot (kohta 2, <a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span>Alaluku&nbsp;12.1</span></a>).</p>
-<p>Navigoi sitten työkaluvälilehdessä kohtaan <code>Lisää &gt; Suositellut kaaviot</code>. Ikkuna avautuu suositeltuihin kaavioihin, joista löydät Excelin suosittamia kaavioita data-alueellesi. Voit myös valita kaikkien kaavioiden välillä “Kaikki kaaviot”-välilehdestä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi pohjautuvan esikatselun kaavion ulkonäöstä (<a href="#fig-grafiikka-lisääkaavio">Kuva&nbsp;<span>12.1</span></a>).</p>
+<section id="sec-kaavion-lisääminen" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="sec-kaavion-lisääminen"><span class="header-section-number">16.2</span> Kaavion lisääminen</h2>
+<p>Aloita valitsemalla haluamasi tilastot (kohta 2, <a href="#sec-yleiset-periaatteet-kuvioiden-teossa-excelissä"><span>Alaluku&nbsp;16.1</span></a>).</p>
+<p>Navigoi sitten työkaluvälilehdessä kohtaan <code>Lisää &gt; Suositellut kaaviot</code>. Ikkuna avautuu suositeltuihin kaavioihin, joista löydät Excelin suosittamia kaavioita data-alueellesi. Voit myös valita kaikkien kaavioiden välillä “Kaikki kaaviot”-välilehdestä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi pohjautuvan esikatselun kaavion ulkonäöstä (<a href="#fig-grafiikka-lisääkaavio">Kuva&nbsp;<span>16.1</span></a>).</p>
 <div id="fig-grafiikka-lisääkaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/grafiikka/grafiikka_lisääkaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Lisää kaavio -ikkunasta. Välilehti &quot;Kaikki kaaviot&quot; on auki, kohdassa &quot;Pylväskaavio&quot;."></p>
-<figcaption class="figure-caption">Kuva&nbsp;12.1: Lisää kaavio -ikkuna.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;16.1: Lisää kaavio -ikkuna.</figcaption>
 </figure>
 </div>
 <p>Kun olet löytänyt mieluisen (tai tarpeeksi mieluisen) kaavion, valitse se ja paina <code>OK</code>. Excel lisää kaavion työlehtiöön.</p>
 <p>Kaaviot ovat siinä mielessä erityisiä, että vaikka ne elävät työlehtiöissä, niitä voi siirrellä vapaasti mihin tahansa lehtiön sisällä (tai jopa lehtiöiden välissä). Voit siis asettaa sen johonkin kohtaan lehtiötä, jossa se ei peitä muita työn alla olevia soluja.</p>
 </section>
-<section id="sec-kaavion-muokkaaminen" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-kaavion-muokkaaminen"><span class="header-section-number">12.3</span> Kaavion muokkaaminen</h2>
-<p>Kun olet lisännyt kaavion, Excel tuottaa hyvin alkeellisen version siitä (<a href="#fig-grafiikka-raakapylväskaavio">Kuva&nbsp;<span>12.2</span></a>). Ennen kuin voit käyttää tätä, sinun tulee lisätä selitteitä ja muokata ulkonäköä sopivaksi. Jos kaksoisnäpäytät kaaviota jossain sen tyhjällä alueella, saat esille kaavioalueen muokkauspaneelin Excelin oikealle puolelle.</p>
+<section id="sec-kaavion-muokkaaminen" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="sec-kaavion-muokkaaminen"><span class="header-section-number">16.3</span> Kaavion muokkaaminen</h2>
+<p>Kun olet lisännyt kaavion, Excel tuottaa hyvin alkeellisen version siitä (<a href="#fig-grafiikka-raakapylväskaavio">Kuva&nbsp;<span>16.2</span></a>). Ennen kuin voit käyttää tätä, sinun tulee lisätä selitteitä ja muokata ulkonäköä sopivaksi. Jos kaksoisnäpäytät kaaviota jossain sen tyhjällä alueella, saat esille kaavioalueen muokkauspaneelin Excelin oikealle puolelle.</p>
 <div id="fig-grafiikka-raakapylväskaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/grafiikka/grafiikka_raakapylväskaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus pylväskaaviosta Excelistä. Kaavio esittää muuttujan taajuuksia, jossa on neljä kategoriaa ja niitä vastaavat taajuusarvot. Kaavio on sininen pylväskaavio, ja sen otsikkona on &quot;Kaavion otsikko&quot;."></p>
-<figcaption class="figure-caption">Kuva&nbsp;12.2: Pylväskaavio Excelissä. Kaavion data-alueet ovat määriteltynä kaavion oikealla puolella, violetilla ja sinisellä alueella.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;16.2: Pylväskaavio Excelissä. Kaavion data-alueet ovat määriteltynä kaavion oikealla puolella, violetilla ja sinisellä alueella.</figcaption>
 </figure>
 </div>
-<p>Jokaiselle kaavion osalle löytyy oma muokkausnäkymä, jonka saat esille näpäyttämällä muokkauspaneelin pudotusvalikkoa ylävasemmalla (<a href="#fig-grafiikka-muokkauspaneeli">Kuva&nbsp;<span>12.3</span></a>). Voit myös näpäyttää mitä tahansa kaavion osaa nähdäksesi sen osan muokkausnäkymä paneelissa, kunhan paneeli on auki.</p>
+<p>Jokaiselle kaavion osalle löytyy oma muokkausnäkymä, jonka saat esille näpäyttämällä muokkauspaneelin pudotusvalikkoa ylävasemmalla (<a href="#fig-grafiikka-muokkauspaneeli">Kuva&nbsp;<span>16.3</span></a>). Voit myös näpäyttää mitä tahansa kaavion osaa nähdäksesi sen osan muokkausnäkymä paneelissa, kunhan paneeli on auki.</p>
 <div id="fig-grafiikka-muokkauspaneeli" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/grafiikka/grafiikka_muokkauspaneeli.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelistä kaavion muokkauspaneelista. Muokkauspaneelin näkymä on &quot;Kaavion asetukset&quot;, ja näkymien pudotusvalikko on auki."></p>
-<figcaption class="figure-caption">Kuva&nbsp;12.3: Kaavion muokkauspaneeli.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;16.3: Kaavion muokkauspaneeli.</figcaption>
 </figure>
 </div>
 <p>Uusia osia kuvaan voit lisätä painamalla ensin kaaviota kerran, ja sitten painamalla vihreää <code>+</code>-painiketta kaavion oikealla puolella. Lisäämisen jälkeen voit kaksoisnäpäyttää lisättyjä elementtejä (esim. akseleiden tai arvopisteiden otsikoita) muokataksesi niiden ulkonäköä ja sijoitusta.</p>
@@ -352,11 +392,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Akseleiden koko. Yksimuuttujakaavioiden pystyakseli tulee aina alkaa nollasta, kaksimuuttujakaavioissa ei välttämättä.</li>
 <li>Värit. Vaihda aina värit saavutettaviksi. Hyödynnä kaksoisesittämistä, jolloin esität jokaisen kategorian sekä väreillä että graafisilla kuvioilla. Tällöin kuvio on paremmin luettavissa harmaaskaalaisena tai värisokealle henkilölle. Tarkista myös, että värien välinen kontrasti on tarpeeksi suuri - vaaleanharmaan ja valkoisen välillä voi olla hyvin vaikeaa erottaa (jopa henkilölle, jolla on täydellinen värinäkö!), kuten esim. erisävyisten värien välillä.</li>
 </ol>
-<p>Alla on esimerkki kaaviosta, jonka olen muotoillut valmiiseen muotoon (<a href="#fig-grafiikka-valmispylväskaavio">Kuva&nbsp;<span>12.4</span></a>).</p>
+<p>Alla on esimerkki kaaviosta, jonka olen muotoillut valmiiseen muotoon (<a href="#fig-grafiikka-valmispylväskaavio">Kuva&nbsp;<span>16.4</span></a>).</p>
 <div id="fig-grafiikka-valmispylväskaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/grafiikka/grafiikka_valmispylväskaavio.png" class="img-fluid figure-img" alt="Pylväskuvio, joka esittää palotarkastuksen koettua hyötyä. Vastausvaihtoehdot ovat neljän pisteen Likert-asteikolla erittäin hyödyttömästä erittäin hyödylliseen, ilman neutraalia vaihtoehtoa. 44 vastaajaa valitsivat melko hyödyllisen, ja vain 2 vastaajaa erittäin hyödyttömän. Hyödyllisiä on selkeästi enemmän kuin hyödyttömiä."></p>
-<figcaption class="figure-caption">Kuva&nbsp;12.4: Valmis versio pylväskaaviosta.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;16.4: Valmis versio pylväskaaviosta.</figcaption>
 </figure>
 </div>
 <p>Seuraavassa oletetaan, että muokkauspaneeli on auki. Jos se ei ole, kaksoisnäpäytä kaavion tyhjää aluetta avataksesi sen.</p>
@@ -620,13 +660,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./exceltoimintoja.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span>
+      <a href="./yleisiätoimintoja.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./perustoiminnot.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./funktiot.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
