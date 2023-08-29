@@ -99,6 +99,11 @@ book:
   favicon: "pics/logo_lapinakyva.png"
   repo-url: https://github.com/osaal/KVANT-23-PEO/
   repo-actions: [issue]
+  page-footer:
+    center: "Tekijänoikeudet (c) 2023, Oliver Saal"
+    background: primary
+    border: false
+  twitter-card: true
 
 bibliography: references.bib
 citation: true
