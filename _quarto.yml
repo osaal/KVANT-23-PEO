@@ -15,6 +15,7 @@ book:
       - ohjeitaviittaamiseen.qmd
     - part: "Tilastotiede"
       chapters:
+      - mittaustasot.qmd
       - hypoteesitestaus.qmd
       - mallioletukset.qmd
       - sijaintiluvut.qmd
@@ -43,9 +44,58 @@ book:
     - viiteluettelo.qmd
     - history.qmd
   sidebar:
-    style: floating
-    align: right
-    collapse-level: 1
+    - id: ohjeita
+      title: "Ohjeita"
+      style: docked
+      align: right
+      collapse-level: 1
+      logo: "pics/logo_nimi_nega.png"
+      logo-alt: "Pelastusopiston logo"
+      contents:
+        - visualisoinninalkeet.qmd
+        - ohjeitaviittaamiseen.qmd
+    - id: tilastotiede
+      title: "Tilastotiede"
+      contents:
+        - mittaustasot.qmd
+        - hypoteesitestaus.qmd
+        - mallioletukset.qmd
+        - sijaintiluvut.qmd
+        - hajontaluvut.qmd
+        - merkitsevyysluvut.qmd
+        - eiparametrisettestit.qmd
+        - ttesti.qmd
+        - korrelaatio.qmd
+        - khiinneliö.qmd
+    - id: exceltoiminnot
+      title: "Excel-toiminnot"
+      contents:
+        - excelinperusteet.qmd
+        - excelinkäyttöliittymä.qmd
+        - nimeäminenexcelissä.qmd
+        - yleisiätoimintoja.qmd
+        - excelgrafiikka.qmd
+        - funktiot.qmd
+        - lambdakaavat.qmd
+    - id: työkalut
+      title: "Työkalut"
+      contents:
+        - webropol.qmd
+        - tilastotyökalut.qmd
+        - dmptuuli.qmd
+        - tietoarkistot.qmd
+        - zotero.qmd
+  navbar:
+    background: primary
+    title: "Kvantitatiiviset menetelmät"
+    left:
+      - index.qmd
+      - sidebar:ohjeita
+      - sidebar:tilastotiede
+      - sidebar:exceltoiminnot
+      - sidebar:työkalut
+      - viiteluettelo.qmd
+      - history.qmd
   favicon: "pics/logo_lapinakyva.png"
   repo-url: https://github.com/osaal/KVANT-23-PEO/
   repo-actions: [issue]

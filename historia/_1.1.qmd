@@ -4,4 +4,8 @@
 
 **Uudet luvut**:
 
+-   Mittaustasojen teoria
+
 **Muutokset**:
+
+-   Muutettu kirjan ulkonäköä ja navigointia.

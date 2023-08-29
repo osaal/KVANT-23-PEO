@@ -1,10 +1,8 @@
 # Aluksi {#sec-aluksi .unnumbered}
 
-Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille *Kvantitatiiviset menetelmät*.
+Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille **Kvantitatiiviset menetelmät**.
 
-Kirja on jaettu lukuihin sisällön mukaan. Voit selata lukuja navigointipalkista, joka löytyy oikealta (iso näyttö, esim. tietokone) tai ylhäältä (pieni näyttö, esim. puhelin).
-
-Kirjan vasemmalla puolella löytyy jokaisen sivun sisällysluettelo. Voit käyttää sitä hypätäksesi suoraan johonkin alalukuun.
+Kirja on jaettu osiin ja lukuihin sisällön mukaan. Sivun yläpalkista löytyy navigointi osien alla. Kun avaat jonkun luvun, kyseisen osan luvut näkyvät myös sivun oikeassa laidassa. Puhelimella saat oikean laidan valikon esille painamalla pientä valikkopainiketta sivun ylävasemmalla.
 
 Jos siirrät hiiren jonkun luvun otsikon päälle, voit klikata pientä ketjuikonia, jolloin sivun osoitteeksi muuttuu suora linkki siihen otsikkoon. Tällä tavalla voit esimerkiksi lisätä kyseisen luvun tai alaluvun suoraan kirjanmerkkeihisi tai jakaa linkin muille. 
 

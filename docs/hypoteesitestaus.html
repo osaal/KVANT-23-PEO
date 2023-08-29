@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 3&nbsp; Hypoteesitestaus</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 4&nbsp; Hypoteesitestaus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./mallioletukset.html" rel="next">
-<link href="./ohjeitaviittaamiseen.html" rel="prev">
+<link href="./mittaustasot.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -62,11 +62,11 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -87,241 +87,246 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./hypoteesitestaus.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -334,18 +339,18 @@ div.csl-indent {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-nollahypoteesimerkitsevyystestaus-nhst" id="toc-sec-nollahypoteesimerkitsevyystestaus-nhst" class="nav-link active" data-scroll-target="#sec-nollahypoteesimerkitsevyystestaus-nhst"><span class="header-section-number">3.1</span> Nollahypoteesimerkitsevyystestaus (NHST)</a>
+  <li><a href="#sec-nollahypoteesimerkitsevyystestaus-nhst" id="toc-sec-nollahypoteesimerkitsevyystestaus-nhst" class="nav-link active" data-scroll-target="#sec-nollahypoteesimerkitsevyystestaus-nhst"><span class="header-section-number">4.1</span> Nollahypoteesimerkitsevyystestaus (NHST)</a>
   <ul class="collapse">
-  <li><a href="#sec-falsifikaatio-teoria" id="toc-sec-falsifikaatio-teoria" class="nav-link" data-scroll-target="#sec-falsifikaatio-teoria"><span class="header-section-number">3.1.1</span> Falsifikaatio</a></li>
-  <li><a href="#sec-nollahypoteesi-falsifikaation-työkaluna" id="toc-sec-nollahypoteesi-falsifikaation-työkaluna" class="nav-link" data-scroll-target="#sec-nollahypoteesi-falsifikaation-työkaluna"><span class="header-section-number">3.1.2</span> Nollahypoteesi falsifikaation työkaluna</a></li>
-  <li><a href="#sec-todistuksen-puute-ei-ole-puutteen-todistamista" id="toc-sec-todistuksen-puute-ei-ole-puutteen-todistamista" class="nav-link" data-scroll-target="#sec-todistuksen-puute-ei-ole-puutteen-todistamista"><span class="header-section-number">3.1.3</span> Todistuksen puute ei ole puutteen todistamista</a></li>
+  <li><a href="#sec-falsifikaatio-teoria" id="toc-sec-falsifikaatio-teoria" class="nav-link" data-scroll-target="#sec-falsifikaatio-teoria"><span class="header-section-number">4.1.1</span> Falsifikaatio</a></li>
+  <li><a href="#sec-nollahypoteesi-falsifikaation-työkaluna" id="toc-sec-nollahypoteesi-falsifikaation-työkaluna" class="nav-link" data-scroll-target="#sec-nollahypoteesi-falsifikaation-työkaluna"><span class="header-section-number">4.1.2</span> Nollahypoteesi falsifikaation työkaluna</a></li>
+  <li><a href="#sec-todistuksen-puute-ei-ole-puutteen-todistamista" id="toc-sec-todistuksen-puute-ei-ole-puutteen-todistamista" class="nav-link" data-scroll-target="#sec-todistuksen-puute-ei-ole-puutteen-todistamista"><span class="header-section-number">4.1.3</span> Todistuksen puute ei ole puutteen todistamista</a></li>
   </ul></li>
-  <li><a href="#sec-nollahypoteesin-testaaminen" id="toc-sec-nollahypoteesin-testaaminen" class="nav-link" data-scroll-target="#sec-nollahypoteesin-testaaminen"><span class="header-section-number">3.2</span> Nollahypoteesin testaaminen</a>
+  <li><a href="#sec-nollahypoteesin-testaaminen" id="toc-sec-nollahypoteesin-testaaminen" class="nav-link" data-scroll-target="#sec-nollahypoteesin-testaaminen"><span class="header-section-number">4.2</span> Nollahypoteesin testaaminen</a>
   <ul class="collapse">
-  <li><a href="#sec-alfa-arvot-ja-merkitsevyys" id="toc-sec-alfa-arvot-ja-merkitsevyys" class="nav-link" data-scroll-target="#sec-alfa-arvot-ja-merkitsevyys"><span class="header-section-number">3.2.1</span> Alfa-arvot ja merkitsevyys</a></li>
-  <li><a href="#sec-p-arvon-väärinkäsittäminen" id="toc-sec-p-arvon-väärinkäsittäminen" class="nav-link" data-scroll-target="#sec-p-arvon-väärinkäsittäminen"><span class="header-section-number">3.2.2</span> P-arvon väärinkäsittäminen</a></li>
+  <li><a href="#sec-alfa-arvot-ja-merkitsevyys" id="toc-sec-alfa-arvot-ja-merkitsevyys" class="nav-link" data-scroll-target="#sec-alfa-arvot-ja-merkitsevyys"><span class="header-section-number">4.2.1</span> Alfa-arvot ja merkitsevyys</a></li>
+  <li><a href="#sec-p-arvon-väärinkäsittäminen" id="toc-sec-p-arvon-väärinkäsittäminen" class="nav-link" data-scroll-target="#sec-p-arvon-väärinkäsittäminen"><span class="header-section-number">4.2.2</span> P-arvon väärinkäsittäminen</a></li>
   </ul></li>
-  <li><a href="#sec-tilastollisen-testaamisen-perusmenetelmä" id="toc-sec-tilastollisen-testaamisen-perusmenetelmä" class="nav-link" data-scroll-target="#sec-tilastollisen-testaamisen-perusmenetelmä"><span class="header-section-number">3.3</span> Tilastollisen testaamisen perusmenetelmä</a></li>
+  <li><a href="#sec-tilastollisen-testaamisen-perusmenetelmä" id="toc-sec-tilastollisen-testaamisen-perusmenetelmä" class="nav-link" data-scroll-target="#sec-tilastollisen-testaamisen-perusmenetelmä"><span class="header-section-number">4.3</span> Tilastollisen testaamisen perusmenetelmä</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -354,7 +359,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-hypoteesitestaus-teoria" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></h1>
+<h1 class="title"><span id="sec-hypoteesitestaus-teoria" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></h1>
 </div>
 
 
@@ -371,10 +376,10 @@ div.csl-indent {
 
 <p>Tutkijan valittua otantakehyksensä ja populaationsa, hän kehittää seuraavaksi <strong>hypoteesejä</strong>. Hypoteesi on tieteellinen “arvaus” mahdollisesta tuloksesta, jonka tutkija tulee saamaan tutkimuksestaan. Tämän tarkoituksena on suojata tutkijaa mahdolliselta <strong>vahvistusharhalta</strong> (engl. <em>confirmation bias</em>), eli ihmisten taipumukselta valikoida tietoa tavalla, joka vahvistaa aikaisempia ennakkoluuloja.</p>
 <p>Hypoteesien toimintatapoja on useita, joista yleisin lienee <strong>nollahypoteesimerkitsevyystestaus</strong> (engl. <em>null hypothesis significance testing,</em> NHST). Tätä kutsutaan myös Neymanin ja Pearsonin hypoteesitestaukseksi, menetelmän kahden kehittäjän mukaan.</p>
-<section id="sec-nollahypoteesimerkitsevyystestaus-nhst" class="level2 page-columns page-full" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-nollahypoteesimerkitsevyystestaus-nhst"><span class="header-section-number">3.1</span> Nollahypoteesimerkitsevyystestaus (NHST)</h2>
-<section id="sec-falsifikaatio-teoria" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-falsifikaatio-teoria"><span class="header-section-number">3.1.1</span> Falsifikaatio</h3>
+<section id="sec-nollahypoteesimerkitsevyystestaus-nhst" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-nollahypoteesimerkitsevyystestaus-nhst"><span class="header-section-number">4.1</span> Nollahypoteesimerkitsevyystestaus (NHST)</h2>
+<section id="sec-falsifikaatio-teoria" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-falsifikaatio-teoria"><span class="header-section-number">4.1.1</span> Falsifikaatio</h3>
 <p>NHST pohjautuu kahteen ajatukseen:</p>
 <ol type="1">
 <li>Asetetaan hypoteesi etukäteen, jotta vältetään vahvistusharhaa.</li>
@@ -389,8 +394,8 @@ div.csl-indent {
 <p>Falsifikaation ydin piilee siksi väitteen vääräksi toteamisessa. Jos me väitämme, että kaikki joutsenet ovat valkoisia, niin me tarvitsemme löytää vain <em>yhden</em> erivärisen joutsenen osoittaaksemme väitteen olevan väärässä.</p>
 <p>Toisin sanoen: tieteellisiä väitteitä voidaan todistaa olevan väärässä, mutta ei todentaa.</p>
 </section>
-<section id="sec-nollahypoteesi-falsifikaation-työkaluna" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-nollahypoteesi-falsifikaation-työkaluna"><span class="header-section-number">3.1.2</span> Nollahypoteesi falsifikaation työkaluna</h3>
+<section id="sec-nollahypoteesi-falsifikaation-työkaluna" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-nollahypoteesi-falsifikaation-työkaluna"><span class="header-section-number">4.1.2</span> Nollahypoteesi falsifikaation työkaluna</h3>
 <p>NHST:ssa falsifikaation teoriaa sovelletaan <strong>nollahypoteesin</strong> <span class="math inline">\(H_0\)</span> avulla. Ensin ajattelemme, millaisen suhteen uskomme näkevän datassa. Esimerkiksi, että kaikki joutsenet ovat valkoisia. Tätä kutsutaan myös <strong>vaihtoehtohypoteesiksi</strong> <span class="math inline">\(H_1\)</span>.</p>
 <p><u>Sitten asetamme nollahypoteesin</u>, joka edustaa vaihtoehtohypoteesin negaatiota, eli vääryyttä. On huomattava, että nollahypoteesi ei ole vain suhteen kääntämistä ympäri, vaan suhteen <strong>puuttumista</strong>.</p>
 <blockquote class="blockquote">
@@ -404,8 +409,8 @@ div.csl-indent {
 </blockquote>
 <p>Tiede ei osoita vaihtoehtohypoteesien olevan oikeassa tai väärässä (sitä ei juurikaan voi tehdä) - tiede osoittaa <strong>suhteen puuttumisen olevan tarpeeksi epätodennäköistä, että voimme uskoa suhteen olemassaoloon</strong>.</p>
 </section>
-<section id="sec-todistuksen-puute-ei-ole-puutteen-todistamista" class="level3 page-columns page-full" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-todistuksen-puute-ei-ole-puutteen-todistamista"><span class="header-section-number">3.1.3</span> Todistuksen puute ei ole puutteen todistamista</h3>
+<section id="sec-todistuksen-puute-ei-ole-puutteen-todistamista" class="level3 page-columns page-full" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="sec-todistuksen-puute-ei-ole-puutteen-todistamista"><span class="header-section-number">4.1.3</span> Todistuksen puute ei ole puutteen todistamista</h3>
 <p>Englanniksi sanotaan: <u><em>absense of evidence is not evidence of absense</em></u><em>.</em> Tällä tarkoitetaan siis, että nollahypoteesin epätodennäköisyyden osoittaminen ei tarkoita, että vaihtoehtohypoteesi olisi yhtään sitä todellisempi.</p>
 <p><u>Vaihtoehtohypoteesejä voi käytännössä asettaa kuinka paljon tahansa</u>. Jokaiselle suhteen puuttumisen epätodennäköisyydelle voi antaa vaihtoehtoisia selityksiä maan ja taivaan välillä.</p>
 <p>Esimerkissä emme löytäneet ei-valkoista joutsenta. Selitys sille <em>voisi</em> olla, että kaikki joutsenet ovat valkoisia. Se voisi myös olla jokin muu:</p>
@@ -414,12 +419,12 @@ div.csl-indent {
 <li><p>Ehkä ihminen ei pysty näkemään joutsenten ei-valkoisuutta, koska ei-valkoiset joutsenet ovat väriltään jotain, jota ihmisen silmän tappisolut eivät pysty prosessoimaan.</p></li>
 <li><p>Ehkä ei-valkoiset joutsenet ovat näkymättömiä.</p></li>
 </ul>
-<div class="page-columns page-full"><p>Ja niin edespäin. Jotkut mahdollisista selityksistä tuntuvat tietysti absurdeilta tai mahdottomilta, mutta <strong>datalla emme pysty osoittamaan sitä</strong>. Selitys syntyy aina teorian kautta, vaikka sillä olisi jokin kaukainen suhde dataan.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Tämä näkemys tulee 1900-luvun tieteenfilosofiasta. Myös Karl Popper itse osoitti teorioiden syntyvän datan ja ei-empiirisen järjen kohtaamisesta. Jos aihe kiinnostaa enemmän, suosittelen lukemaan esim. Popperin <em>The Logic of Scientific Discovery</em> <span class="citation" data-cites="popper1959">(<a href="#ref-popper1959" role="doc-biblioref">1959</a>)</span> sekä tieteenfilosofin Imre Lakatosin esseekokoelman <em>Criticism and the Growth of Knowledge</em> <span class="citation" data-cites="lakatos1970">(<a href="#ref-lakatos1970" role="doc-biblioref">1970</a>)</span>. Englantilainen tieteenfilosofi Donald Gillies on kirjoittanut lähestyttävän teoksen tieteenfilosofian perusteista nimeltä <em>Philosophy in the 20th century</em> <span class="citation" data-cites="gillies1993">(<a href="#ref-gillies1993" role="doc-biblioref">1993</a>)</span>, ja suomeksi löytyy myös Kiikerin ja Ylikosken oppiteos <em>Tiede tutkimuskohteena</em> <span class="citation" data-cites="kiikeri2004">(<a href="#ref-kiikeri2004" role="doc-biblioref">2004</a>)</span>.</p></li></div></div>
+<div class="page-columns page-full"><p>Ja niin edespäin. Jotkut mahdollisista selityksistä tuntuvat tietysti absurdeilta tai mahdottomilta, mutta <strong>datalla emme pysty osoittamaan sitä</strong>. Selitys syntyy aina teorian kautta, vaikka sillä olisi jokin kaukainen suhde dataan.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Tämä näkemys tulee 1900-luvun tieteenfilosofiasta. Myös Karl Popper itse osoitti teorioiden syntyvän datan ja ei-empiirisen järjen kohtaamisesta. Jos aihe kiinnostaa enemmän, suosittelen lukemaan esim. Popperin <em>The Logic of Scientific Discovery</em> <span class="citation" data-cites="popper1959">(<a href="viiteluettelo.html#ref-popper1959" role="doc-biblioref">1959</a>)</span> sekä tieteenfilosofin Imre Lakatosin esseekokoelman <em>Criticism and the Growth of Knowledge</em> <span class="citation" data-cites="lakatos1970">(<a href="viiteluettelo.html#ref-lakatos1970" role="doc-biblioref">1970</a>)</span>. Englantilainen tieteenfilosofi Donald Gillies on kirjoittanut lähestyttävän teoksen tieteenfilosofian perusteista nimeltä <em>Philosophy in the 20th century</em> <span class="citation" data-cites="gillies1993">(<a href="viiteluettelo.html#ref-gillies1993" role="doc-biblioref">1993</a>)</span>, ja suomeksi löytyy myös Kiikerin ja Ylikosken oppiteos <em>Tiede tutkimuskohteena</em> <span class="citation" data-cites="kiikeri2004">(<a href="viiteluettelo.html#ref-kiikeri2004" role="doc-biblioref">2004</a>)</span>.</p></li></div></div>
 <p>Kun siis testaat tilastollisia suhteita, muista: <u>nollahypoteesin epätodennäköisyys ei sinänsä anna lisätodisteita vaihtoehtohypoteesille, koska selitykset eivät itsessään ole suorassa kytköksessä dataan</u>.</p>
 </section>
 </section>
-<section id="sec-nollahypoteesin-testaaminen" class="level2 page-columns page-full" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-nollahypoteesin-testaaminen"><span class="header-section-number">3.2</span> Nollahypoteesin testaaminen</h2>
+<section id="sec-nollahypoteesin-testaaminen" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-nollahypoteesin-testaaminen"><span class="header-section-number">4.2</span> Nollahypoteesin testaaminen</h2>
 <p>Jotta me voimme testata tuloksemme todennäköisyyttä nollahypoteesin alla, käytämme usein jotain <strong>tilastollista jakaumaa</strong>.</p>
 <p><u>Jakaumia käytetään satunnaisotannan yhteydessä</u>. Voimme tehdä oletuksen, että jokainen otanta antaa sattumanvaraisesti tietyn tuloksen, mutta että tämä tulos noudattaa jotain jakaumaa. Yleisesti käytettyjä jakaumia ovat <strong>normaalijakauma, khiin neliön jakauma, t-jakauma</strong> ja <strong>f-jakauma</strong>.</p>
 <p><u>Jakaumat ovat hyödyllisiä, koska erittäin osaavat tilastotieteilijät ovat rakentaneet kaiken maailman laskukaavoja</u> niiden käyttämiseen. Yksi hyödyllisimmistä työkaluista on <strong>todennäköisyystiheysfunktio</strong>, joka kertoo meille jakauman todennäköisyyden aina tietyllä alueella jakaumaa.</p>
@@ -429,15 +434,15 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p><strong>P-arvo osoittaa todennäköisyyttä saada mitattu tulos tai suurempi, jos nollahypoteesi olisi totta ja tuloksen olisi pitänyt olla nolla.</strong></p>
 </blockquote>
-<section id="sec-alfa-arvot-ja-merkitsevyys" class="level3 page-columns page-full" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-alfa-arvot-ja-merkitsevyys"><span class="header-section-number">3.2.1</span> Alfa-arvot ja merkitsevyys</h3>
+<section id="sec-alfa-arvot-ja-merkitsevyys" class="level3 page-columns page-full" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-alfa-arvot-ja-merkitsevyys"><span class="header-section-number">4.2.1</span> Alfa-arvot ja merkitsevyys</h3>
 <div class="page-columns page-full"><p>Vaikka p-arvo osoittaa todennäköisyyttä, sinun pitää vielä määritellä yksi asia. Kuinka epätodennäköistä mitatun tuloksen saaminen nollahypoteesin alla tulisi olla, jotta se “kelpaa” tuloksena? Tätä rajaa kutsutaan <strong>merkitsevyyden rajaksi</strong>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Binääristen rajatestausten aika alkaa olla ohi (ks. <a href="https://lakens.github.io/statistical_inferences/">Lakënsin verkkokirja</a>). On monia erittäin hyviä syitä olla käyttämättä p-arvojen raja-arvoja, mutta vaihtoehdot ovat jokseenkin monimutkaisia ja vaativat tilastollisten kurssien täydellistä uudelleenmuotoilua. Ehkä jonain päivänä…</p></li></div></div>
 <p>Onneksi (ja osittain myös harmiksi) tutkijoilla on käytössä useita raja-arvoja, joita usein sovelletaan. Tavallisimmat rajat ovat: 5 %, 1 % ja 0,1 %. Näitä kutsutaan myös <strong>alfa-arvoiksi</strong>.</p>
 <p><u>Toisin sanoen, tulos nähdään epätodennäköisenä nollahypoteesin alla</u> jos sen tulisi esiintyä yksi kahdestakymmenestä, yksi sadasta tai yksi tuhannesta mittauskerrasta. Mitä pienempi raja-arvo, sitä epätodennäköisempi tulos nollahypoteesin alla.</p>
-<div class="page-columns page-full"><p>Kun teet tilastollisia testejä, käytä näitä raja-arvoja. Huomaa kuitenkin, että jos saat esimerkiksi <span class="math inline">\(p = 0,051\)</span>, älä heitä tulosta “pois” vain sen takia että se ylitti raja-arvon!<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Tarkista aina myös tuloksen koko (ks. merkittävyydestä alla), ja ole rehellinen epävarmuutesi suhteen.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;Tilastotieteilijät Andrew Gelman ja Mel Stern ovatkin huomauttaneet, että ero merkitsevän ja ei-merkitsevän välillä on usein ei-merkitsevä <span class="citation" data-cites="gelman2006">(<a href="#ref-gelman2006" role="doc-biblioref">Gelman ja Stern 2006</a>)</span>. Toisin sanoen, raja-arvon käyttö voi johtaa vääriin tulkintoihin, jolloin joko todetaan positiivinen tai negatiivinen tulos nollatulokseksi (<strong>väärä</strong> <strong>positiivi</strong> tai <strong>negatiivi</strong>).</p></li></div></div>
+<div class="page-columns page-full"><p>Kun teet tilastollisia testejä, käytä näitä raja-arvoja. Huomaa kuitenkin, että jos saat esimerkiksi <span class="math inline">\(p = 0,051\)</span>, älä heitä tulosta “pois” vain sen takia että se ylitti raja-arvon!<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Tarkista aina myös tuloksen koko (ks. merkittävyydestä alla), ja ole rehellinen epävarmuutesi suhteen.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;Tilastotieteilijät Andrew Gelman ja Mel Stern ovatkin huomauttaneet, että ero merkitsevän ja ei-merkitsevän välillä on usein ei-merkitsevä <span class="citation" data-cites="gelman2006">(<a href="viiteluettelo.html#ref-gelman2006" role="doc-biblioref">Gelman ja Stern 2006</a>)</span>. Toisin sanoen, raja-arvon käyttö voi johtaa vääriin tulkintoihin, jolloin joko todetaan positiivinen tai negatiivinen tulos nollatulokseksi (<strong>väärä</strong> <strong>positiivi</strong> tai <strong>negatiivi</strong>).</p></li></div></div>
 </section>
-<section id="sec-p-arvon-väärinkäsittäminen" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-p-arvon-väärinkäsittäminen"><span class="header-section-number">3.2.2</span> P-arvon väärinkäsittäminen</h3>
+<section id="sec-p-arvon-väärinkäsittäminen" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="sec-p-arvon-väärinkäsittäminen"><span class="header-section-number">4.2.2</span> P-arvon väärinkäsittäminen</h3>
 <p>Kuten monia muita tilastollisia menetelmiä, myös p-arvoa käsitetään usein väärin. Tilastotieteilijä Daniel Lakëns on kerännyt monia väärinkäsityksiä <a href="https://lakens.github.io/statistical_inferences/">mainioon verkkokirjaansa</a>, joten esitän ne tässä lyhyesti:</p>
 <ol type="1">
 <li>Ei-merkitsevä p-arvo tarkoittaa, että nollahypoteesi on oikeassa.</li>
@@ -448,8 +453,8 @@ div.csl-indent {
 <p><u>Toiseksi, p-arvo ei kerro meille mitään tuloksen <strong>merkittävyydestä</strong></u> (huomaa ero merkitsevyyteen!). Tuloksen merkittävyys on teoreettinen kysymys. Kuinka suuri jonkun eron pitäisi olla, että meitä ylipäätänsä kiinnostaa? Miten tehokkaasti lääkkeen tulisi vaikuttaa, että me haluaisimme käyttää sitä? Kuinka monta prosenttiyksikköä on “suuri” ero? Näihin kysymyksiin ei valitettavasti löydy tilastollista vastausta, koska ne ovat ei-empiirisiä kysymyksiä.</p>
 </section>
 </section>
-<section id="sec-tilastollisen-testaamisen-perusmenetelmä" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-tilastollisen-testaamisen-perusmenetelmä"><span class="header-section-number">3.3</span> Tilastollisen testaamisen perusmenetelmä</h2>
+<section id="sec-tilastollisen-testaamisen-perusmenetelmä" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-tilastollisen-testaamisen-perusmenetelmä"><span class="header-section-number">4.3</span> Tilastollisen testaamisen perusmenetelmä</h2>
 <p>Tähän asti olen enimmäkseen antanut pitkän listauksen asioista, joita ei tulisi tehdä. Mutta mitä sitten <em>tulisi</em> tehdä? Tässä kiteytys nollahypoteesimerkitsevyystestauksesta:</p>
 <ol type="1">
 <li>Päätä, mitä suhdetta haluat testata ja miksi.</li>
@@ -464,7 +469,7 @@ div.csl-indent {
 </ol>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-gelman2006" class="csl-entry" role="listitem">
 Gelman, Andrew, ja Hal Stern. 2006. <span>”The Difference Between <span>“</span>Significant<span>”</span> and <span>“</span>Not Significant<span>”</span> Is Not Itself Statistically Significant”</span>. <em>The American Statistician</em> 60 (4): 328–31. <a href="https://doi.org/10.1198/000313006X152649">https://doi.org/10.1198/000313006X152649</a>.
 </div>
@@ -720,13 +725,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ohjeitaviittaamiseen.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span>
+      <a href="./mittaustasot.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mittaustasot</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./mallioletukset.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
