@@ -375,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-merkkitesti-teoria" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="sec-merkkitesti-teoria"><span class="header-section-number">9.1</span> Merkkitesti</h2>
 <p><strong>Mittausasteikot</strong>: Järjestysasteikosta ylöspäin</p>
-<p><strong>Merkkitesti</strong> on yksimuuttujatesti, eli vastaa parametristä <strong>yhden otoksen t-testiä</strong>. Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.</p>
+<p><strong>Merkkitesti</strong> on yksimuuttujatesti, eli vastaa parametristä <strong>yhden otoksen t-testiä</strong> (ks. <a href="ttesti.html#sec-yhden-otoksen-t-testi-teoria"><span>Alaluku&nbsp;10.4.1</span></a>). Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.</p>
 <p><u>Merkkitestin voi toteuttaa <strong>yksi-</strong> tai <strong>kaksihäntäisenä</strong></u>. Tämän tunnistaa helpoiten nolla- ja vaihtoehtohypoteesin muotoilusta:</p>
 <blockquote class="blockquote">
 <p>Jos vaihtoehtohypoteesisi ehdottaa vain eroa (“populaatiomediaani <u>ei ole</u> yhtä kuin X”), merkkitesti tulee toteuttaa <strong>kaksihäntäisenä</strong>.</p>
@@ -431,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-wilcoxonin-signed-rank-testi-teoria" class="level2 page-columns page-full" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="sec-wilcoxonin-signed-rank-testi-teoria"><span class="header-section-number">9.2</span> Wilcoxonin signed-rank-testi</h2>
 <p><strong>Mittausasteikot:</strong> Välimatka- ja suhdeasteikko.</p>
-<div class="page-columns page-full"><p><strong>Wilcoxonin signed-rank-testi</strong> (myös Wilcoxonin rankitesti parivertailulle<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, tai vain Wilcoxonin testi<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) on ei-parametrinen vastine <strong>parillisen otoksen t-testille</strong>. Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;Wilcoxonin testi voi joskus myös viitata <strong>Wilcoxonin rankisummatestiin</strong> (engl. <em>Wilcoxon rank-sum test</em>), joka on käytännössä sama kuin Mann-Whitney’n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin. Tutkimusasetelmasta voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.</p></li></div></div>
+<div class="page-columns page-full"><p><strong>Wilcoxonin signed-rank-testi</strong> (myös Wilcoxonin rankitesti parivertailulle<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, tai vain Wilcoxonin testi<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) on ei-parametrinen vastine <strong>parittaisen otoksen t-testille</strong> (ks. <a href="ttesti.html#sec-parittaisen-otoksen-t-testi-teoria"><span>Alaluku&nbsp;10.4.2</span></a>). Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;Wilcoxonin testi voi joskus myös viitata <strong>Wilcoxonin rankisummatestiin</strong> (engl. <em>Wilcoxon rank-sum test</em>), joka on käytännössä sama kuin Mann-Whitney’n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin. Tutkimusasetelmasta voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.</p></li></div></div>
 <p>Testi on jokseenkin samanlainen kuin merkkitesti, mutta kahdella tärkeällä erolla. Ensinnäkin testille lasketaan kahden muuttujan parien <strong>erot</strong>, ja toiseksi nämä <strong>asetetaan järjestykseen</strong> ennen testaamista.</p>
 <p>Myös Wilcoxonin testin voi tehdä <strong>yksi-</strong> tai <strong>kaksihäntäisenä</strong>. Häntäisyysvalinta vaikuttaa merkitsevyyden laskemiseen.</p>
 <section id="sec-wilcoxonin-signed-rank-mallioletukset" class="level3" data-number="9.2.1">
@@ -537,8 +537,8 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <section id="sec-mann-whitneyn-u-testi" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="sec-mann-whitneyn-u-testi"><span class="header-section-number">9.3</span> Mann-Whitney’n U-testi</h2>
 <p><strong>Mittausasteikot:</strong> Järjestysasteikosta ylöspäin</p>
-<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jossa testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong>.</p>
-<p><u>Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä</u>; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jossa testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).</p>
+<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong> (ks. <a href="ttesti.html#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.3</span></a> ja <a href="ttesti.html#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.4</span></a>).</p>
+<p><u>Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä</u>; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jolla testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).</p>
 <p><u>U-testi lasketaan hyvin samoin kuin Wilcoxonin testi</u>, mutta U-testissä testataan, eroavatko kaksi ryhmää toisistaan:</p>
 <ol type="1">
 <li>Anna jokaiselle riville järjestysnumero.</li>
@@ -546,13 +546,13 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <li>Laske otoskoot molemmille ryhmille.</li>
 <li>Laske molemmille ryhmille U-arvot. Pienempi arvo näistä kahdesta raportoidaan.</li>
 </ol>
-<p><u>W-arvon pohjalta voidaan myös laskea z-arvo</u> ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.</p>
+<p><u>W-arvon pohjalta voidaan myös laskea z-arvon</u> ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.</p>
 <section id="sec-mann-whitneyn-u-mallioletukset" class="level3" data-number="9.3.1">
 <h3 data-number="9.3.1" class="anchored" data-anchor-id="sec-mann-whitneyn-u-mallioletukset"><span class="header-section-number">9.3.1</span> Mallioletukset</h3>
 <p><u>U-testillä on hieman muita ei-parametrisiä testejä enemmän mallioletuksia</u>, mutta kuitenkin vähemmän kuin lineaarisilla malleilla:</p>
 <ul>
-<li><p><strong>Riippumaton muuttuja tulisi olla dikotominen</strong>, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).</p></li>
-<li><p><strong>Sama yksikkö ei saa olla molemmissa ryhmissä</strong>. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on sekä parittaisia että kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.</p></li>
+<li><p><strong>Riippumaton muuttuja tulisi olla dikotominen</strong>, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö (<a href="khiinneliö.html"><span>Luku&nbsp;12</span></a>) voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).</p></li>
+<li><p><strong>Sama yksikkö ei saa olla molemmissa ryhmissä</strong>. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on <em>sekä</em> parittaisia <em>että</em> kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.</p></li>
 <li><p><strong>Otos on satunnaisesti haettu populaatiosta</strong>. Tämä pätee kaikkiin frekvenssitilastotieteellisiin malleihin muutenkin.</p></li>
 </ul>
 </section>
@@ -574,7 +574,7 @@ U = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
 \end{split}
 \tag{9.4}\]</span></span></p>
 <p>Keskiarvo <span class="math inline">\(\bar{W}\)</span> lasketaan kertomalla ensimmäisen ryhmän otoskoko <span class="math inline">\(n_{k_1}\)</span> molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.</p>
-<p>Keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos kahdellatoista, ja ottamalla viimeisen tuloksen neliöjuuri.</p>
+<p>Keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos 12:lla, ja ottamalla viimeisen tuloksen neliöjuuri.</p>
 <p><u>Laske sitten z-arvo</u>:</p>
 <p><span id="eq-w-suure-z-normalisointi"><span class="math display">\[
 z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
@@ -590,7 +590,7 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 <li>Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): <code>=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)</code> molemmille ryhmille.</li>
 <li>Laske ryhmien järjestysnumerot yhtenä pakettina, mutta eriteltynä ryhmäsarakkeisiin:
 <ol type="1">
-<li>Tee kaksi saraketta, molempien ryhmien järjestysarvoille, samassa järjestyksessä kuin haettu data.</li>
+<li>Tee kaksi saraketta, yksi jokaisen ryhmän järjestysarvoille, samassa järjestyksessä kuin haettu data. (ensimmäinen ryhmä vasemmalla toisesta ryhmästä).</li>
 <li>Laske ensimmäiseen soluun <code>=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)</code>. Huomaa, että järjestysalueen tulee kattaa molemmat ryhmäsarakkeet! Lukitse järjestysalue.</li>
 <li>Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.</li>
 </ol></li>
@@ -607,11 +607,11 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 <li>Laske haluttavan häntäisyyden z-arvo.</li>
 <li>Hae z-arvon p-arvo: <code>=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)</code></li>
 </ol>
-<p>Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä.</p>
+<p>Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä (ks. <a href="#sec-wilcoxonin-testin-toteuttaminen-excelissä"><span>Alaluku&nbsp;9.2.3</span></a>).</p>
 </section>
 <section id="sec-u-testin-raportoiminen" class="level3" data-number="9.3.4">
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="sec-u-testin-raportoiminen"><span class="header-section-number">9.3.4</span> U-testin raportoiminen</h3>
-<p>U-testissä itse U-suure on testisuure. Raportoi siksi mieluisesti:</p>
+<p>U-testissä itse U-suure on testisuure. Raportoi täten mieluisesti:</p>
 <ul>
 <li><p>Ryhmien mediaanit <span class="math inline">\(\text{Md}\)</span></p></li>
 <li><p>U-suure <span class="math inline">\(U\)</span></p></li>
@@ -628,6 +628,7 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 r = \frac{z}{\sqrt{n}}
 \tag{9.6}\]</span></span></p>
 <p>Jaa siis z-arvo otoskoon neliöjuurella. Otoskoolla tarkoitetaan sitä kokoa, jota käytit laskeaksesi z-arvon. Yleensä tämä on koko mittauksen otoskoko. Parittaiselle testille kyseessä on kaksi kertaa ryhmän koko (poislukien nolla-arvot). Jos alkuperäinen otos oli 10 yksikköä, ja mitasta poistui kaksi nolla-arvoa, otoskoko on <span class="math inline">\(2*8 = 16\)</span>.</p>
+<p><span class="math inline">\(r\)</span>-suure raportoidaan samassa kohdassa kuin muut raportoitavat tiedot.</p>
 
 
 </section>

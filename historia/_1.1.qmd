@@ -10,3 +10,7 @@
 
 -   Muutettu kirjan ulkonäköä ja navigointia.
 -   Kirjoitusvirheiden korjausta.
+
+**Tunnetut ongelmat**:
+
+-   Spearmanin ja Kendallin korrelaatiokertoimien selitykset puuttuvat.

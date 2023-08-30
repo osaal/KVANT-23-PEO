@@ -16,7 +16,7 @@ Tämän takia nyrkkisääntönä onkin, että [käytät parametrisia lineaarisia
 
 **Mittausasteikot**: Järjestysasteikosta ylöspäin
 
-**Merkkitesti** on yksimuuttujatesti, eli vastaa parametristä **yhden otoksen t-testiä**. Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.
+**Merkkitesti** on yksimuuttujatesti, eli vastaa parametristä **yhden otoksen t-testiä** (ks. @sec-yhden-otoksen-t-testi-teoria). Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.
 
 [Merkkitestin voi toteuttaa **yksi-** tai **kaksihäntäisenä**]{.underline}. Tämän tunnistaa helpoiten nolla- ja vaihtoehtohypoteesin muotoilusta:
 
@@ -79,7 +79,7 @@ Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin
 
 **Mittausasteikot:** Välimatka- ja suhdeasteikko.
 
-**Wilcoxonin signed-rank-testi** (myös Wilcoxonin rankitesti parivertailulle[^eiparametrisettestit-2], tai vain Wilcoxonin testi[^eiparametrisettestit-3]) on ei-parametrinen vastine **parillisen otoksen t-testille**. Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.
+**Wilcoxonin signed-rank-testi** (myös Wilcoxonin rankitesti parivertailulle[^eiparametrisettestit-2], tai vain Wilcoxonin testi[^eiparametrisettestit-3]) on ei-parametrinen vastine **parittaisen otoksen t-testille** (ks. @sec-parittaisen-otoksen-t-testi-teoria). Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.
 
 [^eiparametrisettestit-2]: Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.
 
@@ -204,9 +204,9 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 **Mittausasteikot:** Järjestysasteikosta ylöspäin
 
-**Mann-Whitney'n U-testi** on ei-parametrinen testi, jossa testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on **kahden otoksen t-testi**.
+**Mann-Whitney'n U-testi** on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on **kahden otoksen t-testi** (ks. @sec-kahden-otoksen-homoskedastinen-t-testi-teoria ja @sec-kahden-otoksen-heteroskedastinen-t-testi-teoria).
 
-[Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä]{.underline}; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jossa testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).
+[Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä]{.underline}; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jolla testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).
 
 [U-testi lasketaan hyvin samoin kuin Wilcoxonin testi]{.underline}, mutta U-testissä testataan, eroavatko kaksi ryhmää toisistaan:
 
@@ -215,15 +215,15 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 3.  Laske otoskoot molemmille ryhmille.
 4.  Laske molemmille ryhmille U-arvot. Pienempi arvo näistä kahdesta raportoidaan.
 
-[W-arvon pohjalta voidaan myös laskea z-arvo]{.underline} ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.
+[W-arvon pohjalta voidaan myös laskea z-arvon]{.underline} ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.
 
 ### Mallioletukset {#sec-mann-whitneyn-u-mallioletukset}
 
 [U-testillä on hieman muita ei-parametrisiä testejä enemmän mallioletuksia]{.underline}, mutta kuitenkin vähemmän kuin lineaarisilla malleilla:
 
--   **Riippumaton muuttuja tulisi olla dikotominen**, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).
+-   **Riippumaton muuttuja tulisi olla dikotominen**, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö (@sec-khiin-neliö) voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).
 
--   **Sama yksikkö ei saa olla molemmissa ryhmissä**. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on sekä parittaisia että kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.
+-   **Sama yksikkö ei saa olla molemmissa ryhmissä**. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on *sekä* parittaisia *että* kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.
 
 -   **Otos on satunnaisesti haettu populaatiosta**. Tämä pätee kaikkiin frekvenssitilastotieteellisiin malleihin muutenkin.
 
@@ -254,7 +254,7 @@ $$ {#eq-w-keskiarvo-ja-keskihajonta}
 
 Keskiarvo $\bar{W}$ lasketaan kertomalla ensimmäisen ryhmän otoskoko $n_{k_1}$ molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.
 
-Keskihajonta $\text{SE}_{\bar{W}}$ lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos kahdellatoista, ja ottamalla viimeisen tuloksen neliöjuuri.
+Keskihajonta $\text{SE}_{\bar{W}}$ lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos 12:lla, ja ottamalla viimeisen tuloksen neliöjuuri.
 
 [Laske sitten z-arvo]{.underline}:
 
@@ -273,7 +273,7 @@ Tunnistat varmaan käytännön tässä vaiheessa - [U-testi tehdään käsin Exc
 1.  Määrittele hypoteesipari ja häntäisyys.
 2.  Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): `=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)` molemmille ryhmille.
 3.  Laske ryhmien järjestysnumerot yhtenä pakettina, mutta eriteltynä ryhmäsarakkeisiin:
-    1.  Tee kaksi saraketta, molempien ryhmien järjestysarvoille, samassa järjestyksessä kuin haettu data.
+    1.  Tee kaksi saraketta, yksi jokaisen ryhmän järjestysarvoille, samassa järjestyksessä kuin haettu data. (ensimmäinen ryhmä vasemmalla toisesta ryhmästä).
     2.  Laske ensimmäiseen soluun `=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)`. Huomaa, että järjestysalueen tulee kattaa molemmat ryhmäsarakkeet! Lukitse järjestysalue.
     3.  Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.
 4.  Laske järjestysnumerosarakkeiden summat (`SUMMA`) ja otoskoot (`LASKE` tai `LASKE.A`).
@@ -287,11 +287,11 @@ Olet valmis U-suureen laskemisessa! [Jos haluat laskea z-arvon]{.underline} ja h
 8.  Laske haluttavan häntäisyyden z-arvo.
 9.  Hae z-arvon p-arvo: `=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)`
 
-Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä.
+Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä (ks. @sec-wilcoxonin-testin-toteuttaminen-excelissä).
 
 ### U-testin raportoiminen {#sec-u-testin-raportoiminen}
 
-U-testissä itse U-suure on testisuure. Raportoi siksi mieluisesti:
+U-testissä itse U-suure on testisuure. Raportoi täten mieluisesti:
 
 -   Ryhmien mediaanit $\text{Md}$
 
@@ -312,3 +312,5 @@ r = \frac{z}{\sqrt{n}}
 $$ {#eq-r-suure-z-testistä}
 
 Jaa siis z-arvo otoskoon neliöjuurella. Otoskoolla tarkoitetaan sitä kokoa, jota käytit laskeaksesi z-arvon. Yleensä tämä on koko mittauksen otoskoko. Parittaiselle testille kyseessä on kaksi kertaa ryhmän koko (poislukien nolla-arvot). Jos alkuperäinen otos oli 10 yksikköä, ja mitasta poistui kaksi nolla-arvoa, otoskoko on $2*8 = 16$.
+
+$r$-suure raportoidaan samassa kohdassa kuin muut raportoitavat tiedot.
