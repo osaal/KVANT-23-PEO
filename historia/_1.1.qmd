@@ -6,6 +6,7 @@
 
 -   Mittaustasojen teoria
 -   Alaluku "Spearmanin rho" ei-parametristen testien lukuun.
+-   Alaluvut "Solujen muokkaaminen", "Vetotoiminto" ja "Lukitustoiminto" Excelin perusteiden lukuun.
 
 **Muutokset**:
 

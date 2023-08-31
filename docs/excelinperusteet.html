@@ -65,6 +65,10 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 13&nbsp; Excelin perusteet">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="pics/viittaaminen/viit_esimerkki01a.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked nav-fixed slimcontent">
@@ -110,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
         <li>
     <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
- <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mittaustasot</span></span></a>
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
@@ -302,12 +306,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-arvotyypit" id="toc-sec-arvotyypit" class="nav-link active" data-scroll-target="#sec-arvotyypit"><span class="header-section-number">13.1</span> Arvotyypit</a></li>
-  <li><a href="#arvojen-manipulointi-excelissä" id="toc-arvojen-manipulointi-excelissä" class="nav-link" data-scroll-target="#arvojen-manipulointi-excelissä"><span class="header-section-number">13.2</span> Arvojen manipulointi Excelissä</a></li>
+  <li><a href="#sec-arvojen-manipulointi-excelissä" id="toc-sec-arvojen-manipulointi-excelissä" class="nav-link" data-scroll-target="#sec-arvojen-manipulointi-excelissä"><span class="header-section-number">13.2</span> Arvojen manipulointi Excelissä</a></li>
   <li><a href="#sec-loogisten-ehtojen-totuustaulukot" id="toc-sec-loogisten-ehtojen-totuustaulukot" class="nav-link" data-scroll-target="#sec-loogisten-ehtojen-totuustaulukot"><span class="header-section-number">13.3</span> Loogisten ehtojen totuustaulukot</a></li>
   <li><a href="#solujen-muokkaaminen" id="toc-solujen-muokkaaminen" class="nav-link" data-scroll-target="#solujen-muokkaaminen"><span class="header-section-number">13.4</span> Solujen muokkaaminen</a></li>
   <li><a href="#viittaaminen-ja-osoitteet" id="toc-viittaaminen-ja-osoitteet" class="nav-link" data-scroll-target="#viittaaminen-ja-osoitteet"><span class="header-section-number">13.5</span> Viittaaminen ja osoitteet</a></li>
-  <li><a href="#funktiot" id="toc-funktiot" class="nav-link" data-scroll-target="#funktiot"><span class="header-section-number">13.6</span> Funktiot</a></li>
-  <li><a href="#dynaamiset-matriisit" id="toc-dynaamiset-matriisit" class="nav-link" data-scroll-target="#dynaamiset-matriisit"><span class="header-section-number">13.7</span> Dynaamiset matriisit</a></li>
+  <li><a href="#vetotoiminto" id="toc-vetotoiminto" class="nav-link" data-scroll-target="#vetotoiminto"><span class="header-section-number">13.6</span> Vetotoiminto</a></li>
+  <li><a href="#lukitustoiminto" id="toc-lukitustoiminto" class="nav-link" data-scroll-target="#lukitustoiminto"><span class="header-section-number">13.7</span> Lukitustoiminto</a></li>
+  <li><a href="#funktiot" id="toc-funktiot" class="nav-link" data-scroll-target="#funktiot"><span class="header-section-number">13.8</span> Funktiot</a></li>
+  <li><a href="#dynaamiset-matriisit" id="toc-dynaamiset-matriisit" class="nav-link" data-scroll-target="#dynaamiset-matriisit"><span class="header-section-number">13.9</span> Dynaamiset matriisit</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -332,15 +338,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div class="page-columns page-full"><p>Microsoft Excel on <strong>taulukkolaskentaohjelma</strong>. Tällä tarkoitetaan, että kaikki työ tehdään <strong>taulukoissa</strong>, joita Excel kutsuu myös <strong>työkirjoiksi</strong>. Työkirjan tunnistaa päätteestä <code>.xlsx</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Jokainen työkirja sisältää yhden tai useamman <strong>työlehtiön</strong>, joiden sisältä löytyy <strong>taulukkoalue</strong>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Aikaisemmissa Excel-versioissa myös <code>.xls</code>. Toinen yleinen taulukkomuoto on <code>.csv</code>.</p></li></div></div>
-<p>Taulukkoalue jaetaan <strong>soluihin</strong>, joihin viitataan niiden <strong>rivi- ja sarakeosoitteella</strong>. Excelissä rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet merkitään kirjaimilla A-Z. Jos sarakkeita on useampi kuin 26, Excel automaattisesti aloittaa seuraavan sarakesarjan nimen AA, AB, ja niin eteenpäin.</p>
-<p>Excelissä kaikki työ tehdään taulukkoalueella. Voit lisätä ja poistaa <strong>arvoja</strong> (numeroita, tekstiä, verkko-osoitteita, melkein mitä tahansa), tehdä laskentoja arvoille, tuottaa kuvioita, automatisoida analyysia, ja vaikka mitä.</p>
+<p>Taulukkoalue jaetaan <strong>soluihin</strong>, joilla on <strong>rivi- ja sarakeosoitteet</strong>. Excelissä rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet merkitään kirjaimilla A-Z. Jos sarakkeita on useampi kuin 26, Excel automaattisesti aloittaa seuraavan sarakesarjan nimen AA, AB, ja niin eteenpäin.</p>
+<p><u>Excelissä kaikki työ tehdään taulukkoalueella</u>. Voit lisätä ja poistaa <strong>arvoja</strong> (numeroita, tekstiä, verkko-osoitteita, melkein mitä tahansa), tehdä laskentoja arvoille, tuottaa kuvioita, automatisoida analyysia, ja vaikka mitä.</p>
 <section id="sec-arvotyypit" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="sec-arvotyypit"><span class="header-section-number">13.1</span> Arvotyypit</h2>
 <p>Excelissä on neljä <strong>alkeellista</strong> arvo- tai datatyyppiä: numerot, teksti, loogiset ja virheet.</p>
-<p><strong>Numerodata</strong> on, kuten nimi ehdottaa, numeroita. Ne voivat olla desimaalilukuja (esim. <code>0.5</code>), kokonaislukuja (<code>13</code>), prosentteja (<code>15%</code>), päivämääriä (<code>16/03/2005</code>) tai jopa puhelinnumeroita (<code>+358501234567</code>). Koska Exceliä ei sinänsä kiinnosta millainen numeroarvo on kyseessä, voi joskus tapahtua hassuja odottamattomuuksia. Excel antaa esimerkiksi sinun ynnätä päivämäärän ja prosentin yhteen - mutta mitä tulos on, sen tietää vain Excel itse.</p>
-<p><strong>Tekstidata</strong> on ihmisluettavaa tekstiä, kuten lauseita, sanoja, merkkejä tai fyysisiä osoitteita. Näille löytyy omat työkalut Excelissä, joten työkalulla pystyt myös käsittelemään tekstidataa koneella.</p>
-<p><strong>Loogisia tai totuusarvoja</strong> ovat arvot <code>TOSI</code> ja <code>EPÄTOSI</code>. Näitä käytetään paljon Excelissä, myöskin funktioiden sisällä, joten niiden tunnistaminen on tärkeää. Jos yrität ynnätä loogisia arvoja yhteen, Excel yleensä pakottaa ne numeromuotoon: <code>TOSI = 1, EPÄTOSI = 0</code>. Loogisille arvoille löytyy neljä perustoimintoa: <code>JA, TAI, EHDOTON.TAI, EI</code>. Näistä lisää kohdassa <a href="#sec-loogisten-ehtojen-totuustaulukot"><span>Alaluku&nbsp;13.3</span></a>.</p>
-<p><strong>Virhearvot</strong> ovat Excelin erikoisuus. Jos Excel tunnistaa jonkun laskuvirheen tai muun teknisen virheen, se palauttaa yleensä virhearvon. Näitä voi myös itse tuottaa virhearvofunktioilla, jos on tarvetta. Virhearvot ovat:</p>
+<p><strong>Numerodata</strong> on, kuten nimi ehdottaa, numeroita. Ne voivat olla desimaalilukuja (esim. <code>0.5</code>), kokonaislukuja (<code>13</code>), prosentteja (<code>15%</code>), päivämääriä (<code>16/03/2005</code>) tai jopa puhelinnumeroita (<code>0501234567</code>). Koska Exceliä ei sinänsä kiinnosta millainen numeroarvo on kyseessä, voi joskus sattua hassuja odottamattomuuksia. Excel antaa esimerkiksi sinun ynnätä päivämäärän ja prosentin yhteen - mutta mitä tulos on, sen tietää vain Excel itse.</p>
+<p><strong>Tekstidata</strong> on ihmisluettavaa tekstiä, kuten lauseita, sanoja, merkkejä tai fyysisiä osoitteita. Näille löytyy omat työkalut Excelissä, joten pystyt myös käsittelemään tekstidataa koneella Excelissä.</p>
+<p><strong>Loogisia arvoja tai totuusarvoja</strong> ovat arvot <code>TOSI</code> ja <code>EPÄTOSI</code>. Näitä käytetään paljon Excelissä, myöskin funktioiden sisällä, joten niiden tunnistaminen on tärkeää. Jos yrität ynnätä loogisia arvoja yhteen, Excel yleensä pakottaa ne numeromuotoon: <code>TOSI = 1, EPÄTOSI = 0</code>. Loogisille arvoille löytyy neljä perustoimintoa: <code>JA, TAI, EHDOTON.TAI, EI</code>. Näistä lisää <a href="#sec-loogisten-ehtojen-totuustaulukot">alaluvussa&nbsp;<span>13.3</span></a>.</p>
+<p><strong>Virhearvot</strong> ovat Excelin erikoisuus. Jos Excel tunnistaa jonkun laskuvirheen tai muun teknisen virheen, se palauttaa yleensä virhearvon. Näitä voi myös itse tuottaa virhearvofunktioilla, jos siihen on tarvetta. Virhearvot ovat:</p>
 <ul>
 <li><p><strong>#NIMI?</strong> Soluviittaus ei ole oikein, kirjoitusvirhe funktiossa tai puuttuvat lainausmerkit.</p></li>
 <li><p><strong>#JAKO/0</strong> Yrität jakaa jonkun numeron nollalla, mikä ei ole mahdollista.</p></li>
@@ -351,16 +357,17 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>#TYHJÄ!</strong> Yrität hakea kahden matriisin risteämiskohtia, mutta sellaista ei ole. Esiintyy myös jos merkitset useamman solualueen ilman puolipilkkua välissä, sekä joissain muissa tilanteissa.</p></li>
 </ul>
 </section>
-<section id="arvojen-manipulointi-excelissä" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="arvojen-manipulointi-excelissä"><span class="header-section-number">13.2</span> Arvojen manipulointi Excelissä</h2>
-<p>“Manipulointi” voi kuulostaa pahaenteiseltä, mutta tässä kontekstissa tarkoitetaan yksinkertaisesti arvojen muokkaamista, muuttamista ja hyödyntämistä laskennoissa.</p>
-<p>Excelin operaattorit voidaan jakaa neljään kategoriaan: aritmeettiset, vertailevat, tekstiä yhdistävät ja viittausoperaattorit. Alla olevassa taulukossa selitetään kaikki operaattorit ja niiden toiminnat.</p>
+<section id="sec-arvojen-manipulointi-excelissä" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="sec-arvojen-manipulointi-excelissä"><span class="header-section-number">13.2</span> Arvojen manipulointi Excelissä</h2>
+<p>“Manipulointi” voi kuulostaa pahaenteiseltä, mutta sanalla tarkoitetaan vain arvojen muokkaamista, muuttamista ja hyödyntämistä laskennoissa.</p>
+<p><u>Excelin operaattorit voidaan jakaa neljään kategoriaan</u>: <strong>aritmeettiset</strong>, <strong>vertailevat</strong>, <strong>tekstiä yhdistävät</strong> ja <strong>viittausoperaattorit</strong>. Alla olevassa taulukossa selitetään kaikki operaattorit ja niiden toiminnat.</p>
+<div id="tbl-excelin-operaattorit" class="anchored">
 <table class="table">
-<caption>Excelin operaattorit</caption>
+<caption>Taulukko&nbsp;13.1: Excelin operaattorit</caption>
 <colgroup>
-<col style="width: 17%">
-<col style="width: 43%">
-<col style="width: 39%">
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -447,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><code>&amp;</code> (ampersandi)</td>
-<td>Yhdistää kaksi tekstiarvoa yhdeksi. HUOM: Ei lisää välilyöntejä tai muita merkkejä väliin!</td>
+<td>Yhdistää kaksi tekstiarvoa yhdeksi. Ei lisää välilyöntejä tai muita merkkejä väliin!</td>
 <td><code>"Pelastus"&amp;"laitos" = "Pelastuslaitos"</code></td>
 </tr>
 <tr class="odd">
@@ -478,13 +485,15 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><code>!</code> (huutomerkki)</td>
 <td>Ilmaisee solualueen sijaitsevan jossain muualla</td>
-<td><code>Taul1!A1</code> hakee solun <code>A1</code> työlehtiöstä <code>Taul1</code>, vaikka olisit lehtiössä <code>Taul4</code>.</td>
+<td><code>Taul1!A1</code> hakee solun <code>A1</code> työlehtiöstä <code>Taul1</code>, vaikka olisit työlehtiössä <code>Taul4</code>.</td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>Näiden lisäksi Excelissä voi käyttää sulkuja <code>( )</code> laskentajärjestyksen määrittelyyn. Tämä on erittäin suositeltavaa, sillä <strong>Excel ei aina noudata perinteistä laskentajärjestystä</strong>! Excel laskee vasemmalta oikealle, tietyn suosiojärjestyksen mukaan. Voit kuitenkin aina itse määritellä järjestyksen suluilla.</p>
 <p><strong>Aritmeettisia ja vertailevia operaattoreita</strong> käytetään kuten matematiikassa yleensä. Huomioi kuitenkin eri-kuin-operaattori <code>&lt;&gt;</code>, joka muotoillaan eri tavalla kuin monessa muussa kontekstissa.</p>
 <p>Kun määrittelet soluun jotain laskettavaksi, eteen tulee aina <strong>yhtäläisyysmerkki</strong> <code>=</code>. Tämä kertoo Excelille, että seuraavaksi lasketaan jotain.</p>
+<p>Huomaa vielä, että <strong>viiteoperaattort</strong> voivat toimia hieman eri tavoin riippuen käyttökontekstista. Esimerkkinä puolipilkku: puolipilkkua käytetään funktioiden parametrien erittelyssä (ks. alla) suomenkielisessä Excelissä, jolloin se ei yhdistä matriisialueita funktion sisällä.</p>
 </section>
 <section id="sec-loogisten-ehtojen-totuustaulukot" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="sec-loogisten-ehtojen-totuustaulukot"><span class="header-section-number">13.3</span> Loogisten ehtojen totuustaulukot</h2>
@@ -492,10 +501,10 @@ ul.task-list li input[type="checkbox"] {
 <p><code>JA</code>-ehto täyttyy, kun molemmat totuusarvot ovat <code>TOSI</code>. Sen totuustaulukko on:</p>
 <div id="tbl-ja-totuus" class="anchored">
 <table class="table-striped table-hover table">
-<caption>Taulukko&nbsp;13.1: <code>JA</code>-ehdon totuustaulukko</caption>
+<caption>Taulukko&nbsp;13.2: <code>JA</code>-ehdon totuustaulukko</caption>
 <tbody>
 <tr class="odd">
-<td><code>JA</code>-ehto</td>
+<td><strong><code>JA</code>-ehto</strong></td>
 <td><code>a = EPÄTOSI</code></td>
 <td><code>a = TOSI</code></td>
 </tr>
@@ -512,13 +521,13 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
-<p><code>TAI</code>-ehto täyttyy, kun jompikumpi totuusarvoista on <code>TOSI</code> (tai molemmat). sen totuustaulukko on:</p>
+<p><code>TAI</code>-ehto täyttyy, kun jompikumpi totuusarvoista on <code>TOSI</code> (tai molemmat). Sen totuustaulukko on:</p>
 <div id="tbl-tai-totuus" class="anchored">
 <table class="table-striped table-hover table">
-<caption>Taulukko&nbsp;13.2: <code>TAI</code>-ehdon totuustaulukko</caption>
+<caption>Taulukko&nbsp;13.3: <code>TAI</code>-ehdon totuustaulukko</caption>
 <tbody>
 <tr class="odd">
-<td><code>TAI</code>-ehto</td>
+<td><strong><code>TAI</code>-ehto</strong></td>
 <td><code>a = EPÄTOSI</code></td>
 <td><code>a = TOSI</code></td>
 </tr>
@@ -538,10 +547,10 @@ ul.task-list li input[type="checkbox"] {
 <p><code>EHDOTON.TAI</code>-ehto täyttyy, kun jompikumpi totuusarvoista on <code>TOSI</code> (mutta ei molemmat!). Sen totuustaulukko on:</p>
 <div id="tbl-ehdotontai-totuus" class="anchored">
 <table class="table-striped table-hover table">
-<caption>Taulukko&nbsp;13.3: <code>EHDOTON.TAI</code>-ehdon totuustaulukko</caption>
+<caption>Taulukko&nbsp;13.4: <code>EHDOTON.TAI</code>-ehdon totuustaulukko</caption>
 <tbody>
 <tr class="odd">
-<td><code>EHDOTON.TAI</code>-ehto</td>
+<td><strong><code>EHDOTON.TAI</code>-ehto</strong></td>
 <td><code>a = EPÄTOSI</code></td>
 <td><code>a = TOSI</code></td>
 </tr>
@@ -561,10 +570,10 @@ ul.task-list li input[type="checkbox"] {
 <p><code>EI</code>-ehto täyttyy, kun annettu ehto on <code>EPÄTOSI</code>. Toisin sanoen, tämä ehto kääntää totuusarvon toisinpäin. Sen totuustaulukko on:</p>
 <div id="tbl-ei-totuus" class="anchored">
 <table class="table-striped table-hover table">
-<caption>Taulukko&nbsp;13.4: <code>EI</code>-ehdon totuustaulukko</caption>
+<caption>Taulukko&nbsp;13.5: <code>EI</code>-ehdon totuustaulukko</caption>
 <tbody>
 <tr class="odd">
-<td><code>EI</code>-ehto</td>
+<td><strong><code>EI</code>-ehto</strong></td>
 <td><code>a = EPÄTOSI</code></td>
 <td><code>a = TOSI</code></td>
 </tr>
@@ -579,6 +588,25 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="solujen-muokkaaminen" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="solujen-muokkaaminen"><span class="header-section-number">13.4</span> Solujen muokkaaminen</h2>
+<p>Jos klikkaat mitä tahansa solua, solun ympärille syntyy <strong>vihreä valintalaatikko</strong>. Voit valita useamman solun vetämällä hiiren solujen yli, jolloin Excel maalaa kaikki valitsemasi solut tummanharmaalla ja osoittaa solujen valinnan suuremmalla valintalaatikolla.</p>
+<p>Voit myös valita soluja näppäimistökomennoilla. Nämä ovat erittäin hyödyllisiä varsinkin tilanteissa, joissa haluat valita suuren määrän soluja kerralla (esim. 400 riviä ja 15 saraketta - kyllä, tämä tilanne tulee helposti vastaan!). Komennot ovat:</p>
+<ul>
+<li><p>Nuolinäppäimet <code>Ylös</code>, <code>Alas</code>, <code>Vasen</code> ja <code>Oikea</code>: Siirry solualueella nuolen osoittamaan suuntaan.</p></li>
+<li><p><code>Shift + Nuolinäppäimet</code>: Lisää seuraava solu nuolen osoittamassa suunnassa valintaasi.</p></li>
+<li><p><code>Ctrl + Nuolinäppäimet</code>: Siirry seuraavaan soluun nuolen osoittamassa suunnassa, jossa on tietoja.</p>
+<ul>
+<li><p>Jos kaikki solut nuolen osoittamassa suunnassa ovat tyhjiä, Excel hyppää taulukon maksimirajaan (rivi 1 048 576, sarake XFD).</p></li>
+<li><p>Jos nykyisessä valitussa solussa on dataa, Excel siirtyy viimeiseen soluun nuolen osoittamassa suunnassa, jossa on dataa. Jos esim. olet laittanut numeroita soluihin A1, A2 ja A3, valitset solun A1 ja painat <code>Ctrl + Alas</code>, Excel hyppää soluun A3, koska se on viimeinen alla oleva solu josta löytyy dataa. Jos painat saman yhdistelmän uudelleen, Excel hyppää seuraavaan soluun, josta löytyy dataa. Jos sellaista ei ole, Excel hyppää viimeiselle mahdolliselle riville taulukossa.</p></li>
+<li><p>Jos nykyisessä valitussa solussa ei ole dataa, Excel siirtyy seuraavaan soluun nuolen osoittamassa suunnassa, jossa on dataa - tai viimeiselle mahdolliselle riville, jos dataa ei ollenkaan esiinny.</p></li>
+</ul></li>
+<li><p><code>Shift + Ctrl + Nuolinäppäimet</code>: Lisää kaikki dataa sisältävät solut nuolen osoittamassa suunnassa valintaan.</p>
+<ul>
+<li>Jos haluat valita ison taulukkoalueen kerralla, tämä on erinomainen komento. Sen sijaan, että valitset solun jostain taulukon nurkasta ja vedät hiiren vastakkaiseen nurkkaan, voit valita yhden nurkan, painaa <code>Shift + Ctrl + (ensimmäinen suunta, josta löytyy dataa)</code> ja sitten <code>Shift + Ctrl + (toinen suunta, josta löytyy dataa)</code>. Tämä valitsee automaattisesti koko taulukon!</li>
+</ul></li>
+</ul>
+<p><u>Voit muokata solujen sisältöä</u> klikkaamalla solua ja aloittamalla kirjoittamisen. Voit myös tuplaklikata solua, jolloin näet vilkkuvan kirjoittamiskursorin solussa.</p>
+<p><u>Solun sisältöä voi myös muokata taulukkoalueen yläpuolela olevata <strong>funktioalueesta</strong></u>. Funktioalueen kätevänä osana on, että <u>voit laajentaa sitä haluamasi kokoon</u>. Vie hiiren osoitin funktioalueen alareunalle, jolloin osoitin muuttuu veto-osoittimesi. Vedä sitten funktioalue haluamasi kooksi. Excel muistaa määrittelemäsi koon jokaiselle työkirjalle erikseen. Voit pienentää funktioalueen takaisin yhdeksi riviksi, tai laajentaa se yhdestä rivistä määittelemääsi kokoon, painamalla pientä karetti-ikonia funktioalueen oikeassa päädyssä.</p>
+<p><u>Funktioalueella voit myös <strong>rivittää</strong> kirjoittamasi funktiot/koodin</u>. Kun kirjoitat tekstiä funktioalueelle, pidä <code>Alt</code>-näppäintä pohjassa ja paina <code>Enter</code>, jolloin saat rivilyönnin. Excel ei välitä rivilyönneistä funktion sisällä, joten voit vapaasti rivittää funktiosi haluamaasi rivirakenteeseen. Tämä voi olla hyödyllistä jos kirjoitat paljon sisäisiä funktioita (eli funktion, joka sisältää funktion, joka sisältää…), koska niiden lukeminen voi käydä nopeasti hyvin hankalaksi.</p>
 </section>
 <section id="viittaaminen-ja-osoitteet" class="level2 page-columns page-full" data-number="13.5">
 <h2 data-number="13.5" class="anchored" data-anchor-id="viittaaminen-ja-osoitteet"><span class="header-section-number">13.5</span> Viittaaminen ja osoitteet</h2>
@@ -614,8 +642,30 @@ ul.task-list li input[type="checkbox"] {
 <p>Esimerkkikuvassa solussa D1 on käytetty <code>JAKOJ</code>-funktiota, joka palauttaa jonkun jakolaskun jäännöksen. Sen ensimmäinen parametri on jakolaskun jaettava luku ja toinen parametri on laskun jakaja. Koska funktio viittaa soluihin <code>A3; A1</code>, Excel ajaa funktion asetuksilla <code>=JAKOJ(7; 5)</code>, jolloin tulokseksi tulee <code>2</code>.</p>
 <p><u>Viittaaminen voidaan siis ymmärtää eräänlaisena osoitteiden käyttönä</u>. Jokaisella solulla on oma osoite, joka merkitään solun sarakekirjaimen ja rivinumeron avulla: solu <code>B7</code> löytyy sarakkeesta B, riviltä 7.</p>
 </section>
-<section id="funktiot" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="funktiot"><span class="header-section-number">13.6</span> Funktiot</h2>
+<section id="vetotoiminto" class="level2 page-columns page-full" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="vetotoiminto"><span class="header-section-number">13.6</span> Vetotoiminto</h2>
+<p>Jos valitset minkä tahansa solun taulukkoalueella, huomaat, että solun ympäröivän vihreän laatikon alaoikeassa nurkassa on pieni neliö. Tätä voidaan kutsua <strong>vetotoiminnoksi</strong>.</p>
+<p>Vetotoiminnolla voit monistaa kyseisen solun tietoja useampaan soluun. Jos asetat luvun <code>1</code> soluun <code>A1</code>, valitset solun, pidät hiirenpainiketta pohjassa vetotoiminnon päällä ja vedät alaspäin, Excel täyttää kaikki ylivedetyt solut samalla arvolla <code>1</code>. Näet tämän samaan aikaan kun vedät pienestä tekstiruudusta hiiriosoittimen oikealla puolella.</p>
+<p>Vetotoiminnon erikoisuus on kuitenkin, että se pystyy automaattisesti muuttamaan arvoja tietyn logiikan mukaan. Jos asetat luvun <code>1</code> soluun <code>A1</code> ja luvun <code>2</code> soluun <code>A2</code>, valitset molemmat solut ja lähdet vetämään alaspäin vetotoiminnosta, Excel jatkaa numerosarjaa luvuilla <code>3, 4, 5</code>, ja niin edespäin!</p>
+<div class="page-columns page-full"><p><u>Tämä toimii oikeastaan millä tahansa datalla</u>, ei vain yksinkertaisella numerosarjalla tai edes vain numeroilla. Excel tulkitsee automaattisesti, millainen datasarja on kyseessä (eri numerosarjat, fyysiset katuosoitteet, kuukaudet…) ja täyttää alueen sen mukaan<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;Joskus tämä menee pieleen erittäin hauskasti. Excelillä oli ennen taipumusta automaattitäyttää kuukaudet tekstin mukaan: jos asetit soluihin <code>January</code> ja <code>February</code>, seuraaviksi arvoiksi Excel ehdotti <code>Maruary, Apruary</code> ja <code>Mayruary</code>. Käytä harkiten!</p></li></div></div>
+<p>Vetotoiminto toimii myös viitteillä. Jos solussa <code>A1</code> on viittaus toiseen soluun, esim. <code>=B1</code>, ja vedät solun tietoja alaspäin, Excel muuttaa viittauksen aina rivin mukaan: soluun <code>A2</code> tulee <code>=B2</code>, soluun <code>A3</code> tulee <code>=B3</code>, ja niin edespäin. Sama koskee sarakkeita.</p>
+<p>Jos haluat välttää vetotoiminnon viittausmuutoksia, voit käyttää <strong>lukitustoimintoa</strong>.</p>
+</section>
+<section id="lukitustoiminto" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="lukitustoiminto"><span class="header-section-number">13.7</span> Lukitustoiminto</h2>
+<p><strong>Lukitustoiminto</strong> on solujen viittauksille määrätty toiminto, joka toimii operaattorilla <code>$</code>. Lukitusoperaattori kertoo Excelille, ettei sen tule siirtää viittausta jos solun tieto kopioidaan toiseen soluun tai monistetaan vetotoiminnolla.</p>
+<p><u>Lukitus tehdään erikseen riveille ja sarakkeille</u>:</p>
+<ul>
+<li><p><code>=$A$1</code> lukitsee sekä sarakkeen että rivin. Jos tieto kopioitaisiin toiseen soluun tai monistettaisiin vetotoiminnolla, viittaus olisi aina soluun <code>A1</code>.</p></li>
+<li><p><code>=$A1</code> lukitsee sarakkeen, mutta ei riviä. Jos vetäisit tämän tiedon vasemmalle, kaikki pysyisi samana (koska vain sarake muuttuu, ja sarake on tässä tilanteessa lukittu). Jos vetäisin tiedon alaspäin, rivinumerointi kuitenkin muuttuisi (koska riviä ei olla lukittu).</p></li>
+<li><p><code>=A$1</code> lukitsee rivin, mutta ei saraketta. Tässä tapahtuisi päinvastaisesti kuin yllä olevassa esimerkissä: sarake voi vaihtua jos siirryt vasemmalle/oikealle, mutta rivi ei voi vaihtua jos siirryt ylöspäin/alaspäin.</p></li>
+<li><p><code>=A1</code> ei lukitse mitään. Sekä rivi- että sarakeosoite muuttuu, kun kopioit tai vedät solun tiedot muualle.</p></li>
+</ul>
+<p><u>Lukitus on erittäin hyödyllistä tilastollisessa analyysissa</u>. Usein haluat laskea jonkun laskutoiminnon useammalle riville tai sarakkeelle, mutta osa laskutoiminnosta pysyy aina samana soluviittauksena. Voit silloin lukita ne soluviittaukset, jotka eivät tulisi muuttua, ja jättää muut auki, jolloin varmistat funktion toimivuuden kaikissa soluissa.</p>
+<p><u>Muista aina tarkistaa kopioinnin/vetomonistuksen kaavion oikeellisuus!</u></p>
+</section>
+<section id="funktiot" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="funktiot"><span class="header-section-number">13.8</span> Funktiot</h2>
 <p>Excelin laskennat tehdään <strong>funktioilla</strong>. Funktio on vähän kuin tehdas, joka ottaa sisään jonkun raakamateriaalin (arvon), tekee sille jotain (laskennan tai muunnoksen), ja sylkäisee ulos uuden tuotteen (uuden arvon).</p>
 <p>Funktio aloitetaan aina yhtäsuuruusmerkillä <code>=</code>. Sen jälkeen tulee funktion nimi ISOILLA KIRJAIMILLA, esim. <code>SUMMA</code> tai <code>AINUTKERTAISET.ARVOT</code>. Jos funktiossa on useampi sana nimessä, ne erotellaan pisteellä <code>.</code></p>
 <p>Funktion lopussa on sulut <code>()</code>. Näiden sisälle asetetaan funktion <strong>parametrit</strong>, eli määritellään, mille arvolle jotain tulisi tehdä sekä muita funktion asetuksia.</p>
@@ -625,8 +675,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Summafunktio ottaa yhden parametrin, jota voidaan kutsua <code>alue</code>-nimellä. Tämä parametri osoittaa funktiolle, mikä solualue pitäisi summata yhteen. Yllä olevassa esimerkissä tämä on määritelty alueeksi <code>A1:A4</code>, eli kaikki solut A1:n ja A4:n väliltä: <code>A1 + A2 + A3 + A3</code>.</p>
 <p>Funktioihin voi syöttää joko suoran arvon tai viittauksen toiseen soluun, jossa on sopiva arvo. Jotkut funktiot, kuten summafunktio, ottavat <strong>matriisin</strong> parametrinä, jolloin määritellään useampi solu. Toiset, kuten <code>=ONVIRH()</code>, ottavat vain yhden arvon, eli yhden solun. Jotkut funktiot eivät ota mitään parametrejä, kuten funktio <code>TOSI()</code> (joka palauttaa totuusarvon <code>TOSI</code>, eli 1).</p>
 </section>
-<section id="dynaamiset-matriisit" class="level2" data-number="13.7">
-<h2 data-number="13.7" class="anchored" data-anchor-id="dynaamiset-matriisit"><span class="header-section-number">13.7</span> Dynaamiset matriisit</h2>
+<section id="dynaamiset-matriisit" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="dynaamiset-matriisit"><span class="header-section-number">13.9</span> Dynaamiset matriisit</h2>
 <p>Excelin O365-versiossa uutena toimintona ovat <strong>dynaamiset matriisit</strong>. Vaikka nimi kuulostaakin hieman vaikealta, näiden käyttö on aika yksinkertaista.</p>
 <p><u>Dynaaminen matriisi on tulos, jonka kaava on asetettu vain yhteen soluun, mutta joka <strong>levittyy</strong> useamman solun ylitse</u>. Esimerkkinä voidaan käyttää <code>SUODATA</code>-funktiota. Funktio ottaa data-alueen sekä jonkun ehdon, ja palauttaa kaikki solut data-alueelta joiden rivit täyttävät kyseisen ehdon. Tämä tarkoittaa, että funktio voi palauttaa erikokoisia matriiseja, riippuen ehdosta.</p>
 <p>Ennen vanhaan, Excelissä piti määritellä, kuinka suurelle alueelle matriisi palautetaan. Dynaamisten matriisien myötä näin ei enää ole! Yllä kuvailtu <code>SUODATA</code>-funktio palauttaa nyt niin suuren matriisin, kuin tarvitaan.</p>

@@ -308,7 +308,7 @@ U-testissä itse U-suure on testisuure. Raportoi täten mieluisesti:
 
 -   Z-arvo $z$ ja sen p-arvo $p$
 
-## Spearmanin rho $\rho$
+## Spearmanin rho $\rho$ {#sec-spearmanin-rho-teoria}
 
 **Mittausasteikot:** Molemmat muuttujat järjestysasteikolla.
 
@@ -320,7 +320,7 @@ Spearmanin rho toimii kuten Pearsonin $r$, mutta sen sijaan, että testi laskett
 
 [Jos muuttujasi täyttävät Pearsonin]{.underline} $r$[-testin vaatimuksia]{.underline}, käytä sitä mielummin. Jos datassasi on kuitenkin suuria ääripääarvoja, on epälineaarista tai muuten rikkoo Pearsonin korrelaatiokertoimen malliodotuksia (ks. @sec-korrelaatiokertoimen-mallioletukset), voit käyttää Spearmanin testiä Pearsonin testin sijaan.
 
-### Mallioletukset
+### Mallioletukset {#sec-mallioletukset-spearmanin-rho}
 
 Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei ole lineaarinen malli), mutta sillä on kolme omaa oletusta: **muuttujatasot** sekä **monotonisuus**:
 
@@ -330,7 +330,7 @@ Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei
 
 [Näiden lisäksi Spearmanin rhon laskutapa riippuu siitä, esiintyykö muuttujilla tasajärjestyksiä vai ei]{.underline}. **Tasajärjestys** määritellään kuin Wilcoxonin signed-rank -testille: tasajärjestys esiintyy kun kaksi tai useampi arvo saisi saman järjestysarvon, jolloin laskemme niiden keskiarvon.
 
-### Spearmanin rhon laskeminen
+### Spearmanin rhon laskeminen {#sec-spearmanin-rhon-laskeminen}
 
 [Spearmanin rhon laskeminen seuraa hyvin samanlaista logiikkaa]{.underline} kuin Pearsonin korrelaatiokerroin, mutta data pitää ensin järjestää:
 
@@ -344,7 +344,7 @@ Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei
 
 $$
 \rho = 1-\frac{6\sum{d_i^2}}{n^3-n}
-$$
+$$ {#eq-spearman-01}
 
 Laske ensin jokaisen rivin erot muuttujien järjestysarvojen välillä, $d_i$ (jossa $i$ on rivin numero). Laske sitten jokaiselle erolle neliö $d_i^2$ ja summaa kaikki neliöt yhteen. Kerro tulos kuudella.
 
@@ -356,7 +356,7 @@ Jaa sitten ensimmäiseksi laskettu erotuksen neliösumma toiseksi lasketulla oto
 
 $$
 \rho = \frac{ 1/n \sum{(x_i - \bar{x}) \times (y_i - \bar{y})} } { \sqrt{( 1/n \sum{(x_i - \bar{x})^2} ) \times (1/n \sum{(y_i - \bar{y})^2}) } }
-$$
+$$ {#eq-spearman-02}
 
 Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat käytössä:
 
@@ -381,7 +381,7 @@ $$
 z = \sqrt{\frac{n-3}{1.06}}F(r)
 \\ F(r) = 0.5 \ln \frac{1+r}{1-r}
 \end{align}
-$$
+$$ {#eq-spearman-03}
 
 Z-suureen kaavassa lasket ensin otoskoon $n$ minus kolme, ja jaat tulokset $1.06$:lla. Otat sitten tämän tuloksen neliöjuuren.
 
@@ -393,11 +393,11 @@ Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. S
 
 $$
 t = r\sqrt{\frac{n-2}{1-r^2}}
-$$
+$$ {#eq-spearman-04}
 
 T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet $n-2$, sitten rho-suureen neliö $r^2$ ja sen inverssi $1-r^2$. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella $r$. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla $n-2$. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.
 
-### Spearmanin rhon laskeminen Excelissä
+### Spearmanin rhon laskeminen Excelissä {#sec-spearmanin-rhon-laskeminen-excelissä}
 
 Vaikka yllä olevat kaavat näyttävät aika monimutkaisilta, voimme onneksi tehdä Spearmanin rho-testin paljon yksinkertaisemmin Excelissä.
 
@@ -416,7 +416,7 @@ Laskutoimitus seuraa tätä prosessia:
         1.  Laske t-arvo käyttämällä otoskokoa (hae esim. `LASKE`-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla `NELIÖJUURI()`.
         2.  Hae sitten t-arvon merkitsevyys funktiolla `=T.JAKAUMA(t; vapausasteet; EPÄTOSI`). Vapausasteet ovat $n-2$.
 
-### Spearmanin rhon raportointi
+### Spearmanin rhon raportointi {#sec-spearmanin-rhon-raportointi}
 
 Raportoi rho-testistä mieluisesti seuraavat:
 

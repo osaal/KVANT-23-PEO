@@ -1,10 +1,14 @@
-# Excelin käyttöliittymä
+# Excelin käyttöliittymä {#sec-excelin-käyttöliittymä}
+
+::: callout-tip
+Kun luet tätä lukua, suosittelen pitämään tyhjän työkirjan auki toisessa ikkunassa/toisella näytöllä, jotta voit tarkistaa näkymän itse.
+:::
 
 Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen **aloitusnäkymän** (@fig-excelin-aloitusnäkymä). Näkymästä voit avata uuden **työkirjan** painamalla "Tyhjä työkirja"-kuvaketta ylävasemmalla. Hakupalkin alle tulee listaus viimeisimpiä työkirjoja, joita olet avannut. Voit avata olemassa olevan työkirjan painamalla "Avaa"-nappia oikeanpuoleisesta valikosta, ja hakemalla työkirjan tietokoneeltasi.
 
 ![Excelin aloitusnäkymä](pics/excel_aloitusnäkymä.PNG){#fig-excelin-aloitusnäkymä fig-alt="Excelin aloitusnäkymä"}
 
-## Perusnäkymä
+## Perusnäkymä {#sec-perusnäkymä}
 
 **Työkirja** on Excel-tiedosto, joka sisältää kaikki analyysisi ja tietosi. Avaamalla tyhjän työkirjan pääset Excelin **perusnäkymään** (@fig-excelin-perusnäkymä).
 
@@ -12,9 +16,13 @@ Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen **aloitusnäkymän** (
 
 Perusnäkymä voidaan jakaa kolmeen osaan, ylhäältä alas. Ylimpänä löydät **navigointipalkin**, joka on jaettu useaan eri **välilehteen**. Välilehtien määrä voi vaihdella riippuen Excel-versiostasi ja asennetuista lisäosista, mutta sinulla on ainakin seuraavat välilehdet: `Aloitus, Lisää, Sivun asettelu, Kaavat, Tiedot, Tarkista, Näytä` ja `Ohje`. Välilehdet muuttavat, mitä työkaluja näet navigointipalkissa.
 
-Navigointipalkin alla löydät **työlehtiönäkymän**. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun **riveihin** ja **sarakkeisiin**. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi.
+Navigointipalkin alla löydät **työlehtiönäkymän**. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun **riveihin** ja **sarakkeisiin**. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi. Näet myös **funktioalueen** taulukkoalueen yläpuolella (heti navigointipalkin alla), johon voit kirjoittaa solutietoja jos et halua kirjoittaa suoraan soluun.
 
-Työlehtiönäkymän alla on **taulukonvalitsin**, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, "Taul1", mutta voit laatia uusia lehtiöitä painamalla +-merkkiä viimeisen lehtiön nimen vieressä.
+Voit vapaasti muokata rivien ja sarakkeiden kokoa näytöllä. Voit tehdä tämän siirtämällä hiiren sarakkeen/rivin rajalle niiden nimialueella (alaraja riveille, oikea raja sarakkeille) ja vetää siitä haluamaasi suuntaan. Voit myös oikeanäpäyttää rajaa, valita `Sarakkeen leveys...` (sarakkeille) tai `Rivikorkeus...` (riveille), ja kirjoittaa haluamasi koko ruutuun.
+
+Voit piilottaa rivejä tai sarakkeita näkyvistä. Oikeanäpäytä piilotettavan rivin tai sarakkeen nimeä ja valitse `Piilota`. Piilotetut rivit/sarakkeet pitävät osoitteensa, ja kaikki viittaukset niihin toimivat kuten aikaisemmin. Huomaat piilotuksen siitä, että rivien/sarakkeiden välissä on kaksi rajaviivaa yhden sijaan. Saat pilotetun rivin/sarakkeen takaisin esille oikeanäpäyttämällä näitä kahta rajaviivaa ja valitsemalla `Näytä`.
+
+Työlehtiönäkymän alla on **taulukonvalitsin**, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, `Taul1`, mutta voit laatia uusia lehtiöitä painamalla `+`-merkkiä viimeisen lehtiön nimen vieressä.
 
 Oikeaklikkaamalla työlehtiön nimeä saat esille lehtiön muokkausmenun (@fig-excel-lehtiöpalkki-oikeamenu).
 
@@ -32,35 +40,49 @@ Muokkausmenusta löytyy seuraavat kätevät valinnat:
 
 -   `Piilota` ja `Näytä...` Voit piilottaa työlehtiön näkyvistä. Piilotetut lehtiöt löytyvät `Näytä...`-toiminnosta, josta voit tuoda ne takaisin näkyville. Toiminnot eivät poista lehtiöitä.
 
-## Navigointipalkin työkalut
+## Navigointipalkin työkalut {#sec-navigointipalkin-työkalut}
 
-Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien sijainnit.
+Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien toimintojen sijainnit. Tekemällä oppii!
 
-### Aloitus-välilehti
+### Aloitus-välilehti {#sec-aloitus-välilehti}
 
-Aloitus-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (@fig-excel-aloitus-välilehti).
+**Aloitus**-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (@fig-excel-aloitus-välilehti).
 
 ![Aloitus-välilehden työkalut](pics/excel_aloitus_välilehti.png){#fig-excel-aloitus-välilehti fig-alt="Aloitus-välilehden työkalut, jaattuna kolmelle riville."}
 
-**Leikepöytä**-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa: `Ctrl+C` (kopioi), `Ctrl+V` (liitä) ja `Ctrl+X` (leikkaa). Excelissä on myös oma toiminto nimeltä **Liitä määräten**, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Saat tämän auki käyttämällä komentoa `Ctrl+Alt+V` yleisen liittämiskomennon sijaan. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.
+**Leikepöytä**-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa:
 
-**Fontti**-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).
+-   `Ctrl + C` Kopioi
 
-**Tasaus**-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi **Yhdistä ja keskitä**-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta. **Rivitä teksti**-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan.
+-   `Ctrl + V` Liitä
 
-**Numero**-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot vaikka mihin muotoihin, mutta tällä alueella voit itse sanoa Excelille, "Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!". Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä[^excelinkäyttöliittymä-1].
+-   `Ctrl + X` Leikkaa
 
-[^excelinkäyttöliittymä-1]: Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy virheitä ja ongelmia!
+-   `Ctrl + Alt + V` Liitä määräten
+
+**Liitä määräten** on Office-paketin oma toiminto, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.
+
+**Fontti**-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla voit muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).
+
+**Tasaus**-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi **Yhdistä ja keskitä**-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta[^excelinkäyttöliittymä-1]. **Rivitä teksti**-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan. Excel laajentaa rivien ja sarakkeiden kokoa automaattisesti tämän mukaan.
+
+[^excelinkäyttöliittymä-1]: Yhdistetyn solun osoite on aina osoite soluun, joka tuli ensimmäisenä yhdistetyksi. Jos esim. yhdistät solut `A1:A3`, yhdistetyn solun osoite on `A1`, jonka oikealla puolella tulee osoite `D1`. Sama pätee sarakkeiden yli yhdistetyille soluille, mutta sarakeosoitteella. Jos yhdistät monia sarakkeita ja rivejä samaan soluun, solun osoite on ylävasemman solun osoite: yhdistetyn solun `A1:C3` osoite on `A1`, jonka oikealla puolella on `D1` ja alapuolella `A4`.
+
+**Numero**-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot eri muotoihin itsenäisesti, jääräpäisesti ja lähes mielivaltaisesti, mutta tällä alueella voit itse sanoa Excelille, "Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!". Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä[^excelinkäyttöliittymä-2].
+
+[^excelinkäyttöliittymä-2]: Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy ongelmia!
 
 **Tyylit**-alueella voit tehdä erinäisiä muotoilutyylejä, muuttaa taulukkoja helposti haettaviksi taulukoiksi, ja muotoilla soluja valmiilla tyylillä. Tutustu omassa rauhassasi, emme tule käyttämään näitä sen kummemmin kurssilla.
 
 **Solut**-alueella voit lisätä, poistaa tai muotoilla soluja.
 
-**Muokkaus**-alueella löytyy erinäisiä muokkaustyökaluja, joista **Lajittele ja suodata** on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot.
+**Muokkaus**-alueella löytyy erinäisiä muokkaustyökaluja, joista **Lajittele ja suodata** on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot[^excelinkäyttöliittymä-3].
 
-### Lisää-välilehti
+[^excelinkäyttöliittymä-3]: Tässä kirjassa käytän enimmäkseen funktioita lajitteluun ja suodattamiseen, koska nämä palauttavat aina uuden data-alueen eivätkä vaikuta alkuperäiseen. Lajittelua ja suodattamista voi tehdä näillä toiminnoilla funktioiden sijaan, mutta ole huolellinen, että muistat järjestää data alkuperäiseen muotoon kun olet valmis! Suosittelen funktioiden käyttämistä, vaikka ne alussa voivat olla hankalia.
 
-Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavioita (@fig-excel-lisää-välilehti).
+### Lisää-välilehti {#sec-lisää-välilehti}
+
+Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavoja (@fig-excel-lisää-välilehti).
 
 ![Lisää-välilehden työkalut](pics/excel_lisää_välilehti.png){#fig-excel-lisää-välilehti fig-alt="Lisää-välilehden työkalut, kahdella rivillä"}
 
@@ -74,7 +96,7 @@ Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisät�
 
 Muista alueista tärkeimmät ovat **Kommentit**, josta löydät kommentointityökalun, sekä **Teksti**, josta voit lisätä vapaamuotoisia tekstiruutuja omia muistiinpanoja tai selitteitä varten. Voit myös lisätä matemaattisia kaavoja **Merkit**-alueen **Kaava**-työkalulla, jos haluat näyttää älykkäältä. Nämä kaavat eivät tee mitään Excelissä - laskelmia varten käytetään Excelin omia funktioita.
 
-### Sivun asettelu -välilehti
+### Sivun asettelu -välilehti {#sec-sivun-asettelu-välilehti}
 
 Sivun asettelu -välilehdeltä löydät työkaluja, joilla muotoilet työkirjan tulostusnäkymää (@fig-excel-sivunasettelu-välilehti).
 
@@ -84,30 +106,46 @@ Tärkeimmät työkalut löytyvät **Sivun asetukset**-alueelta. Näillä voit mu
 
 Joskus sattuu niin, että grafiikkasi ovat päällekäisiä etkä näe kaikkea kunnolla. Voit vaihtaa kaavojen ja kuvien välistä järjestystä **Järjestä**-alueella, sekä tasata niitä samaan riviin eri tavoin.
 
-### Kaavat-välilehti
+### Kaavat-välilehti {#sec-kaavat-välilehti}
 
-Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (@fig-excel-kaavat-välilehti). Täältä löytyy myös erittäin tärkeä **Nimien hallinta** -osio (ks. LUKU NIMIEN HALLINNASTA).
+Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (@fig-excel-kaavat-välilehti). Täältä löytyy myös erittäin tärkeä **Nimien hallinta** -osio (ks. @sec-nimeäminen-excelissä).
 
 ![Kaavat-välilehden työkalut](pics/excel_kaavat_välilehti.png){#fig-excel-kaavat-välilehti fig-alt="Kaavat-välilehden työkalut, kahdessa rivissä"}
 
 Ensimmäinen alue on nimeltään **Funktiokirjasto**, ja sisältää luettelon kaikista Excelin funktioista. Jos et muista funktion nimeä, voit hakea sen käsiisi täältä. Voit myös hakea funktioita sanoilla **Lisää funktio**-työkalulla.
 
-Seuraavaksi tulee **Määritetyt nimet**-alue, josta pääset **nimien hallintaan**. Täällä voit määritellä omia "lempinimiä" solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa "sukupuoli", ja viitata suoraan siihen nimeen!
+Seuraavaksi tulee **Määritetyt nimet**-alue, josta pääset **nimien hallintaan**. Täällä voit määritellä omia "lempinimiä" solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa "sukupuoli", ja viitata suoraan siihen nimeen! Lue lisää tästä erittäin hyödyllisestä toiminnosta [luvussa -@sec-nimeäminen-excelissä].
 
 Jotkut funktiot eivät automaattisesti päivity kun teet muutoksia työlehtiössäsi. Voit päivittää kaikki funktiot ja laskutoimitukset **Laskutoimitukset**-alueelta painamalla **Laske heti** tai **Laske taulukko**.
 
-### Tiedot-välilehti
+### Tiedot-välilehti {#sec-tiedot-välilehti}
 
-Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut. Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.
+Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut (@fig-tiedot-välilehti). Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.
 
-### Tarkista-välilehti
+![Tiedot-välilehden työkalut](pics/excel_tiedot_välilehti.png){#fig-tiedot-välilehti fig-alt="Kuvakaappaus Excelin Tiedot-välilehdestä."}
 
-Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen. Näistä useimmiten käytetyt lienee **Kommentit**-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.
+### Tarkista-välilehti {#sec-tarkista-välilehti}
 
-### Näytä-välilehti
+Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen (@fig-tarkista-välilehti). Näistä useimmiten käytetyt lienee **Kommentit**-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.
 
-Näytä-välilehdellä voit muuttaa Excelin näkymää hieman.
+![Tarkista-välilehden työkalut](pics/excel_tarkista_välilehti.png){#fig-tarkista-välilehti fig-alt="Kuvakaappaus Excelin Tarkista-välilehdestä."}
+
+### Näytä-välilehti {#sec-näytä-välilehti}
+
+Näytä-välilehdellä voit muuttaa Excelin näkymää hieman (@fig-näytä-välilehti).
+
+![Näytä-välilehden työkalut](pics/excel_näytä_välilehti.png){#fig-näytä-välilehti fig-alt="Kuvakaappaus Excelin Näytä-välilehdestä."}
 
 Voit vaihtaa tulostusnäkymän ja normaalin näkymän välillä **Työkirjanäkymät**-alueella.
 
 Erittäin hyödyllinen toiminto on myös **Ikkuna**-alue, jolla voit avata saman työkirjan useampaan eri ikkunaan. Näin voit nähdä eri työlehtiöitä tai alueita samaan aikaan samalla näytöllä. Voit myös kiinnittää ensimmäisen rivin/sarakkeen, jotta ne pysyvät näkyvillä vaikka siirryt muualle.
+
+### Muita välilehtiä ja välilehtien muokkaaminen
+
+Jos asennat Exceliin **aputoimintoja**, voit nähdä muitakin välilehtiä. Näitä voi myös olla näkyvillä valmiiksi, jos Excel-asennukseesi on lisätty joitain aputoimintoja. Näitä voivat olla esim. analyysityökaluja tai skriptaustyökaluja.
+
+Voit aktivoida valmiiksi asennettuja aputoimintoja Excelin asetuksista: `Tiedosto > Asetukset > Apuohjelmat`. Tällä kurssilla emme käytä aputoimintoja[^excelinkäyttöliittymä-4], mutta voit tutustua sellaisiin omalla ajallasi jo haluat.
+
+[^excelinkäyttöliittymä-4]: Yksi erittäin hyödyllinen, ja valmiiksi asennettu, aputoiminto on **Analyyityökalut**. Löydät sen Apuohjelmat-listauksesta, ja voit aktivoida sen painamalla ruksia sen ruutuun. Työkalu löytyy sitten osoitteesta `Tiedot > Analysointi > Tietojen analysointi`. Työkalulla voit automaattisesti ajaa erilaisia tilastollisia laskuja. Pedagogiikan takia emme käytä tätä tällä kurssilla, mutta suosittelen sen käyttöä jos jatkat tilastollisia töitä (ja pysyt jostain syystä Excelissä).
+
+Voit myös muokata välilehtien työkaluja hyvin vapaasti. Excelin asetuksista löytyy tällainen vaihtoehto: `Tiedosto > Asetukset > Valintanauhan mukauttaminen`. Voit lisätä ja poistaa työkaluja vapaasti kaikista välilehdistä, sekä jopa tehdä oman, täysin mukautetun välilehden itse. Verkkokirjassa oletan, että et ole poistanut työkaluja - jos olet, saat itse selvittää, mistä ne nykyään löytyvät.
