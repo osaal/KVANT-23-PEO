@@ -5,6 +5,7 @@
 **Uudet luvut**:
 
 -   Mittaustasojen teoria
+-   Alaluku "Spearmanin rho" ei-parametristen testien lukuun.
 
 **Muutokset**:
 
@@ -12,5 +13,3 @@
 -   Kirjoitusvirheiden korjausta.
 
 **Tunnetut ongelmat**:
-
--   Spearmanin ja Kendallin korrelaatiokertoimien selitykset puuttuvat.

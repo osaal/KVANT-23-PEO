@@ -2,9 +2,9 @@
 
 **Mittausasteikot:** Välimatka- ja suhdeasteikko
 
-**Korrelaatio** on mitta kahden muuttujan yhteisvaihtelusta. Nimi tulee englannin sanoista *co-relation*, eli yhteissuhde. Korrelaatiomittoja on monia, joista tässä luvussa käsittellään vain **Pearsonin korrelaatiokerrointa**. [Luvussa @sec-ei-parametriset-testit] käydään läpi ei-parametrisiä vaihtoehtoja Pearsonin korrelaatiolle, Spearmanin korrelaatiokertoin sekä Kendallin tau-b.
+**Korrelaatio** on mitta kahden muuttujan yhteisvaihtelusta. Nimi tulee englannin sanoista *co-relation*, eli yhteissuhde. Korrelaatiomittoja on monia, joista tässä luvussa käsittellään vain **Pearsonin korrelaatiokerrointa**. [Luvussa @sec-ei-parametriset-testit] käydään läpi ei-parametrinen vaihtoehto Pearsonin kertoimelle, **Spearmanin rho**.
 
-[Pearsonin korrelaatiokertoin]{.underline} $r$ on standardisoitu versio **kovarianssista**. Jotta ymmärrtäisi Pearsonin kertoimen, on siis hyvä ensin ymmärtää kovarianssi.
+[Pearsonin korrelaatiokerroin]{.underline} $r$ on standardisoitu versio **kovarianssista**. Jotta ymmärrtäisi Pearsonin kertoimen, on siis hyvä ensin ymmärtää kovarianssi.
 
 ## Kovarianssin määritelmä {#sec-kovarianssin-määritelmä}
 
@@ -64,7 +64,7 @@ for(r in c(-0.5, 0, 0.5)) {
 
 [Kovarianssi mitataan samoissa yksiköissä kuin alkuperäiset muuttujat]{.underline}, mutta kerrottuna toistensa kanssa. Jos molempien muuttujien mittayksikkö on metriä, kovarianssi on $\text{metri}*\text{metri}$, eli neliömetriä. Jos kuitenkin ensimmäinen muuttuja olisi metreissä mutta toinen euroissa, kovarianssin mittayksikkö olisi "eurometrejä".
 
-[Kovarianssin käyttö on jokseenkin hankalaa]{.underline}, koska mittayksiköt eivät ole standardisoituja eivätkä usein tarkoita mitään todellista. Tämän takia kovarianssi standardisoidaan, jolloin saadaan **Pearsonin korrelaatiokertoin** $r$.
+[Kovarianssin käyttö on jokseenkin hankalaa]{.underline}, koska mittayksiköt eivät ole standardisoituja eivätkä usein tarkoita mitään todellista. Tämän takia kovarianssi standardisoidaan, jolloin saadaan **Pearsonin korrelaatiokerroin** $r$.
 
 ## Korrelaatiokertoimen mallioletukset {#sec-korrelaatiokertoimen-mallioletukset}
 
@@ -76,13 +76,13 @@ Kuten aikaisemmin mainittu, Pearsonin $r$ toimii vain muuttujille, jotka ovat **
 
 [Jos muuttujasi ovat järjestysasteikolla]{.underline}, voit käyttää **Spearmanin korrelaatiokertointa** tai **khiin neliötä**. [Jos muuttajasi taas ovat vain luokitteluasteikolla]{.underline}, **khiin neliö** on paras vaihtoehto.
 
-[Jos käytät vääriä tasoja, korrelaatiokertoin on virallisesti tulkitsematon]{.underline}. Järjestysasteikolla tehty korrelaatio voi myös arvioida mittaa suurestikin yläkanttiin, joten näillä kannattaa olla varovainen. Spearmanin korrelaatiokertoin on varmempi työkalu tässä tilanteessa, ja khiin neliö helpommin tulkittavissa.
+[Jos käytät vääriä tasoja, korrelaatiokerroin on virallisesti tulkitsematon]{.underline}. Järjestysasteikolla tehty korrelaatio voi myös arvioida mittaa suurestikin yläkanttiin, joten näillä kannattaa olla varovainen. Spearmanin korrelaatiokerroin on varmempi työkalu tässä tilanteessa, ja khiin neliö helpommin tulkittavissa.
 
 ### Täydellisesti paritettu data {#sec-täydellisesti-paritettu-data-korrelaatiokertoin}
 
 **Jokaisella rivillä tulisi olla arvo molemmilla muuttujilla**. Tämä juontuu siitä, että kaikkia arvoja käytetään ja summataan yhteen.
 
-[Jos sinulla on puuttuvaa dataa]{.underline}, se ei sinänsä ole vielä vaarallista. Huomaa kuitenkin, että mitä enemmän dataa puuttuu, sitä huonommin korrelaatiokertoin kuvastaa koko datajakaumaa.
+[Jos sinulla on puuttuvaa dataa]{.underline}, se ei sinänsä ole vielä vaarallista. Huomaa kuitenkin, että mitä enemmän dataa puuttuu, sitä huonommin korrelaatiokerroin kuvastaa koko datajakaumaa.
 
 [Yleensä tapana on jättää pois kaikki rivit joilla on epätäydellistä dataa]{.underline} - ilmoita siksi aina, kuinka suuri $n$ sinulla on korrelaatiokertoimen laskennassa! Muista myös korjata $n$ itse laskukaavassa datamäärän mukaan.
 
@@ -94,15 +94,15 @@ Kuten aikaisemmin mainittu, Pearsonin $r$ toimii vain muuttujille, jotka ovat **
 
 Pearsonin $r$-suureen oikeellisuuden takaamiseksi **molempien muuttujien keskiarvot tulisivat tulla normaalijakautumasta**. Tämä voidaan olettaa suurissa otoksissa.
 
-[Jos otoksesi kuitenkin on pieni]{.underline}, ei-parametrinen testi (esim. Spearmanin korrelaatiokertoin, Kendallin tau-b) on parempi vaihtoehto.
+[Jos otoksesi kuitenkin on pieni]{.underline}, ei-parametrinen testi (Spearmanin rho) on parempi vaihtoehto.
 
-Tämän lisäksi korrelaatiokertoin olettaa, että **virhemittaus on normaalijakautunut**. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin $\bar{x}-x$ ja $\bar{y}-y$, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. @sec-pylväskaavio-teoria). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti, jossa yleisin virhearvio tulisi olla nolla.
+Tämän lisäksi korrelaatiokerroin olettaa, että **virhemittaus on normaalijakautunut**. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin $\bar{x}-x$ ja $\bar{y}-y$, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. @sec-pylväskaavio-teoria). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti, jossa yleisin virhearvio tulisi olla nolla.
 
 [Jos näin ei ole, valitse taas ei-parametrinen testi]{.underline}.
 
 ### Lineariteetti {#sec-lineariteetti-korrelaatiokertoin}
 
-Koska korrelaatiokertoin on lineaarinen malli, **se toimii parhaiten lineaaristen suhteiden mallintamisessa**. Jos muuttujasuhde on epälineaarinen, korrelaatiokertoin ei välttämättä "näe" suhdetta. Jos suhde esimerkiksi on täydellisen positiivisen parabolinen (nousee tiettyyn pisteeseen asti ja laskee sen jälkeen, symmetrisesti), korrelaatiokertoin tulee osoittamaan nollakorrelaatiota - vaikka suhde selkeästi löytyy!
+Koska korrelaatiokerroin on lineaarinen malli, **se toimii parhaiten lineaaristen suhteiden mallintamisessa**. Jos muuttujasuhde on epälineaarinen, korrelaatiokerroin ei välttämättä "näe" suhdetta. Jos suhde esimerkiksi on täydellisen positiivisen parabolinen (nousee tiettyyn pisteeseen asti ja laskee sen jälkeen, symmetrisesti), korrelaatiokerroin tulee osoittamaan nollakorrelaatiota - vaikka suhde selkeästi löytyy!
 
 [Tarkista lineaarisuus pistekaaviolla]{.underline} (@sec-pistekaavio-teoria).
 
@@ -120,15 +120,15 @@ $$ {#eq-korr-2}
 
 [Pearsonin]{.underline} $r$ [sijoittuu välille]{.underline} $[-1; 0; 1]$[,]{.underline} vaihdellen täydellisestä negatiivisesta korrelaatiosta nollakorrelaation kautta täydelliseen positiiviseen korrelaation. Kun $r = -1$, muuttujien välillä on täydellinen negatiivinen korrelaatio: kun ensimmäinen muuttuja nousee arvossaan, toinen muuttuja laskee yhtä paljon (suhteessa mitta-asteikkoon; ks. @fig-korrelaatio). Vastakohtana muuttujat nousevat ja laskevat samassa vauhdissa kun $r = 1$. Nollakorrelaation kohdalla $r = 0$ muuttujien välillä ei ole tilastollista lineaarista suhdetta, eli yhden muuttujan muuttuminen ei näy millään tavalla toisessa muuttujassa.
 
-**Korrelaatiokertoimelle voidaan laskea merkitsevyystaso**. Tämä tehdään muuntamalla kertoin t-arvoksi, jonka kriittisen rajan voi tarkistaa kriittisten arvojen taulukosta. Muuntaminen on suhteellisen yksinkertainen:
+**Korrelaatiokertoimelle voidaan laskea merkitsevyystaso**. Tämä tehdään muuntamalla kerroin t-arvoksi, jonka kriittisen rajan voi tarkistaa kriittisten arvojen taulukosta. Muuntaminen on suhteellisen yksinkertainen:
 
 $$
 t_r = \frac{r \sqrt{N-2}} {\sqrt{1-r^2}}
 $$ {#eq-korr-3}
 
-Jakolaskun yläpuolella: kerro korrelaatiokertoin otoskoon minus kaksi neliöjuurella. Jakolaskun alapuolella: ota korrelaatiokertoimen neliö, vähennä se yhdestä, ja ota tuloksen neliöjuuri.
+Jakolaskun yläpuolella: kerro korrelaatiokerroin otoskoon minus kaksi neliöjuurella. Jakolaskun alapuolella: ota korrelaatiokertoimen neliö, vähennä se yhdestä, ja ota tuloksen neliöjuuri.
 
-**Korrelaatiokertoimelle voi myös laskea luottamusvälin**. Tuolloin kertoin pitää kuitenkin ensin muuntaa z-arvoksi (ei t-arvoksi), sekä laskea **kertoimen keskivirhe**.
+**Korrelaatiokertoimelle voi myös laskea luottamusvälin**. Tuolloin kertoimen pitää kuitenkin ensin muuntaa z-arvoksi (ei t-arvoksi), sekä laskea **kertoimen keskivirhe**.
 
 $$
 \begin{split}
@@ -137,7 +137,7 @@ z_r = \frac{1}{2}\log_e(\frac{1+r}{1-r})
 \end{split}
 $$ {#eq-korr-4}
 
-**Z-arvon laskukaava** on hieman hankala. Laske ensin korrelaatiokertoin plus yksi sekä korrelaatiokertoin minus yksi, ja jaa ensimmäinen toisella. Ota sitten tuloksen luonnollinen logaritmi. Viimeiseksi, kerro tulos puolella, eli 0,5.
+**Z-arvon laskukaava** on hieman hankala. Laske ensin korrelaatiokerroin plus yksi sekä korrelaatiokerroin minus yksi, ja jaa ensimmäinen toisella. Ota sitten tuloksen luonnollinen logaritmi. Viimeiseksi, kerro tulos puolella, eli 0,5.
 
 **Z-arvon keskihajonta** on paljon yksinkertaisempi: vähennä otoskoosta kolme ja ota tuloksen neliöjuuri. Jaa sitten yksi tällä tuloksella, eli hae tuloksen **inverssi**.
 

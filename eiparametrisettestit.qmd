@@ -12,6 +12,13 @@ Ei-parametriset testit voivat kuulostaa loistavalta vaihtoehdolta: ne testaavat 
 
 Tämän takia nyrkkisääntönä onkin, että [käytät parametrisia lineaarisia malleja jos ja kun mallioletukset täyttyvät]{.underline}, ja ei-parametrisia testejä vain jos mallioletukset eivät täyty.
 
+Tässä kirjassa käydään läpi neljä ei-parametristä testiä:
+
+1.  **Merkkitesti** (vastaa yhden otoksen t-testiä)
+2.  **Wilcoxonin signed-rank** -testi (vastaa parittaisen otoksen t-testiä)
+3.  **Mann-Whitney'n U-testi** (vastaa kahden otoksen t-testiä)
+4.  **Spearmanin rho** (vastaa Pearsonin korrelaatiokertointa)
+
 ## Merkkitesti {#sec-merkkitesti-teoria}
 
 **Mittausasteikot**: Järjestysasteikosta ylöspäin
@@ -300,6 +307,126 @@ U-testissä itse U-suure on testisuure. Raportoi täten mieluisesti:
 -   Molempien ryhmien otoskoot $n_1$ ja $n_2$
 
 -   Z-arvo $z$ ja sen p-arvo $p$
+
+## Spearmanin rho $\rho$
+
+**Mittausasteikot:** Molemmat muuttujat järjestysasteikolla.
+
+**Spearmanin rho** $\rho$ tai **Spearmanin korrelaatiokerroin** $r_s$ on ei-parametrinen korrelaatiokerroin. Sen parametrinen vastaavuus on **Pearsonin** $r$ (ks. @sec-korrelaatio-teoria).
+
+Spearmanin rho toimii kuten Pearsonin $r$, mutta sen sijaan, että testi laskettaisiin suoraan kovarianssista, se lasketaan datapisteiden **järjestysnumeroilla**.
+
+[Spearmanin rho on robustimpi kuin Pearsonin]{.underline} $r$, eikä siihen vaikuta esim. ääripääarvot samalla tavalla. Koska rho lasketaan järjestysnumeroille eikä datalle suoraan, sitä voi myös käyttää järjestysasteikon muuttujilla.
+
+[Jos muuttujasi täyttävät Pearsonin]{.underline} $r$[-testin vaatimuksia]{.underline}, käytä sitä mielummin. Jos datassasi on kuitenkin suuria ääripääarvoja, on epälineaarista tai muuten rikkoo Pearsonin korrelaatiokertoimen malliodotuksia (ks. @sec-korrelaatiokertoimen-mallioletukset), voit käyttää Spearmanin testiä Pearsonin testin sijaan.
+
+### Mallioletukset
+
+Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei ole lineaarinen malli), mutta sillä on kolme omaa oletusta: **muuttujatasot** sekä **monotonisuus**:
+
+-   [Muuttujien tulee olla vähintään järjestystasolla]{.underline} (järjestys-, välimatka- tai suhdeasteikko). Spearmanin rhota ei voi laskea luokitteluasteikolle, koska muuttujia ei voi silloin laittaa luonnolliseen järjestykseen.
+
+-   [Muuttujien tulee olla monotonisessa suhteessa toisiinsa]{.underline}. Monotonisuus tarkoittaa, että muuttujien suhde joko nousee tai laskee. Kaikki lineaariset mallit ovat monotonisia, mutta monotoniset mallit eivät tarvitse olla lineaarisia. Esimerkiksi eksponentiaalinen tai logaritminen suhde on monotoninen mutta epälineaarinen. Parabolisuhde toisaalta ei ole lineaarinen eikä monotoninen, koska sen suunta muuttuu kesken käyrän. Toisin sanoen: [Spearmanin rho voi mallintaa epälineaarisia suhteita, kunhan ne eivät muutu suunnassaan kesken kaiken.]{.underline}
+
+[Näiden lisäksi Spearmanin rhon laskutapa riippuu siitä, esiintyykö muuttujilla tasajärjestyksiä vai ei]{.underline}. **Tasajärjestys** määritellään kuin Wilcoxonin signed-rank -testille: tasajärjestys esiintyy kun kaksi tai useampi arvo saisi saman järjestysarvon, jolloin laskemme niiden keskiarvon.
+
+### Spearmanin rhon laskeminen
+
+[Spearmanin rhon laskeminen seuraa hyvin samanlaista logiikkaa]{.underline} kuin Pearsonin korrelaatiokerroin, mutta data pitää ensin järjestää:
+
+-   Laske järjestysnumerot molemmille muuttujille erikseen.
+
+    -   Valitse rhon laskukaava sen mukaan, esiintyykö tasajärjestyksiä vai ei.
+
+-   Laske Spearmanin rho-suure.
+
+[Jos muuttujilla ei ole tasajärjestyksiä]{.underline}, käytä seuraavaa kaavaa:
+
+$$
+\rho = 1-\frac{6\sum{d_i^2}}{n^3-n}
+$$
+
+Laske ensin jokaisen rivin erot muuttujien järjestysarvojen välillä, $d_i$ (jossa $i$ on rivin numero). Laske sitten jokaiselle erolle neliö $d_i^2$ ja summaa kaikki neliöt yhteen. Kerro tulos kuudella.
+
+Jakolaskun alaosassa, laske otoskoon kuutio $n^3$ ja vähennä siitä otoskoko $n$.
+
+Jaa sitten ensimmäiseksi laskettu erotuksen neliösumma toiseksi lasketulla otoskokomitalla. Vähennä lopullinen tulos yhdestä - saat Spearmanin rhon $\rho$.
+
+[Jos muuttujilla on tasajärjestyksiä]{.underline}, käytä vaihtoehtoista kaavaa:
+
+$$
+\rho = \frac{ 1/n \sum{(x_i - \bar{x}) \times (y_i - \bar{y})} } { \sqrt{( 1/n \sum{(x_i - \bar{x})^2} ) \times (1/n \sum{(y_i - \bar{y})^2}) } }
+$$
+
+Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat käytössä:
+
+-   $x_i$ ja $y_i$ ovat muuttujien järjestysarvot rivillä $i$
+
+-   $\bar{x}$ ja $\bar{y}$ ovat muuttujien järjestysarvojen keskiarvot
+
+-   $n$ on koko otoksen otoskoko
+
+-   $1/n$ on otoskoon inverssi; jonkun luvun kertominen tällä on sama kuin luvun jakaminen otoskoolla $n$: $1/n \times 5 = 5/n$
+
+[Laskutoiminto soveltaa Pearsonin korrelaatiokertoimen laskukaaviota]{.underline}, mutta korvaa datan alkuperäisluvut järjestysluvuilla. Toisin sanoen: kaava on tismalleen sama kuin Pearsonin kaava, paitsi että käytetyt luvut ovat järjestyslukuja.
+
+[Rho-suure tulkitaan kuten Pearsonin]{.underline} $r$[-suuretta]{.underline}.
+
+[Merkitsevyyden laskemiseksi]{.underline} voidaan käyttää joko **z-normalisointia**, jolloin pitää myös ensin tehdä Fisherin muuntolasku, tai **t-suuretta**.
+
+[Jos haluat laskea z-normalisoidun rho-suureen]{.underline}, käytä seuraavia kaavoja:
+
+$$
+\begin{align}
+z = \sqrt{\frac{n-3}{1.06}}F(r)
+\\ F(r) = 0.5 \ln \frac{1+r}{1-r}
+\end{align}
+$$
+
+Z-suureen kaavassa lasket ensin otoskoon $n$ minus kolme, ja jaat tulokset $1.06$:lla. Otat sitten tämän tuloksen neliöjuuren.
+
+Sitten sinun tulee laskea Fisherin muuntolasku korrelaatiokertoimelle, $F(r)$. Jaa ensin rho-kerroin plus yksi laskulla rho-kerroin minus yksi. Ota tuloksen luonnollinen logaritmi, ja kerro tämä tulos puolella ($0.5$).
+
+Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. Saat z-normalisoidun arvon, jolle voit hakea todennäköisyysarvon $p$ yleisellä tavalla (kriittisten arvojen taulukosta tai laskurilla).
+
+[Jos haluat käyttää t-suuretta]{.underline}, käytä seuraavaa kaavaa:
+
+$$
+t = r\sqrt{\frac{n-2}{1-r^2}}
+$$
+
+T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet $n-2$, sitten rho-suureen neliö $r^2$ ja sen inverssi $1-r^2$. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella $r$. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla $n-2$. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.
+
+### Spearmanin rhon laskeminen Excelissä
+
+Vaikka yllä olevat kaavat näyttävät aika monimutkaisilta, voimme onneksi tehdä Spearmanin rho-testin paljon yksinkertaisemmin Excelissä.
+
+[Meidän ei nimittäin tarvitse välittää ollenkaan tasajärjestyksistä]{.underline} - koska Spearmanin rho-lasku on loppujen lopuksi vain Pearsonin korrelaatiokerroin, mutta laskettu järjestysluvuilla eikä alkuperäisillä luvuilla!
+
+Laskutoimitus seuraa tätä prosessia:
+
+1.  Laske molempien muuttujien järjestysarvot: `=ARVON.MUKAAN.KESKIARVO(solu; alue; 1)`.
+2.  Laske järjestyslukualueiden korrelaatiokerroin: `=KORRELAATIO(muuttuja1; muuttuja2)`. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!
+3.  Valitse merkitsevyyslaskentatapa ja syötä siihen tarvittavat numerot.
+    1.  Jos z-arvo:
+        1.  Laske Fisherin muuntolasku käyttämällä aikaisempaa korrelaatiokertointa sekä luonnollisen logaritmin funktiota `LUONN.LOG()`.
+        2.  Laske sitten z-arvo käyttäen Fisherin muuntolaskun tulosta ja otoskokoa (hae esim. `LASKE`-funktiolla).
+        3.  Hae viimeiseksi z-arvon merkitsevyys funktiolla `=NORM_JAKAUMA.NORMITA(z; EPÄTOSI)`.
+    2.  Jos t-arvo:
+        1.  Laske t-arvo käyttämällä otoskokoa (hae esim. `LASKE`-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla `NELIÖJUURI()`.
+        2.  Hae sitten t-arvon merkitsevyys funktiolla `=T.JAKAUMA(t; vapausasteet; EPÄTOSI`). Vapausasteet ovat $n-2$.
+
+### Spearmanin rhon raportointi
+
+Raportoi rho-testistä mieluisesti seuraavat:
+
+-   Spearmanin testisuure $\rho$ (vaihtoehtoisesti kirjoitettuna $r_s$)
+
+-   Z- tai t-koko $z$ tai $t$
+
+    -   Jos $t$: Vapausasteet $\text{df}$
+
+-   Merkitsevyys $p$
 
 ## Testikoot ei-parametrisille testeille {#sec-testikoot-ei-parametrisille-testeille}
 

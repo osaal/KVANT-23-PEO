@@ -343,7 +343,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-u-testin-toteuttaminen-excelissä" id="toc-sec-u-testin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#sec-u-testin-toteuttaminen-excelissä"><span class="header-section-number">9.3.3</span> U-testin toteuttaminen Excelissä</a></li>
   <li><a href="#sec-u-testin-raportoiminen" id="toc-sec-u-testin-raportoiminen" class="nav-link" data-scroll-target="#sec-u-testin-raportoiminen"><span class="header-section-number">9.3.4</span> U-testin raportoiminen</a></li>
   </ul></li>
-  <li><a href="#sec-testikoot-ei-parametrisille-testeille" id="toc-sec-testikoot-ei-parametrisille-testeille" class="nav-link" data-scroll-target="#sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.4</span> Testikoot ei-parametrisille testeille</a></li>
+  <li><a href="#spearmanin-rho-rho" id="toc-spearmanin-rho-rho" class="nav-link" data-scroll-target="#spearmanin-rho-rho"><span class="header-section-number">9.4</span> Spearmanin rho <span class="math inline">\(\rho\)</span></a>
+  <ul class="collapse">
+  <li><a href="#mallioletukset" id="toc-mallioletukset" class="nav-link" data-scroll-target="#mallioletukset"><span class="header-section-number">9.4.1</span> Mallioletukset</a></li>
+  <li><a href="#spearmanin-rhon-laskeminen" id="toc-spearmanin-rhon-laskeminen" class="nav-link" data-scroll-target="#spearmanin-rhon-laskeminen"><span class="header-section-number">9.4.2</span> Spearmanin rhon laskeminen</a></li>
+  <li><a href="#spearmanin-rhon-laskeminen-excelissä" id="toc-spearmanin-rhon-laskeminen-excelissä" class="nav-link" data-scroll-target="#spearmanin-rhon-laskeminen-excelissä"><span class="header-section-number">9.4.3</span> Spearmanin rhon laskeminen Excelissä</a></li>
+  <li><a href="#spearmanin-rhon-raportointi" id="toc-spearmanin-rhon-raportointi" class="nav-link" data-scroll-target="#spearmanin-rhon-raportointi"><span class="header-section-number">9.4.4</span> Spearmanin rhon raportointi</a></li>
+  </ul></li>
+  <li><a href="#sec-testikoot-ei-parametrisille-testeille" id="toc-sec-testikoot-ei-parametrisille-testeille" class="nav-link" data-scroll-target="#sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.5</span> Testikoot ei-parametrisille testeille</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -372,6 +379,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-columns page-full"><p>Perusajatuksena ei-parametrisissa testeissä on, että data ensin <strong>järjestetään</strong>, jolloin merkitsevyys- sekä erotestit tuotetaan järjestysnumeroiden pohjalta. Tämä korjaa esimerkiksi ääripääarvojen ja vinouman vääristymiä.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Kahdeskymmenes datapiste on aina kahdeskymmenes datapiste, olkoon kuinka iso tahansa verrattuna muihin datapisteisiin!</p></li></div></div>
 <p>Ei-parametriset testit voivat kuulostaa loistavalta vaihtoehdolta: ne testaavat merkitsevyyttä, mutta ne eivät vaadi suuria otoskokoja tai useampien mallioletusten täyttymistä! <u>Negatiivisena puolena ei-parametrisillä testeillä on yleensä matalampi <strong>tilastollinen voima</strong> (engl. <em>statistical power</em>).</u> Tilastollisella voimalla tarkoitetaan testin kykyä tunnistaa <strong>todelliset positiiviset</strong>, eli hylätä nollahypoteesi tilanteessa, jossa sen pitikin hylätä. Matalan voiman testeillä todellisia positiivisia tunnistetaan heikommin, jolloin tulee useammin vastaan tilanteita, joissa et pysty hylkäämään nollahypoteesia vaikka sen hylkääminen todellisuudessa olisi oikein.</p>
 <p>Tämän takia nyrkkisääntönä onkin, että <u>käytät parametrisia lineaarisia malleja jos ja kun mallioletukset täyttyvät</u>, ja ei-parametrisia testejä vain jos mallioletukset eivät täyty.</p>
+<p>Tässä kirjassa käydään läpi neljä ei-parametristä testiä:</p>
+<ol type="1">
+<li><strong>Merkkitesti</strong> (vastaa yhden otoksen t-testiä)</li>
+<li><strong>Wilcoxonin signed-rank</strong> -testi (vastaa parittaisen otoksen t-testiä)</li>
+<li><strong>Mann-Whitney’n U-testi</strong> (vastaa kahden otoksen t-testiä)</li>
+<li><strong>Spearmanin rho</strong> (vastaa Pearsonin korrelaatiokertointa)</li>
+</ol>
 <section id="sec-merkkitesti-teoria" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="sec-merkkitesti-teoria"><span class="header-section-number">9.1</span> Merkkitesti</h2>
 <p><strong>Mittausasteikot</strong>: Järjestysasteikosta ylöspäin</p>
@@ -620,8 +634,108 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 </ul>
 </section>
 </section>
-<section id="sec-testikoot-ei-parametrisille-testeille" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.4</span> Testikoot ei-parametrisille testeille</h2>
+<section id="spearmanin-rho-rho" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="spearmanin-rho-rho"><span class="header-section-number">9.4</span> Spearmanin rho <span class="math inline">\(\rho\)</span></h2>
+<p><strong>Mittausasteikot:</strong> Molemmat muuttujat järjestysasteikolla.</p>
+<p><strong>Spearmanin rho</strong> <span class="math inline">\(\rho\)</span> tai <strong>Spearmanin korrelaatiokerroin</strong> <span class="math inline">\(r_s\)</span> on ei-parametrinen korrelaatiokerroin. Sen parametrinen vastaavuus on <strong>Pearsonin</strong> <span class="math inline">\(r\)</span> (ks. <a href="korrelaatio.html"><span>Luku&nbsp;11</span></a>).</p>
+<p>Spearmanin rho toimii kuten Pearsonin <span class="math inline">\(r\)</span>, mutta sen sijaan, että testi laskettaisiin suoraan kovarianssista, se lasketaan datapisteiden <strong>järjestysnumeroilla</strong>.</p>
+<p><u>Spearmanin rho on robustimpi kuin Pearsonin</u> <span class="math inline">\(r\)</span>, eikä siihen vaikuta esim. ääripääarvot samalla tavalla. Koska rho lasketaan järjestysnumeroille eikä datalle suoraan, sitä voi myös käyttää järjestysasteikon muuttujilla.</p>
+<p><u>Jos muuttujasi täyttävät Pearsonin</u> <span class="math inline">\(r\)</span><u>-testin vaatimuksia</u>, käytä sitä mielummin. Jos datassasi on kuitenkin suuria ääripääarvoja, on epälineaarista tai muuten rikkoo Pearsonin korrelaatiokertoimen malliodotuksia (ks. <a href="korrelaatio.html#sec-korrelaatiokertoimen-mallioletukset"><span>Alaluku&nbsp;11.2</span></a>), voit käyttää Spearmanin testiä Pearsonin testin sijaan.</p>
+<section id="mallioletukset" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="mallioletukset"><span class="header-section-number">9.4.1</span> Mallioletukset</h3>
+<p>Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei ole lineaarinen malli), mutta sillä on kolme omaa oletusta: <strong>muuttujatasot</strong> sekä <strong>monotonisuus</strong>:</p>
+<ul>
+<li><p><u>Muuttujien tulee olla vähintään järjestystasolla</u> (järjestys-, välimatka- tai suhdeasteikko). Spearmanin rhota ei voi laskea luokitteluasteikolle, koska muuttujia ei voi silloin laittaa luonnolliseen järjestykseen.</p></li>
+<li><p><u>Muuttujien tulee olla monotonisessa suhteessa toisiinsa</u>. Monotonisuus tarkoittaa, että muuttujien suhde joko nousee tai laskee. Kaikki lineaariset mallit ovat monotonisia, mutta monotoniset mallit eivät tarvitse olla lineaarisia. Esimerkiksi eksponentiaalinen tai logaritminen suhde on monotoninen mutta epälineaarinen. Parabolisuhde toisaalta ei ole lineaarinen eikä monotoninen, koska sen suunta muuttuu kesken käyrän. Toisin sanoen: <u>Spearmanin rho voi mallintaa epälineaarisia suhteita, kunhan ne eivät muutu suunnassaan kesken kaiken.</u></p></li>
+</ul>
+<p><u>Näiden lisäksi Spearmanin rhon laskutapa riippuu siitä, esiintyykö muuttujilla tasajärjestyksiä vai ei</u>. <strong>Tasajärjestys</strong> määritellään kuin Wilcoxonin signed-rank -testille: tasajärjestys esiintyy kun kaksi tai useampi arvo saisi saman järjestysarvon, jolloin laskemme niiden keskiarvon.</p>
+</section>
+<section id="spearmanin-rhon-laskeminen" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="spearmanin-rhon-laskeminen"><span class="header-section-number">9.4.2</span> Spearmanin rhon laskeminen</h3>
+<p><u>Spearmanin rhon laskeminen seuraa hyvin samanlaista logiikkaa</u> kuin Pearsonin korrelaatiokerroin, mutta data pitää ensin järjestää:</p>
+<ul>
+<li><p>Laske järjestysnumerot molemmille muuttujille erikseen.</p>
+<ul>
+<li>Valitse rhon laskukaava sen mukaan, esiintyykö tasajärjestyksiä vai ei.</li>
+</ul></li>
+<li><p>Laske Spearmanin rho-suure.</p></li>
+</ul>
+<p><u>Jos muuttujilla ei ole tasajärjestyksiä</u>, käytä seuraavaa kaavaa:</p>
+<p><span class="math display">\[
+\rho = 1-\frac{6\sum{d_i^2}}{n^3-n}
+\]</span></p>
+<p>Laske ensin jokaisen rivin erot muuttujien järjestysarvojen välillä, <span class="math inline">\(d_i\)</span> (jossa <span class="math inline">\(i\)</span> on rivin numero). Laske sitten jokaiselle erolle neliö <span class="math inline">\(d_i^2\)</span> ja summaa kaikki neliöt yhteen. Kerro tulos kuudella.</p>
+<p>Jakolaskun alaosassa, laske otoskoon kuutio <span class="math inline">\(n^3\)</span> ja vähennä siitä otoskoko <span class="math inline">\(n\)</span>.</p>
+<p>Jaa sitten ensimmäiseksi laskettu erotuksen neliösumma toiseksi lasketulla otoskokomitalla. Vähennä lopullinen tulos yhdestä - saat Spearmanin rhon <span class="math inline">\(\rho\)</span>.</p>
+<p><u>Jos muuttujilla on tasajärjestyksiä</u>, käytä vaihtoehtoista kaavaa:</p>
+<p><span class="math display">\[
+\rho = \frac{ 1/n \sum{(x_i - \bar{x}) \times (y_i - \bar{y})} } { \sqrt{( 1/n \sum{(x_i - \bar{x})^2} ) \times (1/n \sum{(y_i - \bar{y})^2}) } }
+\]</span></p>
+<p>Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat käytössä:</p>
+<ul>
+<li><p><span class="math inline">\(x_i\)</span> ja <span class="math inline">\(y_i\)</span> ovat muuttujien järjestysarvot rivillä <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span> ovat muuttujien järjestysarvojen keskiarvot</p></li>
+<li><p><span class="math inline">\(n\)</span> on koko otoksen otoskoko</p></li>
+<li><p><span class="math inline">\(1/n\)</span> on otoskoon inverssi; jonkun luvun kertominen tällä on sama kuin luvun jakaminen otoskoolla <span class="math inline">\(n\)</span>: <span class="math inline">\(1/n \times 5 = 5/n\)</span></p></li>
+</ul>
+<p><u>Laskutoiminto soveltaa Pearsonin korrelaatiokertoimen laskukaaviota</u>, mutta korvaa datan alkuperäisluvut järjestysluvuilla. Toisin sanoen: kaava on tismalleen sama kuin Pearsonin kaava, paitsi että käytetyt luvut ovat järjestyslukuja.</p>
+<p><u>Rho-suure tulkitaan kuten Pearsonin</u> <span class="math inline">\(r\)</span><u>-suuretta</u>.</p>
+<p><u>Merkitsevyyden laskemiseksi</u> voidaan käyttää joko <strong>z-normalisointia</strong>, jolloin pitää myös ensin tehdä Fisherin muuntolasku, tai <strong>t-suuretta</strong>.</p>
+<p><u>Jos haluat laskea z-normalisoidun rho-suureen</u>, käytä seuraavia kaavoja:</p>
+<p><span class="math display">\[
+\begin{align}
+z = \sqrt{\frac{n-3}{1.06}}F(r)
+\\ F(r) = 0.5 \ln \frac{1+r}{1-r}
+\end{align}
+\]</span></p>
+<p>Z-suureen kaavassa lasket ensin otoskoon <span class="math inline">\(n\)</span> minus kolme, ja jaat tulokset <span class="math inline">\(1.06\)</span>:lla. Otat sitten tämän tuloksen neliöjuuren.</p>
+<p>Sitten sinun tulee laskea Fisherin muuntolasku korrelaatiokertoimelle, <span class="math inline">\(F(r)\)</span>. Jaa ensin rho-kerroin plus yksi laskulla rho-kerroin minus yksi. Ota tuloksen luonnollinen logaritmi, ja kerro tämä tulos puolella (<span class="math inline">\(0.5\)</span>).</p>
+<p>Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. Saat z-normalisoidun arvon, jolle voit hakea todennäköisyysarvon <span class="math inline">\(p\)</span> yleisellä tavalla (kriittisten arvojen taulukosta tai laskurilla).</p>
+<p><u>Jos haluat käyttää t-suuretta</u>, käytä seuraavaa kaavaa:</p>
+<p><span class="math display">\[
+t = r\sqrt{\frac{n-2}{1-r^2}}
+\]</span></p>
+<p>T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet <span class="math inline">\(n-2\)</span>, sitten rho-suureen neliö <span class="math inline">\(r^2\)</span> ja sen inverssi <span class="math inline">\(1-r^2\)</span>. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella <span class="math inline">\(r\)</span>. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla <span class="math inline">\(n-2\)</span>. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.</p>
+</section>
+<section id="spearmanin-rhon-laskeminen-excelissä" class="level3" data-number="9.4.3">
+<h3 data-number="9.4.3" class="anchored" data-anchor-id="spearmanin-rhon-laskeminen-excelissä"><span class="header-section-number">9.4.3</span> Spearmanin rhon laskeminen Excelissä</h3>
+<p>Vaikka yllä olevat kaavat näyttävät aika monimutkaisilta, voimme onneksi tehdä Spearmanin rho-testin paljon yksinkertaisemmin Excelissä.</p>
+<p><u>Meidän ei nimittäin tarvitse välittää ollenkaan tasajärjestyksistä</u> - koska Spearmanin rho-lasku on loppujen lopuksi vain Pearsonin korrelaatiokerroin, mutta laskettu järjestysluvuilla eikä alkuperäisillä luvuilla!</p>
+<p>Laskutoimitus seuraa tätä prosessia:</p>
+<ol type="1">
+<li>Laske molempien muuttujien järjestysarvot: <code>=ARVON.MUKAAN.KESKIARVO(solu; alue; 1)</code>.</li>
+<li>Laske järjestyslukualueiden korrelaatiokerroin: <code>=KORRELAATIO(muuttuja1; muuttuja2)</code>. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!</li>
+<li>Valitse merkitsevyyslaskentatapa ja syötä siihen tarvittavat numerot.
+<ol type="1">
+<li>Jos z-arvo:
+<ol type="1">
+<li>Laske Fisherin muuntolasku käyttämällä aikaisempaa korrelaatiokertointa sekä luonnollisen logaritmin funktiota <code>LUONN.LOG()</code>.</li>
+<li>Laske sitten z-arvo käyttäen Fisherin muuntolaskun tulosta ja otoskokoa (hae esim. <code>LASKE</code>-funktiolla).</li>
+<li>Hae viimeiseksi z-arvon merkitsevyys funktiolla <code>=NORM_JAKAUMA.NORMITA(z; EPÄTOSI)</code>.</li>
+</ol></li>
+<li>Jos t-arvo:
+<ol type="1">
+<li>Laske t-arvo käyttämällä otoskokoa (hae esim. <code>LASKE</code>-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla <code>NELIÖJUURI()</code>.</li>
+<li>Hae sitten t-arvon merkitsevyys funktiolla <code>=T.JAKAUMA(t; vapausasteet; EPÄTOSI</code>). Vapausasteet ovat <span class="math inline">\(n-2\)</span>.</li>
+</ol></li>
+</ol></li>
+</ol>
+</section>
+<section id="spearmanin-rhon-raportointi" class="level3" data-number="9.4.4">
+<h3 data-number="9.4.4" class="anchored" data-anchor-id="spearmanin-rhon-raportointi"><span class="header-section-number">9.4.4</span> Spearmanin rhon raportointi</h3>
+<p>Raportoi rho-testistä mieluisesti seuraavat:</p>
+<ul>
+<li><p>Spearmanin testisuure <span class="math inline">\(\rho\)</span> (vaihtoehtoisesti kirjoitettuna <span class="math inline">\(r_s\)</span>)</p></li>
+<li><p>Z- tai t-koko <span class="math inline">\(z\)</span> tai <span class="math inline">\(t\)</span></p>
+<ul>
+<li>Jos <span class="math inline">\(t\)</span>: Vapausasteet <span class="math inline">\(\text{df}\)</span></li>
+</ul></li>
+<li><p>Merkitsevyys <span class="math inline">\(p\)</span></p></li>
+</ul>
+</section>
+</section>
+<section id="sec-testikoot-ei-parametrisille-testeille" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.5</span> Testikoot ei-parametrisille testeille</h2>
 <p><u>Yleisesti ottaen pitää aina raportoida mediaanit</u>, joita on tarkasteltu. Ryhmävertailussa raportoidaan ryhmien mediaanit; yhden otoksen testissä otoksen mediaani. Näiden lisäksi on hyvä raportoida myös <u>nollahypoteesi sekä vaihtoehtohypoteesi</u>.</p>
 <p>Niille testeille, joille lasket z-arvon, <u>voit myös laskea Pearsonin</u> <span class="math inline">\(r\)</span><u>-arvon</u> saadaksesi testikoon jota voi verrata muihin testeihin. Sen laskeminen on hyvin yksinkertaista:</p>
 <p><span id="eq-r-suure-z-testistä"><span class="math display">\[
