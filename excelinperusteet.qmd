@@ -118,7 +118,7 @@ Kun käsittelemme loogisia ehtoja, voimme hyödyntää niin sanottuja **totuusta
 
 : `EI`-ehdon totuustaulukko {#tbl-ei-totuus .striped .hover}
 
-## Solujen muokkaaminen
+## Solujen muokkaaminen {#sec-solujen-muokkaaminen}
 
 Jos klikkaat mitä tahansa solua, solun ympärille syntyy **vihreä valintalaatikko**. Voit valita useamman solun vetämällä hiiren solujen yli, jolloin Excel maalaa kaikki valitsemasi solut tummanharmaalla ja osoittaa solujen valinnan suuremmalla valintalaatikolla.
 
@@ -146,7 +146,7 @@ Voit myös valita soluja näppäimistökomennoilla. Nämä ovat erittäin hyödy
 
 [Funktioalueella voit myös **rivittää** kirjoittamasi funktiot/koodin]{.underline}. Kun kirjoitat tekstiä funktioalueelle, pidä `Alt`-näppäintä pohjassa ja paina `Enter`, jolloin saat rivilyönnin. Excel ei välitä rivilyönneistä funktion sisällä, joten voit vapaasti rivittää funktiosi haluamaasi rivirakenteeseen. Tämä voi olla hyödyllistä jos kirjoitat paljon sisäisiä funktioita (eli funktion, joka sisältää funktion, joka sisältää...), koska niiden lukeminen voi käydä nopeasti hyvin hankalaksi.
 
-## Viittaaminen ja osoitteet
+## Viittaaminen ja osoitteet {#sec-viittaaminen-ja-osoitteet}
 
 Yksinkertaisimmillaan viittaaminen toiseen soluun onnistuu Excelissä samoin kuin yleisen laskennan kirjoittaminen.
 
@@ -172,7 +172,7 @@ Esimerkkikuvassa solussa D1 on käytetty `JAKOJ`-funktiota, joka palauttaa jonku
 
 [Viittaaminen voidaan siis ymmärtää eräänlaisena osoitteiden käyttönä]{.underline}. Jokaisella solulla on oma osoite, joka merkitään solun sarakekirjaimen ja rivinumeron avulla: solu `B7` löytyy sarakkeesta B, riviltä 7.
 
-## Vetotoiminto
+## Vetotoiminto {#sec-vetotoiminto}
 
 Jos valitset minkä tahansa solun taulukkoalueella, huomaat, että solun ympäröivän vihreän laatikon alaoikeassa nurkassa on pieni neliö. Tätä voidaan kutsua **vetotoiminnoksi**.
 
@@ -188,7 +188,7 @@ Vetotoiminto toimii myös viitteillä. Jos solussa `A1` on viittaus toiseen solu
 
 Jos haluat välttää vetotoiminnon viittausmuutoksia, voit käyttää **lukitustoimintoa**.
 
-## Lukitustoiminto
+## Lukitustoiminto {#sec-lukitustoiminto}
 
 **Lukitustoiminto** on solujen viittauksille määrätty toiminto, joka toimii operaattorilla `$`. Lukitusoperaattori kertoo Excelille, ettei sen tule siirtää viittausta jos solun tieto kopioidaan toiseen soluun tai monistetaan vetotoiminnolla.
 
@@ -206,7 +206,7 @@ Jos haluat välttää vetotoiminnon viittausmuutoksia, voit käyttää **lukitus
 
 [Muista aina tarkistaa kopioinnin/vetomonistuksen kaavion oikeellisuus!]{.underline}
 
-## Funktiot
+## Funktiot {#sec-funktiot-teoria}
 
 Excelin laskennat tehdään **funktioilla**. Funktio on vähän kuin tehdas, joka ottaa sisään jonkun raakamateriaalin (arvon), tekee sille jotain (laskennan tai muunnoksen), ja sylkäisee ulos uuden tuotteen (uuden arvon).
 
@@ -224,7 +224,7 @@ Summafunktio ottaa yhden parametrin, jota voidaan kutsua `alue`-nimellä. Tämä
 
 Funktioihin voi syöttää joko suoran arvon tai viittauksen toiseen soluun, jossa on sopiva arvo. Jotkut funktiot, kuten summafunktio, ottavat **matriisin** parametrinä, jolloin määritellään useampi solu. Toiset, kuten `=ONVIRH()`, ottavat vain yhden arvon, eli yhden solun. Jotkut funktiot eivät ota mitään parametrejä, kuten funktio `TOSI()` (joka palauttaa totuusarvon `TOSI`, eli 1).
 
-## Dynaamiset matriisit
+## Dynaamiset matriisit {#sec-dynaamiset-matriisit}
 
 Excelin O365-versiossa uutena toimintona ovat **dynaamiset matriisit**. Vaikka nimi kuulostaakin hieman vaikealta, näiden käyttö on aika yksinkertaista.
 

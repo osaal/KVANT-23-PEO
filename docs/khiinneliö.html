@@ -520,7 +520,7 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <section id="sec-todellisten-arvojen-taulukko" class="level3" data-number="12.3.1">
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="sec-todellisten-arvojen-taulukko"><span class="header-section-number">12.3.1</span> Todellisten arvojen taulukko</h3>
 <p>Rakenna taulukko, jonka riveissä on yhden muuttujan kaikki kategoriat, ja sarakkeissa on toisen muuttujan kaikki kategoriat.</p>
-<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="yleisiätoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;15.4</span></a>).</p>
+<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="yleisiätoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;16.4</span></a>).</p>
 <p>Solujen arvot voit laskea funktiolla:</p>
 <p><code>=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)</code></p>
 <p>Käytä lukitustoimintoa lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!</p>
@@ -544,7 +544,7 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <section id="sec-lopputuloslaskut" class="level3" data-number="12.3.4">
 <h3 data-number="12.3.4" class="anchored" data-anchor-id="sec-lopputuloslaskut"><span class="header-section-number">12.3.4</span> Lopputuloslaskut</h3>
 <p>Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen: <code>=SUMMA(khiinneliötaulukon_alue)</code>.</p>
-<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="yleisiätoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;15.3</span></a>; <a href="funktiot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;17.5.9</span></a>).</p>
+<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="yleisiätoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;16.3</span></a>; <a href="funktiot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;18.5.9</span></a>).</p>
 <p>Laske khiin neliön oikeahäntäinen todennäköisyysarvo <em>p</em> kaavalla:</p>
 <p><code>=CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)</code></p>
 <p>Jos haluat, voit vielä laskea Cramérin V-suureen laskutoimituksella:</p>
@@ -561,6 +561,52 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <li><p>Kuinka moni odotettu arvo on alle 1 tai alle 5 (ks. <a href="#sec-khiin-neliön-malliodotukset"><span>Alaluku&nbsp;12.1</span></a>)</p></li>
 <li><p>Jos laskettu: Cramérin V-suure <span class="math inline">\(V\)</span></p></li>
 </ul>
+<p><u>Cramerin V-suure voidaan tulkita</u> jokseenkin samoin kuin Cohenin <span class="math inline">\(\hat{D}\)</span> tai Pearsonin <span class="math inline">\(r\)</span>, mutta tulkinta riippuu osittain vapausasteista:</p>
+<div id="tbl-cramerin-v-tulkinta" class="anchored">
+<table class="table">
+<caption>Taulukko&nbsp;12.2: Cramerin V:n tulkinta</caption>
+<thead>
+<tr class="header">
+<th>Vapausaste</th>
+<th>Pieni koko</th>
+<th>Keskikokoinen</th>
+<th>Suuri koko</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0,1</td>
+<td>0,3</td>
+<td>0,5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0,07</td>
+<td>0,21</td>
+<td>0,35</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0,06</td>
+<td>0,17</td>
+<td>0,29</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0,05</td>
+<td>0,15</td>
+<td>0,25</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0,04</td>
+<td>0,13</td>
+<td>0,22</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Yleensä kannattaa myös jatkoanalysoida mitkä kategoriat eroavat toisistaan, esimerkiksi <em>post hoc</em>-testeillä. Voit myös tarkastaa solujen prosenttiosuuksia ja raportoida isoimmat erot, mutta tämä ei ole yhtä luotettava menetelmä kuin virallinen testaus.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

@@ -1,12 +1,14 @@
 # Funktiot
 
 ::: {.callout-note title="Lähde"}
-Funktioiden määritelmät ja käyttökuvaukset ovat haettu Excelin dokumentaatiosta. Dokumentaatiosta löytyy enemmän funktioita; kuvailen tässä ne, jotka voivat olla eniten hyödyllisiä työssäsi. Löydät kaikki Excelin funktiot ryhmitettynä luokkiin täältä: [Excelin funktiot (luokittain)](https://support.microsoft.com/fi-fi/office/excelin-funktiot-luokittain-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
+Olen hakenut funktioiden määritelmät ja käyttökuvaukset Excelin dokumentaatiosta. Dokumentaatiosta löytyy enemmän funktioita; kuvailen tässä ne, jotka voivat olla eniten hyödyllisiä työssäsi. Löydät kaikki Excelin funktiot luokan mukaan täältä: [Excelin funktiot (luokittain)](#0)
 :::
 
 ## Sivun käyttöopas
 
-Oikealla laidalla on sivun kaikkien otsikoiden listaus, josta voit etsiä sinua kiinnostavan funktion. Voit myös käyttää verkkokirjan hakutoimintoa, joka löytyy sivun ylävasemmalta laidalta (suurella näytöllä) tai yläoikealta laidalta (pienellä näytöllä).
+Oikealla laidalla on sivun kaikkien otsikoiden listaus, josta voit etsiä sinua kiinnostavan funktion. Voit myös käyttää verkkokirjan **hakutoimintoa**, joka löytyy sivun yläoikeasta laidasta.
+
+Yleistä tietoa funktioiden käytöstä Excelissä löytyy [alaluvusta -@sec-funktiot-teoria].
 
 **HUOM:** Jos luet mobiililaitteella, et luultavasti näe otsikkolistausta oikealla liian pienen näytön takia.
 
@@ -16,7 +18,9 @@ Oikealla laidalla on sivun kaikkien otsikoiden listaus, josta voit etsiä sinua 
 
 **Funktiokutsu:** Kun käytät funktiota, esim. solussa.
 
-**Avainsana:** Ennalta määritelty input, joka pitää syöttää funktioon. Esim. funktiolla `KESKIARVO` on 1-127 avainsanaa, riippuen siitä, kuinka monta solua syötät funktioon. Avainsanat voivat olla pakollisia tai valintaisia. Funktioilla voi myös olla oletusarvoja avainsanoille, joita käytetään jos käyttäjä ei itse määrittele avainsanaa funktiokutsussa.
+**Palautus:** Kun funktio kutsutaan, se tekee laskutoimintonsa ja palauttaa jonkun arvon (output).
+
+**Parametri:** Ennalta määritelty input, joka pitää syöttää funktioon. Esim. funktiolla `KESKIARVO` on 1-127 parametriä, riippuen siitä, kuinka monta solua syötät funktioon. Parametrit voivat olla pakollisia tai valintaisia. Funktioilla voi myös olla oletusarvoja parametreille, joita käytetään jos käyttäjä ei itse määrittele parametriä funktiokutsussa. **Parametrin synonyymi on avainsana.**
 
 **Datatyyppi:** Excel tulkitsee solujen tiedot eri datatyyppeinä. Näitä ovat mm. luvut, tekstijonot, päivämäärät, funktiot ja virhearvot.
 
@@ -24,13 +28,13 @@ Oikealla laidalla on sivun kaikkien otsikoiden listaus, josta voit etsiä sinua 
 
 ## Tietofunktiot {#sec-tietofunktiot}
 
-### ON-funktiot {#sec-on-toiminnot}
+### `ON`-funktiot {#sec-on-toiminnot}
 
 `=FUNKTIO(arvo)`
 
-`ON`-funktiot palauttavat totuusarvon `TOSI`, jos niiden vaatimus solulle täyttyy. Jos vaatimus ei täyty, funktiot palauttavat totuusarvon `EPÄTOSI`.
+`ON`-funktiot palauttavat totuusarvon `TOSI`, jos niiden vaatimus solulle täyttyy, ja `EPÄTOSI` jos vaatimus ei täyty.
 
-Funktiot ja niiden vaatimukset:
+[Funktiot ja niiden vaatimukset]{.underline}:
 
 -   `ONTYHJÄ`: Onko soluarvo tyhjä?
 -   `ONVIRH`: Onko soluarvo jotain muuta, kuin `#PUUTTUU!`? (Eli `ONPUUTTUU`-funktion vastakohta)
@@ -45,13 +49,13 @@ Funktiot ja niiden vaatimukset:
 -   `ONPARITON`: Onko soluarvo pariton? (Eli `ONPARILLINEN`-funktion vastakohta)
 -   `ONKAAVA`: Onko soluarvo kaava?
 
-### PUUTTUU {#sec-puuttuu}
+### `PUUTTUU` {#sec-puuttuu}
 
 `=PUUTTUU()`
 
 Palauttaa virhearvon `#PUUTTUU!`.
 
-### SOLU {#sec-solu}
+### `SOLU` {#sec-solu}
 
 `=SOLU(kuvaus_laji; viittaus)`
 
@@ -59,34 +63,34 @@ Palauttaa tietoa soluviittauksesta.
 
 Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritellään `kuvaus_laji`-avainsanalla.
 
-Tietopyyntökomentojen eri määritelmät:
+Avainsanojen komentojen eri määritelmät:
 
-| Komento        | Palautus                                                                                                                                                                                                                 |
-|------------|-----------------------------------------------------------|
-| "osoite"       | Soluviittauksen osoite tekstinä (esim. A2)                                                                                                                                                                               |
-| "sarake"       | Solun sarake numerona (esim. 2 sarakkeelle B)                                                                                                                                                                            |
-| "väri"         | Arvo 1, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo 0.                                                                                                                                                 |
-| "sisältö"      | Solun arvon (esim. 1000 tai "Hei")                                                                                                                                                                                       |
-| "tiedostonimi" | Solun sisältävän tiedoston nimen. Palauttaa tyhjää "" jos tiedostoa ei ole tallennettu.                                                                                                                                  |
-| "muoto"        | Solun lukumuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf)                          |
-| "sulkeet"      | Arvo 1, jos solun positiiviset/kaikki arvot esitetään sulkeissa. Muuten arvo 0.                                                                                                                                          |
-| "etuliite"     | Solun tasausmuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf)                        |
-| "suojaus"      | Arvo 1, jos solu on lukittu, tai arvo 0, jos solua ei ole lukittu.                                                                                                                                                       |
-| "rivi"         | Solun rivi numerona (esim. 2 riville 2)                                                                                                                                                                                  |
-| "tyyppi"       | Solun sisällön tyyppi erityisenä merkkijonona. Palauttaa "h" jos solu on tyhjä, "o" jos solussa on tekstivakio, ja muuten "r".                                                                                           |
-| "leveys"       | Palauttaa kaksikohteisen matriisin. Ensimmäisessä kohteessa on solun sarakeleveys. Toisessa kohteessa on totuusarvo `TOSI`, jos kyseinen leveys on oletusarvo, ja `EPÄTOSI` jos leveyttä on muutettu käyttäjän toimesta. |
+| Komento        | Palautus                                                                                                                                                                                                                     |
+|------------------|------------------------------------------------------|
+| `osoite`       | Soluviittauksen osoite tekstinä (esim. `A2`)                                                                                                                                                                                 |
+| `sarake`       | Solun sarake numerona (esim. `2` sarakkeelle B)                                                                                                                                                                              |
+| `väri`         | Arvo `1`, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo `0`.                                                                                                                                                 |
+| `sisältö`      | Solun arvon (esim. `1000` tai `"Hei"`)                                                                                                                                                                                       |
+| `tiedostonimi` | Solun sisältävän tiedoston nimen. Palauttaa tyhjää `""` jos tiedostoa ei ole tallennettu.                                                                                                                                    |
+| `muoto`        | Solun lukumuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf).                             |
+| `sulkeet`      | Arvo `1`, jos solun positiiviset/kaikki arvot esitetään sulkeissa. Muuten arvo `0`.                                                                                                                                          |
+| `etuliite`     | Solun tasausmuotoilun erityisenä merkkijonona. Katso kaikki merkkijonot [funktion apusivuilta](https://support.microsoft.com/fi-fi/office/solu-solu-funktio-51bd39a5-f338-4dbe-a33f-955d67c2b2cf).                           |
+| `suojaus`      | Arvo `1`, jos solu on lukittu, tai arvo `0`, jos solua ei ole lukittu.                                                                                                                                                       |
+| `rivi`         | Solun rivi numerona (esim. `2` riville 2)                                                                                                                                                                                    |
+| `tyyppi`       | Solun sisällön tyyppi erityisenä merkkijonona. Palauttaa `"h"` jos solu on tyhjä, `"o"` jos solussa on tekstivakio, ja muuten `"r"`.                                                                                         |
+| `leveys`       | Palauttaa kaksisoluisen matriisin. Ensimmäisessä solussa on pyydetyn solun sarakeleveys. Toisessa solussa on totuusarvo `TOSI`, jos kyseinen leveys on oletusarvo, ja `EPÄTOSI` jos leveyttä on muutettu käyttäjän toimesta. |
 
-: SOLU-funktion `kuvaus_laji`-avainsanan komennot.
+: `SOLU`-funktion `kuvaus_laji`-avainsanan komennot.
 
 ## Loogiset funktiot {#sec-loogiset-funktiot}
 
-### TOSI ja EPÄTOSI {#sec-tosi-ja-epätosi}
+### `TOSI` ja `EPÄTOSI` {#sec-tosi-ja-epätosi}
 
 `=TOSI()`, `=EPÄTOSI()`
 
 Palauttavat totuusarvot `TOSI` tai `EPÄTOSI`, nimensä mukaan. Voit vaihtoehtoisesti käyttää sanoja `TOSI` tai `EPÄTOSI` funktioiden sijaan.
 
-### JA {#sec-ja}
+### `JA` {#sec-ja}
 
 `=JA(arg1; arg2; ...)`
 
@@ -94,39 +98,45 @@ Palauttaa totuusarvon `TOSI`, jos kaikki funktion avainsanojen arvot ovat `TOSI`
 
 `TAI`-funktion vastakohta (ks. @sec-tai-ja-ehdoton.tai).
 
-Avainsanojen tulee olla totuusarvoja tai solu- tai matriisiviittauksia totuusarvoihin.
+Avainsanojen tulee olla totuusarvoja tai solu-/matriisiviittauksia totuusarvoihin.
 
 Funktio ei ota huomioon tekstiä, lukuja tai tyhjiä soluja.
 
-Käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.
+Funktiota käytetään usein yhdistelmässä muiden loogisten funktioiden kanssa.
 
-### JOS-funktiot {#sec-jos-funktiot}
+### `JOS`-funktiot {#sec-jos-funktiot}
 
 `=JOS(arvioitava; jostosi; josepätosi)`
 
-Arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos `arvioitava`-funktion tulos on tosi (`jostosi`), sekä jos tulos on epätosi (`josepätosi`).
+`=JOS.JOUKKO(arvioitava1; jostosi1; arvioitava2; jostosi2; ...)`
 
 `=JOSVIRHE(arvioitava; josvirhe)`
 
-Arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon (`josvirhe`).
-
 `=JOSPUUTTUU(arvioitava; jospuuttuu)`
 
-Arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon `#PUUTTUU!` (`jospuuttuu`).
+Funktioperhe arvioi jonkun loogisen funktion ja palauttavat ennalta määriteltyjä tuloksia loogisen testin pohjalta.
 
-`=JOS.JOUKKO(arvioitava1; jostosi1; arvioitava2; jostosi2; ...)`
+`JOS`-funktio arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos `arvioitava`-funktion tulos on `TOSI` (`jostosi`), sekä jos tulos on `EPÄTOSI` (`josepätosi`).
 
-Arvioi yhden tai useamman (korkeintaan 127) loogisen funktion ja palauttaa sitä vastaavan totuusfunktion `jostosiN`, jos `arvioitavaN`-funktion tulos on tosi.
+`JOS.JOUKKO`-funktio arvioi yhden tai useamman (korkeintaan 127) loogisen funktion ja palauttaa sitä vastaavan totuusfunktion `jostosiN`, jos `arvioitavaN`-funktion tulos on `TOSI`.
 
-Jokaiselle arvioitavalle funktiolle tulee syöttää yksi `TOSI`-ehdon alla tuotettava arvo, eli avainsanat syötetään pareissa. Yksi ehto arvioidaan kahdella avainsanalla (`arvioitava1`, `jostosi1`); kaksi ehtoa arvioidaan neljällä avainsanalla (`arvioitava1`, `jostosi1`, `arvioitava2`, `jostosi2`); ja niin edelleen.
+Jokaiselle arvioitavalle loogiselle funktiolle tulee syöttää yksi `TOSI`-ehdon alla tuotettava arvo, eli avainsanat syötetään pareissa. Yksi ehto arvioidaan kahdella avainsanalla (`arvioitava1`, `jostosi1`); kaksi ehtoa arvioidaan neljällä avainsanalla (`arvioitava1`, `jostosi1`, `arvioitava2`, `jostosi2`); ja niin edelleen.
 
-### EI {#sec-ei}
+Jos mikään avainsanoista ei johda palautukseen, funktio ei palauta mitään.
+
+Voit asettaa oletusarvon palautukselle (eli mitä palautetaan, jos mikään muu testi ei ole `TOSI`) lisäämällä viimeisen avainsanaparin, jossa `arvioitava` avainsana on `TOSI`. Määrittele sitten `jostosi`-avainsanalle, mitä pitäisi palauttaa. Näiden avainsanojen tulee olla viimeiset listauksessa, muuten ne palautuvat ennen kuin kaikki muut ehdot on käyty läpi!
+
+`JOSVIRHE`-funktio arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa minkä tahansa virhearvon (`josvirhe`).
+
+`JOSPUUTTUU`-funktio arvioi loogisen funktion avainsanassa `arvioitava`. Käyttäjä määrittelee mitä palautetaan, jos funktion tulos palauttaa virhearvon `#PUUTTUU!` (`jospuuttuu`).
+
+### `EI` {#sec-ei}
 
 `=EI(arvioitava)`
 
 Palauttaa avainsanan `arvioitava` totuustuloksen vastakohdan, eli `EPÄTOSI` jos avainsanan tulos on `TOSI` tai toisinpäin.
 
-### TAI ja EHDOTON.TAI {#sec-tai-ja-ehdoton.tai}
+### `TAI` ja `EHDOTON.TAI` {#sec-tai-ja-ehdoton.tai}
 
 `=TAI(arg1; arg2; ...)`
 
@@ -146,21 +156,21 @@ Palauttaa totuusarvon `TOSI`, jos vähintään yksi *mutta ei kaikki* funktion a
 
 Ehdoton versio `TAI`-funktiosta. Toimii samalla tavalla.
 
-### LAMBDA {#sec-lambda}
+### `LAMBDA` {#sec-lambda}
 
 `=LAMBDA(par1; par2; ...; parN; laskutoimitus)`
 
 `LAMBDA`-toiminnolla voit laatia omia funktioitasi. Voit määritellä enintään 253 avainsanaa (vähintään nolla) joita funktioisi käyttää. Voit sitten määritellä mitä funktiosi tekee avainsanalla `laskutoimitus`.
 
-Toimivan `LAMBDA`-funktion toteuttamisen jälkeen voit rekisteröidä funktion nimen **Nimien hallinta** -tilassa, jolloin funktiota pystyy käyttämään koko työkirjassa (tai työlehtiössä, jos olet rajannut käytön. Ks. LUKU NIMIEN HALLINNASTA).
+Toimivan `LAMBDA`-funktion toteuttamisen jälkeen voit rekisteröidä funktion nimen **Nimien hallinta** -tilassa, jolloin funktiota pystyy käyttämään koko työkirjassa (tai työlehtiössä, jos olet rajannut käytön. Ks. @sec-nimeäminen-excelissä).
 
 `LAMBDA`-toiminto kannattaa tehdä kolmessa askeleessa:
 
-1.  Testaa, että `laskutoimitus`-kaavasi toimii. Muista luoda sille tapoja reagoida virheisiin (käytä tietofunktioita!)
-2.  Testaa, että koko `LAMBDA`-funktio toimii. Kirjoita se kokonaisuudessaan soluun, ja lisää loppuun testiarvot omaan sulkuun: `=LAMBDA(x; y; x+y+1)(1;2)` määrittelee funktion ja ajaa sen testiarvoilla x = 1 ja y = 2.
-3.  Lisää funktio **Nimien hallinta**-tilaan. Muista määritellä oikea käyttöalue (työkirja tai yksittäiset taulukot) sekä antaa kuvaileva nimi ja kommentti. Katso lisää nimien hallinnasta luvusta LUKU NIMIEN HALLINNASTA).
+1.  Testaa, että `laskutoimitus`-kaavasi toimii.
+2.  Testaa, että koko `LAMBDA`-funktio toimii. Kirjoita se kokonaisuudessaan soluun, ja lisää loppuun testiarvot omaan sulkuun: `=LAMBDA(x; y; x+y+1)(1;2)` määrittelee funktion ja ajaa sen testiarvoilla `x = 1` ja `y = 2`.
+3.  Lisää funktio nimien hallintaan. Muista määritellä oikea käyttöalue (työkirja tai yksittäiset taulukot) sekä antaa kuvaileva nimi ja kommentti. Katso lisää nimien hallinnasta [luvusta -@sec-nimeäminen-excelissä]).
 
-### BYCOL, BYROW ja MAP {#sec-bycol-byrow-ja-map}
+### `BYCOL`, `BYROW` ja `MAP` {#sec-bycol-byrow-ja-map}
 
 `=BYCOL(matriisi; LAMBDA(sarake))`, `=BYROW(matriisi; LAMBDA(rivi))`, `=MAP(matriisi; LAMBDA(solu)`
 
@@ -170,110 +180,112 @@ Avainsanalla `matriisi` määrittelet data-alueen, jonka datalla haluat toimitta
 
 Avainsanalla `LAMBDA()` määrittelet `LAMBDA`-funktion, mikä tulee ajaa haluamasi data-alueella.
 
-Määrittele `LAMBDA`-funktio niin kuin tekisit oman funktion, mutta älä rekisteröi sen nimeä - funktiota käytetään vain tässä kontekstissa.
+[Määrittele `LAMBDA`-funktio niin kuin tekisit oman funktion]{.underline}, mutta älä rekisteröi sen nimeä - funktiota käytetään vain tässä kontekstissa.
 
-Funktiopari `BYCOL` ja `BYROW` palauttaa matriisiin kooltaan 1\*N, jossa N on kuinka monta kertaa funktio ajettiin. Funktio `MAP` taas palauttaa matriisin, jonka koko vastaa alkuperäistä data-aluetta (koska funktion `LAMBDA`-funktio lasketaan jokaiselle solulle).
+[Funktiopari `BYCOL` ja `BYROW` palauttaa matriisin]{.underline} kooltaan `1*N`, jossa `N` on kuinka monta kertaa funktio ajettiin. Funktio `MAP` taas palauttaa matriisin, jonka koko vastaa alkuperäistä data-aluetta (koska funktion `LAMBDA`-funktio lasketaan jokaiselle solulle).
 
-Jos määritelty data-alue sisältäisi neljä saraketta, `BYCOL` palauttaisi 1\*4-matriisin. Jos määritelty data-alue taas sisältäisi kolme riviä, `BYROW` palauttaisi 1\*3-matriisin. Jos määritelty data-alue sisältää neljä saraketta ja kolme riviä, `MAP` palauttaisi 4\*3-matriisin.
+Jos määritelty data-alue sisältäisi neljä saraketta, `BYCOL` palauttaisi `1*4`-matriisin. Jos määritelty data-alue taas sisältäisi kolme riviä, `BYROW` palauttaisi `1*3`-matriisin. Jos määritelty data-alue sisältää neljä saraketta ja kolme riviä, `MAP` palauttaisi `4*3`-matriisin.
 
-`MAP`-funktio osaa myös yhdistää monia solujonoja yhteen. Tällöin funktio palauttaa 1\*N-matriisin, jossa N on yhdistettävien solujonojen määrä. Esimerkiksi `=MAP(A1:A5; B1:B5; C1:C5; LAMBDA()` palauttaa 1\*3-matriisin, jossa jokainen solu on `LAMBDA`-funktion lopputulos kullekin solujonolle (ensin A1:A5, sitten B1:B5, ja viimeiseksi C1:C5).
+[`MAP`-funktio osaa myös yhdistää monia solujonoja yhteen]{.underline}. Tällöin funktio palauttaa `1*N`-matriisin, jossa `N` on yhdistettävien solujonojen määrä. Esimerkiksi `=MAP(A1:A5; B1:B5; C1:C5; LAMBDA()` palauttaa `1*3`-matriisin, jossa jokainen solu on `LAMBDA`-funktion lopputulos kullekin solujonolle (ensin `A1:A5`, sitten `B1:B5`, ja viimeiseksi `C1:C5`).
 
-Ole tarkkana kun syötät `MAP`-funktiolle dataa! Jos yhdistät solujonoja, funktiot ajetaan *per solujono*, mutta jos syötät kokonaisen matriisin, funktiot ajetaan *per solu*.
+[Ole tarkkana kun syötät `MAP`-funktiolle dataa!]{.underline} Jos yhdistät solujonoja, funktiot ajetaan *per solujono*, mutta jos syötät kokonaisen matriisin, funktiot ajetaan *per solu*.
 
-Esimerkki:
+[**Esimerkki:**]{.underline}
 
-`=BYCOL(A1:C2; LAMBDA(sarake; MAKS(sarake))` palauttaa 1\*3-matriisin (koska data-alueella on kolme saraketta, A, B ja C). Jokaisessa solussa on LAMBDA-funktion lopputulos sille sarakkeelle (ensimmäisessä solussa tulos A-sarakkeelle, toisessa B-sarakkeelle ja kolmannessa C-sarakkeelle). Laskettava funktio on `MAKS(sarake)`, mikä palauttaa sarakkeen suurimman arvon.
+`=BYCOL(A1:C2; LAMBDA(sarake; MAKS(sarake))` palauttaa `1*3`-matriisin (koska data-alueella on kolme saraketta, `A`, `B` ja `C`). Jokaisessa solussa on LAMBDA-funktion lopputulos sille sarakkeelle (ensimmäisessä solussa tulos `A`-sarakkeelle, toisessa `B`-sarakkeelle ja kolmannessa `C`-sarakkeelle). Laskettava funktio on `MAKS(sarake)`, mikä palauttaa sarakkeen suurimman arvon.
 
 ## Haku- ja viitefunktiot {#sec-haku--ja-viitefunktiot}
 
-### VALITSE-funktiot {#sec-valitse-funktiot}
+### `VALITSE`-funktiot {#sec-valitse-funktiot}
 
 `=VALITSESARAKKEET(matriisi; sarake1; ...)`, `=VALITSERIVIT(matriisi; rivi1; ...)`
 
-Funktio palauttaa valitut sarakkeet tai rivit `matriisi`-alueelta. Funktiolle annetaan sarake- tai rivinumero (ei siis kirjainta sarakkeiden kohdalla!), sekä alue, josta haetaan. Funktioille voi antaa useamman sarake- tai rivinumeron.
+[Funktio palauttaa valitut sarakkeet tai rivit `matriisi`-alueelta.]{.underline} Funktiolle annetaan sarake- tai rivinumero[^funktiot-1], sekä alue, josta tiedot haetaan. Funktioille voi antaa useamman sarake- tai rivinumeron.
 
-Negatiivisilla rivi- tai sarakenumeroilla voi hakea tietoja matriisin lopusta. Arvo `-1` on sama kuin viimeinen sarake/rivi, `-2` toiseksi viimeinen, ja niin eteenpäin. Näin funktio voi toimia, vaikka et tietäisi, kuinka monta riviä/saraketta alkuperäisessä matriisissa olisi.
+[^funktiot-1]: Ei siis kirjainta sarakkeiden kohdalla! Sarake `A`:n numero on `1`, sarake `D`:n numero on `4`, jne.
+
+Negatiivisilla rivi- tai sarakenumeroilla voi hakea tietoja matriisin lopusta. Arvo `-1` on sama kuin viimeinen sarake/rivi, `-2` toiseksi viimeinen, ja niin eteenpäin. Näin voit käyttää funktiota vaikka et tietäisi kuinka monta riviä/saraketta alkuperäisessä matriisissa olisi.
 
 Rivi- tai sarakenumerot eivät tarvitse olla alkuperäisessä järjestyksessään, vaan ne palautetaan siinä järjestyksessä, miten ne määritellään funktiossa. Esimerkiksi sarakenumerot `1, 2, 5, 4` palauttaa vastaavat sarakkeet (`A, B, E, D`) tässä järjestyksessä.
 
-Esimerkki:
+[Esimerkki]{.underline}:
 
-`=VALITSESARAKKEET(A1:C5; 2)` palauttaa sarakkeen B (sarakenumero 2) kaikki arvot. Koska alueella on viisi riviä, funktio palauttaa seuraavat solut: `B1, B2, B3, B4, B5`.
+`=VALITSESARAKKEET(A1:C5; 2)` palauttaa sarakkeen `B` (sarakenumero `2`) kaikki arvot. Koska alueella on viisi riviä, funktio palauttaa seuraavat solut: `B1, B2, B3, B4, B5`.
 
-`=VALITSERIVIT(A1:C5, 2, 4)` palauttaa rivien 2 ja 4 kaikki arvot. Koska alueella on kolme saraketta ja valittiin kaksi riviä palautukseen, funktio palauttaa matriisin jossa ensimmäisellä rivillä on solut `A2, B2, C2` ja toisella rivillä solut `A4, B4, C4`.
+`=VALITSERIVIT(A1:C5, 2, 4)` palauttaa rivien `2` ja `4` kaikki arvot. Koska alueella on kolme saraketta ja valittiin kaksi riviä palautukseen, funktio palauttaa matriisin jossa ensimmäisellä rivillä on solut `A2, B2, C2` ja toisella rivillä solut `A4, B4, C4`.
 
-### SARAKE ja RIVI {#sec-sarake-ja-rivi}
+### `SARAKE` ja `RIVI` {#sec-sarake-ja-rivi}
 
 `=SARAKE(solu)`, `=RIVI(solu)`
 
-Funktiot palauttavat solun sarake- tai rivinumeron. Numerointi on juoksevassa järjestyksessä: riveillä numero on sama kuin rivin viittausnumero yleisesti (1 on 1, 2 on 2, jne.), ja sarakkeille numerointi alkaa yhdestä (A on 1, B on 2, jne.).
+[Funktiot palauttavat solun sarake- tai rivinumeron]{.underline}. Numerointi on juoksevassa järjestyksessä: riveillä numero on sama kuin rivin viittausnumero yleisesti (rivi `1` on `1`, `2` on `2`, jne.), ja sarakkeille numerointi alkaa yhdestä (sarake `A` on `1`, `B` on `2`, jne.).
 
-### HYLKÄÄ {#sec-hylkää}
+### `HYLKÄÄ` {#sec-hylkää}
 
 `=HYLKÄÄ(matriisi; rivit; sarakkeet)`
 
-Funktio poistaa määritetyn määrän rivejä ja/tai sarakkeita alkuperäisestä matriisista, ja palauttaa tämän uuden matriisin. Poisto koskee vain palautettua matriisia - funktio ei siis poista tietoja alkuperäisestä matriisista. `rivit` on pakollinen, `sarakkeet` on valinnainen.
+[Funktio poistaa määritetyn määrän rivejä ja/tai sarakkeita alkuperäisestä matriisista, ja palauttaa tuloksen uutena matriisina]{.underline}. [Poisto koskee vain palautettua matriisia]{.underline} - funktio ei siis poista tietoja alkuperäisestä matriisista. Avainsana `rivit` on pakollinen, `sarakkeet` on valinnainen.
 
 Negatiivisilla arvoilla voit poista rivejä/sarakkeita matriisin lopusta alkupään sijaan: `rivit = -1` poistaa viimeisen rivin, `sarakkeet = -3` poistaa kolme viimeistä saraketta, ja niin eteenpäin.
 
-### SUODATA {#sec-suodata}
+### `SUODATA` {#sec-suodata}
 
 `=SUODATA(matriisi; sisällytä; jostyhjä)`
 
-Funktio palauttaa suodatetun version alkuperäisestä matriisista. Avainsanalla `sisällytä` määrittelet hakualueen, jonka pohjalta suodatetaan, sekä loogisen säännön millä sisällytetään rivejä. Avainsanalla `jostyhjä` määrittelet mitä palautetaan, jos palautettava matriisi on tyhjä (eli suodatin ei löytänyt yhtään sääntöä vastaavaa tulosta).
+[Funktio palauttaa suodatetun version alkuperäisestä matriisista]{.underline}. Avainsanalla `sisällytä` määrittelet hakualueen, jonka pohjalta suodatetaan, sekä loogisen säännön jonka pohjalta rivejä sisällytetään uuteen matriisiin. Avainsanalla `jostyhjä` määrittelet mitä palautetaan, jos palautettava matriisi olisi tyhjä (eli suodatin ei löytäisi yhtään sääntöä vastaavaa tulosta).
 
-Esimerkki:
+[Esimerkki]{.underline}:
 
-`=SUODATA(A1:C5; B1:B5 = 2)` hakee matriisin `A1:C5` (kolme saraketta, viisi riviä), ja palauttaa kaikki rivit, joiden B-sarakkeen arvo on 2. Jos näitä ei ole, funktio palauttaa virhearvon `#TYHJÄ!`.
+`=SUODATA(A1:C5; B1:B5 = 2)` hakee matriisin `A1:C5` (kolme saraketta, viisi riviä), ja palauttaa kaikki rivit, joiden `B`-sarakkeen arvo on `2`. Jos näitä ei ole, funktio palauttaa virhearvon `#TYHJÄ!`.
 
-`=SUODATA(A1:C5; var1 = E1; "Ei löydy!")` hakee matriisin `A1:C5` (kolme saraketta, viisi riviä), ja palauttaa kaikki rivit, joiden nimetystä sarakkeesta "var1" löytyy arvo, joka itsessään on määritelty solussa `E1`. Jos solussa `E1` lukee esimerkiksi 2, funktio palauttaa säännön `var1 = 2` mukaan; jos siinä lukee "b", funktio palauttaa säännön `var1 = "b"` mukaan, ja niin eteenpäin. Jos palautettavia arvoja ei ole ollenkaan, funktio palauttaa tekstijonon "Ei löydy!". **HUOM**: Jos nimeä "var1" ei olla määritelty, funktio palauttaa virheen (luultavasti `#NIMI!`, koska nimi on väärin).
+`=SUODATA(A1:C5; var1 = E1; "Ei löydy!")` hakee matriisin `A1:C5` (kolme saraketta, viisi riviä), ja palauttaa kaikki rivit, joiden nimetystä sarakkeesta `var1` löytyy arvo, joka itsessään on määritelty solussa `E1`. Jos solussa `E1` lukee esimerkiksi `2`, funktio palauttaa säännön `var1 = 2` mukaan; jos siinä lukee `"b"`, funktio palauttaa säännön `var1 = "b"` mukaan, ja niin eteenpäin. Jos palautettavia arvoja ei ole ollenkaan, funktio palauttaa tekstijonon `"Ei löydy!"`. [**HUOM**]{.underline}: Jos nimeä `var1` ei olla määritelty, funktio palauttaa virheen.
 
-### XHAKU {#sec-xhaku}
+### `XHAKU` {#sec-xhaku}
 
 `=XHAKU(hakuarvo; hakumatriisi; palautusmatriisi; joseilöydy; vastaavuustila; hakutila)`
 
-Funktiolla suoritat hakuja alkuperäisestä matriisista ja palautat yhden tai useamman solun. Funktio on hyvin joustava siinä, mitä se palauttaa ja missä muodossa. Avainsanat ovat:
+[Funktiolla suoritat hakuja alkuperäisestä matriisista ja palautat yhden tai useamman solun]{.underline}. Funktio on hyvin joustava siinä, mitä se palauttaa ja missä muodossa. Avainsanat ovat:
 
 -   `hakuarvo` (pakollinen): Mitä haetaan? Voi olla mikä tahansa Excelissä pätevä datamuoto (esim. luku, päivämäärä, merkkijono, jne.)
--   `hakumatriisi` (pakollinen): Mistä haetaan? Määrittele joko rivi tai sarake kokonaisuudessaan. Esim. `A1:A5` hakee sarakkeesta `A`, `var1` hakee nimetyltä alueelta "var1", `A1:C1` hakee riviltä `1`. Tämä on siis avainsana, jolla määrittelet, mitä loogista sääntöä yrität täyttää ("hae kaikki rivit, joiden sukupuoli on 2; hae kaikki rivit, joiden bruttotulo on 60 000 euroa"...)
--   `palautusmatriisi` (pakollinen): Miltä alueelta palautetaan? Määrittele joko rivi tai sarake kokonaisuudessaan. Tämä avainsana määrittelee siis, mikä arvo palautetaan, kun olet löytänyt hakuarvon määritetystä hakumatriisista ("kun olet löytänyt kaikki rivit, joiden sukupuoli on 2, palauta niiden bruttovuositulot").
+-   `hakumatriisi` (pakollinen): Mistä haetaan? Määrittele joko rivi tai sarake kokonaisuudessaan. Esim. `A1:A5` hakee sarakkeesta `A`, `var1` hakee nimetyltä alueelta "var1", `A1:C1` hakee riviltä `1`. Tämä on siis avainsana, jolla määrittelet, mitä loogista sääntöä yrität täyttää ("hae kaikki rivit, joiden `sukupuoli` on `2`; hae kaikki rivit, joiden `bruttovuositulot` ovat `60 000` euroa"...)
+-   `palautusmatriisi` (pakollinen): Miltä alueelta palautetaan? Määrittele joko rivi tai sarake kokonaisuudessaan. Tämä avainsana määrittelee siis, mikä arvo palautetaan, kun olet löytänyt hakuarvon määritetystä hakumatriisista ("kun olet löytänyt kaikki rivit, joiden `sukupuoli` on `2`, palauta niiden `bruttovuositulot`").
 -   `joseilöydy` (valinnainen): Mitä palautetaan, jos mitään ei löydy? Jos ei määritellä tätä avainsanaa, funktio palauttaa virhearvon `#PUUTTUU!` jos palautettavaa ei löydy.
--   `vastaavuustila` (valinnainen): Miten tarkasti haetaan? Oletusasetuksena funktio hakee tarkan vastaavuuden, ja palauttaa `#PUUTTUU!` jos sitä ei löydy. Voit myös määritellä yhden seuraavista: `-1` palauttaa tarkan vastaavuuden tai seuraavaksi pienimmän kohteen, `1` palauttaa tarkan vastaavuuden tai seuraavaksi suuremman kohteen, `2` hakee laajalla vastaavuudella, jossa voit käyttää villikorttimerkkejä `*, ?, ~`.
--   `hakutila` (valinnainen): Miten ja missä järjestyksessä haku suoritetaan? Oletuksena haku suoritetaan ensimmäisestä kohteesta alkaen (`1`), voit myös määritellä sen suoritettavan viimeisestä kohteesta (`-1`), binaarihaku nousevassa järjestyksessä (`2`) tai binaarihaku laskevassa järjestyksessä (`-2`). Binaarihaut ovat nopeampia, mutta vaativat, että matriisi on valmiiksi järjestetty kyseiseen järjestykseen - muutoin ne palauttavat virheellisiä tuloksia.
+-   `vastaavuustila` (valinnainen): Miten tarkasti haetaan? Oletusasetuksena funktio hakee tarkan vastaavuuden, ja palauttaa `#PUUTTUU!` jos sitä ei löydy. Voit myös määritellä yhden seuraavista: `-1` palauttaa tarkan vastaavuuden tai seuraavaksi pienimmän kohteen, `1` palauttaa tarkan vastaavuuden tai seuraavaksi suuremman kohteen, `2` hakee laajalla vastaavuudella, jolloin voit käyttää villikorttimerkkejä `*, ?, ~`.[^funktiot-2]
+-   `hakutila` (valinnainen): Miten ja missä järjestyksessä haku suoritetaan? Oletuksena haku suoritetaan ensimmäisestä kohteesta alkaen (`1`), voit myös määritellä sen suoritettavan viimeisestä kohteesta (`-1`), binäärihaku nousevassa järjestyksessä (`2`) tai binäärihaku laskevassa järjestyksessä (`-2`). Binäärihaut ovat nopeampia, mutta vaativat, että matriisi on valmiiksi järjestetty kyseiseen järjestykseen - muutoin ne palauttavat virheellisiä tuloksia.
 
-\[TÄHÄN PAREMPI SELITYS XHAUN TOIMINNASTA.\]
+[^funktiot-2]: `*` edustaa mitä tahansa merkkimäärää (nollasta ylöspäin) missä tahansa kohtaa sanaa. `?` edustaa yksittäistä merkkiä missä tahansa kohtaa sanaa. `~` on poistumismerkki (engl. *escape character*), joka kertoo Excelille, että seuraava tähti, kysymysmerkki tai tilde ei ole villikorttimerkki vaan osa tekstiä. Lue lisää: [Yleismerkkien käyttäminen hauissa - Microsoft-tuki](https://support.microsoft.com/fi-fi/office/yleismerkkien-k%C3%A4ytt%C3%A4minen-hauissa-ef94362e-9999-4350-ad74-4d2371110adb).
 
 ### Lajittelufunktiot {#sec-lajittelufunktiot}
 
 `=LAJITTELE(matriisi; lajitteluindeksi; lajittelujärjestys; sarmukaan)`, `=LAJITTELE.ARVOJEN.PERUSTEELLA(matriisi; mukaan1; järjestys1; mukaan2; järjestys2; ...)`
 
-Funktiot hakevat alkuperäisen matriisin, lajittelevat sen tietyn säännön mukaan, ja palauttavat lajiteltun matriisin.
+[Funktiot hakevat alkuperäisen matriisin, lajittelevat sen tietyn säännön mukaan, ja palauttavat lajiteltun matriisin.]{.underline}
 
 `LAJITTELE`-funktiossa määrittelet ensin mikä `matriisi`-alue lajitellaan. Jos valitset useamman rivin/sarakkeen, voit myös määritellä, minkä rivin/sarakkeen mukaan lajitellaan avainsanalla `lajitteluindeksi`. Avainsana `lajittelujärjestys` määrittelee, onko lajittelu nousevassa (`1`, oletus) vai laskevassa (`-1`) järjestyksessä. Avainsanalla `sarmukaan` voit määritellä, lajitellaanko rivin (`EPÄTOSI`, oletus) vai sarakkeen (`TOSI`) mukaan.
 
 `LAJITTELE.ARVOJEN.PERUSTEELLA`-funktio tekee melkein saman, mutta sillä voit määritellä useamman lajittelualueen ja -järjestyksen. Funktio lajittelee ensin alueen `mukaan1` mukaan, järjestyksessä `järjestys1` (samat arvot ja oletukset kuin `lajittelujärjestys` yllä), sitten alueen `mukaan2` ja järjestyksen `järjestys2` mukaan, ja niin eteenpäin.
 
-Yhdistelemällä `LAJITTELE`- ja `SUODATA`-funktioita voit rakentaa joustavia ja (suht) nopeasti käytettävissä olevia ehdollisia hakuja tiedossasi. Haluatko kaikki vastaajat, joiden bruttotulot ovat vähintään 50 000 euroa, järjestettynä koulutustason mukaan? Onnistuu: `=LAJITTELE.ARVOJEN.PERUSTEELLA(SUODATA(datamatriisi; bruttotulot >= 50000); koulutustaso)`.
+Yhdistelemällä `LAJITTELE`- ja `SUODATA`-funktioita voit rakentaa joustavia ja (suht) nopeasti käytettävissä olevia ehdollisia hakuja tiedossasi. Haluatko esimerkiksi kaikki vastaajat, joiden bruttotulot ovat vähintään 50 000 euroa, järjestettynä koulutustason mukaan? Onnistuu: `=LAJITTELE.ARVOJEN.PERUSTEELLA(SUODATA(datamatriisi; bruttotulot >= 50000); koulutustaso)`.
 
-### OTA {#sec-ota}
+### `OTA` {#sec-ota}
 
 `=OTA(matriisi; rivit; sarakkeet)`
 
-Funktio palauttaa matriisista määritetyn määrän rivejä (pakollinen) ja sarakkeita (valinnainen). Rivit ja sarakkeet määritetään määrässä (esim. 2 tai 5 riviä). Negatiiviset numerot hakevat matriisin lopusta.
+[Funktio palauttaa matriisista määritetyn määrän rivejä]{.underline} (pakollinen) ja sarakkeita (valinnainen). Rivit ja sarakkeet määritetään määrässä (esim. `2` tai `5` riviä). Negatiiviset numerot hakevat matriisin lopusta.
 
-### TRANSPONOI {#sec-transponoi}
+### `TRANSPONOI` {#sec-transponoi}
 
 `=TRANSPONOI(matriisi)`
 
-Funktio kääntää alkuperäisen matriisin siten, että riveistä tulee sarakkeita ja sarakkeista rivejä.
+[Funktio kääntää alkuperäisen matriisin]{.underline} siten, että riveistä tulee sarakkeita ja sarakkeista rivejä.
 
-Alueen, johon funktio palauttaa käännetyn matriisin, voi määritellä joko dynaamisesti (lisäämällä funktio vasempaan yläkulmaan ja painamalla Enter) tai eksplisiittisesti (maalaamalla ensin koko alue, ja kirjoittamalla funktio suoraan alueeseen. Lopussa painetaan `Ctrl + Shift + Enter`, jotta funktio täyttää koko alueen eksplisiittisesti eikä dynaamisesti).
+Alueen, johon funktio palauttaa käännetyn matriisin, voi määritellä joko dynaamisesti (lisäämällä funktio vasempaan yläkulmaan ja painamalla `Enter`) tai eksplisiittisesti (maalaamalla ensin koko alue, ja kirjoittamalla funktio suoraan alueeseen. Lopussa painetaan `Ctrl + Shift + Enter`, jotta funktio täyttää koko alueen eksplisiittisesti eikä dynaamisesti). Lue lisää dynaamisista matriiseista [alaluvusta -@sec-dynaamiset-matriisit].
 
-### AINUTKERTAISET.ARVOT {#sec-ainutkertaiset.arvot}
+### `AINUTKERTAISET.ARVOT` {#sec-ainutkertaiset.arvot}
 
 `=AINUTKERTAISET.ARVOT(matriisi; sarmukaan; vainkerran)`
 
-Funktio palauttaa matriisin kaikki uniikit (ainutkertaiset) arvot. Valinnaisella loogisella avainsanalla `sarmukaan` funktio palauttaa uniikit sarakkeet (`TOSI`) rivien sijaan (`EPÄTOSI` tai jätetty pois). Valinnaisella loogisella avainsanalla `vainkerran` voit määritellä, että funktio palauttaa vain ne uniikit arvot, jotka esiintyvät vain yhden kerran matriisissa (useamman kerran sijaan).
+[Funktio palauttaa matriisin kaikki uniikit (ainutkertaiset) arvot]{.underline}. Valinnaisella loogisella avainsanalla `sarmukaan` funktio palauttaa uniikit sarakkeet (`TOSI`) rivien sijaan (`EPÄTOSI` tai jätetty pois). Valinnaisella loogisella avainsanalla `vainkerran` voit määritellä, että funktio palauttaa vain ne uniikit arvot, jotka esiintyvät vain yhden kerran matriisissa (useamman kerran sijaan).
 
 ## Matemaattiset ja trigonometriset funktiot {#sec-matemaattiset-ja-trigonometriset-funktiot}
 
@@ -281,21 +293,21 @@ Koska matemaattisia ja trigonometrisia funktioita löytyy hyvin suuri määrä E
 
 ### Trigonometriset funktiot {#sec-trigonometriset-funktiot}
 
-Trigonometrisia funktioita on suuri määrä Excelissä. Jokaiselle funktiolle annetaan alkuperäinen arvo avainsanana (`=FUNKTIO(arvo)`). Excelissä löytyy yleisimmät identiteettifunktiot sekä niiden hyperboliset versiot (aina jälkiliitteellä `H` funktion nimessä). Katso Excelin opassivut (linkitetty tämän sivun alussa) kaikista funktioista.
+Trigonometrisia funktioita on suuri määrä Excelissä. Jokaiselle funktiolle annetaan alkuperäinen arvo avainsanana (`=FUNKTIO(arvo)`). Excelissä löytyy yleisimmät identiteettifunktiot sekä niiden hyperboliset versiot (aina jälkiliitteellä `H` funktion nimessä). Katso Excelin opassivut kaikista funktioista (linkki tämän luvun alussa).
 
-### ITSEISARVO {#sec-itseisarvo}
+### `ITSEISARVO` {#sec-itseisarvo}
 
 `=ITSEISARVO(arvo)`
 
-Palauttaa arvon itseisarvon, eli absoluuttisen arvon.
+[Palauttaa arvon itseisarvon]{.underline}, eli absoluuttisen arvon.
 
-### KOOSTE ja VÄLISUMMA {#sec-kooste-ja-välisumma}
+### `KOOSTE` ja `VÄLISUMMA` {#sec-kooste-ja-välisumma}
 
 `=KOOSTE(funktio; asetukset; matriisi; k)`
 
 `=VÄLISUMMA(funktio; viittaus)`
 
-`KOOSTE`-funktio palauttaa yleisiä koostefunktioita määrätylle matriisiviittaukselle. Funktio toimii siten niin sanottuna wrapper-funktiona, eli sille syötetään, mikä funktio halutaan ajaa matriisilla.
+`KOOSTE`-funktio palauttaa [yleisiä koostefunktioita]{.underline} määrätylle matriisiviittaukselle. Funktio toimii siten niin sanottuna *wrapper*-funktiona, eli sille syötetään, mikä koostefunktio halutaan ajaa matriisille.
 
 `VÄLISUMMA`-funktio tekee saman, mutta on yksinkertaisempi. Funktio ei ota asetuksia.
 
@@ -336,7 +348,7 @@ Pakollisella avainsanalla `asetukset` määrittelet, mitkä eri arvot ohitetaan 
 6.  Ohittaa virhearvot.
 7.  Ohittaa piiloitetut rivit ja virhearvot.
 
-**HUOM**: Funktio ei ohita asioita, jos funktion sisällä tehdään laskutoimitus! Tällöin ohitus pitää tehdä laskutoimituksen sisällä, esim. käyttäen `JOS`- ja `ONVIRH`-rakenteita.
+[**HUOM**: Funktio ei ohita asioita, jos funktion sisällä tehdään laskutoimitus!]{.underline} Tällöin ohitus pitää tehdä laskutoimituksen sisällä, esim. käyttäen `JOS`- ja `ONVIRH`-rakenteita.
 
 `VÄLISUMMA`-funktio ei ota asetuksia, mutta muokkaamalla funktionumeroa voit ohittaa piiloitetut rivit. Funktiot 1-9 määritellään ohittamaan piiloitetut rivit lisäämällä `10` niiden etuliitteeksi: 101, 102, 103, jne. Funktiot 10 ja 11 ottavat numeron `1` etuliitteeksi: 110 on `VAR` ja 111 on `VAR.P`.
 
@@ -344,23 +356,23 @@ Pakollisella avainsanalla `matriisi` määrittelet alueen, jolle haluat laskea k
 
 Viimeinen avainsana, `k`, on pakollinen tietyillä laskufunktioilla. Funktioilla `SUURI` ja `PIENI` määrittelet, minkä k:n suurimman/pienimmän arvon haluat. `PROSENTTIPISTE`-funktioilla `k` määrittelee, minkä k:nnen prosenttipisteen arvon haluat. `NELJÄNNES`-funktoilla `k` määrittelee, minkä neljänneksen haluat.
 
-### PARILLINEN ja PARITON {#sec-parillinen-ja-pariton}
+### `PARILLINEN` ja `PARITON` {#sec-parillinen-ja-pariton}
 
 `=PARILLINEN(arvo)`, `=PARITON(arvo)`
 
-Funktiot pyöristävät luvun ylöspäin lähimpään parilliseen tai parittomaan kokonaislukuun.
+[Funktiot pyöristävät luvun ylöspäin]{.underline} lähimpään parilliseen tai parittomaan kokonaislukuun.
 
-### EKSPONENTTI {#sec-eksponentti}
+### `EKSPONENTTI` {#sec-eksponentti}
 
 `=EKSPONENTTI(arvo)`
 
 Palauttaa arvon $e^\text{arvo}$.
 
-### KERTOMA {#sec-kertoma}
+### `KERTOMA` {#sec-kertoma}
 
 `=KERTOMA(arvo)`
 
-Palauttaa arvon kertoman, eli faktoriaalin. Luvun faktoriaali on yhtä kuin sarja
+Palauttaa arvon kertoman, eli [faktoriaalin]{.underline}. Luvun faktoriaali on yhtä kuin sarja
 
 $$\prod_{i=1}^{n}{i}$$
 
@@ -382,49 +394,49 @@ Jos luku on 5, niin `KERTOMA(5)` palauttaa $5*4*3*2*1=120$.
 
 `=PYÖRISTÄ.DES.YLÖS(arvo; desimaalit)`
 
-Kaikki pyöristysfunktiot toimivat kutakuinkin samalla tavalla ja näyttävät samoilta, mutta pienillä vivahde-eroilla.
+Kaikki pyöristysfunktiot toimivat samalla tavalla ja näyttävät samoilta, mutta pienillä eroilla.
 
-Tavallinen pyöristys hoituu funktiolla `PYÖRISTÄ`, joka ottaa arvon joka pyöristetään, sekä desimaalitarkkuuden numeroissa. Esim. `=PYÖRISTÄ(2,673; 1)` pyöristää arvon yhden desimaalin tarkkuudelle, eli 2.7. Suunta määräytyy niin kuin matematiikassa yleensä, eli \>= 0.5 pyöristetään ylös ja \< 0.5 alas.
+[Tavallinen pyöristys]{.underline} hoituu funktiolla `PYÖRISTÄ`, joka ottaa arvon joka pyöristetään, sekä desimaalitarkkuuden numeroissa. Esim. `=PYÖRISTÄ(2,673; 1)` pyöristää arvon yhden desimaalin tarkkuudelle, eli 2.7. Suunta määräytyy niin kuin matematiikassa yleensä, eli \>= 0.5 pyöristetään ylös ja \< 0.5 alas.
 
-Jos haluat pyöristää tiettyyn suuntaan, voit käyttää `PYÖRISTÄ.DES.ALAS` tai `PYÖRISTÄ.DES.YLÖS`.
+[Jos haluat pyöristää tiettyyn suuntaan]{.underline}, voit käyttää `PYÖRISTÄ.DES.ALAS` tai `PYÖRISTÄ.DES.YLÖS`.
 
-Funktioperhe `PYÖRISTÄ.KERR` pyöristää tiettyä kerrannaisnumeroa kohtaan. Funktio hakee siis lähimmän numeron, jonka voi tasajakaa `tarkkuus`-arvolla. Pääteliitteet `.ALAS` ja `.YLÖS` määrittelevät pyöristyksen suunnan. Yleisfunktiossa `PYÖRISTÄ.KERR` suunta määräytyy jakojäännöksen perusteella: jos jaosta jää \>= puolet kerrannaisen arvosta, se pyöristää ylöspäin, ja muuten alaspäin. Esimerkkinä `=PYÖRISTÄ.KERR(10;3)` laskee, että kymmenen jaon kolmella jättää yhden jäljelle, mikä on vähemmän kuin puolet kolmesta (\<= 1.5), joten se pyöristää alaspäin. Lähin tasajakonumero alaspäin on 9, joten tulos on 9.
+Funktioperhe `PYÖRISTÄ.KERR` [pyöristää tiettyä kerrannaisnumeroa kohtaan]{.underline}. Funktio hakee siis lähimmän numeron, jonka voi tasajakaa `tarkkuus`-arvolla. Pääteliitteet `.ALAS` ja `.YLÖS` määrittelevät pyöristyksen suunnan. Yleisfunktiossa `PYÖRISTÄ.KERR` suunta määräytyy jakojäännöksen perusteella: jos jaosta jää `>=` puolet kerrannaisen arvosta, se pyöristää ylöspäin, ja muuten alaspäin. Esimerkkinä `=PYÖRISTÄ.KERR(10;3)` laskee, että kymmenen jako kolmella jättää yhden jäljelle, mikä on vähemmän kuin puolet kolmesta (`<= 1.5`), joten se pyöristää alaspäin. Lähin tasajakonumero alaspäin on `9`, joten tulos on `9`.
 
-### SUURIN.YHT.TEKIJÄ ja PIENIN.YHT.JAETTAVA {#sec-suurin.yht.tekijä-ja-pienin.yht.jaettava}
+### `SUURIN.YHT.TEKIJÄ` ja `PIENIN.YHT.JAETTAVA` {#sec-suurin.yht.tekijä-ja-pienin.yht.jaettava}
 
 `=SUURIN.YHT.TEKIJÄ(luku1; luku2; ...)`, `=PIENIN.YHT.JAETTAVA(luku1; luku2; ...)`
 
-Funktiot hakevat suurimman tai pienimmän yhteisen tekijän kahdelle tai useammalle arvolle. Nolla on tässä jaettava kaikilla luonnollisilla luvuilla, ja negatiiviset luvut eivät toimi.
+[Funktiot hakevat suurimman tai pienimmän yhteisen tekijän]{.underline} kahdelle tai useammalle arvolle. Nolla on tässä jaettava kaikilla luonnollisilla luvuilla, ja negatiiviset luvut eivät toimi.
 
 ### Logaritmit {#sec-logaritmit}
 
 `=LOG(arvo; kanta)`, `=LOG10(arvo)`, `=LUONNLOG(arvo)`
 
-Funktioperhe `LOG` palauttaa arvon logaritmin. Erikoisfunktiot `LOG10` ja `LUONNLOG` palauttavat arvon kymmenkantaisen logaritmin $10^{x}$ ja luonnollisen logaritmin $e^{x}$. Muut logaritmikannat määritellään `LOG`-funktion `kanta`-avainsanalla.
+[Funktioperhe `LOG` palauttaa arvon logaritmin]{.underline}. Erikoisfunktiot `LOG10` ja `LUONNLOG` palauttavat arvon kymmenkantaisen logaritmin $10^{x}$ ja luonnollisen logaritmin $e^{x}$. Muut logaritmikannat määritellään `LOG`-funktion `kanta`-avainsanalla.
 
-### JAKOJ {#sec-jakoj}
+### `JAKOJ` {#sec-jakoj}
 
 `=JAKOJ(luku; jakaja)`
 
-Funktio palauttaa jäännöksen jakolaskulle `luku/jakaja`. Jakojäännöksellä on aina sama etumerkki (positiivinen tai negatiivinen) kuin jakajalla.
+[Funktio palauttaa jäännöksen jakolaskulle]{.underline} `luku/jakaja`. Jakojäännöksellä on aina sama etumerkki (positiivinen tai negatiivinen) kuin jakajalla.
 
-### PII {#sec-pii}
+### `PII` {#sec-pii}
 
 `=PII()`
 
-Palauttaa piin arvon 15:lla desimaalilla.
+[Palauttaa piin arvon]{.underline} 15:lla desimaalilla.
 
 ### Satunnaisluvut {#sec-satunnaisluvut}
 
 `=SATUNNAISLUKU()`, `=SATUNNAISLUKU.VÄLILTÄ(alku; loppu)`
 
-Funktiot generoivat satunnaislukuja. Perusfunktio `SATUNNAISLUKU` tuottaa yhden luvun väliltä 0-1, ja funktio `SATUNNAISLUKU.VÄLILTÄ` tuottaa luvun väliltä `alku-loppu`. Luvut generoidaan Mersenne Twister -algoritmilla, ja tuotetaan uudelleen joka kerta, kun kaavat lasketaan uudelleen.
+[Funktiot generoivat satunnaislukuja]{.underline}. Perusfunktio `SATUNNAISLUKU` tuottaa yhden luvun väliltä 0-1, ja funktio `SATUNNAISLUKU.VÄLILTÄ` tuottaa luvun väliltä `alku-loppu`. Luvut generoidaan Mersenne Twister -algoritmilla, ja tuotetaan uudelleen joka kerta, kun kaavat lasketaan uudelleen.
 
 ### Neliöjuuret {#sec-neliöjuuret}
 
 `=NELIÖJUURI(arvo)`, `=NELIÖJUURI.PII(arvo)`
 
-Funktiot laskevat arvon neliöjuuren. Perusfunktio laskee tavallisen neliöjuuren (positiivisen), `NELIÖJUURI.PII` kertoo ensin arvon piillä ja laskee sitten neliöjuuren.
+[Funktiot laskevat arvon neliöjuuren]{.underline}. Perusfunktio laskee tavallisen neliöjuuren (positiivisen), `NELIÖJUURI.PII` kertoo ensin arvon piillä ja laskee sitten neliöjuuren.
 
 ### Summat {#sec-summat}
 
@@ -434,9 +446,9 @@ Funktiot laskevat arvon neliöjuuren. Perusfunktio laskee tavallisen neliöjuure
 
 `=SUMMA.JOS.JOUKKO(alue; ehtoalue1; ehto1; ehtoalue2; ehto2; ...)`
 
-Summafunktiolla lasket yhteen määrätyn alueen kaikki arvot. Voit asettaa ehdon summaukselle käyttämällä `SUMMA.JOS`-funktiota, jolloin arvot summataan yhteen vain silloin, kun ne täyttävät loogisen ehdon `ehto`-avainsanassa.
+[Summafunktiolla lasket yhteen määrätyn alueen kaikki arvot]{.underline}. Voit asettaa ehdon summaukselle käyttämällä `SUMMA.JOS`-funktiota, jolloin arvot summataan yhteen vain silloin, kun ne täyttävät loogisen ehdon `ehto`-avainsanassa.
 
-Jos haluat määritellä useita ehtoja, tai jos ehdot riippuvat jonkun toisen alueen arvoista, voit käyttää `SUMMA.JOS.JOUKKO`-komentoa. Jokainen ehto määritellään alue-ehto-parina, jossa `ehtoalue` määrittelee, millä alueella ehto tarkistetaan, ja `ehto` määrittelee itse ehdon. Alue-ehto-pareja voi olla 127 kappaletta.
+[Jos haluat määritellä useita ehtoja]{.underline}, tai jos ehdot riippuvat jonkun toisen alueen arvoista, voit käyttää `SUMMA.JOS.JOUKKO`-komentoa. Jokainen ehto määritellään alue-ehto-parina, jossa `ehtoalue` määrittelee, millä alueella ehto tarkistetaan, ja `ehto` määrittelee itse ehdon. Alue-ehto-pareja voi olla 127 kappaletta.
 
 ### Neliösummat {#sec-neliösummat}
 
@@ -448,7 +460,9 @@ Jos haluat määritellä useita ehtoja, tai jos ehdot riippuvat jonkun toisen al
 
 `=EROTUSTEN.NELIÖSUMMA(alue1; alue2)`
 
-Tämä funktioperhe laskee neliösummia, jolloin ensin otetaan jokaisen arvon neliö ($x^2$) ja sitten summataan ne yhteen. Perusfunktio `NELIÖSUMMA` tekee tämän arvosarjalle, esim. kokonaiselle sarakkeelle tai riville. Kaava tälle on: $\sum{x^2}$
+[Tämä funktioperhe laskee neliösummia]{.underline}, jolloin ensin otetaan jokaisen arvon neliö ($x^2$) ja sitten summataan ne yhteen.
+
+Perusfunktio `NELIÖSUMMA` tekee tämän arvosarjalle, esim. kokonaiselle sarakkeelle tai riville. Kaava tälle on: $\sum{x^2}$
 
 Kolme seuraavaa toimivat kahdella alueella, ja tekevät eri asioita riippuen funktiosta:
 
@@ -456,17 +470,17 @@ Kolme seuraavaa toimivat kahdella alueella, ja tekevät eri asioita riippuen fun
 -   `NELIÖSUMMIEN.SUMMA` laskee kahden alueen jokaisen arvon neliön ja summaa ne yhteen. Kaava on: $\sum{x^2 + y^2}$
 -   `EROTUSTEN.NELIÖSUMMA` laskee ensin kahden alueen jokaisen arvon eron (`alue2` - `alue1`), ottaa tuloksen neliön ja summaa kaikki nämä yhteen. Kaava on: $\sum{(x-y)^2}$
 
-### KATKAISE {#sec-katkaise}
+### `KATKAISE` {#sec-katkaise}
 
 `=KATKAISE(luku; numerot)`
 
-Funktio pudottaa desimaalit annetulta luvulta. Oletusarvona funktio pudottaa kaikki desimaalit, mutta voit myös määritellä kuinka monta jätetään valinnaisella avainsanalla `numerot`. Huomaa, että funktio **ei** pyöristä, vaan tiputtaa vain pois desimaalit!
+[Funktio pudottaa desimaalit annetulta luvulta]{.underline}. Oletusarvona funktio pudottaa kaikki desimaalit, mutta voit myös määritellä kuinka monta jätetään valinnaisella avainsanalla `numerot`. Huomaa, että funktio **ei** pyöristä, vaan tiputtaa vain pois desimaalit!
 
 ## Tilastolliset funktiot {#sec-tilastolliset-funktiot}
 
 ### Sijaintiluvut {#sec-sijaintiluvut}
 
-#### LASKE-funktiot {#sec-laske-funktiot}
+#### `LASKE`-funktiot {#sec-laske-funktiot}
 
 `=LASKE(alue)`
 
@@ -478,37 +492,39 @@ Funktio pudottaa desimaalit annetulta luvulta. Oletusarvona funktio pudottaa kai
 
 `=LASKE.JOS.JOUKKO(alue; ehtoalue1; ehto1; ehtoalue2; ehto2; ...)`
 
-Jos haluat laskea, kuinka monta arvoa tietyllä alueella on (esim. laskeaksesi pätevän N:n tietylle laskutoiminnolle), voit käyttää funktiota `LASKE`. Funktio laskee **vain** luvut, päivämäärät ja tekstimuotoiset luvut joita se voi väkisin muuntaa luvuiksi.
+[Jos haluat laskea, kuinka monta arvoa tietyllä alueella on]{.underline} (esim. laskeaksesi analyysissa käytetyn N:n tietylle laskutoiminnolle), voit käyttää funktiota `LASKE`. Funktio laskee **vain** luvut, päivämäärät ja tekstimuotoiset luvut jotka Excel pystyy muuntamaan luvuiksi.
 
-Jos haluat laskea myös totuusarvoja, tekstiä tai virhearvoja, käytä funktiota `LASKE.A`. Funktio laskee kaikki arvot paitsi tyhjät solut.
+[Jos haluat laskea myös totuusarvoja, tekstiä tai virhearvoja]{.underline}, käytä funktiota `LASKE.A`. Funktio laskee kaikkien arvojen määrän, lukuunottamatta tyhjiä soluja.
 
-Jos haluat laskea nimenomaan tyhjät solut, käytä funktiota `LASKE.TYHJÄT`. Funktio laskee tyhjät solut sekä solut, joissa on tyhjä teksti "". Funktio ei laske nollaa!
+[Jos haluat laskea nimenomaan tyhjät solut]{.underline}, käytä funktiota `LASKE.TYHJÄT`. Funktio laskee tyhjät solut sekä solut, joissa on tyhjä teksti `""`. [Funktio ei laske nollaa!]{.underline}
 
-Voit ehdollistaa laskutoiminnon käyttämällä funktiota `LASKE.JOS`. Funktio laskee vain ne solut, jotka täyttävät ehdon. Huomaa, että funktio laskee samat arvot kuin perusfunktio `LASKE`, eli tyhjiä, tekstiä, totuusarvoja tai virheitä ei lasketa mukaan.
+[Voit ehdollistaa laskutoiminnon]{.underline} käyttämällä funktiota `LASKE.JOS`. Funktio laskee vain ne solut, jotka täyttävät ehdon. Huomaa, että funktio laskee samat arvot kuin perusfunktio `LASKE`, eli tyhjiä, tekstiä, totuusarvoja tai virheitä ei lasketa mukaan.
 
-Voit myös kirjoittaa useamman ehdon sekä käyttää eri ehtoalueita funktiolla `LASKE.JOS.JOUKKO`. Ehdot annetaan alue-ehto-pareina, jossa alue määrittelee, millä alueella ehdon on pädettävä alkuperäisen luvun ollakseen mukana laskussa, ja ehto määrittelee itse ehdon. Laskettava alue määritellään `alue`-avainsanalla, eli laskettava alue voi olla eri kuin ehtoalueet. Tyhjät solut kohdellaan arvona 0, sekä laskussa että ehdoissa.
+[Voit myös kirjoittaa useamman ehdon]{.underline} sekä käyttää eri ehtoalueita funktiolla `LASKE.JOS.JOUKKO`. Ehdot annetaan alue-ehto-pareina, jossa alue määrittelee, millä alueella ehdon on pädettävä alkuperäisen luvun ollakseen mukana laskussa, ja ehto määrittelee itse ehdon. Laskettava alue määritellään `alue`-avainsanalla, eli laskettava alue voi olla eri kuin ehtoalueet. Tyhjät solut kohdellaan arvona `0`, sekä laskussa että ehdoissa.
 
-#### TAAJUUS {#sec-taajuus}
+#### `TAAJUUS` {#sec-taajuus}
 
 `=TAAJUUS(alue; lokerot)`
 
-Funktio palauttaa frekvenssitaulukon. Määrittele ensin `alue`, josta haluat laskea kaikkien arvojen frekvenssit. Voit määritellä mitkä arvot lasketaan `lokerot`-alueella, mutta voit myös jättää sen pois, jolloin funktio automaattisesti laskee kaikki ainutlaatuiset arvot ja niiden esiintymiset.
+[Funktio palauttaa frekvenssitaulukon]{.underline}. Määrittele ensin `alue`, josta haluat laskea kaikkien arvojen frekvenssit. Voit määritellä mitkä arvot lasketaan `lokerot`-alueella, mutta voit myös jättää sen pois, jolloin funktio automaattisesti laskee kaikki ainutlaatuiset arvot ja niiden esiintymiset.
 
-Huomaa, että `lokerot` tulee määritellä lukujanana! Voit joko kirjoittaa lokeroarvot vierekkäisiin soluihin jonnekin työlehteesi, tai kirjoittaa ne käsin funktioon käyttäen {}-syntaksia.
+Huomaa, että `lokerot` tulee määritellä lukujanana eli yksiulotteisena matriisina! Voit joko kirjoittaa lokeroarvot vierekkäisiin soluihin jonnekin työlehteesi, tai kirjoittaa ne käsin funktioon käyttäen `{}`-syntaksia.
 
-Jos määrittelet lokerot, voit laskea muuttujan tasoa suhde- tai välimatka-asteikolta järjestysasteikolle. Jokainen lokero jonka määrittelet on raja-arvo; ensimmäinen lokeroarvo on kaikki arvot alle tai yhtä suuria kuin lokeroarvo, toinen on kaikki arvot ensimmäisen ja toisen arvon välillä, jne. Jos siis määrittelet lokeroarvoina matriisialueen jossa on arvot {70, 79, 89}, niin funktio laskee neljä lokeroa: Arvot 70 tai vähemmän, arvot 71-79, arvot 80-89, ja arvot 90 tai enemmän.
+[Jos määrittelet lokerot]{.underline}, voit pudottaa muuttujan tasoa suhde- tai välimatka-asteikolta järjestysasteikolle. Jokainen lokero jonka määrittelet on raja-arvo; ensimmäinen lokeroarvo on kaikki arvot alle tai yhtä suuria kuin lokeroarvo, toinen on kaikki arvot ensimmäisen ja toisen arvon välillä, jne. Jos siis määrittelet lokeroarvoina matriisialueen jossa on arvot {70, 79, 89}, niin funktio laskee neljä lokeroa: Arvot 70 tai vähemmän, arvot 71-79, arvot 80-89, ja arvot 90 tai enemmän.
+
+[`TAAJUUS` palauttaa aina yhden luvun enemmän, kuin lokeroja on]{.underline}. Tämä luku edustaa kaikkia arvoja, jotka ovat suurempia kuin suurimman arvon lokero. Jos lokerot esim. määritellään yhdestä viiteen, `TAAJUUS` palauttaa kuudennen lokeron joka edustaa kaikkia arvoja yli viiden.
 
 #### Moodi {#sec-moodi}
 
 `=MOODI.YKSI(alue)`, `=MOODI.USEA(alue)`
 
-Funktiot hakevat lukusarjan moodin, eli useimmiten esiintyvän arvon. Jos odotat vain yhtä moodia, käytä funktiota `MOODI.YKSI`, mutta huomaa, että sen käyttäytyminen jos se löytää useamman moodin ei ole määritelty! Multimodalisuuden kohdalla käytä funktiota `MOODI.USEA`, joka palauttaa pystysuuntaisen matriisin. Tämä matriisi sisältää kaikki esiintyvät moodit.
+[Funktiot hakevat lukusarjan moodin]{.underline}, eli useimmiten esiintyvän arvon. Jos odotat vain yhtä moodia, käytä funktiota `MOODI.YKSI`, mutta huomaa, että sen käyttäytyminen jos se löytää useamman moodin ei ole määritelty! Multimodalisuuden kohdalla käytä funktiota `MOODI.USEA`, joka palauttaa pystysuuntaisen matriisin. Tämä matriisi sisältää kaikki esiintyvät moodit.
 
-#### MEDIAANI {#sec-mediaani}
+#### Mediaani {#sec-mediaani}
 
 `=MEDIAANI(alue)`
 
-Funktio hakee lukusarjan mediaanin. Jos mediaaneja on kaksi (eli sarja on parillinen), funktio palauttaa kahden keskimmäisen arvon keskiarvon. Funktio laskee mukaan totuusarvot ja tekstimuotoiset luvut ("1"). Muut arvot antavat joko virheen tai ohitetaan, riippuen siitä, ovatko ne matriisiargumentissa vai suoraan viitattuna.
+[Funktio hakee lukusarjan mediaanin]{.underline}. Jos mediaaneja on kaksi (eli sarja on parillinen), funktio palauttaa kahden keskimmäisen arvon keskiarvon. Funktio laskee mukaan totuusarvot ja tekstimuotoiset luvut ("1"). Muut arvot antavat joko virheen tai ohitetaan, riippuen siitä, ovatko ne matriisiargumentissa vai suoraan viitattuna.
 
 #### Keskiarvo {#sec-keskiarvo}
 
@@ -520,13 +536,13 @@ Funktio hakee lukusarjan mediaanin. Jos mediaaneja on kaksi (eli sarja on parill
 
 `=KESKIARVO.JOS.JOUKKO(keskiarvoalue; ehtoalue1; ehto1; ehtoalue2; ehto2; ...)`
 
-Yleisen aritmeettisen keskiarvon voit laskea funktiolla `KESKIARVO`.
+[Yleisen aritmeettisen keskiarvon]{.underline} voit laskea funktiolla `KESKIARVO`.
 
-Jos haluat laskea tasatun keskiarvon, käytä funktiota `KESKIARVO.TASATTU`. Määrittele `alue` jolle haluat laskea keskiarvon, sekä `tasaus`-prosentti desimaalilukuna (esim. 0.05 jos haluat jättää pois 5 prosenttia datan ääripäistä).
+[Jos haluat laskea tasatun keskiarvon]{.underline}, käytä funktiota `KESKIARVO.TASATTU`. Määrittele `alue` jolle haluat laskea keskiarvon, sekä `tasaus`-prosentti desimaalilukuna (esim. 0.05 jos haluat jättää pois 5 prosenttia datan ääripäistä).
 
-Jos haluat ehdollistaa mitkä luvut valitaan keskiarvoon, voit käyttää funktiota `KESKIARVO.JOS`. Lisää ehto avainsanaan `ehto`. Ehto päteää alueeseen joka määriteltiin avainsanalla `alue`; jos haluat laskea keskiarvon jollekin muulle alueelle (esim. toiselle muuttujalle kuin ehtomuuttuja), määrittele se avainsanalla `keskiarvoalue`.
+[Jos haluat ehdollistaa mitkä luvut valitaan keskiarvoon]{.underline}, voit käyttää funktiota `KESKIARVO.JOS`. Lisää ehto avainsanaan `ehto`. Ehto päteää alueeseen joka määriteltiin avainsanalla `alue`; jos haluat laskea keskiarvon jollekin muulle alueelle (esim. toiselle muuttujalle kuin ehtomuuttuja), määrittele se avainsanalla `keskiarvoalue`.
 
-Jos haluat laskea keskiarvon käyttäen useampaa eri ehtoa, käytä funktiota `KESKIARVO.JOS.JOUKKO`. Ehdot syötetään aina alue-ehto-parina, jossa alue määrittelee miltä alueelta ehto tarkastetaan, ja ehto määrittelee itse ehdon.
+[Jos haluat laskea keskiarvon käyttäen useampaa eri ehtoa]{.underline}, käytä funktiota `KESKIARVO.JOS.JOUKKO`. Ehdot syötetään aina alue-ehto-parina, jossa alue määrittelee miltä alueelta ehto tarkastetaan, ja ehto määrittelee itse ehdon.
 
 ### Hajontaluvut {#sec-hajontaluvut}
 
@@ -544,251 +560,223 @@ Jos haluat laskea keskiarvon käyttäen useampaa eri ehtoa, käytä funktiota `K
 
 `=NELJÄNNES.SIS(alue; neljännes)`, `=NELJÄNNES.ULK(alue; neljännes)`
 
-Voit hakea alueen pienimmän ja suurimman arvon funktioilla `MIN` (minimi) ja `MAKS` (maksimi).
+[Voit hakea alueen pienimmän ja suurimman arvon]{.underline} funktioilla `MIN` (minimi) ja `MAKS` (maksimi).
 
-Voit myös ehdollistaa minimi- ja maksimihaun funktioilla `MIN.JOS.JOUKKO` ja `MAKS.JOS.JOUKKO`. Jokainen ehto määritellään alue-ehto-parina, jossa alue määrittelee, missä ehdon tulee pädetä, ja ehto määrittelee itse ehdon. Muista myös määritellä itse laskenta-alue avainsanalla `alue`!
+[Voit myös ehdollistaa minimi- ja maksimihaun]{.underline} funktioilla `MIN.JOS.JOUKKO` ja `MAKS.JOS.JOUKKO`. Jokainen ehto määritellään alue-ehto-parina, jossa alue määrittelee, missä ehdon tulee pädetä, ja ehto määrittelee itse ehdon. Muista myös määritellä itse laskenta-alue avainsanalla `alue`!
 
-Jos haluat hakea alueen `k`:nnen pienimmän tai suurimman arvon, käytä funktioita `PIENI` ja `SUURI`. Raja-arvo määritellään omalla avainsanallaan, `k`.
+[Jos haluat hakea alueen `k`:nnen pienimmän tai suurimman arvon]{.underline}, käytä funktioita `PIENI` ja `SUURI`. Raja-arvo määritellään omalla avainsanallaan, `k`.
 
-Jos haluat hakea tietyn fraktiilin persentiilinä, käytä funktioita `PROSENTTIPISTE.SIS` tai `PROSENTTIPISTE.ULK`. Molemmat funktiot ottavat alueen sekä arvon `k`, joka on persentiili ilmaistuna desimaalilukuna. Loppupääte `SIS/ULK` määrittelee kuuluuko raja-arvo itsessään fraktiilin sisälle (`SIS`) vai ei (`ULK`).
+[Jos haluat hakea tietyn fraktiilin persentiilinä]{.underline}, käytä funktioita `PROSENTTIPISTE.SIS` tai `PROSENTTIPISTE.ULK`. Molemmat funktiot ottavat alueen sekä arvon `k`, joka on persentiili ilmaistuna desimaalilukuna. Loppupääte `SIS/ULK` määrittelee kuuluuko raja-arvo itsessään fraktiilin sisälle (`SIS`) vai ei (`ULK`).
 
-Neljännekset, eli kvartiilit, voi hakea myös funktioilla `=NELJÄNNES.SIS` ja `=NELJÄNNES.ULK`. Kvartiilin numero ilmaistaan numeroina 0-4: Pienin arvo (0), ensimmäinen neljännes (1), toinen neljännes eli mediaani (2), kolmas neljännes (3), tai suurin arvo (4). Kvartiilinumerot 0, 2 ja 4 vastaavat tuloksia funktioista `MIN`, `MEDIAANI` ja `MAKS` **vain** jos käytät funktiota `NELJÄNNES.SIS`. Loppupääte määrittelee kuuluuko raja-arvo neljänneksen sisälle (`SIS`) vai ei (`ULK`).
+[Neljännekset, eli kvartiilit]{.underline}, voi hakea myös funktioilla `=NELJÄNNES.SIS` ja `=NELJÄNNES.ULK`. Kvartiilin numero ilmaistaan numeroina 0-4: Pienin arvo (0), ensimmäinen neljännes (1), toinen neljännes eli mediaani (2), kolmas neljännes (3), tai suurin arvo (4). Kvartiilinumerot 0, 2 ja 4 vastaavat tuloksia funktioista `MIN`, `MEDIAANI` ja `MAKS` **vain** jos käytät funktiota `NELJÄNNES.SIS`. Loppupääte määrittelee kuuluuko raja-arvo neljänneksen sisälle (`SIS`) vai ei (`ULK`).
 
 #### Kurtoosi ja vinouma {#sec-kurtoosi-ja-vinouma}
 
 `=KURT(alue)`, `=JAKAUMAN.VINOUS(alue)`
 
-Funktiot laskevat alueen kurtoosin tai vinouman.
+[Funktiot laskevat alueen kurtoosin tai vinouman]{.underline}.
 
-Excelissä kurtoosi annetaan keskitettynä nollalle, jolloin positiivinen kurtoosi tarkoittaa terävää jakaumaa ja negatiivinen kurtoosi tarkoittaa leveää jakaumaa.
+[Excelissä kurtoosi annetaan keskitettynä nollan ympärille]{.underline}, jolloin positiivinen arvo tarkoittaa terävää jakaumaa ja negatiivinen arvo tarkoittaa leveää jakaumaa.
 
-Positiivinen vinouma tarkoittaa, että arvoja löytyy enemmän keskiarvon yllä, ja negatiivinen että arvoja löytyy keskiarvon alla.
-
-#### KESKIPOIKKEAMA {#sec-keskipoikkeama}
+#### Keskipoikkeama {#sec-keskipoikkeama}
 
 `=KESKIPOIKKEAMA(alue)`
 
-Funktio laskee alueen keskipoikkeaman. Keskipoikkeama lasketaan kaavalla:
+[Funktio laskee alueen keskipoikkeaman]{.underline}. Keskipoikkeama lasketaan kaavalla:
 
-$$\frac{\sum{x-\bar{x}}}{n}$$
+$$\frac{\sum{x-\bar{x}}}{n}$$ {#eq-keskipoikkeama-funktiot}
 
 #### Oikaistu neliösumma {#sec-oikaistu-neliösumma}
 
 `=OIKAISTU.NELIÖSUMMA(alue)`
 
-Funktio laskee alueen oikaistun neliösumman (engl. *deviance*). Oikaistu neliösumma lasketaan kaavalla:
+[Funktio laskee alueen oikaistun neliösumman]{.underline} (engl. *deviance*). Oikaistu neliösumma lasketaan kaavalla:
 
-$$\sum{(x-\bar{x})^2}$$
+$$\sum{(x-\bar{x})^2}$$ {#eq-oikaistu-neliösumma-funktiot}
 
 #### Varianssi {#sec-varianssi}
 
 `=VAR.S(alue)`
 
-Funktio palauttaa alueen varianssin. Varianssi lasketaan kaavalla:
+[Funktio palauttaa alueen varianssin]{.underline}. Varianssi lasketaan kaavalla:
 
-$$ s^2 = \frac{\sum{(x-\bar{x})^2}} {n-1} $$
-
-Varianssi on siten oikaistu neliösumma jaettuna datapisteiden määrällä minus yksi. Varianssi ilmaistaan alkuperäisen arvoasteikon neliönä (esim. neliöeuroa, neliöyksikköä).
+$$ s^2 = \frac{\sum{(x-\bar{x})^2}} {n-1} $$ {#eq-varianssi-funktiot}
 
 #### Keskihajonta {#sec-keskihajonta}
 
 `=KESKIHAJONTA.S(alue)`
 
-Funktio laskee alueen keskihajonnan (engl. *standard deviation*). Keskihajonta lasketaan kaavalla:
+[Funktio laskee alueen keskihajonnan]{.underline} (engl. *standard deviation*). Keskihajonta lasketaan kaavalla:
 
-$$ \sigma = \sqrt{\frac{\sum{(x-\bar{x})^2}} {n-1}} $$
-
-Keskihajonta on siten varianssin neliöjuuri. Keskihajonta mitataan samalla asteikolla kuin alkuperäiset arvot.
+$$ \sigma = \sqrt{\frac{\sum{(x-\bar{x})^2}} {n-1}} $$ {#eq-keskihajonta-funktiot}
 
 #### Z-arvo {#sec-z-arvo}
 
 `=NORMITA(x; keskiarvo; keskihajonta)`
 
-Palauttaa arvon normitetun z-arvon. Funktiolle pitää antaa arvo, joka halutaan normittaa (`x`) sekä jakauman `keskiarvo` ja `keskihajonta`.
+[Palauttaa arvon normitetun z-arvon]{.underline}. Funktiolle pitää antaa arvo, joka halutaan normittaa (`x`) sekä jakauman `keskiarvo` ja `keskihajonta`.
 
 Z-arvo lasketaan kaavalla:
 
-$$ z = \frac{x - \bar{x}} {\sigma} $$
+$$ z = \frac{x - \bar{x}} {\sigma} $$ {#eq-z-arvo-funktiot}
 
-### Univariaatit testit {#sec-univariaatit-testit}
+### Yksimuuttujatestit {#sec-univariaatit-testit}
 
 #### Z-testi {#sec-z-testi}
 
 `=Z.TESTI(alue; x; sigma)`
 
-Funktio laskee z-testin yksisuuntaisen p-arvon.
+[Funktio laskee z-testin yksisuuntaisen p-arvon]{.underline}.
 
 Määrittele testattava arvo avainsanalla `x`, ja alue, jota vastaan testaat avainsanalla `alue`. Testi testaa tuolloin, eroaako arvo `x` alueen keskiarvosta merkitsevästi. Toisin sanoin: kuinka suurella todennäköisyydellä saisit arvon `x` tai isomman, jos sen todellinen arvo onkin alueen keskiarvo eikä `x`.
 
 Valinnaisella avainsanalla `sigma` voit antaa populaation tunnetun keskihajonnan. Jos jätät sen pois, keskihajonta estimoidaan otoksesta. Useimmiten sinun tulee jättää se pois.
 
-Jos haluat laskea kaksisuuntaisen z-testin yksisuuntaisen sijaan (eli jos x:n ero keskiarvoon saa mennä kumpaan tahansa suuntaan), voit käyttää seuraavaa kaavaa:
+[Jos haluat laskea kaksisuuntaisen z-testin]{.underline} yksisuuntaisen sijaan (eli jos x:n ero keskiarvoon saa mennä kumpaan tahansa suuntaan), voit käyttää seuraavaa kaavaa:
 
 `= 2 * MIN( Z.TESTI(); 1 - Z.TESTI() )`
 
-**Funktio ei laske testisuuretta!** Jotta voit raportoida koko testin, sinun tulee myös laskea testisuure käsin. Voit käyttää `NORMITA`-funktiota laskeaksesi `x`-arvon z-normitetun arvon, jonka raportoit yhteydessä z-testin palauttaman p-arvon kanssa.
+[**Funktio ei laske testisuuretta!**]{.underline} Jotta voit raportoida koko testin, sinun tulee myös laskea testisuure käsin. Voit käyttää `NORMITA`-funktiota laskeaksesi `x`-arvon z-normitetun arvon, jonka raportoit yhteydessä z-testin palauttaman p-arvon kanssa.
 
-### Bivariaatit testit {#sec-bivariaatit-testit}
+### Kaksimuuttujatestit {#sec-bivariaatit-testit}
 
-#### KOVARIANSSI {#sec-kovarianssi}
+#### Kovarianssi {#sec-kovarianssi}
 
 `=KOVARIANSSI.S(matriisi1; matriisi2)`
 
-Funktio laskee kahden matriisin yhteisen kovarianssin. Funktio olettaa, että matriisit ovat yhtä suuria otoksia kokonaispopulaatiosta. Funktio ohittaa tekstit, totuusasvot ja tyhjät solut, mutta ottaa huomioon nollan.
+[Funktio laskee kahden matriisin yhteisen kovarianssin]{.underline}. Funktio olettaa, että matriisit ovat yhtä suuria otoksia kokonaispopulaatiosta. Funktio ohittaa tekstit, totuusasvot ja tyhjät solut, mutta ottaa huomioon nollan.
 
-#### Korrelaatiokertoin {#sec-korrelaatiokertoin}
+#### Korrelaatiokerroin {#sec-korrelaatiokertoin}
 
 `=PEARSON(matriisi1; matriisi2)`
 
 `=PEARSON.NELIÖ(matriisi1; matriisi2)`
 
-Funktio `PEARSON` palauttaa kahden matriisin Pearsonin tulomomenttikorrelaatiokertoimen, *r*:n. Pearsonin korrelaatio lasketaan kaavalla:
+[Funktio `PEARSON` palauttaa kahden matriisin Pearsonin tulomomenttikorrelaatiokertoimen]{.underline}, *r*:n. Pearsonin korrelaatio lasketaan kaavalla:
 
-$$ r = \frac{\sum{(x-\bar{x})(y-\bar{y})}} {\sqrt{\sum{(x-\bar{x})^2}\sum{(y-\bar{y})^2}}} $$
+$$ r = \frac{\sum{(x-\bar{x})(y-\bar{y})}} {\sqrt{\sum{(x-\bar{x})^2}\sum{(y-\bar{y})^2}}} $$ {#eq-pearsonin-korrelaatiokerroin-funktiot}
 
-Funktio `PEARSON.NELIÖ` laskee ensin *r*:n, ja palauttaa sitten sen neliön, $r^2$. Voit tehdä saman ottamalla PEARSON-funktion tulokseen neliön.
+Funktio `PEARSON.NELIÖ` laskee ensin *r*:n, ja palauttaa sitten sen neliön, $r^2$. Voit tehdä saman ottamalla `PEARSON`-funktion tulokseen neliön.
 
 #### Khiin neliön testi {#sec-khiin-neliön-testi}
 
-`=CHINELIÖ.TESTI(todellinen; odotettu)`
+`=CHINELIÖ.TESTI(todellinen; odotettu)`[^funktiot-3]
 
-Funktio laskee khiin neliö -testin p-arvon.
+[^funktiot-3]: Excelin kääntäjät eivät taida tietää, että kreikan kirjain $\chi$ kirjoitetaan suomeksi *khii* eikä *chi*.
+
+[Funktio laskee khiin neliö -testin p-arvon]{.underline}.
 
 Ensimmäinen avainsana, `todellinen`, määrittelee todellisten havaintojen matriisin. Toinen avainsana, `odotettu`, määrittelee odotettujen soluarvojen matriisin.
 
-Jotta voit käyttää khiin neliön testiä, sinun tulee ensin rakentaa kaksi ristiintaulukointia: todelliset arvot ja odotetut arvot.
+[Jotta voit käyttää khiin neliön testiä, sinun tulee ensin rakentaa kaksi ristiintaulukointia]{.underline}: todelliset arvot ja odotetut arvot. Katso ohjeet [alaluvusta -@sec-khiin-neliö-excelissä].
 
-Todellisten arvojen ristiintaulukoinnin voit rakentaa funktiolla `LASKE.JOS.JOUKKO`, jossa lasket yhden muuttujan arvojen esiintymiset ehdollistettuna toisen muuttujan kategorialla. Laske myös rivi- ja sarakesummat, käyttäen `SUMMA`-funktiota.
-
-Odotettujen arvojen ristiintaulukoinnin rakennat sitten näiden pohjalta, aina laskutavalla $(\text{todellinen}*\text{rivisumma}) / N$. N on tässä koko laskun yhteenlaskettu vastaajamäärä, eli rivi- tai sarakesummien summa.
-
-**Funktio ei laske testisuuretta!** Joudut laskemaan testisuureen käsin. Tätä varten tarvitset vielä yhden ristiintaulukoinnin, jossa lasket jokaiselle solulle kaavan $(\text{todellinen} - \text{odotettu})^2/\text{odotettu}$. Summaa kaikki nämä solut yhteen `SUMMA`-funktiolla, ja saat khiin neliön suureen.
+[**Funktio ei laske testisuuretta!**]{.underline} Joudut laskemaan testisuureen käsin.
 
 Suureen vapausasteet lasketaan kaavalla $(k_{\text{rivit}}-1) * (k_{\text{sarakkeet}}-1)$.
 
-Jos sinulla on khiin neliön suure sekä vapausasteet, voit myös laskea testin yksisuuntaisen p-arvon käyttämällä funktiota `CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)`.
-
-##### **Khiin neliön muuntaminen testimitaksi** {#sec-khiin-neliön-muuntaminen-testimitaksi}
-
-Jos haluat mitata kuinka ison eron löysit, voit käyttää **Cramerin V-suuretta.** V-suure lasketaan seuraavalla kaavalla:
-
-$$
-V = \sqrt{\frac{\chi^2-N}{min(k_{rivit}-1, k_{sarakkeet}-1)}}
-$$
-
-Matemaattinen funktio $min$ tarkoittaa, että valitset pienimmän sulkujen välisistä tuloksista. Toisin sanoen, laske rivien määrät minus yksi sekä sarakkeiden määrät minus 1, ja valitse pienin kahdesta tuloksesta.
-
-Cramerin V-suure voidaan tulkita jokseenkin samoin kuin Cohenin D tai Pearsonin *r*, mutta tulkinta riippuu osittain vapausasteista:
-
-| Vapausaste | Pieni koko | Keskikokoinen | Suuri koko |
-|------------|------------|---------------|------------|
-| 1          | 0,1        | 0,3           | 0,5        |
-| 2          | 0,07       | 0,21          | 0,35       |
-| 3          | 0,06       | 0,17          | 0,29       |
-| 4          | 0,05       | 0,15          | 0,25       |
-| 5          | 0,04       | 0,13          | 0,22       |
-
-: Cramerin V:n tulkinta
+[Voit myös laskea testin yksisuuntaisen p-arvon]{.underline} käyttämällä funktiota `CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)`. Tätä varten tarvitset suureen ja vapausasteet.
 
 #### T-testi {#sec-t-testi}
 
 `=T.TESTI(matriisi1; matriisi2; suunta; laji)`
 
-Funktio laskee t-testin p-arvon.
+[Funktio laskee t-testin p-arvon]{.underline}.
 
 Ensimmäiset kaksi avainsanaa määrittelevät kaksi matriisia, joita halutaan verrata toisiinsa. Avainsanalla `suunta` määrittelet, käytätkö yksisuuntaista (1) vai kaksisuuntaista (2) jakaumaa. Avainsanalla `laji` määrittelet t-testin lajin seuraavista:
 
-1.  Parittainen t-testi samasta otoksesta (ns. within-group)
-2.  Kahden otoksen t-testi, saman varianssin oletus (homoskedastinen; ns. between-groups)
-3.  Kahden otoksen t-testi, erisuuren varianssin oletus (heteroskedastinen; ns. between-groups)
+1.  **Parittainen** t-testi samasta otoksesta (ns. within-group)
+2.  **Kahden otoksen** t-testi, saman varianssin oletus (**homoskedastinen**; ns. between-groups)
+3.  **Kahden otoksen** t-testi, erisuuren varianssin oletus (**heteroskedastinen**; ns. between-groups)
 
 Huomaa, että laji 1 ei toimi, jos matriiseissa on eri määrät arvoja.
 
-**Funktio ei laske testisuuretta!** Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat luvusta [-@sec-lambda-kaavoja].
+[**Funktio ei laske testisuuretta!**]{.underline} Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat [luvusta -@sec-lambda-kaavoja].
 
-#### Järjestyslukujen laskeminen
+#### Järjestyslukujen laskeminen {#sec-järjestyslukujen-laskeminen}
 
 `=ARVON.MUKAAN.TASAN(luku; alue; järjestys)`, `=ARVON.MUKAAN.KESKIARVO(luku; alue; järjestys)`
 
-Funktioilla lasket järjestysluvut jollekin lukusarjalle. Funktioiden erona on miten ne käsittelevät tasajärjestystä: `.TASAN` palauttaa saman järjestysluvun kaikille tasajärjestysluvuille, ja `.KESKIARVO` palauttaa tasajärjestyslukujen keskiarvon järjestyslukuna.
+[Funktioilla lasket järjestysluvut jollekin lukusarjalle]{.underline}. Funktioiden erona on miten ne käsittelevät tasajärjestystä: `.TASAN` palauttaa saman järjestysluvun kaikille tasajärjestysluvuille, ja `.KESKIARVO` palauttaa tasajärjestyslukujen keskiarvon järjestyslukuna.
 
 Avainsana `luku` määrittelee, minkä luvun järjestysluvun haluat laskea. Avainsana `alue` määrittelee alueen, jossa haluat laskea järjestysluvut (eli kaikki luvut, joiden mukaan järjestysluku lasketaan). Valinnainen avainsana `järjestys` määrittelee nousevan `1` tai laskevan `0` järjestyksen; oletuksena on laskeva järjestys.
 
-### Merkitsevyystestit
+### Merkitsevyystestit {#sec-merkitsevyystestit}
 
-#### BINOMI.JAKAUMA
+#### Binomijakauman todennäköisyysarvo {#sec-binomijakauman-todennäköisyysarvo}
 
 `=BINOMI.JAKAUMA(luku; yritykset; todennäköisyys; kumulatiivinen)`
 
-Funktio hakee p-arvon määritetylle binomijakaumalle. Funktiota käytetään mm. merkkitestin toteuttamisessa. Avainsanalla `luku` määrittelet merkkimäärän, jota haluat testata. Avainsanalla `yritykset` määrittelet otoskoon. Avainsanalla `todennäköisyys` määrittelet todennäköisyysrajan - merkkitestissä aina `0,5`. Avainsanalla `kumulatiivinen` määrittelet, haluatko kumulatiivisen jakaumafunktion `EPÄTOSI` vai tiheysfunktion `TOSI` - merkkitestissä käytetään kumulatiivista jakaumaa.
+[Funktio hakee p-arvon määritetylle binomijakaumalle]{.underline}. Funktiota käytetään mm. merkkitestin toteuttamisessa. Avainsanalla `luku` määrittelet merkkimäärän, jota haluat testata. Avainsanalla `yritykset` määrittelet otoskoon. Avainsanalla `todennäköisyys` määrittelet todennäköisyysrajan - merkkitestissä aina `0,5`. Avainsanalla `kumulatiivinen` määrittelet, haluatko kumulatiivisen jakaumafunktion `EPÄTOSI` vai tiheysfunktion `TOSI` - merkkitestissä käytetään kumulatiivista jakaumaa.
 
-#### NORM_JAKAUMA.NORMITA
+#### Normaalijakauman todennäköisyysarvo {#sec-normaalijakauman-todennäköisyysarvo}
 
 `=NORM_JAKAUMA.NORMITA(z; kumulatiivinen)`
 
-Funktio hakee p-arvon määritetylle normaalijakauman z-arvolle.
+[Funktio hakee p-arvon määritetylle normaalijakauman z-arvolle]{.underline}.
 
 Avainsanalla `z` määrittelet z-arvon. Avainsanalla `kumulatiivinen` määrittelet, haetko kumulatiivisen jakaumafunktion `TOSI` vai todennäköisyystiheysfunktion `EPÄTOSI`. Yleensä haluat tällä kurssilla tiheysfunktion.
 
 ## Tekstifunktiot {#sec-tekstifunktiot}
 
-### SIIVOA
+### `SIIVOA` {#sec-siivoa}
 
 `=SIIVOA(teksti)`
 
-Poistaa tekstistä tulostumattomat merkit. Nämä ovat merkkejä, jotka eivät näy visuaalisesti, mutta jotka kuitenkin voivat löytyä tekstistä ja voivat aiheuttaa ongelmia myöhemmin.
+[Poistaa tekstistä tulostumattomat merkit]{.underline}. Nämä ovat merkkejä, jotka eivät näy visuaalisesti, mutta jotka kuitenkin voivat löytyä tekstistä ja voivat aiheuttaa ongelmia myöhemmin.
 
-### YHDISTÄ ja &-merkki
+### `YHDISTÄ` ja `&`-merkki {#sec-yhdistä-ja-et-merkki}
 
 `=YHDISTÄ(teksti1; teksti2; ...)`
 
-Funktioparilla voit yhdistää useita tekstijonoja yhdeksi. Tekstijonot yhdistetään sellaisinaan, eli funktio **ei** lisää välilyöntejä tai muita erotusmerkkejä. Lisää ne itse lisäämällä välilyöntijonon `" "` kahden tekstijonon väliin.
+[Funktiolla voit yhdistää useita tekstijonoja yhdeksi]{.underline}. Tekstijonot yhdistetään sellaisinaan, eli funktio ei lisää välilyöntejä tai muita erotusmerkkejä. Lisää ne itse lisäämällä välilyöntijonon `" "` kahden tekstijonon väliin.
 
-Funktion sijaan voit käyttää `&`-merkkiä. Komento `A1 & B2` on sama kuin `=YHDISTÄ(A1; B2)`.
+[Funktion sijaan voit käyttää `&`-merkkiä.]{.underline} Komento `A1 & B2` on sama kuin `=YHDISTÄ(A1; B2)`.
 
-### TEKSTI
+### `TEKSTI` {#sec-teksti}
 
 `=TEKSTI(arvo; muotokoodi)`
 
-Funktiolla voit muotoilla lukuja erinäisiin muotoihin. Luku annetaan avainsanalla `arvo`, ja halutun muodon muotokoodi annetaan avainsanalla `muotokoodi`. Muotoilukoodeja on monenlaisia ja ne ovat jokseenkin vaikeasti ymmärrettävissä, suosittelen tarkistaa tämän funktion apusivut: [TEKSTI-funktio (Microsoft)](https://support.microsoft.com/fi-fi/office/teksti-funktio-20d5ac4d-7b94-49fd-bb38-93d29371225c).
+[Funktiolla voit muotoilla lukuja erinäisiin muotoihin]{.underline}. Luku annetaan avainsanalla `arvo`, ja halutun muodon muotokoodi annetaan avainsanalla `muotokoodi`. Muotoilukoodeja on monenlaisia ja ne ovat jokseenkin vaikeasti ymmärrettävissä, suosittelen tarkistaa tämän funktion apusivut: [TEKSTI-funktio (Microsoft)](#0).
 
-### VERTAA
+### `VERTAA` {#sec-vertaa}
 
 `=VERTAA(teksti1; teksti2)`
 
-Funktio arvioi, ovatko kaksi merkkijonoa samoja (`TOSI`) vai erilaisia (`EPÄTOSI`). Funktio vertaa täsmällisesti, eli isot ja pienet kirjaimet eroavat, kuin myös välilyönnit ja näkymättömät merkit. Funktio ohittaa solun muotoiluerot, esim. **lihavoinnin** tai *kursiivin*.
+[Funktio arvioi, ovatko kaksi merkkijonoa samoja (`TOSI`) vai erilaisia (`EPÄTOSI`).]{.underline} Funktio vertaa täsmällisesti, eli isot ja pienet kirjaimet eroavat, kuin myös välilyönnit ja näkymättömät merkit. Funktio ohittaa solun muotoiluerot, esim. **lihavoinnin** tai *kursiivin*.
 
-### ETSI ja KÄY.LÄPI
+### `ETSI` ja `KÄY.LÄPI` {#sec-etsi-ja-käy.läpi}
 
 `=ETSI(hakumerkit; teksti; aloitus)`
 
 `=KÄY.LÄPI(hakumerkit; teksti)`
 
-`ETSI`-funktio toimii tekstihakuna, ja hakee määrätystä tekstistä jotain merkkijonoa. Teksti, josta haetaan, määritellään avainsanalla `teksti`, ja merkkijono määritellään avainsanalla `hakumerkit`. Valinnaisella avainsanalla `aloitus` voit määritellä indeksin, mistä merkistä haku aloitetaan.
+[`ETSI`-funktio toimii tekstihakuna, ja hakee määrätystä tekstistä jotain merkkijonoa.]{.underline} Teksti, josta haetaan, määritellään avainsanalla `teksti`, ja merkkijono määritellään avainsanalla `hakumerkit`. Valinnaisella avainsanalla `aloitus` voit määritellä indeksin, mistä merkistä haku aloitetaan.
 
 Funktio palauttaa indeksiluvun, missä se ensimmäisenä löysi määritetyn merkkijonon tekstistä. Indeksiluku vastaa merkkijonon ensimmäisen merkin sijaintia tekstissä: jos haetaan esim. sanaa `ja` tekstistä `Ajanjaksot`, funktio palauttaa luvun `2`. Tämä merkitsee, että haettava teksti löytyy tekstistä alkaen kohdasta `2`. Funktio ei siis huomaa `ja`-sanan toistumista myöhemmin sanassa, koska se löysi ensimmäisen esiintymisen ja lopettaa siihen.
 
-`ETSI` on tarkka ja erottelee ison ja pienen kirjaimen välillä, sekä ottaa huomioon näkymättömät merkit. Jos haluat hakea sekä pieniä että isoja kirjaimia, käytä `KÄY.LÄPI`-funktiota. Huomioi kuitenkin, että `KÄY.LÄPI`-funktiossa ei voi määritellä aloituskohtaa.
+`ETSI` on tarkka ja erottelee ison ja pienen kirjaimen välillä, sekä ottaa huomioon näkymättömät merkit.
 
-### PITUUS
+[Jos haluat hakea sekä pieniä että isoja kirjaimia, käytä `KÄY.LÄPI`-funktiota.]{.underline} Huomioi kuitenkin, että `KÄY.LÄPI`-funktiossa ei voi määritellä aloituskohtaa.
+
+### `PITUUS` {#sec-pituus}
 
 `=PITUUS(teksti)`
 
 Palauttaa `teksti`-avainsanassa määritetyn tekstin merkkien määrän.
 
-### PIENET ja ISOT
+### `PIENET` ja `ISOT` {#sec-pienet-ja-isot}
 
 `=PIENET(teksti)`, `=ISOT(teksti)`
 
-Muuntaa tekstin kaikki merkit joko pieniksi tai isoiksi kirjaimiksi. Ei vaikuta muihin merkkeihin tekstissä, esim. pisteihin tai välilyönteihin.
+[Muuntaa tekstin kaikki merkit joko pieniksi tai isoiksi kirjaimiksi]{.underline}. Ei vaikuta muihin merkkeihin tekstissä, esim. pisteihin tai välilyönteihin.
 
-### TEKSTI.JÄLKEEN ja TEKSTI.ENNEN
+### `TEKSTI.JÄLKEEN` ja `TEKSTI.ENNEN` {#sec-teksti.jälkeen-ja-teksti.ennen}
 
 `=TEKSTI.JÄLKEEN(teksti; erotin; aloitus; vastaavuus; loppu_täsmäys; joseilöydy)`
 
 `=TEKSTI.ENNEN(teksti; erotin; aloitus; vastaavuus; loppu_täsmäys; joseilöydy)`
 
-Funktiopari hakee kaiken tekstin joko ennen (`.ENNEN`) tai jälkeen (`.JÄLKEEN`) erotinkohdan. Avainsanalla `teksti` määrittelet, mistä haluat hakea tekstiä. Avainsanalla `erotin` määrittelet, minkä hakukohdan jälkeen haluat poimia kaiken tekstin. Muut avainsanat ovat valinnaisia:
+[Funktiopari hakee kaiken tekstin joko ennen (`.ENNEN`) tai jälkeen (`.JÄLKEEN`) erotinkohdan]{.underline}. Avainsanalla `teksti` määrittelet, mistä haluat hakea tekstiä. Avainsanalla `erotin` määrittelet, minkä hakukohdan jälkeen haluat poimia kaiken tekstin. Muut avainsanat ovat valinnaisia:
 
 -   `aloitus`: Mistä kohdasta tekstiä haku aloitetaan? Ilmaistaan indeksilukuna.
 
@@ -798,22 +786,22 @@ Funktiopari hakee kaiken tekstin joko ennen (`.ENNEN`) tai jälkeen (`.JÄLKEEN`
 
 -   `joseilöydy`: Mitä tehdään, jos tekstiä ei löydy ollenkaan? Oletusarvolta palauttaa virhearvon `#PUUTTUU!`.
 
-### POISTA.VÄLIT
+### `POISTA.VÄLIT` {#sec-poista.välit}
 
 `=POISTA.VÄLIT(teksti)`
 
-Poistaa välilyönnit tekstin alusta ja lopusta. Funktio ei poista sanojen välisiä välilyöntejä.
+[Poistaa välilyönnit tekstin alusta ja lopusta]{.underline}. Funktio ei poista sanojen välisiä välilyöntejä.
 
-### ERISNIMI
+### `ERISNIMI` {#sec-erisnimi}
 
 `=ERISNIMI(teksti)`
 
-Muuttaa tekstin ensimmäisen kirjaimen, sekä kaikki erikoismerkkien jälkeiset kirjaimet isoiksi kirjaimiksi.
+[Muuttaa tekstin ensimmäisen kirjaimen]{.underline}, sekä kaikki erikoismerkkien jälkeiset kirjaimet isoiksi kirjaimiksi.
 
-### POIMI.TEKSTI
+### `POIMI.TEKSTI` {#sec-poimi.teksti}
 
 `=POIMI.TEKSTI(teksti; aloitus; määrä)`
 
-Funktio poimii tekstistä tietyn määrän merkkejä aloituskohdan jälkeen. Määrittele teksti avainsanalla `teksti`, aloituskohdan indeksiluvun avainsanalla `aloitus`, ja poimittavien merkkien määrän avainsanalla `määrä`.
+[Funktio poimii tekstistä tietyn määrän merkkejä aloituskohdan jälkeen]{.underline}. Määrittele teksti avainsanalla `teksti`, aloituskohdan indeksiluvun avainsanalla `aloitus`, ja poimittavien merkkien määrän avainsanalla `määrä`.
 
 Jos aloitusluku on suurempi kuin tekstin merkkimäärä, funktio palauttaa tyhjän tekstijonon `""`. Jos aloitusluku on pienempi kuin merkkimäärä, mutta poimittavien merkkien `määrä` ylittää tekstin pituuden, funktio palauttaa kaiken tekstin, jonka se voi hakea alkuperäisestä tekstistä.

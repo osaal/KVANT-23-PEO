@@ -1,10 +1,10 @@
 # LAMBDA-kaavoja {#sec-lambda-kaavoja}
 
-Tässä luvussa löydät valmiita LAMBDA-kaavoja joidenkin testisuureiden laskemiseen. Kaavat on testattu Excel O365-versiossa vertaamalla tuloksia IBM SPSS Statistics 28.0 -ohjelmiston tuloksiin, sekä laskemalla käsin.
+Tässä luvussa löydät valmiita `LAMBDA`-kaavoja joidenkin testisuureiden laskemiseen. Kaavat on testattu Excel O365-versiossa vertaamalla tuloksia IBM SPSS Statistics 28.0 -ohjelmiston tuloksiin, sekä laskemalla käsin.
 
-Jos löydät virheen kaavasta, ilmoita asiasta GitHubin Issuella, verkkokirjan etusivun palautelomakkeella tai suoraan minulle!
+[Jos löydät virheen kaavasta]{.underline}, ilmoita asiasta GitHubin Issuella, verkkokirjan etusivun palautelomakkeella tai suoraan minulle!
 
-## Kaavojen asentaminen
+## Kaavojen asentaminen {#sec-kaavojen-asentaminen}
 
 1.  Avaa `Nimien hallinta`.
 2.  Laadi uusi nimi painikkeesta `Uusi...`.
@@ -16,30 +16,28 @@ Jos löydät virheen kaavasta, ilmoita asiasta GitHubin Issuella, verkkokirjan e
 
 Jos tarvitset muistutusta nimien hallinnasta lue @sec-nimeäminen-excelissä.
 
-## Kaavojen käyttäminen
+## Kaavojen käyttäminen {#sec-kaavojen-käyttäminen}
 
-Kun olet lisännyt kaavan Nimien hallintaan, käytön pitäisi toimia kirjoittamalla kaavan nimi soluun samalla tavalla kuin muut kaavat. Jos tämä ei kuitenkaan toimi, tarkista ensin nimien hallinnasta, onko nimi oikein ja laajuus sopiva. Voit myös koittaa syöttää kaavan suoraan toiminnolla `Lisää > Nimien hallinta > Käytä kaavassa` (kun muokkaat solua tai kaavaa).
+[Kun olet lisännyt kaavan Nimien hallintaan]{.underline}, käytön pitäisi toimia kirjoittamalla kaavan nimi soluun samalla tavalla kuin muut kaavat. Jos tämä ei kuitenkaan toimi, tarkista ensin nimien hallinnasta, onko nimi oikein ja laajuus sopiva. Voit myös koittaa syöttää kaavan suoraan toiminnolla `Lisää > Nimien hallinta > Käytä kaavassa` (kun muokkaat solua tai kaavaa).
 
 ## T-testi {#sec-t-testi-kaavat}
 
 | Excel-nimi       | Toiminto                                           | Lambda-funktio                                                                                                                                                                                                                                                                   |
-|------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------|------------|-------------------------------------------------|
 | `T.INDEP.POOLED` | Laskee kahden otoksen heteroskedastisen t-suureen. | `=LAMBDA(matriisi1; matriisi2; LET(pool; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2); (KESKIARVO(matriisi1) - KESKIARVO(matriisi2)) / NELIÖJUURI((pool/LASKE(matriisi1))+(pool/LASKE(matriisi2)))))` |
 | `T.INDEP`        | Laskee kahden otoksen homoskedastisen t-suureen.   | `=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))`                                                                                         |
 | `T.DEP`          | Laskee parittaisen t-suureen.                      | `=LAMBDA(matriisi1;matriisi2; ((SUMMA(matriisi1)-SUMMA(matriisi2))/LASKE(matriisi1))/(KESKIHAJONTA.S(matriisi1-matriisi2)/NELIÖJUURI(LASKE(matriisi1))))`                                                                                                                        |
 
 : Lambda-funktiot t-testisuuren laskemiseen {tbl-t-testi-kaavat}
 
-## Korrelaatio
+## Korrelaatio {#sec-korrelaatio-kaavat}
 
 | Excel-nimi  | Toiminto                                                                                                                                                                                                                       | Lambda-funktio                                                                                                      |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+|--------------|----------------------------------------|-------------------|
 | `KORR.P`    | Laskee korrelaatiokertoimen todennäköisyysarvon käyttäen oikeahäntäistä t-jakaumaa.                                                                                                                                            | `=LAMBDA(r; n; T.JAKAUMA.OH(ITSEISARVO((r*NELIÖJUURI(n-2))/(NELIÖJUURI(1-(r^2))));n-2))`                            |
-| `KORR.Z`    | Laskee korrelaatiokertoimen z-arvon. Käytetään yhdessä KORR.Z.SE-funktion kanssa laskeakseen kertoimen luottamusväli.                                                                                                          | `=LAMBDA(r; 0,5*LUONNLOG((1+r)/(1-r)))`                                                                             |
-| `KORR.Z.SE` | Laskee korrelaatiokertoimen z-arvon keskivirheen. Käytetään yhdessä KORR.Z-funktion kanssa laskeakseen kertoimen luottamusväli.                                                                                                | `=LAMBDA(n; 1/(NELIÖJUURI(n-3)))`                                                                                   |
-| `KORR.Z.R`  | Kääntää korrelaatiokertoimen z-arvon takaisin r-arvoksi. Syötä lasketut luottamusväliarvot funktioon saadaksesi luottamusvälit r-arvoina.                                                                                      | `=LAMBDA(z; (EKSPONENTTI(2*z)-1)/(EKSPONENTTI(2*z)+1))`                                                             |
+| `KORR.Z`    | Laskee korrelaatiokertoimen z-arvon. Käytetään yhdessä `KORR.Z.SE`-funktion kanssa laskeakseen kertoimen luottamusväli.                                                                                                        | `=LAMBDA(r; 0,5*LUONNLOG((1+r)/(1-r)))`                                                                             |
+| `KORR.Z.SE` | Laskee korrelaatiokertoimen z-arvon keskivirheen. Käytetään yhdessä `KORR.Z`-funktion kanssa laskeakseen kertoimen luottamusväli.                                                                                              | `=LAMBDA(n; 1/(NELIÖJUURI(n-3)))`                                                                                   |
+| `KORR.Z.R`  | Kääntää korrelaatiokertoimen z-arvon takaisin r-arvoksi. Syötä aikaisemmin lasketut luottamusväliarvot funktioon saadaksesi luottamusvälit $r$-arvoina.                                                                        | `=LAMBDA(z; (EKSPONENTTI(2*z)-1)/(EKSPONENTTI(2*z)+1))`                                                             |
 | `KORR.Z.CI` | Laskee korrelaatiokertoimen luottamusvälin z-arvosta, keskivirheestä ja alfatasosta (desimaaleissa). Palauttaa kaksirivisen matriisin, jossa ensimmäinen arvo on luottamusvälin yläraja ja toinen arvo luottamusvälin alaraja. | `=LAMBDA(z; se; a; VALITSE.INDEKSI({1;2}; z+(NORM_JAKAUMA.KÄÄNT(1-(a/2))*se); z-(NORM_JAKAUMA.KÄÄNT(1-(a/2))*se)))` |
 
 : Lambda-funktiot korrelaation merkitsevyyden laskemiseksi {tbl-korrelaatio-kaavat}
-
-## Luottamusväli {#sec-luottamusväli-kaavat}
