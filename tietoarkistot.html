@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 22&nbsp; Tietoarkistot</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 23&nbsp; Tietoarkistot</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -66,243 +66,222 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 23&nbsp; Tietoarkistot">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="pics/aila.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./webropol.html">Työkalut</a></li><li class="breadcrumb-item"><a href="./tietoarkistot.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tietoarkistot.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
   </div>
 </li>
     </ul>
@@ -315,8 +294,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#tietoarkisto-aila" id="toc-tietoarkisto-aila" class="nav-link active" data-scroll-target="#tietoarkisto-aila"><span class="header-section-number">22.1</span> Tietoarkisto Aila</a></li>
-  <li><a href="#zenodo" id="toc-zenodo" class="nav-link" data-scroll-target="#zenodo"><span class="header-section-number">22.2</span> Zenodo</a></li>
+  <li><a href="#sec-tietoarkisto-aila" id="toc-sec-tietoarkisto-aila" class="nav-link active" data-scroll-target="#sec-tietoarkisto-aila"><span class="header-section-number">23.1</span> Tietoarkisto Aila</a></li>
+  <li><a href="#zenodo" id="toc-zenodo" class="nav-link" data-scroll-target="#zenodo"><span class="header-section-number">23.2</span> Zenodo</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -325,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></h1>
+<h1 class="title"><span id="sec-tietoarkistot" class="quarto-section-identifier"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></h1>
 </div>
 
 
@@ -340,57 +319,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Tällä osiolla esitellään kahta tietoarkistoa: <a href="https://services.fsd.tuni.fi/index">Tietoarkisto Aila</a> sekä <a href="https://zenodo.org/">Zenodo</a>. Tietoarkistoja löytyy useita eri, sekä generalisti- että spesialistiarkistoja (yleinen tai aihealueittain) ja useilta eri tieteenalalta.</p>
-<section id="tietoarkisto-aila" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="tietoarkisto-aila"><span class="header-section-number">22.1</span> Tietoarkisto Aila</h2>
+<p>Tässä luvussa esitellään kahta tietoarkistoa: <a href="#0">Tietoarkisto Aila</a> sekä <a href="#0">Zenodo</a>. Tietoarkistoja löytyy useita eri, sekä generalisti- että spesialistiarkistoja (yleinen tai aihealuekohtainen) ja useilta eri tieteenalalta.</p>
+<section id="sec-tietoarkisto-aila" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="sec-tietoarkisto-aila"><span class="header-section-number">23.1</span> Tietoarkisto Aila</h2>
 <p><a href="https://services.fsd.tuni.fi/index">Tietoarkisto Aila</a> on FSD ja Tampereen yliopiston ylläpitämä, pääsääntöisesti yhteiskuntatieteellistä tietoarkistointia varten olemassa oleva palvelu. Palvelun käyttö on ilmaista suomalaisten tutkimusorganisaatioiden tutkijoille sekä osittain myös rivikansalaisille.</p>
 <p>Voit kirjautua tietoarkistoon Pelastusopiston tunnuksillasi HAKA-kirjautumisen kautta. Joitain tietovarantoja voi myös selailla ja ladata ilman kirjautumista, mutta useimmat vaativat kirjautumisen.</p>
 <div id="fig-aila" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/aila.png" class="img-fluid figure-img" alt="Tietoarkisto Ailan etusivu."></p>
-<figcaption class="figure-caption">Kuva&nbsp;22.1: Tietoarkisto Ailan etusivu</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;23.1: Tietoarkisto Ailan etusivu</figcaption>
 </figure>
 </div>
-<p>Voit selailla aineistoja “Ainestot”-sivulla ja tehdä hakuja “Haku”-sivulla. Kirjoitusajankohdalla Ailasta löytyy 1866 aineistokuvailua, eli tavaraa riittää!</p>
-<p>Kaikilla aineistoilla on määritelty saatavuus neljään luokkaan: Vapaasti käytettävissä lisenssillä CC-BY 4.0 (A), käytettävissä tutkimukseen, opetukseen ja opiskeluun (B), käytettävissä tutkimukseen ja ylempiin opennäytteisiin (C), sekä käytettävissä vain luovuttajan luvalla (D). Tällä kurssilla, sekä omissa opinnäytteissänne, voitte siis käyttää kaikkia A- tai B-luokiteltuja materiaaleja. Korkeampiin luokituksiin vaaditaan tutkijan positiota tai ylemmän AMK:in/pro gradun kirjoittajuutta.</p>
-<p>Aineistot ovat myös luokitelty kahteen tyyppiin: kvantitatiivinen ja kvalitatiivinen. Ensimmäinen on pääsääntöisesti numerodataa, joskin tekstiä voi esiintyä; toinen on pääsääntöisesti tekstidataa, joskin numeroita voi esiintyä.</p>
+<p>Voit selailla aineistoja <strong>Ainestot</strong>-sivulla ja tehdä hakuja <strong>Haku</strong>-sivulla. Kirjoitusajankohdalla Ailasta löytyy 1866 aineistokuvailua, eli sisältöä riittää!</p>
+<p>Kaikilla aineistoilla on määritelty saatavuus neljään luokkaan:</p>
+<ul>
+<li><p>Vapaasti käytettävissä lisenssillä CC-BY 4.0 (A),</p></li>
+<li><p>Käytettävissä tutkimukseen, opetukseen ja opiskeluun (B),</p></li>
+<li><p>Käytettävissä tutkimukseen ja ylempiin opennäytteisiin (C), sekä</p></li>
+<li><p>Käytettävissä vain luovuttajan luvalla (D).</p></li>
+</ul>
+<p>Tällä kurssilla, sekä omissa opinnäytteissänne, voitte siis käyttää kaikkia A- tai B-luokiteltuja materiaaleja. Korkeampiin luokituksiin vaaditaan tutkijan positiota tai ylemmän AMK:in/pro gradun kirjoittajuutta.</p>
+<p><u>Aineistot ovat myös luokiteltuja kahteen tyyppiin</u>: <strong>kvantitatiivinen</strong> ja <strong>kvalitatiivinen</strong>. Ensimmäinen on pääsääntöisesti numerodataa, joskin tekstiä voi esiintyä; toinen on pääsääntöisesti tekstidataa, joskin numeroita voi esiintyä.</p>
 <p>Esimerkkinä toimii “Pelastuspalveluasenteet 2014”, eli <a href="https://urn.fi/urn:nbn:fi:fsd:T-FSD2969">Suomalaisten pelastusasenteet 2014</a> -materiaali.</p>
 <div id="fig-aila-pelastusasenteet" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/aila_pelastusasenteet.png" class="img-fluid figure-img" alt="Tietovaranto 'Pelastuspalveluasenteet 2014' Aila-tietoarkistossa, yhteenvetosivu. Sivulla lukee tekijät, asiasanat ja sisällön kuvaus. Sivun linkki on: https://urn.fi/urn:nbn:fi:T-FSD2969"></p>
-<figcaption class="figure-caption">Kuva&nbsp;22.2: Pelastuspalveluasenteet 2014, Aila-tietoarkistossa</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;23.2: Pelastuspalveluasenteet 2014, Aila-tietoarkistossa</figcaption>
 </figure>
 </div>
-<p>Yhteenvetosivulla näkee mm. tietovarannon käyttötaso (B), sisällön kuvaus sekä asiasanat. Löydät myös pysyvän linkin tietovarantoon sivun lopusta, jota kannattaa käyttää viittauksessa.</p>
-<p>Koko kuvailu -välilehdeltä löydät tarkempaa tietoa tutkimuksen tuottamisesta. Datan uudelleenkäytön vuoksi tärkeimmät tiedot ovat mm. kohdealue, havaintoyksikkötyyppi, perusjoukko ja otos, aikaulottuvuudet, sekä otanta- ja keruumenetelmät. Löydät myös malliviittauksen tältä sivulta, jos käytät tietovarantoa.</p>
-<p>Muuttujat-välilehdeltä voit selailla tietovarannon kaikkia muuttujia yksitellen. Voit avata ne tarkistaaksesi muuttujan kysymystekstin ja vastausvaihtoehdot, sekä yleiset tunnusluvut ja frekvenssijakauman.</p>
-<p>Julkaisut-välilehdeltä löytyy listaus Ailaan raportoiduista julkaisuista, jotka käyttävät kyseistä tietovarantoa. On aina tutkijan omalla vastuulla raportoida Ailalle kaikista julkaisuista, jotta he voivat lisätä ne tähän osuuteen sekä seurata tietovarantojen käyttöä.</p>
-<p>Lataa aineisto-välilehdeltä voit ladata koko aineiston käyttöösi. Jos aineisto vaatii kirjautumista, järjestelmä ilmoittaa sinulle asiasta. Kun valitset latauksen, siirryt sivulle, jossa sinun tulee ilmoittaa, mihin käyttöön lataat tiedoston. Tämä tieto välittyy (tietääkseni) suoraan aineiston toimittajalle ja/tai Aila-palvelulle, jotta ne voivat pysyä kartalla aineistojen käytöstä. Vaikka lomake näyttää lupa-anomukselta, saat kuitenkin aineiston suoraan käyttöösi (jos aineisto ei ole D-luokiteltu, jolloin joudut odottamaan käyttöoikeutta).</p>
-<p>Ailan kaikki aineistot sisältävät useita tiedostoja. Tärkeimmät ovat:</p>
+<p><strong>Yhteenvetosivulla</strong> näkee mm. tietovarannon käyttötaso (B), sisällön kuvaus sekä asiasanat. Löydät myös pysyvän linkin tietovarantoon sivun lopusta, jota kannattaa käyttää viittauksessa.</p>
+<p><strong>Koko kuvailu</strong> -välilehdeltä löydät tarkempaa tietoa tutkimuksen tuottamisesta. Datan uudelleenkäytön vuoksi tärkeimmät tiedot ovat mm. kohdealue, havaintoyksikkötyyppi, perusjoukko ja otos, aikaulottuvuudet, sekä otanta- ja keruumenetelmät. Löydät myös malliviittauksen tältä sivulta, jos käytät tietovarantoa.</p>
+<p><strong>Muuttujat</strong>-välilehdeltä voit selailla tietovarannon kaikkia muuttujia yksitellen. Voit avata ne tarkistaaksesi muuttujan kysymystekstin ja vastausvaihtoehdot, sekä yleiset tunnusluvut ja frekvenssijakauman.</p>
+<p><strong>Julkaisut</strong>-välilehdeltä löytyy listaus Ailaan raportoiduista julkaisuista, jotka käyttävät kyseistä tietovarantoa. Raportointi on aina tutkijan omalla vastuulla, jotta Aila-kehittäjät voivat lisätä tutkimustulokset tähän osuuteen sekä seurata tietovarantojen käyttöä.</p>
+<p><strong>Lataa aineisto</strong>-välilehdeltä voit ladata koko aineiston käyttöösi. Jos aineisto vaatii kirjautumista, järjestelmä ilmoittaa sinulle asiasta. Kun valitset latauksen, siirryt sivulle, jossa sinun tulee ilmoittaa, mihin käyttöön lataat tiedoston. Tämä tieto välittyy (tietääkseni) suoraan aineiston toimittajalle ja/tai Aila-palvelulle, jotta ne voivat pysyä kartalla aineistojen käytöstä. Vaikka lomake näyttää lupa-anomukselta, saat kuitenkin aineiston suoraan käyttöösi (jos aineisto ei ole D-luokiteltu, jolloin joudut odottamaan käyttöoikeutta).</p>
+<p><u>Ailan kaikki aineistot sisältävät useita tiedostoja</u>. Tärkeimmät ovat:</p>
 <ul>
 <li><code>.csv</code>-tiedosto: Tämä on datatiedosto, jonka voit avata Excelissä.</li>
 <li><code>.html</code>-tiedosto: Tämä on tuloste SPSS:n koodikirjatoiminnosta, josta löydät jokaisen muuttujan koodit ja niiden kyselylomakevastaavuudet. Käytä tätä koodikirjana, tai kirjoita se puhtaaksi Word-tiedostoon jos haluat.</li>
 <li><code>.pdf</code>-tiedostoja: Näistä löydät alkuperäisen kyselylomakkeen ja/tai puhtaaksi kirjoitetun koodikirjan. Voit käyttää näitä html-tiedoston sijaan, jos ne löytyvät.</li>
 </ul>
 <p>Ailan käytännöt metadatakoodauksessa ja tiedostomuodoissa ovat vaihdelleet ajan myötä jonkin verran. Löydät luultavasti myös <code>.por</code>-tiedoston, joka on SPSS-ohjelmiston oma tiedostomuoto jota ei pysty avaamaan Excelissä.</p>
-<p>Muista poistaa ladatut datatiedostot tietokoneeltasi (sekä kaikki kopiot!) kun olet valmis tutkimuksesi kanssa. Jos tutkimuksestasi julkaistaan jotain, ilmoitathan sen Tietoarkistoon - he kuulevat mielellään asiasta!</p>
+<p><u>Muista poistaa ladatut datatiedostot tietokoneeltasi</u> (sekä kaikki kopiot!) kun olet valmis tutkimuksesi kanssa. Jos tutkimuksestasi julkaistaan jotain, ilmoitathan sen Tietoarkistoon - he kuulevat mielellään asiasta!</p>
 </section>
-<section id="zenodo" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="zenodo"><span class="header-section-number">22.2</span> Zenodo</h2>
-<p><a href="https://zenodo.org/">Zenodo</a> on CERN:in ylläpitämä, EU:n osarahoittama tieteellinen arkisto. Zenodosta löydät tietovarantoja, mutta myös esim. esipainoksia, analyysiprotokollia, muistiinpanoja, kuvia, sekä paljon muuta. Zenodo-palveluun ei tarvitse kirjautua, mutta voit laatia oman kirjautumisprofiilisi jos aiot myöhemmin itse julkaista tietovarantoja tai muuta aiheellista palvelussa. Zenodon käyttö on ilmaista.</p>
+<section id="zenodo" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="zenodo"><span class="header-section-number">23.2</span> Zenodo</h2>
+<p><a href="https://zenodo.org/"><strong>Zenodo</strong></a> on CERN:in ylläpitämä, EU:n osarahoittama tieteellinen arkisto. Zenodosta löydät tietovarantoja, mutta myös esim. esipainoksia, analyysiprotokollia, muistiinpanoja, kuvia, sekä paljon muuta. Zenodo-palveluun ei tarvitse kirjautua, mutta voit laatia oman kirjautumisprofiilisi jos aiot myöhemmin itse julkaista tietovarantoja tai muuta aiheellista palvelussa. Zenodon käyttö on ilmaista.</p>
 <p>Zenodon etusivun ylälaidassa löytyy hakukenttä. Haun jälkeen voit rajata hakua käyttöoikeuksilla, tiedostotyypeillä, avainsanoilla ja julkaisutyypillä.</p>
 <p>Esimerkkinä toimii <a href="https://zenodo.org/record/1406207">“Dataset for: Thermal characterization of firebrand piles”</a>.</p>
 <div id="fig-zenodo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/zenodo.png" class="img-fluid figure-img" alt="Tietovaranto 'Dataset for: Thermal characterization of firebrand piles' Zenodo-palvelussa. Linkki tietovarantoon: https://zenodo.org/record/1406207"></p>
-<figcaption class="figure-caption">Kuva&nbsp;22.3: Tietovaranto “Dataset for: Thermal characterization of firebrand piles” Zenodo-palvelussa.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;23.3: Tietovaranto “Dataset for: Thermal characterization of firebrand piles” Zenodo-palvelussa.</figcaption>
 </figure>
 </div>
 <p>Tietovarannon sivulta voit tarkastaa tekijät, abstraktin sekä rahoittajainfon. Sivulta löytyy myös julkaisutietoja ja lisenssi, josta voit päätellä, saatko käyttää materiaalia vai et. Zenodossa käytetään pääsääntöisesti avoimia lisenssejä, mutta tarkista aina kyseisen tietovarannon lisenssi varmuuden vuoksi.</p>
-<p>Zenodo on yleinen tietoarkisto, joten sisältö voi vaihdella suurestikin eri tietovarantojen välillä. Sivulta löytyy kuitenkin yleensä kuvaus tietovarannosta, esimerkki viitteestä sekä kansiorakenne ladattavista tiedostoista. Tiedostot voivat olla hyvin vaihtelevissa muodoissa, joten tarkista kansiorakenteesta, pystytkö edes avaamaan ne Excelissä tai muussa ohjelmistossa!</p>
+<p><u>Zenodo on yleinen tietoarkisto</u>, joten sisältö voi vaihdella suurestikin eri tietovarantojen välillä. Sivulta löytyy kuitenkin yleensä kuvaus tietovarannosta, esimerkki viitteestä sekä kansiorakenne ladattavista tiedostoista. Tiedostot voivat olla hyvin vaihtelevissa muodoissa, joten tarkista kansiorakenteesta, pystytkö edes avaamaan ne Excelissä tai muussa ohjelmistossa!</p>
 <p>Esimerkkitietovarannossa tiedot näyttävät löytyvän kahdessa eri muodossa: <code>.csv</code>- sekä <code>.mat</code>-tiedostoina. CSV-tiedostot ovat Excelissä luettavia, mutta MAT-tiedostot toimivat ainoastaan MATLAB-ohjelmistossa.</p>
-<p>Jos haluat ladata tiedoston Zenodosta, löydät sen “Files”-alueelta kansioston alta. “Preview”-napilla näet mitä lataat, ja “Download”-napilla lataat tiedoston tietokoneellesi.</p>
-<p>Zenodon hyvä puoli on sen joustavuus ja erittäin laaja skaala - sieltä löytyy vaikka mitä dataa. Huonona puolena on laadunvarmistaminen: tietovarannon ei tarvitse olla laadukkaasti kerätty, eikä metadataa tarvitse löytyä melkein ollenkaan. Tarkista aina ensin tietovarannon ilmoittamasta julkaisuviitteestä, saatko tarpeeksi tietoa irti tietovarannon keräysmenetelmistä jotta pystyt luotettavasti käyttämään sitä. Sinulla on tutkijana vastuu käytetyn tutkimustiedon oikeellisuudesta, <em>vaikka</em> jokin kolmas osapuoli olisi kerännyt tiedon! Et voi siis vedota toisiin tekijöihin jos julkaiset tutkimuksen käyttäen tietoa, joka osoittautuukin vääräksi tai valheelliseksi.</p>
+<p><u>Jos haluat ladata tiedoston Zenodosta</u>, löydät sen “Files”-alueelta kansioston alta. “Preview”-napilla näet mitä lataat, ja “Download”-napilla lataat tiedoston tietokoneellesi.</p>
+<p><u>Zenodon hyvä puoli on sen joustavuus ja erittäin laaja skaala</u> - sieltä löytyy vaikka mitä dataa. Huonona puolena on laadunvarmistaminen: tietovarannon ei tarvitse olla laadukkaasti kerätty, eikä metadataa tarvitse löytyä melkein ollenkaan. Tarkista aina ensin tietovarannon ilmoittamasta julkaisuviitteestä, saatko tarpeeksi tietoa irti tietovarannon keräysmenetelmistä jotta pystyt luotettavasti käyttämään sitä. Sinulla on tutkijana vastuu käytetyn tutkimustiedon oikeellisuudesta, <em>vaikka</em> jokin kolmas osapuoli olisi kerännyt tiedon! Et voi siis vedota toisiin tekijöihin jos julkaiset tutkimuksen käyttäen tietoa, joka osoittautuukin vääräksi tai valheelliseksi.</p>
 
 
 </section>
@@ -632,16 +618,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./dmptuuli.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./zotero.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

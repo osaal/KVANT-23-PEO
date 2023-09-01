@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 15&nbsp; Yleisiä toimintoja Excelissä</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 16&nbsp; Yleisiä toimintoja Excelissä</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -66,243 +66,233 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 16&nbsp; Yleisiä toimintoja Excelissä">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./yleisiätoimintoja.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./yleisiätoimintoja.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
   </div>
 </li>
     </ul>
@@ -315,13 +305,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-toiminto01" id="toc-sec-toiminto01" class="nav-link active" data-scroll-target="#sec-toiminto01"><span class="header-section-number">15.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</a></li>
-  <li><a href="#sec-toiminto02" id="toc-sec-toiminto02" class="nav-link" data-scroll-target="#sec-toiminto02"><span class="header-section-number">15.2</span> Hae kaikkien muuttujien nimet riveihin</a></li>
-  <li><a href="#sec-toiminto03" id="toc-sec-toiminto03" class="nav-link" data-scroll-target="#sec-toiminto03"><span class="header-section-number">15.3</span> Laske muuttujan ryhmien määrä (k)</a></li>
-  <li><a href="#sec-toiminto04" id="toc-sec-toiminto04" class="nav-link" data-scroll-target="#sec-toiminto04"><span class="header-section-number">15.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</a></li>
-  <li><a href="#sec-toiminto05" id="toc-sec-toiminto05" class="nav-link" data-scroll-target="#sec-toiminto05"><span class="header-section-number">15.5</span> Laske N yhdelle muuttujan kategorialle</a></li>
-  <li><a href="#sec-toiminto06" id="toc-sec-toiminto06" class="nav-link" data-scroll-target="#sec-toiminto06"><span class="header-section-number">15.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</a></li>
-  <li><a href="#sec-toiminto07" id="toc-sec-toiminto07" class="nav-link" data-scroll-target="#sec-toiminto07"><span class="header-section-number">15.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</a></li>
+  <li><a href="#sec-toiminto01" id="toc-sec-toiminto01" class="nav-link active" data-scroll-target="#sec-toiminto01"><span class="header-section-number">16.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</a></li>
+  <li><a href="#sec-toiminto02" id="toc-sec-toiminto02" class="nav-link" data-scroll-target="#sec-toiminto02"><span class="header-section-number">16.2</span> Hae kaikkien muuttujien nimet</a></li>
+  <li><a href="#sec-toiminto03" id="toc-sec-toiminto03" class="nav-link" data-scroll-target="#sec-toiminto03"><span class="header-section-number">16.3</span> Laske muuttujan ryhmien määrä (k)</a></li>
+  <li><a href="#sec-toiminto04" id="toc-sec-toiminto04" class="nav-link" data-scroll-target="#sec-toiminto04"><span class="header-section-number">16.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</a></li>
+  <li><a href="#sec-toiminto05" id="toc-sec-toiminto05" class="nav-link" data-scroll-target="#sec-toiminto05"><span class="header-section-number">16.5</span> Laske N yhdelle muuttujan kategorialle</a></li>
+  <li><a href="#sec-toiminto06" id="toc-sec-toiminto06" class="nav-link" data-scroll-target="#sec-toiminto06"><span class="header-section-number">16.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</a></li>
+  <li><a href="#sec-toiminto07" id="toc-sec-toiminto07" class="nav-link" data-scroll-target="#sec-toiminto07"><span class="header-section-number">16.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -330,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-yleisiä-toimintoja-excelissä" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></h1>
+<h1 class="title"><span id="sec-yleisiä-toimintoja-excelissä" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></h1>
 </div>
 
 
@@ -345,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Tällä sivulla esitetään yleisiä toimintoja ja menetelmiä Excelissä. Luettavuuden kannalta jokaisen funktion sulun sisältö on ympäröity välilyönnellä: <code>( tekstiä ( lisää tekstiä ))</code> Tämä ei ole tarpeellista Excelissä omassa työssäsi. Joissain tilanteissä tämä voi myös rikkoa laskukaavan, eli ole varovainen näiden kanssa!</p>
+<p>Tästä luvusta löytyy yleisiä toimintoja ja menetelmiä Excelissä. Luettavuuden kannalta olen ympäröinyt jokaisen funktion sulun sisällön välilyönnellä: <code>( tekstiä ( lisää tekstiä ))</code> Tämä ei ole tarpeellista Excelissä omassa työssäsi. Joissain tilanteissä tämä voi myös rikkoa laskukaavan, tarkista aina toimivuus omalla koneellasi.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -356,18 +346,19 @@ Wordin lainausmerkit eivät toimi Excelissä
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta (“). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta (”). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa.</p>
+<p>Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta (“). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta (”). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa. Lisätietoja lainausmerkkien eroista löydät esimerkiksi tästä <a href="https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html">Markus Kuhnin kirjoittamasta</a> verkkoartikkelista.</p>
 <p>Koska Excelissä voi olla hankalaa kirjoittaa pitkiä kaavoja, voi joskus kuitenkin olla tarpeen kirjoittaa kaavat ensin jossain tekstinkäsittelyohjelmassa ja sitten kopioida ne Exceliin. Suosittelen tähän <strong>Muistio</strong>-ohjelmaa (<em>Notepad</em>), mikä löytyy Windows-käyttöjärjestelmästä valmiina. Jos käytät Mac OS X- tai Linux-käyttöjärjestelmiä, voit käyttää jotain toista raakatekstin käsittelyohjelmaa. Älä kuitenkaan käytä ohjelmia, joissa tekstiä automaattisesti formatoidaan ohjelman puolesta - näissä voi esiintyä samoja ongelmia kuin Excelin ja Wordin välillä.</p>
+<p>Toinen suositeltava tapa on laajentaa funktioalue tarpeeksi suureksi, että voit rivittää funktiot ja siten nähdä niiden sisäiset osiot.</p>
 </div>
 </div>
-<section id="sec-toiminto01" class="level2 page-columns page-full" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-toiminto01"><span class="header-section-number">15.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</h2>
+<section id="sec-toiminto01" class="level2 page-columns page-full" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="sec-toiminto01"><span class="header-section-number">16.1</span> Suodata pois rivit, joissa yhdellä tai useammalla muuttujalla on tyhjiä arvoja</h2>
 <p>Jos tarvitset poistaa kaikki epätäydelliset rivit jotain analyysia varten, voit käyttää seuraavan tapaista kaavaa:</p>
 <p><code>=SUODATA( alue; ( Muuttuja1 &lt;&gt; "" ) * ( Muuttuja2 &lt;&gt; "" ) * ( ... ))</code></p>
-<p><u>Jokainen muuttujan tyhjien poisto määritellään sulkujen sisällä</u>, muodossa <code>(Muuttuja &lt;&gt; "")</code>. Merkkijono <code>&lt;&gt;</code> on boolen logiikkaa, ja tarkoittaa samaa kuin “ei ole yhtä kuin”. Merkkijono <code>""</code> esittää tyhjää solua, eli lainausmerkkien välillä ei ole mitään sisältöä. Toisin sanoen, jokainen suodatusehto sanoo “Valitse ne rivit, joiden arvo muuttujalla X ei ole yhtä kuin tyhjä merkki.</p>
-<p><u>Voit määritellä niin monta ehtomuuttujaa kuin haluat</u>. Ne lisätään peräkkäin ja kerrotaan yhteen (<code>*</code>). Tämä käytännössä toimii samalla tavalla kuin boolen logiikan <code>JA</code>-toiminto, eli kertominen määrittelee, että kaikkien ehtojen tulee täyttyä jotta rivi otetaan mukaan.</p>
-<div class="page-columns page-full"><p><u>Suodatus kannattaa aina tehdä tarpeen mukaan</u>. Jos mahdollista, kannattaa myös käyttää SUODATA-funktiota suoraan seuraavan analyysin funktion sisällä. Monet funktiot eivät nimittäin osaa tulkita SUODATA-funktion tuloksia oikein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Ongelma liittyy dynaamisiin matriisikaavoihin ja levittyineisiin matriiseihin, jotka voivat olla hankalia ymmärtää. Jos haluat lukea lisää, tietoa löytyy <a href="https://support.microsoft.com/fi-fi/office/dynaamiset-matriisikaavat-ja-levittyneen-matriisin-toiminta-205c6b06-03ba-4151-89a1-87a7eb36e531">Microsoftin apusivuilta</a>.</p></li></div></div>
-<p><u>Funktio ei osaa käsitellä virhearvoa <code>#TYHJÄ!</code>.</u> Jos syötät alueen, jossa kyseinen virhearvo esiintyy, funktio palauttaa <code>#TYHJÄ!</code>-virheen (engl. <code>#NULL!</code>). Muuta ensin alueen virhearvot joksin muuksi arvoksi (esim. <code>""</code> eli oikeasti tyhjä solu; ks. <a href="#sec-toiminto07"><span>Alaluku&nbsp;15.7</span></a>), ja suodata sitten tämä tulos.</p>
+<p><u>Jokainen muuttujan rivipoisto määritellään omissa suluissa</u>, muodossa <code>(Muuttuja &lt;&gt; "")</code>. Merkkijono <code>&lt;&gt;</code> on Boolen logiikkaa, ja tarkoittaa samaa kuin “ei ole yhtä kuin” (ks. <a href="excelinperusteet.html#sec-arvojen-manipulointi-excelissä"><span>Alaluku&nbsp;13.2</span></a>). Merkkijono <code>""</code> esittää tyhjää solua, eli lainausmerkkien välillä ei ole mitään sisältöä. Toisin sanoen, jokainen suodatusehto sanoo “Valitse ne rivit, joiden arvo muuttujalla X ei ole yhtä kuin tyhjä merkki.</p>
+<p><u>Voit määritellä niin monta ehtomuuttujaa kuin haluat</u>. Ne lisätään peräkkäin ja kerrotaan yhteen (<code>*</code>). Tämä käytännössä toimii samalla tavalla kuin Boolen logiikan <code>JA</code>-toiminto: kertominen määrittelee, että kaikkien ehtojen tulisi täyttyä jotta rivi otetaan mukaan.</p>
+<div class="page-columns page-full"><p><u>Suodatus kannattaa aina tehdä tarpeen mukaan</u>. Jos mahdollista, kannattaa myös käyttää <code>SUODATA</code>-funktiota suoraan seuraavan analyysin funktion sisällä. Monet funktiot eivät nimittäin osaa tulkita <code>SUODATA</code>-funktion tuloksia oikein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Ongelma liittyy dynaamisiin matriisikaavoihin ja levittyineisiin matriiseihin, jotka voivat olla hankalia ymmärtää. Jos haluat lukea lisää, tietoa löytyy <a href="https://support.microsoft.com/fi-fi/office/dynaamiset-matriisikaavat-ja-levittyneen-matriisin-toiminta-205c6b06-03ba-4151-89a1-87a7eb36e531">Microsoftin apusivuilta</a>.</p></li></div></div>
+<p><u>Funktio ei osaa käsitellä virhearvoa <code>#TYHJÄ!</code>.</u> Jos syötät alueen, jossa kyseinen virhearvo esiintyy, funktio palauttaa <code>#TYHJÄ!</code>-virheen (engl. <code>#NULL!</code>). Muuta ensin alueen virhearvot joksin muuksi arvoksi (esim. <code>""</code> eli oikeasti tyhjä solu; ks. <a href="#sec-toiminto07"><span>Alaluku&nbsp;16.7</span></a>), ja suodata sitten tämä tulos.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -378,28 +369,28 @@ Tärkeää
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jos suodatuksen jälkeen riveillä vielä on tyhjiä soluja jossain (eli ei olla vaadittu täydellistä datamatriisia), SUODATA-funktio täyttää nämä arvolla <code>0</code>. Jos yrität suodattaa tätä tulosta uudelleen yllä olevalla tavalla, funktio ei enää löydä tyhjiä soluja jotka täyttäisivät ehdot - nolla-arvo ei ole sama asia kuin tyhjä arvo.</p>
+<p>Jos suodatuksen jälkeen riveillä vielä on tyhjiä soluja jossain (eli ei olla vaadittu täydellistä datamatriisia), <code>SUODATA</code>-funktio täyttää nämä arvolla <code>0</code>. Jos yrität suodattaa tämän tuloksen uudelleen yllä olevalla tavalla, funktio ei enää löydä tyhjiä soluja jotka täyttäisivät ehdot - nolla-arvo ei ole sama asia kuin tyhjä arvo. <u>Peräkkäisiä tyhjien arvojen suodatuksia ei siis oikein voi tehdä</u>, parempi on aina käyttää vain yhtä <code>SUODATA</code>-funktiota kerralla.</p>
 </div>
 </div>
 </section>
-<section id="sec-toiminto02" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="sec-toiminto02"><span class="header-section-number">15.2</span> Hae kaikkien muuttujien nimet riveihin</h2>
-<p>Jos haluat kaikki muuttujasi nimet erillisille rivelle, esimerkiksi sijantilukutaulukkoa varten, voit käyttää seuraavaa kaavaa:</p>
+<section id="sec-toiminto02" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="sec-toiminto02"><span class="header-section-number">16.2</span> Hae kaikkien muuttujien nimet</h2>
+<p>Jos haluat kaikki muuttujasi nimet, esimerkiksi sijantilukutaulukkoa varten, voit käyttää seuraavaa kaavaa:</p>
 <p><code>=TRANSPONOI( AINUTKERTAISET.ARVOT( VALITSERIVIT( taulukko; 1 )))</code></p>
 <p><u>Jotta toiminto toimisi</u>, sinun tulee ensin varmistaa seuraavat asiat:</p>
 <ul>
 <li><p>Datamatriisin ensimmäisellä rivillä on muuttujien nimet.</p></li>
 <li><p>Jos olet määritellyt nimen koko datamatriisille, varmista että määrittely <em>sisältää</em> nimirivin.</p></li>
 </ul>
-<p>Kaava valitsee ensin ensimmäisen rivin datamatriisista (<code>VALITSERIVIT(taulukko; 1)</code>). Sen jälkeen haetaan kaikki uniikit arvot tältä riviltä (<code>AINUTKERTAISET.ARVOT()</code>). Viimeiseksi tämä rivi transponoidaan sarakemuotoon (<code>TRANSPONOI()</code>).</p>
-<p><u>Jos haluat pitää muuttujien nimet rivillä</u> (eli jakaa ne sarakkeisiin, niin kuin ovat datamatriisissa), jätä pois <code>TRANSPONOI</code>-funktio.</p>
+<p>Kaava valitsee ensin ensimmäisen rivin datamatriisista (<code>VALITSERIVIT(taulukko; 1)</code>). Sen jälkeen haetaan kaikki uniikit arvot tältä riviltä (<code>AINUTKERTAISET.ARVOT()</code>). Viimeiseksi tämä rivi transponoidaan sarakemuotoon (<code>TRANSPONOI()</code>), jolloin jokaisen muuttujan nimi tulee omalle riville yhteen sarakkeeseen.</p>
+<p><u>Jos haluat pitää muuttujien nimet yhdellä rivillä</u> (eli jakaa ne sarakkeisiin, niin kuin ovat datamatriisissa), jätä pois <code>TRANSPONOI</code>-funktio.</p>
 </section>
-<section id="sec-toiminto03" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="sec-toiminto03"><span class="header-section-number">15.3</span> Laske muuttujan ryhmien määrä (k)</h2>
+<section id="sec-toiminto03" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="sec-toiminto03"><span class="header-section-number">16.3</span> Laske muuttujan ryhmien määrä (k)</h2>
 <p>Jos haluat laskea, kuinka monta uniikkia ryhmää muuttujassa on, voit käyttää kaavaa:</p>
 <p><code>=LASKE.A( AINUTKERTAISET.ARVOT( VALITSESARAKKEET( alue; sarakenumero )))</code></p>
-<p>Kaava valitsee ensin sarakkeen <code>VALITSESARAKKEET(alue; sarakenumero)</code>. Jos sinulla on valmiiksi nimetty sarake, voit korvata koko tämän osuuden sarakkeen nimellä (katso alla). Seuraavaksi kaava hakee kaikki uniikit arvot sarakkeesta <code>AINUTKERTAISET.ARVOT()</code>. Viimeiseksi kaavassa lasketaan, kuinka monta uniikkia arvoa esiintyi <code>LASKE.A()</code>.</p>
-<p><u>Kaava toimii myös ei-numeroiden määrän laskemisessa</u>, <code>LASKE.A()</code>-funktion avulla.</p>
+<p>Kaava valitsee ensin sarakkeen funktiolla <code>VALITSESARAKKEET(alue; sarakenumero)</code>. Jos sinulla on valmiiksi nimetty sarake, voit korvata koko tämän osuuden sarakkeen nimellä (katso alla). Seuraavaksi kaava hakee kaikki uniikit arvot sarakkeesta funktiolla <code>AINUTKERTAISET.ARVOT()</code>. Viimeiseksi kaavassa lasketaan, kuinka monta uniikkia arvoa esiintyi funktiolla <code>LASKE.A()</code>.</p>
+<p><u>Kaava toimii myös ei-numeroiden määrän laskemisessa</u>, <code>LASKE.A()</code>-funktion avulla. Jos funktion kanssa esiintyy ongelmia, tai jos haluat laskea vain numeroiden määrän, käytä funktion sijaan <code>LASKE()</code>-funktiota.</p>
 <p><u>Jos olet jo määritellyt sarakkeen nimen</u>, käytä tätä kaavaa:</p>
 <p><code>=LASKE.A(AINUTKERTAISET.ARVOT(sarakenimi))</code></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -412,37 +403,37 @@ Tärkeää
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>VALITSESARAKKEET-funktio toimii sarakkeen numerolla, ei nimellä tai kirjaimella!</p>
+<p><code>VALITSESARAKKEET</code>-funktio toimii sarakkeen numerolla, ei nimellä tai kirjaimella!</p>
 </div>
 </div>
 </section>
-<section id="sec-toiminto04" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="sec-toiminto04"><span class="header-section-number">15.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</h2>
+<section id="sec-toiminto04" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="sec-toiminto04"><span class="header-section-number">16.4</span> Hae muuttujan uniikit arvot suuruusjärjestykseen riveihin tai sarakkeisiin</h2>
 <p>Jos haluat listata muuttujan kaikki uniikit arvot nousevassa järjestyksessä, voit käyttää kaavoja:</p>
 <ul>
 <li><p>Riveihin: <code>=LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )</code></p></li>
 <li><p>Sarakkeisiin: <code>=TRANSPONOI( LAJITTELE( AINUTKERTAISET.ARVOT( alue ) ; ; 1 )</code></p></li>
 </ul>
-<p>Ensin kaava hakee kaikki uniikit arvot alueelta <code>AINUTKERTAISET.ARVOT()</code>. Seuraavaksi ne lajitellaan funktiolla <code>LAJITTELE()</code>. Tässä funktiossa on tärkeää muistaa <strong>kaksi</strong> puolipilkkua: ensimmäisenä argumenttina syötetään lajiteltava matriisi. Toinen argumentti määrittelee lajitteluindeksin, mutta sitä emme tarvitse tässä, joten jätämme sen tyhjäksi. Kolmas argumentti määrittelee lajittelujärjestyksen, ja se me haluamme määritellä arvoksi <code>1</code>, eli nousevaan järjestykseen.</p>
+<p>Kaava hakee ensin kaikki uniikit arvot määritetyltä alueelta funktiolla <code>AINUTKERTAISET.ARVOT()</code>. Seuraavaksi arvot lajitellaan funktiolla <code>LAJITTELE()</code>. Tässä funktiossa on tärkeää muistaa <strong>kaksi</strong> puolipilkkua. Ensimmäisenä argumenttina syötetään lajiteltava matriisi. Toinen argumentti määrittelee lajitteluindeksin, mutta sitä emme tarvitse tässä, joten jätämme sen tyhjäksi. Kolmas argumentti määrittelee lajittelujärjestyksen, ja se me haluamme määritellä arvoksi <code>1</code>, eli nousevaan järjestykseen.</p>
 <p><u>Voit vaihtaa järjestyksen</u> nousevan <code>1</code> ja laskevan <code>-1</code> välillä vapaasti.</p>
 </section>
-<section id="sec-toiminto05" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="sec-toiminto05"><span class="header-section-number">15.5</span> Laske N yhdelle muuttujan kategorialle</h2>
-<p>Jos haluat laskea muuttujan kategorian määrän, voit käyttää kaavaa:</p>
+<section id="sec-toiminto05" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="sec-toiminto05"><span class="header-section-number">16.5</span> Laske N yhdelle muuttujan kategorialle</h2>
+<p>Jos haluat laskea muuttujan kategorian/ryhmän arvopisteiden määrän, voit käyttää kaavaa:</p>
 <p><code>=LASKE.A( SUODATA( muuttuja; muuttuja = arvo ) )</code></p>
-<p>Kaava suodattaa ensin muuttuja-alueen arvon mukaan <code>SUODATA()</code>, jonka jälkeen se laskee, kuinka monta arvoa suodatetussa muuttujassa on jäljellä <code>LASKE.A()</code>.</p>
-<p><u>Kaava toimii myös tekstin kanssa</u> <code>LASKE.A()</code>-funktion ansiosta.</p>
+<p>Kaava suodattaa ensin muuttuja-alueen arvon mukaan funktiolla <code>SUODATA()</code>, jonka jälkeen se laskee, kuinka monta arvoa suodatetussa muuttujassa on jäljellä funktiolla <code>LASKE.A()</code>.</p>
+<p><u>Kaava toimii myös tekstin kanssa</u> <code>LASKE.A()</code>-funktion ansiosta. Valinnaisesti voit laskea vain numeroarvot funktiolla <code>LASKE()</code>.</p>
 </section>
-<section id="sec-toiminto06" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="sec-toiminto06"><span class="header-section-number">15.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</h2>
+<section id="sec-toiminto06" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="sec-toiminto06"><span class="header-section-number">16.6</span> Laske N muuttujan kaikille kategorioille suuruusjärjestyksessä</h2>
 <p>Jos haluat laskea <strong>kaikkien</strong> muuttuja-arvojen määrät, voit käyttää seuraavaa kahta kaavaa:</p>
 <ul>
 <li><p>Ensimmäinen solu: <code>=LAJITTELE( AINUTKERTAISET.ARVOT( muuttuja-alue ) ; ; 1 )</code></p></li>
-<li><p>Toinen solu, ensimmäisen solun oikealla: <code>=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )</code></p></li>
+<li><p>Toinen solu, ensimmäisen solun oikealla puolella: <code>=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )</code></p></li>
 </ul>
-<p>Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. LUKU).</p>
-<p>Toisessa solussa käytetään <code>TAAJUUS</code>-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. “sukupuoli” tai eksplisiittinen viittaus, esim C2:C105) kuin ensimmäisen solun kaavassa.</p>
-<p><code>TAAJUUS</code>-funktion toisena argumenttina käytämme ensimmäistä funktiota, mutta huomaa risuaidan <code>#</code> lisääminen soluviittauksen loppuun. Tämä kertoo Excelille, että soluviittaus on levitetty matriisialue, ei yksittäinen solu, jolloin Excel toimittaa funktion jokaiselle matriisissa määritetylle arvolle, ei vain yhdelle. Jos esimerkiksi ensimmäisen solun osoite on C2, kirjoita <code>C2#</code>.</p>
+<p>Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. <a href="#sec-toiminto04"><span>Alaluku&nbsp;16.4</span></a>).</p>
+<p>Toisessa solussa käytetään <code>TAAJUUS</code>-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. “sukupuoli” tai suora osoite, esim C2:C105) kuin ensimmäisen solun kaavassa.</p>
+<p><code>TAAJUUS</code>-funktion toisena argumenttina käytämme ensimmäisen funktion palautusta, mutta huomaa risuaidan <code>#</code> lisääminen soluviittauksen loppuun. Tämä kertoo Excelille, että soluviittaus on levitetty matriisialue, ei yksittäinen solu, jolloin Excel toimittaa funktion jokaiselle matriisissa määritetylle arvolle, ei vain yhdelle. Jos esimerkiksi ensimmäisen solun osoite on <code>C2</code>, kirjoita <code>C2#</code>.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -453,18 +444,23 @@ Tärkeää
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>TAAJUUS</code>-funktio tuottaa aina yhden solun enemmän kuin mitä sille syötettiin: esimerkiksi jos kategorioita on viisi, funktio palauttaa kuusi solua. Viimeinen solu sisältää määrän kaikista arvoista, jotka ylittävät suurimman määritetyn arvon. Tämä tuki löytyy, koska <code>TAAJUUS</code>-funktiota voi myös käyttää rakentaakseen kategorioita kvantitatiivisesta muuttujasta, jolloin kategoriat eivät välttämättä kata koko jakauman pituutta.</p>
-<p>Jos raportoit kategorisen muuttujan määriä, jätä pois viimeinen tyhjä solu, koska sitä ei ole mahdollista saada arvoksi.</p>
+<p><code>TAAJUUS</code>-funktio tuottaa aina yhden solun enemmän kuin mitä sille syötettiin: esimerkiksi jos kategorioita on viisi, funktio palauttaa kuusi solua. Viimeinen solu sisältää määrän kaikista arvoista, jotka ylittävät suurimman määritetyn arvon. Kvalitatiiviselle muuttujalle (jossa kategoriat ovat määriteltyjä) tämä arvo on aina <code>0</code>.</p>
+<p>Tämä tuki löytyy, koska <code>TAAJUUS</code>-funktiota voi myös käyttää rakentaakseen kategorioita kvantitatiivisesta muuttujasta, jolloin kategoriat eivät välttämättä kata koko jakauman pituutta.</p>
+<p>Jos raportoit kategorisen muuttujan määriä, jätä pois viimeinen <code>0</code>-solu, koska sitä ei ole mahdollista saada arvoksi.</p>
 </div>
 </div>
 </section>
-<section id="sec-toiminto07" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="sec-toiminto07"><span class="header-section-number">15.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</h2>
+<section id="sec-toiminto07" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="sec-toiminto07"><span class="header-section-number">16.7</span> Muuta kaikki virheelliset arvot tyhjiksi soluiksi</h2>
 <p>Jos sinulla on virhearvoja data-alueellasi (esim. <code>#TYHJÄ!</code>, <code>#JAKO/0!</code>), useimmat kaavat eivät toimi alueen kanssa. Silloin sinun kannattaa tehdä uusi muuttuja data-alueellesi, jonka soluihin syötät seuraavan kaavan:</p>
 <p><code>=JOS( ONLUKU (solu) ; solu ; "" )</code></p>
-<p>Kaava tarkistaa, onko tarkistettu solu luku (muuta tämä <code>ONTEKSTI</code>-funktioksi, jos suodatat tekstiä). Jos se on luku, kaava palauttaa alkuperäisen solun arvon. Jos ei ole luku (esim. virhearvo), kaava palauttaa tyhjän solun <code>""</code>.</p>
-<p>Lisää kaava ensimmäiseen soluun ja levitä se kaikkien rivien yli vetotoiminnolla.</p>
+<p>Kaava tarkistaa, onko tarkistettu solu luku (muuta tämä <code>ONTEKSTI</code>-funktioksi, jos suodatat tekstiä). Jos se on luku, kaava palauttaa alkuperäisen solun arvon. Jos ei ole luku (esim. virhearvo), kaava palauttaa tyhjän solun <code>""</code>. Voit myös määritellä toisen palautusarvon, jos et halua käyttää tyhjää solua (esim. <code>999</code>).</p>
+<p><u>Lisää kaava ensimmäiseen soluun</u> ja levitä se kaikkien rivien yli vetotoiminnolla.</p>
 <p>Voit halutessasi vaihtaa palautettavan arvon, jos Excel ei löydä lukua. Useimmiten kuitenkin tyhjä solu on helposti käsiteltävissä (esim. <code>ONTYHJÄ</code>-funktiolla), joten sen käyttö voi olla suositeltavaa, etteivät arvot mene sekaisin analyysissa.</p>
+<p>Toiminnon voi myös automatisoida koko datajärjestykselle käyttämällä <code>BYROW</code>-funktiota ja LAMBDA-rakennetta. Kaava näyttää seuraavalta:</p>
+<p><code>=BYROW( muuttuja; LAMBDA( x; JOS( ONLUKU( x ); x; "" ) ) )</code></p>
+<p><code>BYROW</code>-funktio suorittaa määritetyn LAMBDA-funktion tietyn alueen jokaiselle riville - tämä vastaa manuaalista kaavan lisäämistä jokaiselle riville. <code>LAMBDA</code>-funktiossa määritetään sisääntulevan datan nimi (<code>x</code>). Sen lisäksi määritetään, mitä sille tulisi tehdä, eli aikaisempi <code>JOS</code>-rakenne.</p>
+<p><code>BYROW</code>-rakenne palauttaa yhtä monta riviä kuin alkuperäisessä on. Tämä tarkoittaa myös tyhjiä rivejä niille riveille, jotka eivät täytä <code>JOS</code>-funktion vaatimuksia.</p>
 
 
 </section>
@@ -707,16 +703,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./nimeäminenexcelissä.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./excelgrafiikka.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
