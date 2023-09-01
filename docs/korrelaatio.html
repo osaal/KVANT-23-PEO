@@ -441,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-korrelaatiokertoimen-laskeminen" class="level2 page-columns page-full" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="sec-korrelaatiokertoimen-laskeminen"><span class="header-section-number">11.3</span> Korrelaatiokertoimen laskeminen</h2>
-<p>Kaikille näille laskuille löytyy valmiit LAMBDA-kaavat (<a href="lambdakaavat.html"><span>Luku&nbsp;18</span></a>).</p>
+<p>Kaikille näille laskuille löytyy valmiit LAMBDA-kaavat (<a href="lambdakaavat.html"><span>Luku&nbsp;19</span></a>).</p>
 <p><u>Kovarianssi standardisoidaan</u> jakamalla se molempien muuttujien keskihajonnan kertomalla. Matemaattisella yksinkertaistamisella kaavasta tulee:</p>
 <p><span id="eq-korr-2"><span class="math display">\[
 r = \frac{\text{Cov}} {s_x s_y} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {(n-1) s_x s_y}
@@ -476,7 +476,7 @@ r = \frac{e^{2z_r}-1}{e^{2z_r}+1}
 <p><u>Korrelaatiokertoimen voi onneksi laskea hyvin yksinkertaisesti Excelissä</u> yhdellä kaavalla:</p>
 <p><code>PEARSON(matriisi1; matriisi2)</code></p>
 <p>Määrittele vain, mitkä matriisit sinulla on käytössä.</p>
-<p><u>Valitettavasti kertoimen merkitsevyyden tarkistaminen taas ei ole implementoitu Excelissä</u>. Käytä valmiita LAMBDA-kaavoja (<a href="lambdakaavat.html"><span>Luku&nbsp;18</span></a>) laskeaksesi kertoimen p-arvon t-muunnoksen avulla.</p>
+<p><u>Valitettavasti kertoimen merkitsevyyden tarkistaminen taas ei ole implementoitu Excelissä</u>. Käytä valmiita LAMBDA-kaavoja (<a href="lambdakaavat.html"><span>Luku&nbsp;19</span></a>) laskeaksesi kertoimen p-arvon t-muunnoksen avulla.</p>
 <p>LAMBDA-kaavoina löytyy myös <span class="math inline">\(r\)</span>-arvon z-muunnoksen tekemiseksi sekä <span class="math inline">\(z_r\)</span>-arvon muuntamiseksi takaisin <span class="math inline">\(r\)</span>-arvoksi. Käytä näitä laskeaksesi luottamusvälin valitsemallasi alfatasolla.</p>
 <p><u>Huomaa, että tarvitset neljä listattua LAMBDA-funktiota tähän</u>: z-arvon lasku, keskivirheen lasku, luottamusvälin lasku, sekä lasku, joka muuntaa z-arvon takaisin r-arvoksi.</p>
 <p><u>Huomaa myös, että luottamusvälin laskukaava (<code>KORR.Z.CI</code>) palauttaa kaksirivisen matriisin</u> - ensimmäinen arvo on luottamusvälin yläraja, toinen arvo on alaraja. Jos tarvitset luottamusvälin sarakkeisiin rivien sijaan, laita funktio <code>TRANSPONOI</code>-funktion sisälle.</p>

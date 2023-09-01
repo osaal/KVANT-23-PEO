@@ -474,12 +474,12 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Yksi muuttuja</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Kaksi muuttujaa (samat yksiköt)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Kaksi muuttujaa (eri yksiköt)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell">
+<div class="cell" width="80%">
 <div class="cell-output-display">
 <div id="fig-t-yhden-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-1.png" class="img-fluid figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-1.png" style="width:8.27in;height:2.64in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.2: Yhden otoksen testin valitseminen</figcaption>
 </figure>
@@ -488,12 +488,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
+<div class="cell" width="80%">
 <div class="cell-output-display">
 <div id="fig-t-kahden-sama-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-3.png" class="img-fluid figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-3.png" style="width:8.61in;height:2.64in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.3: Kahden muuttujan testin valitseminen, kun yksiköt ovat samoja</figcaption>
 </figure>
@@ -502,12 +502,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell">
+<div class="cell" width="80%">
 <div class="cell-output-display">
 <div id="fig-t-kahden-eri-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-2.png" class="img-fluid figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-2.png" style="width:13.52in;height:3.72in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.4: Kahden muuttujan testin valitseminen, kun yksiköt ovat eri</figcaption>
 </figure>
@@ -569,7 +569,7 @@ r = \sqrt{\frac{t^2}{t^2+\text{df}}}
 <p><span id="eq-t-7"><span class="math display">\[
 \hat{d}_D = \frac{\hat{d}}{\sqrt{1-r}}
 \tag{10.7}\]</span></span></p>
-<p>jossa <span class="math inline">\(r\)</span> on mittausten yhteiskorrelaatio (ks. <a href="korrelaatio.html"><span>Luku&nbsp;10</span></a>).</p>
+<p>jossa <span class="math inline">\(r\)</span> on mittausten yhteiskorrelaatio (ks. <a href="korrelaatio.html"><span>Luku&nbsp;11</span></a>).</p>
 </section>
 <section id="sec-t-testin-laskeminen-excelissä" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="sec-t-testin-laskeminen-excelissä"><span class="header-section-number">10.6</span> T-testin laskeminen Excelissä</h2>
@@ -582,10 +582,10 @@ r = \sqrt{\frac{t^2}{t^2+\text{df}}}
 <li><p><code>Laji</code>-parametrilla määrittelet, teetkö parittaisen <code>1</code>, kahden otoksen homoskedastisen <code>2</code> vai kahden otoksen heteroskedastisen <code>3</code> t-testin</p></li>
 </ul></li>
 </ul>
-<p>Funktio: <a href="funktiot.html#sec-t-testi"><span>Alaluku&nbsp;17.7.4.4</span></a></p>
+<p>Funktio: <a href="funktiot.html#sec-t-testi"><span>Alaluku&nbsp;18.7.4.4</span></a></p>
 <p><strong>Luottamusvälin</strong> laskemiseen voit käyttää yleistä luottamusvälin kaavaa t-suureelle (ks. <a href="merkitsevyysluvut.html#sec-luottamusväli-teoria"><span>Alaluku&nbsp;8.3</span></a>).</p>
 <p><strong>Yhden otoksen t-testille</strong> ei löydy valmista kaavaa, mutta sen implementointi ei ole kovin hankalaa.</p>
-<p><u>Excelissä ei ole valmiita kaavoja testisuureen laskemiseen</u>. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät <a href="lambdakaavat.html">luvusta&nbsp;<span>18</span></a>.</p>
+<p><u>Excelissä ei ole valmiita kaavoja testisuureen laskemiseen</u>. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät <a href="lambdakaavat.html">luvusta&nbsp;<span>19</span></a>.</p>
 </section>
 <section id="sec-t-testin-raportointi" class="level2" data-number="10.7">
 <h2 data-number="10.7" class="anchored" data-anchor-id="sec-t-testin-raportointi"><span class="header-section-number">10.7</span> T-testin raportointi</h2>

@@ -107,7 +107,6 @@ Käytä näitä kulkukaavioita oikean testin valitsemiseksi. Valitse ensin oikea
 ```{mermaid}
 %%| label: fig-t-yhden-kulkukaavio
 %%| fig-cap: Yhden otoksen testin valitseminen
-%%| fig-width: 80%
 flowchart LR
   A{Otoskoko?} --> B
   A --> C
@@ -125,7 +124,6 @@ flowchart LR
 ```{mermaid}
 %%| label: fig-t-kahden-sama-kulkukaavio
 %%| fig-cap: Kahden muuttujan testin valitseminen, kun yksiköt ovat samoja
-%%| fig-width: 80%
 flowchart LR
   A{Otoskoko?} --> B
   A --> C
@@ -142,7 +140,6 @@ flowchart LR
 ```{mermaid}
 %%| label: fig-t-kahden-eri-kulkukaavio
 %%| fig-cap: Kahden muuttujan testin valitseminen, kun yksiköt ovat eri
-%%| fig-width: 80%
 flowchart LR
   A{Otoskoko?} --> B
   A --> C

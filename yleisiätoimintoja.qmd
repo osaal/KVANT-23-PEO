@@ -5,7 +5,7 @@ Tästä luvusta löytyy yleisiä toimintoja ja menetelmiä Excelissä. Luettavuu
 ::: callout-caution
 ## Wordin lainausmerkit eivät toimi Excelissä
 
-Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta (\"). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta ("). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa. Lisätietoja lainausmerkkien eroista löydät esimerkiksi tästä [Markus Kuhnin kirjoittamasta](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html) verkkoartikkelista.
+Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta ("). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta ("). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa. Lisätietoja lainausmerkkien eroista löydät esimerkiksi tästä [Markus Kuhnin kirjoittamasta](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html) verkkoartikkelista.
 
 Koska Excelissä voi olla hankalaa kirjoittaa pitkiä kaavoja, voi joskus kuitenkin olla tarpeen kirjoittaa kaavat ensin jossain tekstinkäsittelyohjelmassa ja sitten kopioida ne Exceliin. Suosittelen tähän **Muistio**-ohjelmaa (*Notepad*), mikä löytyy Windows-käyttöjärjestelmästä valmiina. Jos käytät Mac OS X- tai Linux-käyttöjärjestelmiä, voit käyttää jotain toista raakatekstin käsittelyohjelmaa. Älä kuitenkaan käytä ohjelmia, joissa tekstiä automaattisesti formatoidaan ohjelman puolesta - näissä voi esiintyä samoja ongelmia kuin Excelin ja Wordin välillä.
 
@@ -96,7 +96,7 @@ Jos haluat laskea **kaikkien** muuttuja-arvojen määrät, voit käyttää seura
 
 -   Toinen solu, ensimmäisen solun oikealla puolella: `=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )`
 
-Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. @sec-toiminto-04).
+Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. @sec-toiminto04).
 
 Toisessa solussa käytetään `TAAJUUS`-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. "sukupuoli" tai suora osoite, esim C2:C105) kuin ensimmäisen solun kaavassa.
 

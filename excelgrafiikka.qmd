@@ -16,7 +16,7 @@ Kaavioita voi tuottaa myös suoraan tilastoista, hyödyntäen Power-kaaviomenete
 
 ## Kaavion lisääminen {#sec-kaavion-lisääminen}
 
-Aloita valitsemalla haluamasi tilastot (kohta 2 yllä, @sec-yleiset-periaatteet-kuvioiden-teossa-excelissä).
+Aloita valitsemalla haluamasi tilastot (kohta 2 yllä, @sec-yleiset-periaatteet-kaavioiden-teossa-excelissä).
 
 Navigoi sitten työkaluvälilehdessä kohtaan `Lisää > Suositellut kaaviot`. Voit valita kaaviosuosituksista tai kaikkien kaavioiden välillä `Kaikki kaaviot`-välilehdeltä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi perustuvan esikatselun kaavion ulkonäöstä (@fig-grafiikka-lisääkaavio).
 
