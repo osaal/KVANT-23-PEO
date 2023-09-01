@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 7&nbsp; Khiin neliö \(\chi^2\)</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 12&nbsp; Khiin neliö \(\chi^2\)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,8 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./excelinperusteet.html" rel="next">
-<link href="./merkitsevyysluvut.html" rel="prev">
+<link href="./korrelaatio.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -62,11 +61,11 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -77,226 +76,260 @@ div.csl-indent {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 12&nbsp; Khiin neliö \(\chi^2\)">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="khiinneliö_files/figure-html/fig-khiinneliönjakauma-1.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./khiinneliö.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Khiin neliö $\chi^2$</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./khiinneliö.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö $\chi^2$</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Versiohistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -309,16 +342,16 @@ div.csl-indent {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#khiin-neliön-malliodotukset" id="toc-khiin-neliön-malliodotukset" class="nav-link active" data-scroll-target="#khiin-neliön-malliodotukset"><span class="header-section-number">7.1</span> Khiin neliön malliodotukset</a></li>
-  <li><a href="#khiin-neliön-laskeminen" id="toc-khiin-neliön-laskeminen" class="nav-link" data-scroll-target="#khiin-neliön-laskeminen"><span class="header-section-number">7.2</span> Khiin neliön laskeminen</a></li>
-  <li><a href="#khiin-neliö-excelissä" id="toc-khiin-neliö-excelissä" class="nav-link" data-scroll-target="#khiin-neliö-excelissä"><span class="header-section-number">7.3</span> Khiin neliö Excelissä</a>
+  <li><a href="#sec-khiin-neliön-malliodotukset" id="toc-sec-khiin-neliön-malliodotukset" class="nav-link active" data-scroll-target="#sec-khiin-neliön-malliodotukset"><span class="header-section-number">12.1</span> Khiin neliön malliodotukset</a></li>
+  <li><a href="#sec-khiin-neliön-laskeminen" id="toc-sec-khiin-neliön-laskeminen" class="nav-link" data-scroll-target="#sec-khiin-neliön-laskeminen"><span class="header-section-number">12.2</span> Khiin neliön laskeminen</a></li>
+  <li><a href="#sec-khiin-neliö-excelissä" id="toc-sec-khiin-neliö-excelissä" class="nav-link" data-scroll-target="#sec-khiin-neliö-excelissä"><span class="header-section-number">12.3</span> Khiin neliö Excelissä</a>
   <ul class="collapse">
-  <li><a href="#todellisten-arvojen-taulukko" id="toc-todellisten-arvojen-taulukko" class="nav-link" data-scroll-target="#todellisten-arvojen-taulukko"><span class="header-section-number">7.3.1</span> Todellisten arvojen taulukko</a></li>
-  <li><a href="#odotettujen-arvojen-taulukko" id="toc-odotettujen-arvojen-taulukko" class="nav-link" data-scroll-target="#odotettujen-arvojen-taulukko"><span class="header-section-number">7.3.2</span> Odotettujen arvojen taulukko</a></li>
-  <li><a href="#khiin-neliön-taulukko" id="toc-khiin-neliön-taulukko" class="nav-link" data-scroll-target="#khiin-neliön-taulukko"><span class="header-section-number">7.3.3</span> Khiin neliön taulukko</a></li>
-  <li><a href="#lopputuloslaskut" id="toc-lopputuloslaskut" class="nav-link" data-scroll-target="#lopputuloslaskut"><span class="header-section-number">7.3.4</span> Lopputuloslaskut</a></li>
+  <li><a href="#sec-todellisten-arvojen-taulukko" id="toc-sec-todellisten-arvojen-taulukko" class="nav-link" data-scroll-target="#sec-todellisten-arvojen-taulukko"><span class="header-section-number">12.3.1</span> Todellisten arvojen taulukko</a></li>
+  <li><a href="#sec-odotettujen-arvojen-taulukko" id="toc-sec-odotettujen-arvojen-taulukko" class="nav-link" data-scroll-target="#sec-odotettujen-arvojen-taulukko"><span class="header-section-number">12.3.2</span> Odotettujen arvojen taulukko</a></li>
+  <li><a href="#sec-khiin-neliön-taulukko" id="toc-sec-khiin-neliön-taulukko" class="nav-link" data-scroll-target="#sec-khiin-neliön-taulukko"><span class="header-section-number">12.3.3</span> Khiin neliön taulukko</a></li>
+  <li><a href="#sec-lopputuloslaskut" id="toc-sec-lopputuloslaskut" class="nav-link" data-scroll-target="#sec-lopputuloslaskut"><span class="header-section-number">12.3.4</span> Lopputuloslaskut</a></li>
   </ul></li>
-  <li><a href="#khiin-neliön-raportointi" id="toc-khiin-neliön-raportointi" class="nav-link" data-scroll-target="#khiin-neliön-raportointi"><span class="header-section-number">7.4</span> Khiin neliön raportointi</a></li>
+  <li><a href="#sec-khiin-neliön-raportointi" id="toc-sec-khiin-neliön-raportointi" class="nav-link" data-scroll-target="#sec-khiin-neliön-raportointi"><span class="header-section-number">12.4</span> Khiin neliön raportointi</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -327,7 +360,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></h1>
+<h1 class="title"><span id="sec-khiin-neliö" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></h1>
 </div>
 
 
@@ -343,9 +376,10 @@ div.csl-indent {
 </header>
 
 <p><strong>Mittausasteikot:</strong> Molemmat muuttujat luokittelu- tai järjestysasteikolla.</p>
-<p>Khiin neliö tai khii kahteen, <span class="math inline">\(\chi^2\)</span>, on riippuvuusmitta jota voidaan käyttää kun molemmat muuttujat ovat kategorisia, eli luokittelu- tai järjestysasteikolla. Khiin neliössä käytetään vain muuttujien kategorioiden määriä (n). Ytimessä on vertailu odotettuihin arvoihin, eli kuinka paljon odottaisimme jokaisen kategoriaparin kohdalla esiintyvän, jos suhdetta muuttujien välillä ei ole?</p>
-<p>Khiin neliössä lasketaan kaksi ristiintaulukointia: todelliset arvot ja odotetut arvot. Todelliset arvot saadaan yksinkertaisesti ristiintaulukoimalla molemmat muuttujat. Riippuvainen muuttuja laitetaan yleisesti sarakkeisiin ja riippumaton muuttuja riveihin, mutta laskutoimituksen kannalta tällä ei ole merkitystä. Todellisille arvoille lasketaan myös rivi- ja sarakesummat, sekä kokonaissumma (datapisteiden määrä, n).</p>
-<p>Khiin neliön suure vaihtelee nollasta (ei yhteyttä) äärettömään (täydellinen yhteys). Jakauman muoto määrittyy vapausasteista.</p>
+<p>Khiin neliö tai khii kahteen, <span class="math inline">\(\chi^2\)</span>, on riippuvuusmitta jota voidaan käyttää kun molemmat muuttujat ovat kategorisia, eli luokittelu- tai järjestysasteikolla. Khiin neliössä käytetään vain muuttujien kategorioiden määriä <span class="math inline">\(n\)</span>.</p>
+<p><u>Mitassa vertaillaan todellisia, mitattuja arvoja odotettuihin arvoihin</u>: kuinka paljon dataa odottaisimme jokaisen kategoriaparin kohdalla esiintyvän, jos suhdetta muuttujien välillä ei ole?</p>
+<p><u>Khiin neliössä lasketaan kaksi ristiintaulukointia</u>: todelliset arvot ja odotetut arvot. <strong>Todelliset arvot</strong> saadaan yksinkertaisesti ristiintaulukoimalla molemmat muuttujat. Riippuvainen muuttuja laitetaan yleisesti sarakkeisiin ja riippumaton muuttuja riveihin, mutta laskutoimituksen kannalta tällä ei ole merkitystä. Todellisille arvoille lasketaan myös <strong>rivi- ja sarakesummat</strong>, sekä <strong>kokonaissumma</strong> (datapisteiden määrä).</p>
+<p><u>Khiin neliön suure vaihtelee nollasta (ei yhteyttä) äärettömään (täydellinen yhteys)</u>. Jakauman muoto määrittyy vapausasteista.</p>
 <div id="fig-khiinneliönjakauma" class="cell quarto-layout-panel" data-hash="khiinneliö_cache/html/fig-khiinneliönjakauma_3c32a2e1c1c1bc01cecd060adefbedbe">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -384,51 +418,53 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;7.1: Khiin neliön jakauma eri vapausasteilla</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;12.1: Khiin neliön jakauma eri vapausasteilla</figcaption><p></p>
 </figure>
 </div>
-<section id="khiin-neliön-malliodotukset" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="khiin-neliön-malliodotukset"><span class="header-section-number">7.1</span> Khiin neliön malliodotukset</h2>
-<p>Khiin neliö ei riipu yleisistä malliodotuksista. Sen sijaan sillä on kaksi tärkeää omaa odotusta, liittyen riippumattomuuteen sekä odotettuihin arvoihin.</p>
+<section id="sec-khiin-neliön-malliodotukset" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="sec-khiin-neliön-malliodotukset"><span class="header-section-number">12.1</span> Khiin neliön malliodotukset</h2>
+<p><u>Khiin neliö ei riipu yleisistä malliodotuksista.</u> Sen sijaan sillä on kaksi tärkeää omaa odotusta, liittyen <strong>riippumattomuuteen</strong> sekä <strong>odotettuihin arvoihin</strong>.</p>
 <p><strong>Riippumattomuudella</strong> tarkoitetaan tässä, että khiin neliö voidaan vain laskea ryhmien välisessä rakenteessa. Kahdessa kategoriassa ei siis voi olla samoja vastaajia. Jokaisen kategorian vastaaja tulisi olla uniikki yhdellä muuttujalla.</p>
-<p><strong>Solujen odotettujen arvojen</strong> minimimäärä on myös määritelty, jotta khiin neliön testi olisi luotettava. Jos testaat 2*2-rakennetta (eli molemmat muuttujat ovat dikotomisia), yksikään solu ei saisi saada odotetun arvon alle viisi. Jos testaat suurempaa rakennetta, kaikkien odotettujen arvojen tulisi olla yli yhden, ja korkeintaan 20 prosenttia (viidesosa) kaikista odotetuista arvoista saisi olla alle viiden.</p>
-<p>Jos vaatimus ei täyty, sinulla on liian vähän dataa jokaisessa solussa laskeaksesi khiin neliön testin. Jos sinulla on useampia kategorioita jollain muuttujalla, voit yrittää yhdistellä niitä - mutta ota huomioon tulkittavuus!</p>
-<p>Huomioi myös, että suurissa otoksissa myös pienet erot voivat johtaa merkitsevään khiin neliön suureeseen. Tarkista aina erojen todelliset koot (prosenteissa tai absoluuttisissa arvoissa), jotta pystyt tulkitsemaan mahdollisen eron merkityksen.</p>
+<p><strong>Solujen odotettujen arvojen</strong> minimimäärä on myös määritelty, jotta khiin neliön testi olisi luotettava. Jos testaat 2*2-rakennetta (eli molemmat muuttujat ovat dikotomisia), yksikään solu ei saisi saada <strong>odotetun arvon alle viisi</strong>. Jos testaat suurempaa rakennetta, kaikkien odotettujen arvojen tulisi olla yli yhden, ja korkeintaan 20 prosenttia (viidesosa) kaikista odotetuista arvoista saisi olla alle viiden.</p>
+<p><u>Jos vaatimus ei täyty</u>, sinulla on liian vähän dataa jokaisessa solussa laskeaksesi khiin neliön testin. Jos sinulla on useampia kategorioita jollain muuttujalla, voit yrittää yhdistellä niitä - mutta ota huomioon tulkittavuus! Voit myös kokeilla ei-parametrista testiä.</p>
+<p>Huomioi myös, että <u>suurissa otoksissa myös pienet erot voivat johtaa merkitsevään khiin neliön suureeseen</u>. Tarkista aina erojen todelliset koot (prosenteissa tai absoluuttisissa arvoissa), jotta pystyt tulkitsemaan mahdollisen eron käytännön merkityksen.</p>
 </section>
-<section id="khiin-neliön-laskeminen" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="khiin-neliön-laskeminen"><span class="header-section-number">7.2</span> Khiin neliön laskeminen</h2>
-<p>Nimetään solu rivien <span class="math inline">\(i\)</span> ja sarakkeiden <span class="math inline">\(j\)</span> mukaan. Todellinen arvo nimetään <span class="math inline">\(O_{ij}\)</span> (engl. <em>observed value</em>) ja odotettu arvo nimetään <span class="math inline">\(E_{ij}\)</span> (engl. <em>expected value</em>)</p>
-<p>Odotetut arvot lasketaan jokaiselle solulle <span class="math inline">\(ij\)</span> laskukaavalla:</p>
-<p><span class="math display">\[
+<section id="sec-khiin-neliön-laskeminen" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-khiin-neliön-laskeminen"><span class="header-section-number">12.2</span> Khiin neliön laskeminen</h2>
+<p>Nimetään solu rivien <span class="math inline">\(i\)</span> ja sarakkeiden <span class="math inline">\(j\)</span> mukaan. Todellinen arvo nimetään <span class="math inline">\(O_{ij}\)</span> (engl. <em>observed value</em>) ja odotettu arvo nimetään <span class="math inline">\(E_{ij}\)</span> (engl. <em>expected value</em>).</p>
+<p><strong>Todelliset arvot</strong> ovat yksinkertaisesti jokaisen solun esiintymämäärä, eli kuinka monta vastaajaa/yksikköä kuuluvat jokaiseen muuttujayhdistelmään.</p>
+<p><strong>Odotetut arvot</strong> lasketaan jokaiselle solulle <span class="math inline">\(ij\)</span> laskukaavalla:</p>
+<p><span id="eq-odotetut-arvot-khiin-neliö"><span class="math display">\[
 E_{ij} = \frac{\text{rivisumma}_i * \text{sarakesumma}_j}{n}
-\]</span></p>
+\tag{12.1}\]</span></span></p>
 <p>Jokaisen solun <span class="math inline">\(ij\)</span> kohdalla kerrotaan siis ensin solun rivisumma <span class="math inline">\(\sum{}_i\)</span> solun sarakesummalla <span class="math inline">\(\sum{}_j\)</span>, jonka jälkeen tulos jaetaan kokonaissummalla <span class="math inline">\(n\)</span>. Lopputulos on odotettu arvo <span class="math inline">\(E_{ij}\)</span>.</p>
 <div id="fig-khiinneliötodellisetodotetutexcel" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/khiinneliö_todellisetodotetut.png" class="img-fluid figure-img" alt="Kaksi taulukkoa. Ensimmäinen on nimetty &quot;Todelliset arvot&quot; ja toinen &quot;Odotetut arvot&quot;. Arvot ovat laskettu verkkokirjassa mainittujen kaavojen avulla."></p>
-<figcaption class="figure-caption">Kuva&nbsp;7.2: Khiin neliön todelliset ja odotetut arvot, esimerkki Excelissä</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;12.2: Khiin neliön todelliset ja odotetut arvot, esimerkki Excelissä</figcaption>
 </figure>
 </div>
-<p>Tämän jälkeen khiin neliö lasketaan jokaiselle solulle laskukaavalla:</p>
-<p><span class="math display">\[
+<p>Tämän jälkeen <strong>khiin neliö</strong> lasketaan jokaiselle solulle laskukaavalla:</p>
+<p><span id="eq-khiin-neliö-solut"><span class="math display">\[
 \chi^2_{ij} = \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
-\]</span></p>
-<p>Jokaisen solun <span class="math inline">\(ij\)</span> kohdalla vähennetään siis ensin solun odotettu arvo <span class="math inline">\(E_{ij}\)</span> solun todellisesta arvosta <span class="math inline">\(O_{ij}\)</span>. Tulos nostetaan toiseen potenssiin eli neliöön, jonka jälkeen arvo jaetaan vielä odotetulla arvolla <span class="math inline">\(E_{ij}\)</span>.</p>
-<p>Jos jokaisen solun khiin neliön arvo summataan yhteen, saadaan khiin neliön suure, <span class="math inline">\(\chi^2\)</span>.</p>
+\tag{12.2}\]</span></span></p>
+<p>Jokaisen solun <span class="math inline">\(ij\)</span> kohdalla vähennetään siis ensin solun odotettu arvo <span class="math inline">\(E_{ij}\)</span> solun todellisesta arvosta <span class="math inline">\(O_{ij}\)</span>. Tulos nostetaan neliöön, jonka jälkeen arvo jaetaan vielä odotetulla arvolla <span class="math inline">\(E_{ij}\)</span>.</p>
+<p><u>Sitten summataan jokaisen solun khiin neliön arvo yhteen</u>, jolloin saadaan khiin neliön suure, <span class="math inline">\(\chi^2\)</span>.</p>
 <p><strong>Khiin neliön suure</strong> noudattaa khiin neliön jakaumaa. Todennäköisyys merkitsee siksi todennäköisyyttä saada nähty khiin neliön suure tai isompi, jos populaatiossa khiin neliön arvo pitäisi olla nolla (ei yhteyttä).</p>
-<p>Khiin neliön jakauma määritellään <strong>vapausasteilla</strong>. Khiin neliön vapausasteet on yksinkertaisesti rivien määrä pois yksi <span class="math inline">\(r-1\)</span>, kertaa sarakkeiden määrä pois yksi <span class="math inline">\(c-1\)</span>:</p>
-<p><span class="math display">\[
+<p>Khiin neliön jakauma määritellään <strong>vapausasteilla</strong>. Khiin neliön vapausasteet on yksinkertaisesti rivien määrä minus yksi <span class="math inline">\(r-1\)</span>, kertaa sarakkeiden määrä minus yksi <span class="math inline">\(c-1\)</span>:</p>
+<p><span id="eq-vapausasteet-khiin-neliö"><span class="math display">\[
 \text{df} = (r - 1)(c - 1)
-\]</span></p>
-<p>Khiin neliö voidaan raportoida sellaisenaan, mutta yleensä haluamme myös jonkun mitan siitä, kuinka suuri yhteys muuttujilla näyttäisi olevan. Paras vaihtoehto on tietenkin raportoida alkuperäiset todelliset arvot (tai niiden prosenttiosuudet), koska nämä ovat helpoimmin ymmärrettävissä.</p>
-<p>Vaihtoehtoisesti voi myös käyttää <strong>Cramérin V-suuretta</strong>. V-suure vaihtelee nollasta yhteen, ja osoittaa yhdellä numerolla, kuinka laajasti muuttujat yhteisvaihtelevat. V-suure lasketaan kaavalla:</p>
-<p><span class="math display">\[
+\tag{12.3}\]</span></span></p>
+<p><u>Khiin neliö voidaan raportoida sellaisenaan</u>, mutta yleensä haluamme myös jonkun mitan siitä, kuinka suuri yhteys muuttujilla näyttäisi olevan. Paras vaihtoehto on tietenkin raportoida alkuperäiset todelliset arvot (tai niiden prosenttiosuudet), koska nämä ovat helpoimmin ymmärrettävissä.</p>
+<p><u>Vaihtoehtoisesti voi myös käyttää <strong>Cramérin V-suuretta</strong></u>. V-suure vaihtelee nollasta yhteen, ja osoittaa yhdellä numerolla, kuinka laajasti muuttujat yhteisvaihtelevat. V-suure lasketaan kaavalla:</p>
+<p><span id="eq-v-suure-khiin-neliö"><span class="math display">\[
 V = \frac{\chi^2/n}{min(r-1, c-1)}
-\]</span> Ensin jaat khiin neliön suureen otoskoolla. Sitten jaat tuloksen joko rivien määrällä pois yksi tai sarakkeiden määrällä pois yksi, kumpi on pienempi.</p>
-<p>Cramérin V-suureen tulkinta riippuu vapausasteista. Taulukko alla näyttää raja-arvot tulkinnalle:</p>
+\tag{12.4}\]</span></span></p>
+<p>Ensin jaat khiin neliön suureen otoskoolla. Sitten jaat tuloksen joko rivien määrällä pois yksi tai sarakkeiden määrällä pois yksi, kumpi on pienempi.</p>
+<p>Cramérin V-suureen tulkinta riippuu vapausasteista. Taulukko alla näyttää raja-arvot tulkinnalle yleisimmille vapausasteille:</p>
 <div id="tbl-cramerinV" class="anchored">
 <table class="table">
-<caption>Taulukko&nbsp;7.1: Cramérin V-suureen tulkinnan raja-arvot <span class="citation" data-cites="cohen1988">(<a href="references.html#ref-cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>.</caption>
+<caption>Taulukko&nbsp;12.1: Cramérin V-suureen tulkinnan raja-arvot <span class="citation" data-cites="cohen1988">(<a href="viiteluettelo.html#ref-cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>.</caption>
 <thead>
 <tr class="header">
 <th>Vapausaste</th>
@@ -472,8 +508,8 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 </table>
 </div>
 </section>
-<section id="khiin-neliö-excelissä" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="khiin-neliö-excelissä"><span class="header-section-number">7.3</span> Khiin neliö Excelissä</h2>
+<section id="sec-khiin-neliö-excelissä" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="sec-khiin-neliö-excelissä"><span class="header-section-number">12.3</span> Khiin neliö Excelissä</h2>
 <p>Khiin neliö vaatii neljä osa-askelta Excelissä:</p>
 <ol type="1">
 <li>Todellisten arvojen taulukko,</li>
@@ -481,50 +517,96 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <li>Khiin neliön taulukko, ja</li>
 <li>Lopputuloslaskut.</li>
 </ol>
-<section id="todellisten-arvojen-taulukko" class="level3" data-number="7.3.1">
-<h3 data-number="7.3.1" class="anchored" data-anchor-id="todellisten-arvojen-taulukko"><span class="header-section-number">7.3.1</span> Todellisten arvojen taulukko</h3>
+<section id="sec-todellisten-arvojen-taulukko" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="sec-todellisten-arvojen-taulukko"><span class="header-section-number">12.3.1</span> Todellisten arvojen taulukko</h3>
 <p>Rakenna taulukko, jonka riveissä on yhden muuttujan kaikki kategoriat, ja sarakkeissa on toisen muuttujan kaikki kategoriat.</p>
-<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="exceltoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;15.4</span></a>).</p>
+<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="yleisiätoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;16.4</span></a>).</p>
 <p>Solujen arvot voit laskea funktiolla:</p>
 <p><code>=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)</code></p>
-<p>Voit käyttää lukitustoimintoa <code>$</code> lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää Excelin vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!</p>
+<p>Käytä lukitustoimintoa lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!</p>
 <p>Laske rivi- ja sarakesummat <code>SUMMA</code>-funktiolla.</p>
 <p>Laske kokonaissumma summaamalla <em>joko</em> rivi- <em>tai</em> sarakesummat yhteen.</p>
 </section>
-<section id="odotettujen-arvojen-taulukko" class="level3" data-number="7.3.2">
-<h3 data-number="7.3.2" class="anchored" data-anchor-id="odotettujen-arvojen-taulukko"><span class="header-section-number">7.3.2</span> Odotettujen arvojen taulukko</h3>
+<section id="sec-odotettujen-arvojen-taulukko" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="sec-odotettujen-arvojen-taulukko"><span class="header-section-number">12.3.2</span> Odotettujen arvojen taulukko</h3>
 <p>Rakenna samanlainen taulukko kuin todellisille arvoille, mutta jätä pois summarivi ja summasarake. Kategorioiden nimiä ei tarvitse lisätä, mutta auttaa taulukon lukemisessa.</p>
 <p>Laske jokaiselle solulle seuraava laskukaava:</p>
 <p><code>=(sarakesumma * rivisumma) / kokonaissumma</code></p>
-<p>Voit jälleen käyttää lukitustoimintoa <code>$</code> helpottaaksesi solujen täyttöä. Tarkista, että kaikki solut viittaavat niiden omiin sarake- ja rivisummiin - virheitä syntyy helposti!</p>
+<p>Voit jälleen käyttää lukitustoimintoa helpottaaksesi solujen täyttöä. Tarkista, että kaikki solut viittaavat niiden omiin sarake- ja rivisummiin - virheitä syntyy helposti!</p>
 </section>
-<section id="khiin-neliön-taulukko" class="level3" data-number="7.3.3">
-<h3 data-number="7.3.3" class="anchored" data-anchor-id="khiin-neliön-taulukko"><span class="header-section-number">7.3.3</span> Khiin neliön taulukko</h3>
+<section id="sec-khiin-neliön-taulukko" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored" data-anchor-id="sec-khiin-neliön-taulukko"><span class="header-section-number">12.3.3</span> Khiin neliön taulukko</h3>
 <p>Rakenna jälleen samanlainen taulukko kuin edellisissä taulukoissa, jättäen pois rivi- ja sarakesummat. Nimiä ei taaskaan tarvita, mutta suositellaan.</p>
 <p>Laske khiin neliön arvo jokaiselle solulle seuraavalla laskukaavalla:</p>
 <p><code>=(todellinen arvo - odotettu arvo)^2 / odotettu arvo</code></p>
 <p>Et tarvitse lukita mitään tässä, koska kaikki arvot riippuvat solun sijainnista, joten voit käyttää vetotoimintoa täyttääksesi taulukon nopeasti.</p>
 </section>
-<section id="lopputuloslaskut" class="level3" data-number="7.3.4">
-<h3 data-number="7.3.4" class="anchored" data-anchor-id="lopputuloslaskut"><span class="header-section-number">7.3.4</span> Lopputuloslaskut</h3>
-<p>Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen.</p>
-<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="exceltoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;15.3</span></a>; <a href="perustoiminnot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;12.5.9</span></a>).</p>
+<section id="sec-lopputuloslaskut" class="level3" data-number="12.3.4">
+<h3 data-number="12.3.4" class="anchored" data-anchor-id="sec-lopputuloslaskut"><span class="header-section-number">12.3.4</span> Lopputuloslaskut</h3>
+<p>Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen: <code>=SUMMA(khiinneliötaulukon_alue)</code>.</p>
+<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="yleisiätoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;16.3</span></a>; <a href="funktiot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;18.5.9</span></a>).</p>
 <p>Laske khiin neliön oikeahäntäinen todennäköisyysarvo <em>p</em> kaavalla:</p>
 <p><code>=CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)</code></p>
 <p>Jos haluat, voit vielä laskea Cramérin V-suureen laskutoimituksella:</p>
 <p><code>=NELIÖJUURI( (khiinneliö / kokonaissumma) / min(rivimäärä - 1; sarakemäärä - 1) )</code></p>
 </section>
 </section>
-<section id="khiin-neliön-raportointi" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="khiin-neliön-raportointi"><span class="header-section-number">7.4</span> Khiin neliön raportointi</h2>
+<section id="sec-khiin-neliön-raportointi" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="sec-khiin-neliön-raportointi"><span class="header-section-number">12.4</span> Khiin neliön raportointi</h2>
 <p>Khiin neliön testistä raportoidaan mieluisesti seuraavat tiedot:</p>
 <ul>
 <li><p>Testisuure <span class="math inline">\(\chi^2\)</span></p></li>
 <li><p>Vapausasteet <span class="math inline">\(\text{df}\)</span></p></li>
 <li><p>P-arvo <span class="math inline">\(p\)</span></p></li>
-<li><p>Kuinka moni odotettu arvo on alle 1 tai alle 5 (ks. ALALUKU)</p></li>
+<li><p>Kuinka moni odotettu arvo on alle 1 tai alle 5 (ks. <a href="#sec-khiin-neliön-malliodotukset"><span>Alaluku&nbsp;12.1</span></a>)</p></li>
 <li><p>Jos laskettu: Cramérin V-suure <span class="math inline">\(V\)</span></p></li>
 </ul>
+<p><u>Cramerin V-suure voidaan tulkita</u> jokseenkin samoin kuin Cohenin <span class="math inline">\(\hat{D}\)</span> tai Pearsonin <span class="math inline">\(r\)</span>, mutta tulkinta riippuu osittain vapausasteista:</p>
+<div id="tbl-cramerin-v-tulkinta" class="anchored">
+<table class="table">
+<caption>Taulukko&nbsp;12.2: Cramerin V:n tulkinta</caption>
+<thead>
+<tr class="header">
+<th>Vapausaste</th>
+<th>Pieni koko</th>
+<th>Keskikokoinen</th>
+<th>Suuri koko</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0,1</td>
+<td>0,3</td>
+<td>0,5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0,07</td>
+<td>0,21</td>
+<td>0,35</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0,06</td>
+<td>0,17</td>
+<td>0,29</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0,05</td>
+<td>0,15</td>
+<td>0,25</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0,04</td>
+<td>0,13</td>
+<td>0,22</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Yleensä kannattaa myös jatkoanalysoida mitkä kategoriat eroavat toisistaan, esimerkiksi <em>post hoc</em>-testeillä. Voit myös tarkastaa solujen prosenttiosuuksia ja raportoida isoimmat erot, mutta tämä ei ole yhtä luotettava menetelmä kuin virallinen testaus.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -784,17 +866,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./merkitsevyysluvut.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span>
+      <a href="./korrelaatio.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./excelinperusteet.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

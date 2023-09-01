@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2023-08-29T12:36:34.950Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="-kDqNlJqFw26MRfp8T0W" version="21.6.9" type="device">
+  <diagram name="Sivu-1" id="mdLgL5JUCElWCSmTqLGl">
+    <mxGraphModel dx="1195" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IMdo9nACs3mcitBLACWl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IMdo9nACs3mcitBLACWl-1" target="IMdo9nACs3mcitBLACWl-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IMdo9nACs3mcitBLACWl-1" target="IMdo9nACs3mcitBLACWl-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-1" value="Luokittelu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="310" width="121" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IMdo9nACs3mcitBLACWl-2" target="IMdo9nACs3mcitBLACWl-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-2" value="Järjestys" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IMdo9nACs3mcitBLACWl-3" target="IMdo9nACs3mcitBLACWl-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-3" value="Välimatka" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-4" value="Suhde" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-8" value="Dikotominen&lt;br&gt;Binäärinen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-10" value="Kvalitatiiviset" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="340" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="IMdo9nACs3mcitBLACWl-11" value="Kvantitatiiviset" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="340" height="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

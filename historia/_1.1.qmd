@@ -1,0 +1,20 @@
+### 1.1
+
+**Julkaisupäivämäärä**: 1.9.2023
+
+**Uudet luvut**:
+
+-   Mittaustasojen teoria
+-   Alaluku "Spearmanin rho" ei-parametristen testien lukuun.
+-   Alaluvut "Solujen muokkaaminen", "Vetotoiminto" ja "Lukitustoiminto" Excelin perusteiden lukuun.
+
+**Muutokset**:
+
+-   Muutettu kirjan ulkonäköä ja navigointia.
+-   Kirjoitusvirheiden korjausta.
+-   Siirretty Cramérin V-suureen tulkintaohjeet funktioluvusta khiin neliön lukuun.
+
+**Tunnetut ongelmat**:
+
+-   Luvusta "Grafiikka Excelissä" puuttuu alaluvut kaavioiden tekemisestä Excelissä.
+-   "Funktiot"-luvussa käytetään sanoja "parametri" ja "avainsana" sekaisin.

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 7&nbsp; Merkitsevyysluvut</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 8&nbsp; Merkitsevyysluvut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -58,250 +58,259 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 8&nbsp; Merkitsevyysluvut">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./merkitsevyysluvut.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./merkitsevyysluvut.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -314,10 +323,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-keskiarvon-keskivirhe-teoria" id="toc-sec-keskiarvon-keskivirhe-teoria" class="nav-link active" data-scroll-target="#sec-keskiarvon-keskivirhe-teoria"><span class="header-section-number">7.1</span> Keskiarvon keskivirhe</a></li>
-  <li><a href="#sec-z-arvo-teoria" id="toc-sec-z-arvo-teoria" class="nav-link" data-scroll-target="#sec-z-arvo-teoria"><span class="header-section-number">7.2</span> Z-arvo</a></li>
-  <li><a href="#sec-luottamusväli-teoria" id="toc-sec-luottamusväli-teoria" class="nav-link" data-scroll-target="#sec-luottamusväli-teoria"><span class="header-section-number">7.3</span> Luottamusväli</a></li>
-  <li><a href="#sec-virhemarginaali-teoria" id="toc-sec-virhemarginaali-teoria" class="nav-link" data-scroll-target="#sec-virhemarginaali-teoria"><span class="header-section-number">7.4</span> Virhemarginaali</a></li>
+  <li><a href="#sec-keskiarvon-keskivirhe-teoria" id="toc-sec-keskiarvon-keskivirhe-teoria" class="nav-link active" data-scroll-target="#sec-keskiarvon-keskivirhe-teoria"><span class="header-section-number">8.1</span> Keskiarvon keskivirhe</a></li>
+  <li><a href="#sec-z-arvo-teoria" id="toc-sec-z-arvo-teoria" class="nav-link" data-scroll-target="#sec-z-arvo-teoria"><span class="header-section-number">8.2</span> Z-arvo</a></li>
+  <li><a href="#sec-luottamusväli-teoria" id="toc-sec-luottamusväli-teoria" class="nav-link" data-scroll-target="#sec-luottamusväli-teoria"><span class="header-section-number">8.3</span> Luottamusväli</a></li>
+  <li><a href="#sec-virhemarginaali-teoria" id="toc-sec-virhemarginaali-teoria" class="nav-link" data-scroll-target="#sec-virhemarginaali-teoria"><span class="header-section-number">8.4</span> Virhemarginaali</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -326,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-merkitsevyysluvut-teoria" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></h1>
+<h1 class="title"><span id="sec-merkitsevyysluvut-teoria" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></h1>
 </div>
 
 
@@ -343,16 +352,16 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Tässä luvussa käydään läpi merkitsevyyslukujen määritelmät, käyttö ja toteuttaminen Excelissä.</p>
 <p><strong>Merkitsevyysluvut</strong> kertovat jotain mittarin luotettavuudesta. Kuinka paljon me luotamme siihen, että mitattu arvo ei ole syntynyt satunnaisen vaihtelun vuoksi, vaan edustaa todellista eroa populaatiossa?</p>
-<p>Merkitsevyyslukuja, joita tässä kirjassa käydään läpi ovat: keskiarvon keskivirhe, Z-arvo, luottamusväli ja virhemarginaali. P-arvon voi myös laskea merkitsevyysluvuksi, mutta se edustaa todennäköisyyttä aina tietyssä kontekstissa. Täten sen läpikäyminen sopii paremmin hypoteesitestauksen yhteyteen (ks. <a href="hypoteesitestaus.html"><span>Luku&nbsp;3</span></a>).</p>
-<section id="sec-keskiarvon-keskivirhe-teoria" class="level2 page-columns page-full" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-keskiarvon-keskivirhe-teoria"><span class="header-section-number">7.1</span> Keskiarvon keskivirhe</h2>
+<p>Merkitsevyyslukuja, joita tässä kirjassa käydään läpi ovat: keskiarvon keskivirhe, Z-arvo, luottamusväli ja virhemarginaali. P-arvon voi myös laskea merkitsevyysluvuksi, mutta se edustaa todennäköisyyttä aina tietyssä kontekstissa. Täten sen läpikäyminen sopii paremmin hypoteesitestauksen yhteyteen (ks. <a href="hypoteesitestaus.html"><span>Luku&nbsp;4</span></a>).</p>
+<section id="sec-keskiarvon-keskivirhe-teoria" class="level2 page-columns page-full" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sec-keskiarvon-keskivirhe-teoria"><span class="header-section-number">8.1</span> Keskiarvon keskivirhe</h2>
 <div class="page-columns page-full"><p><strong>Keskiarvon keskivirhe</strong> (engl. <em>standard error of the mean</em>), tai vain <strong>keskivirhe</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, on osittaisesti merkitsevyysmitta. Keskivirhe estimoi kuinka hyvin otoksen keskiarvo edustaa todellista populaation keskiarvoa. Keskivirhe ilmaistaan useimmiten kirjaimilla <span class="math inline">\(SE\)</span> (englannin nimestä), mutta vaihtoehtoisesti voi myös käyttää matemaattisia symboleja <span class="math inline">\(\hat{\sigma}_x^{-}\)</span> tai <span class="math inline">\(s_x^{-}\)</span> . Keskivirhe lasketaan jakamalla keskihajonta datamäärän neliöjuurella:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Keskivirhe voidaan laskea mille tahansa estimoidulle parametrille.</p></li></div></div>
 <p><span id="eq-keskiarvon-keskivirhe"><span class="math display">\[
 \text{SE} = \frac{s}{\sqrt{N}}
-\tag{7.1}\]</span></span></p>
+\tag{8.1}\]</span></span></p>
 <p>Jos otos on tarpeeksi iso, keskivirhe edustaa suhteellisen luotettavasti keskiarvon edustavuuden laatua otoksessa. Mitä isompi keskivirhe, sitä huonommin otoksen keskiarvo edustaa populaation keskiarvoa. Voidaan sanoa, että <u>keskivirhe edustaa mitatun keskiarvon etäisyyttä todellisesta keskiarvosta</u>.</p>
 <p>Keskivirhettä voidaan käyttää mm. luottamusvälin laskemiseen.</p>
-<p>Aikasemmassa luvussa (<a href="hajontaluvut.html"><span>Luku&nbsp;4</span></a>) käytettiin esimerkkinä datajakaumaa <span class="math inline">\([1, 2, 3, 4, 5]\)</span>. Sille laskettiin keskiarvo sekä hajontaluvut seuraavasti:</p>
+<p>Aikasemmassa luvussa (<a href="hajontaluvut.html"><span>Luku&nbsp;6</span></a>) käytettiin esimerkkinä datajakaumaa <span class="math inline">\([1, 2, 3, 4, 5]\)</span>. Sille laskettiin keskiarvo sekä hajontaluvut seuraavasti:</p>
 <ul>
 <li><p><span class="math inline">\(\bar{x} = 3\)</span></p></li>
 <li><p><span class="math inline">\(\text{min} = 1\)</span>, <span class="math inline">\(\text{max} = 5\)</span></p></li>
@@ -369,17 +378,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Datamäärän voit hakea käsin tai käyttäen <code>LASKE.A</code>-funktiota (ks. <a href="funktiot.html#sec-laske-funktiot"><span>Alaluku&nbsp;17.7.1.1</span></a>).</p>
 </section>
-<section id="sec-z-arvo-teoria" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-z-arvo-teoria"><span class="header-section-number">7.2</span> Z-arvo</h2>
+<section id="sec-z-arvo-teoria" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-z-arvo-teoria"><span class="header-section-number">8.2</span> Z-arvo</h2>
 <p><strong>Z-arvo</strong> on tietyn datapisteen standardisoitu arvo. Jos kyseinen arvo on peräisin normaalijakautuneesta mittarista, Z-arvoa voidaan käyttää merkitsevyysmittarina.</p>
 <p><u>Z-arvo mitataan samalla asteikolla kuin normaalijakauma</u>: Z-arvo <span class="math inline">\(0\)</span> edustaa normaalijakauman keskipistettä, positiiviset arvot edustavat datapisteitä normaalijakauman oikealla puolella ja negatiiviset jakauman vasemmalla puolella.</p>
 <p>Z-arvo lasketaan jakamalla datapisteen ja keskiarvon ero datajakauman keskihajonnalla:</p>
 <p><span id="eq-z-arvo"><span class="math display">\[
 Z = \frac{x_i - \bar{x}}{s} = \frac{x_i - \bar{x}}{\sqrt{s^2}}
-\tag{7.2}\]</span></span></p>
+\tag{8.2}\]</span></span></p>
 <p>Jatketaan aikaisemmalla esimerkkijakaumalla. Z-arvo voidaan laskea jokaiselle datapisteelle erikseen. Ensimmäisen datapisteen Z-arvo olisi tällöin <span class="math inline">\(Z = (1-3)/1.85 \approx -1.1\)</span>. Kaikki datapisteet saavat järjestyksessä Z-arvon: <span class="math inline">\([-1.1, -0.5, 0, 0.5, 1.1]\)</span>. Voit kokeilla laskea nämä itse, tai vain luottaa minuun.</p>
 <p><u>Z-arvon yksikkö ilmaistaan keskihajonnoissa</u>: yllä olevan esimerkin ensimmäisen arvon Z-arvo on -1.1 keskihajontaa, eli se on noin yhden keskihajonnan verran alle keskiarvon.</p>
-<p><u>Voimme hyödyntää normaalijakauman muotoa tulkinnassa</u>: normaalijakaumassa 95 prosenttia kaikesta datasta jää arvon <span class="math inline">\(\pm 1.96\)</span> sisälle; 99 prosenttia datasta on arvon <span class="math inline">\(\pm 2.58\)</span> sisällä, ja vain yksi promille (99,9 %) datasta on arvon <span class="math inline">\(\pm 3.29\)</span> ulkopuolella. Koska arvomme <span class="math inline">\(1\)</span> Z-arvo on alle <span class="math inline">\(\pm 1.96\)</span>, sen (tai isomman) todennäköisyys (jos ottaisimme ääretön määrä otantoja populaatiosta) on suht iso esiintyä. Jos tämä johtopäätös jää epäselväksi, lue <a href="hypoteesitestaus.html"><span>Luku&nbsp;3</span></a> tarkasti uudelleen!</p>
+<p><u>Voimme hyödyntää normaalijakauman muotoa tulkinnassa</u>: normaalijakaumassa 95 prosenttia kaikesta datasta jää arvon <span class="math inline">\(\pm 1.96\)</span> sisälle; 99 prosenttia datasta on arvon <span class="math inline">\(\pm 2.58\)</span> sisällä, ja vain yksi promille (99,9 %) datasta on arvon <span class="math inline">\(\pm 3.29\)</span> ulkopuolella. Koska arvomme <span class="math inline">\(1\)</span> Z-arvo on alle <span class="math inline">\(\pm 1.96\)</span>, sen (tai isomman) todennäköisyys (jos ottaisimme ääretön määrä otantoja populaatiosta) on suht iso esiintyä. Jos tämä johtopäätös jää epäselväksi, lue <a href="hypoteesitestaus.html"><span>Luku&nbsp;4</span></a> tarkasti uudelleen!</p>
 <p><strong>Funktiot Excelissä:</strong></p>
 <ul>
 <li><p><code>NORMITA(x; keskiarvo; keskihajonta)</code></p>
@@ -389,20 +398,20 @@ Z = \frac{x_i - \bar{x}}{s} = \frac{x_i - \bar{x}}{\sqrt{s^2}}
 </ul>
 <p>Funktiot: <a href="funktiot.html#sec-z-arvo"><span>Alaluku&nbsp;17.7.2.7</span></a>.</p>
 </section>
-<section id="sec-luottamusväli-teoria" class="level2 page-columns page-full" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="sec-luottamusväli-teoria"><span class="header-section-number">7.3</span> Luottamusväli</h2>
+<section id="sec-luottamusväli-teoria" class="level2 page-columns page-full" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-luottamusväli-teoria"><span class="header-section-number">8.3</span> Luottamusväli</h2>
 <p><strong>Luottamusväli</strong> (engl. <em>confidence interval</em>) on yleisesti käytetty merkitsevyysmitta, joka ilmaistaan väliestimaattina (kaksi arvoa) piste-estimaatin (yksi arvo) sijaan. Tulkinta on monimutkainen - jatka lukemista!</p>
 <p>Luottamusväli ilmaistaan kirjaimilla <span class="math inline">\(\text{CI}\)</span>, jotka tulevat englanninkielisestä nimestä. Sen lisäksi luottamusvälille ilmaistaan myös luottamustaso <span class="math inline">\(1-p\)</span> prosenteissa. Esimerkiksi <span class="math inline">\(p = 0.05\)</span> (5 prosenttia), jolloin luottamusväli ilmaistaisiin <span class="math inline">\(95 \% \text{ CI}\)</span>.</p>
 <p>Luottamusvälille löytyy kaksi laskentatapaa, yleiselle otannalle sekä pienelle otannalle. Yleinen kaava on:</p>
 <p><span id="eq-luottamusväli-yleinen"><span class="math display">\[
 \text{CI}_p = \bar{x} \pm (z_{\frac{1-p}{2}} \times \text{SE})
-\tag{7.3}\]</span></span></p>
+\tag{8.3}\]</span></span></p>
 <p>ja pienen otannan kaava on:</p>
 <p><span id="eq-luottamusväli-pieniotanta"><span class="math display">\[
 \text{CI}_p = \bar{x} \pm (t_{n-1} \times \text{SE})
-\tag{7.4}\]</span></span></p>
+\tag{8.4}\]</span></span></p>
 <p><u>Molemmissa tilanteissa laskukaava tuottaa kaksi arvoa</u>: ylemmän ja alemman luottamusvälin rajan.</p>
-<p><strong>Yleiselle luottamusvälille</strong> tarvitaan jokin luottamustaso, jolle haetaan kaksisuuntainen z-arvo. Luottamusvälin voi laskea mille tahansa luottamustasolle, mutta yleisimmät tasot ovat 95 prosenttia, 99 prosenttia sekä 99,9 prosenttia. Näiden z-arvot ovat <span class="math inline">\(1.96\)</span>, <span class="math inline">\(2.58\)</span> ja <span class="math inline">\(3.29\)</span> (ks. <a href="#sec-z-arvo-teoria"><span>Alaluku&nbsp;7.2</span></a>). Korvaa siis <span class="math inline">\(z_{ \frac{1-p}{2} }\)</span> yllä olevassa kaavassa (<a href="#eq-luottamusväli-yleinen">Yhtälö&nbsp;<span>7.3</span></a>) valitsemallasi luottamustason z-arvolla.</p>
+<p><strong>Yleiselle luottamusvälille</strong> tarvitaan jokin luottamustaso, jolle haetaan kaksisuuntainen z-arvo. Luottamusvälin voi laskea mille tahansa luottamustasolle, mutta yleisimmät tasot ovat 95 prosenttia, 99 prosenttia sekä 99,9 prosenttia. Näiden z-arvot ovat <span class="math inline">\(1.96\)</span>, <span class="math inline">\(2.58\)</span> ja <span class="math inline">\(3.29\)</span> (ks. <a href="#sec-z-arvo-teoria"><span>Alaluku&nbsp;8.2</span></a>). Korvaa siis <span class="math inline">\(z_{ \frac{1-p}{2} }\)</span> yllä olevassa kaavassa (<a href="#eq-luottamusväli-yleinen">Yhtälö&nbsp;<span>8.3</span></a>) valitsemallasi luottamustason z-arvolla.</p>
 <p><strong>Pienen otannan luottamusvälille</strong> käytetään z-arvon sijaan t-testin koko valitulle luottamustasolle. Tätä varten tarvitset määritellä luottamustason (esim. 95 prosenttia, <span class="math inline">\(p = 0.05\)</span>) sekä testin vapausasteen, <span class="math inline">\(\text{df} = n-1\)</span>.</p>
 <p>Lasketaan esimerkkijakaumallemme molemmat luottamusvälit 95 prosentin luottamustasolla, aloittaen <u>yleisestä luottamusvälistä</u>:</p>
 <p><span class="math display">\[
@@ -434,14 +443,14 @@ Z = \frac{x_i - \bar{x}}{s} = \frac{x_i - \bar{x}}{\sqrt{s^2}}
 <p>Kuten tuloksesta näkee, luottamusväli kasvoi kun käytimme pienen otoksen kaavaa. Tämä tarkoittaa vain, että meidän otantakoolla ei voida hyvin luotettavasti rajata aluetta, jonka sisälle todellinen keskiarvo mahdollisesti osuisi. Tarvitsemme enemmän dataa.</p>
 <p>Luottamusvälille ei löydy suoraa kaavaa Excelissä. Sen sijaan voit implementoida yllä olevat yhtälöt itse - pystyt kyllä siihen!</p>
 </section>
-<section id="sec-virhemarginaali-teoria" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="sec-virhemarginaali-teoria"><span class="header-section-number">7.4</span> Virhemarginaali</h2>
+<section id="sec-virhemarginaali-teoria" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="sec-virhemarginaali-teoria"><span class="header-section-number">8.4</span> Virhemarginaali</h2>
 <p><strong>Virhemarginaali</strong> on monelle tuttu merkitsevyysmitta. Virhemarginaali onkin hyvin lähellä luottamusväliä - mutta virhemarginaali ilmaistaan useimmiten prosenttieroille ja vain yhtenä arvona.</p>
 <p><u>Virhemarginaali voidaan nähdä symmetrisenä luottamusvälinä</u>, eli sen sijaan, että laskettaisiin kaksi arvoa (jotka voivat olla eri etäisyydellä parametrista), lasketaan vain yksi arvo, joka tulkitaan sijaitsevan molemmin puolin parametria. Toisin sanoen: jos parametri olisi vaikka <code>5 %</code>, CI = [3%, 7%] tarkoittaa samaa kuin että virhemarginaali olisi 2 %.</p>
 <p><u>Kuten luottamusväli, virhemarginaali lasketaan tietylle luottamustasolle</u>. Virhemarginaalin laskentakaava on hyvin yksinkertainen:</p>
 <p><span id="eq-virhemarginaali"><span class="math display">\[
 \text{MOE}_p = z_p * SE
-\tag{7.5}\]</span></span></p>
+\tag{8.5}\]</span></span></p>
 <p>Toisin sanoen, muunnamme ensin prosenttiluvun z-arvoksi, sitten kerromme tuloksen prosenttiluvun keskivirheellä. Jos kyseessä on keskiarvo, käytämme keskiarvon keskivirhettä; muissa tapauksissa laskemme kyseiselle parametrille (esim. kahden ryhmän prosenttierolle) oman keskivirheen.</p>
 <p><u>Useasti, varsinkin viranomaisraporteissa ja median toteuttamissa gallup-tutkimuksissa, ilmaistaan vain yksi virhemarginaali</u>. Tämä on jokseenkin harhaanjohtavaa. Todellisuudessa virhemarginaali voidaan laskea kaikille mittareille, joita on mitattu tutkimuksessa.</p>
 <p>Kun kyseessä on vain yhden virhemarginaalin raportointi, <u>tavan mukaan raportoidaan suurin tutkimuksessa esiintyvä virhemarginaali</u>. Prosenttieroille tämä on suhteellisen helppoa määritellä. Suurin virhemarginaali on aina se marginaali, joka laskettiin prosenttierolle joka on lähimpänä 50 prosenttia.</p>
@@ -691,16 +700,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./hajontaluvut.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./eiparametrisettestit.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

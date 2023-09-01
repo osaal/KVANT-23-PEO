@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät, syksy 2023 - 10&nbsp; Excelin käyttöliittymä</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 14&nbsp; Excelin käyttöliittymä</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./nimienhallinta.html" rel="next">
+<link href="./nimeäminenexcelissä.html" rel="next">
 <link href="./excelinperusteet.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -58,217 +58,242 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 14&nbsp; Excelin käyttöliittymä">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="pics/excel_aloitusnäkymä.PNG">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinperusteet.html">Excel-toiminnot</a></li><li class="breadcrumb-item"><a href="./excelinkäyttöliittymä.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelinkäyttöliittymä.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät, syksy 2023</a> 
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./perustoiminnot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
   </div>
 </li>
     </ul>
@@ -281,26 +306,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#perusnäkymä" id="toc-perusnäkymä" class="nav-link active" data-scroll-target="#perusnäkymä"><span class="header-section-number">10.1</span> Perusnäkymä</a></li>
-  <li><a href="#navigointipalkin-työkalut" id="toc-navigointipalkin-työkalut" class="nav-link" data-scroll-target="#navigointipalkin-työkalut"><span class="header-section-number">10.2</span> Navigointipalkin työkalut</a>
+  <li><a href="#sec-perusnäkymä" id="toc-sec-perusnäkymä" class="nav-link active" data-scroll-target="#sec-perusnäkymä"><span class="header-section-number">14.1</span> Perusnäkymä</a></li>
+  <li><a href="#sec-navigointipalkin-työkalut" id="toc-sec-navigointipalkin-työkalut" class="nav-link" data-scroll-target="#sec-navigointipalkin-työkalut"><span class="header-section-number">14.2</span> Navigointipalkin työkalut</a>
   <ul class="collapse">
-  <li><a href="#aloitus-välilehti" id="toc-aloitus-välilehti" class="nav-link" data-scroll-target="#aloitus-välilehti"><span class="header-section-number">10.2.1</span> Aloitus-välilehti</a></li>
-  <li><a href="#lisää-välilehti" id="toc-lisää-välilehti" class="nav-link" data-scroll-target="#lisää-välilehti"><span class="header-section-number">10.2.2</span> Lisää-välilehti</a></li>
-  <li><a href="#sivun-asettelu--välilehti" id="toc-sivun-asettelu--välilehti" class="nav-link" data-scroll-target="#sivun-asettelu--välilehti"><span class="header-section-number">10.2.3</span> Sivun asettelu -välilehti</a></li>
-  <li><a href="#kaavat-välilehti" id="toc-kaavat-välilehti" class="nav-link" data-scroll-target="#kaavat-välilehti"><span class="header-section-number">10.2.4</span> Kaavat-välilehti</a></li>
-  <li><a href="#tiedot-välilehti" id="toc-tiedot-välilehti" class="nav-link" data-scroll-target="#tiedot-välilehti"><span class="header-section-number">10.2.5</span> Tiedot-välilehti</a></li>
-  <li><a href="#tarkista-välilehti" id="toc-tarkista-välilehti" class="nav-link" data-scroll-target="#tarkista-välilehti"><span class="header-section-number">10.2.6</span> Tarkista-välilehti</a></li>
-  <li><a href="#näytä-välilehti" id="toc-näytä-välilehti" class="nav-link" data-scroll-target="#näytä-välilehti"><span class="header-section-number">10.2.7</span> Näytä-välilehti</a></li>
+  <li><a href="#sec-aloitus-välilehti" id="toc-sec-aloitus-välilehti" class="nav-link" data-scroll-target="#sec-aloitus-välilehti"><span class="header-section-number">14.2.1</span> Aloitus-välilehti</a></li>
+  <li><a href="#sec-lisää-välilehti" id="toc-sec-lisää-välilehti" class="nav-link" data-scroll-target="#sec-lisää-välilehti"><span class="header-section-number">14.2.2</span> Lisää-välilehti</a></li>
+  <li><a href="#sec-sivun-asettelu-välilehti" id="toc-sec-sivun-asettelu-välilehti" class="nav-link" data-scroll-target="#sec-sivun-asettelu-välilehti"><span class="header-section-number">14.2.3</span> Sivun asettelu -välilehti</a></li>
+  <li><a href="#sec-kaavat-välilehti" id="toc-sec-kaavat-välilehti" class="nav-link" data-scroll-target="#sec-kaavat-välilehti"><span class="header-section-number">14.2.4</span> Kaavat-välilehti</a></li>
+  <li><a href="#sec-tiedot-välilehti" id="toc-sec-tiedot-välilehti" class="nav-link" data-scroll-target="#sec-tiedot-välilehti"><span class="header-section-number">14.2.5</span> Tiedot-välilehti</a></li>
+  <li><a href="#sec-tarkista-välilehti" id="toc-sec-tarkista-välilehti" class="nav-link" data-scroll-target="#sec-tarkista-välilehti"><span class="header-section-number">14.2.6</span> Tarkista-välilehti</a></li>
+  <li><a href="#sec-näytä-välilehti" id="toc-sec-näytä-välilehti" class="nav-link" data-scroll-target="#sec-näytä-välilehti"><span class="header-section-number">14.2.7</span> Näytä-välilehti</a></li>
+  <li><a href="#muita-välilehtiä-ja-välilehtien-muokkaaminen" id="toc-muita-välilehtiä-ja-välilehtien-muokkaaminen" class="nav-link" data-scroll-target="#muita-välilehtiä-ja-välilehtien-muokkaaminen"><span class="header-section-number">14.2.8</span> Muita välilehtiä ja välilehtien muokkaaminen</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></h1>
+<h1 class="title"><span id="sec-excelin-käyttöliittymä" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></h1>
 </div>
 
 
@@ -315,30 +341,45 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen <strong>aloitusnäkymän</strong> (<a href="#fig-excelin-aloitusnäkymä">Kuva&nbsp;<span>10.1</span></a>). Näkymästä voit avata uuden <strong>työkirjan</strong> painamalla “Tyhjä työkirja”-kuvaketta ylävasemmalla. Hakupalkin alle tulee listaus viimeisimpiä työkirjoja, joita olet avannut. Voit avata olemassa olevan työkirjan painamalla “Avaa”-nappia oikeanpuoleisesta valikosta, ja hakemalla työkirjan tietokoneeltasi.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vihje
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kun luet tätä lukua, suosittelen pitämään tyhjän työkirjan auki toisessa ikkunassa/toisella näytöllä, jotta voit tarkistaa näkymän itse.</p>
+</div>
+</div>
+<p>Kun avaat Excelin ensimmäistä kertaa, näet sovelluksen <strong>aloitusnäkymän</strong> (<a href="#fig-excelin-aloitusnäkymä">Kuva&nbsp;<span>14.1</span></a>). Näkymästä voit avata uuden <strong>työkirjan</strong> painamalla “Tyhjä työkirja”-kuvaketta ylävasemmalla. Hakupalkin alle tulee listaus viimeisimpiä työkirjoja, joita olet avannut. Voit avata olemassa olevan työkirjan painamalla “Avaa”-nappia oikeanpuoleisesta valikosta, ja hakemalla työkirjan tietokoneeltasi.</p>
 <div id="fig-excelin-aloitusnäkymä" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_aloitusnäkymä.PNG" class="img-fluid figure-img" alt="Excelin aloitusnäkymä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.1: Excelin aloitusnäkymä</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.1: Excelin aloitusnäkymä</figcaption>
 </figure>
 </div>
-<section id="perusnäkymä" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="perusnäkymä"><span class="header-section-number">10.1</span> Perusnäkymä</h2>
-<p><strong>Työkirja</strong> on Excel-tiedosto, joka sisältää kaikki analyysisi ja tietosi. Avaamalla tyhjän työkirjan pääset Excelin <strong>perusnäkymään</strong> (<a href="#fig-excelin-perusnäkymä">Kuva&nbsp;<span>10.2</span></a>).</p>
+<section id="sec-perusnäkymä" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="sec-perusnäkymä"><span class="header-section-number">14.1</span> Perusnäkymä</h2>
+<p><strong>Työkirja</strong> on Excel-tiedosto, joka sisältää kaikki analyysisi ja tietosi. Avaamalla tyhjän työkirjan pääset Excelin <strong>perusnäkymään</strong> (<a href="#fig-excelin-perusnäkymä">Kuva&nbsp;<span>14.2</span></a>).</p>
 <div id="fig-excelin-perusnäkymä" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_perusnäkymä.PNG" class="img-fluid figure-img" alt="Tyhjä työkirja avattuna Excelissä."></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.2: Excelin perusnäkymä</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.2: Excelin perusnäkymä</figcaption>
 </figure>
 </div>
 <p>Perusnäkymä voidaan jakaa kolmeen osaan, ylhäältä alas. Ylimpänä löydät <strong>navigointipalkin</strong>, joka on jaettu useaan eri <strong>välilehteen</strong>. Välilehtien määrä voi vaihdella riippuen Excel-versiostasi ja asennetuista lisäosista, mutta sinulla on ainakin seuraavat välilehdet: <code>Aloitus, Lisää, Sivun asettelu, Kaavat, Tiedot, Tarkista, Näytä</code> ja <code>Ohje</code>. Välilehdet muuttavat, mitä työkaluja näet navigointipalkissa.</p>
-<p>Navigointipalkin alla löydät <strong>työlehtiönäkymän</strong>. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun <strong>riveihin</strong> ja <strong>sarakkeisiin</strong>. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi.</p>
-<p>Työlehtiönäkymän alla on <strong>taulukonvalitsin</strong>, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, “Taul1”, mutta voit laatia uusia lehtiöitä painamalla +-merkkiä viimeisen lehtiön nimen vieressä.</p>
-<p>Oikeaklikkaamalla työlehtiön nimeä saat esille lehtiön muokkausmenun (<a href="#fig-excel-lehtiöpalkki-oikeamenu">Kuva&nbsp;<span>10.3</span></a>).</p>
+<p>Navigointipalkin alla löydät <strong>työlehtiönäkymän</strong>. Excelissä tietoa käsitellään lehtiömuodossa, joka jakaa sivun <strong>riveihin</strong> ja <strong>sarakkeisiin</strong>. Rivit ovat numeroituna yhdestä ylöspäin, ja sarakkeet aakkosjärjestyksessä A:sta Z:aan. Z:an jälkeen tulee AA, AB, AC ja niin eteenpäin. Tällä alueella tulet näkemään datasi, ja teet myös kaikki laskutoimintosi, grafiikkasi ja muut taulukkosi. Näet myös <strong>funktioalueen</strong> taulukkoalueen yläpuolella (heti navigointipalkin alla), johon voit kirjoittaa solutietoja jos et halua kirjoittaa suoraan soluun.</p>
+<p>Voit vapaasti muokata rivien ja sarakkeiden kokoa näytöllä. Voit tehdä tämän siirtämällä hiiren sarakkeen/rivin rajalle niiden nimialueella (alaraja riveille, oikea raja sarakkeille) ja vetää siitä haluamaasi suuntaan. Voit myös oikeanäpäyttää rajaa, valita <code>Sarakkeen leveys...</code> (sarakkeille) tai <code>Rivikorkeus...</code> (riveille), ja kirjoittaa haluamasi koko ruutuun.</p>
+<p>Voit piilottaa rivejä tai sarakkeita näkyvistä. Oikeanäpäytä piilotettavan rivin tai sarakkeen nimeä ja valitse <code>Piilota</code>. Piilotetut rivit/sarakkeet pitävät osoitteensa, ja kaikki viittaukset niihin toimivat kuten aikaisemmin. Huomaat piilotuksen siitä, että rivien/sarakkeiden välissä on kaksi rajaviivaa yhden sijaan. Saat pilotetun rivin/sarakkeen takaisin esille oikeanäpäyttämällä näitä kahta rajaviivaa ja valitsemalla <code>Näytä</code>.</p>
+<p>Työlehtiönäkymän alla on <strong>taulukonvalitsin</strong>, josta näet kaikki työlehtiöt, jotka sinulla on. Tyhjässä työkirjassa on yksi lehtiö, <code>Taul1</code>, mutta voit laatia uusia lehtiöitä painamalla <code>+</code>-merkkiä viimeisen lehtiön nimen vieressä.</p>
+<p>Oikeaklikkaamalla työlehtiön nimeä saat esille lehtiön muokkausmenun (<a href="#fig-excel-lehtiöpalkki-oikeamenu">Kuva&nbsp;<span>14.3</span></a>).</p>
 <div id="fig-excel-lehtiöpalkki-oikeamenu" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_lehtiöpalkki_oikeamenu.png" class="img-fluid figure-img" alt="Työlehtiön muokkausmenu avattuna."></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.3: Työlehtiön muokkausmenu</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.3: Työlehtiön muokkausmenu</figcaption>
 </figure>
 </div>
 <p>Muokkausmenusta löytyy seuraavat kätevät valinnat:</p>
@@ -350,33 +391,40 @@ ul.task-list li input[type="checkbox"] {
 <li><p><code>Piilota</code> ja <code>Näytä...</code> Voit piilottaa työlehtiön näkyvistä. Piilotetut lehtiöt löytyvät <code>Näytä...</code>-toiminnosta, josta voit tuoda ne takaisin näkyville. Toiminnot eivät poista lehtiöitä.</p></li>
 </ul>
 </section>
-<section id="navigointipalkin-työkalut" class="level2 page-columns page-full" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="navigointipalkin-työkalut"><span class="header-section-number">10.2</span> Navigointipalkin työkalut</h2>
-<p>Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien sijainnit.</p>
-<section id="aloitus-välilehti" class="level3 page-columns page-full" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="aloitus-välilehti"><span class="header-section-number">10.2.1</span> Aloitus-välilehti</h3>
-<p>Aloitus-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (<a href="#fig-excel-aloitus-välilehti">Kuva&nbsp;<span>10.4</span></a>).</p>
+<section id="sec-navigointipalkin-työkalut" class="level2 page-columns page-full" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="sec-navigointipalkin-työkalut"><span class="header-section-number">14.2</span> Navigointipalkin työkalut</h2>
+<p>Tässä luvussa käydään läpi kaikki tärkeimmät navigointipalkin työkalut. Tulet käyttämään joitain näistä useasti, joten yritä oppia ulkoa tärkeimpien toimintojen sijainnit. Tekemällä oppii!</p>
+<section id="sec-aloitus-välilehti" class="level3 page-columns page-full" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="sec-aloitus-välilehti"><span class="header-section-number">14.2.1</span> Aloitus-välilehti</h3>
+<p><strong>Aloitus</strong>-välilehdeltä löydät yleisimmät tekstimuotoilutyökalut sekä jotkut muokkaus- ja suodatustyökalut (<a href="#fig-excel-aloitus-välilehti">Kuva&nbsp;<span>14.4</span></a>).</p>
 <div id="fig-excel-aloitus-välilehti" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_aloitus_välilehti.png" class="img-fluid figure-img" alt="Aloitus-välilehden työkalut, jaattuna kolmelle riville."></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.4: Aloitus-välilehden työkalut</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.4: Aloitus-välilehden työkalut</figcaption>
 </figure>
 </div>
-<p><strong>Leikepöytä</strong>-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa: <code>Ctrl+C</code> (kopioi), <code>Ctrl+V</code> (liitä) ja <code>Ctrl+X</code> (leikkaa). Excelissä on myös oma toiminto nimeltä <strong>Liitä määräten</strong>, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Saat tämän auki käyttämällä komentoa <code>Ctrl+Alt+V</code> yleisen liittämiskomennon sijaan. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.</p>
-<p><strong>Fontti</strong>-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).</p>
-<p><strong>Tasaus</strong>-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi <strong>Yhdistä ja keskitä</strong>-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta. <strong>Rivitä teksti</strong>-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan.</p>
-<div class="page-columns page-full"><p><strong>Numero</strong>-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot vaikka mihin muotoihin, mutta tällä alueella voit itse sanoa Excelille, “Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!”. Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy virheitä ja ongelmia!</p></li></div></div>
+<p><strong>Leikepöytä</strong>-alueelta löydät työkaluja leikkaamiseen ja liittämiseen. Suosittelen kuitenkin oppimaan ulkoa seuraavat näppäinkomennot jos et jo osaa:</p>
+<ul>
+<li><p><code>Ctrl + C</code> Kopioi</p></li>
+<li><p><code>Ctrl + V</code> Liitä</p></li>
+<li><p><code>Ctrl + X</code> Leikkaa</p></li>
+<li><p><code>Ctrl + Alt + V</code> Liitä määräten</p></li>
+</ul>
+<p><strong>Liitä määräten</strong> on Office-paketin oma toiminto, jolla voit määrätä, missä muodossa kopioitu asia liitetään. Voit valita liitettäväksi esim. vain tiedot ilman muotoilua, kaavat mutta ei tiedot, tiedot mutta ei kaavat, ja niin eteenpäin.</p>
+<p><strong>Fontti</strong>-alueelta löydät yleiset tekstin muotoilun työkalut. Löydät myös työkaluja joilla voit muotoilla soluja: alleviivauksen jälkeen tulee, järjestyksessä, solun reunaviivatyökalu (piirrä reunaviivoja valittujen solujen ympärille), solun väri (vaihda solun väriä), ja tekstin väri (vaihda tekstin väriä).</p>
+<div class="page-columns page-full"><p><strong>Tasaus</strong>-alueelta löydät tekstin tasausasetukset, sekä pysty- että vaakajärjestyksessä. Voit myös yhdistää monta solua yhdeksi <strong>Yhdistä ja keskitä</strong>-toiminnon avulla, mikä voi olla avuksi luettavuuden kannalta<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. <strong>Rivitä teksti</strong>-työkalulla määrität tekstin automaattisesti jakautumaan riveihin jos se ylittää solurajan. Excel laajentaa rivien ja sarakkeiden kokoa automaattisesti tämän mukaan.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Yhdistetyn solun osoite on aina osoite soluun, joka tuli ensimmäisenä yhdistetyksi. Jos esim. yhdistät solut <code>A1:A3</code>, yhdistetyn solun osoite on <code>A1</code>, jonka oikealla puolella tulee osoite <code>D1</code>. Sama pätee sarakkeiden yli yhdistetyille soluille, mutta sarakeosoitteella. Jos yhdistät monia sarakkeita ja rivejä samaan soluun, solun osoite on ylävasemman solun osoite: yhdistetyn solun <code>A1:C3</code> osoite on <code>A1</code>, jonka oikealla puolella on <code>D1</code> ja alapuolella <code>A4</code>.</p></li></div></div>
+<div class="page-columns page-full"><p><strong>Numero</strong>-alue määrittelee lukujen muotoilun. Excel on tiukka muotoilemaan numerot eri muotoihin itsenäisesti, jääräpäisesti ja lähes mielivaltaisesti, mutta tällä alueella voit itse sanoa Excelille, “Ei, tuo numero ei ole päivämäärä vaikka kuinka haluaisit!”. Voit myös muotoilla valuutta-arvojen muodot, desimaaliluvut prosenteiksi, sekä lisätä tai poistaa desimaaleja näkyviltä. Muotoilu ei vaikuta alla piilevään lukuun, eli toiminnot ovat vain esteettisiä<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Paitsi, että jos tietty funktio odottaa tiettyä lukumuotoilua (esim. päivämäärä) ja annat sille jotain muuta (esim. luvun), syntyy odottamattomia tuloksia. Tarkista aina lukujen muotoilut jos/kun syntyy ongelmia!</p></li></div></div>
 <p><strong>Tyylit</strong>-alueella voit tehdä erinäisiä muotoilutyylejä, muuttaa taulukkoja helposti haettaviksi taulukoiksi, ja muotoilla soluja valmiilla tyylillä. Tutustu omassa rauhassasi, emme tule käyttämään näitä sen kummemmin kurssilla.</p>
 <p><strong>Solut</strong>-alueella voit lisätä, poistaa tai muotoilla soluja.</p>
-<p><strong>Muokkaus</strong>-alueella löytyy erinäisiä muokkaustyökaluja, joista <strong>Lajittele ja suodata</strong> on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot.</p>
+<div class="page-columns page-full"><p><strong>Muokkaus</strong>-alueella löytyy erinäisiä muokkaustyökaluja, joista <strong>Lajittele ja suodata</strong> on ehkä tärkein. Voit lajitella valitun solualueen tietyn arvon mukaan, sekä suodattaa näkyville vain tietyt arvot<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;Tässä kirjassa käytän enimmäkseen funktioita lajitteluun ja suodattamiseen, koska nämä palauttavat aina uuden data-alueen eivätkä vaikuta alkuperäiseen. Lajittelua ja suodattamista voi tehdä näillä toiminnoilla funktioiden sijaan, mutta ole huolellinen, että muistat järjestää data alkuperäiseen muotoon kun olet valmis! Suosittelen funktioiden käyttämistä, vaikka ne alussa voivat olla hankalia.</p></li></div></div>
 </section>
-<section id="lisää-välilehti" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="lisää-välilehti"><span class="header-section-number">10.2.2</span> Lisää-välilehti</h3>
-<p>Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavioita (<a href="#fig-excel-lisää-välilehti">Kuva&nbsp;<span>10.5</span></a>).</p>
+<section id="sec-lisää-välilehti" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="sec-lisää-välilehti"><span class="header-section-number">14.2.2</span> Lisää-välilehti</h3>
+<p>Lisää-välilehdeltä löydät toiminnot, joilla voit tehdä kaavioita, lisätä kommentteja ja tekstiruutuja, sekä kirjoittaa matemaattisia kaavoja (<a href="#fig-excel-lisää-välilehti">Kuva&nbsp;<span>14.5</span></a>).</p>
 <div id="fig-excel-lisää-välilehti" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_lisää_välilehti.png" class="img-fluid figure-img" alt="Lisää-välilehden työkalut, kahdella rivillä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.5: Lisää-välilehden työkalut</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.5: Lisää-välilehden työkalut</figcaption>
 </figure>
 </div>
 <p><strong>Taulukot</strong>-alueelta löydät työkalut Pivot-taulukkojen tekemiseen. Emme käytä näytä kurssilla, mutta ne ovat erittäin tehokkaita työkaluja datan analysointiin ja visualisointiin.</p>
@@ -385,44 +433,68 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Kaaviot</strong>-alueella löydät kaikki Excelin kaaviomuodot grafiikan tekoa varten. Tulet käyttämään näitä useasti.</p>
 <p>Muista alueista tärkeimmät ovat <strong>Kommentit</strong>, josta löydät kommentointityökalun, sekä <strong>Teksti</strong>, josta voit lisätä vapaamuotoisia tekstiruutuja omia muistiinpanoja tai selitteitä varten. Voit myös lisätä matemaattisia kaavoja <strong>Merkit</strong>-alueen <strong>Kaava</strong>-työkalulla, jos haluat näyttää älykkäältä. Nämä kaavat eivät tee mitään Excelissä - laskelmia varten käytetään Excelin omia funktioita.</p>
 </section>
-<section id="sivun-asettelu--välilehti" class="level3" data-number="10.2.3">
-<h3 data-number="10.2.3" class="anchored" data-anchor-id="sivun-asettelu--välilehti"><span class="header-section-number">10.2.3</span> Sivun asettelu -välilehti</h3>
-<p>Sivun asettelu -välilehdeltä löydät työkaluja, joilla muotoilet työkirjan tulostusnäkymää (<a href="#fig-excel-sivunasettelu-välilehti">Kuva&nbsp;<span>10.6</span></a>).</p>
+<section id="sec-sivun-asettelu-välilehti" class="level3" data-number="14.2.3">
+<h3 data-number="14.2.3" class="anchored" data-anchor-id="sec-sivun-asettelu-välilehti"><span class="header-section-number">14.2.3</span> Sivun asettelu -välilehti</h3>
+<p>Sivun asettelu -välilehdeltä löydät työkaluja, joilla muotoilet työkirjan tulostusnäkymää (<a href="#fig-excel-sivunasettelu-välilehti">Kuva&nbsp;<span>14.6</span></a>).</p>
 <div id="fig-excel-sivunasettelu-välilehti" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_sivunasettelu_välilehti.png" class="img-fluid figure-img" alt="Sivun asettelu -välilehden työkalut"></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.6: Sivun asettelu -välilehden työkalut</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.6: Sivun asettelu -välilehden työkalut</figcaption>
 </figure>
 </div>
 <p>Tärkeimmät työkalut löytyvät <strong>Sivun asetukset</strong>-alueelta. Näillä voit muuttaa työlehden muotoilua tulostusnäkymässä, jos haluat tulostaa työlehtesi ja vaikkapa ripustaa sen seinälle.</p>
 <p>Joskus sattuu niin, että grafiikkasi ovat päällekäisiä etkä näe kaikkea kunnolla. Voit vaihtaa kaavojen ja kuvien välistä järjestystä <strong>Järjestä</strong>-alueella, sekä tasata niitä samaan riviin eri tavoin.</p>
 </section>
-<section id="kaavat-välilehti" class="level3" data-number="10.2.4">
-<h3 data-number="10.2.4" class="anchored" data-anchor-id="kaavat-välilehti"><span class="header-section-number">10.2.4</span> Kaavat-välilehti</h3>
-<p>Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (<a href="#fig-excel-kaavat-välilehti">Kuva&nbsp;<span>10.7</span></a>). Täältä löytyy myös erittäin tärkeä <strong>Nimien hallinta</strong> -osio (ks. LUKU NIMIEN HALLINNASTA).</p>
+<section id="sec-kaavat-välilehti" class="level3" data-number="14.2.4">
+<h3 data-number="14.2.4" class="anchored" data-anchor-id="sec-kaavat-välilehti"><span class="header-section-number">14.2.4</span> Kaavat-välilehti</h3>
+<p>Kaavat-välilehdeltä löydät funktioihin liittyviä työkaluja (<a href="#fig-excel-kaavat-välilehti">Kuva&nbsp;<span>14.7</span></a>). Täältä löytyy myös erittäin tärkeä <strong>Nimien hallinta</strong> -osio (ks. <a href="nimeäminenexcelissä.html"><span>Luku&nbsp;15</span></a>).</p>
 <div id="fig-excel-kaavat-välilehti" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="pics/excel_kaavat_välilehti.png" class="img-fluid figure-img" alt="Kaavat-välilehden työkalut, kahdessa rivissä"></p>
-<figcaption class="figure-caption">Kuva&nbsp;10.7: Kaavat-välilehden työkalut</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;14.7: Kaavat-välilehden työkalut</figcaption>
 </figure>
 </div>
 <p>Ensimmäinen alue on nimeltään <strong>Funktiokirjasto</strong>, ja sisältää luettelon kaikista Excelin funktioista. Jos et muista funktion nimeä, voit hakea sen käsiisi täältä. Voit myös hakea funktioita sanoilla <strong>Lisää funktio</strong>-työkalulla.</p>
-<p>Seuraavaksi tulee <strong>Määritetyt nimet</strong>-alue, josta pääset <strong>nimien hallintaan</strong>. Täällä voit määritellä omia “lempinimiä” solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa “sukupuoli”, ja viitata suoraan siihen nimeen!</p>
+<p>Seuraavaksi tulee <strong>Määritetyt nimet</strong>-alue, josta pääset <strong>nimien hallintaan</strong>. Täällä voit määritellä omia “lempinimiä” solualueille, funktioille ja melkein mille tahansa muulle. Sen sijaan, että joudut joka kerta viittaamaan tietyn muuttujan solualueelle, voit nimetä alueen vaikkapa “sukupuoli”, ja viitata suoraan siihen nimeen! Lue lisää tästä erittäin hyödyllisestä toiminnosta <a href="nimeäminenexcelissä.html">luvussa&nbsp;<span>15</span></a>.</p>
 <p>Jotkut funktiot eivät automaattisesti päivity kun teet muutoksia työlehtiössäsi. Voit päivittää kaikki funktiot ja laskutoimitukset <strong>Laskutoimitukset</strong>-alueelta painamalla <strong>Laske heti</strong> tai <strong>Laske taulukko</strong>.</p>
 </section>
-<section id="tiedot-välilehti" class="level3" data-number="10.2.5">
-<h3 data-number="10.2.5" class="anchored" data-anchor-id="tiedot-välilehti"><span class="header-section-number">10.2.5</span> Tiedot-välilehti</h3>
-<p>Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut. Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.</p>
+<section id="sec-tiedot-välilehti" class="level3" data-number="14.2.5">
+<h3 data-number="14.2.5" class="anchored" data-anchor-id="sec-tiedot-välilehti"><span class="header-section-number">14.2.5</span> Tiedot-välilehti</h3>
+<p>Tiedot-välilehdeltä löydät työkaluja tietokantayhteyksien käsittelyyn, sekä automaattisen datan uudelleenmuotoilun työkalut (<a href="#fig-tiedot-välilehti">Kuva&nbsp;<span>14.8</span></a>). Emme tule tarvitsemaan näitä kurssilla, mutta näiden avulla voit esim. automaattisesti hakea dataa jostain verkkotietokannasta tai muusta päivittyvästä tiedostosta.</p>
+<div id="fig-tiedot-välilehti" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/excel_tiedot_välilehti.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Tiedot-välilehdestä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;14.8: Tiedot-välilehden työkalut</figcaption>
+</figure>
+</div>
 </section>
-<section id="tarkista-välilehti" class="level3" data-number="10.2.6">
-<h3 data-number="10.2.6" class="anchored" data-anchor-id="tarkista-välilehti"><span class="header-section-number">10.2.6</span> Tarkista-välilehti</h3>
-<p>Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen. Näistä useimmiten käytetyt lienee <strong>Kommentit</strong>-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.</p>
+<section id="sec-tarkista-välilehti" class="level3" data-number="14.2.6">
+<h3 data-number="14.2.6" class="anchored" data-anchor-id="sec-tarkista-välilehti"><span class="header-section-number">14.2.6</span> Tarkista-välilehti</h3>
+<p>Tarkista-välilehdestä löytyy erinäisiä työkaluja oikeinkirjoituksen tarkistukseen, kommenttien käsittelyyn sekä työkirjan suojaamiseen (<a href="#fig-tarkista-välilehti">Kuva&nbsp;<span>14.9</span></a>). Näistä useimmiten käytetyt lienee <strong>Kommentit</strong>-alue, josta voit lisätä, poista ja näyttää tai poistaa näkyviltä kommentteja.</p>
+<div id="fig-tarkista-välilehti" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/excel_tarkista_välilehti.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Tarkista-välilehdestä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;14.9: Tarkista-välilehden työkalut</figcaption>
+</figure>
+</div>
 </section>
-<section id="näytä-välilehti" class="level3" data-number="10.2.7">
-<h3 data-number="10.2.7" class="anchored" data-anchor-id="näytä-välilehti"><span class="header-section-number">10.2.7</span> Näytä-välilehti</h3>
-<p>Näytä-välilehdellä voit muuttaa Excelin näkymää hieman.</p>
+<section id="sec-näytä-välilehti" class="level3" data-number="14.2.7">
+<h3 data-number="14.2.7" class="anchored" data-anchor-id="sec-näytä-välilehti"><span class="header-section-number">14.2.7</span> Näytä-välilehti</h3>
+<p>Näytä-välilehdellä voit muuttaa Excelin näkymää hieman (<a href="#fig-näytä-välilehti">Kuva&nbsp;<span>14.10</span></a>).</p>
+<div id="fig-näytä-välilehti" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="pics/excel_näytä_välilehti.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Näytä-välilehdestä."></p>
+<figcaption class="figure-caption">Kuva&nbsp;14.10: Näytä-välilehden työkalut</figcaption>
+</figure>
+</div>
 <p>Voit vaihtaa tulostusnäkymän ja normaalin näkymän välillä <strong>Työkirjanäkymät</strong>-alueella.</p>
 <p>Erittäin hyödyllinen toiminto on myös <strong>Ikkuna</strong>-alue, jolla voit avata saman työkirjan useampaan eri ikkunaan. Näin voit nähdä eri työlehtiöitä tai alueita samaan aikaan samalla näytöllä. Voit myös kiinnittää ensimmäisen rivin/sarakkeen, jotta ne pysyvät näkyvillä vaikka siirryt muualle.</p>
+</section>
+<section id="muita-välilehtiä-ja-välilehtien-muokkaaminen" class="level3 page-columns page-full" data-number="14.2.8">
+<h3 data-number="14.2.8" class="anchored" data-anchor-id="muita-välilehtiä-ja-välilehtien-muokkaaminen"><span class="header-section-number">14.2.8</span> Muita välilehtiä ja välilehtien muokkaaminen</h3>
+<p>Jos asennat Exceliin <strong>aputoimintoja</strong>, voit nähdä muitakin välilehtiä. Näitä voi myös olla näkyvillä valmiiksi, jos Excel-asennukseesi on lisätty joitain aputoimintoja. Näitä voivat olla esim. analyysityökaluja tai skriptaustyökaluja.</p>
+<div class="page-columns page-full"><p>Voit aktivoida valmiiksi asennettuja aputoimintoja Excelin asetuksista: <code>Tiedosto &gt; Asetukset &gt; Apuohjelmat</code>. Tällä kurssilla emme käytä aputoimintoja<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, mutta voit tutustua sellaisiin omalla ajallasi jo haluat.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;Yksi erittäin hyödyllinen, ja valmiiksi asennettu, aputoiminto on <strong>Analyyityökalut</strong>. Löydät sen Apuohjelmat-listauksesta, ja voit aktivoida sen painamalla ruksia sen ruutuun. Työkalu löytyy sitten osoitteesta <code>Tiedot &gt; Analysointi &gt; Tietojen analysointi</code>. Työkalulla voit automaattisesti ajaa erilaisia tilastollisia laskuja. Pedagogiikan takia emme käytä tätä tällä kurssilla, mutta suosittelen sen käyttöä jos jatkat tilastollisia töitä (ja pysyt jostain syystä Excelissä).</p></li></div></div>
+<p>Voit myös muokata välilehtien työkaluja hyvin vapaasti. Excelin asetuksista löytyy tällainen vaihtoehto: <code>Tiedosto &gt; Asetukset &gt; Valintanauhan mukauttaminen</code>. Voit lisätä ja poistaa työkaluja vapaasti kaikista välilehdistä, sekä jopa tehdä oman, täysin mukautetun välilehden itse. Verkkokirjassa oletan, että et ole poistanut työkaluja - jos olet, saat itse selvittää, mistä ne nykyään löytyvät.</p>
 
 
 </section>
@@ -666,16 +738,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./excelinperusteet.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./nimienhallinta.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./nimeäminenexcelissä.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

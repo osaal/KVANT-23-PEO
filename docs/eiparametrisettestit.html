@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 8&nbsp; Ei-parametriset testit</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 9&nbsp; Ei-parametriset testit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -58,250 +58,259 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 9&nbsp; Ei-parametriset testit">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./eiparametrisettestit.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eiparametrisettestit.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -314,27 +323,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#merkkitesti" id="toc-merkkitesti" class="nav-link active" data-scroll-target="#merkkitesti"><span class="header-section-number">8.1</span> Merkkitesti</a>
+  <li><a href="#sec-merkkitesti-teoria" id="toc-sec-merkkitesti-teoria" class="nav-link active" data-scroll-target="#sec-merkkitesti-teoria"><span class="header-section-number">9.1</span> Merkkitesti</a>
   <ul class="collapse">
-  <li><a href="#mallioletukset" id="toc-mallioletukset" class="nav-link" data-scroll-target="#mallioletukset"><span class="header-section-number">8.1.1</span> Mallioletukset</a></li>
-  <li><a href="#merkkitestin-toteuttaminen-excelissä" id="toc-merkkitestin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#merkkitestin-toteuttaminen-excelissä"><span class="header-section-number">8.1.2</span> Merkkitestin toteuttaminen Excelissä</a></li>
-  <li><a href="#merkkitestin-raportointi" id="toc-merkkitestin-raportointi" class="nav-link" data-scroll-target="#merkkitestin-raportointi"><span class="header-section-number">8.1.3</span> Merkkitestin raportointi</a></li>
+  <li><a href="#sec-merkkitesti-mallioletukset" id="toc-sec-merkkitesti-mallioletukset" class="nav-link" data-scroll-target="#sec-merkkitesti-mallioletukset"><span class="header-section-number">9.1.1</span> Mallioletukset</a></li>
+  <li><a href="#sec-merkkitestin-toteuttaminen-excelissä" id="toc-sec-merkkitestin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#sec-merkkitestin-toteuttaminen-excelissä"><span class="header-section-number">9.1.2</span> Merkkitestin toteuttaminen Excelissä</a></li>
+  <li><a href="#sec-merkkitestin-raportointi" id="toc-sec-merkkitestin-raportointi" class="nav-link" data-scroll-target="#sec-merkkitestin-raportointi"><span class="header-section-number">9.1.3</span> Merkkitestin raportointi</a></li>
   </ul></li>
-  <li><a href="#wilcoxonin-signed-rank-testi" id="toc-wilcoxonin-signed-rank-testi" class="nav-link" data-scroll-target="#wilcoxonin-signed-rank-testi"><span class="header-section-number">8.2</span> Wilcoxonin signed-rank-testi</a>
+  <li><a href="#sec-wilcoxonin-signed-rank-testi-teoria" id="toc-sec-wilcoxonin-signed-rank-testi-teoria" class="nav-link" data-scroll-target="#sec-wilcoxonin-signed-rank-testi-teoria"><span class="header-section-number">9.2</span> Wilcoxonin signed-rank-testi</a>
   <ul class="collapse">
-  <li><a href="#mallioletukset-1" id="toc-mallioletukset-1" class="nav-link" data-scroll-target="#mallioletukset-1"><span class="header-section-number">8.2.1</span> Mallioletukset</a></li>
-  <li><a href="#wilcoxonin-testin-laskeminen" id="toc-wilcoxonin-testin-laskeminen" class="nav-link" data-scroll-target="#wilcoxonin-testin-laskeminen"><span class="header-section-number">8.2.2</span> Wilcoxonin testin laskeminen</a></li>
-  <li><a href="#wilcoxonin-testin-toteuttaminen-excelissä" id="toc-wilcoxonin-testin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#wilcoxonin-testin-toteuttaminen-excelissä"><span class="header-section-number">8.2.3</span> Wilcoxonin testin toteuttaminen Excelissä</a></li>
-  <li><a href="#wilcoxonin-testin-raportointi" id="toc-wilcoxonin-testin-raportointi" class="nav-link" data-scroll-target="#wilcoxonin-testin-raportointi"><span class="header-section-number">8.2.4</span> Wilcoxonin testin raportointi</a></li>
+  <li><a href="#sec-wilcoxonin-signed-rank-mallioletukset" id="toc-sec-wilcoxonin-signed-rank-mallioletukset" class="nav-link" data-scroll-target="#sec-wilcoxonin-signed-rank-mallioletukset"><span class="header-section-number">9.2.1</span> Mallioletukset</a></li>
+  <li><a href="#sec-wilcoxonin-testin-laskeminen" id="toc-sec-wilcoxonin-testin-laskeminen" class="nav-link" data-scroll-target="#sec-wilcoxonin-testin-laskeminen"><span class="header-section-number">9.2.2</span> Wilcoxonin testin laskeminen</a></li>
+  <li><a href="#sec-wilcoxonin-testin-toteuttaminen-excelissä" id="toc-sec-wilcoxonin-testin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#sec-wilcoxonin-testin-toteuttaminen-excelissä"><span class="header-section-number">9.2.3</span> Wilcoxonin testin toteuttaminen Excelissä</a></li>
+  <li><a href="#sec-wilcoxonin-testin-raportointi" id="toc-sec-wilcoxonin-testin-raportointi" class="nav-link" data-scroll-target="#sec-wilcoxonin-testin-raportointi"><span class="header-section-number">9.2.4</span> Wilcoxonin testin raportointi</a></li>
   </ul></li>
-  <li><a href="#mann-whitneyn-u-testi" id="toc-mann-whitneyn-u-testi" class="nav-link" data-scroll-target="#mann-whitneyn-u-testi"><span class="header-section-number">8.3</span> Mann-Whitney’n U-testi</a>
+  <li><a href="#sec-mann-whitneyn-u-testi" id="toc-sec-mann-whitneyn-u-testi" class="nav-link" data-scroll-target="#sec-mann-whitneyn-u-testi"><span class="header-section-number">9.3</span> Mann-Whitney’n U-testi</a>
   <ul class="collapse">
-  <li><a href="#mallioletukset-2" id="toc-mallioletukset-2" class="nav-link" data-scroll-target="#mallioletukset-2"><span class="header-section-number">8.3.1</span> Mallioletukset</a></li>
-  <li><a href="#u-testin-laskeminen" id="toc-u-testin-laskeminen" class="nav-link" data-scroll-target="#u-testin-laskeminen"><span class="header-section-number">8.3.2</span> U-testin laskeminen</a></li>
-  <li><a href="#u-testin-toteuttaminen-excelissä" id="toc-u-testin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#u-testin-toteuttaminen-excelissä"><span class="header-section-number">8.3.3</span> U-testin toteuttaminen Excelissä</a></li>
-  <li><a href="#u-testin-raportoiminen" id="toc-u-testin-raportoiminen" class="nav-link" data-scroll-target="#u-testin-raportoiminen"><span class="header-section-number">8.3.4</span> U-testin raportoiminen</a></li>
+  <li><a href="#sec-mann-whitneyn-u-mallioletukset" id="toc-sec-mann-whitneyn-u-mallioletukset" class="nav-link" data-scroll-target="#sec-mann-whitneyn-u-mallioletukset"><span class="header-section-number">9.3.1</span> Mallioletukset</a></li>
+  <li><a href="#sec-u-testin-laskeminen" id="toc-sec-u-testin-laskeminen" class="nav-link" data-scroll-target="#sec-u-testin-laskeminen"><span class="header-section-number">9.3.2</span> U-testin laskeminen</a></li>
+  <li><a href="#sec-u-testin-toteuttaminen-excelissä" id="toc-sec-u-testin-toteuttaminen-excelissä" class="nav-link" data-scroll-target="#sec-u-testin-toteuttaminen-excelissä"><span class="header-section-number">9.3.3</span> U-testin toteuttaminen Excelissä</a></li>
+  <li><a href="#sec-u-testin-raportoiminen" id="toc-sec-u-testin-raportoiminen" class="nav-link" data-scroll-target="#sec-u-testin-raportoiminen"><span class="header-section-number">9.3.4</span> U-testin raportoiminen</a></li>
   </ul></li>
-  <li><a href="#testikoot-ei-parametrisille-testeille" id="toc-testikoot-ei-parametrisille-testeille" class="nav-link" data-scroll-target="#testikoot-ei-parametrisille-testeille"><span class="header-section-number">8.4</span> Testikoot ei-parametrisille testeille</a></li>
+  <li><a href="#sec-spearmanin-rho-teoria" id="toc-sec-spearmanin-rho-teoria" class="nav-link" data-scroll-target="#sec-spearmanin-rho-teoria"><span class="header-section-number">9.4</span> Spearmanin rho <span class="math inline">\(\rho\)</span></a>
+  <ul class="collapse">
+  <li><a href="#sec-mallioletukset-spearmanin-rho" id="toc-sec-mallioletukset-spearmanin-rho" class="nav-link" data-scroll-target="#sec-mallioletukset-spearmanin-rho"><span class="header-section-number">9.4.1</span> Mallioletukset</a></li>
+  <li><a href="#sec-spearmanin-rhon-laskeminen" id="toc-sec-spearmanin-rhon-laskeminen" class="nav-link" data-scroll-target="#sec-spearmanin-rhon-laskeminen"><span class="header-section-number">9.4.2</span> Spearmanin rhon laskeminen</a></li>
+  <li><a href="#sec-spearmanin-rhon-laskeminen-excelissä" id="toc-sec-spearmanin-rhon-laskeminen-excelissä" class="nav-link" data-scroll-target="#sec-spearmanin-rhon-laskeminen-excelissä"><span class="header-section-number">9.4.3</span> Spearmanin rhon laskeminen Excelissä</a></li>
+  <li><a href="#sec-spearmanin-rhon-raportointi" id="toc-sec-spearmanin-rhon-raportointi" class="nav-link" data-scroll-target="#sec-spearmanin-rhon-raportointi"><span class="header-section-number">9.4.4</span> Spearmanin rhon raportointi</a></li>
+  </ul></li>
+  <li><a href="#sec-testikoot-ei-parametrisille-testeille" id="toc-sec-testikoot-ei-parametrisille-testeille" class="nav-link" data-scroll-target="#sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.5</span> Testikoot ei-parametrisille testeille</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -343,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-ei-parametriset-testit" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></h1>
+<h1 class="title"><span id="sec-ei-parametriset-testit" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></h1>
 </div>
 
 
@@ -358,31 +374,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>Ei-parametriset testit</strong> ovat perhe testejä, joilla on vähemmän odotuksia datan jakaumalta ja vähemmän mallioletuksia kuin parametrisilla lineaarisilla testeillä. Näitä testejä voi käyttää useassa tapauksessa, jossa lineaarisen testin oletukset eivät täyty - esimerkiksi jos otoskoko on pieni.</p>
-<p>Yhteiskunta- ja ihmistieteissä <strong>muut robustit mitat</strong>, esimerkiksi bootstrap-mitat, ovat korvanneet ei-parametriset testit nykyään. Kuitenkaan mm. bootstrappingia on vaikea tehdä Excelissä, ja ei-parametrisiä testejä käytetään myös yleisesti luonnontieteissä, joten niiden osaaminen on tärkeää.</p>
-<p>Perusajatuksena ei-parametrisissa testeissä on, että data <strong>järjestetään</strong> ensin, ja merkitsevyys- sekä erotestit tuotetaan järjestysnumeroiden pohjalta. Tämä korjaa esimerkiksi ääripääarvojen ja vinouman vääristymiä (kahdeskymmenes datapiste on aina kahdeskymmenes datapiste, olkoon kuinka iso tahansa verrattuna muihin datapisteisiin!)</p>
+<p><strong>Ei-parametriset testit</strong> ovat testiperhe, jolla on vähemmän odotuksia datan jakaumalta ja vähemmän mallioletuksia kuin parametrisilla lineaarisilla testeillä. Näitä testejä voi käyttää useimmissa tapauksissa, joissa lineaarisen testin oletukset eivät täyty, esimerkiksi jos otoskoko on pieni.</p>
+<p>Yhteiskunta- ja ihmistieteissä <strong>muut robustit mitat</strong>, esimerkiksi <strong>bootstrap</strong>-mitat, ovat pitkälti korvanneet ei-parametriset testit. Näitä on kuitenkin vaikea tehdä Excelissä, ja ei-parametrisiä testejä käytetään myös yleisesti luonnontieteissä, joten niiden osaaminen on tärkeää.</p>
+<div class="page-columns page-full"><p>Perusajatuksena ei-parametrisissa testeissä on, että data ensin <strong>järjestetään</strong>, jolloin merkitsevyys- sekä erotestit tuotetaan järjestysnumeroiden pohjalta. Tämä korjaa esimerkiksi ääripääarvojen ja vinouman vääristymiä.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Kahdeskymmenes datapiste on aina kahdeskymmenes datapiste, olkoon kuinka iso tahansa verrattuna muihin datapisteisiin!</p></li></div></div>
 <p>Ei-parametriset testit voivat kuulostaa loistavalta vaihtoehdolta: ne testaavat merkitsevyyttä, mutta ne eivät vaadi suuria otoskokoja tai useampien mallioletusten täyttymistä! <u>Negatiivisena puolena ei-parametrisillä testeillä on yleensä matalampi <strong>tilastollinen voima</strong> (engl. <em>statistical power</em>).</u> Tilastollisella voimalla tarkoitetaan testin kykyä tunnistaa <strong>todelliset positiiviset</strong>, eli hylätä nollahypoteesi tilanteessa, jossa sen pitikin hylätä. Matalan voiman testeillä todellisia positiivisia tunnistetaan heikommin, jolloin tulee useammin vastaan tilanteita, joissa et pysty hylkäämään nollahypoteesia vaikka sen hylkääminen todellisuudessa olisi oikein.</p>
 <p>Tämän takia nyrkkisääntönä onkin, että <u>käytät parametrisia lineaarisia malleja jos ja kun mallioletukset täyttyvät</u>, ja ei-parametrisia testejä vain jos mallioletukset eivät täyty.</p>
-<section id="merkkitesti" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="merkkitesti"><span class="header-section-number">8.1</span> Merkkitesti</h2>
+<p>Tässä kirjassa käydään läpi neljä ei-parametristä testiä:</p>
+<ol type="1">
+<li><strong>Merkkitesti</strong> (vastaa yhden otoksen t-testiä)</li>
+<li><strong>Wilcoxonin signed-rank</strong> -testi (vastaa parittaisen otoksen t-testiä)</li>
+<li><strong>Mann-Whitney’n U-testi</strong> (vastaa kahden otoksen t-testiä)</li>
+<li><strong>Spearmanin rho</strong> (vastaa Pearsonin korrelaatiokertointa)</li>
+</ol>
+<section id="sec-merkkitesti-teoria" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="sec-merkkitesti-teoria"><span class="header-section-number">9.1</span> Merkkitesti</h2>
 <p><strong>Mittausasteikot</strong>: Järjestysasteikosta ylöspäin</p>
-<p><strong>Merkkitesti</strong> on yksimuuttujatesti, eli vastaa parametristä <strong>yhden otoksen t-testiä</strong>. Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettamana mediaani. T-testissä käytetään keskiarvoa, ja usein nollahypoteesille arvoa <span class="math inline">\(0\)</span>; merkkitestissä käytetään mediaania, jonka lisäksi määritellään arvo, jota vastaan testataan.</p>
+<p><strong>Merkkitesti</strong> on yksimuuttujatesti, eli vastaa parametristä <strong>yhden otoksen t-testiä</strong> (ks. <a href="ttesti.html#sec-yhden-otoksen-t-testi-teoria"><span>Alaluku&nbsp;10.4.1</span></a>). Merkkitestillä testataan, onko otoksen mediaani merkitsevästi eri kuin nollahypoteesin olettama mediaani. T-testissä käytetään keskiarvoa, merkkitestissä käytetään mediaania. Molemmissa testeissä määritellään myös arvo, jota vastaan testataan, eli nollahypoteesina arvo.</p>
 <p><u>Merkkitestin voi toteuttaa <strong>yksi-</strong> tai <strong>kaksihäntäisenä</strong></u>. Tämän tunnistaa helpoiten nolla- ja vaihtoehtohypoteesin muotoilusta:</p>
 <blockquote class="blockquote">
 <p>Jos vaihtoehtohypoteesisi ehdottaa vain eroa (“populaatiomediaani <u>ei ole</u> yhtä kuin X”), merkkitesti tulee toteuttaa <strong>kaksihäntäisenä</strong>.</p>
 <p>Jos vaihtoehtohypoteesisi ehdottaa suuntaa ja eroa (“populaatiomediaani on suurempi/pienempi kuin X”), merkkitesti tulee toteuttaa <strong>yksihäntäisenä</strong>.</p>
 </blockquote>
-<p><u>Merkkitestin voi myös tehdä kahden muuttujan välillä</u>, jolloin tarkastetaan erojen mediaani. Tällöin testi voi olla <strong>parittainen</strong> merkkitesti. Tämä on suoraan verrattavissa parittaiseen t-testiin. Huomioi, että merkkitestiä ei voi tehdä kahden otoksen ei-paritetulle muuttujaparille (tilanteeseen, jossa muuttujat edustavat esim. eri ryhmiä). Tällöin on käytettävä jotain muuta testiä, esim. Mann-Whitney’n U-testiä (ks. alla).</p>
+<p><u>Merkkitestin voi myös tehdä kahden muuttujan välillä</u>, jolloin tarkastetaan erojen mediaani. Tällöin testi voi olla <strong>parittainen</strong> merkkitesti. Tämä on suoraan verrattavissa <strong>parittaiseen t-testiin</strong>. Huomioi, että merkkitestiä ei voi tehdä kahden otoksen ei-paritetulle muuttujaparille (eli tilanteessa, jossa muuttujat edustavat eri ryhmiä). Tällöin on käytettävä jotain muuta testiä, esim. Mann-Whitney’n U-testiä (ks. <a href="#sec-mann-whitneyn-u-testi"><span>Alaluku&nbsp;9.3</span></a>).</p>
 <p><u>Merkkitestin ideana</u> on, että tutkija määrittelee jokaiselle arvolle <strong>merkin</strong> <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span> tai <span class="math inline">\(0\)</span>. Nämä osoittavat, onko arvo yli, ali vai sama kuin nollahypoteesin ehdottama arvo <span class="math inline">\(k\)</span>. Jos esimerkiksi nollahypoteesi ehdottaa, että populaation mediaani on <span class="math inline">\(5\)</span>, niin merkataan kaikki arvot yli viiden plus-merkillä, kaikki alle viiden minus-merkillä, ja kaikki viiden arvot nollalla.</p>
-<p><u>Merkkauksen jälkeen kaikki plussat, minukset ja nollat lasketaan</u>. Sitten käytetään <strong>binomijakaumaa</strong> hakeaksemme, kuinka todennäköistä oli saada niin monta plussaa/minusta kuin datamme näyttää, jos nollahypoteesi on tosi (ja plussien/minusten määrä tulisi olla sama ja mediaanin ympäröimä).</p>
-<section id="mallioletukset" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="mallioletukset"><span class="header-section-number">8.1.1</span> Mallioletukset</h3>
+<p><u>Merkkauksen jälkeen kaikki plussat, minukset ja nollat lasketaan</u>. Sitten käytetään <strong>binomijakaumaa</strong> hakeaksemme, kuinka todennäköistä oli saada niin monta plussaa/minusta kuin datamme näyttää, jos nollahypoteesi on tosi (ja plussien/minusten määrä tulisi olla sama ja siten mediaanin ympäröimä).</p>
+<section id="sec-merkkitesti-mallioletukset" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="sec-merkkitesti-mallioletukset"><span class="header-section-number">9.1.1</span> Mallioletukset</h3>
 <p>Vaikka merkkitesti on ei-parametrinen testi, sillä on kuitenkin joitain mallioletuksia.</p>
 <p><u>Kaikki merkkitestivariantit olettavat, että muuttuja(t) on/ovat <strong>satunnaisesti otettuja populaatiosta</strong></u>. Jos näin ei ole, testin jakaumaoletus ei välttämättä mallinna todellista suhdetta luotettavasti. Tämä oletus pätee käytännössä kaikkiin frekvenssitilastotieteen malleihin, joten sitä ei edes usein ilmaista oletuksena.</p>
-<p><u>Parittainen merkkitesti olettaa, että muuttujat voidaan <strong>parittaa riveittäin</strong></u>. Toisin sanoen, muuttujien pitää olla riippuvaisia toisistaan.</p>
+<p><u>Parittainen merkkitesti olettaa, että muuttujat voidaan <strong>parittaa riveittäin</strong></u>. Toisin sanoen, muuttujien pitää olla riippuvaisia toisistaan. Jokaiselle yksikölle tulee löytyä arvo molemmilla muuttujilla.</p>
 </section>
-<section id="merkkitestin-toteuttaminen-excelissä" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="merkkitestin-toteuttaminen-excelissä"><span class="header-section-number">8.1.2</span> Merkkitestin toteuttaminen Excelissä</h3>
+<section id="sec-merkkitestin-toteuttaminen-excelissä" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-merkkitestin-toteuttaminen-excelissä"><span class="header-section-number">9.1.2</span> Merkkitestin toteuttaminen Excelissä</h3>
 <p>Merkkitesti toteutetaan Excelissä omilla laskuilla, koska laskukaavaa ei ole. Toteuttaminen käy vaiheissa:</p>
 <ol type="1">
 <li>Määrittele nollahypoteesin mediaaniraja (esim. <span class="math inline">\(\text{Md} = 5\)</span>).</li>
@@ -391,10 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Jos vain eri kuin nollahypoteesi, laske kaksihäntäinen merkkitesti.</li>
 <li>Jos suurempi tai pienempi, laske yksihäntäinen merkkitesti.</li>
 </ol></li>
-<li>Määrittele jokaiselle datapisteelle merkki <code>JOS</code>-funktiolla.
-<ol type="1">
-<li>Laskukaavio: <code>=JOS(solu &gt; nollaraja; 1; JOS(solu = nollaraja; 0; -1))</code></li>
-</ol></li>
+<li>Määrittele jokaiselle datapisteelle merkki <code>JOS</code>-funktiolla: <code>=JOS(solu &gt; nollaraja; 1; JOS(solu = nollaraja; 0; -1))</code></li>
 <li>Laske positiivisten ja negatiivisten merkkien määrät: <code>=LASKE.JOS(alue; -1)</code> ja <code>=LASKE.JOS(alue; 1)</code></li>
 <li>Laske vaihtoehtohypoteesia edustava otoskoko summaamalla positiivisten ja negatiivisten merkkien määrät yhteen.</li>
 <li>Laske p-arvo:
@@ -403,12 +423,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Yksihäntäinen merkkitesti: <code>=BINOMI.JAKAUMA(merkkimäärä; otoskoko; 0,5; TOSI)</code></li>
 </ol></li>
 </ol>
-<p><u>P-arvon laskukaavio riippuu häntäisyydestä</u>. <strong>Kaksihäntäisessä testissä</strong> käytetään joko negatiivisten tai positiivisten merkkien määrää, riippuen siitä, kumpi on pienempi. Koska testissä käytetään molempia häntiä, todennäköisyys kerrotaan kahdella. <strong>Yksihäntäisessä testissä</strong> käytetään sitä merkkimäärää, jota halutaan testata (positiiviset jos vaihtoehtohypoteesi ehdottaa suurempaa, negatiiviset jos pienempää), ja käytetään p-arvoa suoraan.</p>
+<p><u>P-arvon laskukaavio riippuu häntäisyydestä</u>. <strong>Kaksihäntäisessä testissä</strong> käytetään joko negatiivisten tai positiivisten merkkien määrää, riippuen siitä, kumpi on pienempi. Koska testissä käytetään molempia häntiä, todennäköisyys kerrotaan kahdella. <strong>Yksihäntäisessä testissä</strong> käytetään sitä merkkimäärää, jota halutaan testata (positiiviset jos vaihtoehtohypoteesi ehdottaa suurempaa, negatiiviset jos pienempää), ja p-arvo raportoidaan sellaisenaan.</p>
 </section>
-<section id="merkkitestin-raportointi" class="level3" data-number="8.1.3">
-<h3 data-number="8.1.3" class="anchored" data-anchor-id="merkkitestin-raportointi"><span class="header-section-number">8.1.3</span> Merkkitestin raportointi</h3>
-<p>Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin p-arvo. Sille tulee mieluisesti raportoida seuraavat:</p>
+<section id="sec-merkkitestin-raportointi" class="level3" data-number="9.1.3">
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="sec-merkkitestin-raportointi"><span class="header-section-number">9.1.3</span> Merkkitestin raportointi</h3>
+<p>Merkkitestin testisuureena käytetään sitä merkkimäärää, jolla laskettiin p-arvo. Testille tulee mieluisesti raportoida seuraavat:</p>
 <ul>
+<li><p>Testattava mediaani <span class="math inline">\(\text{Md}\)</span></p></li>
 <li><p>Nollahypoteesin raja-arvo</p></li>
 <li><p>Testin häntäisyys sekä suunta (jos yksihäntäinen)</p>
 <ul>
@@ -421,13 +442,22 @@ ul.task-list li input[type="checkbox"] {
 <p><u>Toisin sanottuna, raportoi käytännössä kaikki arvot</u>, jotka laskit.</p>
 </section>
 </section>
-<section id="wilcoxonin-signed-rank-testi" class="level2 page-columns page-full" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="wilcoxonin-signed-rank-testi"><span class="header-section-number">8.2</span> Wilcoxonin signed-rank-testi</h2>
+<section id="sec-wilcoxonin-signed-rank-testi-teoria" class="level2 page-columns page-full" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="sec-wilcoxonin-signed-rank-testi-teoria"><span class="header-section-number">9.2</span> Wilcoxonin signed-rank-testi</h2>
 <p><strong>Mittausasteikot:</strong> Välimatka- ja suhdeasteikko.</p>
-<div class="page-columns page-full"><p><strong>Wilcoxonin signed-rank-testi</strong> (myös Wilcoxonin rankitesti parivertailulle<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, tai vain Wilcoxonin testi<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>) on ei-parametrinen vastine <strong>parillisen otoksen t-testille</strong>. Testillä testataan, eroavatko kaksi muuttujaa toisestaan merkitsevästi.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.</p></li><li id="fn2"><p><sup>2</sup>&nbsp;Wilcoxonin testi voi joskus myös viitata <strong>Wilcoxonin rankisummatestiin</strong> (engl. <em>Wilcoxon rank-sum test</em>), joka on käytännössä sama kuin Mann-Whitney’n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin; kontekstista voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.</p></li></div></div>
-<p>Testi on jokseenkin samanlainen kuin merkkitesti, mutta kahdella tärkeällä erolla. Ensinnäkin testille lasketaan kahden muuttujan parien erot, ja toiseksi nämä asetetaan järjestykseen ennen testaamista.</p>
-<p>Myös Wilcoxonin testin voi tehdä <strong>yksi- tai kaksihäntäisenä</strong>. Häntäisyysvalinta vaikuttaa merkitsevyyden hakemiseen.</p>
-<p>Testin logiikka on yksinkertainen:</p>
+<div class="page-columns page-full"><p><strong>Wilcoxonin signed-rank-testi</strong> (myös Wilcoxonin rankitesti parivertailulle<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, tai vain Wilcoxonin testi<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) on ei-parametrinen vastine <strong>parittaisen otoksen t-testille</strong> (ks. <a href="ttesti.html#sec-parittaisen-otoksen-t-testi-teoria"><span>Alaluku&nbsp;10.4.2</span></a>). Testillä testataan, eroavatko kaksi muuttujaa toisistaan merkitsevästi.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Tämä on mielestäni niin hirvittävä käännösnimi, että en suostu sitä käyttämään.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;Wilcoxonin testi voi joskus myös viitata <strong>Wilcoxonin rankisummatestiin</strong> (engl. <em>Wilcoxon rank-sum test</em>), joka on käytännössä sama kuin Mann-Whitney’n U-testi. Tilastotiede on usein tällä tavalla sekavasti nimetty. Yleisesti ottaen kuitenkin Wilcoxonin testillä viitataan tähän parittaisten muuttujien testiin. Tutkimusasetelmasta voit myös päätellä, onko kyseessä parittainen testi vai kahden otoksen testi.</p></li></div></div>
+<p>Testi on jokseenkin samanlainen kuin merkkitesti, mutta kahdella tärkeällä erolla. Ensinnäkin testille lasketaan kahden muuttujan parien <strong>erot</strong>, ja toiseksi nämä <strong>asetetaan järjestykseen</strong> ennen testaamista.</p>
+<p>Myös Wilcoxonin testin voi tehdä <strong>yksi-</strong> tai <strong>kaksihäntäisenä</strong>. Häntäisyysvalinta vaikuttaa merkitsevyyden laskemiseen.</p>
+<section id="sec-wilcoxonin-signed-rank-mallioletukset" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-wilcoxonin-signed-rank-mallioletukset"><span class="header-section-number">9.2.1</span> Mallioletukset</h3>
+<p>Kuten merkkitesti, Wilcoxonin testi ei oleta paljoa.</p>
+<p><u>Mittausasteikon tulisi olla välimatka- tai suhdeasteikko</u> (koska laskemme eroja muuttujien välillä).</p>
+<p>Testi olettaa myös, että <u>mittaukset ovat paritettuja</u>; jos mittauksesi on kahden otoksen ei-paritettu otanta, käytä Mann-Whitney’n U-testiä (ks. <a href="#sec-mann-whitneyn-u-testi"><span>Alaluku&nbsp;9.3</span></a>).</p>
+<p>Kuten kaikissa ei-parametrisissa testeissä: jos täytät lineaarisen mallin vaatimukset, käytä sitä ei-parametrisen testin sijaan.</p>
+</section>
+<section id="sec-wilcoxonin-testin-laskeminen" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-wilcoxonin-testin-laskeminen"><span class="header-section-number">9.2.2</span> Wilcoxonin testin laskeminen</h3>
+<p><u>Testin logiikka on suoraviivainen</u>:</p>
 <ol type="1">
 <li>Laske muuttujien väliset erot.</li>
 <li>Merkitse niiden merkit (positiivinen vai negatiivinen; jätä pois nollat)</li>
@@ -436,39 +466,33 @@ ul.task-list li input[type="checkbox"] {
 <li>Laske testin keskiarvo, keskihajonta ja z-arvot.</li>
 <li>Vertaa z-arvoja kriittisiin arvoihin ja hae p-arvo.</li>
 </ol>
-<section id="mallioletukset-1" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="mallioletukset-1"><span class="header-section-number">8.2.1</span> Mallioletukset</h3>
-<p>Kuten merkkitesti, Wilcoxonin testi ei oleta paljoa. Mittausasteikon tulisi olla välimatka- tai suhdeasteikko (koska laskemme eroja muuttujien välillä). Testi olettaa myös, että mittaukset ovat paritettuja; jos mittauksesi on kahden otoksen ei-paritettu otanta, käytä Mann-Whitney’n U-testiä.</p>
-<p>Kuten kaikissa ei-parametrisissa testeissä: jos täytät lineaarisen mallin vaatimukset, käytä sitä ei-parametrisen testin sijaan.</p>
-</section>
-<section id="wilcoxonin-testin-laskeminen" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="wilcoxonin-testin-laskeminen"><span class="header-section-number">8.2.2</span> Wilcoxonin testin laskeminen</h3>
 <p><u>Muuttujien väliset erot lasketaan yksinkertaisesti</u> <span class="math inline">\(x_i - y_i\)</span>, jossa <span class="math inline">\(i\)</span> on rivin numero. Laske siis erot muuttujien välillä jokaiselle riville.</p>
 <p><u>Näistä eroista jätetään pois kaikki nollat</u>, eli ne voivat jäädä pois seuraavista laskuista kokonaan.</p>
 <p><u>Aseta seuraavaksi positiiviset ja negatiiviset erot järjestyksiin</u>; anna järjestysnumero <span class="math inline">\(1\)</span> pienimmälle, <span class="math inline">\(2\)</span> seuraavaksi isommalle, jne., kunnes kaikki ei-nollat arvot ovat järjestettyjä.</p>
-<p><u>Jos kaksi tai useampi arvo saisi saman järjestysnumeron</u>, anna niille ensin nousevat järjestysnumerot, ja laske sitten niiden keskiarvo. Kaikki samat arvot saavat silloin saman keskiarvojärjestysnumeron. Jatka sitten numerointia siitä kohtaa, mihin se olisi jäänyt, jos arvot eivät olisi samansuuruisia. Jos arvot esimerkiksi ovat <span class="math inline">\(\{3, 4, 5, 5, 6\}\)</span>, niiden järjestysarvot olisivat <span class="math inline">\(\{1, 2, (3), (4), 5\}\)</span>. Koska kaksi arvoa kuitenkin ovat samankokoisia, lasketaan niiden mahdollisten järjestysarvojen keskiarvo ja määritetään se järjestysnumeroksi: <span class="math inline">\((3+4)/2 = 7/2 = 3.5\)</span>. Täten saadaan lopulliset järjestysnumerot <span class="math inline">\(\{1, 2, 3.5, 3.5, 5\}\)</span>. Huomaa, että viimeinen arvo sai järjestysnumeron, jonka se olisi saanut jos samanlaisia arvoja ei olisi ollut alkuperäisessä järjestyksessä.</p>
+<p><u>Jos kaksi tai useampi arvo saisi saman järjestysnumeron</u>, anna niille ensin nousevat järjestysnumerot, ja laske sitten niiden keskiarvo. Kaikki samat arvot saavat silloin saman keskiarvojärjestysnumeron. Jatka sitten numerointia siitä kohtaa, mihin se olisi jäänyt, jos arvot eivät olisi samansuuruisia.</p>
+<p>Jos arvot esimerkiksi ovat <span class="math inline">\(\{3, 4, 5, 5, 6\}\)</span>, niiden järjestysarvot olisivat <span class="math inline">\(\{1, 2, (3), (4), 5\}\)</span>. Koska kaksi arvoa kuitenkin ovat samankokoisia, lasketaan niiden mahdollisten järjestysarvojen keskiarvo ja määritetään se järjestysnumeroksi: <span class="math inline">\((3+4)/2 = 7/2 = 3.5\)</span>. Täten saadaan lopulliset järjestysnumerot <span class="math inline">\(\{1, 2, 3.5, 3.5, 5\}\)</span>. Huomaa, että viimeinen arvo sai järjestysnumeron, jonka se olisi saanut jos samanlaisia arvoja ei olisi ollut alkuperäisessä järjestyksessä.</p>
 <p><u>Summaa sitten järjestysnumerot yhteen kahdelle merkille erikseen</u>: <span class="math inline">\(T = \sum_{i=1}^n{J_i}\)</span> , jossa <span class="math inline">\(J_i\)</span> on arvon <span class="math inline">\(i\)</span> järjestysnumero. <span class="math inline">\(n\)</span> on tässä tilanteessa positiivisten tai negatiivisten arvojen määrä, ilman nolla-arvoja.</p>
 <p><u>Tässä vaiheessa voimme jo hakea merkitsevyyden kriittisten arvojen taulukosta</u>. Merkitsevyys pohjautuu otoskokoon ja alfa-arvoon.</p>
-<p><u>Jos kuitenkin otoskoko on yli noin 25</u>, voimme myös käyttää z-normalisointia hakeaksemme tarkan (ja hieman voimakkaamman) p-arvon.</p>
+<p><u>Jos kuitenkin otoskoko on yli noin 25</u>, voimme myös käyttää <strong>z-normalisointia</strong> hakeaksemme tarkan (ja hieman voimakkaamman) p-arvon.</p>
 <p><u>Tällöin lasketaan testin keskiarvo ja keskihajonta</u>, jotka molemmat pohjautuvat testikokoon:</p>
-<p><span class="math display">\[
+<p><span id="eq-wilcoxonin-testi-keskiarvo-ja-keskihajonta"><span class="math display">\[
 \begin{split}
 \bar{T} = \frac{n(n+1)}{4}
 \\ \text{SE}_{\bar{T}} = \sqrt{\frac{n(n+1)(2n+1)}{24}}
 \end{split}
-\]</span></p>
+\tag{9.1}\]</span></span></p>
 <p><strong>Keskiarvo</strong> lasketaan kertomalla otoskoko itsellään plus yksi, ja jakamalla tulos neljällä.</p>
-<p><strong>Keskihajonta</strong> saadaan ensin kertomalla otoskoko, otoskoko plus yksi, sekä kaksi kertaa otoskoko plus yksi yhteen, jakamalla tulos kahdellakymmenelläneljällä, ja ottamalla tämän tuloksen neliöjuuri.</p>
-<p><strong>HUOM: Otoskokoina käytetään ryhmän kokoa ilman nolla-arvoja!</strong> Jos sinulla oli esim. kymmenen riviä, joista kaksi saivat erotuksessa nolla-arvon, otoskoko testille on kahdeksan.</p>
+<p><strong>Keskihajonta</strong> saadaan ensin kertomalla otoskoko, otoskoko plus yksi, sekä kaksi kertaa otoskoko plus yksi yhteen, jakamalla tulos 24:llä, ja ottamalla tämän tuloksen neliöjuuri.</p>
+<p><strong>Otoskokoina käytetään ryhmän kokoa ilman nolla-arvoja.</strong> Jos sinulla oli esimerkiksi kymmenen riviä, joista kaksi saivat erotuksessa nolla-arvon, otoskoko testille on kahdeksan.</p>
 <p><u>Viimeiseksi lasketaan z-arvot.</u> Koska z-arvon yleiskaava on <span class="math inline">\(z = \frac{X-\bar{X}}{s}\)</span>, voimme vain korvata symbolit laskemillamme arvoilla:<br>
 </p>
-<p><span class="math display">\[
+<p><span id="eq-wilcoxonin-testi-z-normalisointi"><span class="math display">\[
 z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
-\]</span></p>
+\tag{9.2}\]</span></span></p>
 <p>Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai laskurilla.</p>
 </section>
-<section id="wilcoxonin-testin-toteuttaminen-excelissä" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="wilcoxonin-testin-toteuttaminen-excelissä"><span class="header-section-number">8.2.3</span> Wilcoxonin testin toteuttaminen Excelissä</h3>
+<section id="sec-wilcoxonin-testin-toteuttaminen-excelissä" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="sec-wilcoxonin-testin-toteuttaminen-excelissä"><span class="header-section-number">9.2.3</span> Wilcoxonin testin toteuttaminen Excelissä</h3>
 <p><u>Kuten merkkitesti, Wilcoxonin testi toteutetaan käsin Excelissä</u>:</p>
 <ol type="1">
 <li>Valitse muuttujat, joita haluat verrata.</li>
@@ -483,7 +507,7 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <li>Laske absoluuttiset erot: <code>=ITSEISARVO(solu)</code></li>
 <li>Järjestä absoluuttiset arvot: <code>=JOS(solu = 0; ""; ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1))</code>
 <ol type="1">
-<li>Funktio kopioidaan kaikille riveille erikseen. Lukitse järjestysalue jotta vetotoiminto tai kopiointi ei siirrä aluetta.</li>
+<li>Funktio kopioidaan kaikille riveille erikseen. Lukitse järjestysalue jotta vetotoiminto tai kopiointi ei siirrä tätä aluetta.</li>
 </ol></li>
 <li>Tee uudet sarakkeet, jonne merkitset positiivisten ja negatiivisten arvojen järjestysarvot erikseen.
 <ol type="1">
@@ -505,8 +529,8 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <li>Hae z-arvon p-arvo: <code>=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)</code></li>
 </ol>
 </section>
-<section id="wilcoxonin-testin-raportointi" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="wilcoxonin-testin-raportointi"><span class="header-section-number">8.2.4</span> Wilcoxonin testin raportointi</h3>
+<section id="sec-wilcoxonin-testin-raportointi" class="level3" data-number="9.2.4">
+<h3 data-number="9.2.4" class="anchored" data-anchor-id="sec-wilcoxonin-testin-raportointi"><span class="header-section-number">9.2.4</span> Wilcoxonin testin raportointi</h3>
 <p><u>Wilcoxonin testin suureena käytetään järjestysnumeroiden summaa</u>. Valinta niiden välillä riippuu hypoteesirakennelmastasi/häntäisyydestä. Raportoi ainakin:</p>
 <ul>
 <li><p>Testisuure <span class="math inline">\(T\)</span></p></li>
@@ -524,11 +548,11 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 </ul>
 </section>
 </section>
-<section id="mann-whitneyn-u-testi" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="mann-whitneyn-u-testi"><span class="header-section-number">8.3</span> Mann-Whitney’n U-testi</h2>
+<section id="sec-mann-whitneyn-u-testi" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="sec-mann-whitneyn-u-testi"><span class="header-section-number">9.3</span> Mann-Whitney’n U-testi</h2>
 <p><strong>Mittausasteikot:</strong> Järjestysasteikosta ylöspäin</p>
-<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jossa testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong>.</p>
-<p><u>Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä</u>; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jossa testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).</p>
+<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong> (ks. <a href="ttesti.html#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.3</span></a> ja <a href="ttesti.html#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.4</span></a>).</p>
+<p><u>Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä</u>; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jolla testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).</p>
 <p><u>U-testi lasketaan hyvin samoin kuin Wilcoxonin testi</u>, mutta U-testissä testataan, eroavatko kaksi ryhmää toisistaan:</p>
 <ol type="1">
 <li>Anna jokaiselle riville järjestysnumero.</li>
@@ -536,51 +560,51 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <li>Laske otoskoot molemmille ryhmille.</li>
 <li>Laske molemmille ryhmille U-arvot. Pienempi arvo näistä kahdesta raportoidaan.</li>
 </ol>
-<p><u>W-arvon pohjalta voidaan myös laskea z-arvo</u> ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.</p>
-<section id="mallioletukset-2" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="mallioletukset-2"><span class="header-section-number">8.3.1</span> Mallioletukset</h3>
+<p><u>W-arvon pohjalta voidaan myös laskea z-arvon</u> ja hakea sen todennäköisyys, kuten Wilcoxonin testille. Toimintamalli on täysin sama.</p>
+<section id="sec-mann-whitneyn-u-mallioletukset" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="sec-mann-whitneyn-u-mallioletukset"><span class="header-section-number">9.3.1</span> Mallioletukset</h3>
 <p><u>U-testillä on hieman muita ei-parametrisiä testejä enemmän mallioletuksia</u>, mutta kuitenkin vähemmän kuin lineaarisilla malleilla:</p>
 <ul>
-<li><p><strong>Riippumaton muuttuja tulisi olla dikotominen</strong>, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).</p></li>
-<li><p><strong>Sama yksikkö ei saa olla molemmissa ryhmissä</strong>. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on sekä parittaisia että kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.</p></li>
+<li><p><strong>Riippumaton muuttuja tulisi olla dikotominen</strong>, koska testi vertaa kahta ryhmää keskenään. Jos riippumaton muuttuja on monikategorinen, testi tulee tehdä erikseen jokaiselle verratulle ryhmälle. Siinä vaiheessa kuitenkin khiin neliö (<a href="khiinneliö.html"><span>Luku&nbsp;12</span></a>) voi olla suositeltava (jos riippuvainen muuttuja on luokittelu- tai järjestysasteikolla).</p></li>
+<li><p><strong>Sama yksikkö ei saa olla molemmissa ryhmissä</strong>. Tällöin sinun tulisi käyttää Wilcoxonin testiä. Jos sinulla on <em>sekä</em> parittaisia <em>että</em> kahden otoksen rakenteita samaan aikaan, joudut käyttämään mixed-models-menetelmiä.</p></li>
 <li><p><strong>Otos on satunnaisesti haettu populaatiosta</strong>. Tämä pätee kaikkiin frekvenssitilastotieteellisiin malleihin muutenkin.</p></li>
 </ul>
 </section>
-<section id="u-testin-laskeminen" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="u-testin-laskeminen"><span class="header-section-number">8.3.2</span> U-testin laskeminen</h3>
+<section id="sec-u-testin-laskeminen" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="sec-u-testin-laskeminen"><span class="header-section-number">9.3.2</span> U-testin laskeminen</h3>
 <p><u>Aloita järjestämällä kaikki arvot järjestykseen</u>; pienin saa järjestysnumeron 1 ja suurin järjestysnumeron <span class="math inline">\(n\)</span>.</p>
 <p><u>Laske sitten järjestysnumeroiden summat ja otoskoot</u> ryhmien perusteella, eli summaa jokaisen ryhmän arvot erikseen.</p>
 <p>Pienempi summista on <span class="math inline">\(W\)</span>-arvo, jota voidaan käyttää myöhemmin todennäköisyyden laskemiseen.</p>
 <p><u>Laske W-arvojen U-suureet</u> seuraavalla kaavalla:</p>
-<p><span class="math display">\[
+<p><span id="eq-u-suure"><span class="math display">\[
 U = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
-\]</span></p>
+\tag{9.3}\]</span></span></p>
 <p>Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän <span class="math inline">\(W\)</span>-arvo.</p>
 <p><u>Jos haluat laskea merkitsevyyden</u>, laske ensin <span class="math inline">\(W\)</span>-suuren keskiarvo <span class="math inline">\(\bar{W}\)</span> sekä keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span>:</p>
-<p><span class="math display">\[
+<p><span id="eq-w-keskiarvo-ja-keskihajonta"><span class="math display">\[
 \begin{split}
 \bar{W} = \frac{n_{k_1}(n_{k_1}+n_{k_2}+1)}{2}
 \\ \text{SE}_{\bar{W}} = \sqrt{\frac{n_{k_1}n_{k_2}(n_{k_1}+n_{k_2}+1)}{12}}
 \end{split}
-\]</span></p>
+\tag{9.4}\]</span></span></p>
 <p>Keskiarvo <span class="math inline">\(\bar{W}\)</span> lasketaan kertomalla ensimmäisen ryhmän otoskoko <span class="math inline">\(n_{k_1}\)</span> molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.</p>
-<p>Keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos kahdellatoista, ja ottamalla viimeisen tuloksen neliöjuuri.</p>
+<p>Keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos 12:lla, ja ottamalla viimeisen tuloksen neliöjuuri.</p>
 <p><u>Laske sitten z-arvo</u>:</p>
-<p><span class="math display">\[
+<p><span id="eq-w-suure-z-normalisointi"><span class="math display">\[
 z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
-\]</span></p>
+\tag{9.5}\]</span></span></p>
 <p>jossa <span class="math inline">\(W\)</span> on pienempi kahdesta <span class="math inline">\(W\)</span>-suureesta, <span class="math inline">\(\bar{W}\)</span> on aikaisemmin laskettu keskiarvo ja <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> aikaisemmin laskettu keskihajonta.</p>
 <p><u>Lopputuloksen z-arvon voit tarkistaa kriittisten arvojen taulukosta tai laskurilla</u>.</p>
 </section>
-<section id="u-testin-toteuttaminen-excelissä" class="level3" data-number="8.3.3">
-<h3 data-number="8.3.3" class="anchored" data-anchor-id="u-testin-toteuttaminen-excelissä"><span class="header-section-number">8.3.3</span> U-testin toteuttaminen Excelissä</h3>
+<section id="sec-u-testin-toteuttaminen-excelissä" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="sec-u-testin-toteuttaminen-excelissä"><span class="header-section-number">9.3.3</span> U-testin toteuttaminen Excelissä</h3>
 <p>Tunnistat varmaan käytännön tässä vaiheessa - <u>U-testi tehdään käsin Excelissä</u>. Toimintatapa on hyvin samankaltainen kuin muille:</p>
 <ol type="1">
 <li>Määrittele hypoteesipari ja häntäisyys.</li>
 <li>Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): <code>=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)</code> molemmille ryhmille.</li>
 <li>Laske ryhmien järjestysnumerot yhtenä pakettina, mutta eriteltynä ryhmäsarakkeisiin:
 <ol type="1">
-<li>Tee kaksi saraketta, molempien ryhmien järjestysarvoille, samassa järjestyksessä kuin haettu data.</li>
+<li>Tee kaksi saraketta, yksi jokaisen ryhmän järjestysarvoille, samassa järjestyksessä kuin haettu data. (ensimmäinen ryhmä vasemmalla toisesta ryhmästä).</li>
 <li>Laske ensimmäiseen soluun <code>=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)</code>. Huomaa, että järjestysalueen tulee kattaa molemmat ryhmäsarakkeet! Lukitse järjestysalue.</li>
 <li>Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.</li>
 </ol></li>
@@ -597,11 +621,11 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 <li>Laske haluttavan häntäisyyden z-arvo.</li>
 <li>Hae z-arvon p-arvo: <code>=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)</code></li>
 </ol>
-<p>Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä.</p>
+<p>Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä (ks. <a href="#sec-wilcoxonin-testin-toteuttaminen-excelissä"><span>Alaluku&nbsp;9.2.3</span></a>).</p>
 </section>
-<section id="u-testin-raportoiminen" class="level3" data-number="8.3.4">
-<h3 data-number="8.3.4" class="anchored" data-anchor-id="u-testin-raportoiminen"><span class="header-section-number">8.3.4</span> U-testin raportoiminen</h3>
-<p>U-testissä itse U-suure on testisuure. Raportoi siksi mieluisesti:</p>
+<section id="sec-u-testin-raportoiminen" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="sec-u-testin-raportoiminen"><span class="header-section-number">9.3.4</span> U-testin raportoiminen</h3>
+<p>U-testissä itse U-suure on testisuure. Raportoi täten mieluisesti:</p>
 <ul>
 <li><p>Ryhmien mediaanit <span class="math inline">\(\text{Md}\)</span></p></li>
 <li><p>U-suure <span class="math inline">\(U\)</span></p></li>
@@ -610,14 +634,115 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 </ul>
 </section>
 </section>
-<section id="testikoot-ei-parametrisille-testeille" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="testikoot-ei-parametrisille-testeille"><span class="header-section-number">8.4</span> Testikoot ei-parametrisille testeille</h2>
+<section id="sec-spearmanin-rho-teoria" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-spearmanin-rho-teoria"><span class="header-section-number">9.4</span> Spearmanin rho <span class="math inline">\(\rho\)</span></h2>
+<p><strong>Mittausasteikot:</strong> Molemmat muuttujat järjestysasteikolla.</p>
+<p><strong>Spearmanin rho</strong> <span class="math inline">\(\rho\)</span> tai <strong>Spearmanin korrelaatiokerroin</strong> <span class="math inline">\(r_s\)</span> on ei-parametrinen korrelaatiokerroin. Sen parametrinen vastaavuus on <strong>Pearsonin</strong> <span class="math inline">\(r\)</span> (ks. <a href="korrelaatio.html"><span>Luku&nbsp;11</span></a>).</p>
+<p>Spearmanin rho toimii kuten Pearsonin <span class="math inline">\(r\)</span>, mutta sen sijaan, että testi laskettaisiin suoraan kovarianssista, se lasketaan datapisteiden <strong>järjestysnumeroilla</strong>.</p>
+<p><u>Spearmanin rho on robustimpi kuin Pearsonin</u> <span class="math inline">\(r\)</span>, eikä siihen vaikuta esim. ääripääarvot samalla tavalla. Koska rho lasketaan järjestysnumeroille eikä datalle suoraan, sitä voi myös käyttää järjestysasteikon muuttujilla.</p>
+<p><u>Jos muuttujasi täyttävät Pearsonin</u> <span class="math inline">\(r\)</span><u>-testin vaatimuksia</u>, käytä sitä mielummin. Jos datassasi on kuitenkin suuria ääripääarvoja, on epälineaarista tai muuten rikkoo Pearsonin korrelaatiokertoimen malliodotuksia (ks. <a href="korrelaatio.html#sec-korrelaatiokertoimen-mallioletukset"><span>Alaluku&nbsp;11.2</span></a>), voit käyttää Spearmanin testiä Pearsonin testin sijaan.</p>
+<section id="sec-mallioletukset-spearmanin-rho" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="sec-mallioletukset-spearmanin-rho"><span class="header-section-number">9.4.1</span> Mallioletukset</h3>
+<p>Spearmanin rho ei riipu yleisistä lineaaristen mallien oletuksista (koska se ei ole lineaarinen malli), mutta sillä on kolme omaa oletusta: <strong>muuttujatasot</strong> sekä <strong>monotonisuus</strong>:</p>
+<ul>
+<li><p><u>Muuttujien tulee olla vähintään järjestystasolla</u> (järjestys-, välimatka- tai suhdeasteikko). Spearmanin rhota ei voi laskea luokitteluasteikolle, koska muuttujia ei voi silloin laittaa luonnolliseen järjestykseen.</p></li>
+<li><p><u>Muuttujien tulee olla monotonisessa suhteessa toisiinsa</u>. Monotonisuus tarkoittaa, että muuttujien suhde joko nousee tai laskee. Kaikki lineaariset mallit ovat monotonisia, mutta monotoniset mallit eivät tarvitse olla lineaarisia. Esimerkiksi eksponentiaalinen tai logaritminen suhde on monotoninen mutta epälineaarinen. Parabolisuhde toisaalta ei ole lineaarinen eikä monotoninen, koska sen suunta muuttuu kesken käyrän. Toisin sanoen: <u>Spearmanin rho voi mallintaa epälineaarisia suhteita, kunhan ne eivät muutu suunnassaan kesken kaiken.</u></p></li>
+</ul>
+<p><u>Näiden lisäksi Spearmanin rhon laskutapa riippuu siitä, esiintyykö muuttujilla tasajärjestyksiä vai ei</u>. <strong>Tasajärjestys</strong> määritellään kuin Wilcoxonin signed-rank -testille: tasajärjestys esiintyy kun kaksi tai useampi arvo saisi saman järjestysarvon, jolloin laskemme niiden keskiarvon.</p>
+</section>
+<section id="sec-spearmanin-rhon-laskeminen" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="sec-spearmanin-rhon-laskeminen"><span class="header-section-number">9.4.2</span> Spearmanin rhon laskeminen</h3>
+<p><u>Spearmanin rhon laskeminen seuraa hyvin samanlaista logiikkaa</u> kuin Pearsonin korrelaatiokerroin, mutta data pitää ensin järjestää:</p>
+<ul>
+<li><p>Laske järjestysnumerot molemmille muuttujille erikseen.</p>
+<ul>
+<li>Valitse rhon laskukaava sen mukaan, esiintyykö tasajärjestyksiä vai ei.</li>
+</ul></li>
+<li><p>Laske Spearmanin rho-suure.</p></li>
+</ul>
+<p><u>Jos muuttujilla ei ole tasajärjestyksiä</u>, käytä seuraavaa kaavaa:</p>
+<p><span id="eq-spearman-01"><span class="math display">\[
+\rho = 1-\frac{6\sum{d_i^2}}{n^3-n}
+\tag{9.6}\]</span></span></p>
+<p>Laske ensin jokaisen rivin erot muuttujien järjestysarvojen välillä, <span class="math inline">\(d_i\)</span> (jossa <span class="math inline">\(i\)</span> on rivin numero). Laske sitten jokaiselle erolle neliö <span class="math inline">\(d_i^2\)</span> ja summaa kaikki neliöt yhteen. Kerro tulos kuudella.</p>
+<p>Jakolaskun alaosassa, laske otoskoon kuutio <span class="math inline">\(n^3\)</span> ja vähennä siitä otoskoko <span class="math inline">\(n\)</span>.</p>
+<p>Jaa sitten ensimmäiseksi laskettu erotuksen neliösumma toiseksi lasketulla otoskokomitalla. Vähennä lopullinen tulos yhdestä - saat Spearmanin rhon <span class="math inline">\(\rho\)</span>.</p>
+<p><u>Jos muuttujilla on tasajärjestyksiä</u>, käytä vaihtoehtoista kaavaa:</p>
+<p><span id="eq-spearman-02"><span class="math display">\[
+\rho = \frac{ 1/n \sum{(x_i - \bar{x}) \times (y_i - \bar{y})} } { \sqrt{( 1/n \sum{(x_i - \bar{x})^2} ) \times (1/n \sum{(y_i - \bar{y})^2}) } }
+\tag{9.7}\]</span></span></p>
+<p>Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat käytössä:</p>
+<ul>
+<li><p><span class="math inline">\(x_i\)</span> ja <span class="math inline">\(y_i\)</span> ovat muuttujien järjestysarvot rivillä <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span> ovat muuttujien järjestysarvojen keskiarvot</p></li>
+<li><p><span class="math inline">\(n\)</span> on koko otoksen otoskoko</p></li>
+<li><p><span class="math inline">\(1/n\)</span> on otoskoon inverssi; jonkun luvun kertominen tällä on sama kuin luvun jakaminen otoskoolla <span class="math inline">\(n\)</span>: <span class="math inline">\(1/n \times 5 = 5/n\)</span></p></li>
+</ul>
+<p><u>Laskutoiminto soveltaa Pearsonin korrelaatiokertoimen laskukaaviota</u>, mutta korvaa datan alkuperäisluvut järjestysluvuilla. Toisin sanoen: kaava on tismalleen sama kuin Pearsonin kaava, paitsi että käytetyt luvut ovat järjestyslukuja.</p>
+<p><u>Rho-suure tulkitaan kuten Pearsonin</u> <span class="math inline">\(r\)</span><u>-suuretta</u>.</p>
+<p><u>Merkitsevyyden laskemiseksi</u> voidaan käyttää joko <strong>z-normalisointia</strong>, jolloin pitää myös ensin tehdä Fisherin muuntolasku, tai <strong>t-suuretta</strong>.</p>
+<p><u>Jos haluat laskea z-normalisoidun rho-suureen</u>, käytä seuraavia kaavoja:</p>
+<p><span id="eq-spearman-03"><span class="math display">\[
+\begin{align}
+z = \sqrt{\frac{n-3}{1.06}}F(r)
+\\ F(r) = 0.5 \ln \frac{1+r}{1-r}
+\end{align}
+\tag{9.8}\]</span></span></p>
+<p>Z-suureen kaavassa lasket ensin otoskoon <span class="math inline">\(n\)</span> minus kolme, ja jaat tulokset <span class="math inline">\(1.06\)</span>:lla. Otat sitten tämän tuloksen neliöjuuren.</p>
+<p>Sitten sinun tulee laskea Fisherin muuntolasku korrelaatiokertoimelle, <span class="math inline">\(F(r)\)</span>. Jaa ensin rho-kerroin plus yksi laskulla rho-kerroin minus yksi. Ota tuloksen luonnollinen logaritmi, ja kerro tämä tulos puolella (<span class="math inline">\(0.5\)</span>).</p>
+<p>Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. Saat z-normalisoidun arvon, jolle voit hakea todennäköisyysarvon <span class="math inline">\(p\)</span> yleisellä tavalla (kriittisten arvojen taulukosta tai laskurilla).</p>
+<p><u>Jos haluat käyttää t-suuretta</u>, käytä seuraavaa kaavaa:</p>
+<p><span id="eq-spearman-04"><span class="math display">\[
+t = r\sqrt{\frac{n-2}{1-r^2}}
+\tag{9.9}\]</span></span></p>
+<p>T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet <span class="math inline">\(n-2\)</span>, sitten rho-suureen neliö <span class="math inline">\(r^2\)</span> ja sen inverssi <span class="math inline">\(1-r^2\)</span>. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella <span class="math inline">\(r\)</span>. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla <span class="math inline">\(n-2\)</span>. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.</p>
+</section>
+<section id="sec-spearmanin-rhon-laskeminen-excelissä" class="level3" data-number="9.4.3">
+<h3 data-number="9.4.3" class="anchored" data-anchor-id="sec-spearmanin-rhon-laskeminen-excelissä"><span class="header-section-number">9.4.3</span> Spearmanin rhon laskeminen Excelissä</h3>
+<p>Vaikka yllä olevat kaavat näyttävät aika monimutkaisilta, voimme onneksi tehdä Spearmanin rho-testin paljon yksinkertaisemmin Excelissä.</p>
+<p><u>Meidän ei nimittäin tarvitse välittää ollenkaan tasajärjestyksistä</u> - koska Spearmanin rho-lasku on loppujen lopuksi vain Pearsonin korrelaatiokerroin, mutta laskettu järjestysluvuilla eikä alkuperäisillä luvuilla!</p>
+<p>Laskutoimitus seuraa tätä prosessia:</p>
+<ol type="1">
+<li>Laske molempien muuttujien järjestysarvot: <code>=ARVON.MUKAAN.KESKIARVO(solu; alue; 1)</code>.</li>
+<li>Laske järjestyslukualueiden korrelaatiokerroin: <code>=KORRELAATIO(muuttuja1; muuttuja2)</code>. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!</li>
+<li>Valitse merkitsevyyslaskentatapa ja syötä siihen tarvittavat numerot.
+<ol type="1">
+<li>Jos z-arvo:
+<ol type="1">
+<li>Laske Fisherin muuntolasku käyttämällä aikaisempaa korrelaatiokertointa sekä luonnollisen logaritmin funktiota <code>LUONN.LOG()</code>.</li>
+<li>Laske sitten z-arvo käyttäen Fisherin muuntolaskun tulosta ja otoskokoa (hae esim. <code>LASKE</code>-funktiolla).</li>
+<li>Hae viimeiseksi z-arvon merkitsevyys funktiolla <code>=NORM_JAKAUMA.NORMITA(z; EPÄTOSI)</code>.</li>
+</ol></li>
+<li>Jos t-arvo:
+<ol type="1">
+<li>Laske t-arvo käyttämällä otoskokoa (hae esim. <code>LASKE</code>-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla <code>NELIÖJUURI()</code>.</li>
+<li>Hae sitten t-arvon merkitsevyys funktiolla <code>=T.JAKAUMA(t; vapausasteet; EPÄTOSI</code>). Vapausasteet ovat <span class="math inline">\(n-2\)</span>.</li>
+</ol></li>
+</ol></li>
+</ol>
+</section>
+<section id="sec-spearmanin-rhon-raportointi" class="level3" data-number="9.4.4">
+<h3 data-number="9.4.4" class="anchored" data-anchor-id="sec-spearmanin-rhon-raportointi"><span class="header-section-number">9.4.4</span> Spearmanin rhon raportointi</h3>
+<p>Raportoi rho-testistä mieluisesti seuraavat:</p>
+<ul>
+<li><p>Spearmanin testisuure <span class="math inline">\(\rho\)</span> (vaihtoehtoisesti kirjoitettuna <span class="math inline">\(r_s\)</span>)</p></li>
+<li><p>Z- tai t-koko <span class="math inline">\(z\)</span> tai <span class="math inline">\(t\)</span></p>
+<ul>
+<li>Jos <span class="math inline">\(t\)</span>: Vapausasteet <span class="math inline">\(\text{df}\)</span></li>
+</ul></li>
+<li><p>Merkitsevyys <span class="math inline">\(p\)</span></p></li>
+</ul>
+</section>
+</section>
+<section id="sec-testikoot-ei-parametrisille-testeille" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="sec-testikoot-ei-parametrisille-testeille"><span class="header-section-number">9.5</span> Testikoot ei-parametrisille testeille</h2>
 <p><u>Yleisesti ottaen pitää aina raportoida mediaanit</u>, joita on tarkasteltu. Ryhmävertailussa raportoidaan ryhmien mediaanit; yhden otoksen testissä otoksen mediaani. Näiden lisäksi on hyvä raportoida myös <u>nollahypoteesi sekä vaihtoehtohypoteesi</u>.</p>
 <p>Niille testeille, joille lasket z-arvon, <u>voit myös laskea Pearsonin</u> <span class="math inline">\(r\)</span><u>-arvon</u> saadaksesi testikoon jota voi verrata muihin testeihin. Sen laskeminen on hyvin yksinkertaista:</p>
-<p><span class="math display">\[
+<p><span id="eq-r-suure-z-testistä"><span class="math display">\[
 r = \frac{z}{\sqrt{n}}
-\]</span></p>
+\tag{9.10}\]</span></span></p>
 <p>Jaa siis z-arvo otoskoon neliöjuurella. Otoskoolla tarkoitetaan sitä kokoa, jota käytit laskeaksesi z-arvon. Yleensä tämä on koko mittauksen otoskoko. Parittaiselle testille kyseessä on kaksi kertaa ryhmän koko (poislukien nolla-arvot). Jos alkuperäinen otos oli 10 yksikköä, ja mitasta poistui kaksi nolla-arvoa, otoskoko on <span class="math inline">\(2*8 = 16\)</span>.</p>
+<p><span class="math inline">\(r\)</span>-suure raportoidaan samassa kohdassa kuin muut raportoitavat tiedot.</p>
 
 
 </section>
@@ -860,16 +985,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./merkitsevyysluvut.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./ttesti.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

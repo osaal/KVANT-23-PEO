@@ -8,6 +8,8 @@ Jos päivitys koskee GitHubissa annettua Issueta, tai jos jonkun käyttäjän Pu
 
 [^history-1]: Pahoittelen tätä englannin käyttöä...
 
+{{< include historia/_1.1.qmd >}}
+
 {{< include historia/_1.0.qmd >}}
 
 {{< include historia/_0.9.qmd >}}

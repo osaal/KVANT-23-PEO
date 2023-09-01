@@ -1,8 +1,8 @@
 # Nimeäminen Excelissä {#sec-nimeäminen-excelissä}
 
-**Nimeäminen** on tehokas tapa organisoida eri alueita ja funktioita Excelissä. Sen sijaan, että joutuisit joka kerran kirjoittamaan saman funktion tai viittausalueen uudelleen, voit viitata siihen määrittelemälläsi nimellä. Tällöin virheiden tapahtuminen vähenee - kunhan olet huolellinen nimien lisäämisellä!
+**Nimeäminen** on tehokas tapa organisoida eri alueita ja funktioita Excelissä. Sen sijaan, että joutuisit joka kerran kirjoittamaan saman funktion tai viittausalueen uudelleen, voit viitata siihen määrittelemälläsi nimellä. Tällöin virheiden tapahtuminen vähenee - kunhan olet huolellinen nimien lisäämisessä!
 
-Löydät Nimien hallinnan Kaavat-välilehdestä (@fig-nimien-hallinta-palkki). Alueelta "Määritetyt nimet" löydät neljä toimintoa: Nimien hallinta, Määritä nimi, Käytä kaavassa ja Luo valinnasta.
+Löydät **Nimien hallinnan** Kaavat-välilehdestä (@fig-nimien-hallinta-palkki). Alueelta "Määritetyt nimet" löydät neljä toimintoa: Nimien hallinta, Määritä nimi, Käytä kaavassa ja Luo valinnasta.
 
 ![Nimien hallinta Kaavat-välilehdessä](pics/nimien_hallinta/nimien_hallinta_palkki.PNG){#fig-nimien-hallinta-palkki fig-alt="Kuvakaappaus Nimien hallinta -alueesta Kaavat-välilehdessä Excelissä."}
 
@@ -16,13 +16,13 @@ Uudessa työkirjassa tämä alue on tyhjä, mutta kun lisäät nimettyjä alueit
 
 ![Uusi nimi](pics/nimien_hallinta/nimien_hallinta_lisää.png){#fig-nimien-hallinta-lisää fig-alt="Kuvakaappaus Uusi nimi -ikkunasta nimien hallinnasta Excelissä. Ikkunassa on lisätty funktio T.DEP, jonka kommentti kertoo sen olevan parittaisen t-testin kaava. Viittauskaavaa ei näe kokonaan kuvassa."}
 
-Tärkein osuus on `Viittaus`-alue, johon syötät viittauksesi, jonka haluat nimetä. Se voi olla taulukkoalueviittaus (esim. `C2:C1106` tai `A:A`), laskufunktio (esim. `SUMMA(JAKO(a, b))`), tai mitä tahansa muuta, mitä voit määritellä koodilla Excelissä.
+[Tärkein osuus on `Viittaus`-alue]{.underline}, johon syötät viittauksesi, jonka haluat nimetä. Se voi olla taulukkoalueviittaus (esim. `C2:C1106` tai `A:A`), laskufunktio (esim. `SUMMA(JAKO(a, b))`), tai mitä tahansa muuta, mitä voit määritellä koodilla Excelissä. Helpoin tapa syöttää funktio tai alueviittaus tähän kohtaa on painamalla nuolipainiketta alueen oikealla puolella, ja syöttää haluamasi tieto esille ponnahtavaan ruutuun.
 
-Alueella `Nimi` määrittelet nimen viittauksellesi. Excelin kaavat tulisi nimetä VERSAALEISSA, ja sanat erotetaan pisteellä (esim. T.DEP). Alueet voit nimetä vapaammin, mutta vältä välilyöntejä ja muista, että pienellä ja isolla kirjaimella on eroa (`Taul1` ja `taul1` ovat eri nimiä). Yritä myös nimetä loogisesti ja hierarkkisesti: jos nimeät yhden muuttujan nimellä `sukupuoli`, ja myöhemmin teet suodatun kopion alkuperäisestä data-alueesta, tuleeko uudelle versiolle nimi `sukupuoli2`? Parempi nimetä esim `Taul1-sukupuoli` tai `01-sukupuoli`.
+[Alueella `Nimi` määrittelet nimen viittauksellesi]{.underline}. Excelin kaavat tulisi nimetä ISOILLA KIRJAIMILLA, ja sanat erotetaan pisteellä (esim. T.DEP). Alueet voit nimetä vapaammin, mutta vältä välilyöntejä ja muista, että pienellä ja isolla kirjaimella on eroa (`Taul1` ja `taul1` ovat eri nimiä). Yritä myös nimetä loogisesti ja hierarkkisesti: jos nimeät yhden muuttujan nimellä `sukupuoli`, ja myöhemmin teet suodatun kopion alkuperäisestä data-alueesta, tuleeko uudelle versiolle nimi `sukupuoli2`? Parempi nimetä esim `Taul1-sukupuoli` tai `01-sukupuoli`.
 
-`Laajuus`-valikosta voit määrittää, miten laajasti nimeä voi käyttää. Jos valitset "Työkirja", nimeä voi käyttää vapaasti koko työkirjan sisällä (kaikissa työlehdissä). Jos valitset jonkun tietyn työlehden, nimi on määritelty vain siinä työlehdessä. Voit kuitenkin aina käyttää nimiä työlehtien välillä jos käytät syntaksaa `lehtiönimi!muuttujanimi`. On aina parempi rajata käyttölaajuus niin pieneksi kuin mahdollista ja viitata yllä olevalla syntaksalla, kuin erittäin avoimeksi. Jos määrittelet nimen aina työlehtiörajatuksi, pystyt uudelleenkäyttämään nimiä lehtiöiden välillä - `Taul1!sukupuoli` on eri kuin `Taul2!sukupuoli`. Huomaa kuitenkin, että funktioille on parempi määrittää laajuudeksi koko työkirja, koska niitä halutaan joka tapauksessa uudelleenkäyttää monesti.
+[`Laajuus`-valikosta voit määrittää, miten laajasti nimeä voi käyttää]{.underline}. Jos valitset "Työkirja", nimeä voi käyttää vapaasti koko työkirjan sisällä (kaikissa työlehdissä). Jos valitset jonkun tietyn työlehden, nimi on määritelty vain siinä työlehdessä. Voit kuitenkin aina käyttää nimiä työlehtien välillä jos käytät syntaksaa `lehtiönimi!muuttujanimi`. On aina parempi rajata käyttölaajuus niin pieneksi kuin mahdollista ja viitata yllä olevalla syntaksalla, kuin erittäin avoimeksi. Jos määrittelet nimen aina työlehtiörajatuksi, pystyt uudelleenkäyttämään nimiä lehtiöiden välillä - `Taul1!sukupuoli` on eri kuin `Taul2!sukupuoli`. Huomaa kuitenkin, että funktioille on parempi määrittää laajuudeksi koko työkirja, koska niitä halutaan joka tapauksessa uudelleenkäyttää monesti.
 
-`Kommentti`-kenttään voit kirjoittaa kuvailun määritetystä nimestä. Jos nimi on funktio, kuvaile lyhyesti mitä funktio tekee. Jos olet nimennyt alueen, kuvaile aluetta. Voit myös esim. syöttää muuttujan koodiselosteen tähän.
+[`Kommentti`-kenttään voit kirjoittaa kuvailun määritetystä nimestä]{.underline}. Jos nimi on funktio, kuvaile lyhyesti mitä funktio tekee, sekä valinnaisesti funktion parametrien merkitykset (suositeltavaa!). Jos olet nimennyt alueen, kuvaile aluetta. Voit myös esim. syöttää muuttujan koodiselosteen tähän.
 
 Kun olet valmis nimen määrittelyllä ja painat `OK`, näet uuden nimimäärittelysi Nimien hallinta -ikkunassa (@fig-nimien-hallinta-lisättyfunktio).
 
@@ -30,7 +30,7 @@ Kun olet valmis nimen määrittelyllä ja painat `OK`, näet uuden nimimääritt
 
 Voit myös määrittää nimen taulukkoalueelle maalaamalla haluttu alue, ja painamalla `Määritä nimi > Määritä nimi...` Kaavat-välilehdessä (ks. @fig-nimien-hallinta-palkki).
 
-Jos sinulla on useampi määritettävä alue (esim. kokonainen datataulukko), jonka nimet löytyvät ensimmäiseltä tai viimeiseltä riviltä tai sarakkeesta, voit maalata koko alueen mukaan lukien nimet ja valita `Luo valinnasta` Kaavat-välilehdestä. Tällöin ohjelma kysyy sinulta, mistä määritettävät nimet löytyvät, ja automaattisesti rekisteröi kyseiset nimet Nimien hallintaan (@fig-nimien-hallinta-luovalinnasta).
+[Jos sinulla on useampi määritettävä alue (esim. kokonainen datataulukko)]{.underline}, jonka nimet löytyvät ensimmäiseltä tai viimeiseltä riviltä tai sarakkeesta, voit maalata koko alueen mukaan lukien nimet ja valita `Luo valinnasta` Kaavat-välilehdestä. Tällöin ohjelma kysyy sinulta, mistä määritettävät nimet löytyvät, ja automaattisesti rekisteröi kyseiset nimet Nimien hallintaan (@fig-nimien-hallinta-luovalinnasta).
 
 ![Luo valinnasta -ikkuna. Maalaa ensin määritettävä alue rivi-/sarakenimineen, ja paina sitten `Luo valinnasta` Kaavat-välilehdeltä.](pics/nimien_hallinta/nimien_hallinta_luovalinnasta.png){#fig-nimien-hallinta-luovalinnasta fig-alt="Kuvakaappaus Nimien luominen valinnasta -ikkunasta."}
 

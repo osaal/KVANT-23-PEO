@@ -2,71 +2,115 @@
 
 **Mittausasteikot:** Välimatka- ja suhdeasteikko
 
-**Korrelaatio** on mitta kahden muuttujan yhteisvaihtelusta. Nimi tulee englannin sanoista *co-relation*, eli yhteissuhde. Korrelaatiomittoja on monia, joista tässä luvussa käsittellään vain **Pearsonin korrelaatiokerrointa**. [Luvussa @sec-ei-parametriset-testit] käydään läpi ei-parametrisiä vaihtoehtoja Pearsonin korrelaatiolle, Spearmanin korrelaatiokertoin sekä Kendallin tau-b.
+**Korrelaatio** on mitta kahden muuttujan yhteisvaihtelusta. Nimi tulee englannin sanoista *co-relation*, eli yhteissuhde. Korrelaatiomittoja on monia, joista tässä luvussa käsittellään vain **Pearsonin korrelaatiokerrointa**. [Luvussa @sec-ei-parametriset-testit] käydään läpi ei-parametrinen vaihtoehto Pearsonin kertoimelle, **Spearmanin rho**.
 
-[Pearsonin korrelaatiokertoin]{.underline} $r$ on standardisoitu versio kovarianssista. Jotta ymmärrtäisi Pearsonin kertoimen, on siis hyvä ensin ymmärtää kovarianssi.
+[Pearsonin korrelaatiokerroin]{.underline} $r$ on standardisoitu versio **kovarianssista**. Jotta ymmärrtäisi Pearsonin kertoimen, on siis hyvä ensin ymmärtää kovarianssi.
 
-## Kovarianssin määritelmä
+## Kovarianssin määritelmä {#sec-kovarianssin-määritelmä}
 
-Muistutuksena (ks. @sec-varianssi-teoria), [varianssin määritelmä oli kaikkien arvopisteiden neliöerot keskiarvoon, jaattuna vapausasteilla]{.underline}. Yhden muuttujan sijaan kovarianssi ilmaisee kahta muuttujaa. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:
+Muistutuksena (ks. @sec-varianssi-teoria), [varianssin määritelmä oli kaikkien arvopisteiden neliöerot keskiarvoon, jaattuna vapausasteilla]{.underline}.
+
+[Kovarianssi ilmaisee kahden muuttujan yhteisvaihtelua yhden muuttujan vaihtelun sijaan]{.underline}. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:
 
 $$
 \text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {n-1}
 $$ {#eq-korr-1}
 
-Jos varianssi edustaa yhden muuttujan keskivertaista vaihtelua, [kovarianssi edustaa kahden muuttujan välistä vaihtelusuhdetta]{.underline}. Kovarianssi siis osoittaa, miten toisen muuttujan arvot muuttuvat kuin ensimmäinen muuttuu.
+Jos varianssi ($\text{Var}$) edustaa yhden muuttujan keskivertaista vaihtelua, [kovarianssi (]{.underline}$\text{Cov}$) [edustaa kahden muuttujan välistä vaihtelusuhdetta]{.underline}. Kovarianssi siis osoittaa, miten toisen muuttujan arvot muuttuvat kuin ensimmäinen muuttuu.
 
 **Positiivinen kovarianssi** ilmaisee, että ensimmäisen muuttujan erotessa keskiarvosta, toinen muuttuja eroaa keskiarvosta samaan suuntaan. **Negatiivinen kovarianssi** taas ilmaisee, että toisen muuttujan ero keskiarvoon menee toiseen suuntaan kuin ensimmäisen muuttujan ero keskiarvoon.
 
-[Voit ajatella nämä suorina käyrinä pistekaaviolla]{.underline}: positiivisessa kovarianssissa käyrä osoittaa ylöspäin alavasemmalta; negatiivisessa kovarianssissa käyrä osoittaa alaspäin ylävasemmalta; ja nollakovarianssissa käyrä on vaakasuora (ei suhdetta).
+[Voit ajatella nämä suorina käyrinä pistekaaviolla]{.underline}: positiivisessa kovarianssissa käyrä osoittaa ylöspäin alavasemmalta; negatiivisessa kovarianssissa käyrä osoittaa alaspäin ylävasemmalta; ja nollakovarianssissa käyrä on vaakasuora (ei suhdetta). Katso esimerkkikuvat alla (@fig-korrelaatio)[^korrelaatio-1]:
+
+[^korrelaatio-1]: Kuvissa esitetään korrelaatiokertointa $r$, mutta ajatus on täysin sama.
+
+```{r}
+#| label: fig-korrelaatio
+#| fig-cap: "Korrelaatioita eri tasoilla"
+#| layout-ncol: 3
+#| fig-subcap:
+#| - "r = -0.5"
+#| - "r = 0"
+#| - "r = 0.5"
+#| echo: false
+#| cache: true
+# Käyttäjien Greg Snow ja Jonas Lindeløvin kehittämä visualisointi.
+# Lähde: https://stats.stackexchange.com/questions/83172/generate-two-variables-with-precise-pre-specified-correlation.
+
+library("MASS")
+
+for(r in c(-0.5, 0, 0.5)) {
+  data <- mvrnorm(
+    n = 200,
+    mu = c(0,0),
+    Sigma = matrix(c(1, r, r, 1), nrow = 2),
+    empirical = TRUE
+  )
+  model <- lm(
+    formula = data[, 1] ~ data[, 2],
+    data = data.frame(data)
+  )
+  plot(
+    data,
+    xlab = "X",
+    ylab = "Y",
+    xlim = c(-3, 3),
+    ylim = c(-3, 3)
+  )
+  abline(reg = model)
+  text(3, -2, labels = paste("r =", r), adj = 1, col = "red")
+}
+```
 
 [Kovarianssi mitataan samoissa yksiköissä kuin alkuperäiset muuttujat]{.underline}, mutta kerrottuna toistensa kanssa. Jos molempien muuttujien mittayksikkö on metriä, kovarianssi on $\text{metri}*\text{metri}$, eli neliömetriä. Jos kuitenkin ensimmäinen muuttuja olisi metreissä mutta toinen euroissa, kovarianssin mittayksikkö olisi "eurometrejä".
 
-[Kovarianssin käyttö on jokseenkin hankalaa]{.underline}, koska mittayksiköt eivät ole standardisoituja eivätkä usein tarkoita mitään todellista. Tämän takia kovarianssi standardisoidaan, jolloin saadaan **Pearsonin korrelaatiokertoin**.
+[Kovarianssin käyttö on jokseenkin hankalaa]{.underline}, koska mittayksiköt eivät ole standardisoituja eivätkä usein tarkoita mitään todellista. Tämän takia kovarianssi standardisoidaan, jolloin saadaan **Pearsonin korrelaatiokerroin** $r$.
 
-## Korrelaatiokertoimen mallioletukset
+## Korrelaatiokertoimen mallioletukset {#sec-korrelaatiokertoimen-mallioletukset}
 
-Korrelaatiokertoimella on suhteellisen vähän oletuksia, mutta ne vaikuttavat suurestikin kertoimen luotettavuuteen. Nämä ovat: **mittataso, täydellisesti paritettu data, ääripääpisteiden poissaolo,** (virheiden) **normaalijakautuminen** ja **lineariteetti**.
+Korrelaatiokertoimella on suhteellisen vähän oletuksia, mutta ne vaikuttavat suurestikin kertoimen luotettavuuteen. Nämä ovat: **mittataso, täydellisesti paritettu data, ääripääpisteiden poissaolo,** (virheiden) **normaalijakautuminen** ja **lineaariteetti**.
 
-### Mittataso
+### Mittataso {#sec-mittataso-korrelaatiokertoin}
 
-Kuten aikaisemmin mainittu, Pearsonin $r$ toimii vain muuttujille, jotka ovat **välimatka- ja suhdeasteikolla**. Tämä juontuu laskutavasta, jossa käytetään mm. keskiarvoa ja keskihajontaa, joita voi vain käyttää näillä tasoilla.
+Kuten aikaisemmin mainittu, Pearsonin $r$ toimii vain muuttujille, jotka ovat **välimatka- ja suhdeasteikolla**. Tämä juontuu laskutavasta, jossa käytetään keskiarvoa ja keskihajontaa, joita voi vain käyttää näillä tasoilla.
 
-[Jos muuttujasi ovat järjestysasteikolla]{.underline}, voit käyttää **Spearmanin korrelaatiokertointa** tai **khiin neliötä**. Jos muuttajasi taas ovat vain luokitteluasteikolla, khiin neliö on paras vaihtoehto.
+[Jos muuttujasi ovat järjestysasteikolla]{.underline}, voit käyttää **Spearmanin korrelaatiokertointa** tai **khiin neliötä**. [Jos muuttajasi taas ovat vain luokitteluasteikolla]{.underline}, **khiin neliö** on paras vaihtoehto.
 
-[Jos käytät vääriä tasoja, korrelaatiokertoin on virallisesti tulkitsematon]{.underline}. Järjestysasteikolla tehty korrelaatio voi myös arvioida mittaa suurestikin yläkanttiin, joten näillä kannattaa olla varovainen. Spearmanin korrelaatiokertoin on varmempi työkalu tässä tilanteessa, ja khiin neliö helpommin tulkittavissa.
+[Jos käytät vääriä tasoja, korrelaatiokerroin on virallisesti tulkitsematon]{.underline}. Järjestysasteikolla tehty korrelaatio voi myös arvioida mittaa suurestikin yläkanttiin, joten näillä kannattaa olla varovainen. Spearmanin korrelaatiokerroin on varmempi työkalu tässä tilanteessa, ja khiin neliö helpommin tulkittavissa.
 
-### Täydellisesti paritettu data
+### Täydellisesti paritettu data {#sec-täydellisesti-paritettu-data-korrelaatiokertoin}
 
 **Jokaisella rivillä tulisi olla arvo molemmilla muuttujilla**. Tämä juontuu siitä, että kaikkia arvoja käytetään ja summataan yhteen.
 
-[Jos sinulla on puuttuvaa dataa]{.underline}, se ei sinänsä ole vielä vaarallista. Huomaa kuitenkin, että mitä enemmän dataa puuttuu, sitä huonommin korrelaatiokertoin kuvastaa koko datajakaumaa.
+[Jos sinulla on puuttuvaa dataa]{.underline}, se ei sinänsä ole vielä vaarallista. Huomaa kuitenkin, että mitä enemmän dataa puuttuu, sitä huonommin korrelaatiokerroin kuvastaa koko datajakaumaa.
 
 [Yleensä tapana on jättää pois kaikki rivit joilla on epätäydellistä dataa]{.underline} - ilmoita siksi aina, kuinka suuri $n$ sinulla on korrelaatiokertoimen laskennassa! Muista myös korjata $n$ itse laskukaavassa datamäärän mukaan.
 
-### Ääripääpisteiden poissaolo
+### Ääripääpisteiden poissaolo {#sec-ääripääpisteiden-poissaolo-korrelaatiokertoin}
 
-Ääripääpisteet vaikuttavat suurestikin keskiarvoon, ja siksi ne vaikuttavat myös suuresti korrelaatiokertoimeen. Niiden poisto on erittäin suotavaa (ks. @sec-mallioletusten-testaaminen-tilastollisesti).
+Ääripääpisteet vaikuttavat suuresti keskiarvoon, ja siksi ne vaikuttavat myös suuresti korrelaatiokertoimeen. Niiden poisto on erittäin suotavaa (ks. @sec-mallioletusten-testaaminen-tilastollisesti).
 
-### Normaalijakautuminen
+### Normaalijakautuminen {#sec-normaalijakautuminen-korrelaatiokertoin}
 
-Pearsonin $r$-suureen oikeellisuuden takaamiseksi **molempien muuttujien keskiarvot tulisivat tulla normaalijakautumasta**. Kuten aikaisemmin mainittu (\@sec-normaalijakautuminen-teoria), tämä voidaan olettaa suurissa otoksissa.
+Pearsonin $r$-suureen oikeellisuuden takaamiseksi **molempien muuttujien keskiarvot tulisivat tulla normaalijakautumasta**. Tämä voidaan olettaa suurissa otoksissa.
 
-[Jos otoksesi kuitenkin on pieni]{.underline}, ei-parametrinen testi (esim. Spearmanin korrelaatiokertoin, Kendallin tau-b) on parempi vaihtoehto.
+[Jos otoksesi kuitenkin on pieni]{.underline}, ei-parametrinen testi (Spearmanin rho) on parempi vaihtoehto.
 
-Tämän lisäksi korrelaatiokertoin olettaa, että **virhemittaus on normaalijakautunut**. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. @sec-pylväskaavio-teoria). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti.
+Tämän lisäksi korrelaatiokerroin olettaa, että **virhemittaus on normaalijakautunut**. Voit tarkistaa oletuksen laskemalla jokaisen rivin muuttujien erotukset keskiarvoihin $\bar{x}-x$ ja $\bar{y}-y$, ja tarkistaa niiden histogrammit (pylväskaaviot; ks. @sec-pylväskaavio-teoria). Molempien virhekaavioiden tulisi asettua jokseenkin normaalikäyrän mukaisesti, jossa yleisin virhearvio tulisi olla nolla.
 
 [Jos näin ei ole, valitse taas ei-parametrinen testi]{.underline}.
 
-### Lineariteetti
+### Lineariteetti {#sec-lineariteetti-korrelaatiokertoin}
 
-Koska korrelaatiokertoin on lineaarinen malli, **se toimii parhaiten lineaarisia suhteiden mallinnuksessa**. Jos muuttujasuhde on epälineaarinen, korrelaatiokertoin ei välttämättä "näe" suhdetta. Jos suhde esimerkiksi on täydellisen positiivisen parabolinen (nousee tiettyyn pisteeseen asti ja laskee sen jälkeen, symmetrisesti), korrelaatiokertoin tulee osoittamaan nollakorrelaatiota - vaikka suhde selkeästi löytyy!
+Koska korrelaatiokerroin on lineaarinen malli, **se toimii parhaiten lineaaristen suhteiden mallintamisessa**. Jos muuttujasuhde on epälineaarinen, korrelaatiokerroin ei välttämättä "näe" suhdetta. Jos suhde esimerkiksi on täydellisen positiivisen parabolinen (nousee tiettyyn pisteeseen asti ja laskee sen jälkeen, symmetrisesti), korrelaatiokerroin tulee osoittamaan nollakorrelaatiota - vaikka suhde selkeästi löytyy!
 
-[Tarkista lineaarisuus pistekaaviolla]{.underline} (\@sec-pistekaavio-teoria).
+[Tarkista lineaarisuus pistekaaviolla]{.underline} (@sec-pistekaavio-teoria).
 
 [Jos suhde ei ole lineaarinen]{.underline}, joudut joko muuntamaan muuttujat epälineaarisesti (esim. logaritmilla tai potenssilla), tai hakeutumaan epälineaaristen mallien maailmaan.
 
-## Korrelaatiokertoimen laskeminen
+## Korrelaatiokertoimen laskeminen {#sec-korrelaatiokertoimen-laskeminen}
+
+Kaikille näille laskuille löytyy valmiit LAMBDA-kaavat (@sec-lambda-kaavoja).
 
 [Kovarianssi standardisoidaan]{.underline} jakamalla se molempien muuttujien keskihajonnan kertomalla. Matemaattisella yksinkertaistamisella kaavasta tulee:
 
@@ -74,15 +118,17 @@ $$
 r = \frac{\text{Cov}} {s_x s_y} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {(n-1) s_x s_y}
 $$ {#eq-korr-2}
 
-[Pearsonin]{.underline} $r$ [sijoittuu välille]{.underline} $[-1; 0; 1]$[,]{.underline} vaihdellen täydellisestä negatiivisesta korrelaatiosta nollakorrelaation kautta täydelliseen positiiviseen korrelaation. Kun $r = -1$, muuttujien välillä on täydellinen negatiivinen korrelaatio: kun ensimmäinen muuttuja nousee arvossaan, toinen muuttuja laskee yhtä paljon (suhteessa mitta-asteikkoon). Vastakohtana muuttujat nousevat ja laskevat samassa vauhdissa kun $r = 1$. Nollakorrelaation kohdalla $r = 0$ muuttujien välillä ei ole tilastollista lineaarista suhdetta, eli yhden muuttujan muuttuminen ei näy millään tavalla toisessa muuttujassa.
+[Pearsonin]{.underline} $r$ [sijoittuu välille]{.underline} $[-1; 0; 1]$[,]{.underline} vaihdellen täydellisestä negatiivisesta korrelaatiosta nollakorrelaation kautta täydelliseen positiiviseen korrelaation. Kun $r = -1$, muuttujien välillä on täydellinen negatiivinen korrelaatio: kun ensimmäinen muuttuja nousee arvossaan, toinen muuttuja laskee yhtä paljon (suhteessa mitta-asteikkoon; ks. @fig-korrelaatio). Vastakohtana muuttujat nousevat ja laskevat samassa vauhdissa kun $r = 1$. Nollakorrelaation kohdalla $r = 0$ muuttujien välillä ei ole tilastollista lineaarista suhdetta, eli yhden muuttujan muuttuminen ei näy millään tavalla toisessa muuttujassa.
 
-**Korrelaatiokertoimelle voidaan laskea merkitsevyystaso**. Tämä tehdään muuntamalla kertoin t-arvoksi, jonka kriittisen rajan voi tarkistaa kriittisten arvojen taulukosta. Muuntaminen on suhteellisen yksinkertainen:
+**Korrelaatiokertoimelle voidaan laskea merkitsevyystaso**. Tämä tehdään muuntamalla kerroin t-arvoksi, jonka kriittisen rajan voi tarkistaa kriittisten arvojen taulukosta. Muuntaminen on suhteellisen yksinkertainen:
 
 $$
 t_r = \frac{r \sqrt{N-2}} {\sqrt{1-r^2}}
 $$ {#eq-korr-3}
 
-**Korrelaatiokertoimelle voi myös laskea luottamusvälin**. Tuolloin kertoin pitää kuitenkin ensin muuntaa z-arvoksi (ei t-arvoksi), sekä laskea **kertoimen keskivirhe**.
+Jakolaskun yläpuolella: kerro korrelaatiokerroin otoskoon minus kaksi neliöjuurella. Jakolaskun alapuolella: ota korrelaatiokertoimen neliö, vähennä se yhdestä, ja ota tuloksen neliöjuuri.
+
+**Korrelaatiokertoimelle voi myös laskea luottamusvälin**. Tuolloin kertoimen pitää kuitenkin ensin muuntaa z-arvoksi (ei t-arvoksi), sekä laskea **kertoimen keskivirhe**.
 
 $$
 \begin{split}
@@ -91,23 +137,29 @@ z_r = \frac{1}{2}\log_e(\frac{1+r}{1-r})
 \end{split}
 $$ {#eq-korr-4}
 
-Nämä voidaan sitten syöttää suoraan luottamusvälin kaavaan valitsemallamme alfa-arvon z-rajalla. Jos esimerkiksi $\alpha = 0.05$, niin z-raja on $z = 1.96$, jolloin laskukaavasta tulee:
+**Z-arvon laskukaava** on hieman hankala. Laske ensin korrelaatiokerroin plus yksi sekä korrelaatiokerroin minus yksi, ja jaa ensimmäinen toisella. Ota sitten tuloksen luonnollinen logaritmi. Viimeiseksi, kerro tulos puolella, eli 0,5.
+
+**Z-arvon keskihajonta** on paljon yksinkertaisempi: vähennä otoskoosta kolme ja ota tuloksen neliöjuuri. Jaa sitten yksi tällä tuloksella, eli hae tuloksen **inverssi**.
+
+Nämä voidaan sitten syöttää suoraan luottamusvälin kaavaan valitsemallamme alfa-arvon z-rajalla (ks. @sec-luottamusväli-teoria). Jos esimerkiksi $\alpha = 0.05$, niin z-raja on $z = 1.96$, jolloin laskukaavasta tulee:
 
 $$
 \text{CI}_{z_r}^{\alpha = 0.05} = z_r \pm (1.96 \times \text{SE}_{z_r})
 $$ {#eq-korr-5}
 
-Huomaa kuitenkin, että arvot ilmaistaan vielä z-arvoissa, ei Pearsonin $r$-arvossa! Arvot voidaan kuitenkin kääntää takaisin $r$-arvoiksi seuraavalla kaavalla[^korrelaatio-1]:
+Huomaa kuitenkin, että arvot ilmaistaan vielä z-arvoissa, ei Pearsonin $r$-arvossa! Arvot voidaan kuitenkin kääntää takaisin $r$-arvoiksi seuraavalla kaavalla[^korrelaatio-2]:
 
-[^korrelaatio-1]: Kaava on käytännössä sama kuin $z_r$, mutta ratkottu $r$-arvolle. Jos olet haka matemaatikko, voit tarkistaa tämän!
+[^korrelaatio-2]: Kaava on käytännössä sama kuin $z_r$, mutta ratkottu $r$-arvolle. Jos olet haka matemaatikko, voit tarkistaa tämän!
 
 $$
 r = \frac{e^{2z_r}-1}{e^{2z_r}+1}
-$$
+$$ {#eq-korr-6}
 
-## Korrelaatiokertoimen laskeminen Excelissä
+Ensin, laske kaksi kertaa z-arvo. Nosta sitten Eulerin luku tähän potenssiin. Vähennä tuloksesta yksi, ja jaa tämä tulos aikaisemmalla potenssituloksella plus yksi.
 
-Korrelaatiokertoimen voi onneksi laskea hyvin yksinkertaisesti Excelissä yhdellä kaavalla:
+## Korrelaatiokertoimen laskeminen Excelissä {#sec-korrelaatiokertoimen-laskeminen-excelissä}
+
+[Korrelaatiokertoimen voi onneksi laskea hyvin yksinkertaisesti Excelissä]{.underline} yhdellä kaavalla:
 
 `PEARSON(matriisi1; matriisi2)`
 
@@ -115,9 +167,13 @@ Määrittele vain, mitkä matriisit sinulla on käytössä.
 
 [Valitettavasti kertoimen merkitsevyyden tarkistaminen taas ei ole implementoitu Excelissä]{.underline}. Käytä valmiita LAMBDA-kaavoja (@sec-lambda-kaavoja) laskeaksesi kertoimen p-arvon t-muunnoksen avulla.
 
-LAMBDA-kaavoina löytyy myös $r$-arvon z-muunnoksen tekemiseksi sekä $z_r$-arvon muuntamiseksi takaisin $r$-arvoksi. Käytä näitä laskeaksesi luottamusvälin valitsemallasi alfatasolla. Huomaa, että tarvitset neljä listattua LAMBDA-funktiota tähän: z-arvon lasku, keskivirheen lasku, luottamusvälin lasku, sekä lasku, joka muuntaa z-arvon takaisin r-arvoksi. Huomaa myös, että luottamusvälin laskukaava (`KORR.Z.CI`) palauttaa kaksirivisen matriisin - ensimmäinen arvo on luottamusvälin yläraja, toinen arvo on alaraja. Jos tarvitset luottamusvälin sarakkeisiin rivien sijaan, laita funktio `TRANSPONOI`-funktion sisälle.
+LAMBDA-kaavoina löytyy myös $r$-arvon z-muunnoksen tekemiseksi sekä $z_r$-arvon muuntamiseksi takaisin $r$-arvoksi. Käytä näitä laskeaksesi luottamusvälin valitsemallasi alfatasolla.
 
-## Korrelaatiokertoimen raportointi
+[Huomaa, että tarvitset neljä listattua LAMBDA-funktiota tähän]{.underline}: z-arvon lasku, keskivirheen lasku, luottamusvälin lasku, sekä lasku, joka muuntaa z-arvon takaisin r-arvoksi.
+
+[Huomaa myös, että luottamusvälin laskukaava (`KORR.Z.CI`) palauttaa kaksirivisen matriisin]{.underline} - ensimmäinen arvo on luottamusvälin yläraja, toinen arvo on alaraja. Jos tarvitset luottamusvälin sarakkeisiin rivien sijaan, laita funktio `TRANSPONOI`-funktion sisälle.
+
+## Korrelaatiokertoimen raportointi {#sec-korrelaatiokertoimen-raportointi}
 
 Raportoi mieluisesti seuraavat tiedot:
 

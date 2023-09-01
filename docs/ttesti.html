@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 9&nbsp; T-testi</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 10&nbsp; T-testi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -58,250 +58,260 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "tulosta tässä dokumentissa",
     "search-clear-button-title": "Tyhjennä",
     "search-detached-cancel-button-title": "Peruuta",
-    "search-submit-button-title": "Lähetä"
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 10&nbsp; T-testi">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="ttesti_files/figure-html/fig-t-jakauma-1.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./ttesti.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ttesti.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./grafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viittaaminen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ttesti.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimienhallinta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exceltoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./muuttilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -314,25 +324,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-t-testin-vapausasteet" id="toc-sec-t-testin-vapausasteet" class="nav-link active" data-scroll-target="#sec-t-testin-vapausasteet"><span class="header-section-number">9.1</span> T-testin vapausasteet</a></li>
-  <li><a href="#sec-t-testin-mallioletukset" id="toc-sec-t-testin-mallioletukset" class="nav-link" data-scroll-target="#sec-t-testin-mallioletukset"><span class="header-section-number">9.2</span> T-testin mallioletukset</a>
+  <li><a href="#sec-t-testin-vapausasteet" id="toc-sec-t-testin-vapausasteet" class="nav-link active" data-scroll-target="#sec-t-testin-vapausasteet"><span class="header-section-number">10.1</span> T-testin vapausasteet</a></li>
+  <li><a href="#sec-t-testin-mallioletukset" id="toc-sec-t-testin-mallioletukset" class="nav-link" data-scroll-target="#sec-t-testin-mallioletukset"><span class="header-section-number">10.2</span> T-testin mallioletukset</a>
   <ul class="collapse">
-  <li><a href="#sec-normaalijakautuminen-t" id="toc-sec-normaalijakautuminen-t" class="nav-link" data-scroll-target="#sec-normaalijakautuminen-t"><span class="header-section-number">9.2.1</span> Normaalijakautuminen</a></li>
-  <li><a href="#sec-homoskedastisiteetti-t" id="toc-sec-homoskedastisiteetti-t" class="nav-link" data-scroll-target="#sec-homoskedastisiteetti-t"><span class="header-section-number">9.2.2</span> Homoskedastisiteetti</a></li>
-  <li><a href="#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" id="toc-sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" class="nav-link" data-scroll-target="#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t"><span class="header-section-number">9.2.3</span> Joko täysin samat tai täysin eri yksiköt</a></li>
-  <li><a href="#sec-yhteenveto-vaatimuksista-t" id="toc-sec-yhteenveto-vaatimuksista-t" class="nav-link" data-scroll-target="#sec-yhteenveto-vaatimuksista-t"><span class="header-section-number">9.2.4</span> Yhteenveto vaatimuksista</a></li>
+  <li><a href="#sec-normaalijakautuminen-t" id="toc-sec-normaalijakautuminen-t" class="nav-link" data-scroll-target="#sec-normaalijakautuminen-t"><span class="header-section-number">10.2.1</span> Normaalijakautuminen</a></li>
+  <li><a href="#sec-homoskedastisiteetti-t" id="toc-sec-homoskedastisiteetti-t" class="nav-link" data-scroll-target="#sec-homoskedastisiteetti-t"><span class="header-section-number">10.2.2</span> Homoskedastisiteetti</a></li>
+  <li><a href="#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" id="toc-sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" class="nav-link" data-scroll-target="#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t"><span class="header-section-number">10.2.3</span> Joko täysin samat tai täysin eri yksiköt</a></li>
+  <li><a href="#sec-yhteenveto-vaatimuksista-t" id="toc-sec-yhteenveto-vaatimuksista-t" class="nav-link" data-scroll-target="#sec-yhteenveto-vaatimuksista-t"><span class="header-section-number">10.2.4</span> Yhteenveto vaatimuksista</a></li>
   </ul></li>
-  <li><a href="#sec-t-testin-valitseminen" id="toc-sec-t-testin-valitseminen" class="nav-link" data-scroll-target="#sec-t-testin-valitseminen"><span class="header-section-number">9.3</span> T-testin valitseminen</a></li>
-  <li><a href="#sec-t-testin-laskeminen" id="toc-sec-t-testin-laskeminen" class="nav-link" data-scroll-target="#sec-t-testin-laskeminen"><span class="header-section-number">9.4</span> T-testin laskeminen</a>
+  <li><a href="#sec-t-testin-valitseminen" id="toc-sec-t-testin-valitseminen" class="nav-link" data-scroll-target="#sec-t-testin-valitseminen"><span class="header-section-number">10.3</span> T-testin valitseminen</a></li>
+  <li><a href="#sec-t-testin-laskeminen" id="toc-sec-t-testin-laskeminen" class="nav-link" data-scroll-target="#sec-t-testin-laskeminen"><span class="header-section-number">10.4</span> T-testin laskeminen</a>
   <ul class="collapse">
-  <li><a href="#sec-yhden-otoksen-t-testi-teoria" id="toc-sec-yhden-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">9.4.1</span> Yhden otoksen t-testi</a></li>
-  <li><a href="#sec-parittaisen-otoksen-t-testi-teoria" id="toc-sec-parittaisen-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-parittaisen-otoksen-t-testi-teoria"><span class="header-section-number">9.4.2</span> Parittaisen otoksen t-testi</a></li>
-  <li><a href="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">9.4.3</span> Kahden otoksen homoskedastinen t-testi</a></li>
-  <li><a href="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">9.4.4</span> Kahden otoksen heteroskedastinen t-testi</a></li>
+  <li><a href="#sec-yhden-otoksen-t-testi-teoria" id="toc-sec-yhden-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">10.4.1</span> Yhden otoksen t-testi</a></li>
+  <li><a href="#sec-parittaisen-otoksen-t-testi-teoria" id="toc-sec-parittaisen-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-parittaisen-otoksen-t-testi-teoria"><span class="header-section-number">10.4.2</span> Parittaisen otoksen t-testi</a></li>
+  <li><a href="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen homoskedastinen t-testi</a></li>
+  <li><a href="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">10.4.4</span> Kahden otoksen heteroskedastinen t-testi</a></li>
   </ul></li>
-  <li><a href="#sec-mittakoon-laskeminen-t" id="toc-sec-mittakoon-laskeminen-t" class="nav-link" data-scroll-target="#sec-mittakoon-laskeminen-t"><span class="header-section-number">9.5</span> Mittakoon laskeminen</a></li>
-  <li><a href="#sec-t-testin-laskeminen-excelissä" id="toc-sec-t-testin-laskeminen-excelissä" class="nav-link" data-scroll-target="#sec-t-testin-laskeminen-excelissä"><span class="header-section-number">9.6</span> T-testin laskeminen Excelissä</a></li>
-  <li><a href="#sec-t-testin-raportointi" id="toc-sec-t-testin-raportointi" class="nav-link" data-scroll-target="#sec-t-testin-raportointi"><span class="header-section-number">9.7</span> T-testin raportointi</a></li>
+  <li><a href="#sec-mittakoon-laskeminen-t" id="toc-sec-mittakoon-laskeminen-t" class="nav-link" data-scroll-target="#sec-mittakoon-laskeminen-t"><span class="header-section-number">10.5</span> Mittakoon laskeminen</a></li>
+  <li><a href="#sec-t-testin-laskeminen-excelissä" id="toc-sec-t-testin-laskeminen-excelissä" class="nav-link" data-scroll-target="#sec-t-testin-laskeminen-excelissä"><span class="header-section-number">10.6</span> T-testin laskeminen Excelissä</a></li>
+  <li><a href="#sec-t-testin-raportointi" id="toc-sec-t-testin-raportointi" class="nav-link" data-scroll-target="#sec-t-testin-raportointi"><span class="header-section-number">10.7</span> T-testin raportointi</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -341,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-t-testi" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></h1>
+<h1 class="title"><span id="sec-t-testi" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></h1>
 </div>
 
 
@@ -356,11 +366,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>T-testi on nimi pienelle testiperheelle, jolla voidaan testata kvantitatiivisten muuttujien merkitsevyyttä. T-testiperheitä löytyy kaksi: <strong>yhden otoksen t-testi</strong> sekä <strong>Studentin t-testi</strong>.</p>
-<p><strong>Yhden otoksen t-testillä</strong> voidaan testata, eroaako jokin mitta (yleensä keskiarvo) merkitsevästi tietystä arvosta, usein nollasta.</p>
-<p><strong>Studentin t-testillä</strong> voidaan testata kahden keskiarvon eroa tilastollisesti. Testillä tarkistetaan, onko mitattu ero tarpeeksi suuri, että voisimme luotettavasti hylätä nollahypoteesin (ettei eroa ole).</p>
-<p>Molemmat testiperheet pohjautuvat t-jakaumaan, jonka määrittelyyn käytetään jakauman vapausasteita:</p>
-<div id="fig-t-jakauma" class="cell quarto-layout-panel" data-hash="ttesti_cache/html/fig-t-jakauma_0bfb991aedd9aa276af689df95c95530">
+<p><strong>T-testi</strong> on testiperhenimi testeille, joilla voidaan testata kvantitatiivisten muuttujien merkitsevyyttä. T-testiperheitä löytyy kaksi: <strong>yhden otoksen t-testi</strong> sekä <strong>Studentin t-testi</strong>.</p>
+<p><strong>Yhden otoksen t-testillä</strong> voidaan testata, eroaako jokin mitta (yleensä keskiarvo) merkitsevästi tietystä arvosta. Testin ei-parametrinen vastaavuus on <strong>merkkitesti</strong> (<a href="eiparametrisettestit.html#sec-merkkitesti-teoria"><span>Alaluku&nbsp;9.1</span></a>).</p>
+<p><strong>Studentin t-testillä</strong> voidaan testata kahden keskiarvon eroa tilastollisesti. Testillä tarkistetaan, onko mitattu ero tarpeeksi suuri, että voisimme luotettavasti hylätä nollahypoteesin (ettei eroa ole, eli eron koko on nolla).</p>
+<p>Molemmat testiperheet perustuvat <strong>t-jakaumaan</strong>, jonka määrittelyyn käytetään jakauman vapausasteita:</p>
+<div id="fig-t-jakauma" class="cell quarto-layout-panel" data-hash="ttesti_cache/html/fig-t-jakauma_c8dc0141f00387d2461494c56f9bf442">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
@@ -388,23 +398,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;9.1: T-jakauma, df = 10</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;10.1: T-jakauma eri vapausasteilla</figcaption><p></p>
 </figure>
 </div>
 <p><strong>Mittausasteikko:</strong> Välimatka- ja suhdeasteikko.</p>
-<p><u>Studentin T-testistä löytyy kaksi pääkategoriaa</u>: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on laskennallinen, joten on tärkeää valita oikea testi!</p>
-<p><strong>Parittaisen otoksen t-testi</strong> testaa kahden arvon välistä eroa, kun arvot tulevat <strong>samasta</strong> yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista interventiota, ja halutaan tarkastaa, oliko interventiolla vaikutusta.</p>
-<p><strong>Kahden otoksen t-testi</strong> testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat <strong>eri</strong> yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla.</p>
+<p><u>Studentin T-testistä löytyy kaksi pääkategoriaa</u>: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on sekä laskennallinen että teoreettinen, joten on tärkeää valita oikea testi!</p>
+<p><strong>Parittaisen otoksen t-testi</strong> testaa kahden arvon välistä eroa, kun arvot tulevat <strong>samasta</strong> yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista <strong>interventiota</strong>, ja halutaan tarkastaa, oliko interventiolla vaikutusta. Testin ei-parametrinen vastaavuus on <strong>Wilcoxonin signed-rank -testi</strong> (<a href="eiparametrisettestit.html#sec-wilcoxonin-signed-rank-testi-teoria"><span>Alaluku&nbsp;9.2</span></a>).</p>
+<p><strong>Kahden otoksen t-testi</strong> testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat <strong>eri</strong> yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla. Testin ei-parametrinen vastaavuus on <strong>Mann-Whitney’n U-testi</strong> (<a href="eiparametrisettestit.html#sec-mann-whitneyn-u-testi"><span>Alaluku&nbsp;9.3</span></a>).</p>
 <p>Kahden otoksen testille löytyy vielä kaksi alaversiota, jotka riippuvat ryhmien välisestä varianssivaihtelusta: <strong>homoskedastinen</strong> ja <strong>heteroskedastinen</strong> testi.</p>
-<p><strong>Kahden otoksen homoskedastista t-testiä</strong> voi käyttää kun molempien ryhmien varianssi on samankokoinen.</p>
-<p><strong>Kahden otoksen heteroskedastistia t-testiä</strong> tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useammin heteroskedastista t-testiä.</p>
-<p>Heteroskedastisuutta voi testata mm. <strong>Levenen testillä</strong>. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Yleensä onkin helpompi olettaa, että ryhmien välillä on heteroskedastisuutta.</p>
-<section id="sec-t-testin-vapausasteet" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-t-testin-vapausasteet"><span class="header-section-number">9.1</span> T-testin vapausasteet</h2>
-<p><strong>Vapausasteet</strong> t-testille määritellään hieman eri tavalla, riippuen mikä testi ja testiperhe on kyseessä. Taulukossa näkyy vapausasteiden laskentatavat:</p>
+<p><strong>Kahden otoksen homoskedastista t-testiä</strong> voi käyttää, jos molempien ryhmien varianssi on samankokoinen.</p>
+<p><strong>Kahden otoksen heteroskedastistia t-testiä</strong> tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useimmiten heteroskedastista t-testiä.</p>
+<p>Heteroskedastisuutta voi testata mm. <strong>Levenen testillä</strong>, tai tarkistamalla ryhmien varianssit numeroissa tai kuviossa. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Tämän takia Levenen testiä tulisi välttää; parempi toiminta on tarkistaa varianssierot graafisesti tai numeroilla, tai jopa vain olettaa heteroskedastisuuden esiintyvän.</p>
+<section id="sec-t-testin-vapausasteet" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sec-t-testin-vapausasteet"><span class="header-section-number">10.1</span> T-testin vapausasteet</h2>
+<p><strong>Vapausasteet</strong> t-testille määritellään hieman eri tavalla riippuen testimuodosta. Taulukossa <a href="#tbl-t-testi-vapausasteet"><span>10.1</span></a> näkyy vapausasteiden laskentatavat:</p>
 <div id="tbl-t-testi-vapausasteet" class="anchored">
 <table class="table">
-<caption>Taulukko&nbsp;9.1: T-testin vapausasteiden laskenta</caption>
+<caption>Taulukko&nbsp;10.1: T-testin vapausasteiden laskenta</caption>
 <thead>
 <tr class="header">
 <th>Testityyppi</th>
@@ -429,38 +439,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisesti otoskoko minus yksi. Kahden otoksen t-testin vapausasteet ovat molempien ryhmien koot summattuna, minus kaksi.</p>
 </section>
-<section id="sec-t-testin-mallioletukset" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-t-testin-mallioletukset"><span class="header-section-number">9.2</span> T-testin mallioletukset</h2>
-<section id="sec-normaalijakautuminen-t" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-normaalijakautuminen-t"><span class="header-section-number">9.2.1</span> Normaalijakautuminen</h3>
-<p>T-testi olettaa, että testattava arvo tulee normaalijakaumasta. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen, suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.</p>
+<section id="sec-t-testin-mallioletukset" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-t-testin-mallioletukset"><span class="header-section-number">10.2</span> T-testin mallioletukset</h2>
+<p>T-testillä on kolme pääsääntöistä mallioletusta: <strong>normaalijakautuminen</strong>, <strong>homoskedastisiteetti</strong> sekä <strong>muuttujien yksikkösuhteet</strong>.</p>
+<section id="sec-normaalijakautuminen-t" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-normaalijakautuminen-t"><span class="header-section-number">10.2.1</span> Normaalijakautuminen</h3>
+<p><u>T-testi olettaa, että testattava arvo tulee normaalijakaumasta</u>. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.</p>
 <p>Jos testaat Studentin t-testillä, normaalijakautunut arvo on <strong>testin alla oleva ero</strong>, ei arvot itsessään.</p>
-<p>Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta.</p>
+<p>Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. Käytä mielummin ei-parametristä testiä.</p>
 </section>
-<section id="sec-homoskedastisiteetti-t" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-homoskedastisiteetti-t"><span class="header-section-number">9.2.2</span> Homoskedastisiteetti</h3>
-<p>T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta - eli että ovat samankokoisia.</p>
-<p>Voit testata oletusta useilla eri testeillä (ks. <a href="mallioletukset.html"><span>Luku&nbsp;4</span></a>).</p>
+<section id="sec-homoskedastisiteetti-t" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-homoskedastisiteetti-t"><span class="header-section-number">10.2.2</span> Homoskedastisiteetti</h3>
+<p><u>T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta</u> - eli että ovat samankokoisia.</p>
+<p>Voit testata oletusta useilla eri menetelmillä (ks. <a href="mallioletukset.html"><span>Luku&nbsp;5</span></a>).</p>
 <p>Jos varianssit eivät ole samoja, voit käyttää heteroskedastista testiversiota (ks. alla). Tämän rikkominen ei siis ole juurikaan ongelma.</p>
 </section>
-<section id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t"><span class="header-section-number">9.2.3</span> Joko täysin samat tai täysin eri yksiköt</h3>
-<p>T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä). T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.</p>
+<section id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t"><span class="header-section-number">10.2.3</span> Joko täysin samat tai täysin eri yksiköt</h3>
+<p><u>T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä).</u> T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.</p>
 <p>Tarkista tämä oletus miettimällä: ovatko kaikki tutkimusyksiköt samasta vai eri yksiköstä?</p>
 <p>Jos rikot olettamuksen, et voi käyttää t-testiä. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. <em>mixed models</em>), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.</p>
 </section>
-<section id="sec-yhteenveto-vaatimuksista-t" class="level3" data-number="9.2.4">
-<h3 data-number="9.2.4" class="anchored" data-anchor-id="sec-yhteenveto-vaatimuksista-t"><span class="header-section-number">9.2.4</span> Yhteenveto vaatimuksista</h3>
+<section id="sec-yhteenveto-vaatimuksista-t" class="level3" data-number="10.2.4">
+<h3 data-number="10.2.4" class="anchored" data-anchor-id="sec-yhteenveto-vaatimuksista-t"><span class="header-section-number">10.2.4</span> Yhteenveto vaatimuksista</h3>
 <p>Jos sinulla on isot otokset, ja tiedät, että molemmat muuttujat tulevat joko täysin samoista tai täysin eri yksiköistä, kaikki on hyvin ja voit jatkaa. Valitse kuitenkin oikea t-testi!</p>
 <p>Jos sinulla on pieni otos, t-testi on herkempi normaalijakautumisen vaatimukselle. Parempi vaihtoehto voi olla <strong>ei-parametrinen testi</strong>. Vastaavat testit t-testille ovat <strong>Mann-Whitney’n U-testi</strong> (kahden otoksen testit) sekä <strong>Wilcoxonin signed-rank-testi</strong> (parittainen t-testi).</p>
 <p>Jos et tiedä mitä yksikköjä on mitattu, sinun ei kannattaisi olla vielä testaamassa mitään. Tutustu dataasi enemmän ja selvitä mittaustavat!</p>
 </section>
 </section>
-<section id="sec-t-testin-valitseminen" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-t-testin-valitseminen"><span class="header-section-number">9.3</span> T-testin valitseminen</h2>
+<section id="sec-t-testin-valitseminen" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="sec-t-testin-valitseminen"><span class="header-section-number">10.3</span> T-testin valitseminen</h2>
 <p>Käytä näitä kulkukaavioita oikean testin valitsemiseksi. Valitse ensin oikea välilehti, ja aloita vasemmalta puolelta.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Yksi muuttuja</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Kaksi muuttujaa (samat yksiköt)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Kaksi muuttujaa (eri yksiköt)</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Yksi muuttuja</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Kaksi muuttujaa (samat yksiköt)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Kaksi muuttujaa (eri yksiköt)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
@@ -470,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <p><img src="ttesti_files\figure-html\mermaid-figure-1.png" class="img-fluid figure-img"></p>
 </div>
-<figcaption class="figure-caption">Kuva&nbsp;9.2: Yhden otoksen testin valitseminen</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;10.2: Yhden otoksen testin valitseminen</figcaption>
 </figure>
 </div>
 </div>
@@ -484,7 +495,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <p><img src="ttesti_files\figure-html\mermaid-figure-3.png" class="img-fluid figure-img"></p>
 </div>
-<figcaption class="figure-caption">Kuva&nbsp;9.3: Kahden muuttujan testin valitseminen, kun yksiköt ovat samoja</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;10.3: Kahden muuttujan testin valitseminen, kun yksiköt ovat samoja</figcaption>
 </figure>
 </div>
 </div>
@@ -498,7 +509,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <p><img src="ttesti_files\figure-html\mermaid-figure-2.png" class="img-fluid figure-img"></p>
 </div>
-<figcaption class="figure-caption">Kuva&nbsp;9.4: Kahden muuttujan testin valitseminen, kun yksiköt ovat eri</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;10.4: Kahden muuttujan testin valitseminen, kun yksiköt ovat eri</figcaption>
 </figure>
 </div>
 </div>
@@ -507,57 +518,61 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="sec-t-testin-laskeminen" class="level2 page-columns page-full" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-t-testin-laskeminen"><span class="header-section-number">9.4</span> T-testin laskeminen</h2>
-<section id="sec-yhden-otoksen-t-testi-teoria" class="level3" data-number="9.4.1">
-<h3 data-number="9.4.1" class="anchored" data-anchor-id="sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">9.4.1</span> Yhden otoksen t-testi</h3>
+<section id="sec-t-testin-laskeminen" class="level2 page-columns page-full" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="sec-t-testin-laskeminen"><span class="header-section-number">10.4</span> T-testin laskeminen</h2>
+<p><u>T-testin laskukaavat eroavat testiperheiden välillä</u>. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi, kahden otoksen homoskedastinen testi vai kahden otoksen heteroskedastinen testi.</p>
+<section id="sec-yhden-otoksen-t-testi-teoria" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">10.4.1</span> Yhden otoksen t-testi</h3>
 <p>Yhden otoksen t-testin kaava on:</p>
 <p><span id="eq-t-1"><span class="math display">\[
 t = \frac{\bar{x} - \mu}{s/\sqrt{n}}
-\tag{9.1}\]</span></span></p>
+\tag{10.1}\]</span></span></p>
 <p><span class="math inline">\(\bar{x}\)</span> on keskiarvo, jota halutaan testata. <span class="math inline">\(\mu\)</span> on koko, jota vastaan testataan. Jos testataan vain, eroaako keskiarvo nollasta, tämän voi jättää pois kokonaan.</p>
 <p><span class="math inline">\(s\)</span> on jakauman keskihajonta, ja <span class="math inline">\(n\)</span> on otoskoko.</p>
 </section>
-<section id="sec-parittaisen-otoksen-t-testi-teoria" class="level3 page-columns page-full" data-number="9.4.2">
-<h3 data-number="9.4.2" class="anchored" data-anchor-id="sec-parittaisen-otoksen-t-testi-teoria"><span class="header-section-number">9.4.2</span> Parittaisen otoksen t-testi</h3>
+<section id="sec-parittaisen-otoksen-t-testi-teoria" class="level3 page-columns page-full" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="sec-parittaisen-otoksen-t-testi-teoria"><span class="header-section-number">10.4.2</span> Parittaisen otoksen t-testi</h3>
 <p>Parittaisen otoksen t-testin kaava on:</p>
-<p><span id="eq-t-2"><span class="math display">\[ t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{n}}  \tag{9.2}\]</span></span></p>
-<div class="page-columns page-full"><p><span class="math inline">\(1/n\sum{x-y}\)</span> on erotuksen keskiarvo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="math inline">\(\sigma\)</span> on erotuksen keskihajonta, ja <span class="math inline">\(\sqrt{n}\)</span> on otoskoon neliöjuuri. Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon.</p></li></div></div>
+<p><span id="eq-t-2"><span class="math display">\[ t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{n}}  \tag{10.2}\]</span></span></p>
+<div class="page-columns page-full"><p><span class="math inline">\(1/n\sum{x-y}\)</span> on erotuksen keskiarvo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="math inline">\(\sigma\)</span> on erotuksen keskihajonta, ja <span class="math inline">\(\sqrt{n}\)</span> on otoskoon neliöjuuri.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon, eli <span class="math inline">\(\frac{\sum{x-y}}{n}\)</span>.</p></li></div></div>
+<p>Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.</p>
 </section>
-<section id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="level3" data-number="9.4.3">
-<h3 data-number="9.4.3" class="anchored" data-anchor-id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">9.4.3</span> Kahden otoksen homoskedastinen t-testi</h3>
+<section id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen homoskedastinen t-testi</h3>
 <p><strong>Kahden otoksen homoskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-3"><span class="math display">\[ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}  \tag{9.3}\]</span></span></p>
-<p><span class="math inline">\(\bar{x} - \bar{y}\)</span> on molempien otosten keskiarvojen ero. <span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> on erotuksen keskihajonta, joka koostuu useammasta asiasta. Voit kuitenkin laskea nämä helpommin Excelissä. Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.</p>
+<p><span id="eq-t-3"><span class="math display">\[ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}  \tag{10.3}\]</span></span></p>
+<p><span class="math inline">\(\bar{x} - \bar{y}\)</span> on molempien otosten keskiarvojen ero. <span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> on erotuksen keskihajonta, joka koostuu useammasta asiasta.</p>
+<p>Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.</p>
 </section>
-<section id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="level3" data-number="9.4.4">
-<h3 data-number="9.4.4" class="anchored" data-anchor-id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">9.4.4</span> Kahden otoksen heteroskedastinen t-testi</h3>
+<section id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">10.4.4</span> Kahden otoksen heteroskedastinen t-testi</h3>
 <p><strong>Kahden otoksen heteroskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-4"><span class="math display">\[ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split}  \tag{9.4}\]</span></span></p>
+<p><span id="eq-t-4"><span class="math display">\[ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split}  \tag{10.4}\]</span></span></p>
 <p>T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. <em>pooled variance</em>), <span class="math inline">\(s^2_p\)</span>. Se koostuu molempien otosten otoskoista <span class="math inline">\(n_1\)</span> ja <span class="math inline">\(n_2\)</span>, sekä otosten yksittäisistä variansseista <span class="math inline">\(s_1\)</span> ja <span class="math inline">\(s_2\)</span>.</p>
+<p>Laske ensin ryhmitetty varianssi yllä olevalla kaavalla. Jaa sitten ryhmitetty varianssi erikseen molemmilla otoskokoilla, summaa tulos yhteen ja ota tämän neliöjuuri. Laske sitten molempien ryhmien keskiarvojen ero, ja jaa tämä tulos aikaisemmalla neliöjuurituloksella.</p>
 </section>
 </section>
-<section id="sec-mittakoon-laskeminen-t" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="sec-mittakoon-laskeminen-t"><span class="header-section-number">9.5</span> Mittakoon laskeminen</h2>
+<section id="sec-mittakoon-laskeminen-t" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="sec-mittakoon-laskeminen-t"><span class="header-section-number">10.5</span> Mittakoon laskeminen</h2>
 <p>T-testille voidaan laskea mittakoko, joko Pearsonin <span class="math inline">\(r\)</span> tai Cohenin <span class="math inline">\(\hat{d}\)</span>. Suosittavaa on kuitenkin, että raportoit ensisijaisesti itse testatut arvot ja/tai eron (esimerkiksi prosenttiero), mutta näiden mittakokojen avulla muut tutkijat voivat hyödyntää tuloksiasi helpommin meta-analyyseissa.</p>
 <p>Voit laskea <strong>Pearsonin</strong> <span class="math inline">\(r\)</span><strong>-suureen</strong> kaavalla:</p>
 <p><span id="eq-t-5"><span class="math display">\[
 r = \sqrt{\frac{t^2}{t^2+\text{df}}}
-\tag{9.5}\]</span></span></p>
+\tag{10.5}\]</span></span></p>
 <p>jossa <span class="math inline">\(t^2\)</span> on t-testin tulos neliöön, ja <span class="math inline">\(df\)</span> on testin vapausasteet.</p>
-<p>Voit myös laskea Cohenin <span class="math inline">\(\hat{d}\)</span>-suureen kaavalla:</p>
+<p>Voit myös laskea <strong>Cohenin</strong> <span class="math inline">\(\hat{d}\)</span><strong>-suureen</strong> kaavalla:</p>
 <p><span id="eq-t-6"><span class="math display">\[
 \hat{d} = \frac{\bar{x}-\bar{y}}{s_{\bar{y}}}
-\tag{9.6}\]</span></span></p>
+\tag{10.6}\]</span></span></p>
 <p>jossa <span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span> ovat mitatut keskiarvot ja <span class="math inline">\(s_{\bar{y}}\)</span> on toisen keskiarvon keskihajonta.</p>
 <p>Parittaisen t-testin <span class="math inline">\(\hat{d}\)</span>-suureelle löytyy myös korjattu versio, joka ottaa huomioon parittaisten mittausten yhteiskorrelaation:</p>
 <p><span id="eq-t-7"><span class="math display">\[
 \hat{d}_D = \frac{\hat{d}}{\sqrt{1-r}}
-\tag{9.7}\]</span></span></p>
+\tag{10.7}\]</span></span></p>
 <p>jossa <span class="math inline">\(r\)</span> on mittausten yhteiskorrelaatio (ks. <a href="korrelaatio.html"><span>Luku&nbsp;10</span></a>).</p>
 </section>
-<section id="sec-t-testin-laskeminen-excelissä" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="sec-t-testin-laskeminen-excelissä"><span class="header-section-number">9.6</span> T-testin laskeminen Excelissä</h2>
+<section id="sec-t-testin-laskeminen-excelissä" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="sec-t-testin-laskeminen-excelissä"><span class="header-section-number">10.6</span> T-testin laskeminen Excelissä</h2>
 <p>Excelissä löytyy valmis kaava, jolla saat <strong>Studentin t-testin</strong> p-arvon:</p>
 <ul>
 <li><p><code>T.TESTI(matriisi1; matriisi2; suunta; laji)</code></p>
@@ -567,22 +582,22 @@ r = \sqrt{\frac{t^2}{t^2+\text{df}}}
 <li><p><code>Laji</code>-parametrilla määrittelet, teetkö parittaisen <code>1</code>, kahden otoksen homoskedastisen <code>2</code> vai kahden otoksen heteroskedastisen <code>3</code> t-testin</p></li>
 </ul></li>
 </ul>
-<p>Funktio: <a href="funktiot.html#sec-t-testi"><span>Alaluku&nbsp;14.7.4.4</span></a></p>
-<p><strong>Luottamusvälin</strong> laskemiseen voit käyttää yleistä luottamusvälin kaavaa t-suureelle (ks. <a href="merkitsevyysluvut.html#sec-luottamusväli-teoria"><span>Alaluku&nbsp;7.3</span></a>).</p>
+<p>Funktio: <a href="funktiot.html#sec-t-testi"><span>Alaluku&nbsp;17.7.4.4</span></a></p>
+<p><strong>Luottamusvälin</strong> laskemiseen voit käyttää yleistä luottamusvälin kaavaa t-suureelle (ks. <a href="merkitsevyysluvut.html#sec-luottamusväli-teoria"><span>Alaluku&nbsp;8.3</span></a>).</p>
 <p><strong>Yhden otoksen t-testille</strong> ei löydy valmista kaavaa, mutta sen implementointi ei ole kovin hankalaa.</p>
-<p><u>Excelissä ei ole valmiita kaavoja testisuureen laskemiseen</u>. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät <a href="lambdakaavat.html">luvusta&nbsp;<span>15</span></a>.</p>
+<p><u>Excelissä ei ole valmiita kaavoja testisuureen laskemiseen</u>. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät <a href="lambdakaavat.html">luvusta&nbsp;<span>18</span></a>.</p>
 </section>
-<section id="sec-t-testin-raportointi" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="sec-t-testin-raportointi"><span class="header-section-number">9.7</span> T-testin raportointi</h2>
-<p>T-testille tulisi mieluisesti raportoida seuraavat luvut:</p>
+<section id="sec-t-testin-raportointi" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="sec-t-testin-raportointi"><span class="header-section-number">10.7</span> T-testin raportointi</h2>
+<p>T-testille tulisi mieluisesti raportoida seuraavat tiedot:</p>
 <ul>
-<li><p>Testin kategoria (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)</p></li>
-<li><p>Verratut arvot</p></li>
+<li><p>Testin tyyppi (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)</p></li>
+<li><p>Verratut arvot <span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span></p></li>
 <li><p>Testisuure <span class="math inline">\(t\)</span></p></li>
 <li><p>Vapausasteet <span class="math inline">\(\text{df}\)</span></p></li>
 <li><p>P-arvo <span class="math inline">\(p\)</span> (ja/tai luottamusväli <span class="math inline">\(\text{CI}\)</span>)</p></li>
 <li><p>Mittakoko (Pearsonin <span class="math inline">\(r\)</span> tai Cohenin <span class="math inline">\(\hat{d}\)</span>)</p></li>
-<li><p>(Jos tehty) Levenen testin tulokset (testisuure ja <span class="math inline">\(p\)</span>).</p></li>
+<li><p>(Jos tehty) Levenen testin tai varianssivertailun tulokset (Levenen testille testisuure ja <span class="math inline">\(p\)</span>, varianssivertailulle varianssit ja niiden ero tai graafinen esittely).</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -839,16 +854,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./eiparametrisettestit.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./korrelaatio.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

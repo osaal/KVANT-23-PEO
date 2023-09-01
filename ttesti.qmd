@@ -1,16 +1,16 @@
 # T-testi {#sec-t-testi}
 
-T-testi on nimi pienelle testiperheelle, jolla voidaan testata kvantitatiivisten muuttujien merkitsevyyttä. T-testiperheitä löytyy kaksi: **yhden otoksen t-testi** sekä **Studentin t-testi**.
+**T-testi** on testiperhenimi testeille, joilla voidaan testata kvantitatiivisten muuttujien merkitsevyyttä. T-testiperheitä löytyy kaksi: **yhden otoksen t-testi** sekä **Studentin t-testi**.
 
-**Yhden otoksen t-testillä** voidaan testata, eroaako jokin mitta (yleensä keskiarvo) merkitsevästi tietystä arvosta, usein nollasta.
+**Yhden otoksen t-testillä** voidaan testata, eroaako jokin mitta (yleensä keskiarvo) merkitsevästi tietystä arvosta. Testin ei-parametrinen vastaavuus on **merkkitesti** (@sec-merkkitesti-teoria).
 
-**Studentin t-testillä** voidaan testata kahden keskiarvon eroa tilastollisesti. Testillä tarkistetaan, onko mitattu ero tarpeeksi suuri, että voisimme luotettavasti hylätä nollahypoteesin (ettei eroa ole).
+**Studentin t-testillä** voidaan testata kahden keskiarvon eroa tilastollisesti. Testillä tarkistetaan, onko mitattu ero tarpeeksi suuri, että voisimme luotettavasti hylätä nollahypoteesin (ettei eroa ole, eli eron koko on nolla).
 
-Molemmat testiperheet pohjautuvat t-jakaumaan, jonka määrittelyyn käytetään jakauman vapausasteita:
+Molemmat testiperheet perustuvat **t-jakaumaan**, jonka määrittelyyn käytetään jakauman vapausasteita:
 
 ```{r}
 #| label: fig-t-jakauma
-#| fig-cap: T-jakauma, df = 10
+#| fig-cap: "T-jakauma eri vapausasteilla"
 #| layout-ncol: 3
 #| fig-subcap: 
 #| - "df = 1"
@@ -33,23 +33,23 @@ for (i in c(1, 10, 300) ) {
 
 **Mittausasteikko:** Välimatka- ja suhdeasteikko.
 
-[Studentin T-testistä löytyy kaksi pääkategoriaa]{.underline}: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on laskennallinen, joten on tärkeää valita oikea testi!
+[Studentin T-testistä löytyy kaksi pääkategoriaa]{.underline}: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on sekä laskennallinen että teoreettinen, joten on tärkeää valita oikea testi!
 
-**Parittaisen otoksen t-testi** testaa kahden arvon välistä eroa, kun arvot tulevat **samasta** yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista interventiota, ja halutaan tarkastaa, oliko interventiolla vaikutusta.
+**Parittaisen otoksen t-testi** testaa kahden arvon välistä eroa, kun arvot tulevat **samasta** yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista **interventiota**, ja halutaan tarkastaa, oliko interventiolla vaikutusta. Testin ei-parametrinen vastaavuus on **Wilcoxonin signed-rank -testi** (@sec-wilcoxonin-signed-rank-testi-teoria).
 
-**Kahden otoksen t-testi** testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat **eri** yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla.
+**Kahden otoksen t-testi** testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat **eri** yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla. Testin ei-parametrinen vastaavuus on **Mann-Whitney'n U-testi** (@sec-mann-whitneyn-u-testi).
 
 Kahden otoksen testille löytyy vielä kaksi alaversiota, jotka riippuvat ryhmien välisestä varianssivaihtelusta: **homoskedastinen** ja **heteroskedastinen** testi.
 
-**Kahden otoksen homoskedastista t-testiä** voi käyttää kun molempien ryhmien varianssi on samankokoinen.
+**Kahden otoksen homoskedastista t-testiä** voi käyttää, jos molempien ryhmien varianssi on samankokoinen.
 
-**Kahden otoksen heteroskedastistia t-testiä** tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useammin heteroskedastista t-testiä.
+**Kahden otoksen heteroskedastistia t-testiä** tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useimmiten heteroskedastista t-testiä.
 
-Heteroskedastisuutta voi testata mm. **Levenen testillä**. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Yleensä onkin helpompi olettaa, että ryhmien välillä on heteroskedastisuutta.
+Heteroskedastisuutta voi testata mm. **Levenen testillä**, tai tarkistamalla ryhmien varianssit numeroissa tai kuviossa. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Tämän takia Levenen testiä tulisi välttää; parempi toiminta on tarkistaa varianssierot graafisesti tai numeroilla, tai jopa vain olettaa heteroskedastisuuden esiintyvän.
 
 ## T-testin vapausasteet {#sec-t-testin-vapausasteet}
 
-**Vapausasteet** t-testille määritellään hieman eri tavalla, riippuen mikä testi ja testiperhe on kyseessä. Taulukossa näkyy vapausasteiden laskentatavat:
+**Vapausasteet** t-testille määritellään hieman eri tavalla riippuen testimuodosta. Taulukossa [-@tbl-t-testi-vapausasteet] näkyy vapausasteiden laskentatavat:
 
 | Testityyppi                 | Vapausasteet                |
 |-----------------------------|-----------------------------|
@@ -63,25 +63,27 @@ Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisest
 
 ## T-testin mallioletukset {#sec-t-testin-mallioletukset}
 
+T-testillä on kolme pääsääntöistä mallioletusta: **normaalijakautuminen**, **homoskedastisiteetti** sekä **muuttujien yksikkösuhteet**.
+
 ### Normaalijakautuminen {#sec-normaalijakautuminen-t}
 
-T-testi olettaa, että testattava arvo tulee normaalijakaumasta. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen, suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.
+[T-testi olettaa, että testattava arvo tulee normaalijakaumasta]{.underline}. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.
 
 Jos testaat Studentin t-testillä, normaalijakautunut arvo on **testin alla oleva ero**, ei arvot itsessään.
 
-Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta.
+Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. Käytä mielummin ei-parametristä testiä.
 
 ### Homoskedastisiteetti {#sec-homoskedastisiteetti-t}
 
-T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta - eli että ovat samankokoisia.
+[T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta]{.underline} - eli että ovat samankokoisia.
 
-Voit testata oletusta useilla eri testeillä (ks. @sec-mallioletukset).
+Voit testata oletusta useilla eri menetelmillä (ks. @sec-mallioletukset).
 
 Jos varianssit eivät ole samoja, voit käyttää heteroskedastista testiversiota (ks. alla). Tämän rikkominen ei siis ole juurikaan ongelma.
 
 ### Joko täysin samat tai täysin eri yksiköt {#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t}
 
-T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä). T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.
+[T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä).]{.underline} T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.
 
 Tarkista tämä oletus miettimällä: ovatko kaikki tutkimusyksiköt samasta vai eri yksiköstä?
 
@@ -159,6 +161,8 @@ flowchart LR
 
 ## T-testin laskeminen {#sec-t-testin-laskeminen}
 
+[T-testin laskukaavat eroavat testiperheiden välillä]{.underline}. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi, kahden otoksen homoskedastinen testi vai kahden otoksen heteroskedastinen testi.
+
 ### Yhden otoksen t-testi {#sec-yhden-otoksen-t-testi-teoria}
 
 Yhden otoksen t-testin kaava on:
@@ -177,9 +181,11 @@ Parittaisen otoksen t-testin kaava on:
 
 $$ t = \frac{1/n\sum{x-y}} {\sigma/\sqrt{n}} $$ {#eq-t-2}
 
-$1/n\sum{x-y}$ on erotuksen keskiarvo[^ttesti-1], $\sigma$ on erotuksen keskihajonta, ja $\sqrt{n}$ on otoskoon neliöjuuri. Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.
+$1/n\sum{x-y}$ on erotuksen keskiarvo[^ttesti-1], $\sigma$ on erotuksen keskihajonta, ja $\sqrt{n}$ on otoskoon neliöjuuri.
 
-[^ttesti-1]: Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon.
+[^ttesti-1]: Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon, eli $\frac{\sum{x-y}}{n}$.
+
+Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.
 
 ### Kahden otoksen homoskedastinen t-testi {#sec-kahden-otoksen-homoskedastinen-t-testi-teoria}
 
@@ -187,7 +193,9 @@ $1/n\sum{x-y}$ on erotuksen keskiarvo[^ttesti-1], $\sigma$ on erotuksen keskihaj
 
 $$ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$ {#eq-t-3}
 
-$\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ on erotuksen keskihajonta, joka koostuu useammasta asiasta. Voit kuitenkin laskea nämä helpommin Excelissä. Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.
+$\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ on erotuksen keskihajonta, joka koostuu useammasta asiasta.
+
+Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.
 
 ### Kahden otoksen heteroskedastinen t-testi {#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria}
 
@@ -196,6 +204,8 @@ $\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n
 $$ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split} $$ {#eq-t-4}
 
 T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. *pooled variance*), $s^2_p$. Se koostuu molempien otosten otoskoista $n_1$ ja $n_2$, sekä otosten yksittäisistä variansseista $s_1$ ja $s_2$.
+
+Laske ensin ryhmitetty varianssi yllä olevalla kaavalla. Jaa sitten ryhmitetty varianssi erikseen molemmilla otoskokoilla, summaa tulos yhteen ja ota tämän neliöjuuri. Laske sitten molempien ryhmien keskiarvojen ero, ja jaa tämä tulos aikaisemmalla neliöjuurituloksella.
 
 ## Mittakoon laskeminen {#sec-mittakoon-laskeminen-t}
 
@@ -209,7 +219,7 @@ $$ {#eq-t-5}
 
 jossa $t^2$ on t-testin tulos neliöön, ja $df$ on testin vapausasteet.
 
-Voit myös laskea Cohenin $\hat{d}$-suureen kaavalla:
+Voit myös laskea **Cohenin** $\hat{d}$**-suureen** kaavalla:
 
 $$
 \hat{d} = \frac{\bar{x}-\bar{y}}{s_{\bar{y}}}
@@ -247,11 +257,11 @@ Funktio: @sec-t-testi
 
 ## T-testin raportointi {#sec-t-testin-raportointi}
 
-T-testille tulisi mieluisesti raportoida seuraavat luvut:
+T-testille tulisi mieluisesti raportoida seuraavat tiedot:
 
--   Testin kategoria (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)
+-   Testin tyyppi (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)
 
--   Verratut arvot
+-   Verratut arvot $\bar{x}$ ja $\bar{y}$
 
 -   Testisuure $t$
 
@@ -261,7 +271,7 @@ T-testille tulisi mieluisesti raportoida seuraavat luvut:
 
 -   Mittakoko (Pearsonin $r$ tai Cohenin $\hat{d}$)
 
--   (Jos tehty) Levenen testin tulokset (testisuure ja $p$).
+-   (Jos tehty) Levenen testin tai varianssivertailun tulokset (Levenen testille testisuure ja $p$, varianssivertailulle varianssit ja niiden ero tai graafinen esittely).
 
 ::: callout-note
 ## Esimerkki t-testin raportoinnista
