@@ -245,31 +245,40 @@ Pienempi summista on $W$-arvo, jota voidaan käyttää myöhemmin todennäköisy
 [Laske W-arvojen U-suureet]{.underline} seuraavalla kaavalla:
 
 $$
-U = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
+\begin{split}
+U_1 = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
+\\ U_2 = n_{k_1} n_{k_2} + \frac{n_{k_2}(n_{k_2}+1)} {2}-W_2
+\end{split}
 $$ {#eq-u-suure}
 
-Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän $W$-arvo.
+Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän $W$-arvo, eli järjestysnumeroiden summa.
 
-[Jos haluat laskea merkitsevyyden]{.underline}, laske ensin $W$-suuren keskiarvo $\bar{W}$ sekä keskihajonta $\text{SE}_{\bar{W}}$:
+Laske $U$-suure molemmille ryhmille erikseen.
+
+Pienempi näistä kahdesta on lopullinen $U$-suure:
+
+$$
+U = \min(U_1, U_2)
+$$ {#eq-u-suure-2}
+
+Merkitsevyyden laskemiseksi, laske ensin $U$-suureen keskiarvo $\bar{U}$ sekä keskihajonta $\text{SD}_{\bar{U}}$:
 
 $$
 \begin{split}
-\bar{W} = \frac{n_{k_1}(n_{k_1}+n_{k_2}+1)}{2}
-\\ \text{SE}_{\bar{W}} = \sqrt{\frac{n_{k_1}n_{k_2}(n_{k_1}+n_{k_2}+1)}{12}}
+\bar{U} = \frac{n_1 n_2}{2}
+\\ \text{SE}_{\bar{U}} = \sqrt{\frac{n_1 n_2 (n_1 + n_2 + 1)}{12}}
 \end{split}
-$$ {#eq-w-keskiarvo-ja-keskihajonta}
+$$ {#eq-u-suure-mean-sd}
 
-Keskiarvo $\bar{W}$ lasketaan kertomalla ensimmäisen ryhmän otoskoko $n_{k_1}$ molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.
-
-Keskihajonta $\text{SE}_{\bar{W}}$ lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos 12:lla, ja ottamalla viimeisen tuloksen neliöjuuri.
+Keskiarvo $\bar{U}$ on yksinkertaisesti molemmat ryhmäkoot kerrottuna yhteen ja jaattuna kahdella. Keskihajonnassa $\text{SE}_{\bar{U}}$ kerrot ryhmäkoot yhteen, kerrot tämän tuloksen ryhmäkokojen yhteensummauksella plus yksi, jaat tuloksen 12:lla ja otat viimeisen tuloksen neliöjuuren.
 
 [Laske sitten z-arvo]{.underline}:
 
 $$
-z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
+z_U = \frac{U-\bar{U}}{\text{SD}_{\bar{U}}}
 $$ {#eq-w-suure-z-normalisointi}
 
-jossa $W$ on pienempi kahdesta $W$-suureesta, $\bar{W}$ on aikaisemmin laskettu keskiarvo ja $\text{SE}_{\bar{W}}$ aikaisemmin laskettu keskihajonta.
+jossa $U$ on pienempi kahdesta $U$-suureesta (@eq-u-suure-2), $\bar{U}$ on aikaisemmin laskettu keskiarvo ja $\text{SD}_{\bar{U}}$ aikaisemmin laskettu keskihajonta.
 
 [Lopputuloksen z-arvon voit tarkistaa kriittisten arvojen taulukosta tai laskurilla]{.underline}.
 
@@ -279,22 +288,27 @@ Tunnistat varmaan käytännön tässä vaiheessa - [U-testi tehdään käsin Exc
 
 1.  Määrittele hypoteesipari ja häntäisyys.
 2.  Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): `=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)` molemmille ryhmille.
+    1.  Jos testattavalla muuttujalla on tyhjiä arvoja, muista poistaa myös ne ennen suodatusta - muuten Excel korvaa ne nollalla! Esim.: `=SUODATA( testattava_muuttuja; (ryhmämuuttuja = ryhmänumero) * (testattava_muuttuja <> "") )`
 3.  Laske ryhmien järjestysnumerot yhtenä pakettina, mutta eriteltynä ryhmäsarakkeisiin:
     1.  Tee kaksi saraketta, yksi jokaisen ryhmän järjestysarvoille, samassa järjestyksessä kuin haettu data. (ensimmäinen ryhmä vasemmalla toisesta ryhmästä).
-    2.  Laske ensimmäiseen soluun `=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)`. Huomaa, että järjestysalueen tulee kattaa molemmat ryhmäsarakkeet! Lukitse järjestysalue.
-    3.  Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.
+    2.  Laske ensimmäiseen soluun `=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)`. Huomaa, että järjestysalueeksi määrittelet molemmat muuttujat, et vain yhden niistä!
+        1.  Jos olet käyttänyt suodatusfunktiota yllä, voit viitata alueiden kokoon risuaidoilla. Jos esim. ryhmätiedot löytyvät alueilta `I2:I113` ja `J2:J124` (eli ovat erikokoisia), viittauksen voi tehdä muodossa `I2#:J2#`.
+    3.  Lukitse järjestysalue (esim. `$I$2#:$J$2#`).
+    4.  Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.
 4.  Laske järjestysnumerosarakkeiden summat (`SUMMA`) ja otoskoot (`LASKE` tai `LASKE.A`).
-    1.  Pienempi kahdesta summasta on $W$-suure.
-5.  Laske U-suure: `=(n_1 * n_2) + ((n_1*(n_1+1)) / 2) - wsuure`
+5.  Laske ryhmien U-koot:
+    1.  Ryhmä 1: `=n_1 * n_2 + n_1 * (n_1 + 1) / 2 - W_1`
+    2.  Ryhmä 2: `=n_1 * n_2 + n_2 * (n_2 + 1) / 2 - W_2`
+6.  Laske U-suure: `=min(U_1; U_2)`
 
 Olet valmis U-suureen laskemisessa! [Jos haluat laskea z-arvon]{.underline} ja hakea sen todennäköisyyden, jatka tästä.
 
-6.  Laske testin keskiarvo.
-7.  Laske testin keskihajonta.
-8.  Laske haluttavan häntäisyyden z-arvo.
-9.  Hae z-arvon p-arvo: `=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)`
-
-Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä (ks. @sec-wilcoxonin-testin-toteuttaminen-excelissä).
+6.  Laske U-suureen keskiarvo: `=(n_1 * n_2) / 2`
+7.  Laske U-suureen keskihajonta: `=NELIÖJUURI( (n_1 * n_2 * (n_1 + n_2 + 1) ) / 12)`
+8.  Laske z-arvo: `=(u - u_keskiarvo) / u_keskihajonta`
+9.  Hae z-arvon todennäköisyys:
+    6.  Yksihäntäinen: `=NORM_JAKAUMA.NORMIT(z; TOSI)`
+    7.  Kaksihäntäinen: `=NORM_JAKAUMA.NORMIT(z; TOSI) * 2`
 
 ### U-testin raportoiminen {#sec-u-testin-raportoiminen}
 
@@ -372,30 +386,13 @@ Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat
 
 [Rho-suure tulkitaan kuten Pearsonin]{.underline} $r$[-suuretta]{.underline}.
 
-[Merkitsevyyden laskemiseksi]{.underline} voidaan käyttää joko **z-normalisointia**, jolloin pitää myös ensin tehdä Fisherin muuntolasku, tai **t-suuretta**.
-
-[Jos haluat laskea z-normalisoidun rho-suureen]{.underline}, käytä seuraavia kaavoja:
-
-$$
-\begin{align}
-z = \sqrt{\frac{n-3}{1.06}}F(r)
-\\ F(r) = 0.5 \ln \frac{1+r}{1-r}
-\end{align}
-$$ {#eq-spearman-03}
-
-Z-suureen kaavassa lasket ensin otoskoon $n$ minus kolme, ja jaat tulokset $1.06$:lla. Otat sitten tämän tuloksen neliöjuuren.
-
-Sitten sinun tulee laskea Fisherin muuntolasku korrelaatiokertoimelle, $F(r)$. Jaa ensin rho-kerroin plus yksi laskulla rho-kerroin minus yksi. Ota tuloksen luonnollinen logaritmi, ja kerro tämä tulos puolella ($0.5$).
-
-Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. Saat z-normalisoidun arvon, jolle voit hakea todennäköisyysarvon $p$ yleisellä tavalla (kriittisten arvojen taulukosta tai laskurilla).
-
-[Jos haluat käyttää t-suuretta]{.underline}, käytä seuraavaa kaavaa:
+[Jos haluat laskea merkitsevyyden]{.underline}, laske ensin rho-suureen t-arvo:
 
 $$
 t = r\sqrt{\frac{n-2}{1-r^2}}
 $$ {#eq-spearman-04}
 
-T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet $n-2$, sitten rho-suureen neliö $r^2$ ja sen inverssi $1-r^2$. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella $r$. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla $n-2$. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.
+Laske ensin t-jakauman vapausasteet $n-2$, sitten rho-suureen neliö $r^2$ ja sen inverssi $1-r^2$. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella $r$. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla $n-2$. Voit hakea todennäköisyysarvon t-suureelle kaksihäntäisen kriittisten arvojen taulukolla tai laskurilla.
 
 ### Spearmanin rhon laskeminen Excelissä {#sec-spearmanin-rhon-laskeminen-excelissä}
 
@@ -405,16 +402,15 @@ Vaikka yllä olevat kaavat näyttävät aika monimutkaisilta, voimme onneksi teh
 
 Laskutoimitus seuraa tätä prosessia:
 
-1.  Laske molempien muuttujien järjestysarvot: `=ARVON.MUKAAN.KESKIARVO(solu; alue; 1)`.
-2.  Laske järjestyslukualueiden korrelaatiokerroin: `=KORRELAATIO(muuttuja1; muuttuja2)`. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!
-3.  Valitse merkitsevyyslaskentatapa ja syötä siihen tarvittavat numerot.
-    1.  Jos z-arvo:
-        1.  Laske Fisherin muuntolasku käyttämällä aikaisempaa korrelaatiokertointa sekä luonnollisen logaritmin funktiota `LUONN.LOG()`.
-        2.  Laske sitten z-arvo käyttäen Fisherin muuntolaskun tulosta ja otoskokoa (hae esim. `LASKE`-funktiolla).
-        3.  Hae viimeiseksi z-arvon merkitsevyys funktiolla `=NORM_JAKAUMA.NORMITA(z; EPÄTOSI)`.
-    2.  Jos t-arvo:
-        1.  Laske t-arvo käyttämällä otoskokoa (hae esim. `LASKE`-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla `NELIÖJUURI()`.
-        2.  Hae sitten t-arvon merkitsevyys funktiolla `=T.JAKAUMA(t; vapausasteet; EPÄTOSI`). Vapausasteet ovat $n-2$.
+1.  Laske molempien muuttujien järjestysarvot:
+    1.  Muuttuja 1: `=ARVON.MUKAAN.KESKIARVO(ensimmäinen_solu_m1; muuttuja_1; 0)`.
+    2.  Muuttuja 2: `=ARVON.MUKAAN.KESKIARVO(ensimmäinen_solu_m2; muuttuja_2; 0)`.
+    3.  Lukitse muuttujamääritelmät (`muuttuja_1` ja `muuttuja_2`).
+    4.  Vedä funktiot kaikkien rivien yli vetotoiminnolla.
+2.  Laske järjestyslukualueiden korrelaatiokerroin: `=KORRELAATIO(järjestys_m1; järjestys_m2)`. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!
+3.  Laske t-suure: `=r * NELIÖJUURI( (n - 2) / (1 - r^2) )`.
+4.  Laske t-suureen vapausasteet: `=n - 2`.
+5.  Hae kaksihäntäinen todennäköisyysarvo: `=T.JAKAUMA.2S(t; vapausasteet)`.
 
 ### Spearmanin rhon raportointi {#sec-spearmanin-rhon-raportointi}
 
@@ -422,9 +418,7 @@ Raportoi rho-testistä mieluisesti seuraavat:
 
 -   Spearmanin testisuure $\rho$ (vaihtoehtoisesti kirjoitettuna $r_s$)
 
--   Z- tai t-koko $z$ tai $t$
-
-    -   Jos $t$: Vapausasteet $\text{df}$
+-   T-suure $t$ ja sen vapausasteet $\text{df}$
 
 -   Merkitsevyys $p$
 

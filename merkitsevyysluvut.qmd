@@ -6,6 +6,16 @@ Tässä luvussa käydään läpi merkitsevyyslukujen määritelmät, käyttö ja
 
 Merkitsevyyslukuja, joita tässä kirjassa käydään läpi ovat: keskiarvon keskivirhe, Z-arvo, luottamusväli ja virhemarginaali. P-arvon voi myös laskea merkitsevyysluvuksi, mutta se edustaa todennäköisyyttä aina tietyssä kontekstissa. Täten sen läpikäyminen sopii paremmin hypoteesitestauksen yhteyteen (ks. @sec-hypoteesitestaus-teoria).
 
+::: callout-caution
+## Eksakti vai asymptoottinen: Miksi p-arvoni on hieman väärässä?
+
+Kun käsittelemme otantoja, teemme usein **approksimaatioita** eli lähestymisiä. Todennäköisyyslaskennan kannalta asia on erittäin olennainen, ja voi helposti vaikuttaa mm. todennäköisyysarvojen $p$ laskentaan.
+
+Todennäköisyysarvon laskenta voi olla **eksakti** tai **asymptoottinen**. Eksaktissa laskennassa p-arvo lasketaan tarkalleen kaikesta datasta. Suurissa datamäärissä tämä voi olla hyvin työlästä (joskin modernit tietokoneet pärjäävät yleensä ihan hyvin), joten sivulle on kehitetty asymptoottiset todennäköisyysarvot. Asymptoottiset arvot lähestyvät todellista arvoa suurissa otoksissa.
+
+Eksakti ja asymptoottinen p-arvo voi suurissa otoksissa olla hyvinkin samankokoisia, mutta erot korostuvat pienemmissä otoksissa. Tämän takia voit nähdä hieman eri todennäköisyysarvoja riippuen siitä, mitä menetelmää mikäkin sovellus käyttää. SPSS-sovellus on selkeä valintojensa kanssa - Excel ei niinkään.
+:::
+
 ## Keskiarvon keskivirhe {#sec-keskiarvon-keskivirhe-teoria}
 
 **Keskiarvon keskivirhe** (engl. *standard error of the mean*), tai vain **keskivirhe**[^merkitsevyysluvut-1], on osittaisesti merkitsevyysmitta. Keskivirhe estimoi kuinka hyvin otoksen keskiarvo edustaa todellista populaation keskiarvoa. Keskivirhe ilmaistaan useimmiten kirjaimilla $SE$ (englannin nimestä), mutta vaihtoehtoisesti voi myös käyttää matemaattisia symboleja $\hat{\sigma}_x^{-}$ tai $s_x^{-}$ . Keskivirhe lasketaan jakamalla keskihajonta datamäärän neliöjuurella:

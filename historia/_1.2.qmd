@@ -4,4 +4,8 @@
 
 **Muutokset**:
 
--   
+-   Poistettu caching-toiminto moodikuvista luvusta "Sijaintiluvut"
+-   Lisätty huomautus tasatun keskiarvon parillisista poistoista lukuun "Sijaintiluvut"
+-   Korjattu Mann-Whitney'n U-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"
+-   Lisätty selitys eksaktista ja asymptoottisesta p-arvosta lukuun "Merkitsevyysluvut"
+-   Korjattu Spearmanin rho-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"

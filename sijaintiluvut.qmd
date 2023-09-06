@@ -35,7 +35,6 @@ Lue lisää alaluvussa @sec-moodi.
 #| label: fig-moodi-esim-01
 #| fig-cap: "Unimodaalinen jakauma"
 #| echo: false
-#| cache: false
 
 set.seed(12345)
 data <- rnorm(10000)
@@ -54,7 +53,6 @@ hist(
 #| label: fig-moodi-esim-02
 #| fig-cap: "Bimodaalinen jakauma"
 #| echo: false
-#| cache: true
 
 set.seed(12345)
 nn <- 1e4
@@ -76,7 +74,6 @@ hist(
 #| label: fig-moodi-esim-03
 #| fig-cap: "Multimodaalinen jakauma"
 #| echo: false
-#| cache: true
 
 set.seed(12345)
 nn <- 5e4
@@ -99,7 +96,6 @@ hist(
 #| label: fig-moodi-esim-04
 #| fig-cap: "Uniformijakauma, jossa moodia ei teoriassa ole. Käytännössä tässä kuitenkin on moodi, koska jakauma on empiirinen."
 #| echo: false
-#| cache: true
 
 set.seed(12345)
 data <- runif(
@@ -243,6 +239,12 @@ $$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_k}{N} = \frac{1}{N}(\sum_{i = 1}^{k}
 Vakaampana keskiarvomittarina voidaan käyttää **tasattua keskiarvoa** (engl. *trimmed mean*). Tällöin poistetaan ensin tietty prosenttiosuus jakauman ääripäistä, ja lasketaan sitten keskiarvo jäljelle jäävälle datalle. Yleinen prosenttiraja on 95 %, eli poistetaan 5 % (kaksi ja puoli prosenttia molemmista päistä) ja lasketaan keskiarvo jäljelle jäävälle osuudelle. Jos tasattu keskiarvo on hyvin samanlainen kuin keskiarvo, ääripääarvot eivät vaikuta suuresti keskiarvoon.[^sijaintiluvut-2]
 
 [^sijaintiluvut-2]: Tämä pätee vain keskiarvolle, ja vain yksinmuuttujakontekstissa. Monimuuttujakontekstissa ääripääarvot voivat olla ongelmallisia vaikka eivät vaikuttaisi yksittäisen muuttujan keskiarvoon. Rajatun ja tavallisen keskiarvon samankokoisuus ei siis takaa luotettavia analyyseja itsessään!
+
+::: callout-important
+## Tasaus ja tasaluvut
+
+Tasauksen yhteydessä parasta on yleensä poistaa sama määrä yksiköitä jakauman alusta ja lopusta. Excel tekee tämän automaattisesti: funktio `KESKIARVO.TASATTU()` pyöristää määrän ylöspäin lähimpään parilliseen lukuun (esim. 2, 56, 348) ja poistaa puolet määrästä jakauman alapäästä ja puolet yläpäästä. Kaikki tilastosovellukset eivät tee tätä, jolloin tasattu keskiarvo voi vaihdella hieman.
+:::
 
 **Funktiot Excelissä**:
 
