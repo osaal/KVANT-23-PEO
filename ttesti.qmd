@@ -17,7 +17,6 @@ Molemmat testiperheet perustuvat **t-jakaumaan**, jonka määrittelyyn käytetä
 #| - "df = 10"
 #| - "df = 300"
 #| echo: false
-#| cache: true
 
 for (i in c(1, 10, 300) ) {
   curve(
