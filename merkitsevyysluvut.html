@@ -353,6 +353,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Tässä luvussa käydään läpi merkitsevyyslukujen määritelmät, käyttö ja toteuttaminen Excelissä.</p>
 <p><strong>Merkitsevyysluvut</strong> kertovat jotain mittarin luotettavuudesta. Kuinka paljon me luotamme siihen, että mitattu arvo ei ole syntynyt satunnaisen vaihtelun vuoksi, vaan edustaa todellista eroa populaatiossa?</p>
 <p>Merkitsevyyslukuja, joita tässä kirjassa käydään läpi ovat: keskiarvon keskivirhe, Z-arvo, luottamusväli ja virhemarginaali. P-arvon voi myös laskea merkitsevyysluvuksi, mutta se edustaa todennäköisyyttä aina tietyssä kontekstissa. Täten sen läpikäyminen sopii paremmin hypoteesitestauksen yhteyteen (ks. <a href="hypoteesitestaus.html"><span>Luku&nbsp;4</span></a>).</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Eksakti vai asymptoottinen: Miksi p-arvoni on hieman väärässä?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kun käsittelemme otantoja, teemme usein <strong>approksimaatioita</strong> eli lähestymisiä. Todennäköisyyslaskennan kannalta asia on erittäin olennainen, ja voi helposti vaikuttaa mm. todennäköisyysarvojen <span class="math inline">\(p\)</span> laskentaan.</p>
+<p>Todennäköisyysarvon laskenta voi olla <strong>eksakti</strong> tai <strong>asymptoottinen</strong>. Eksaktissa laskennassa p-arvo lasketaan tarkalleen kaikesta datasta. Suurissa datamäärissä tämä voi olla hyvin työlästä (joskin modernit tietokoneet pärjäävät yleensä ihan hyvin), joten sivulle on kehitetty asymptoottiset todennäköisyysarvot. Asymptoottiset arvot lähestyvät todellista arvoa suurissa otoksissa.</p>
+<p>Eksakti ja asymptoottinen p-arvo voi suurissa otoksissa olla hyvinkin samankokoisia, mutta erot korostuvat pienemmissä otoksissa. Tämän takia voit nähdä hieman eri todennäköisyysarvoja riippuen siitä, mitä menetelmää mikäkin sovellus käyttää. SPSS-sovellus on selkeä valintojensa kanssa - Excel ei niinkään.</p>
+</div>
+</div>
 <section id="sec-keskiarvon-keskivirhe-teoria" class="level2 page-columns page-full" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="sec-keskiarvon-keskivirhe-teoria"><span class="header-section-number">8.1</span> Keskiarvon keskivirhe</h2>
 <div class="page-columns page-full"><p><strong>Keskiarvon keskivirhe</strong> (engl. <em>standard error of the mean</em>), tai vain <strong>keskivirhe</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, on osittaisesti merkitsevyysmitta. Keskivirhe estimoi kuinka hyvin otoksen keskiarvo edustaa todellista populaation keskiarvoa. Keskivirhe ilmaistaan useimmiten kirjaimilla <span class="math inline">\(SE\)</span> (englannin nimestä), mutta vaihtoehtoisesti voi myös käyttää matemaattisia symboleja <span class="math inline">\(\hat{\sigma}_x^{-}\)</span> tai <span class="math inline">\(s_x^{-}\)</span> . Keskivirhe lasketaan jakamalla keskihajonta datamäärän neliöjuurella:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Keskivirhe voidaan laskea mille tahansa estimoidulle parametrille.</p></li></div></div>

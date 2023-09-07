@@ -551,7 +551,7 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <section id="sec-mann-whitneyn-u-testi" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="sec-mann-whitneyn-u-testi"><span class="header-section-number">9.3</span> Mann-Whitney’n U-testi</h2>
 <p><strong>Mittausasteikot:</strong> Järjestysasteikosta ylöspäin</p>
-<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong> (ks. <a href="ttesti.html#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.3</span></a> ja <a href="ttesti.html#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span>Alaluku&nbsp;10.4.4</span></a>).</p>
+<p><strong>Mann-Whitney’n U-testi</strong> on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on <strong>kahden otoksen t-testi</strong> (ks. <a href="ttesti.html#sec-kahden-otoksen-welchin-t-testi-teoria"><span>Alaluku&nbsp;10.4.3</span></a>).</p>
 <p><u>Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä</u>; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jolla testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).</p>
 <p><u>U-testi lasketaan hyvin samoin kuin Wilcoxonin testi</u>, mutta U-testissä testataan, eroavatko kaksi ryhmää toisistaan:</p>
 <ol type="1">
@@ -577,23 +577,30 @@ z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
 <p>Pienempi summista on <span class="math inline">\(W\)</span>-arvo, jota voidaan käyttää myöhemmin todennäköisyyden laskemiseen.</p>
 <p><u>Laske W-arvojen U-suureet</u> seuraavalla kaavalla:</p>
 <p><span id="eq-u-suure"><span class="math display">\[
-U = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
-\tag{9.3}\]</span></span></p>
-<p>Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän <span class="math inline">\(W\)</span>-arvo.</p>
-<p><u>Jos haluat laskea merkitsevyyden</u>, laske ensin <span class="math inline">\(W\)</span>-suuren keskiarvo <span class="math inline">\(\bar{W}\)</span> sekä keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span>:</p>
-<p><span id="eq-w-keskiarvo-ja-keskihajonta"><span class="math display">\[
 \begin{split}
-\bar{W} = \frac{n_{k_1}(n_{k_1}+n_{k_2}+1)}{2}
-\\ \text{SE}_{\bar{W}} = \sqrt{\frac{n_{k_1}n_{k_2}(n_{k_1}+n_{k_2}+1)}{12}}
+U_1 = n_{k_1} n_{k_2} + \frac{n_{k_1}(n_{k_1}+1)}{2}-W_1
+\\ U_2 = n_{k_1} n_{k_2} + \frac{n_{k_2}(n_{k_2}+1)} {2}-W_2
 \end{split}
+\tag{9.3}\]</span></span></p>
+<p>Kerro ensin molempien ryhmien otoskoot yhteen. Lisää tähän jakolasku, jossa kerrot ensin ensimmäisen ryhmän otoskoon itsellään plus yksi ja jaat lopputuloksen kahdella. Vähennä vielä tästä ensimmäisen ryhmän <span class="math inline">\(W\)</span>-arvo, eli järjestysnumeroiden summa.</p>
+<p>Laske <span class="math inline">\(U\)</span>-suure molemmille ryhmille erikseen.</p>
+<p>Pienempi näistä kahdesta on lopullinen <span class="math inline">\(U\)</span>-suure:</p>
+<p><span id="eq-u-suure-2"><span class="math display">\[
+U = \min(U_1, U_2)
 \tag{9.4}\]</span></span></p>
-<p>Keskiarvo <span class="math inline">\(\bar{W}\)</span> lasketaan kertomalla ensimmäisen ryhmän otoskoko <span class="math inline">\(n_{k_1}\)</span> molempien ryhmien otoskokojen summalla plus yksi, ja tulos jaetaan kahdella.</p>
-<p>Keskihajonta <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> lasketaan kertomalla molempien ryhmien otoskoot yhteen, kertomalla tämä tulos molempien ryhmien otoskokojen summalla plus yksi, jakamalla tulos 12:lla, ja ottamalla viimeisen tuloksen neliöjuuri.</p>
+<p>Merkitsevyyden laskemiseksi, laske ensin <span class="math inline">\(U\)</span>-suureen keskiarvo <span class="math inline">\(\bar{U}\)</span> sekä keskihajonta <span class="math inline">\(\text{SD}_{\bar{U}}\)</span>:</p>
+<p><span id="eq-u-suure-mean-sd"><span class="math display">\[
+\begin{split}
+\bar{U} = \frac{n_1 n_2}{2}
+\\ \text{SE}_{\bar{U}} = \sqrt{\frac{n_1 n_2 (n_1 + n_2 + 1)}{12}}
+\end{split}
+\tag{9.5}\]</span></span></p>
+<p>Keskiarvo <span class="math inline">\(\bar{U}\)</span> on yksinkertaisesti molemmat ryhmäkoot kerrottuna yhteen ja jaattuna kahdella. Keskihajonnassa <span class="math inline">\(\text{SE}_{\bar{U}}\)</span> kerrot ryhmäkoot yhteen, kerrot tämän tuloksen ryhmäkokojen yhteensummauksella plus yksi, jaat tuloksen 12:lla ja otat viimeisen tuloksen neliöjuuren.</p>
 <p><u>Laske sitten z-arvo</u>:</p>
 <p><span id="eq-w-suure-z-normalisointi"><span class="math display">\[
-z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
-\tag{9.5}\]</span></span></p>
-<p>jossa <span class="math inline">\(W\)</span> on pienempi kahdesta <span class="math inline">\(W\)</span>-suureesta, <span class="math inline">\(\bar{W}\)</span> on aikaisemmin laskettu keskiarvo ja <span class="math inline">\(\text{SE}_{\bar{W}}\)</span> aikaisemmin laskettu keskihajonta.</p>
+z_U = \frac{U-\bar{U}}{\text{SD}_{\bar{U}}}
+\tag{9.6}\]</span></span></p>
+<p>jossa <span class="math inline">\(U\)</span> on pienempi kahdesta <span class="math inline">\(U\)</span>-suureesta (<a href="#eq-u-suure-2">Yhtälö&nbsp;<span>9.4</span></a>), <span class="math inline">\(\bar{U}\)</span> on aikaisemmin laskettu keskiarvo ja <span class="math inline">\(\text{SD}_{\bar{U}}\)</span> aikaisemmin laskettu keskihajonta.</p>
 <p><u>Lopputuloksen z-arvon voit tarkistaa kriittisten arvojen taulukosta tai laskurilla</u>.</p>
 </section>
 <section id="sec-u-testin-toteuttaminen-excelissä" class="level3" data-number="9.3.3">
@@ -601,27 +608,39 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 <p>Tunnistat varmaan käytännön tässä vaiheessa - <u>U-testi tehdään käsin Excelissä</u>. Toimintatapa on hyvin samankaltainen kuin muille:</p>
 <ol type="1">
 <li>Määrittele hypoteesipari ja häntäisyys.</li>
-<li>Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): <code>=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)</code> molemmille ryhmille.</li>
+<li>Hae molempien ryhmien data eriteltynä sarakkeisiin (tämä helpoittaa analyysia myöhemmin): <code>=SUODATA(testattava_muuttuja; ryhmämuuttuja = ryhmänumero)</code> molemmille ryhmille.
+<ol type="1">
+<li>Jos testattavalla muuttujalla on tyhjiä arvoja, muista poistaa myös ne ennen suodatusta - muuten Excel korvaa ne nollalla! Esim.: <code>=SUODATA( testattava_muuttuja; (ryhmämuuttuja = ryhmänumero) * (testattava_muuttuja &lt;&gt; "") )</code></li>
+</ol></li>
 <li>Laske ryhmien järjestysnumerot yhtenä pakettina, mutta eriteltynä ryhmäsarakkeisiin:
 <ol type="1">
 <li>Tee kaksi saraketta, yksi jokaisen ryhmän järjestysarvoille, samassa järjestyksessä kuin haettu data. (ensimmäinen ryhmä vasemmalla toisesta ryhmästä).</li>
-<li>Laske ensimmäiseen soluun <code>=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)</code>. Huomaa, että järjestysalueen tulee kattaa molemmat ryhmäsarakkeet! Lukitse järjestysalue.</li>
+<li>Laske ensimmäiseen soluun <code>=ARVON.MUKAAN.KESKIARVO(järjestettävä_arvo; järjestysalue; 1)</code>. Huomaa, että järjestysalueeksi määrittelet molemmat muuttujat, et vain yhden niistä!
+<ol type="1">
+<li>Jos olet käyttänyt suodatusfunktiota yllä, voit viitata alueiden kokoon risuaidoilla. Jos esim. ryhmätiedot löytyvät alueilta <code>I2:I113</code> ja <code>J2:J124</code> (eli ovat erikokoisia), viittauksen voi tehdä muodossa <code>I2#:J2#</code>.</li>
+</ol></li>
+<li>Lukitse järjestysalue (esim. <code>$I$2#:$J$2#</code>).</li>
 <li>Monista funktio vetotoiminnolla molempiin sarakkeisiin kaikille riveille.</li>
 </ol></li>
-<li>Laske järjestysnumerosarakkeiden summat (<code>SUMMA</code>) ja otoskoot (<code>LASKE</code> tai <code>LASKE.A</code>).
+<li>Laske järjestysnumerosarakkeiden summat (<code>SUMMA</code>) ja otoskoot (<code>LASKE</code> tai <code>LASKE.A</code>).</li>
+<li>Laske ryhmien U-koot:
 <ol type="1">
-<li>Pienempi kahdesta summasta on <span class="math inline">\(W\)</span>-suure.</li>
+<li>Ryhmä 1: <code>=n_1 * n_2 + n_1 * (n_1 + 1) / 2 - W_1</code></li>
+<li>Ryhmä 2: <code>=n_1 * n_2 + n_2 * (n_2 + 1) / 2 - W_2</code></li>
 </ol></li>
-<li>Laske U-suure: <code>=(n_1 * n_2) + ((n_1*(n_1+1)) / 2) - wsuure</code></li>
+<li>Laske U-suure: <code>=min(U_1; U_2)</code></li>
 </ol>
 <p>Olet valmis U-suureen laskemisessa! <u>Jos haluat laskea z-arvon</u> ja hakea sen todennäköisyyden, jatka tästä.</p>
 <ol start="6" type="1">
-<li>Laske testin keskiarvo.</li>
-<li>Laske testin keskihajonta.</li>
-<li>Laske haluttavan häntäisyyden z-arvo.</li>
-<li>Hae z-arvon p-arvo: <code>=NORM_JAKAUMA.NORMIT(z; EPÄTOSI)</code></li>
+<li>Laske U-suureen keskiarvo: <code>=(n_1 * n_2) / 2</code></li>
+<li>Laske U-suureen keskihajonta: <code>=NELIÖJUURI( (n_1 * n_2 * (n_1 + n_2 + 1) ) / 12)</code></li>
+<li>Laske z-arvo: <code>=(u - u_keskiarvo) / u_keskihajonta</code></li>
+<li>Hae z-arvon todennäköisyys:
+<ol start="6" type="1">
+<li>Yksihäntäinen: <code>=NORM_JAKAUMA.NORMIT(z; TOSI)</code></li>
+<li>Kaksihäntäinen: <code>=NORM_JAKAUMA.NORMIT(z; TOSI) * 2</code></li>
+</ol></li>
 </ol>
-<p>Z-arvon laskeminen ja p-arvon hakeminen on täysin sama kuin Wilcoxonin testissä (ks. <a href="#sec-wilcoxonin-testin-toteuttaminen-excelissä"><span>Alaluku&nbsp;9.2.3</span></a>).</p>
 </section>
 <section id="sec-u-testin-raportoiminen" class="level3" data-number="9.3.4">
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="sec-u-testin-raportoiminen"><span class="header-section-number">9.3.4</span> U-testin raportoiminen</h3>
@@ -663,14 +682,14 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 <p><u>Jos muuttujilla ei ole tasajärjestyksiä</u>, käytä seuraavaa kaavaa:</p>
 <p><span id="eq-spearman-01"><span class="math display">\[
 \rho = 1-\frac{6\sum{d_i^2}}{n^3-n}
-\tag{9.6}\]</span></span></p>
+\tag{9.7}\]</span></span></p>
 <p>Laske ensin jokaisen rivin erot muuttujien järjestysarvojen välillä, <span class="math inline">\(d_i\)</span> (jossa <span class="math inline">\(i\)</span> on rivin numero). Laske sitten jokaiselle erolle neliö <span class="math inline">\(d_i^2\)</span> ja summaa kaikki neliöt yhteen. Kerro tulos kuudella.</p>
 <p>Jakolaskun alaosassa, laske otoskoon kuutio <span class="math inline">\(n^3\)</span> ja vähennä siitä otoskoko <span class="math inline">\(n\)</span>.</p>
 <p>Jaa sitten ensimmäiseksi laskettu erotuksen neliösumma toiseksi lasketulla otoskokomitalla. Vähennä lopullinen tulos yhdestä - saat Spearmanin rhon <span class="math inline">\(\rho\)</span>.</p>
 <p><u>Jos muuttujilla on tasajärjestyksiä</u>, käytä vaihtoehtoista kaavaa:</p>
 <p><span id="eq-spearman-02"><span class="math display">\[
 \rho = \frac{ 1/n \sum{(x_i - \bar{x}) \times (y_i - \bar{y})} } { \sqrt{( 1/n \sum{(x_i - \bar{x})^2} ) \times (1/n \sum{(y_i - \bar{y})^2}) } }
-\tag{9.7}\]</span></span></p>
+\tag{9.8}\]</span></span></p>
 <p>Myönnetään, tämä laskukaavio on aika hirvittävä. Kyseiset merkinnät ovat käytössä:</p>
 <ul>
 <li><p><span class="math inline">\(x_i\)</span> ja <span class="math inline">\(y_i\)</span> ovat muuttujien järjestysarvot rivillä <span class="math inline">\(i\)</span></p></li>
@@ -680,22 +699,11 @@ z_W = \frac{W-\bar{W}}{\text{SE}_{\bar{W}}}
 </ul>
 <p><u>Laskutoiminto soveltaa Pearsonin korrelaatiokertoimen laskukaaviota</u>, mutta korvaa datan alkuperäisluvut järjestysluvuilla. Toisin sanoen: kaava on tismalleen sama kuin Pearsonin kaava, paitsi että käytetyt luvut ovat järjestyslukuja.</p>
 <p><u>Rho-suure tulkitaan kuten Pearsonin</u> <span class="math inline">\(r\)</span><u>-suuretta</u>.</p>
-<p><u>Merkitsevyyden laskemiseksi</u> voidaan käyttää joko <strong>z-normalisointia</strong>, jolloin pitää myös ensin tehdä Fisherin muuntolasku, tai <strong>t-suuretta</strong>.</p>
-<p><u>Jos haluat laskea z-normalisoidun rho-suureen</u>, käytä seuraavia kaavoja:</p>
-<p><span id="eq-spearman-03"><span class="math display">\[
-\begin{align}
-z = \sqrt{\frac{n-3}{1.06}}F(r)
-\\ F(r) = 0.5 \ln \frac{1+r}{1-r}
-\end{align}
-\tag{9.8}\]</span></span></p>
-<p>Z-suureen kaavassa lasket ensin otoskoon <span class="math inline">\(n\)</span> minus kolme, ja jaat tulokset <span class="math inline">\(1.06\)</span>:lla. Otat sitten tämän tuloksen neliöjuuren.</p>
-<p>Sitten sinun tulee laskea Fisherin muuntolasku korrelaatiokertoimelle, <span class="math inline">\(F(r)\)</span>. Jaa ensin rho-kerroin plus yksi laskulla rho-kerroin minus yksi. Ota tuloksen luonnollinen logaritmi, ja kerro tämä tulos puolella (<span class="math inline">\(0.5\)</span>).</p>
-<p>Viimeiseksi, kerro Fisherin muuntolasku aikaisemmin lasketulla neliöjuurella. Saat z-normalisoidun arvon, jolle voit hakea todennäköisyysarvon <span class="math inline">\(p\)</span> yleisellä tavalla (kriittisten arvojen taulukosta tai laskurilla).</p>
-<p><u>Jos haluat käyttää t-suuretta</u>, käytä seuraavaa kaavaa:</p>
+<p><u>Jos haluat laskea merkitsevyyden</u>, laske ensin rho-suureen t-arvo:</p>
 <p><span id="eq-spearman-04"><span class="math display">\[
 t = r\sqrt{\frac{n-2}{1-r^2}}
 \tag{9.9}\]</span></span></p>
-<p>T-suureen kaava on paljon yksinkertaisempi. Laske ensin t-jakauman vapausasteet <span class="math inline">\(n-2\)</span>, sitten rho-suureen neliö <span class="math inline">\(r^2\)</span> ja sen inverssi <span class="math inline">\(1-r^2\)</span>. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella <span class="math inline">\(r\)</span>. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla <span class="math inline">\(n-2\)</span>. Voit hakea todennäköisyysarvon t-suureelle (kaksihäntäisen) kriittisten arvojen taulukolla tai laskurilla.</p>
+<p>Laske ensin t-jakauman vapausasteet <span class="math inline">\(n-2\)</span>, sitten rho-suureen neliö <span class="math inline">\(r^2\)</span> ja sen inverssi <span class="math inline">\(1-r^2\)</span>. Jaa vapausasteet tällä inverssillä, ja ota tuloksen neliöjuuri. Kerro viimeiseksi neliöjuuren tulos rho-suurella <span class="math inline">\(r\)</span>. Lopputulos on t-suure, joka seuraa Studentin t-jakaumaa vapausasteilla <span class="math inline">\(n-2\)</span>. Voit hakea todennäköisyysarvon t-suureelle kaksihäntäisen kriittisten arvojen taulukolla tai laskurilla.</p>
 </section>
 <section id="sec-spearmanin-rhon-laskeminen-excelissä" class="level3" data-number="9.4.3">
 <h3 data-number="9.4.3" class="anchored" data-anchor-id="sec-spearmanin-rhon-laskeminen-excelissä"><span class="header-section-number">9.4.3</span> Spearmanin rhon laskeminen Excelissä</h3>
@@ -703,22 +711,17 @@ t = r\sqrt{\frac{n-2}{1-r^2}}
 <p><u>Meidän ei nimittäin tarvitse välittää ollenkaan tasajärjestyksistä</u> - koska Spearmanin rho-lasku on loppujen lopuksi vain Pearsonin korrelaatiokerroin, mutta laskettu järjestysluvuilla eikä alkuperäisillä luvuilla!</p>
 <p>Laskutoimitus seuraa tätä prosessia:</p>
 <ol type="1">
-<li>Laske molempien muuttujien järjestysarvot: <code>=ARVON.MUKAAN.KESKIARVO(solu; alue; 1)</code>.</li>
-<li>Laske järjestyslukualueiden korrelaatiokerroin: <code>=KORRELAATIO(muuttuja1; muuttuja2)</code>. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!</li>
-<li>Valitse merkitsevyyslaskentatapa ja syötä siihen tarvittavat numerot.
+<li>Laske molempien muuttujien järjestysarvot:
 <ol type="1">
-<li>Jos z-arvo:
-<ol type="1">
-<li>Laske Fisherin muuntolasku käyttämällä aikaisempaa korrelaatiokertointa sekä luonnollisen logaritmin funktiota <code>LUONN.LOG()</code>.</li>
-<li>Laske sitten z-arvo käyttäen Fisherin muuntolaskun tulosta ja otoskokoa (hae esim. <code>LASKE</code>-funktiolla).</li>
-<li>Hae viimeiseksi z-arvon merkitsevyys funktiolla <code>=NORM_JAKAUMA.NORMITA(z; EPÄTOSI)</code>.</li>
+<li>Muuttuja 1: <code>=ARVON.MUKAAN.KESKIARVO(ensimmäinen_solu_m1; muuttuja_1; 0)</code>.</li>
+<li>Muuttuja 2: <code>=ARVON.MUKAAN.KESKIARVO(ensimmäinen_solu_m2; muuttuja_2; 0)</code>.</li>
+<li>Lukitse muuttujamääritelmät (<code>muuttuja_1</code> ja <code>muuttuja_2</code>).</li>
+<li>Vedä funktiot kaikkien rivien yli vetotoiminnolla.</li>
 </ol></li>
-<li>Jos t-arvo:
-<ol type="1">
-<li>Laske t-arvo käyttämällä otoskokoa (hae esim. <code>LASKE</code>-funktiolla) ja aikaisempaa korrelaatiokertointa. Neliöjuuren lasket funktiolla <code>NELIÖJUURI()</code>.</li>
-<li>Hae sitten t-arvon merkitsevyys funktiolla <code>=T.JAKAUMA(t; vapausasteet; EPÄTOSI</code>). Vapausasteet ovat <span class="math inline">\(n-2\)</span>.</li>
-</ol></li>
-</ol></li>
+<li>Laske järjestyslukualueiden korrelaatiokerroin: <code>=KORRELAATIO(järjestys_m1; järjestys_m2)</code>. Huomaa, että alueina pitää olla järjestysluvut, ei alkuperäiset luvut!</li>
+<li>Laske t-suure: <code>=r * NELIÖJUURI( (n - 2) / (1 - r^2) )</code>.</li>
+<li>Laske t-suureen vapausasteet: <code>=n - 2</code>.</li>
+<li>Hae kaksihäntäinen todennäköisyysarvo: <code>=T.JAKAUMA.2S(t; vapausasteet)</code>.</li>
 </ol>
 </section>
 <section id="sec-spearmanin-rhon-raportointi" class="level3" data-number="9.4.4">
@@ -726,10 +729,7 @@ t = r\sqrt{\frac{n-2}{1-r^2}}
 <p>Raportoi rho-testistä mieluisesti seuraavat:</p>
 <ul>
 <li><p>Spearmanin testisuure <span class="math inline">\(\rho\)</span> (vaihtoehtoisesti kirjoitettuna <span class="math inline">\(r_s\)</span>)</p></li>
-<li><p>Z- tai t-koko <span class="math inline">\(z\)</span> tai <span class="math inline">\(t\)</span></p>
-<ul>
-<li>Jos <span class="math inline">\(t\)</span>: Vapausasteet <span class="math inline">\(\text{df}\)</span></li>
-</ul></li>
+<li><p>T-suure <span class="math inline">\(t\)</span> ja sen vapausasteet <span class="math inline">\(\text{df}\)</span></p></li>
 <li><p>Merkitsevyys <span class="math inline">\(p\)</span></p></li>
 </ul>
 </section>

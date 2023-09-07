@@ -367,15 +367,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Muistutuksena (ks. <a href="hajontaluvut.html#sec-varianssi-teoria"><span>Alaluku&nbsp;7.6</span></a>), <u>varianssin määritelmä oli kaikkien arvopisteiden neliöerot keskiarvoon, jaattuna vapausasteilla</u>.</p>
 <p><u>Kovarianssi ilmaisee kahden muuttujan yhteisvaihtelua yhden muuttujan vaihtelun sijaan</u>. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:</p>
 <p><span id="eq-korr-1"><span class="math display">\[
-\text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {n-1}
+\text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(y-\bar{y})}} {n-1}
 \tag{11.1}\]</span></span></p>
 <p>Jos varianssi (<span class="math inline">\(\text{Var}\)</span>) edustaa yhden muuttujan keskivertaista vaihtelua, <u>kovarianssi (</u><span class="math inline">\(\text{Cov}\)</span>) <u>edustaa kahden muuttujan välistä vaihtelusuhdetta</u>. Kovarianssi siis osoittaa, miten toisen muuttujan arvot muuttuvat kuin ensimmäinen muuttuu.</p>
 <p><strong>Positiivinen kovarianssi</strong> ilmaisee, että ensimmäisen muuttujan erotessa keskiarvosta, toinen muuttuja eroaa keskiarvosta samaan suuntaan. <strong>Negatiivinen kovarianssi</strong> taas ilmaisee, että toisen muuttujan ero keskiarvoon menee toiseen suuntaan kuin ensimmäisen muuttujan ero keskiarvoon.</p>
 <div class="page-columns page-full"><p><u>Voit ajatella nämä suorina käyrinä pistekaaviolla</u>: positiivisessa kovarianssissa käyrä osoittaa ylöspäin alavasemmalta; negatiivisessa kovarianssissa käyrä osoittaa alaspäin ylävasemmalta; ja nollakovarianssissa käyrä on vaakasuora (ei suhdetta). Katso esimerkkikuvat alla (<a href="#fig-korrelaatio">Kuva&nbsp;<span>11.1</span></a>)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Kuvissa esitetään korrelaatiokertointa <span class="math inline">\(r\)</span>, mutta ajatus on täysin sama.</p></li></div></div>
-<div id="fig-korrelaatio" class="cell quarto-layout-panel" data-hash="korrelaatio_cache/html/fig-korrelaatio_d123e00ee991ba55389c3ac3dbe51e5d">
+<div id="fig-korrelaatio" class="cell quarto-layout-panel" data-hash="korrelaatio_cache/html/fig-korrelaatio_b4e371774cac0f9bd5a54507ddc35bd8">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-korrelaatio-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="korrelaatio_files/figure-html/fig-korrelaatio-1.png" class="img-fluid figure-img" data-ref-parent="fig-korrelaatio" width="672"></p>
@@ -383,7 +383,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-korrelaatio-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="korrelaatio_files/figure-html/fig-korrelaatio-2.png" class="img-fluid figure-img" data-ref-parent="fig-korrelaatio" width="672"></p>
@@ -391,7 +393,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-korrelaatio-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="korrelaatio_files/figure-html/fig-korrelaatio-3.png" class="img-fluid figure-img" data-ref-parent="fig-korrelaatio" width="672"></p>
@@ -480,6 +484,29 @@ r = \frac{e^{2z_r}-1}{e^{2z_r}+1}
 <p>LAMBDA-kaavoina löytyy myös <span class="math inline">\(r\)</span>-arvon z-muunnoksen tekemiseksi sekä <span class="math inline">\(z_r\)</span>-arvon muuntamiseksi takaisin <span class="math inline">\(r\)</span>-arvoksi. Käytä näitä laskeaksesi luottamusvälin valitsemallasi alfatasolla.</p>
 <p><u>Huomaa, että tarvitset neljä listattua LAMBDA-funktiota tähän</u>: z-arvon lasku, keskivirheen lasku, luottamusvälin lasku, sekä lasku, joka muuntaa z-arvon takaisin r-arvoksi.</p>
 <p><u>Huomaa myös, että luottamusvälin laskukaava (<code>KORR.Z.CI</code>) palauttaa kaksirivisen matriisin</u> - ensimmäinen arvo on luottamusvälin yläraja, toinen arvo on alaraja. Jos tarvitset luottamusvälin sarakkeisiin rivien sijaan, laita funktio <code>TRANSPONOI</code>-funktion sisälle.</p>
+<p><u><strong>Korrelaatiokertoimen laskeminen</strong></u> Excelissä:</p>
+<ol type="1">
+<li>Hae molemmat muuttujat uusiin sarakkeisiin, suodattaen tyhjät rivit pois parittain:
+<ol type="1">
+<li>Muuttuja 1: <code>=SUODATA(muuttuja1_alkuperäinen; (muuttuja1_alkuperäinen &lt;&gt; "") * (muuttuja2_alkuperäinen &lt;&gt; "")</code></li>
+<li>Muuttuja 2: <code>=SUODATA(muuttuja2_alkuperäinen; (muuttuja1_alkuperäinen &lt;&gt; "") * (muuttuja2_alkuperäinen &lt;&gt; "")</code></li>
+<li>Käytä näitä alueita seuraavissa laskuissa parametreissä <code>muuttuja1</code> ja <code>muuttuja2</code></li>
+</ol></li>
+<li>Laske Pearsonin <span class="math inline">\(r\)</span>: <code>=PEARSON(muuttuja1; muuttuja2)</code></li>
+<li>Laske otoskoko <span class="math inline">\(n\)</span>: <code>=LASKE(muuttuja1)</code> tai <code>=LASKE(muuttuja2)</code> (koska dataa on yhtä paljon molemmissa, muuttujalla ei ole väliä)</li>
+<li>Hae r-suureen kaksihäntäinen todennäköisyys: <code>=KORR.P(r)</code></li>
+<li>Laske luottamusväli valitsemallesi alfatasolle:
+<ol type="1">
+<li>Laske z-arvo: <code>=KORR.Z(r)</code></li>
+<li>Laske z-arvon keskivirhe: <code>=KORR.Z.SE(n)</code></li>
+<li>Hae luottamusväli z-arvoina: <code>=KORR.Z.CI(z; keskivirhe; alfa)</code>
+<ol type="1">
+<li>Ilmaise haluamasi alfataso desimaaleissa, esim. <code>0,05</code></li>
+<li>Funktio palauttaa dynaamisen matriisin, jolla on kaksi riviä. Ensimmäinen rivi on luottamusvälin yläraja, toinen rivi luottamusvälin alaraja.</li>
+</ol></li>
+<li>Muunna luottamusväli takaisin <span class="math inline">\(r\)</span>-arvoiksi: <code>=KORR.Z.R(luottamusväli#)</code></li>
+</ol></li>
+</ol>
 </section>
 <section id="sec-korrelaatiokertoimen-raportointi" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="sec-korrelaatiokertoimen-raportointi"><span class="header-section-number">11.5</span> Korrelaatiokertoimen raportointi</h2>
@@ -490,7 +517,7 @@ r = \frac{e^{2z_r}-1}{e^{2z_r}+1}
 <li><p>Merkitsevyys <span class="math inline">\(p\)</span></p></li>
 <li><p>Luottamusväli <span class="math inline">\(\text{CI}\)</span></p></li>
 </ul>
-<p>Korrelaatiokertoimelle ei tarvitse laskea testisuuretta, koska se on suuremitta itsessään.</p>
+<p>Korrelaatiokertoimelle ei tarvitse laskea testisuuretta, koska Pearsonin <span class="math inline">\(r\)</span> on suuremitta itsessään.</p>
 
 
 </section>

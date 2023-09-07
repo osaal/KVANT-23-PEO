@@ -306,8 +306,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#sec-kaavojen-asentaminen" id="toc-sec-kaavojen-asentaminen" class="nav-link active" data-scroll-target="#sec-kaavojen-asentaminen"><span class="header-section-number">19.1</span> Kaavojen asentaminen</a></li>
   <li><a href="#sec-kaavojen-käyttäminen" id="toc-sec-kaavojen-käyttäminen" class="nav-link" data-scroll-target="#sec-kaavojen-käyttäminen"><span class="header-section-number">19.2</span> Kaavojen käyttäminen</a></li>
-  <li><a href="#sec-t-testi-kaavat" id="toc-sec-t-testi-kaavat" class="nav-link" data-scroll-target="#sec-t-testi-kaavat"><span class="header-section-number">19.3</span> T-testi</a></li>
-  <li><a href="#sec-korrelaatio-kaavat" id="toc-sec-korrelaatio-kaavat" class="nav-link" data-scroll-target="#sec-korrelaatio-kaavat"><span class="header-section-number">19.4</span> Korrelaatio</a></li>
+  <li><a href="#sec-korrelaatio-kaavat" id="toc-sec-korrelaatio-kaavat" class="nav-link" data-scroll-target="#sec-korrelaatio-kaavat"><span class="header-section-number">19.3</span> Korrelaatio</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -350,49 +349,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="19.2" class="anchored" data-anchor-id="sec-kaavojen-käyttäminen"><span class="header-section-number">19.2</span> Kaavojen käyttäminen</h2>
 <p><u>Kun olet lisännyt kaavan Nimien hallintaan</u>, käytön pitäisi toimia kirjoittamalla kaavan nimi soluun samalla tavalla kuin muut kaavat. Jos tämä ei kuitenkaan toimi, tarkista ensin nimien hallinnasta, onko nimi oikein ja laajuus sopiva. Voit myös koittaa syöttää kaavan suoraan toiminnolla <code>Lisää &gt; Nimien hallinta &gt; Käytä kaavassa</code> (kun muokkaat solua tai kaavaa).</p>
 </section>
-<section id="sec-t-testi-kaavat" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="sec-t-testi-kaavat"><span class="header-section-number">19.3</span> T-testi</h2>
-<table class="table">
-<caption>Lambda-funktiot t-testisuuren laskemiseen</caption>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 67%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Excel-nimi</th>
-<th>Toiminto</th>
-<th>Lambda-funktio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>T.INDEP.POOLED</code></td>
-<td>Laskee kahden otoksen heteroskedastisen t-suureen.</td>
-<td><code>=LAMBDA(matriisi1; matriisi2; LET(pool; ((LASKE(matriisi1)-1)*(VAR.S(matriisi1))+(LASKE(matriisi2)-1)*(VAR.S(matriisi2)))/(LASKE(matriisi1)+LASKE(matriisi2)-2); (KESKIARVO(matriisi1) - KESKIARVO(matriisi2)) / NELIÖJUURI((pool/LASKE(matriisi1))+(pool/LASKE(matriisi2)))))</code></td>
-</tr>
-<tr class="even">
-<td><code>T.INDEP</code></td>
-<td>Laskee kahden otoksen homoskedastisen t-suureen.</td>
-<td><code>=LAMBDA(matriisi1;matriisi2;(KESKIARVO(matriisi1)-KESKIARVO(matriisi2))/NELIÖJUURI(((KESKIHAJONTA.S(matriisi1)^2)/LASKE(matriisi1))+((KESKIHAJONTA.S(matriisi2)^2)/LASKE(matriisi2))))</code></td>
-</tr>
-<tr class="odd">
-<td><code>T.DEP</code></td>
-<td>Laskee parittaisen t-suureen.</td>
-<td><code>=LAMBDA(matriisi1;matriisi2; ((SUMMA(matriisi1)-SUMMA(matriisi2))/LASKE(matriisi1))/(KESKIHAJONTA.S(matriisi1-matriisi2)/NELIÖJUURI(LASKE(matriisi1))))</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-korrelaatio-kaavat" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="sec-korrelaatio-kaavat"><span class="header-section-number">19.4</span> Korrelaatio</h2>
+<section id="sec-korrelaatio-kaavat" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="sec-korrelaatio-kaavat"><span class="header-section-number">19.3</span> Korrelaatio</h2>
 <table class="table">
 <caption>Lambda-funktiot korrelaation merkitsevyyden laskemiseksi</caption>
 <colgroup>
-<col style="width: 19%">
-<col style="width: 54%">
-<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 51%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -404,8 +368,8 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><code>KORR.P</code></td>
-<td>Laskee korrelaatiokertoimen todennäköisyysarvon käyttäen oikeahäntäistä t-jakaumaa.</td>
-<td><code>=LAMBDA(r; n; T.JAKAUMA.OH(ITSEISARVO((r*NELIÖJUURI(n-2))/(NELIÖJUURI(1-(r^2))));n-2))</code></td>
+<td>Laskee korrelaatiokertoimen todennäköisyysarvon käyttäen kaksihäntäistä t-jakaumaa.</td>
+<td><code>=LAMBDA(r;n; T.JAKAUMA.2S(ITSEISARVO((r*NELIÖJUURI(n-2))/(NELIÖJUURI(1-(r^2))));n-2))</code></td>
 </tr>
 <tr class="even">
 <td><code>KORR.Z</code></td>
