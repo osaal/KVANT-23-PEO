@@ -96,12 +96,12 @@ $$ {#eq-vapausasteet-khiin-neliö}
 [Vaihtoehtoisesti voi myös käyttää **Cramérin V-suuretta**]{.underline}. V-suure vaihtelee nollasta yhteen, ja osoittaa yhdellä numerolla, kuinka laajasti muuttujat yhteisvaihtelevat. V-suure lasketaan kaavalla:
 
 $$
-V = \frac{\chi^2/n}{min(r-1, c-1)}
+V = \sqrt{\frac{\chi^2}{(min(r, c)-1)n}}
 $$ {#eq-v-suure-khiin-neliö}
 
-Ensin jaat khiin neliön suureen otoskoolla. Sitten jaat tuloksen joko rivien määrällä pois yksi tai sarakkeiden määrällä pois yksi, kumpi on pienempi.
+Ensin haet pienimmän rivi- tai sarakemääristä, ja vähennät siitä yhden. Kerrot tuloksen otoskoolla, eli kaikkien todellisten arvojen summalla. Sitten jaat khiin neliön suureen tällä tuloksella, ja otat laskennan tuloksen neliöjuuren. Lopputulos on Cramérin V-suure.
 
-Cramérin V-suureen tulkinta riippuu vapausasteista. Taulukko alla näyttää raja-arvot tulkinnalle yleisimmille vapausasteille:
+**Cramérin V-suureen tulkinta riippuu vapausasteista**. Taulukko alla näyttää raja-arvot tulkinnalle yleisimmille vapausasteille:
 
 | Vapausaste | Pieni | Keski | Suuri |
 |------------|-------|-------|-------|
@@ -117,60 +117,50 @@ Cramérin V-suureen tulkinta riippuu vapausasteista. Taulukko alla näyttää ra
 
 Khiin neliö vaatii neljä osa-askelta Excelissä:
 
-1.  Todellisten arvojen taulukko,
-2.  Odotettujen arvojen taulukko,
-3.  Khiin neliön taulukko, ja
-4.  Lopputuloslaskut.
+1.  **Todellisten arvojen taulukko**,
+2.  **Odotettujen arvojen taulukko**,
+3.  **Khiin neliön taulukko**, ja
+4.  **Lopputuloslaskut**.
 
 ### Todellisten arvojen taulukko {#sec-todellisten-arvojen-taulukko}
 
-Rakenna taulukko, jonka riveissä on yhden muuttujan kaikki kategoriat, ja sarakkeissa on toisen muuttujan kaikki kategoriat.
-
-Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. @sec-toiminto04).
-
-Solujen arvot voit laskea funktiolla:
-
-`=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)`
-
-Käytä lukitustoimintoa lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!
-
-Laske rivi- ja sarakesummat `SUMMA`-funktiolla.
-
-Laske kokonaissumma summaamalla *joko* rivi- *tai* sarakesummat yhteen.
+1.  Hae muuttujien kategoriat riveihin ja sarakkeisiin:
+    1.  Rivit: `=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)`
+    2.  Sarakkeet: `=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))`
+2.  Laske todellisten arvojen määrät soluihin: `=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)`
+    1.  Voit käyttää arvoja suoraan muuttujien rivi- ja sarakelistauksista. Lukitse tuolloin sarakeviittaus rivimuuttujalle ja riviviittaus sarakemuuttujalle. Jos rivimuuttuja on soluissa `C6:C9` ja sarakemuuttuja soluissa `D5:H5`, viittaa niiden ensimmäisten kategorioiden yhdistelmään arvoilla `$C6` ja `D$5`.
+    2.  Vedä laskukaavio koko ristiintaulukoinnin alueelle vetotoiminnolla. Jos lukitsit yllä olevalla tavalla, kaikki laskennat pitäisi mennä oikein. Tarkista laskut!
+3.  Laske rivi- ja sarakesummat `SUMMA`-funktiolla.
+4.  Laske kokonaissumma (otoskoko) summaamalla joko rivi- tai sarakesummat yhteen - ei molempia!
 
 ### Odotettujen arvojen taulukko {#sec-odotettujen-arvojen-taulukko}
 
-Rakenna samanlainen taulukko kuin todellisille arvoille, mutta jätä pois summarivi ja summasarake. Kategorioiden nimiä ei tarvitse lisätä, mutta auttaa taulukon lukemisessa.
-
-Laske jokaiselle solulle seuraava laskukaava:
-
-`=(sarakesumma * rivisumma) / kokonaissumma`
-
-Voit jälleen käyttää lukitustoimintoa helpottaaksesi solujen täyttöä. Tarkista, että kaikki solut viittaavat niiden omiin sarake- ja rivisummiin - virheitä syntyy helposti!
+1.  Hae taas muuttujien kategoriat riveihin ja sarakkeisiin:
+    1.  Rivit: `=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)`
+    2.  Sarakkeet: `=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))`
+2.  Laske odotettujen arvojen määrät soluihin: `=(sarakesumma * rivisumma) / kokonaissumma`.
+    1.  Voit jälleen käyttää arvoja rivi- ja sarakelistauksista. Lukitse sarakesummasta rivi, rivisummasta sarake, ja kokonaissummasta molemmat. Jos esim. sarakesummasi ovat alueella `D10:H10`, rivisummasi alueella `I6:I9`, ja kokonaissummasi solussa `I10`, viittaa silloin niihin lukituksilla `D$10` (sarakesumma), `$I6` (rivisumma) ja `$I$10` (kokonaissumma.
+    2.  Vedä laskukaavio koko ristiintaulukoinnin alueelle. Jos lukitsit yllä olevalla tavalla, kaiken pitäisi taas olla oikein. Tarkista laskut!
 
 ### Khiin neliön taulukko {#sec-khiin-neliön-taulukko}
 
-Rakenna jälleen samanlainen taulukko kuin edellisissä taulukoissa, jättäen pois rivi- ja sarakesummat. Nimiä ei taaskaan tarvita, mutta suositellaan.
-
-Laske khiin neliön arvo jokaiselle solulle seuraavalla laskukaavalla:
-
-`=(todellinen arvo - odotettu arvo)^2 / odotettu arvo`
-
-Et tarvitse lukita mitään tässä, koska kaikki arvot riippuvat solun sijainnista, joten voit käyttää vetotoimintoa täyttääksesi taulukon nopeasti.
+1.  Hae vielä kerran muuttujien kategoriat riveihin ja sarakkeisiin:
+    1.  Rivit: `=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)`
+    2.  Sarakkeet: `=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))`
+2.  Laske jokaiselle solulle oma khiin neliön arvo: `=(todellinen_arvo - odotettu_arvo) ^ 2 / odotettu_arvo`
+    1.  Et tarvitse lukita mitään.
+    2.  Vedä laskukaavio koko ristiintaulukoinnin alueelle.
 
 ### Lopputuloslaskut {#sec-lopputuloslaskut}
 
-Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen: `=SUMMA(khiinneliötaulukon_alue)`.
-
-Laske vapausasteet kaavalla `=(rivimäärä - 1) * (sarakemäärä - 1)`. Voit laskea rivi- ja sarakemäärät automaattisesti `AINUTKERTAISET.ARVOT`-funktiolla (ks. @sec-toiminto03; @sec-ainutkertaiset.arvot).
-
-Laske khiin neliön oikeahäntäinen todennäköisyysarvo *p* kaavalla:
-
-`=CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)`
-
-Jos haluat, voit vielä laskea Cramérin V-suureen laskutoimituksella:
-
-`=NELIÖJUURI( (khiinneliö / kokonaissumma) / min(rivimäärä - 1; sarakemäärä - 1) )`
+1.  Laske khiin neliön suure: `=SUMMA(khiin_neliön_taulukko)`
+2.  Laske otoskoko: `=kokonaissumma` (ei sinänsä tarpeellista, mutta taulukoiden lukeminen on helpompaa jos kaikki tarvittavat tilastot löytyvät samasta paikasta)
+3.  Laske alle viiden odotettujen arvojen määrä: `=SUMMA(JOS(odotetut_arvot_taulukko < 5; 1; 0))`. Voit myös laskea niiden prosenttimäärän: `=alle_viisi/LASKE(odotetut_arvot_taulukko)%`
+4.  Laske myös alle yhden odotettujen arvojen määrä: `=SUMMA(JOS(odotetut_arvot_taulukko < 1; 1; 0))`. Voit jälleen laskea niiden prosenttimäärän: `=alle_yhden/LASKE(odotetut_arvot_taulukko)%`
+5.  Laske rivien ja sarakkeiden määrät. Voit tehdä tämän käsin - näihin lukuihin viittaaminen helpottaa seuraavia laskukaavoja hieman.
+6.  Laske khiin neliön vapausasteet: `=(rivimäärä - 1) * (sarakemäärä - 1)`
+7.  Hae khiin neliön suureen todennäköisyys: `=CHINELIÖ.JAKAUMA.OH(khiin_neliö; vapausasteet)`
+8.  Laske Cramérin V-suure: `=NELIÖJUURI(khiin_neliö / ((MIN(rivimäärä; sarakemäärä) - 1) * otoskoko))`
 
 ## Khiin neliön raportointi {#sec-khiin-neliön-raportointi}
 
@@ -186,7 +176,7 @@ Khiin neliön testistä raportoidaan mieluisesti seuraavat tiedot:
 
 -   Jos laskettu: Cramérin V-suure $V$
 
-[Cramerin V-suure voidaan tulkita]{.underline} jokseenkin samoin kuin Cohenin $\hat{D}$ tai Pearsonin $r$, mutta tulkinta riippuu osittain vapausasteista:
+[Cramerin V-suure voidaan tulkita]{.underline} jokseenkin samoin kuin Cohenin $\hat{d}$ tai Pearsonin $r$, mutta tulkinta riippuu osittain vapausasteista:
 
 | Vapausaste | Pieni koko | Keskikokoinen | Suuri koko |
 |------------|------------|---------------|------------|

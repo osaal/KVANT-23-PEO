@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 5&nbsp; Sijaintiluvut</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 6&nbsp; Sijaintiluvut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "Ei tuloksia",
@@ -66,243 +66,252 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 6&nbsp; Sijaintiluvut">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="sijaintiluvut_files/figure-html/fig-moodi-esim-01-1.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html" rel="" target="">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html" rel="" target="">
+ <span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html" rel="" target="">
+ <span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hypoteesitestaus.html">Tilastotiede</a></li><li class="breadcrumb-item"><a href="./sijaintiluvut.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sijaintiluvut.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Kvantitatiiviset menetelmät -kurssin verkkokirja</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/osaal/KVANT-23-PEO/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Hae"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aluksi</span></a>
+  <a href="./mittaustasot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Ohjeita</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Tilastotiede</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hypoteesitestaus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mallioletukset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sijaintiluvut.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hajontaluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./merkitsevyysluvut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eiparametrisettestit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ttesti.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korrelaatio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khiinneliö.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Excel-toiminnot</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Työkalut</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Vaihda osio">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webropol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tilastotyökalut.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dmptuuli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tietoarkistot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./viiteluettelo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viiteluettelo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./history.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Päivityshistoria</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -315,11 +324,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#moodi" id="toc-moodi" class="nav-link active" data-scroll-target="#moodi"><span class="header-section-number">5.1</span> Moodi</a></li>
-  <li><a href="#mediaani" id="toc-mediaani" class="nav-link" data-scroll-target="#mediaani"><span class="header-section-number">5.2</span> Mediaani</a></li>
-  <li><a href="#fraktiilit" id="toc-fraktiilit" class="nav-link" data-scroll-target="#fraktiilit"><span class="header-section-number">5.3</span> Fraktiilit</a></li>
-  <li><a href="#keskiarvo" id="toc-keskiarvo" class="nav-link" data-scroll-target="#keskiarvo"><span class="header-section-number">5.4</span> Keskiarvo</a></li>
-  <li><a href="#moodin-mediaanin-ja-keskiarvon-yhteys" id="toc-moodin-mediaanin-ja-keskiarvon-yhteys" class="nav-link" data-scroll-target="#moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">5.5</span> Moodin, mediaanin ja keskiarvon yhteys</a></li>
+  <li><a href="#moodi" id="toc-moodi" class="nav-link active" data-scroll-target="#moodi"><span class="header-section-number">6.1</span> Moodi</a></li>
+  <li><a href="#mediaani" id="toc-mediaani" class="nav-link" data-scroll-target="#mediaani"><span class="header-section-number">6.2</span> Mediaani</a></li>
+  <li><a href="#fraktiilit" id="toc-fraktiilit" class="nav-link" data-scroll-target="#fraktiilit"><span class="header-section-number">6.3</span> Fraktiilit</a></li>
+  <li><a href="#keskiarvo" id="toc-keskiarvo" class="nav-link" data-scroll-target="#keskiarvo"><span class="header-section-number">6.4</span> Keskiarvo</a></li>
+  <li><a href="#moodin-mediaanin-ja-keskiarvon-yhteys" id="toc-moodin-mediaanin-ja-keskiarvon-yhteys" class="nav-link" data-scroll-target="#moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">6.5</span> Moodin, mediaanin ja keskiarvon yhteys</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
     </div>
@@ -328,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></h1>
 </div>
 
 
@@ -346,8 +355,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Tässä luvussa käydään läpi sijaintilukujen määritelmät, käyttö ja toteuttaminen Excelissä.</p>
 <p><strong>Sijaintiluku</strong> on yksittäinen luku, joka kertoo jotain muuttujan jakauman <strong>keskeisyystendenssistä</strong> (engl. <em>central tendency</em>). Toisin sanoen, ne kertovat mihin kohtaan jakauma sijoittuu.</p>
 <p>Sijaintilukuja, joita tässä kirjassa käydään läpi ovat: moodi, mediaani, fraktiilit ja aritmeettinen keskiarvo.</p>
-<section id="moodi" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="moodi"><span class="header-section-number">5.1</span> Moodi</h2>
+<section id="moodi" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="moodi"><span class="header-section-number">6.1</span> Moodi</h2>
 <p><strong>Mittausasteikot</strong>: Kaikki</p>
 <p><strong>Moodi</strong> on jakauman tyypillisin arvo. Moodin voi saada laskemalla jokaisen arvon esiintymisen, jolloin eniten esiintyvä arvo on jakauman moodi.</p>
 <p>Jakauma voi olla <strong>unimodaalinen</strong> (yksi moodi), <strong>bimodaalinen</strong> (kaksi moodia) tai <strong>multimodaalinen</strong> (kolme tai useampi moodia). Katso kuvalliset esimerkit alla.</p>
@@ -359,9 +368,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><code>MOODI.YKSI(alue)</code></p></li>
 <li><p><code>MOODI.USEA(alue)</code></p></li>
 </ul>
-<p>Lue lisää alaluvussa <a href="funktiot.html#sec-moodi"><span>Alaluku&nbsp;17.7.1.3</span></a>.</p>
+<p>Lue lisää alaluvussa <a href="funktiot.html#sec-moodi"><span>Alaluku&nbsp;18.7.1.3</span></a>.</p>
 <div class="tabset-margin-container"></div><div id="fig-moodi-esim" class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Unimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Bimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Multimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Uniformijakauma</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Unimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Bimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Multimodaalinen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Uniformijakauma</a></li></ul>
 <div id="fig-moodi-esim" class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
@@ -369,43 +378,43 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-moodi-esim-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-moodi-esim-01-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.1: Unimodaalinen jakauma</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.1: Unimodaalinen jakauma</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell" data-hash="sijaintiluvut_cache/html/fig-moodi-esim-02_f3cf8e8f41a4ce92ef19f66bb9b2fe99">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-moodi-esim-02" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-moodi-esim-02-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.2: Bimodaalinen jakauma</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.2: Bimodaalinen jakauma</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="sijaintiluvut_cache/html/fig-moodi-esim-03_0fd8cafbb47126670e1a6b6d1a6d6a01">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-moodi-esim-03" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-moodi-esim-03-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.3: Multimodaalinen jakauma</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.3: Multimodaalinen jakauma</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="cell" data-hash="sijaintiluvut_cache/html/fig-moodi-esim-04_102b57432f29373328f1abe494f05202">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-moodi-esim-04" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-moodi-esim-04-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.4: Uniformijakauma, jossa moodia ei teoriassa ole. Käytännössä tässä kuitenkin on moodi, koska jakauma on empiirinen.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.4: Uniformijakauma, jossa moodia ei teoriassa ole. Käytännössä tässä kuitenkin on moodi, koska jakauma on empiirinen.</figcaption>
 </figure>
 </div>
 </div>
@@ -414,8 +423,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="mediaani" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="mediaani"><span class="header-section-number">5.2</span> Mediaani</h2>
+<section id="mediaani" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="mediaani"><span class="header-section-number">6.2</span> Mediaani</h2>
 <p><strong>Mittausasteikot</strong>: Järjestys-, välimatka- ja suhdeasteikko</p>
 <p><strong>Mediaani</strong> on jakauman keskipistearvo. Mediaanin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla janan kahteen tasakokoiseen osaan. Jos jakaumaan kuuluu pariton määrä arvoja, mediaani on janan keskipiste. Jos jakaumaan kuuluu parillinen määrä arvoja, mediaani on kahden keskeisimmän arvon keskiarvo, <span class="math inline">\(\frac{a+b}{2}\)</span>.</p>
 <p><u>Jakaumassa voi aina olla vain yksi mediaani</u>.</p>
@@ -425,20 +434,20 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>MEDIAANI(alue)</code></li>
 </ul>
-<p>Lue lisää alaluvussa <a href="funktiot.html#sec-mediaani"><span>Alaluku&nbsp;17.7.1.4</span></a>.</p>
+<p>Lue lisää alaluvussa <a href="funktiot.html#sec-mediaani"><span>Alaluku&nbsp;18.7.1.4</span></a>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-mediaani-esim" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-mediaani-esim-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.5: Mediaani empiirisessä normaalijakaumassa</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.5: Mediaani empiirisessä normaalijakaumassa</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="fraktiilit" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="fraktiilit"><span class="header-section-number">5.3</span> Fraktiilit</h2>
+<section id="fraktiilit" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="fraktiilit"><span class="header-section-number">6.3</span> Fraktiilit</h2>
 <p><strong>Mittausasteikot</strong>: Järjestys-, välimatka- ja suhdeasteikko</p>
 <p><strong>Fraktiilit</strong> (sanasta <em>fraction</em>; vaihtoehtoisesti kvantiilit, sanasta <em>quantity</em>) ovat yleistyksiä mediaanista. Fraktiileja löytyy useampia, joista yleisimmät ovat <strong>kvartiilit</strong> (neljäsosat), <strong>kvintiilit</strong> (viidesosat), <strong>desiilit</strong> (kymmenesosat) ja <strong>persentiilit</strong> (sadasosat).</p>
 <p>Fraktiilin voi saada järjestämällä kaikki arvot pienimmästä suurimpaan, ja jakamalla jana tiettyyn määrään samankokoisiin osiin.</p>
@@ -459,20 +468,20 @@ ul.task-list li input[type="checkbox"] {
 <li>Valitse, kuinka mones <code>neljännes</code>: Pienin arvo <code>0</code>, ensimmäinen neljännes <code>1</code>, mediaani <code>2</code>, kolmas neljännes <code>3</code>, suurin arvo <code>4</code>.</li>
 </ul></li>
 </ul>
-<p>Lue lisää alaluvussa <a href="funktiot.html#sec-pienin-suurin-ja-raja-arvot"><span>Alaluku&nbsp;17.7.2.1</span></a>.</p>
+<p>Lue lisää alaluvussa <a href="funktiot.html#sec-pienin-suurin-ja-raja-arvot"><span>Alaluku&nbsp;18.7.2.1</span></a>.</p>
 <div class="cell" data-hash="sijaintiluvut_cache/html/fig-fraktiilit-esim_a0a24fa4181d3a35c92a280e811507a9">
 <div class="cell-output-display">
 <div id="fig-fraktiilit-esim" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-fraktiilit-esim-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.6: Laatikkokaavio, josta näkyy muuttujan ylä- ja alakvartiilit.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.6: Laatikkokaavio, josta näkyy muuttujan ylä- ja alakvartiilit.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="keskiarvo" class="level2 page-columns page-full" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="keskiarvo"><span class="header-section-number">5.4</span> Keskiarvo</h2>
+<section id="keskiarvo" class="level2 page-columns page-full" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="keskiarvo"><span class="header-section-number">6.4</span> Keskiarvo</h2>
 <p><strong>Mittausasteikot</strong>: Välimatka- ja suhdeasteikko</p>
 <div class="page-columns page-full"><p>(Aritmeettinen) <strong>Keskiarvo</strong> on jakauman painoitettu keskipiste, jossa painona käytetään jokaisen datapisteen esiintymistä. Keskiarvo lasketaan summaamalla kaikki datapisteet yhteen ja jakamalla tulos datapisteiden määrällä, <span class="math inline">\(N\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Jonkun arvon jakaminen <span class="math inline">\(N\)</span>:llä on sama kuin sen kertominen luvulla <span class="math inline">\(1/N\)</span>.</p></li></div></div>
 <p><span class="math display">\[\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_k}{N} = \frac{1}{N}(\sum_{i = 1}^{k}x_i)\]</span></p>
@@ -480,12 +489,25 @@ ul.task-list li input[type="checkbox"] {
 <p><u>Normaalijakaumassa mediaani, keskiarvo ja moodi ovat kaikki samoja</u>. Vinouman myötä keskiarvo siirtyy vinouman suuntaan (oikealle positiivisessa ja vasemmalle negatiivisessa vinoumassa). Kurtoosi ei vaikuta keskiarvoon.</p>
 <p><u>Keskiarvo on kuitenkin erittäin oleellinen useimmissa tilastollisissa malleissa</u>. Keskiarvoa käytetään niin sanottuna <strong>nollamallina</strong>, eli datajakaumaa “huonoiten” kuvaavana mallina. Useimmiten hypoteeseilla testataan siksi, eroaako jokin malli keskiarvon selitekyvystä. Jos ei, malli ei ole keskiarvoa parempi (eli on huono).</p>
 <div class="page-columns page-full"><p>Vakaampana keskiarvomittarina voidaan käyttää <strong>tasattua keskiarvoa</strong> (engl. <em>trimmed mean</em>). Tällöin poistetaan ensin tietty prosenttiosuus jakauman ääripäistä, ja lasketaan sitten keskiarvo jäljelle jäävälle datalle. Yleinen prosenttiraja on 95 %, eli poistetaan 5 % (kaksi ja puoli prosenttia molemmista päistä) ja lasketaan keskiarvo jäljelle jäävälle osuudelle. Jos tasattu keskiarvo on hyvin samanlainen kuin keskiarvo, ääripääarvot eivät vaikuta suuresti keskiarvoon.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Tämä pätee vain keskiarvolle, ja vain yksinmuuttujakontekstissa. Monimuuttujakontekstissa ääripääarvot voivat olla ongelmallisia vaikka eivät vaikuttaisi yksittäisen muuttujan keskiarvoon. Rajatun ja tavallisen keskiarvon samankokoisuus ei siis takaa luotettavia analyyseja itsessään!</p></li></div></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tasaus ja tasaluvut
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tasauksen yhteydessä parasta on yleensä poistaa sama määrä yksiköitä jakauman alusta ja lopusta. Excel tekee tämän automaattisesti: funktio <code>KESKIARVO.TASATTU()</code> pyöristää määrän ylöspäin lähimpään parilliseen lukuun (esim. 2, 56, 348) ja poistaa puolet määrästä jakauman alapäästä ja puolet yläpäästä. Kaikki tilastosovellukset eivät tee tätä, jolloin tasattu keskiarvo voi vaihdella hieman.</p>
+</div>
+</div>
 <p><strong>Funktiot Excelissä</strong>:</p>
 <ul>
 <li><p><code>KESKIARVO(alue)</code></p></li>
 <li><p><code>KESKIARVO.TASATTU(alue; rajaus)</code></p></li>
 </ul>
-<p>Lue lisää alaluvussa <a href="funktiot.html#sec-keskiarvo"><span>Alaluku&nbsp;17.7.1.5</span></a>.</p>
+<p>Lue lisää alaluvussa <a href="funktiot.html#sec-keskiarvo"><span>Alaluku&nbsp;18.7.1.5</span></a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Keskiarvo</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Ääripääarvojen vaikutus</a></li></ul>
 <div class="tab-content">
@@ -495,7 +517,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-keskiarvo-esim-01" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-keskiarvo-esim-01-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.7: Keskiarvo empiirisessä normaalijakaumassa</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.7: Keskiarvo empiirisessä normaalijakaumassa</figcaption>
 </figure>
 </div>
 </div>
@@ -507,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-keskiarvo-esim-02" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-keskiarvo-esim-02-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.8: Keskiarvo ja 10 % tasattu keskiarvo tilanteessa, jossa on ääripääpisteitä</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.8: Keskiarvo ja 10 % tasattu keskiarvo tilanteessa, jossa on ääripääpisteitä</figcaption>
 </figure>
 </div>
 </div>
@@ -516,21 +538,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="moodin-mediaanin-ja-keskiarvon-yhteys" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">5.5</span> Moodin, mediaanin ja keskiarvon yhteys</h2>
-<p>Koska moodi, mediaani ja keskiarvo kuvaavat kaikki jakauman sijaintia, niillä on yhteys toisiinsa. Täydellisessä normaalijakaumassa moodi, mediaani ja keskiarvo ovat kaikki samoja (ks. <a href="#fig-normaalijakauma">Kuva&nbsp;<span>5.9</span></a>).</p>
+<section id="moodin-mediaanin-ja-keskiarvon-yhteys" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="moodin-mediaanin-ja-keskiarvon-yhteys"><span class="header-section-number">6.5</span> Moodin, mediaanin ja keskiarvon yhteys</h2>
+<p>Koska moodi, mediaani ja keskiarvo kuvaavat kaikki jakauman sijaintia, niillä on yhteys toisiinsa. Täydellisessä normaalijakaumassa moodi, mediaani ja keskiarvo ovat kaikki samoja (ks. <a href="#fig-normaalijakauma">Kuva&nbsp;<span>6.9</span></a>).</p>
 <div class="cell" data-hash="sijaintiluvut_cache/html/fig-normaalijakauma_9226fcb380ff1b99fc0cf138cfb9fcc6">
 <div class="cell-output-display">
 <div id="fig-normaalijakauma" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="sijaintiluvut_files/figure-html/fig-normaalijakauma-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Kuva&nbsp;5.9: Normaalijakauma. Keskiarvo, mediaani ja moodi ovat kaikki samoja, eli nolla.</figcaption>
+<figcaption class="figure-caption">Kuva&nbsp;6.9: Normaalijakauma. Keskiarvo, mediaani ja moodi ovat kaikki samoja, eli nolla.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Tämä tasapaino pätee kuitenkin vain <strong>täydelliselle</strong> normaalijakaumalle. Kun kyseessä on otanta, muuttujan jakauma voi muistuttaa (<strong>lähestyä</strong>) normaalijakaumaa, mutta ei täydellisesti. Pieniä eroja siis on, vaikka muuttuja muuten olisi otanta populaatiosta, jossa muuttujan todellinen jakauma on normaalijakauma.</p>
-<p>Jos jakauma nojaa johonkin suuntaan (eli jakaumalla on enemmän tai vähemmän vinoumaa), sijaintiluvut siirtyvät, mutta eri tahtiin (ks. <a href="#fig-gamma-ja-beta">Kuva&nbsp;<span>5.10</span></a>).</p>
+<p>Jos jakauma nojaa johonkin suuntaan (eli jakaumalla on enemmän tai vähemmän vinoumaa), sijaintiluvut siirtyvät, mutta eri tahtiin (ks. <a href="#fig-gamma-ja-beta">Kuva&nbsp;<span>6.10</span></a>).</p>
 <div id="fig-gamma-ja-beta" class="cell quarto-layout-panel" data-hash="sijaintiluvut_cache/html/fig-gamma-ja-beta_235875a0bf5e5a5170a8379d962224e8">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -551,13 +573,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Kuva&nbsp;5.10: Kaksi jakaumaa, jotka nojaavat eri suuntiin. Keskiarvo on merkitty punaisella katkoviivalla, mediaani oranssilla pisteviivalla, ja moodi lilalla viivalla.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Kuva&nbsp;6.10: Kaksi jakaumaa, jotka nojaavat eri suuntiin. Keskiarvo on merkitty punaisella katkoviivalla, mediaani oranssilla pisteviivalla, ja moodi lilalla viivalla.</figcaption><p></p>
 </figure>
 </div>
 <p>Muutoksen näkee sekä kuvasta että arvoista:</p>
 <div id="tbl-sijainti-ja-vinouma" class="anchored">
 <table class="table">
-<caption>Taulukko&nbsp;5.1: Kahden betajakauman sijaintiluvut. Kirjaimet suluissa viittaavat yllä olevan kuvan jakaumiin.</caption>
+<caption>Taulukko&nbsp;6.1: Kahden betajakauman sijaintiluvut. Kirjaimet suluissa viittaavat yllä olevan kuvan jakaumiin.</caption>
 <colgroup>
 <col style="width: 19%">
 <col style="width: 40%">
@@ -836,16 +858,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./mallioletukset.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./hajontaluvut.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Tekijänoikeudet (c) 2023, Oliver Saal</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

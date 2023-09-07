@@ -337,8 +337,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#sec-yhden-otoksen-t-testi-teoria" id="toc-sec-yhden-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">10.4.1</span> Yhden otoksen t-testi</a></li>
   <li><a href="#sec-parittaisen-otoksen-t-testi-teoria" id="toc-sec-parittaisen-otoksen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-parittaisen-otoksen-t-testi-teoria"><span class="header-section-number">10.4.2</span> Parittaisen otoksen t-testi</a></li>
-  <li><a href="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen homoskedastinen t-testi</a></li>
-  <li><a href="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" id="toc-sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">10.4.4</span> Kahden otoksen heteroskedastinen t-testi</a></li>
+  <li><a href="#sec-kahden-otoksen-welchin-t-testi-teoria" id="toc-sec-kahden-otoksen-welchin-t-testi-teoria" class="nav-link" data-scroll-target="#sec-kahden-otoksen-welchin-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen (Welchin) t-testi</a></li>
   </ul></li>
   <li><a href="#sec-mittakoon-laskeminen-t" id="toc-sec-mittakoon-laskeminen-t" class="nav-link" data-scroll-target="#sec-mittakoon-laskeminen-t"><span class="header-section-number">10.5</span> Mittakoon laskeminen</a></li>
   <li><a href="#sec-t-testin-laskeminen-excelissä" id="toc-sec-t-testin-laskeminen-excelissä" class="nav-link" data-scroll-target="#sec-t-testin-laskeminen-excelissä"><span class="header-section-number">10.6</span> T-testin laskeminen Excelissä</a></li>
@@ -351,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-t-testi" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></h1>
+<h1 class="title"><span id="sec-t-testi-teoria" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">T-testi</span></span></h1>
 </div>
 
 
@@ -405,16 +404,17 @@ ul.task-list li input[type="checkbox"] {
 <p><u>Studentin T-testistä löytyy kaksi pääkategoriaa</u>: parittaisen otoksen t-testi ja kahden otoksen t-testi. Näiden ero on sekä laskennallinen että teoreettinen, joten on tärkeää valita oikea testi!</p>
 <p><strong>Parittaisen otoksen t-testi</strong> testaa kahden arvon välistä eroa, kun arvot tulevat <strong>samasta</strong> yksiköstä (esim. vastaajasta). Tätä käytetään esimerkiksi kun samoille henkilöille tehdään mittaus ennen ja jälkeen jotain kokeellista <strong>interventiota</strong>, ja halutaan tarkastaa, oliko interventiolla vaikutusta. Testin ei-parametrinen vastaavuus on <strong>Wilcoxonin signed-rank -testi</strong> (<a href="eiparametrisettestit.html#sec-wilcoxonin-signed-rank-testi-teoria"><span>Alaluku&nbsp;9.2</span></a>).</p>
 <p><strong>Kahden otoksen t-testi</strong> testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat <strong>eri</strong> yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla. Testin ei-parametrinen vastaavuus on <strong>Mann-Whitney’n U-testi</strong> (<a href="eiparametrisettestit.html#sec-mann-whitneyn-u-testi"><span>Alaluku&nbsp;9.3</span></a>).</p>
-<p>Kahden otoksen testille löytyy vielä kaksi alaversiota, jotka riippuvat ryhmien välisestä varianssivaihtelusta: <strong>homoskedastinen</strong> ja <strong>heteroskedastinen</strong> testi.</p>
-<p><strong>Kahden otoksen homoskedastista t-testiä</strong> voi käyttää, jos molempien ryhmien varianssi on samankokoinen.</p>
-<p><strong>Kahden otoksen heteroskedastistia t-testiä</strong> tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useimmiten heteroskedastista t-testiä.</p>
-<p>Heteroskedastisuutta voi testata mm. <strong>Levenen testillä</strong>, tai tarkistamalla ryhmien varianssit numeroissa tai kuviossa. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Tämän takia Levenen testiä tulisi välttää; parempi toiminta on tarkistaa varianssierot graafisesti tai numeroilla, tai jopa vain olettaa heteroskedastisuuden esiintyvän.</p>
+<p>Tässä kirjassa kahden otoksen t-testinä käytetään <strong>Welchin t-testiä</strong>. Testiversio toimii muuttujilla, joiden ryhmillä on eri varianssit (eli ovat <strong>heteroskedastisia</strong>). Studentin T-testistä löytyy myös <strong>homoskedastisen</strong> suhteen t-testi, mutta koska Welchin t-testi on robustimpi, emme käytä Studentin homoskedastista t-testiä. Welchin t-testin laskeminen käsin on hankalampaa, myönnetään, mutta se on vakiintuneessa käytössä tieteessä.</p>
 <section id="sec-t-testin-vapausasteet" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="sec-t-testin-vapausasteet"><span class="header-section-number">10.1</span> T-testin vapausasteet</h2>
 <p><strong>Vapausasteet</strong> t-testille määritellään hieman eri tavalla riippuen testimuodosta. Taulukossa <a href="#tbl-t-testi-vapausasteet"><span>10.1</span></a> näkyy vapausasteiden laskentatavat:</p>
 <div id="tbl-t-testi-vapausasteet" class="anchored">
 <table class="table">
 <caption>Taulukko&nbsp;10.1: T-testin vapausasteiden laskenta</caption>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Testityyppi</th>
@@ -432,12 +432,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Kahden otoksen t-testi</td>
-<td><span class="math inline">\(\text{df} = n_1 + n_2 - 2\)</span></td>
+<td><p><span class="math inline">\(\text{df} = \frac{1}{Z_1 + Z_2}\)</span></p>
+<p><span class="math inline">\(Z_k = (\frac{SD_k/n_k}{SD_1/n_1 + SD_2/ n_2})^2/(n-1)\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisesti otoskoko minus yksi. Kahden otoksen t-testin vapausasteet ovat molempien ryhmien koot summattuna, minus kaksi.</p>
+<p>Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisesti otoskoko miinus yksi. Kahden otoksen Welchin t-testin vapausasteet ovat hieman hankalammat. Molemmille ryhmille lasketaan <span class="math inline">\(Z\)</span>-arvo: ryhmän keskihajonta jaattuna otoskoolla, ja tämä jaattuna molempien ryhmien keskihajonnan ja otoskoon jakolaskujen summalla, ja vielä tulos neliöön. Jaa sitten tulos otoskoolla miinus yksi.</p>
 </section>
 <section id="sec-t-testin-mallioletukset" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="sec-t-testin-mallioletukset"><span class="header-section-number">10.2</span> T-testin mallioletukset</h2>
@@ -446,19 +447,19 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-normaalijakautuminen-t"><span class="header-section-number">10.2.1</span> Normaalijakautuminen</h3>
 <p><u>T-testi olettaa, että testattava arvo tulee normaalijakaumasta</u>. Tämä on kuitenkin totta suurissa otoksissa yleisesti ottaen suurten numeroiden lain ansiosta, joten siitä ei tarvitse välittää.</p>
 <p>Jos testaat Studentin t-testillä, normaalijakautunut arvo on <strong>testin alla oleva ero</strong>, ei arvot itsessään.</p>
-<p>Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. Käytä mielummin ei-parametristä testiä.</p>
+<p>Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. <strong>Käytä mielummin ei-parametristä testiä</strong>.</p>
 </section>
 <section id="sec-homoskedastisiteetti-t" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-homoskedastisiteetti-t"><span class="header-section-number">10.2.2</span> Homoskedastisiteetti</h3>
 <p><u>T-testi olettaa, että kahden ryhmän väliset varianssit ovat riippumattomia ryhmään kuulumisesta</u> - eli että ovat samankokoisia.</p>
 <p>Voit testata oletusta useilla eri menetelmillä (ks. <a href="mallioletukset.html"><span>Luku&nbsp;5</span></a>).</p>
-<p>Jos varianssit eivät ole samoja, voit käyttää heteroskedastista testiversiota (ks. alla). Tämän rikkominen ei siis ole juurikaan ongelma.</p>
+<p>Welchin t-testi on rakennettu toimimaan heteroskedastisella datajakaumalla, eli tämän rikkominen ei ole ongelma sen kannalta.</p>
 </section>
 <section id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t" class="level3" data-number="10.2.3">
 <h3 data-number="10.2.3" class="anchored" data-anchor-id="sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t"><span class="header-section-number">10.2.3</span> Joko täysin samat tai täysin eri yksiköt</h3>
 <p><u>T-testi vaatii, että mittausyksiköt ovat joko täysin samat (eli otoskoko verrattavien mittojen välillä tulisi olla sama), tai täysin eri (eli ryhmä 1 ja ryhmä 2 ovat täysin eri yksiköitä).</u> T-testi ei toimi, jos sinulla on sekoitus samaa ryhmää ja eri ryhmiin kuuluvia yksiköitä.</p>
 <p>Tarkista tämä oletus miettimällä: ovatko kaikki tutkimusyksiköt samasta vai eri yksiköstä?</p>
-<p>Jos rikot olettamuksen, et voi käyttää t-testiä. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. <em>mixed models</em>), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.</p>
+<p><strong>Jos rikot olettamuksen, et voi käyttää t-testiä</strong>. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. <em>mixed models</em>), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.</p>
 </section>
 <section id="sec-yhteenveto-vaatimuksista-t" class="level3" data-number="10.2.4">
 <h3 data-number="10.2.4" class="anchored" data-anchor-id="sec-yhteenveto-vaatimuksista-t"><span class="header-section-number">10.2.4</span> Yhteenveto vaatimuksista</h3>
@@ -474,12 +475,12 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Yksi muuttuja</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Kaksi muuttujaa (samat yksiköt)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Kaksi muuttujaa (eri yksiköt)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell" width="80%">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-t-yhden-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-1.png" style="width:8.27in;height:2.64in" class="figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-1.png" style="width:7.81in;height:2.69in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.2: Yhden otoksen testin valitseminen</figcaption>
 </figure>
@@ -488,12 +489,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell" width="80%">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-t-kahden-sama-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-3.png" style="width:8.61in;height:2.64in" class="figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-3.png" style="width:7.96in;height:2.74in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.3: Kahden muuttujan testin valitseminen, kun yksiköt ovat samoja</figcaption>
 </figure>
@@ -502,12 +503,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" width="80%">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-t-kahden-eri-kulkukaavio" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<p><img src="ttesti_files\figure-html\mermaid-figure-2.png" style="width:13.52in;height:3.72in" class="figure-img"></p>
+<p><img src="ttesti_files\figure-html\mermaid-figure-2.png" style="width:7.89in;height:2.64in" class="figure-img"></p>
 </div>
 <figcaption class="figure-caption">Kuva&nbsp;10.4: Kahden muuttujan testin valitseminen, kun yksiköt ovat eri</figcaption>
 </figure>
@@ -520,7 +521,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-t-testin-laskeminen" class="level2 page-columns page-full" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="sec-t-testin-laskeminen"><span class="header-section-number">10.4</span> T-testin laskeminen</h2>
-<p><u>T-testin laskukaavat eroavat testiperheiden välillä</u>. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi, kahden otoksen homoskedastinen testi vai kahden otoksen heteroskedastinen testi.</p>
+<p><u>T-testin laskukaavat eroavat testiperheiden välillä</u>. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi vai kahden otoksen testi.</p>
 <section id="sec-yhden-otoksen-t-testi-teoria" class="level3" data-number="10.4.1">
 <h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-yhden-otoksen-t-testi-teoria"><span class="header-section-number">10.4.1</span> Yhden otoksen t-testi</h3>
 <p>Yhden otoksen t-testin kaava on:</p>
@@ -537,19 +538,22 @@ t = \frac{\bar{x} - \mu}{s/\sqrt{n}}
 <div class="page-columns page-full"><p><span class="math inline">\(1/n\sum{x-y}\)</span> on erotuksen keskiarvo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="math inline">\(\sigma\)</span> on erotuksen keskihajonta, ja <span class="math inline">\(\sqrt{n}\)</span> on otoskoon neliöjuuri.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Jonkun asian jakaminen n:llä on sama kuin sen kertominen 1/n:llä. Tämä osuus on vain yleinen keskiarvolaskelma, vaikka kirjoitettuna hieman eri muotoon, eli <span class="math inline">\(\frac{\sum{x-y}}{n}\)</span>.</p></li></div></div>
 <p>Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.</p>
 </section>
-<section id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="sec-kahden-otoksen-homoskedastinen-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen homoskedastinen t-testi</h3>
-<p><strong>Kahden otoksen homoskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-3"><span class="math display">\[ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}  \tag{10.3}\]</span></span></p>
-<p><span class="math inline">\(\bar{x} - \bar{y}\)</span> on molempien otosten keskiarvojen ero. <span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> on erotuksen keskihajonta, joka koostuu useammasta asiasta.</p>
-<p>Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.</p>
-</section>
-<section id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="sec-kahden-otoksen-heteroskedastinen-t-testi-teoria"><span class="header-section-number">10.4.4</span> Kahden otoksen heteroskedastinen t-testi</h3>
-<p><strong>Kahden otoksen heteroskedastisen t-testin</strong> kaava on:</p>
-<p><span id="eq-t-4"><span class="math display">\[ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split}  \tag{10.4}\]</span></span></p>
-<p>T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. <em>pooled variance</em>), <span class="math inline">\(s^2_p\)</span>. Se koostuu molempien otosten otoskoista <span class="math inline">\(n_1\)</span> ja <span class="math inline">\(n_2\)</span>, sekä otosten yksittäisistä variansseista <span class="math inline">\(s_1\)</span> ja <span class="math inline">\(s_2\)</span>.</p>
-<p>Laske ensin ryhmitetty varianssi yllä olevalla kaavalla. Jaa sitten ryhmitetty varianssi erikseen molemmilla otoskokoilla, summaa tulos yhteen ja ota tämän neliöjuuri. Laske sitten molempien ryhmien keskiarvojen ero, ja jaa tämä tulos aikaisemmalla neliöjuurituloksella.</p>
+<section id="sec-kahden-otoksen-welchin-t-testi-teoria" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="sec-kahden-otoksen-welchin-t-testi-teoria"><span class="header-section-number">10.4.3</span> Kahden otoksen (Welchin) t-testi</h3>
+<p><strong>Kahden otoksen Welchin t-testin</strong> kaava on:</p>
+<p><span class="math display">\[
+t = \frac{\bar{x} - \bar{y}} {S'_D}
+\]</span></p>
+<p><span class="math inline">\(\bar{x} - \bar{y}\)</span> on ryhmien keskiarvojen ero. <span class="math inline">\(S'_D\)</span> on <strong>ryhmitetyn varianssin keskivirhe</strong>, joka itsessään koostuu monesta osasta:</p>
+<p><span class="math display">\[
+S'_D = S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}
+\]</span></p>
+<p>Ryhmitetyn varianssin keskivirhe on itse ryhmitetty varianssi <span class="math inline">\(S_p\)</span> kertaa otoskokojen inverssien summan neliöjuuri <span class="math inline">\(\sqrt{1/n_1 + 1/n_2}\)</span>.</p>
+<p><strong>Ryhmitetty varianssi</strong> (engl. <em>pooled variance</em>) ottaa huomioon molempien ryhmien eri keskihajonnat ja otoskoot:</p>
+<p><span class="math display">\[
+S_p = \sqrt{\frac{(n_1 - 1) s^2_1 + (n_2 - 1) s^2_2}{n_1 + n_2 - 2}}
+\]</span></p>
+<p>Kaavan laskenta kannattaa aloittaa “alhaalta ylös”. Ensin lasketaan ryhmien keskihajonnat (muista keskihajontojen nostaminen neliöön!), sitten ryhmitetty varianssi. Sitten kerrotaan ryhmitetty varianssi otoskokojen inverssien summan neliöjuurella saadaksemme ryhmitetyn varianssin keskivirhe. Viimeiseksi lasketaan keskiarvojen erotus ja jaataan tulos ryhmitetyn varianssin keskivirheellä. Lopputulos on Welchin t-testin suure.</p>
 </section>
 </section>
 <section id="sec-mittakoon-laskeminen-t" class="level2" data-number="10.5">
@@ -558,18 +562,18 @@ t = \frac{\bar{x} - \mu}{s/\sqrt{n}}
 <p>Voit laskea <strong>Pearsonin</strong> <span class="math inline">\(r\)</span><strong>-suureen</strong> kaavalla:</p>
 <p><span id="eq-t-5"><span class="math display">\[
 r = \sqrt{\frac{t^2}{t^2+\text{df}}}
-\tag{10.5}\]</span></span></p>
+\tag{10.3}\]</span></span></p>
 <p>jossa <span class="math inline">\(t^2\)</span> on t-testin tulos neliöön, ja <span class="math inline">\(df\)</span> on testin vapausasteet.</p>
 <p>Voit myös laskea <strong>Cohenin</strong> <span class="math inline">\(\hat{d}\)</span><strong>-suureen</strong> kaavalla:</p>
 <p><span id="eq-t-6"><span class="math display">\[
 \hat{d} = \frac{\bar{x}-\bar{y}}{s_{\bar{y}}}
-\tag{10.6}\]</span></span></p>
+\tag{10.4}\]</span></span></p>
 <p>jossa <span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span> ovat mitatut keskiarvot ja <span class="math inline">\(s_{\bar{y}}\)</span> on toisen keskiarvon keskihajonta.</p>
 <p>Parittaisen t-testin <span class="math inline">\(\hat{d}\)</span>-suureelle löytyy myös korjattu versio, joka ottaa huomioon parittaisten mittausten yhteiskorrelaation:</p>
 <p><span id="eq-t-7"><span class="math display">\[
 \hat{d}_D = \frac{\hat{d}}{\sqrt{1-r}}
-\tag{10.7}\]</span></span></p>
-<p>jossa <span class="math inline">\(r\)</span> on mittausten yhteiskorrelaatio (ks. <a href="korrelaatio.html"><span>Luku&nbsp;11</span></a>).</p>
+\tag{10.5}\]</span></span></p>
+<p>jossa <span class="math inline">\(r\)</span> on yllä oleva <span class="math inline">\(r\)</span>-suure.</p>
 </section>
 <section id="sec-t-testin-laskeminen-excelissä" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="sec-t-testin-laskeminen-excelissä"><span class="header-section-number">10.6</span> T-testin laskeminen Excelissä</h2>
@@ -583,15 +587,145 @@ r = \sqrt{\frac{t^2}{t^2+\text{df}}}
 </ul></li>
 </ul>
 <p>Funktio: <a href="funktiot.html#sec-t-testi"><span>Alaluku&nbsp;18.7.4.4</span></a></p>
-<p><strong>Luottamusvälin</strong> laskemiseen voit käyttää yleistä luottamusvälin kaavaa t-suureelle (ks. <a href="merkitsevyysluvut.html#sec-luottamusväli-teoria"><span>Alaluku&nbsp;8.3</span></a>).</p>
-<p><strong>Yhden otoksen t-testille</strong> ei löydy valmista kaavaa, mutta sen implementointi ei ole kovin hankalaa.</p>
-<p><u>Excelissä ei ole valmiita kaavoja testisuureen laskemiseen</u>. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät <a href="lambdakaavat.html">luvusta&nbsp;<span>19</span></a>.</p>
+<p><u><strong>Yhden otoksen t-testin</strong> laskeminen:</u></p>
+<ol type="1">
+<li>Hae testattava muuttuja uuteen sarakkeeseen, suodattaen tyhjät solut pois: <code>=SUODATA(testattava_muuttuja; testattava_muuttuja &lt;&gt; "")</code>
+<ol type="1">
+<li>Käytä tätä aluetta seuraavissa laskuissa parametreissä <code>muuttuja</code></li>
+</ol></li>
+<li>Laske t-suure: <code>=(KESKIARVO(muuttuja) - testattava_arvo) / (KESKIHAJONTA.S(muuttuja) / NELIÖJUURI(LASKE(muuttuja)))</code>
+<ol type="1">
+<li>Jos testattava arvo on <code>0</code>, voit jättää sen kokonaan pois kaavasta.</li>
+</ol></li>
+<li>Laske t-suureen vapausasteet: <code>= LASKE(muuttuja) - 1</code></li>
+<li>Hae t-suuren todennäköisyys:
+<ol type="1">
+<li>Yksisuuntainen:
+<ol type="1">
+<li>Vasenhäntäinen: <code>=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)</code></li>
+<li>Oikeahäntäinen: <code>=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Kaksisuuntainen: <code>=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Laske t-suureen luottamusväli:
+<ol type="1">
+<li>Suuri otos:
+<ol type="1">
+<li>Yläraja: <code>=KESKIARVO(muuttuja) + LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))</code></li>
+<li>Alaraja: <code>=KESKIARVO(muuttuja) - LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))</code></li>
+</ol></li>
+<li>Pieni otos:
+<ol type="1">
+<li>Yläraja: <code>=KESKIARVO(muuttuja) + LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))</code></li>
+<li>Alaraja: <code>=KESKIARVO(muuttuja) - LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))</code></li>
+</ol></li>
+<li>Parametri <code>alfa</code> edustaa valitsemaasi alfatasoa, esim. <code>0,05</code> (95 % luottamusvälille).</li>
+</ol></li>
+<li>Laske mittakoko:
+<ol type="1">
+<li>Pearsonin <span class="math inline">\(r\)</span>: <code>=NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet))</code></li>
+<li>Cohenin <span class="math inline">\(\hat{d}\)</span>: <code>=KESKIARVO(muuttuja) - testattava_arvo / VAR.S(muuttuja)</code></li>
+<li>Cohenin korjattu <span class="math inline">\(d\)</span>: <code>=cohenin_d / NELIÖJUURI(1 - r)</code></li>
+</ol></li>
+</ol>
+<p><u><strong>Parittaisen t-testin</strong> laskeminen:</u></p>
+<ol type="1">
+<li>Hae testattavat muuttujat uusiin sarakkeisiin, suodattaen tyhjät arvot parillisesti pois:
+<ol type="1">
+<li>Muuttuja 1: <code>=SUODATA(muuttuja1_alkuperäinen; (muuttuja1_alkuperäinen &lt;&gt; "") * (muuttuja2_alkuperäinen &lt;&gt; ""))</code></li>
+<li>Muuttuja 2: <code>=SUODATA(muuttuja2_alkuperäinen; (muuttuja1_alkuperäinen &lt;&gt; "") * (muuttuja2_alkuperäinen &lt;&gt; ""))</code></li>
+<li>Käytä näitä alueita seuraavissa laskuissa parametreissä <code>muuttuja1</code> ja <code>muuttuja2</code></li>
+</ol></li>
+<li>Laske muuttujien erotus uudeksi muuttujaksi: <code>=muuttuja1# - muuttuja2#</code></li>
+<li>Laske erotuksen keskiarvo ja keskihajonta: <code>=KESKIARVO(erotus)</code> ja <code>=KESKIHAJONTA.S(erotus)</code></li>
+<li>Laske parittainen t-suure: <code>=KESKIARVO(erotus) / (KESKIHAJONTA.S(erotus) / NELIÖJUURI(LASKE(erotus)))</code></li>
+<li>Laske t-suureen vapausasteet: <code>=LASKE(erotus) - 1</code></li>
+<li>Hae t-suureen todennäköisyys:
+<ol type="1">
+<li>Yksisuuntainen:
+<ol type="1">
+<li>Vasenhäntäinen: <code>=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)</code></li>
+<li>Oikeahäntäinen: <code>=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Kaksisuuntainen: <code>=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Laske t-suureen luottamusväli:
+<ol type="1">
+<li>Suuri otos:
+<ol type="1">
+<li>Yläraja: <code>=KESKIARVO(erotus) + LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))</code></li>
+<li>Alaraja: <code>=KESKIARVO(erotus) - LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))</code></li>
+</ol></li>
+<li>Pieni otos:
+<ol type="1">
+<li>Yläraja: <code>=KESKIARVO(erotus) + LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))</code></li>
+<li>Alaraja: <code>=KESKIARVO(erotus) - LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))</code></li>
+</ol></li>
+<li>Parametri <code>alfa</code> edustaa valitsemaasi alfatasoa, esim. <code>0,05</code> (95 % luottamusvälille).</li>
+</ol></li>
+<li>Laske mittakoko:
+<ol type="1">
+<li>Pearsonin <span class="math inline">\(r\)</span>: <code>=``NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet))</code></li>
+<li>Cohenin <span class="math inline">\(\hat{d}\)</span>: <code>=erotus / NELIÖJUURI(VAR.S(erotus))</code></li>
+</ol></li>
+</ol>
+<p><u><strong>Kahden otoksen t-testin</strong> laskeminen:</u></p>
+<ol type="1">
+<li>Hae riippuvaisen muuttujan data uusiin sarakkeisiin ryhmityksen mukaan, suodattaen tyhjät pois:
+<ol type="1">
+<li>Ryhmä 1: <code>=SUODATA(riippuvainen_muuttuja; (ryhmämuuttuja = ryhmä1nro) * (riippuvainen_muuttuja &lt;&gt; ""))</code></li>
+<li>Ryhmä 2: <code>=SUODATA(riippuvainen_muuttuja; (ryhmämuuttuja = ryhmä2nro) * (riippuvainen_muuttuja &lt;&gt; ""))</code></li>
+<li>Käytä näitä alueita seuraavissa muuttujissa parametreissä <code>ryhmä1</code> ja <code>ryhmä2</code></li>
+</ol></li>
+<li>Laske ryhmien keskiarvot: <code>=KESKIARVO(ryhmä1)</code> ja <code>=KESKIARVO(ryhmä2)</code></li>
+<li>Laske ryhmien keskihajonnat: <code>=KESKIHAJONTA.S(ryhmä1)</code> ja <code>=KESKIHAJONTA.S(ryhmä2)</code></li>
+<li>Laske ryhmien varianssit: <code>=VAR.S(ryhmä1)</code> ja <code>=VAR.S(ryhmä2)</code></li>
+<li>Laske ryhmäkoot: <code>=LASKE(ryhmä1)</code> ja <code>=LASKE(ryhmä2)</code></li>
+<li>Laske ryhmille z-koot:
+<ol type="1">
+<li>Ryhmä 1: <code>=((varianssi1/koko1) / (varianssi1/koko1 + varianssi2/koko2))^2 / (koko1 - 1)</code></li>
+<li>Ryhmä 2: <code>=((varianssi2/koko2) / (varianssi1/koko1 + varianssi2/koko2))^2 / (koko2 - 1)</code></li>
+</ol></li>
+<li>Laske keskiarvojen erotus: <code>=keskiarvo1 - keskiarvo2</code></li>
+<li>Laske ryhmitetty varianssi: <code>=((koko1 - 1) * keskihajonta1 ^ 2 + (koko2 - 1) * keskihajonta2 ^ 2) / (koko1 + koko2 - 2)</code></li>
+<li>Laske ryhmitetyn varianssin keskivirhe: <code>=NELIÖJUURI(ryhmitetty_varianssi) * NELIÖJUURI(1 / koko1 + 1 / koko2)</code></li>
+<li>Laske t-suure: <code>=keskiarvojen_erotus / ryhmitetyn_varianssin_keskivirhe</code></li>
+<li>Laske t-suureen vapausasteet: <code>=1 / (z_1 + z_2)</code></li>
+<li>Hae t-suureen todennäköisyys:
+<ol type="1">
+<li>Yksisuuntainen:
+<ol type="1">
+<li>Vasenhäntäinen: <code>=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)</code></li>
+<li>Oikeahäntäinen: <code>=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Kaksisuuntainen: <code>=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)</code></li>
+</ol></li>
+<li>Laske t-suureen luottamusväli:
+<ol type="1">
+<li>Suuri otos:
+<ol type="1">
+<li>Yläraja: <code>=keskiarvojen_erotus + LUOTTAMUSVÄLI.NORM(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe</code></li>
+<li>Alaraja: <code>=keskiarvojen_erotus - LUOTTAMUSVÄLI.NORM(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe</code></li>
+</ol></li>
+<li>Pieni otos:
+<ol type="1">
+<li>Yläraja: <code>=keskiarvojen_erotus + LUOTTAMUSVÄLI.T(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe</code></li>
+<li>Alaraja: <code>=keskiarvojen_erotus - LUOTTAMUSVÄLI.T(alfa / 2; 1; MAKS(koko1; koko2)) *ryhmitetty_varianssin_keskivirhe</code></li>
+</ol></li>
+<li>Parametri <code>alfa</code> edustaa valitsemaasi alfatasoa, esim. <code>0,05</code> (95 % luottamusvälille).</li>
+</ol></li>
+<li>Laske mittakoko:
+<ol type="1">
+<li>Pearsonin <span class="math inline">\(r\)</span>: <code>=NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet))</code></li>
+<li>Cohenin <span class="math inline">\(\hat{d}\)</span>: <code>=keskiarvojen_erotus / NELIÖJUURI(ryhmitetty_varianssi)</code></li>
+</ol></li>
+</ol>
 </section>
 <section id="sec-t-testin-raportointi" class="level2" data-number="10.7">
 <h2 data-number="10.7" class="anchored" data-anchor-id="sec-t-testin-raportointi"><span class="header-section-number">10.7</span> T-testin raportointi</h2>
 <p>T-testille tulisi mieluisesti raportoida seuraavat tiedot:</p>
 <ul>
-<li><p>Testin tyyppi (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)</p></li>
+<li><p>Testin tyyppi (yhden, parittaisen vai kahden otoksen testi)</p></li>
 <li><p>Verratut arvot <span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span></p></li>
 <li><p>Testisuure <span class="math inline">\(t\)</span></p></li>
 <li><p>Vapausasteet <span class="math inline">\(\text{df}\)</span></p></li>
@@ -609,7 +743,7 @@ Esimerkki t-testin raportoinnista
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Yleisen vaaramerkin toimintamallien osaamisessa on sukupuolittuneita eroja. Naisista 10 prosenttia osaavat toimia oikein, mutta miehistä vain 5 prosenttia. Ero on tilastollisesti merkitsevä (t = 4,942, df = 2830,6, <em>p</em> &lt; 0,0001, eron 95% CI [0,03; 0,07]). Cohenin <em>d</em>-suure osoittaa keskikokoista eroa (d = 0,135, 95% CI [0,064; 0,206]). Testissä käytettiin kahden otoksen heteroskedastista t-suuretta, koska Levenen testi oli merkitsevä (Levenen testi = 100,2, <em>p</em> &lt; 0,0001).</p>
+<p>Yleisen vaaramerkin toimintamallien osaamisessa on sukupuolittuneita eroja. Naisista 10 prosenttia osaavat toimia oikein, mutta miehistä vain 5 prosenttia. Ero on tilastollisesti merkitsevä (t = 4,942, df = 2830,6, <em>p</em> &lt; 0,0001, eron 95% CI [0,03; 0,07]). Cohenin <em>d</em>-suure osoittaa keskikokoista eroa (d = 0,135, 95% CI [0,064; 0,206]). Testissä käytettiin kahden otoksen Welchin t-suuretta, koska Levenen testi oli merkitsevä (Levenen testi = 100,2, <em>p</em> &lt; 0,0001).</p>
 </div>
 </div>
 

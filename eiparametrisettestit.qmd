@@ -211,7 +211,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 **Mittausasteikot:** Järjestysasteikosta ylöspäin
 
-**Mann-Whitney'n U-testi** on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on **kahden otoksen t-testi** (ks. @sec-kahden-otoksen-homoskedastinen-t-testi-teoria ja @sec-kahden-otoksen-heteroskedastinen-t-testi-teoria).
+**Mann-Whitney'n U-testi** on ei-parametrinen testi, jolla testataan kahden riippumattoman muuttujan välistä suhdetta. Testi on periaatteessa sama kuin Wilcoxonin testi, mutta toimii siis kahden otoksen vertailussa parittaisten muuttujien sijaan. Testin parametrinen vastaavuus on **kahden otoksen t-testi** (ks. @sec-kahden-otoksen-welchin-t-testi-teoria).
 
 [Myös U-testi voidaan tehdä yksi- tai kaksihäntäisenä]{.underline}; yleisintä on kuitenkin tehdä kaksihäntäinen testi, jolla testataan, eroavatko molemmat ryhmät toisistaan (eli ei testata suuntaa).
 

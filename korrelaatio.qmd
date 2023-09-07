@@ -13,7 +13,7 @@ Muistutuksena (ks. @sec-varianssi-teoria), [varianssin määritelmä oli kaikkie
 [Kovarianssi ilmaisee kahden muuttujan yhteisvaihtelua yhden muuttujan vaihtelun sijaan]{.underline}. Koska jonkun asian nostaminen toiseen potenssiin on sama asia kuin sen kertominen itsellään, kovarianssissa korvataan toinen kertomista toisen muuttujan arvopisteiden eroilla keskiarvoon. Toisin sanoen, lasketaan jokaiselle datariville sen ero keskiarvoon kummallakin muuttujalla, ja kerrotaan nämä tulokset yhteen. Samankaltaisuus näkyy hyvin kaaviossa:
 
 $$
-\text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(x-\bar{y})}} {n-1}
+\text{Var} = \frac{\sum{(x-\bar{x})(x-\bar{x})}} {n-1}, \text{Cov} = \frac{\sum{(x-\bar{x})(y-\bar{y})}} {n-1}
 $$ {#eq-korr-1}
 
 Jos varianssi ($\text{Var}$) edustaa yhden muuttujan keskivertaista vaihtelua, [kovarianssi (]{.underline}$\text{Cov}$) [edustaa kahden muuttujan välistä vaihtelusuhdetta]{.underline}. Kovarianssi siis osoittaa, miten toisen muuttujan arvot muuttuvat kuin ensimmäinen muuttuu.
@@ -27,7 +27,7 @@ Jos varianssi ($\text{Var}$) edustaa yhden muuttujan keskivertaista vaihtelua, [
 ```{r}
 #| label: fig-korrelaatio
 #| fig-cap: "Korrelaatioita eri tasoilla"
-#| layout-ncol: 3
+#| layout-nrow: 3
 #| fig-subcap:
 #| - "r = -0.5"
 #| - "r = 0"
@@ -173,6 +173,23 @@ LAMBDA-kaavoina löytyy myös $r$-arvon z-muunnoksen tekemiseksi sekä $z_r$-arv
 
 [Huomaa myös, että luottamusvälin laskukaava (`KORR.Z.CI`) palauttaa kaksirivisen matriisin]{.underline} - ensimmäinen arvo on luottamusvälin yläraja, toinen arvo on alaraja. Jos tarvitset luottamusvälin sarakkeisiin rivien sijaan, laita funktio `TRANSPONOI`-funktion sisälle.
 
+[**Korrelaatiokertoimen laskeminen**]{.underline} Excelissä:
+
+1.  Hae molemmat muuttujat uusiin sarakkeisiin, suodattaen tyhjät rivit pois parittain:
+    1.  Muuttuja 1: `=SUODATA(muuttuja1_alkuperäinen; (muuttuja1_alkuperäinen <> "") * (muuttuja2_alkuperäinen <> "")`
+    2.  Muuttuja 2: `=SUODATA(muuttuja2_alkuperäinen; (muuttuja1_alkuperäinen <> "") * (muuttuja2_alkuperäinen <> "")`
+    3.  Käytä näitä alueita seuraavissa laskuissa parametreissä `muuttuja1` ja `muuttuja2`
+2.  Laske Pearsonin $r$: `=PEARSON(muuttuja1; muuttuja2)`
+3.  Laske otoskoko $n$: `=LASKE(muuttuja1)` tai `=LASKE(muuttuja2)` (koska dataa on yhtä paljon molemmissa, muuttujalla ei ole väliä)
+4.  Hae r-suureen kaksihäntäinen todennäköisyys: `=KORR.P(r)`
+5.  Laske luottamusväli valitsemallesi alfatasolle:
+    1.  Laske z-arvo: `=KORR.Z(r)`
+    2.  Laske z-arvon keskivirhe: `=KORR.Z.SE(n)`
+    3.  Hae luottamusväli z-arvoina: `=KORR.Z.CI(z; keskivirhe; alfa)`
+        1.  Ilmaise haluamasi alfataso desimaaleissa, esim. `0,05`
+        2.  Funktio palauttaa dynaamisen matriisin, jolla on kaksi riviä. Ensimmäinen rivi on luottamusvälin yläraja, toinen rivi luottamusvälin alaraja.
+    4.  Muunna luottamusväli takaisin $r$-arvoiksi: `=KORR.Z.R(luottamusväli#)`
+
 ## Korrelaatiokertoimen raportointi {#sec-korrelaatiokertoimen-raportointi}
 
 Raportoi mieluisesti seuraavat tiedot:
@@ -185,4 +202,4 @@ Raportoi mieluisesti seuraavat tiedot:
 
 -   Luottamusväli $\text{CI}$
 
-Korrelaatiokertoimelle ei tarvitse laskea testisuuretta, koska se on suuremitta itsessään.
+Korrelaatiokertoimelle ei tarvitse laskea testisuuretta, koska Pearsonin $r$ on suuremitta itsessään.

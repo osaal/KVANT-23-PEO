@@ -1,5 +1,0 @@
-# Ohjeita {.unnumbered}
-
-Tässä osioissa löytyy ohjeita erinäisiin toimintoihin.
-
-Luku @sec-visualisoinnin-alkeet 

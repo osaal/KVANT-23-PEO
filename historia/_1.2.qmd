@@ -1,11 +1,24 @@
 ### 1.2
 
-**Julkaisupäivämäärä**: Ei vielä julkaistu.
+**Julkaisupäivämäärä**: 7.9.2023.
 
 **Muutokset**:
 
--   Poistettu caching-toiminto moodikuvista luvusta "Sijaintiluvut"
--   Lisätty huomautus tasatun keskiarvon parillisista poistoista lukuun "Sijaintiluvut"
--   Korjattu Mann-Whitney'n U-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"
--   Lisätty selitys eksaktista ja asymptoottisesta p-arvosta lukuun "Merkitsevyysluvut"
--   Korjattu Spearmanin rho-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"
+-   Luku "Sijaintiluvut":
+    -   Poistettu caching-toiminto moodikuvista luvusta "Sijaintiluvut"
+    -   Lisätty huomautus tasatun keskiarvon parillisista poistoista lukuun "Sijaintiluvut"
+-   Luku "Merkitsevyysluvut":
+    -   Lisätty selitys eksaktista ja asymptoottisesta p-arvosta lukuun "Merkitsevyysluvut"
+-   Luku "Ei-parametriset testit":
+    -   Korjattu Mann-Whitney'n U-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"
+    -   Korjattu Spearmanin rho-suureen laskentakaavat ja Excel-ohjeet luvussa "Ei-parametriset testit"
+-   Luku "T-testi":
+    -   Muutettu lukua "T-testi" laajasti, poistaen jaon homo- ja heteroskedastisiin testeihin ja selkeyttäen Excel-toimintoja.
+-   Luku "Korrelaatio":
+    -   Korjattu korrelaatiokertoimen Excel-ohjeet luvussa "Korrelaatio"
+-   Luku "Khiin neliö":
+    -   Korjattu Cramérin V-suureen laskentakaavat ja Excel-ohjeet luvussa "Khiin neliö"
+    -   Selkeytetty khiin neliön Excel-ohjeita luvussa "Khiin neliö"
+-   Luku "LAMBDA-kaavat":
+    -   Korjattu korrelaatiokertoimen LAMBDA-kaavoja luvussa "LAMBDA-kaavat"
+    -   Poistettu kaikki t-testin LAMBDA-kaavat luvusta "LAMBDA-kaavat"

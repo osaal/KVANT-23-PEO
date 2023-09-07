@@ -458,10 +458,10 @@ E_{ij} = \frac{\text{rivisumma}_i * \text{sarakesumma}_j}{n}
 <p><u>Khiin neliö voidaan raportoida sellaisenaan</u>, mutta yleensä haluamme myös jonkun mitan siitä, kuinka suuri yhteys muuttujilla näyttäisi olevan. Paras vaihtoehto on tietenkin raportoida alkuperäiset todelliset arvot (tai niiden prosenttiosuudet), koska nämä ovat helpoimmin ymmärrettävissä.</p>
 <p><u>Vaihtoehtoisesti voi myös käyttää <strong>Cramérin V-suuretta</strong></u>. V-suure vaihtelee nollasta yhteen, ja osoittaa yhdellä numerolla, kuinka laajasti muuttujat yhteisvaihtelevat. V-suure lasketaan kaavalla:</p>
 <p><span id="eq-v-suure-khiin-neliö"><span class="math display">\[
-V = \frac{\chi^2/n}{min(r-1, c-1)}
+V = \sqrt{\frac{\chi^2}{(min(r, c)-1)n}}
 \tag{12.4}\]</span></span></p>
-<p>Ensin jaat khiin neliön suureen otoskoolla. Sitten jaat tuloksen joko rivien määrällä pois yksi tai sarakkeiden määrällä pois yksi, kumpi on pienempi.</p>
-<p>Cramérin V-suureen tulkinta riippuu vapausasteista. Taulukko alla näyttää raja-arvot tulkinnalle yleisimmille vapausasteille:</p>
+<p>Ensin haet pienimmän rivi- tai sarakemääristä, ja vähennät siitä yhden. Kerrot tuloksen otoskoolla, eli kaikkien todellisten arvojen summalla. Sitten jaat khiin neliön suureen tällä tuloksella, ja otat laskennan tuloksen neliöjuuren. Lopputulos on Cramérin V-suure.</p>
+<p><strong>Cramérin V-suureen tulkinta riippuu vapausasteista</strong>. Taulukko alla näyttää raja-arvot tulkinnalle yleisimmille vapausasteille:</p>
 <div id="tbl-cramerinV" class="anchored">
 <table class="table">
 <caption>Taulukko&nbsp;12.1: Cramérin V-suureen tulkinnan raja-arvot <span class="citation" data-cites="cohen1988">(<a href="viiteluettelo.html#ref-cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>.</caption>
@@ -512,43 +512,70 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <h2 data-number="12.3" class="anchored" data-anchor-id="sec-khiin-neliö-excelissä"><span class="header-section-number">12.3</span> Khiin neliö Excelissä</h2>
 <p>Khiin neliö vaatii neljä osa-askelta Excelissä:</p>
 <ol type="1">
-<li>Todellisten arvojen taulukko,</li>
-<li>Odotettujen arvojen taulukko,</li>
-<li>Khiin neliön taulukko, ja</li>
-<li>Lopputuloslaskut.</li>
+<li><strong>Todellisten arvojen taulukko</strong>,</li>
+<li><strong>Odotettujen arvojen taulukko</strong>,</li>
+<li><strong>Khiin neliön taulukko</strong>, ja</li>
+<li><strong>Lopputuloslaskut</strong>.</li>
 </ol>
 <section id="sec-todellisten-arvojen-taulukko" class="level3" data-number="12.3.1">
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="sec-todellisten-arvojen-taulukko"><span class="header-section-number">12.3.1</span> Todellisten arvojen taulukko</h3>
-<p>Rakenna taulukko, jonka riveissä on yhden muuttujan kaikki kategoriat, ja sarakkeissa on toisen muuttujan kaikki kategoriat.</p>
-<p>Laita muuttujien kategoriat ensimmäiseen sarakkeeseen ja ensimmäiselle riville (ks. <a href="yleisiätoimintoja.html#sec-toiminto04"><span>Alaluku&nbsp;16.4</span></a>).</p>
-<p>Solujen arvot voit laskea funktiolla:</p>
-<p><code>=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)</code></p>
-<p>Käytä lukitustoimintoa lukitaksesi joko rivi- tai sarakeviittauksen, jotta voit käyttää vetotoimintoa toistaaksesi funktion kaikissa soluissa. Hyödynnä muuttujien kategorianumeroita ensimmäisessä sarakkeessa ja ensimmäisellä rivilla - mutta ole tarkkana, että viittaukset ovat oikein jos/kun kopioit solusta toiseen!</p>
-<p>Laske rivi- ja sarakesummat <code>SUMMA</code>-funktiolla.</p>
-<p>Laske kokonaissumma summaamalla <em>joko</em> rivi- <em>tai</em> sarakesummat yhteen.</p>
+<ol type="1">
+<li>Hae muuttujien kategoriat riveihin ja sarakkeisiin:
+<ol type="1">
+<li>Rivit: <code>=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)</code></li>
+<li>Sarakkeet: <code>=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))</code></li>
+</ol></li>
+<li>Laske todellisten arvojen määrät soluihin: <code>=LASKE.JOS.JOUKKO(muuttuja1; arvo1; muuttuja2; arvo2)</code>
+<ol type="1">
+<li>Voit käyttää arvoja suoraan muuttujien rivi- ja sarakelistauksista. Lukitse tuolloin sarakeviittaus rivimuuttujalle ja riviviittaus sarakemuuttujalle. Jos rivimuuttuja on soluissa <code>C6:C9</code> ja sarakemuuttuja soluissa <code>D5:H5</code>, viittaa niiden ensimmäisten kategorioiden yhdistelmään arvoilla <code>$C6</code> ja <code>D$5</code>.</li>
+<li>Vedä laskukaavio koko ristiintaulukoinnin alueelle vetotoiminnolla. Jos lukitsit yllä olevalla tavalla, kaikki laskennat pitäisi mennä oikein. Tarkista laskut!</li>
+</ol></li>
+<li>Laske rivi- ja sarakesummat <code>SUMMA</code>-funktiolla.</li>
+<li>Laske kokonaissumma (otoskoko) summaamalla joko rivi- tai sarakesummat yhteen - ei molempia!</li>
+</ol>
 </section>
 <section id="sec-odotettujen-arvojen-taulukko" class="level3" data-number="12.3.2">
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="sec-odotettujen-arvojen-taulukko"><span class="header-section-number">12.3.2</span> Odotettujen arvojen taulukko</h3>
-<p>Rakenna samanlainen taulukko kuin todellisille arvoille, mutta jätä pois summarivi ja summasarake. Kategorioiden nimiä ei tarvitse lisätä, mutta auttaa taulukon lukemisessa.</p>
-<p>Laske jokaiselle solulle seuraava laskukaava:</p>
-<p><code>=(sarakesumma * rivisumma) / kokonaissumma</code></p>
-<p>Voit jälleen käyttää lukitustoimintoa helpottaaksesi solujen täyttöä. Tarkista, että kaikki solut viittaavat niiden omiin sarake- ja rivisummiin - virheitä syntyy helposti!</p>
+<ol type="1">
+<li>Hae taas muuttujien kategoriat riveihin ja sarakkeisiin:
+<ol type="1">
+<li>Rivit: <code>=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)</code></li>
+<li>Sarakkeet: <code>=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))</code></li>
+</ol></li>
+<li>Laske odotettujen arvojen määrät soluihin: <code>=(sarakesumma * rivisumma) / kokonaissumma</code>.
+<ol type="1">
+<li>Voit jälleen käyttää arvoja rivi- ja sarakelistauksista. Lukitse sarakesummasta rivi, rivisummasta sarake, ja kokonaissummasta molemmat. Jos esim. sarakesummasi ovat alueella <code>D10:H10</code>, rivisummasi alueella <code>I6:I9</code>, ja kokonaissummasi solussa <code>I10</code>, viittaa silloin niihin lukituksilla <code>D$10</code> (sarakesumma), <code>$I6</code> (rivisumma) ja <code>$I$10</code> (kokonaissumma.</li>
+<li>Vedä laskukaavio koko ristiintaulukoinnin alueelle. Jos lukitsit yllä olevalla tavalla, kaiken pitäisi taas olla oikein. Tarkista laskut!</li>
+</ol></li>
+</ol>
 </section>
 <section id="sec-khiin-neliön-taulukko" class="level3" data-number="12.3.3">
 <h3 data-number="12.3.3" class="anchored" data-anchor-id="sec-khiin-neliön-taulukko"><span class="header-section-number">12.3.3</span> Khiin neliön taulukko</h3>
-<p>Rakenna jälleen samanlainen taulukko kuin edellisissä taulukoissa, jättäen pois rivi- ja sarakesummat. Nimiä ei taaskaan tarvita, mutta suositellaan.</p>
-<p>Laske khiin neliön arvo jokaiselle solulle seuraavalla laskukaavalla:</p>
-<p><code>=(todellinen arvo - odotettu arvo)^2 / odotettu arvo</code></p>
-<p>Et tarvitse lukita mitään tässä, koska kaikki arvot riippuvat solun sijainnista, joten voit käyttää vetotoimintoa täyttääksesi taulukon nopeasti.</p>
+<ol type="1">
+<li>Hae vielä kerran muuttujien kategoriat riveihin ja sarakkeisiin:
+<ol type="1">
+<li>Rivit: <code>=LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja1);;1)</code></li>
+<li>Sarakkeet: <code>=TRANSPONOI(LAJITTELE(AINUTKERTAISET.ARVOT(muuttuja2);;1))</code></li>
+</ol></li>
+<li>Laske jokaiselle solulle oma khiin neliön arvo: <code>=(todellinen_arvo - odotettu_arvo) ^ 2 / odotettu_arvo</code>
+<ol type="1">
+<li>Et tarvitse lukita mitään.</li>
+<li>Vedä laskukaavio koko ristiintaulukoinnin alueelle.</li>
+</ol></li>
+</ol>
 </section>
 <section id="sec-lopputuloslaskut" class="level3" data-number="12.3.4">
 <h3 data-number="12.3.4" class="anchored" data-anchor-id="sec-lopputuloslaskut"><span class="header-section-number">12.3.4</span> Lopputuloslaskut</h3>
-<p>Laske khiin neliön suure summaamalla kaikki arvot khiin neliön taulukossa yhteen: <code>=SUMMA(khiinneliötaulukon_alue)</code>.</p>
-<p>Laske vapausasteet kaavalla <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code>. Voit laskea rivi- ja sarakemäärät automaattisesti <code>AINUTKERTAISET.ARVOT</code>-funktiolla (ks. <a href="yleisiätoimintoja.html#sec-toiminto03"><span>Alaluku&nbsp;16.3</span></a>; <a href="funktiot.html#sec-ainutkertaiset.arvot"><span>Alaluku&nbsp;18.5.9</span></a>).</p>
-<p>Laske khiin neliön oikeahäntäinen todennäköisyysarvo <em>p</em> kaavalla:</p>
-<p><code>=CHINELIÖ.JAKAUMA.OH(suure; vapausasteet)</code></p>
-<p>Jos haluat, voit vielä laskea Cramérin V-suureen laskutoimituksella:</p>
-<p><code>=NELIÖJUURI( (khiinneliö / kokonaissumma) / min(rivimäärä - 1; sarakemäärä - 1) )</code></p>
+<ol type="1">
+<li>Laske khiin neliön suure: <code>=SUMMA(khiin_neliön_taulukko)</code></li>
+<li>Laske otoskoko: <code>=kokonaissumma</code> (ei sinänsä tarpeellista, mutta taulukoiden lukeminen on helpompaa jos kaikki tarvittavat tilastot löytyvät samasta paikasta)</li>
+<li>Laske alle viiden odotettujen arvojen määrä: <code>=SUMMA(JOS(odotetut_arvot_taulukko &lt; 5; 1; 0))</code>. Voit myös laskea niiden prosenttimäärän: <code>=alle_viisi/LASKE(odotetut_arvot_taulukko)%</code></li>
+<li>Laske myös alle yhden odotettujen arvojen määrä: <code>=SUMMA(JOS(odotetut_arvot_taulukko &lt; 1; 1; 0))</code>. Voit jälleen laskea niiden prosenttimäärän: <code>=alle_yhden/LASKE(odotetut_arvot_taulukko)%</code></li>
+<li>Laske rivien ja sarakkeiden määrät. Voit tehdä tämän käsin - näihin lukuihin viittaaminen helpottaa seuraavia laskukaavoja hieman.</li>
+<li>Laske khiin neliön vapausasteet: <code>=(rivimäärä - 1) * (sarakemäärä - 1)</code></li>
+<li>Hae khiin neliön suureen todennäköisyys: <code>=CHINELIÖ.JAKAUMA.OH(khiin_neliö; vapausasteet)</code></li>
+<li>Laske Cramérin V-suure: <code>=NELIÖJUURI(khiin_neliö / ((MIN(rivimäärä; sarakemäärä) - 1) * otoskoko))</code></li>
+</ol>
 </section>
 </section>
 <section id="sec-khiin-neliön-raportointi" class="level2" data-number="12.4">
@@ -561,7 +588,7 @@ V = \frac{\chi^2/n}{min(r-1, c-1)}
 <li><p>Kuinka moni odotettu arvo on alle 1 tai alle 5 (ks. <a href="#sec-khiin-neliön-malliodotukset"><span>Alaluku&nbsp;12.1</span></a>)</p></li>
 <li><p>Jos laskettu: Cramérin V-suure <span class="math inline">\(V\)</span></p></li>
 </ul>
-<p><u>Cramerin V-suure voidaan tulkita</u> jokseenkin samoin kuin Cohenin <span class="math inline">\(\hat{D}\)</span> tai Pearsonin <span class="math inline">\(r\)</span>, mutta tulkinta riippuu osittain vapausasteista:</p>
+<p><u>Cramerin V-suure voidaan tulkita</u> jokseenkin samoin kuin Cohenin <span class="math inline">\(\hat{d}\)</span> tai Pearsonin <span class="math inline">\(r\)</span>, mutta tulkinta riippuu osittain vapausasteista:</p>
 <div id="tbl-cramerin-v-tulkinta" class="anchored">
 <table class="table">
 <caption>Taulukko&nbsp;12.2: Cramerin V:n tulkinta</caption>

@@ -66,7 +66,7 @@ Viittausalue määritellään `viittaus`-avainsanalla. Tietopyyntö määritell�
 Avainsanojen komentojen eri määritelmät:
 
 | Komento        | Palautus                                                                                                                                                                                                                     |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | `osoite`       | Soluviittauksen osoite tekstinä (esim. `A2`)                                                                                                                                                                                 |
 | `sarake`       | Solun sarake numerona (esim. `2` sarakkeelle B)                                                                                                                                                                              |
 | `väri`         | Arvo `1`, jos solun negatiiviset arvot näkyvät värillisinä. Muuten arvo `0`.                                                                                                                                                 |
@@ -686,11 +686,11 @@ Ensimmäiset kaksi avainsanaa määrittelevät kaksi matriisia, joita halutaan v
 
 1.  **Parittainen** t-testi samasta otoksesta (ns. within-group)
 2.  **Kahden otoksen** t-testi, saman varianssin oletus (**homoskedastinen**; ns. between-groups)
-3.  **Kahden otoksen** t-testi, erisuuren varianssin oletus (**heteroskedastinen**; ns. between-groups)
+3.  **Kahden otoksen** t-testi, erisuuren varianssin oletus (**heteroskedastinen**; ns. between-groups; vastaa Welchin t-testiä)
 
 Huomaa, että laji 1 ei toimi, jos matriiseissa on eri määrät arvoja.
 
-[**Funktio ei laske testisuuretta!**]{.underline} Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin, sekä oletatko saman vai erisuuren varianssin. Löydät valmiit LAMBDA-kaavat [luvusta -@sec-lambda-kaavoja].
+[**Funktio ei laske testisuuretta!**]{.underline} Joudut laskemaan testisuureen käsin. Kaavat riippuvat siitä, lasketko parittaisen vai kahden otoksen t-testin. Lue lisää [luvusta -@sec-t-testi-teoria].
 
 #### Järjestyslukujen laskeminen {#sec-järjestyslukujen-laskeminen}
 

@@ -18,4 +18,4 @@
 
 -   Luvusta "Grafiikka Excelissä" puuttuu alaluvut kaavioiden tekemisestä Excelissä.
 -   "Funktiot"-luvussa käytetään sanoja "parametri" ja "avainsana" sekaisin.
--   Kulkukaaviot t-testin valitsemiselle ovat vääristyneen muotoisia.
+-   ~~Kulkukaaviot t-testin valitsemiselle ovat vääristyneen muotoisia.~~ \[*Korjattu versiossa 1.2*\]

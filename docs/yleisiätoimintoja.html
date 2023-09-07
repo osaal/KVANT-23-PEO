@@ -346,7 +346,7 @@ Wordin lainausmerkit eivät toimi Excelissä
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta ("). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta (“). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa. Lisätietoja lainausmerkkien eroista löydät esimerkiksi tästä <a href="https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html">Markus Kuhnin kirjoittamasta</a> verkkoartikkelista.</p>
+<p>Suomenkielisessä Office-paketissa Excel ja Word tuottavat eri lainausmerkit kun kirjoitat lainausmerkin näppäimistöllä. Excelin lainausmerkki näyttää suorilta viivoilta (“). Wordin lainausmerkit taas näyttävät pieniltä pilkuilta (”). Ero on hiuksenhieno, mutta vaikuttaa tuloksiin: Excel ei osaa kääntää Wordin lainausmerkit omakseen, jolloin Wordista kopioidut lainausmerkit eivät toimi Excelin kaavoissa. Lisätietoja lainausmerkkien eroista löydät esimerkiksi tästä <a href="https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html">Markus Kuhnin kirjoittamasta</a> verkkoartikkelista.</p>
 <p>Koska Excelissä voi olla hankalaa kirjoittaa pitkiä kaavoja, voi joskus kuitenkin olla tarpeen kirjoittaa kaavat ensin jossain tekstinkäsittelyohjelmassa ja sitten kopioida ne Exceliin. Suosittelen tähän <strong>Muistio</strong>-ohjelmaa (<em>Notepad</em>), mikä löytyy Windows-käyttöjärjestelmästä valmiina. Jos käytät Mac OS X- tai Linux-käyttöjärjestelmiä, voit käyttää jotain toista raakatekstin käsittelyohjelmaa. Älä kuitenkaan käytä ohjelmia, joissa tekstiä automaattisesti formatoidaan ohjelman puolesta - näissä voi esiintyä samoja ongelmia kuin Excelin ja Wordin välillä.</p>
 <p>Toinen suositeltava tapa on laajentaa funktioalue tarpeeksi suureksi, että voit rivittää funktiot ja siten nähdä niiden sisäiset osiot.</p>
 </div>
@@ -431,7 +431,7 @@ Tärkeää
 <li><p>Ensimmäinen solu: <code>=LAJITTELE( AINUTKERTAISET.ARVOT( muuttuja-alue ) ; ; 1 )</code></p></li>
 <li><p>Toinen solu, ensimmäisen solun oikealla puolella: <code>=TAAJUUS( muuttuja-alue; ensimmäinen_solu# )</code></p></li>
 </ul>
-<p>Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. <span class="quarto-unresolved-ref">?sec-toiminto-04</span>).</p>
+<p>Ensimmäisessä solussa haetaan kaikki muuttujan uniikit arvot ja lajitellaan ne nousevaan järjestykseen (ks. <a href="#sec-toiminto04"><span>Alaluku&nbsp;16.4</span></a>).</p>
 <p>Toisessa solussa käytetään <code>TAAJUUS</code>-funktiota. Funktion ensimmäinen argumentti on sama muuttuja-alue (nimetty muuttuja, esim. “sukupuoli” tai suora osoite, esim C2:C105) kuin ensimmäisen solun kaavassa.</p>
 <p><code>TAAJUUS</code>-funktion toisena argumenttina käytämme ensimmäisen funktion palautusta, mutta huomaa risuaidan <code>#</code> lisääminen soluviittauksen loppuun. Tämä kertoo Excelille, että soluviittaus on levitetty matriisialue, ei yksittäinen solu, jolloin Excel toimittaa funktion jokaiselle matriisissa määritetylle arvolle, ei vain yhdelle. Jos esimerkiksi ensimmäisen solun osoite on <code>C2</code>, kirjoita <code>C2#</code>.</p>
 <div class="callout callout-style-default callout-important callout-titled">

@@ -1,4 +1,4 @@
-# T-testi {#sec-t-testi}
+# T-testi {#sec-t-testi-teoria}
 
 **T-testi** on testiperhenimi testeille, joilla voidaan testata kvantitatiivisten muuttujien merkitsevyyttä. T-testiperheitä löytyy kaksi: **yhden otoksen t-testi** sekä **Studentin t-testi**.
 
@@ -39,27 +39,27 @@ for (i in c(1, 10, 300) ) {
 
 **Kahden otoksen t-testi** testaa kahden eri otoksen keskiarvojen eroa, eli arvot tulevat **eri** yksiköstä (esim. eri vastaajaryhmät). Tätä voi käyttää, kun haluaa tarkastaa miten esimerkiksi kaksi sosiaalista ryhmää eroavat jollain muuttujalla. Testin ei-parametrinen vastaavuus on **Mann-Whitney'n U-testi** (@sec-mann-whitneyn-u-testi).
 
-Kahden otoksen testille löytyy vielä kaksi alaversiota, jotka riippuvat ryhmien välisestä varianssivaihtelusta: **homoskedastinen** ja **heteroskedastinen** testi.
-
-**Kahden otoksen homoskedastista t-testiä** voi käyttää, jos molempien ryhmien varianssi on samankokoinen.
-
-**Kahden otoksen heteroskedastistia t-testiä** tulee taas käyttää, jos varianssi eroaa ryhmien välillä. Yleensä yhteiskuntatieteissä varianssi eroaa, joten käytämme useimmiten heteroskedastista t-testiä.
-
-Heteroskedastisuutta voi testata mm. **Levenen testillä**, tai tarkistamalla ryhmien varianssit numeroissa tai kuviossa. Huomaa kuitenkin, että Levenen testi on usein merkitsevä suurissa otoksissa, vaikka varianssi ei sinänsä eroaisi tarpeeksi vaikuttaakseen. Tämän takia Levenen testiä tulisi välttää; parempi toiminta on tarkistaa varianssierot graafisesti tai numeroilla, tai jopa vain olettaa heteroskedastisuuden esiintyvän.
+Tässä kirjassa kahden otoksen t-testinä käytetään **Welchin t-testiä**. Testiversio toimii muuttujilla, joiden ryhmillä on eri varianssit (eli ovat **heteroskedastisia**). Studentin T-testistä löytyy myös **homoskedastisen** suhteen t-testi, mutta koska Welchin t-testi on robustimpi, emme käytä Studentin homoskedastista t-testiä. Welchin t-testin laskeminen käsin on hankalampaa, myönnetään, mutta se on vakiintuneessa käytössä tieteessä.
 
 ## T-testin vapausasteet {#sec-t-testin-vapausasteet}
 
 **Vapausasteet** t-testille määritellään hieman eri tavalla riippuen testimuodosta. Taulukossa [-@tbl-t-testi-vapausasteet] näkyy vapausasteiden laskentatavat:
 
-| Testityyppi                 | Vapausasteet                |
-|-----------------------------|-----------------------------|
-| Yhden otoksen t-testi       | $\text{df} = n - 1$         |
-| Parittaisen otoksen t-testi | $\text{df} = n - 1$         |
-| Kahden otoksen t-testi      | $\text{df} = n_1 + n_2 - 2$ |
++-----------------------------+---------------------------------------------------------+
+| Testityyppi                 | Vapausasteet                                            |
++=============================+=========================================================+
+| Yhden otoksen t-testi       | $\text{df} = n - 1$                                     |
++-----------------------------+---------------------------------------------------------+
+| Parittaisen otoksen t-testi | $\text{df} = n - 1$                                     |
++-----------------------------+---------------------------------------------------------+
+| Kahden otoksen t-testi      | $\text{df} = \frac{1}{Z_1 + Z_2}$                       |
+|                             |                                                         |
+|                             | $Z_k = (\frac{SD_k/n_k}{SD_1/n_1 + SD_2/ n_2})^2/(n-1)$ |
++-----------------------------+---------------------------------------------------------+
 
 : T-testin vapausasteiden laskenta {#tbl-t-testi-vapausasteet}
 
-Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisesti otoskoko minus yksi. Kahden otoksen t-testin vapausasteet ovat molempien ryhmien koot summattuna, minus kaksi.
+Sekä yhden että parittaisen otoksen t-testin vapausasteet ovat yksinkertaisesti otoskoko miinus yksi. Kahden otoksen Welchin t-testin vapausasteet ovat hieman hankalammat. Molemmille ryhmille lasketaan $Z$-arvo: ryhmän keskihajonta jaattuna otoskoolla, ja tämä jaattuna molempien ryhmien keskihajonnan ja otoskoon jakolaskujen summalla, ja vielä tulos neliöön. Jaa sitten tulos otoskoolla miinus yksi.
 
 ## T-testin mallioletukset {#sec-t-testin-mallioletukset}
 
@@ -71,7 +71,7 @@ T-testillä on kolme pääsääntöistä mallioletusta: **normaalijakautuminen**
 
 Jos testaat Studentin t-testillä, normaalijakautunut arvo on **testin alla oleva ero**, ei arvot itsessään.
 
-Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. Käytä mielummin ei-parametristä testiä.
+Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. **Käytä mielummin ei-parametristä testiä**.
 
 ### Homoskedastisiteetti {#sec-homoskedastisiteetti-t}
 
@@ -79,7 +79,7 @@ Jos kuitenkin testaat pienellä otoskoolla, voi tällä olla vaikutusta. Käytä
 
 Voit testata oletusta useilla eri menetelmillä (ks. @sec-mallioletukset).
 
-Jos varianssit eivät ole samoja, voit käyttää heteroskedastista testiversiota (ks. alla). Tämän rikkominen ei siis ole juurikaan ongelma.
+Welchin t-testi on rakennettu toimimaan heteroskedastisella datajakaumalla, eli tämän rikkominen ei ole ongelma sen kannalta.
 
 ### Joko täysin samat tai täysin eri yksiköt {#sec-joko-täysin-samat-tai-täysin-eri-yksiköt-t}
 
@@ -87,7 +87,7 @@ Jos varianssit eivät ole samoja, voit käyttää heteroskedastista testiversiot
 
 Tarkista tämä oletus miettimällä: ovatko kaikki tutkimusyksiköt samasta vai eri yksiköstä?
 
-Jos rikot olettamuksen, et voi käyttää t-testiä. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. *mixed models*), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.
+**Jos rikot olettamuksen, et voi käyttää t-testiä**. Tilastollisia menetelmiä tällaisen mallintamiseen löytyy (engl. *mixed models*), mutta niiden käyttö on jo huomattavasti vaikeampaa eikä onnistu luontevasti Excelissä.
 
 ### Yhteenveto vaatimuksista {#sec-yhteenveto-vaatimuksista-t}
 
@@ -111,7 +111,8 @@ flowchart LR
   A{Otoskoko?} --> B
   A --> C
   B(Pieni) --> D
-  C(Iso) ----> 1([Yhden otoksen t-testi])
+  C(Iso) ----> 1(["Yhden otoksen
+  t-testi"])
   D{Normaalijakauma?} --> E
   D --> F
   E(Kyllä) --> 1
@@ -128,11 +129,13 @@ flowchart LR
   A{Otoskoko?} --> B
   A --> C
   B(Pieni) --> D
-  C(Iso) ----> 1([Parittaisen otoksen t-testi])
+  C(Iso) ----> 1(["Parittaisen otok-
+  sen t-testi"])
   D{Normaalijakauma?} --> E
   D --> F
   E(Kyllä) --> 1
-  F(Ei) --> 2([Wilcoxon signed-rank])
+  F(Ei) --> 2(["Wilcoxon
+  signed-rank"])
 ```
 
 ### Kaksi muuttujaa (eri yksiköt)
@@ -148,17 +151,14 @@ flowchart LR
   D{Normaalijakauma?} --> E
   D --> F
   E(Kyllä) --> G
-  F(Ei) ----> 2([Mann-Whitney U])
-  G{Varianssihomogeniteetti?} --> H
-  G --> I
-  H(Homoskedastinen) --> 3([Homoskedastinen t-testi])
-  I(Heteroskedastinen) --> 4([Heteroskedastinen t-testi])
+  F(Ei) --> 2([Mann-Whitney U])
+  G([Welchin t-testi])
 ```
 :::
 
 ## T-testin laskeminen {#sec-t-testin-laskeminen}
 
-[T-testin laskukaavat eroavat testiperheiden välillä]{.underline}. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi, kahden otoksen homoskedastinen testi vai kahden otoksen heteroskedastinen testi.
+[T-testin laskukaavat eroavat testiperheiden välillä]{.underline}. Varmista siis aina ensin, onko kyseessä yhden otoksen tesi, parittaisen otoksen testi vai kahden otoksen testi.
 
 ### Yhden otoksen t-testi {#sec-yhden-otoksen-t-testi-teoria}
 
@@ -184,25 +184,29 @@ $1/n\sum{x-y}$ on erotuksen keskiarvo[^ttesti-1], $\sigma$ on erotuksen keskihaj
 
 Laske ensin muuttujien väliset erotukset uudeksi muuttujaksi. Laske sitten tämän muuttujan keskiarvo ja keskihajonta. Syötä viimeiseksi nämä, sekä otoskoon neliöjuuri, kaavaan. Lopputulos on parittaisen t-testin testisuure.
 
-### Kahden otoksen homoskedastinen t-testi {#sec-kahden-otoksen-homoskedastinen-t-testi-teoria}
+### Kahden otoksen (Welchin) t-testi {#sec-kahden-otoksen-welchin-t-testi-teoria}
 
-**Kahden otoksen homoskedastisen t-testin** kaava on:
+**Kahden otoksen Welchin t-testin** kaava on:
 
-$$ t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$ {#eq-t-3}
+$$
+t = \frac{\bar{x} - \bar{y}} {S'_D}
+$$
 
-$\bar{x} - \bar{y}$ on molempien otosten keskiarvojen ero. $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ on erotuksen keskihajonta, joka koostuu useammasta asiasta.
+$\bar{x} - \bar{y}$ on ryhmien keskiarvojen ero. $S'_D$ on **ryhmitetyn varianssin keskivirhe**, joka itsessään koostuu monesta osasta:
 
-Laske ensin molempien ryhmien keskiarvot ja niiden erotus. Laske sitten molempien ryhmien keskihajonnat, jaa ne ryhmien otoskoolla, ja summaa tulokset yhteen. Ota tämän tuloksen neliöjuuri. Viimeiseksi, jaa aikaisemmin laskettu keskiarvoerotus neliöjuuren tuloksella. Lopputulos on kahden otoksen homoskedastisen t-testin testisuure.
+$$
+S'_D = S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}
+$$
 
-### Kahden otoksen heteroskedastinen t-testi {#sec-kahden-otoksen-heteroskedastinen-t-testi-teoria}
+Ryhmitetyn varianssin keskivirhe on itse ryhmitetty varianssi $S_p$ kertaa otoskokojen inverssien summan neliöjuuri $\sqrt{1/n_1 + 1/n_2}$.
 
-**Kahden otoksen heteroskedastisen t-testin** kaava on:
+**Ryhmitetty varianssi** (engl. *pooled variance*) ottaa huomioon molempien ryhmien eri keskihajonnat ja otoskoot:
 
-$$ \begin{split} t = \frac{\bar{x} - \bar{y}} {\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\ s^2_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2} {n_1 + n_2 - 2} \end{split} $$ {#eq-t-4}
+$$
+S_p = \sqrt{\frac{(n_1 - 1) s^2_1 + (n_2 - 1) s^2_2}{n_1 + n_2 - 2}}
+$$
 
-T-testin jaon yläpuoli on sama kuin homoskedastisessa testissä, mutta alaosa on muuttunut. Sen sijaan, että käytettäisiin erotusten keskihajontaa, käytetään niin sanottua ryhmitettyä varianssia (engl. *pooled variance*), $s^2_p$. Se koostuu molempien otosten otoskoista $n_1$ ja $n_2$, sekä otosten yksittäisistä variansseista $s_1$ ja $s_2$.
-
-Laske ensin ryhmitetty varianssi yllä olevalla kaavalla. Jaa sitten ryhmitetty varianssi erikseen molemmilla otoskokoilla, summaa tulos yhteen ja ota tämän neliöjuuri. Laske sitten molempien ryhmien keskiarvojen ero, ja jaa tämä tulos aikaisemmalla neliöjuurituloksella.
+Kaavan laskenta kannattaa aloittaa "alhaalta ylös". Ensin lasketaan ryhmien keskihajonnat (muista keskihajontojen nostaminen neliöön!), sitten ryhmitetty varianssi. Sitten kerrotaan ryhmitetty varianssi otoskokojen inverssien summan neliöjuurella saadaksemme ryhmitetyn varianssin keskivirhe. Viimeiseksi lasketaan keskiarvojen erotus ja jaataan tulos ryhmitetyn varianssin keskivirheellä. Lopputulos on Welchin t-testin suure.
 
 ## Mittakoon laskeminen {#sec-mittakoon-laskeminen-t}
 
@@ -230,7 +234,7 @@ $$
 \hat{d}_D = \frac{\hat{d}}{\sqrt{1-r}}
 $$ {#eq-t-7}
 
-jossa $r$ on mittausten yhteiskorrelaatio (ks. @sec-korrelaatio-teoria).
+jossa $r$ on yllä oleva $r$-suure.
 
 ## T-testin laskeminen Excelissä {#sec-t-testin-laskeminen-excelissä}
 
@@ -246,17 +250,98 @@ Excelissä löytyy valmis kaava, jolla saat **Studentin t-testin** p-arvon:
 
 Funktio: @sec-t-testi
 
-**Luottamusvälin** laskemiseen voit käyttää yleistä luottamusvälin kaavaa t-suureelle (ks. @sec-luottamusväli-teoria).
+[**Yhden otoksen t-testin** laskeminen:]{.underline}
 
-**Yhden otoksen t-testille** ei löydy valmista kaavaa, mutta sen implementointi ei ole kovin hankalaa.
+1.  Hae testattava muuttuja uuteen sarakkeeseen, suodattaen tyhjät solut pois: `=SUODATA(testattava_muuttuja; testattava_muuttuja <> "")`
+    1.  Käytä tätä aluetta seuraavissa laskuissa parametreissä `muuttuja`
+2.  Laske t-suure: `=(KESKIARVO(muuttuja) - testattava_arvo) / (KESKIHAJONTA.S(muuttuja) / NELIÖJUURI(LASKE(muuttuja)))`
+    1.  Jos testattava arvo on `0`, voit jättää sen kokonaan pois kaavasta.
+3.  Laske t-suureen vapausasteet: `= LASKE(muuttuja) - 1`
+4.  Hae t-suuren todennäköisyys:
+    1.  Yksisuuntainen:
+        1.  Vasenhäntäinen: `=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)`
+        2.  Oikeahäntäinen: `=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)`
+    2.  Kaksisuuntainen: `=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)`
+5.  Laske t-suureen luottamusväli:
+    1.  Suuri otos:
+        1.  Yläraja: `=KESKIARVO(muuttuja) + LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))`
+        2.  Alaraja: `=KESKIARVO(muuttuja) - LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))`
+    2.  Pieni otos:
+        1.  Yläraja: `=KESKIARVO(muuttuja) + LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))`
+        2.  Alaraja: `=KESKIARVO(muuttuja) - LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(muuttuja); LASKE(muuttuja))`
+    3.  Parametri `alfa` edustaa valitsemaasi alfatasoa, esim. `0,05` (95 % luottamusvälille).
+6.  Laske mittakoko:
+    1.  Pearsonin $r$: `=NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet))`
+    2.  Cohenin $\hat{d}$: `=KESKIARVO(muuttuja) - testattava_arvo / VAR.S(muuttuja)`
+    3.  Cohenin korjattu $d$: `=cohenin_d / NELIÖJUURI(1 - r)`
 
-[Excelissä ei ole valmiita kaavoja testisuureen laskemiseen]{.underline}. Koska näiden implementointi Excelissä on työlästä, olen kirjoittanut valmiit kaavat. Ne löytyvät [luvusta @sec-lambda-kaavoja].
+[**Parittaisen t-testin** laskeminen:]{.underline}
+
+1.  Hae testattavat muuttujat uusiin sarakkeisiin, suodattaen tyhjät arvot parillisesti pois:
+    1.  Muuttuja 1: `=SUODATA(muuttuja1_alkuperäinen; (muuttuja1_alkuperäinen <> "") * (muuttuja2_alkuperäinen <> ""))`
+    2.  Muuttuja 2: `=SUODATA(muuttuja2_alkuperäinen; (muuttuja1_alkuperäinen <> "") * (muuttuja2_alkuperäinen <> ""))`
+    3.  Käytä näitä alueita seuraavissa laskuissa parametreissä `muuttuja1` ja `muuttuja2`
+2.  Laske muuttujien erotus uudeksi muuttujaksi: `=muuttuja1# - muuttuja2#`
+3.  Laske erotuksen keskiarvo ja keskihajonta: `=KESKIARVO(erotus)` ja `=KESKIHAJONTA.S(erotus)`
+4.  Laske parittainen t-suure: `=KESKIARVO(erotus) / (KESKIHAJONTA.S(erotus) / NELIÖJUURI(LASKE(erotus)))`
+5.  Laske t-suureen vapausasteet: `=LASKE(erotus) - 1`
+6.  Hae t-suureen todennäköisyys:
+    1.  Yksisuuntainen:
+        1.  Vasenhäntäinen: `=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)`
+        2.  Oikeahäntäinen: `=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)`
+    2.  Kaksisuuntainen: `=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)`
+7.  Laske t-suureen luottamusväli:
+    1.  Suuri otos:
+        1.  Yläraja: `=KESKIARVO(erotus) + LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))`
+        2.  Alaraja: `=KESKIARVO(erotus) - LUOTTAMUSVÄLI.NORM(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))`
+    2.  Pieni otos:
+        1.  Yläraja: `=KESKIARVO(erotus) + LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))`
+        2.  Alaraja: `=KESKIARVO(erotus) - LUOTTAMUSVÄLI.T(alfa / 2; KESKIHAJONTA.S(erotus); LASKE(erotus))`
+    3.  Parametri `alfa` edustaa valitsemaasi alfatasoa, esim. `0,05` (95 % luottamusvälille).
+8.  Laske mittakoko:
+    1.  Pearsonin $r$: ``` =``NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet)) ```
+    2.  Cohenin $\hat{d}$: `=erotus / NELIÖJUURI(VAR.S(erotus))`
+
+[**Kahden otoksen t-testin** laskeminen:]{.underline}
+
+1.  Hae riippuvaisen muuttujan data uusiin sarakkeisiin ryhmityksen mukaan, suodattaen tyhjät pois:
+    1.  Ryhmä 1: `=SUODATA(riippuvainen_muuttuja; (ryhmämuuttuja = ryhmä1nro) * (riippuvainen_muuttuja <> ""))`
+    2.  Ryhmä 2: `=SUODATA(riippuvainen_muuttuja; (ryhmämuuttuja = ryhmä2nro) * (riippuvainen_muuttuja <> ""))`
+    3.  Käytä näitä alueita seuraavissa muuttujissa parametreissä `ryhmä1` ja `ryhmä2`
+2.  Laske ryhmien keskiarvot: `=KESKIARVO(ryhmä1)` ja `=KESKIARVO(ryhmä2)`
+3.  Laske ryhmien keskihajonnat: `=KESKIHAJONTA.S(ryhmä1)` ja `=KESKIHAJONTA.S(ryhmä2)`
+4.  Laske ryhmien varianssit: `=VAR.S(ryhmä1)` ja `=VAR.S(ryhmä2)`
+5.  Laske ryhmäkoot: `=LASKE(ryhmä1)` ja `=LASKE(ryhmä2)`
+6.  Laske ryhmille z-koot:
+    1.  Ryhmä 1: `=((varianssi1/koko1) / (varianssi1/koko1 + varianssi2/koko2))^2 / (koko1 - 1)`
+    2.  Ryhmä 2: `=((varianssi2/koko2) / (varianssi1/koko1 + varianssi2/koko2))^2 / (koko2 - 1)`
+7.  Laske keskiarvojen erotus: `=keskiarvo1 - keskiarvo2`
+8.  Laske ryhmitetty varianssi: `=((koko1 - 1) * keskihajonta1 ^ 2 + (koko2 - 1) * keskihajonta2 ^ 2) / (koko1 + koko2 - 2)`
+9.  Laske ryhmitetyn varianssin keskivirhe: `=NELIÖJUURI(ryhmitetty_varianssi) * NELIÖJUURI(1 / koko1 + 1 / koko2)`
+10. Laske t-suure: `=keskiarvojen_erotus / ryhmitetyn_varianssin_keskivirhe`
+11. Laske t-suureen vapausasteet: `=1 / (z_1 + z_2)`
+12. Hae t-suureen todennäköisyys:
+    1.  Yksisuuntainen:
+        1.  Vasenhäntäinen: `=T.JAKAUMA(ITSEISARVO(t-suure); vapausasteet; EPÄTOSI)`
+        2.  Oikeahäntäinen: `=T.JAKAUMA.OH(ITSEISARVO(t-suure); vapausasteet)`
+    2.  Kaksisuuntainen: `=T.JAKAUMA.2S(ITSEISARVO(t-suure); vapausasteet)`
+13. Laske t-suureen luottamusväli:
+    1.  Suuri otos:
+        1.  Yläraja: `=keskiarvojen_erotus + LUOTTAMUSVÄLI.NORM(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe`
+        2.  Alaraja: `=keskiarvojen_erotus - LUOTTAMUSVÄLI.NORM(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe`
+    2.  Pieni otos:
+        1.  Yläraja: `=keskiarvojen_erotus + LUOTTAMUSVÄLI.T(alfa / 2; 1; MAKS(koko1; koko2)) * ryhmitetty_varianssin_keskivirhe`
+        2.  Alaraja: `=keskiarvojen_erotus - LUOTTAMUSVÄLI.T(alfa / 2; 1; MAKS(koko1; koko2)) *ryhmitetty_varianssin_keskivirhe`
+    3.  Parametri `alfa` edustaa valitsemaasi alfatasoa, esim. `0,05` (95 % luottamusvälille).
+14. Laske mittakoko:
+    1.  Pearsonin $r$: `=NELIÖJUURI(t-suure ^ 2 / (t-suure ^ 2 + vapausasteet))`
+    2.  Cohenin $\hat{d}$: `=keskiarvojen_erotus / NELIÖJUURI(ryhmitetty_varianssi)`
 
 ## T-testin raportointi {#sec-t-testin-raportointi}
 
 T-testille tulisi mieluisesti raportoida seuraavat tiedot:
 
--   Testin tyyppi (yhden, parittaisen vai kahden otoksen testi, homo- vai heteroskedastinen)
+-   Testin tyyppi (yhden, parittaisen vai kahden otoksen testi)
 
 -   Verratut arvot $\bar{x}$ ja $\bar{y}$
 
@@ -273,5 +358,5 @@ T-testille tulisi mieluisesti raportoida seuraavat tiedot:
 ::: callout-note
 ## Esimerkki t-testin raportoinnista
 
-Yleisen vaaramerkin toimintamallien osaamisessa on sukupuolittuneita eroja. Naisista 10 prosenttia osaavat toimia oikein, mutta miehistä vain 5 prosenttia. Ero on tilastollisesti merkitsevä (t = 4,942, df = 2830,6, *p* \< 0,0001, eron 95% CI \[0,03; 0,07\]). Cohenin *d*-suure osoittaa keskikokoista eroa (d = 0,135, 95% CI \[0,064; 0,206\]). Testissä käytettiin kahden otoksen heteroskedastista t-suuretta, koska Levenen testi oli merkitsevä (Levenen testi = 100,2, *p* \< 0,0001).
+Yleisen vaaramerkin toimintamallien osaamisessa on sukupuolittuneita eroja. Naisista 10 prosenttia osaavat toimia oikein, mutta miehistä vain 5 prosenttia. Ero on tilastollisesti merkitsevä (t = 4,942, df = 2830,6, *p* \< 0,0001, eron 95% CI \[0,03; 0,07\]). Cohenin *d*-suure osoittaa keskikokoista eroa (d = 0,135, 95% CI \[0,064; 0,206\]). Testissä käytettiin kahden otoksen Welchin t-suuretta, koska Levenen testi oli merkitsevä (Levenen testi = 100,2, *p* \< 0,0001).
 :::
