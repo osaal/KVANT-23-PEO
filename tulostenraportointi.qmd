@@ -1,0 +1,126 @@
+# Tulosten raportointi {#sec-tulosten-raportointi}
+
+Tässä luvussa käydään läpi, mitä lukuja pitäisi raportoida jokaisen testin kohdalla, listauksin ja esimerkein.
+
+## Ei-parametriset testit {#sec-ei-parametriset-testit-raportointitaulukko}
+
++--------------------------------------------+------------------------------------------------------------------------------------+
+| Testi                                      | Suureet                                                                            |
++============================================+====================================================================================+
+| Merkkitesti                                | 1.  Testattava mediaani $Md$                                                       |
+|                                            | 2.  Nollahypoteesin raja-arvo                                                      |
+| (@sec-merkkitesti-teoria)                  | 3.  Testin häntäisyys                                                              |
+|                                            |     1.  Jos yksihäntäinen: Suunta (suurempi kuin vai pienempi kuin raja-arvo)      |
+|                                            |     2.  Jos kaksihäntäinen: Kumpi merkkimääristä testattiin                        |
+|                                            | 4.  Testin suure - merkkimäärä, jota testattiin                                    |
+|                                            | 5.  Otoskoko $n$                                                                   |
+|                                            | 6.  Todennäköisyysarvo $p$                                                         |
++--------------------------------------------+------------------------------------------------------------------------------------+
+| Wilcoxonin signed-rank -testi              | 1.  Testisuure $T$                                                                 |
+|                                            | 2.  Otoskoko $n$                                                                   |
+| (@sec-wilcoxonin-signed-rank-testi-teoria) | 3.  Testin häntäisyys                                                              |
+|                                            |     1.  Jos yksihäntäinen: Suunta (suurempi kuin vai pienempi kuin nollahypoteesi) |
+|                                            | 4.  Todennäköisyysarvo $p$                                                         |
+|                                            | 5.  Jos laskit $z$-arvon:                                                          |
+|                                            |     1.  Z-arvo $z$                                                                 |
+|                                            |     2.  Keskiarvo $\bar{T}$                                                        |
+|                                            |     3.  Keskihajonta $SD$                                                          |
+|                                            |     4.  Z-arvon todennäköisyysarvo $p$                                             |
+|                                            | 6.  Jos laskit r-arvon:                                                            |
+|                                            |     1.  R-arvo $r$                                                                 |
++--------------------------------------------+------------------------------------------------------------------------------------+
+| Mann-Whitney'n U-testi                     | 1.  Ryhmien mediaanit $Md$                                                         |
+|                                            | 2.  U-suure $U$                                                                    |
+| (@sec-mann-whitneyn-u-testi)               | 3.  Ryhmien otoskoot $n_1$ ja $n_2$                                                |
+|                                            | 4.  Z-arvo $z$                                                                     |
+|                                            | 5.  Z-arvon todennäköisyysarvo $p$                                                 |
+|                                            | 6.  Jos lasket r-arvon:                                                            |
+|                                            |     1.  R-arvo $r$                                                                 |
++--------------------------------------------+------------------------------------------------------------------------------------+
+| Spearmanin rho-korrelaatio                 | 1.  Rho-suure $\rho$ tai $r_s$                                                     |
+|                                            | 2.  T-suure $t$                                                                    |
+| (@sec-spearmanin-rho-teoria)               | 3.  T-suureen vapausasteet $df$                                                    |
+|                                            | 4.  T-suureen todennäköisyysarvo $p$                                               |
++--------------------------------------------+------------------------------------------------------------------------------------+
+
+: Ei-parametristen testien tärkeimmät suureet raportoitavaksi {#tbl-ei-parametriset-testit-raportointi}
+
+## Parametriset testit {#sec-parametriset-testit-raportointitaulukko}
+
++---------------------------+-------------------------------------------------------------------------------+
+| Testi                     | Suureet                                                                       |
++===========================+===============================================================================+
+| T-testi                   | 1.  Testin tyyppi (yhden, parittaisen vai kahden otoksen testi)               |
+|                           | 2.  Verratut ryhmäkeskiarvot $\bar{x}$ ja $\bar{y}$                           |
+| (@sec-t-testi-teoria)     | 3.  Otoskoko/koot                                                             |
+|                           |     1.  Jos yhden otoksen testi: Otoskoko $n$                                 |
+|                           |     2.  Jos parittainen testi: Otoskoko $n$                                   |
+|                           |     3.  Jos kahden otoksen testi: Verrattujen ryhmien otoskoot $n_x$ ja $n_y$ |
+|                           | 4.  T-suure $t$                                                               |
+|                           | 5.  T-suureen vapausasteet $df$                                               |
+|                           | 6.  T-suureen todennäköisyysarvo $p$                                          |
+|                           | 7.  Jos laskit: Luottamusväli $CI$                                            |
+|                           | 8.  Mittakoko, joko $r$-suure tai Cohenin $\hat{d}$                           |
++---------------------------+-------------------------------------------------------------------------------+
+| Pearsonin korrelaatio     | 1.  Pearsonin korrelaatiokerroin $r$                                          |
+|                           | 2.  Otoskoko $n$                                                              |
+| (@sec-korrelaatio-teoria) | 3.  Korrelaatiokertoimen todennäköisyysarvo $p$                               |
+|                           | 4.  Jos laskit: Luottamusväli $CI$                                            |
++---------------------------+-------------------------------------------------------------------------------+
+| Khiin neliö               | 1.  Khiin neliön testisuure $\chi^2$                                          |
+|                           |     1.  HUOM: Summattu suure, ei yksittäisten solujen arvot!                  |
+| (@sec-khiin-neliö)        | 2.  Khiin neliön vapausasteet $df$                                            |
+|                           | 3.  Khiin neliön todennäköisyysarvo $p$                                       |
+|                           | 4.  Kuinka moni odotettu arvo on alle 1 tai alle 5?                           |
+|                           | 5.  Jos laskit: Cramérin V-suure $V$                                          |
++---------------------------+-------------------------------------------------------------------------------+
+
+: Parametristen testien tärkeimmät suureet raportoitavaksi {#tbl-parametriset-testit-raportointi}
+
+## Esimerkkejä tekstiraportoinnista {#sec-esimerkkejä-tekstiraportoinnista}
+
+### Ei-parametriset testit {#sec-ei-parametriset-testit-raportointiesimerkit}
+
+::: callout-note
+## Merkkitesti
+
+Rakensimme summamuuttujan neljästätoista riskikäsityksestä ja keskitimme muuttujan nollalle. Keskittäminen onnistui, ja muuttuja ei eroa tilastollsesti nollasta kaksihäntäisessä merkkitestissä ($Md = 0$, arvoja alle nollan yhteensä $115$, $n = 237$, $p = 0.697$). Merkkitestissä testattiin pienempi kahdesta merkkimäärästä, negatiiviset merkit.
+:::
+
+::: callout-note
+## Wilcoxonin signed-rank -testi
+
+Esimerkki tulossa.
+:::
+
+::: callout-note
+## Mann-Whitney'n U-testi
+
+Naisten ja miesten välillä havaittiin ero riskikäsityksissä. Naisten ($n = 112$) mediaaniriskikäsitys oli $0.05$ kun miesten ($n = 123$) mediaani oli pienempi $-0.01$. Ero on tilastollisesti merkitsevä mutta pieni ($U = 5581.5$, $z = -2.51$, $p = 0.012$, $r = -0.16$). Testinä käytettiin ei-parametristä Mann-Whitney'n U-testiä, mutta kahden otoksen Welchin t-testin käyttäminen olisi myös mahdollista.
+:::
+
+::: callout-note
+## Spearmanin rho-korrelaatio
+
+Ikäryhmän ja riskikäsityksen välillä ei havaittu merkitsevää yhteyttä ($r_s = 0.06$, $t = 0.95$, $df = 292$, $p = 0.252$). Testinä käytettiin ei-parametristä Spearmanin korrelaatiota, koska ikäryhmä on kategorinen muuttuja.
+:::
+
+### Parametriset testit {#sec-parametriset-testit-raportointiesimerkit}
+
+::: callout-note
+## T-testit
+
+Naiset ja miehet eroavat riskikäsityksissään: naisten ($n = 112$) keskiarvo mittarilla on $0.03$ ja miesten ($n = 123$) matalempi $-0.03$. Eron koko on siis noin $0,06$ yksikköä. Ero on tilastollisesti merkitsevä ja kooltaan pienestä keskikokoiseen ($t = 2.40$, $\hat{d} = 0.31$ $df = 230.8$, $p = 0.017$, $95\% \text{ CI } [0.058, 0.076]$). Testinä käytettiin kahden otoksen Welchin t-testiä.
+:::
+
+::: callout-note
+## Pearsonin korrelaatio
+
+Ikäryhmän ja riskikäsityksen välillä ei havaittu merkitsevää yhteyttä ($r = -0.07$, $n = 237$, $p = 0.256$, $95\% \text{ CI } [-0.20, 0.05]$).
+:::
+
+::: callout-note
+## Khiin neliö
+
+Prontoon kirjatuissa asuntopaloissa havaittiin suuri, merkitsevä yhteys rakennuksen riskiluokituksen ja palovaroittimen toiminnan välillä ($\chi^2 = 29.3$, $\text{df} = 9$, $p = 0.0006$, $V = 0.22$). Riskiluokkaan 1 kuuluvista rakennuksista jopa 56 prosentilla puuttui palovaroitin, kun vastaava arvo muissa riskiluokissa oli 18 - 33 prosenttia. Palovaroittimen toiminta oli harvinaisinta riskiluokka 4:ssä (7 %). Kaikki odotetut arvot ylittivät yhden, mutta kolme solua (19 %) olivat alle viiden. Tulokset ovat siten tulkittavuuden rajalla, ja voivat olla väärällisiä.
+:::

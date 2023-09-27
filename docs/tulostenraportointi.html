@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Oliver Saal">
 
-<title>Kvantitatiiviset menetelmät -kurssin verkkokirja</title>
+<title>Kvantitatiiviset menetelmät -kurssin verkkokirja - 3&nbsp; Tulosten raportointi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./ohjeitaviittaamiseen.html" rel="prev">
 <link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -65,12 +65,12 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja">
+<meta name="twitter:title" content="Kvantitatiiviset menetelmät -kurssin verkkokirja - 3&nbsp; Tulosten raportointi">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -234,26 +234,62 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tulostenraportointi.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualisoinninalkeet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tulostenraportointi.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">Sisällysluettelo</h2>
    
   <ul>
-  <li><a href="#sec-aluksi" id="toc-sec-aluksi" class="nav-link active" data-scroll-target="#sec-aluksi">Aluksi</a>
+  <li><a href="#sec-ei-parametriset-testit-raportointitaulukko" id="toc-sec-ei-parametriset-testit-raportointitaulukko" class="nav-link active" data-scroll-target="#sec-ei-parametriset-testit-raportointitaulukko"><span class="header-section-number">3.1</span> Ei-parametriset testit</a></li>
+  <li><a href="#sec-parametriset-testit-raportointitaulukko" id="toc-sec-parametriset-testit-raportointitaulukko" class="nav-link" data-scroll-target="#sec-parametriset-testit-raportointitaulukko"><span class="header-section-number">3.2</span> Parametriset testit</a></li>
+  <li><a href="#sec-esimerkkejä-tekstiraportoinnista" id="toc-sec-esimerkkejä-tekstiraportoinnista" class="nav-link" data-scroll-target="#sec-esimerkkejä-tekstiraportoinnista"><span class="header-section-number">3.3</span> Esimerkkejä tekstiraportoinnista</a>
   <ul class="collapse">
-  <li><a href="#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" id="toc-sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" class="nav-link" data-scroll-target="#sec-kirjan-oikeellisuus-ja-mahdolliset-virheet">Kirjan oikeellisuus ja mahdolliset virheet</a></li>
-  <li><a href="#lähdekoodi" id="toc-lähdekoodi" class="nav-link" data-scroll-target="#lähdekoodi">Lähdekoodi</a></li>
-  <li><a href="#sec-tekijänoikeudet" id="toc-sec-tekijänoikeudet" class="nav-link" data-scroll-target="#sec-tekijänoikeudet">Tekijänoikeudet</a></li>
-  <li><a href="#sec-viittaaminen-kirja" id="toc-sec-viittaaminen-kirja" class="nav-link" data-scroll-target="#sec-viittaaminen-kirja">Viittaaminen</a></li>
-  <li><a href="#sec-uusin-paivitys" id="toc-sec-uusin-paivitys" class="nav-link" data-scroll-target="#sec-uusin-paivitys">Uusin päivitys</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.3</a></li>
-  </ul></li>
+  <li><a href="#sec-ei-parametriset-testit-raportointiesimerkit" id="toc-sec-ei-parametriset-testit-raportointiesimerkit" class="nav-link" data-scroll-target="#sec-ei-parametriset-testit-raportointiesimerkit"><span class="header-section-number">3.3.1</span> Ei-parametriset testit</a></li>
+  <li><a href="#sec-parametriset-testit-raportointiesimerkit" id="toc-sec-parametriset-testit-raportointiesimerkit" class="nav-link" data-scroll-target="#sec-parametriset-testit-raportointiesimerkit"><span class="header-section-number">3.3.2</span> Parametriset testit</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action">Ilmoita ongelmasta</a></p></div></div></nav>
@@ -263,26 +299,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kvantitatiiviset menetelmät -kurssin verkkokirja</h1>
+<h1 class="title"><span id="sec-tulosten-raportointi" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Tekijä</div>
-    <div class="quarto-title-meta-contents">
-             <p>Oliver Saal </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Julkaistu</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">27. syyskuuta 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -290,53 +314,269 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="sec-aluksi" class="level1 unnumbered">
-<h1 class="unnumbered">Aluksi</h1>
-<p>Tämä verkkokirja sisältää lisämateriaaleja Pelastusopiston kurssille <strong>Kvantitatiiviset menetelmät</strong>.</p>
-<p>Kirja on jaettu osiin ja lukuihin sisällön mukaan. Sivun yläpalkista löytyy navigointi osien alla. Kun avaat jonkun luvun, kyseisen osan luvut näkyvät myös sivun oikeassa laidassa. Puhelimella saat oikean laidan valikon esille painamalla pientä valikkopainiketta sivun ylävasemmalla.</p>
-<p>Jos siirrät hiiren jonkun luvun otsikon päälle, voit klikata pientä ketjuikonia, jolloin sivun osoitteeksi muuttuu suora linkki siihen otsikkoon. Tällä tavalla voit esimerkiksi lisätä kyseisen luvun tai alaluvun suoraan kirjanmerkkeihisi tai jakaa linkin muille.</p>
-<p>Mukavia tilastollisia työhetkiä!</p>
-<p><strong>Kirjan versio</strong>: 1.3</p>
-<p><strong>Päivityshistoria</strong> löytyy kirjan viimeisestä luvusta. Uusimman päivityksen tiedot löydät alla (<a href="#sec-uusin-paivitys"><span>Alaluku&nbsp;5</span></a>).</p>
-<section id="sec-kirjan-oikeellisuus-ja-mahdolliset-virheet" class="level2">
-<h2 class="anchored" data-anchor-id="sec-kirjan-oikeellisuus-ja-mahdolliset-virheet">Kirjan oikeellisuus ja mahdolliset virheet</h2>
-<p>Verkkokirja on vielä kirjoitushetkellä työn alla. Siinä voi esiintyä virheitä ja muita ongelmia - vaikka toivon mukaan näin ei olisi.</p>
-<p>Jos huomaat virheen tai haluat kommentoida kirjaa, voit tehdä sen anonyymisti <a href="https://forms.gle/mVGjJKzTMVhhXoxX8">tässä kyselylomakkeessa</a>. Palautelomake ei tallenna mitään henkilötietoja, eikä siihen tule lisätä muitakaan tietoturvan vuoksi.</p>
-<p>Voit myös ehdottaa muutoksia tai raportoida ongelmia GitHubissa Issuena. Linkki löytyy jokaisen sivun oikealta puolelta, sisällysluettelon alla.</p>
+<p>Tässä luvussa käydään läpi, mitä lukuja pitäisi raportoida jokaisen testin kohdalla, listauksin ja esimerkein.</p>
+<section id="sec-ei-parametriset-testit-raportointitaulukko" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-ei-parametriset-testit-raportointitaulukko"><span class="header-section-number">3.1</span> Ei-parametriset testit</h2>
+<div id="tbl-ei-parametriset-testit-raportointi" class="anchored">
+<table class="table">
+<caption>Taulukko&nbsp;3.1: Ei-parametristen testien tärkeimmät suureet raportoitavaksi</caption>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Testi</th>
+<th>Suureet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Merkkitesti</p>
+<ol class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Testattava mediaani <span class="math inline">\(Md\)</span></li>
+<li>Nollahypoteesin raja-arvo</li>
+<li>Testin häntäisyys
+<ol type="1">
+<li>Jos yksihäntäinen: Suunta (suurempi kuin vai pienempi kuin raja-arvo)</li>
+<li>Jos kaksihäntäinen: Kumpi merkkimääristä testattiin</li>
+</ol></li>
+<li>Testin suure - merkkimäärä, jota testattiin</li>
+<li>Otoskoko <span class="math inline">\(n\)</span></li>
+<li>Todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><p>Wilcoxonin signed-rank -testi</p>
+<ol start="2" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Testisuure <span class="math inline">\(T\)</span></li>
+<li>Otoskoko <span class="math inline">\(n\)</span></li>
+<li>Testin häntäisyys
+<ol type="1">
+<li>Jos yksihäntäinen: Suunta (suurempi kuin vai pienempi kuin nollahypoteesi)</li>
+</ol></li>
+<li>Todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+<li>Jos laskit <span class="math inline">\(z\)</span>-arvon:
+<ol type="1">
+<li>Z-arvo <span class="math inline">\(z\)</span></li>
+<li>Keskiarvo <span class="math inline">\(\bar{T}\)</span></li>
+<li>Keskihajonta <span class="math inline">\(SD\)</span></li>
+<li>Z-arvon todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+</ol></li>
+<li>Jos laskit r-arvon:
+<ol type="1">
+<li>R-arvo <span class="math inline">\(r\)</span></li>
+</ol></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><p>Mann-Whitney’n U-testi</p>
+<ol start="3" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Ryhmien mediaanit <span class="math inline">\(Md\)</span></li>
+<li>U-suure <span class="math inline">\(U\)</span></li>
+<li>Ryhmien otoskoot <span class="math inline">\(n_1\)</span> ja <span class="math inline">\(n_2\)</span></li>
+<li>Z-arvo <span class="math inline">\(z\)</span></li>
+<li>Z-arvon todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+<li>Jos lasket r-arvon:
+<ol type="1">
+<li>R-arvo <span class="math inline">\(r\)</span></li>
+</ol></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><p>Spearmanin rho-korrelaatio</p>
+<ol start="4" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Rho-suure <span class="math inline">\(\rho\)</span> tai <span class="math inline">\(r_s\)</span></li>
+<li>T-suure <span class="math inline">\(t\)</span></li>
+<li>T-suureen vapausasteet <span class="math inline">\(df\)</span></li>
+<li>T-suureen todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="lähdekoodi" class="level2">
-<h2 class="anchored" data-anchor-id="lähdekoodi">Lähdekoodi</h2>
-<p>Verkkokirjan lähdekoodi on saatavilla <a href="https://github.com/osaal/KVANT-23-PEO">GitHubissa</a>. Jos haluat ehdottaa muutoksia kirjaan, voit tehdä Pull Requestin GitHubissa tai avata Issuen.</p>
+<section id="sec-parametriset-testit-raportointitaulukko" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-parametriset-testit-raportointitaulukko"><span class="header-section-number">3.2</span> Parametriset testit</h2>
+<div id="tbl-parametriset-testit-raportointi" class="anchored">
+<table class="table">
+<caption>Taulukko&nbsp;3.2: Parametristen testien tärkeimmät suureet raportoitavaksi</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Testi</th>
+<th>Suureet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>T-testi</p>
+<ol start="5" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Testin tyyppi (yhden, parittaisen vai kahden otoksen testi)</li>
+<li>Verratut ryhmäkeskiarvot <span class="math inline">\(\bar{x}\)</span> ja <span class="math inline">\(\bar{y}\)</span></li>
+<li>Otoskoko/koot
+<ol type="1">
+<li>Jos yhden otoksen testi: Otoskoko <span class="math inline">\(n\)</span></li>
+<li>Jos parittainen testi: Otoskoko <span class="math inline">\(n\)</span></li>
+<li>Jos kahden otoksen testi: Verrattujen ryhmien otoskoot <span class="math inline">\(n_x\)</span> ja <span class="math inline">\(n_y\)</span></li>
+</ol></li>
+<li>T-suure <span class="math inline">\(t\)</span></li>
+<li>T-suureen vapausasteet <span class="math inline">\(df\)</span></li>
+<li>T-suureen todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+<li>Jos laskit: Luottamusväli <span class="math inline">\(CI\)</span></li>
+<li>Mittakoko, joko <span class="math inline">\(r\)</span>-suure tai Cohenin <span class="math inline">\(\hat{d}\)</span></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><p>Pearsonin korrelaatio</p>
+<ol start="6" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Pearsonin korrelaatiokerroin <span class="math inline">\(r\)</span></li>
+<li>Otoskoko <span class="math inline">\(n\)</span></li>
+<li>Korrelaatiokertoimen todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+<li>Jos laskit: Luottamusväli <span class="math inline">\(CI\)</span></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><p>Khiin neliö</p>
+<ol start="7" class="example" type="1">
+<li></li>
+</ol></td>
+<td><ol type="1">
+<li>Khiin neliön testisuure <span class="math inline">\(\chi^2\)</span>
+<ol type="1">
+<li>HUOM: Summattu suure, ei yksittäisten solujen arvot!</li>
+</ol></li>
+<li>Khiin neliön vapausasteet <span class="math inline">\(df\)</span></li>
+<li>Khiin neliön todennäköisyysarvo <span class="math inline">\(p\)</span></li>
+<li>Kuinka moni odotettu arvo on alle 1 tai alle 5?</li>
+<li>Jos laskit: Cramérin V-suure <span class="math inline">\(V\)</span></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="sec-tekijänoikeudet" class="level2">
-<h2 class="anchored" data-anchor-id="sec-tekijänoikeudet">Tekijänoikeudet</h2>
-<p>Tämä verkkokirja käyttää <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen</a> (CC BY-NC 4.0) -lisenssiä. Voit vapaasti kopioida, levittää ja jakaa verkkokirjan sisältöä missä tahansa muodossa, sekä muokata uudelleen verkkokirjan sisältöä. Sinun on kuitenkin viitattava alkuperäiseen verkkokirjaan, nimetä lisenssi käytössäsi, sekä merkittävä kaikki muutokset, jotka olet tehnyt. Verkkokirjaa ei saa käyttää kaupallisiin tarkoituksiin.</p>
+<section id="sec-esimerkkejä-tekstiraportoinnista" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-esimerkkejä-tekstiraportoinnista"><span class="header-section-number">3.3</span> Esimerkkejä tekstiraportoinnista</h2>
+<section id="sec-ei-parametriset-testit-raportointiesimerkit" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="sec-ei-parametriset-testit-raportointiesimerkit"><span class="header-section-number">3.3.1</span> Ei-parametriset testit</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merkkitesti
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rakensimme summamuuttujan neljästätoista riskikäsityksestä ja keskitimme muuttujan nollalle. Keskittäminen onnistui, ja muuttuja ei eroa tilastollsesti nollasta kaksihäntäisessä merkkitestissä (<span class="math inline">\(Md = 0\)</span>, arvoja alle nollan yhteensä <span class="math inline">\(115\)</span>, <span class="math inline">\(n = 237\)</span>, <span class="math inline">\(p = 0.697\)</span>). Merkkitestissä testattiin pienempi kahdesta merkkimäärästä, negatiiviset merkit.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wilcoxonin signed-rank -testi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esimerkki tulossa.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mann-Whitney’n U-testi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Naisten ja miesten välillä havaittiin ero riskikäsityksissä. Naisten (<span class="math inline">\(n = 112\)</span>) mediaaniriskikäsitys oli <span class="math inline">\(0.05\)</span> kun miesten (<span class="math inline">\(n = 123\)</span>) mediaani oli pienempi <span class="math inline">\(-0.01\)</span>. Ero on tilastollisesti merkitsevä mutta pieni (<span class="math inline">\(U = 5581.5\)</span>, <span class="math inline">\(z = -2.51\)</span>, <span class="math inline">\(p = 0.012\)</span>, <span class="math inline">\(r = -0.16\)</span>). Testinä käytettiin ei-parametristä Mann-Whitney’n U-testiä, mutta kahden otoksen Welchin t-testin käyttäminen olisi myös mahdollista.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Spearmanin rho-korrelaatio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ikäryhmän ja riskikäsityksen välillä ei havaittu merkitsevää yhteyttä (<span class="math inline">\(r_s = 0.06\)</span>, <span class="math inline">\(t = 0.95\)</span>, <span class="math inline">\(df = 292\)</span>, <span class="math inline">\(p = 0.252\)</span>). Testinä käytettiin ei-parametristä Spearmanin korrelaatiota, koska ikäryhmä on kategorinen muuttuja.</p>
+</div>
+</div>
 </section>
-<section id="sec-viittaaminen-kirja" class="level2">
-<h2 class="anchored" data-anchor-id="sec-viittaaminen-kirja">Viittaaminen</h2>
-<p>Voit viitata tähän kirjaan muodossa:</p>
-<blockquote class="blockquote">
-<p>Saal, O. (2023). Kvantitatiiviset menetelmät -kurssin verkkokirja. [Versio 1.3]. https://osaal.github.io/KVANT-23-PEO/.</p>
-</blockquote>
-</section>
-<section id="sec-uusin-paivitys" class="level2">
-<h2 class="anchored" data-anchor-id="sec-uusin-paivitys">Uusin päivitys</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">1.3</h3>
-<p><strong>Julkaisupäivämäärä:</strong> Ei vielä julkaistu.</p>
-<p><strong>Uudet luvut:</strong></p>
-<ul>
-<li>Luku “Tulosten raportointi” osiossa “Ohjeet”. Luvussa käydään tiivistetysti läpi tilastollisten testien raportointia.</li>
-</ul>
-<p><strong>Muutokset:</strong></p>
-<ul>
-<li>Korjattu Wilcoxonin testin raportoinnin keskihajontamerkintä.</li>
-<li>Poistettu maininta Levenen testin raportoinnista t-testin raportointiohjeissa ja esimerkissä, koska testiä ei tässä opeteta.</li>
-<li>Vaihdettu t-testin esimerkkiä.</li>
-</ul>
+<section id="sec-parametriset-testit-raportointiesimerkit" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-parametriset-testit-raportointiesimerkit"><span class="header-section-number">3.3.2</span> Parametriset testit</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+T-testit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Naiset ja miehet eroavat riskikäsityksissään: naisten (<span class="math inline">\(n = 112\)</span>) keskiarvo mittarilla on <span class="math inline">\(0.03\)</span> ja miesten (<span class="math inline">\(n = 123\)</span>) matalempi <span class="math inline">\(-0.03\)</span>. Eron koko on siis noin <span class="math inline">\(0,06\)</span> yksikköä. Ero on tilastollisesti merkitsevä ja kooltaan pienestä keskikokoiseen (<span class="math inline">\(t = 2.40\)</span>, <span class="math inline">\(\hat{d} = 0.31\)</span> <span class="math inline">\(df = 230.8\)</span>, <span class="math inline">\(p = 0.017\)</span>, <span class="math inline">\(95\% \text{ CI } [0.058, 0.076]\)</span>). Testinä käytettiin kahden otoksen Welchin t-testiä.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pearsonin korrelaatio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ikäryhmän ja riskikäsityksen välillä ei havaittu merkitsevää yhteyttä (<span class="math inline">\(r = -0.07\)</span>, <span class="math inline">\(n = 237\)</span>, <span class="math inline">\(p = 0.256\)</span>, <span class="math inline">\(95\% \text{ CI } [-0.20, 0.05]\)</span>).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Khiin neliö
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prontoon kirjatuissa asuntopaloissa havaittiin suuri, merkitsevä yhteys rakennuksen riskiluokituksen ja palovaroittimen toiminnan välillä (<span class="math inline">\(\chi^2 = 29.3\)</span>, <span class="math inline">\(\text{df} = 9\)</span>, <span class="math inline">\(p = 0.0006\)</span>, <span class="math inline">\(V = 0.22\)</span>). Riskiluokkaan 1 kuuluvista rakennuksista jopa 56 prosentilla puuttui palovaroitin, kun vastaava arvo muissa riskiluokissa oli 18 - 33 prosenttia. Palovaroittimen toiminta oli harvinaisinta riskiluokka 4:ssä (7 %). Kaikki odotetut arvot ylittivät yhden, mutta kolme solua (19 %) olivat alle viiden. Tulokset ovat siten tulkittavuuden rajalla, ja voivat olla väärällisiä.</p>
+</div>
+</div>
 
 
-</section>
 </section>
 </section>
 
@@ -574,6 +814,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ohjeitaviittaamiseen.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

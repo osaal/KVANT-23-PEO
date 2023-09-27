@@ -16,6 +16,7 @@ book:
       chapters:
       - visualisoinninalkeet.qmd
       - ohjeitaviittaamiseen.qmd
+      - tulostenraportointi.qmd
     - part: "Tilastotiede"
       chapters:
       - mittaustasot.qmd
@@ -57,6 +58,7 @@ book:
       contents:
         - visualisoinninalkeet.qmd
         - ohjeitaviittaamiseen.qmd
+        - tulostenraportointi.qmd
     - id: tilastotiede
       title: "Tilastotiede"
       contents:

@@ -114,7 +114,7 @@ Kuten kaikissa ei-parametrisissa testeissä: jos täytät lineaarisen mallin vaa
 2.  Merkitse niiden merkit (positiivinen vai negatiivinen; jätä pois nollat)
 3.  Aseta erot suuruusjärjestykseen absoluuttisen arvon (itseisarvon) mukaan. Älä siis ota huomioon merkkiä tässä vaiheessa.
 4.  Summaa järjestysnumerot erikseen positiivisille ja negatiivisille arvoille.
-5.  Laske testin keskiarvo, keskihajonta ja z-arvot.
+5.  Laske testin keskiarvo, keskivirhe ja z-arvot.
 6.  Vertaa z-arvoja kriittisiin arvoihin ja hae p-arvo.
 
 [Muuttujien väliset erot lasketaan yksinkertaisesti]{.underline} $x_i - y_i$, jossa $i$ on rivin numero. Laske siis erot muuttujien välillä jokaiselle riville.
@@ -138,7 +138,7 @@ Jos arvot esimerkiksi ovat $\{3, 4, 5, 5, 6\}$, niiden järjestysarvot olisivat 
 $$
 \begin{split}
 \bar{T} = \frac{n(n+1)}{4}
-\\ \text{SE}_{\bar{T}} = \sqrt{\frac{n(n+1)(2n+1)}{24}}
+\\ \text{SD}_{\bar{T}} = \sqrt{\frac{n(n+1)(2n+1)}{24}}
 \end{split}
 $$ {#eq-wilcoxonin-testi-keskiarvo-ja-keskihajonta}
 
@@ -151,7 +151,7 @@ $$ {#eq-wilcoxonin-testi-keskiarvo-ja-keskihajonta}
 [Viimeiseksi lasketaan z-arvot.]{.underline} Koska z-arvon yleiskaava on $z = \frac{X-\bar{X}}{s}$, voimme vain korvata symbolit laskemillamme arvoilla:\
 
 $$
-z_T = \frac{T-\bar{T}}{SE_{\bar{T}}}
+z_T = \frac{T-\bar{T}}{SD_{\bar{T}}}
 $$ {#eq-wilcoxonin-testi-z-normalisointi}
 
 Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai laskurilla.
@@ -203,7 +203,7 @@ Voimme sitten hakea z-arvon merkitsevyyden kriittisten arvojen taulukolla tai la
 
 -   Keskiarvo $\bar{T}$
 
--   Keskihajonta $\text{SE}$
+-   Keskihajonta $\text{SD}$
 
 -   Z-arvon p-arvo $p$
 

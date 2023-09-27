@@ -1,7 +1,13 @@
 ### 1.3
 
-**Julkaisupäivämäärä:** Ei vielä julkaistu.
+**Julkaisupäivämäärä:** 27.9.2023
 
 **Uudet luvut:**
 
+-   Luku "Tulosten raportointi" osiossa "Ohjeet". Luvussa käydään tiivistetysti läpi tilastollisten testien raportointia.
+
 **Muutokset:**
+
+-  Korjattu Wilcoxonin testin raportoinnin keskihajontamerkintä.
+-  Poistettu maininta Levenen testin raportoinnista t-testin raportointiohjeissa ja esimerkissä, koska testiä ei tässä opeteta.
+-  Vaihdettu t-testin esimerkkiä.

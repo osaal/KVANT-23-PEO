@@ -352,10 +352,8 @@ T-testille tulisi mieluisesti raportoida seuraavat tiedot:
 
 -   Mittakoko (Pearsonin $r$ tai Cohenin $\hat{d}$)
 
--   (Jos tehty) Levenen testin tai varianssivertailun tulokset (Levenen testille testisuure ja $p$, varianssivertailulle varianssit ja niiden ero tai graafinen esittely).
-
 ::: callout-note
 ## Esimerkki t-testin raportoinnista
 
-Yleisen vaaramerkin toimintamallien osaamisessa on sukupuolittuneita eroja. Naisista 10 prosenttia osaavat toimia oikein, mutta miehistä vain 5 prosenttia. Ero on tilastollisesti merkitsevä (t = 4,942, df = 2830,6, *p* \< 0,0001, eron 95% CI \[0,03; 0,07\]). Cohenin *d*-suure osoittaa keskikokoista eroa (d = 0,135, 95% CI \[0,064; 0,206\]). Testissä käytettiin kahden otoksen Welchin t-suuretta, koska Levenen testi oli merkitsevä (Levenen testi = 100,2, *p* \< 0,0001).
+Naiset ja miehet eroavat riskikäsityksissään: naisten ($n = 112$) keskiarvo mittarilla on $0.03$ ja miesten ($n = 123$) matalempi $-0.03$. Eron koko on siis noin $0,06$ yksikköä. Ero on tilastollisesti merkitsevä ja kooltaan pienestä keskikokoiseen ($t = 2.40$, $\hat{d} = 0.31$ $df = 230.8$, $p = 0.017$, $95\% \text{ CI } [0.058, 0.076]$). Testinä käytettiin kahden otoksen Welchin t-testiä.
 :::
