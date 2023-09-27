@@ -36,4 +36,4 @@ Voit viitata tähän kirjaan muodossa:
 
 ## Uusin päivitys {#sec-uusin-paivitys}
 
-{{< include historia/_1.2.qmd >}}
+{{< include historia/_1.3.qmd >}}
