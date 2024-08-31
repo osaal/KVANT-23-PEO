@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Visualisoinnin alkeet – Kvantitatiiviset menetelmät -kurssin verkkokirja</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/ohjeita/ohjeitaviittaamiseen.html" rel="next">
+<link href="../../pics/logo_lapinakyva.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="twitter:title" content="1&nbsp; Visualisoinnin alkeet – Kvantitatiiviset menetelmät -kurssin verkkokirja">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="../../docs/ohjeita/visualisoinninalkeet.html">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/ohjeita/ohjeitaviittaamiseen.html">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/ohjeita/tulostenraportointi.html">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/mittaustasot.html">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/hypoteesitestaus.html">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/mallioletukset.html">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/sijaintiluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/hajontaluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/merkitsevyysluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/eiparametrisettestit.html">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/ttesti.html">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/korrelaatio.html">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/tilastotiede/khiinneliö.html">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/excelinperusteet.html">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/excelinkäyttöliittymä.html">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/nimeäminenexcelissä.html">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/yleisiätoimintoja.html">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/excelgrafiikka.html">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/funktiot.html">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/excel/lambdakaavat.html">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="../../docs/työkalut/webropol.html">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/työkalut/tilastotyökalut.html">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/työkalut/dmptuuli.html">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/työkalut/tietoarkistot.html">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/työkalut/zotero.html">
+ <span class="dropdown-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../viiteluettelo.html"> 
+<span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../history.html"> 
+<span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/ohjeita/visualisoinninalkeet.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/ohjeita/visualisoinninalkeet.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/ohjeita/ohjeitaviittaamiseen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/ohjeita/tulostenraportointi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Sisällysluettelo</h2>
+   
+  <ul>
+  <li><a href="#sec-graafinen-selkeys" id="toc-sec-graafinen-selkeys" class="nav-link active" data-scroll-target="#sec-graafinen-selkeys"><span class="header-section-number">1.1</span> Graafinen selkeys</a></li>
+  <li><a href="#sec-graafinen-ytimekkyys" id="toc-sec-graafinen-ytimekkyys" class="nav-link" data-scroll-target="#sec-graafinen-ytimekkyys"><span class="header-section-number">1.2</span> Graafinen ytimekkyys</a></li>
+  <li><a href="#sec-graafinen-saavutettavuus" id="toc-sec-graafinen-saavutettavuus" class="nav-link" data-scroll-target="#sec-graafinen-saavutettavuus"><span class="header-section-number">1.3</span> Graafinen saavutettavuus</a></li>
+  <li><a href="#sec-kaavioita-teoria" id="toc-sec-kaavioita-teoria" class="nav-link" data-scroll-target="#sec-kaavioita-teoria"><span class="header-section-number">1.4</span> Kaavioita</a>
+  <ul class="collapse">
+  <li><a href="#sec-pylväskaavio-teoria" id="toc-sec-pylväskaavio-teoria" class="nav-link" data-scroll-target="#sec-pylväskaavio-teoria"><span class="header-section-number">1.4.1</span> Pylväskaavio (histogrammi)</a></li>
+  <li><a href="#sec-viivakaavio-teoria" id="toc-sec-viivakaavio-teoria" class="nav-link" data-scroll-target="#sec-viivakaavio-teoria"><span class="header-section-number">1.4.2</span> Viivakaavio</a></li>
+  <li><a href="#sec-ympyrä--tai-piiraskaavio-teoria" id="toc-sec-ympyrä--tai-piiraskaavio-teoria" class="nav-link" data-scroll-target="#sec-ympyrä--tai-piiraskaavio-teoria"><span class="header-section-number">1.4.3</span> Ympyrä- tai piiraskaavio</a></li>
+  <li><a href="#sec-palkkikaavio-teoria" id="toc-sec-palkkikaavio-teoria" class="nav-link" data-scroll-target="#sec-palkkikaavio-teoria"><span class="header-section-number">1.4.4</span> Palkkikaavio</a></li>
+  <li><a href="#sec-pistekaavio-teoria" id="toc-sec-pistekaavio-teoria" class="nav-link" data-scroll-target="#sec-pistekaavio-teoria"><span class="header-section-number">1.4.5</span> Pistekaavio</a></li>
+  <li><a href="#sec-kuplakaavio-teoria" id="toc-sec-kuplakaavio-teoria" class="nav-link" data-scroll-target="#sec-kuplakaavio-teoria"><span class="header-section-number">1.4.6</span> Kuplakaavio</a></li>
+  <li><a href="#sec-laatikkokaavio-teoria" id="toc-sec-laatikkokaavio-teoria" class="nav-link" data-scroll-target="#sec-laatikkokaavio-teoria"><span class="header-section-number">1.4.7</span> Laatikkokaavio (ruutu ja jana)</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action"><i class="bi bi-github"></i>Ilmoita ongelmasta</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-visualisoinnin-alkeet" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Visualisoinnilla</strong> tarkoitetaan tilastodatan esittämistä visuaalisin menetelmin, eli kuvioilla, käppyröillä ja käyrillä. Visualisoinnin päätehtävänä on tehdä monimutkaisesta tiedosta helposti kulutettavaa, ymmärrettävää ja jäsennettävää. Vanha sanonta pitää paikkaansa: kuva kertoo enemmän kuin tuhat sanaa - mutta lisäisin siihen, “<em>jos</em> kuva on selkeä, ytimekäs ja saavutettava”.</p>
+<p>Kuvan tekeminen on suhteellisen yksinkertaista. <em>Hyvän</em> kuvan tekeminen vaatii harjoittelua ja opiskelua! Sinun ei tarvitse olla viestinnän erityisosaaja tai omata mitään erityistä “visuaalista pelisilmää”, mutta ohjeita kannattaa seurata ja kollegoilta kannattaa pyytää palautetta. Hyödynnä myös työssäsi viestinnän ammattilaisten osaamista ja ohjeita - heillä on tarvittava erityisosaaminen!</p>
+<p>Jos tiedon visualisointi kiinnostaa enemmän, suosittelen tekemään ilmaisen verkkokoulutuksen <a href="https://www.eoppiva.fi/koulutukset/tiedon-visualisointi">Tiedon visualisointi</a> valtionhallinnon eOppiva-ympäristössä (vaatii Virtu-kirjautumisen).</p>
+<p>Jos sinua kiinnostaa grafiikan teko Excelissä, lue <a href="../excel/excelgrafiikka.html" class="quarto-xref"><span>Luku 18</span></a>.</p>
+<section id="sec-graafinen-selkeys" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-graafinen-selkeys"><span class="header-section-number">1.1</span> Graafinen selkeys</h2>
+<p><u>Yhden kuvan tulisi kertoa yksi tarina</u>. Kvantitatiivisissa visualisoinneissa tämä tarkoittaa, että kuvan tulisi kertoa jotain <em>yhdestä</em> asiasta. Tämä asia voi olla muuttujan jakauma, kahden muuttujan välinen suhde, ääripääarvojen esiintyminen tai jotain muuta - kunhan se on yksi asia! Älä siis täytä kuvaa monella eri asialla, koska sen lukeminen on paljon vaikeampaa lukijalle.</p>
+<p><u>Tieteellisen visualisoinnin keskiössä on <strong>tiedon välittäminen</strong></u>. Kaunis kuva on yksinkertainen, helposti ja nopeasti luettavissa, ja saavutettava kaikille lukijoille. Älä siis lisää turhia kuvamanipulaatioita, varjoja, 3D-elementtejä tai muita hauskoja ikoneja vain ilmeen parantamiseksi.</p>
+<p><u>Kuitenkaan tieteellisen visualisoinnin ei tarvitse olla tylsää</u>! Monet kuvat tieteellisissä julkaisuissa voivat näyttäytyä tylsinä, mutta väittäisin, että tämä johtuu tutkijoiden visuaalisen osaamisen puutteesta. Katso vaikka alla olevat todelliset esimerkit hyvästä visualisoinnista - eihän nämä ole mitenkään tylsiä tai puun makuisia.</p>
+<div class="tabset-margin-container"></div><div id="fig-esimerkkikuvia" class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Viulukuvio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Ruusukuvio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Harjannekuvio</a></li></ul>
+<div id="fig-esimerkkikuvia" class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../pics/visualisointi/esimerkki01.png" class="img-fluid figure-img"></p>
+<figcaption>Viulukuvio (Kassambara, 2023)</figcaption>
+</figure>
+</div>
+<p>Lähde: Kassambara, A. (2023). <em>ggpubr: ‘ggplot2’ Based Publication Ready Plots.</em> [R-paketti, versio 0.6.0]. <a href="https://rpkgs.datanovia.com/ggpubr/" class="uri">https://rpkgs.datanovia.com/ggpubr/</a>. Käytetty lisenssillä GPL-2.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../pics/visualisointi/esimerkki02.jpg" class="img-fluid figure-img"></p>
+<figcaption>Florence Nightingalen kehittämä ruusukuvio (Nightingale, 1858)</figcaption>
+</figure>
+</div>
+<p>Lähde: Nightingale, F. (1858). <em>Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army</em>. [Kirje kuningatar Viktorialle]. Saatettu yleiseen käyttöön.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../pics/visualisointi/esimerkki03.png" class="img-fluid figure-img"></p>
+<figcaption>Lämpötilavaihtelu harjannekuviona (Wilke, 2022)</figcaption>
+</figure>
+</div>
+<p>Lähde: Wilke, C. O. (2022). <em>ggridges: Ridgeline Plots in ‘ggplot2’.</em> [R-paketti, versio 0.5.4]. <a href="https://wilkelab.org/ggridges/" class="uri">https://wilkelab.org/ggridges/</a>. Käytetty lisenssillä GPL-2.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-graafinen-ytimekkyys" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-graafinen-ytimekkyys"><span class="header-section-number">1.2</span> Graafinen ytimekkyys</h2>
+<p>Jotta kuva olisi selkeä, sen tulee olla ytimekäs. Kirjoittamisessa tärkein tieto tuodaan yleensä esiin ensimmäisenä luvussa tai kappaleessa. Visualisoinnissa tehdään sama asia, mutta tärkein tieto tuodaan esille selkeimmin luettavissa olevilla elementeillä. Tämä voi tarkoittaa esille “hyppääviä” värejä, nuolia, elementtien keskinäistä asettelua syvyysjärjestykseen, ja niin eteenpäin.</p>
+<p>Tätä voi edesauttaa esimerkiksi näillä vinkeillä:</p>
+<ul>
+<li><p><u>Käytä kirkkaita värejä vain tärkeimmälle tiedolle</u>. Jos esimerkiksi visualisoit korrelaation pistekuvioilla, käytä kirkasta väriä korrelaatioviivalle, ja jätä datapisteet “taustalle” haaleammalla värillä. Katso esimerkiksi <a href="#fig-esim-pistekaavio" class="quarto-xref">Kuva&nbsp;<span>1.5</span></a>.</p></li>
+<li><p><u>Poista kaikki turha kuvasta</u>. Jos otsikoit kuvasi tekstinkäsittelyohjelmassa (Wordissa), jätä otsikko pois itse kuvasta. Jos esität kuvion arvot arvo-otsikkoina itse kuvassa, jätä pois mahdolliset taulukot kuvan sisällä (ja toisinpäin).</p></li>
+</ul>
+</section>
+<section id="sec-graafinen-saavutettavuus" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-graafinen-saavutettavuus"><span class="header-section-number">1.3</span> Graafinen saavutettavuus</h2>
+<p><u>Jos kuva on selkeä ja ytimekäs, sen on mahdollista olla saavutettava</u> - mutta saavutettavuus ei ole taattua! Saavutettavuudella tarkoitetaan usein että kuva on luettavissa tietyille ryhmille, esim. näkö- ja kuuloaistin heikentyneelle omaaville henkilöille. Kuitenkin saavutettava kuva edesauttaa <strong>kaikkia</strong> lukijoita: selkeys ja ytimekkyys nousee, kun kuvasta tehdään saavutettava.</p>
+<p>Tässä joitain esimerkkejä saavutettavuuden parantamiseksi:</p>
+<ul>
+<li><p><u>Jokaiselle kuvalle tulee olla koneluettava vaihtoehtokuvaus</u>, jotta näytönlukusovellukset osaavat kuvailla kuvan käyttäjälle. Kuvailun tulee itsessään olla ytimekäs ja selkeä, ja keskittyä samoihin asioihin kuin mitä kuvan visuaalinen lukija huomaisi. Vaihtoehtokuvauksen kirjoittaminen ei tarvitse olla mikään erityistaakka, vaan se edesauttaa myös sinua kuvan selkeyttämisessä - jos kuva on tarpeeksi selkeä ja ytimekäs, vaihtoehtokuvauksen kirjoittaminen on erittäin helppoa; jos kirjoittaminen tuntuu hankalalta, kuvasi ei luultavasti ole tarpeeksi selkeä ja ytimekäs. Wordissa ja Excelissä vaihtoehtokuvauksen voi yleensä lisätä toiminnolla <code>Vaihtoehtokuvaus</code> (engl. <em>Alt text</em>).</p></li>
+<li><p><u>Käytä kaksinkertaista visualisointia</u>: jos käytät värejä erotellaksesi esimerkiksi ryhmiä, käytä myös kuvioita. Jos kuvassasi on punainen, oranssi ja musta palkki, niiden erottelu on helpompaa jos jokaiselle lisää oman kuvion (esim. liitukuvio, pistekuvio ja tasainen väritys). Jos sinulla ei riitä kuviot kaikkiin ryhmiin, sinulla luultavasti on liikaa materiaalia kuvassa joka tapauksessa!</p></li>
+<li><p><u>Käytä saavutettavia värejä</u>. Moni meistä on nähnyt puna-vihreä-kuvioita, ja moni värisokea meistä on nähnyt vain ruskeaa tai harmaata niissä kuvioissa. David Nichols <span class="citation" data-cites="nichols">(<a href="../../viiteluettelo.html#ref-nichols" role="doc-biblioref">ei pvm.</a>)</span> on kirjoittanut hyödyllisen blogitekstin, jossa käydään läpi eri värisokeuksien näkemiä versioita yleisistä väreistä. Sivulla on myös väripalettityökalu, jolla voit kokeilla, miltä vapaavalintainen väri näyttäisi eri värisokeuksille. Suomeksi mm. Anniina Nieminen <span class="citation" data-cites="nieminen2020">(<a href="../../viiteluettelo.html#ref-nieminen2020" role="doc-biblioref">2020</a>)</span> on kirjoittanut opinnäytetyön, josta löytyy myös ohjeita puna-vihersokeuden huomioimiseksi visualisoinnissa.</p></li>
+<li><p><u>Käytä tarpeeksi suurta kontrastia</u>. Myös kontrasti, eli eri värien välinnäinen koettu vahvuusero, vaikuttaa suuresti luettavuuteen. Liian samankaltaiset värit eivät erotu hyvin edes perusnäköiselle henkilölle, joten erota värit selkeästi toisistaan. Älä siis käytä vaaleanpunaista ja haaleaa punaista vierekkäin! Toisaalta, liian <em>iso</em> kontrasti ärsyttää silmää. Niemisen opinnäytetyössä (ks. yllä) on hyviä esimerkkejä ongelmallisista käyristä ja niiden vaihtoehdoista.</p></li>
+</ul>
+</section>
+<section id="sec-kaavioita-teoria" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="sec-kaavioita-teoria"><span class="header-section-number">1.4</span> Kaavioita</h2>
+<p>Tässä vaiheessa tiedät jo jonkun verran kuvion tehtävästä ja muotoilun tärkeydestä. Kuitenkin sinun tulee myös tietää, millaisia kuvioita voit tehdä! Periaatteessa tieteellisen tiedon voi visualisoida ihan millä tavalla tahansa. Käytännössä kuitenkin seurataan tiettyjä perinteitä. Jos työskentelet Excelissä, ohjelma ei myöskään taivu ihan mihin tahansa.</p>
+<p>Jos sinua kiinnostaa tieteellisen tiedon esittäminen laajemmin, suosittelen tutustumaan R-ohjelmointikieleen ja sen graafisiin ominaisuuksiin (ks. <a href="../työkalut/tilastotyökalut.html#sec-r-ohjelmointikieli" class="quarto-xref"><span>Alaluku 22.3</span></a>). Yllä olevista esimerkkikuvista ensimmäinen ja kolmas ovat tehtyjä R:ssä!</p>
+<p>Luvussa esitetään pylväs-, viiva-, ympyrä-, piste-, kupla- ja laatikkokaaviot, sekä niiden vaihtoehtoiset muodot. Muita kaavioita löytyy, mutta näitä yhdistelemällä voit jo visualisoida kaiken tarpeellisen tällä kursilla (ja monessa tieteellisessä työssä).</p>
+<section id="sec-pylväskaavio-teoria" class="level3 page-columns page-full" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="sec-pylväskaavio-teoria"><span class="header-section-number">1.4.1</span> Pylväskaavio (histogrammi)</h3>
+<p><strong>Pylväskaavio</strong> on ehkä yleisin käytetty visualisointimuoto. Nimi tulee kaavion pylväistä, joilla esitetään jonkun muuttujan kategorioiden esiintymistä (taajuutta). Pylväskaaviota voi myös kutsua <strong>histogrammiksi</strong>.</p>
+<p><u>Pylväskaaviota voi käyttää kaikilla mittausasteikoilla</u>, mutta parhaiten se sopii luokittelu- ja järjestysasteikolle. Jos sinulla on useita kategorioita (esim. yli 10), kaavion lukeminen hankaloituu. Tällöin on parempi jakaa kaavio useampaan kaavioon, yhdistää kategorioita, tai vaihtaa toiseen kaaviotyyppiin.</p>
+<p>Pylväskaaviota käytetään <u>yhden muuttujan tai muuttujaryhmän</u> visualisointiin. Voit myös asettaa useampia muuttujia vierekkäin ja erotella ne väreillä/kuvioilla, mutta kaaviosta tulee nopeasti vaikeasti luettava.</p>
+<p><u>Vaaka-akselilla</u> on muuttujan kategoriat, yleensä suuruusjärjestyksessä tai muussa loogisessa järjestyksessä. Esimerkiksi Likert-asteikon muuttujalla loogisinta<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> on aloittaa vasemmalla eniten negatiivisesta mielipiteestä, ja siirtyä oikealle kohti eniten positiivista mielipidettä, neutraali mielipide keskellä.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Länsimaista kieltä puhuville. Jos puhut kieltä, joka kirjoitetaan oikealta vasemmalle, mielipiteesi voi erota tästä.</p></div></div><p><u>Pystyakselilla</u> on taajuusmäärät, ilmaistuna yksikköinä tai prosentteina.</p>
+<p><u>Pylväskaaviosta löytyy kaksi versiota</u>, joille löytyy myös vaihtoehtoina absoluuttiset ja relatiiviset taajuudet:</p>
+<ol type="1">
+<li><strong>Perinteinen pylväskaavio</strong>. Jokainen kategoria on eritelty vaaka-akselilla. Pystyakselilla on joko absoluuttiset (N) tai relatiiviset (%) määrät.</li>
+<li><strong>Pinottu pylväskaavio</strong>. Kategoriat pinotaan päällekäin, aloittaen arvosta, jolla on suhteellisesti eniten datapisteitä (ks. selitys alla). Pystyakselilla on joko absoluuttiset (N) tai relatiiviset (%) määrät.</li>
+</ol>
+<p>Yleisesti sanottuna perinteinen pylväskaavio toimii paremmin absoluuttisten määrien esittämisessä, ja pinottu pylväskaavio taas relatiivisilla määrillä.</p>
+<p><u>Pinotulle pylväskaaviolle hyvä visuaalinen sääntö on “paino alas”,</u> eli suurin kategoria pohjalle. Joskus tämä voi kuitenkin olla harhaanjohtavaa, varsinkin jos esität useita pinottuja pylväskaavioita joissa kategoriat ovat samat. Pyri pitämään kategoriat samassa järjestyksessä ennemmin kuin “paino alas”-säännön seuraamista.</p>
+<p><u>Älä käytä kolmiulotteisia pylväskaaviota</u>. Niissä on turhaa luettavaa, mikä vaikeuttaa kaavion ymmärtämistä.</p>
+<div id="fig-esim-histogrammi" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pylväskaavio nimeltä &quot;z&quot;. Muuttujien arvot ovat 1-5, ja absoluuttiset määrät ovat edustettuna pystyakselilla. Moodi on 4.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-histogrammi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_histogrammi.png" class="img-fluid figure-img" alt="Pylväskaavio nimeltä &quot;z&quot;. Muuttujien arvot ovat 1-5, ja absoluuttiset määrät ovat edustettuna pystyakselilla. Moodi on 4.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-histogrammi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.1: Pylväskaavio tai histogrammi.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-viivakaavio-teoria" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-viivakaavio-teoria"><span class="header-section-number">1.4.2</span> Viivakaavio</h3>
+<p><strong>Viivakaavio</strong> näyttää melkein samalta kuin pylväskaavio, paitsi että pylväiden sijaan jokainen kategoria merkitään pisteellä ja pisteet yhdistetään viivalla.</p>
+<p><u>Viivakaaviota tulisi mieluisesti käyttää vain välimatka- ja suhdeasteikolla</u>. Pisteiden väliset viivat antavat usein ymmärtää, että pisteiden välisellä suhteella (etäisyydellä) olisi merkitystä. Luokittelu- ja järjestysasteikoilla näin ei ole, joten viivakaavion käyttö voi olla harhaanjohtavaa.</p>
+<p><u>Viivakaaviota käytetään yhden muuttujan tai muuttujaryhmän visualisointiin</u>, mutta useamman muuttujan visualisointi on myös mahdollista. Viivakaavio onkin parempi tapa visualisoida monta muuttujaa samaan aikaan kuin pylväskaavio - mutta huomioi, että heti kun lisäät toisen muuttujan, <u>muuttujien välisestä suhteesta</u> tulee kaavion tärkein osa.</p>
+<p><u>Vaaka-akselilla</u> on muuttujan kategoriat, suuruusjärjestyksessä. Huomioi muuttujien kategorioiden suhteet - säilytä oikea järjestys niiden välillä!</p>
+<p><u>Pysty-akselilla</u> on taajuusmäärät, joko absoluuttisena (N) tai relatiivisena (%) taajuutena, tai muu visualisoitu arvo (esim. keskiarvo).</p>
+<p>Kuten pylväskaaviosta, <u>viivakaaviolle löytyy perinteinen ja pinottu versio</u>, ja molemmilla voi esittää sekä absoluuttisia että relatiivisia taajuuksia. Samat säännöt pätevät kuin pylväskaaviolle.</p>
+<p><u>Älä tässäkään käytä kolmiulotteista viivakaaviota</u>.</p>
+<div id="fig-esim-viivakaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Viivakaavio nimeltä &quot;z&quot;. Vaaka-akselilla on mittausajankohta ja pystyakselilla arvo. Käyrä vaihtelee satunnaisesti. Kuvassa arvot ovat merkittynä pisteinä ja niitä yhdistää suorat viivat.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-viivakaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_viivakaavio.png" class="img-fluid figure-img" alt="Viivakaavio nimeltä &quot;z&quot;. Vaaka-akselilla on mittausajankohta ja pystyakselilla arvo. Käyrä vaihtelee satunnaisesti. Kuvassa arvot ovat merkittynä pisteinä ja niitä yhdistää suorat viivat.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-viivakaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.2: Viivakaavio.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-ympyrä--tai-piiraskaavio-teoria" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="sec-ympyrä--tai-piiraskaavio-teoria"><span class="header-section-number">1.4.3</span> Ympyrä- tai piiraskaavio</h3>
+<p><strong>Ympyrä- tai piiraskaavio</strong> on suosittu visualisointityökalu. Kaaviossa muuttujan kategorioiden suhteellinen jakauma esitetään “piirakanpalan” muotoisina.</p>
+<p><u>Piiraskaaviota tulisi kokonaan välttää</u>. Vaikka se on suosittu työkalu, tieto ei jäsenny lukijalle yhtä helposti kuin muilla kaavioilla. Ihminen ei osaa tulkita pinta-aloja kovinkaan tarkkaan, jolloin pienet erot jäävät helposti näkemättä. Jos kuitenkin käytät kaaviota, pidä kategorioiden määrät pieninä, ja suosi muuttujia, joilla kategorioiden suhteelliset erot ovat suuria - esim. 10 %, 25 % ja 65 %. Näin edesautat lukijaa parhaiten.</p>
+<p><u>Piiraskaaviota voi käyttää kaikilla asteikoilla</u>, mutta parhaiten se sopii luokittelu- ja järjestysasteikoille. Tärkeintä on, että kaaviossa ei ole monia kategorioita (mieluisesti noin 5-6 tai alle).</p>
+<p><u>Piiraskaaviolla ei ole akseleita</u>, vaan kaikki data esitetään yhdessä kehässä/kiekossa.</p>
+<p><u>Piiraskaaviosta löytyy alalaji nimeltä <strong>sektoripiiraskaavio</strong></u>. Tässä otetaan yksi tai useampi muuttuja ja suurennetaan sen piirakanpala joko omaksi piiraskaavioksi tai pylväskaavioksi. Nämä ovat hyödyllisiä, jos kaaviossa on yhdistelmäkategoria tai jos joku kategoria on melkein näkymättömän pieni. Käytä piiraskaaviosuurennusta jos esität yhdistelmäkategorioita, ja pylväskaaviosuurennusta jos esität useamman pienen kategorian välisiä suhteita.</p>
+<div id="fig-esim-piiraskuvio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Piiraskuvio nimeltä &quot;z&quot;. Ympyrässä on kolme sektoria nimeltä 1, 2 ja 3. Sektoreiden kohdalla on absoluuttinen ja relatiivinen taajuus. 1-sektori on 25 (17 prosenttia), 2-sektori on 17 (33 prosenttia), ja 3-sektori on 19 (50 prosenttia).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-piiraskuvio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_piiraskuvio.png" class="img-fluid figure-img" alt="Piiraskuvio nimeltä &quot;z&quot;. Ympyrässä on kolme sektoria nimeltä 1, 2 ja 3. Sektoreiden kohdalla on absoluuttinen ja relatiivinen taajuus. 1-sektori on 25 (17 prosenttia), 2-sektori on 17 (33 prosenttia), ja 3-sektori on 19 (50 prosenttia).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-piiraskuvio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.3: Piiraskuvio.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-palkkikaavio-teoria" class="level3 page-columns page-full" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="sec-palkkikaavio-teoria"><span class="header-section-number">1.4.4</span> Palkkikaavio</h3>
+<p><strong>Palkkikaavio</strong> on sama kuin pylväskaavio, paitsi että akselit ovat käännettyjä. Pystyakselille sijoittuu muuttujan kategoriat, ja vaaka-akselille taajuudet. Samat säännöt pätevät palkkikaaviolle kuin pylväskaaviolle.</p>
+<p><u>Palkkikaaviosta voi tehdä erikoisversion</u><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, jossa nollapiste sijoitetaan keskelle ja palkit leviävät joko negatiiviselle tai positiiviselle puolelle. Tällaisella on hyvä esitellä esimerkiksi <u>muutosta</u> jollain muuttujalla, jolloin pääset esittelemään monimuuttujatuloksia yksittäisten muuttujien sijaan.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Käytännössä myös pylväskaaviosta voi tehdä nollakeskitetyn version.</p></div></div><div id="fig-esim-palkkikaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Palkkikaavio nimeltä &quot;k&quot;. Vaaka-akselilla on sijoitettu muuttujan arvot, pystyakselilla on mittausajankohdat yhdestä kymmeneen. Arvot vaihtelevat suuresti, reilun -2:n ja 2:n välillä.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-palkkikaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_palkkikaavio.png" class="img-fluid figure-img" alt="Palkkikaavio nimeltä &quot;k&quot;. Vaaka-akselilla on sijoitettu muuttujan arvot, pystyakselilla on mittausajankohdat yhdestä kymmeneen. Arvot vaihtelevat suuresti, reilun -2:n ja 2:n välillä.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-palkkikaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.4: Palkkikaavio.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-pistekaavio-teoria" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="sec-pistekaavio-teoria"><span class="header-section-number">1.4.5</span> Pistekaavio</h3>
+<p><strong>Pistekaavio</strong> (engl. <em>scatter plot</em>) esittää kahden muuttujan välistä suhdetta. Tätä varten arvoilla ei tule olla omia kategorioita, eli parhaiten pistekaavio soveltuu <strong>välimatka- ja suhdeasteikoille</strong> (tai suurille summamuuttujille).</p>
+<p><u>Pistekaaviossa ensimmäinen muuttuja asetetaan vaaka-akselille ja toinen muuttuja pysty-akselille</u>. Tällöin data-arvot piirretään aina kahden numeron avulla.</p>
+<p><u>Pisteiden välille voi piirtää viivoja</u>, jos datapisteiden välisellä järjestyksellä on merkitystä.</p>
+<p><u>Voit myös lisätä regressio-/korrelaatiokäyrän pistekaavioon</u>, jolloin muuttujien välinen suhde tulee selkeämmin esille. Muista erottaa käyrä muista kaavion elementeistä värillä ja muodolla!</p>
+<p><u>Suosi suoria viivoja pehmennettyjen viivojen sijaan</u>. Pehmennystä ei ole olemassa datassa, jolloin sen käyttö voi olla harhaanjohtavaa.</p>
+<div id="fig-esim-pistekaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pistekaavio nimeltä &quot;Suhde x:n ja y:n välillä&quot;. Kaavioon on piirretty regressiokäyrä, jonka seliteaste on 0,0001.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-pistekaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_pistekaavio.png" class="img-fluid figure-img" alt="Pistekaavio nimeltä &quot;Suhde x:n ja y:n välillä&quot;. Kaavioon on piirretty regressiokäyrä, jonka seliteaste on 0,0001.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-pistekaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.5: Pistekaavio regressiokäyrällä. Seliteaste on merkitty oikeaan yläkulmaan.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-kuplakaavio-teoria" class="level3" data-number="1.4.6">
+<h3 data-number="1.4.6" class="anchored" data-anchor-id="sec-kuplakaavio-teoria"><span class="header-section-number">1.4.6</span> Kuplakaavio</h3>
+<p><strong>Kuplakaavio</strong> (engl. <em>bubble plot</em>) esittää kolmen muuttujan välistä suhdetta. Kaavio toimii samalla tavalla kuin pistekaavio, mutta pisteiden koot määritellään kolmannen muuttujan avulla.</p>
+<p>Kuplakaaviossa ensimmäinen ja toinen muuttuja asettuvat vaaka- ja pystyakseleille, ja kolmas muuttuja esitetään <u>kuplan koolla</u>.</p>
+<p><u>Kolmas muuttuja voi myös olla kategorinen</u>, jolloin jokainen kategoria esitetään omalla värillään kokomuutosten sijaan.</p>
+<p><u>Älä piirrä mitään muuta kaaviolle</u>. Kuplakaavio on hankalasti luettava, ja elementtien lisääminen voi vaikeuttaa lukemista entiseltään. Voit toki lisätä muuttujien arvo-otsikot, varsinkin kolmannelle muuttujalle (koska ympyröiden pinta-alojen tarkka vertaaminen on hyvin vaikeaa lukijalle).</p>
+<p><u>Älä käytä kolmiulotteista kuplakaaviota</u>.</p>
+<div id="fig-esim-kuplakaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kuplakaavio nimeltä &quot;Suhde a:b, b:n ja c:n välillä&quot;. Kuplat sijoittuvat a-muuttujan ylempiin arvoihin mutta vaihtelevat b-muuttujan arvojen mukaan. Koot ovat määriteltyjä muuttuja c:n mukaan, ja vaihtelevat yhden ja kymmenen välillä.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-kuplakaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_kuplakaavio.png" class="img-fluid figure-img" alt="Kuplakaavio nimeltä &quot;Suhde a:b, b:n ja c:n välillä&quot;. Kuplat sijoittuvat a-muuttujan ylempiin arvoihin mutta vaihtelevat b-muuttujan arvojen mukaan. Koot ovat määriteltyjä muuttuja c:n mukaan, ja vaihtelevat yhden ja kymmenen välillä.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-kuplakaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.6: Kuplakaavio. Muuttuja c on esitettynä kuplan koossa.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-laatikkokaavio-teoria" class="level3" data-number="1.4.7">
+<h3 data-number="1.4.7" class="anchored" data-anchor-id="sec-laatikkokaavio-teoria"><span class="header-section-number">1.4.7</span> Laatikkokaavio (ruutu ja jana)</h3>
+<p><strong>Laatikkokaavio</strong> (engl. <em>box plot</em>) on yhden muuttujan kuvaileva kaavio, jossa esitetään muuttujan jakauman sijaintilukuja. Laatikkokaavio on erinomainen tapa nopeasti esitellä muuttujan jakauma. Asettamalla monta laatikkoa vierekkäin voit myös vertailla muuttujien jakaumia.</p>
+<p><u>Laatikkokaaviota voi käyttää vain välimatka- ja suhdeasteikolla</u>, joskin sen käyttö järjestysasteikolla on jokseenkin yleistä.</p>
+<p><u>Laatikkokaaviossa käytetään yhtä muuttujaa</u>, joskin useamman esittely vierekkäin onnistuu myös. USsamman laatikon käyttö on suotavaa varsinkin jos haluat esittää mahdollisia eroja muuttujien jakaumien välillä.</p>
+<p><u>Vaaka-akselilla on muuttuja(t).</u> Yhden muuttujan laatikkokaaviossa vaaka-akseli on valinnainen, mutta muista kirjata muuttujan nimi joka tapauksessa.</p>
+<p><u>Pystyakselilla on muuttujan arvoasteikko</u>, mitattuna alkuperäisissä mitoissa. Laatikkokaaviota tulisi käyttää vain absoluuttisilla mitoilla. Jos esität useampaa muuttujaa kerralla, kaikkien tulisi olla mitattuna samalla mitalla - älä siis sekoita eri tavoin mitattuja muuttujia (esim. euroja ja senttimetrejä).</p>
+<p>Laatikkokaaviossa on seuraavat elementit:</p>
+<ul>
+<li><p>Risti tai piste, joka esittää <strong>mediaania.</strong></p></li>
+<li><p>Viiva, joka esittää <strong>keskiarvoa.</strong></p></li>
+<li><p>Laatikko, joka esittää jakauman <strong>kvartiiliväliä</strong> (ala- ja yläkvartiilit)</p></li>
+<li><p>Viivat laatikon alla ja yllä, jotka esittävät jakauman <strong>pienintä ja suurinta arvoa</strong></p></li>
+<li><p>(Valinnainen): Pisteet laatikon ulkopuolella, jotka esittävät <strong>ääripääarvoja.</strong></p></li>
+</ul>
+<p>Laatikkokaaviosta löytyy myös vaihtoehtoinen muoto, <strong>viulukaavio</strong> (engl. <em>violin plot</em>), jossa laatikon muoto kuvastaa jakauman suhteellista tiheyttä eri tasoilla. Mitä leveämpi kohta, sitä enemmän datapisteitä sillä tasolla pystyakselia.</p>
+<div id="fig-esim-laatikkokaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Laatikkokaavio nimeltä &quot;Muuttujat a, b ja c&quot;. Kuviossa on kolme laatikkokaaviota vierekkäin. B-muuttuja eroaa selkeästi muista. C-muuttujan keskiarvo ja mediaani on selkeästi muita korkeammalla.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-esim-laatikkokaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../pics/visualisointi/esim_laatikkokaavio.png" class="img-fluid figure-img" alt="Laatikkokaavio nimeltä &quot;Muuttujat a, b ja c&quot;. Kuviossa on kolme laatikkokaaviota vierekkäin. B-muuttuja eroaa selkeästi muista. C-muuttujan keskiarvo ja mediaani on selkeästi muita korkeammalla.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-esim-laatikkokaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;1.7: Kolme laatikkokaaviota. HUOM: Merkintöjen ja laatikkojen väriero on liian pieni jos tämän kuvion haluasi julkaista todellisessa tutkimuksessa.
+</figcaption>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-nichols" class="csl-entry" role="listitem">
+Nichols, David. ei pvm. <span>”Coloring for Colorblindness”</span>. <a href="http://www.davidmathlogic.com/colorblind/">http://www.davidmathlogic.com/colorblind/</a>.
+</div>
+<div id="ref-nieminen2020" class="csl-entry" role="listitem">
+Nieminen, Anniina. 2020. <span>”Puna-vihersokeuden huomioiminen infografiikassa”</span>. Opinnäytetyö, Helsinki. <a href="https://www.theseus.fi/bitstream/handle/10024/347990/nieminen_anniina.pdf?sequence=2">https://www.theseus.fi/bitstream/handle/10024/347990/nieminen_anniina.pdf?sequence=2</a>.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopioitu!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopioitu!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/ohjeita/ohjeitaviittaamiseen.html" class="pagination-link" aria-label="Ohjeita viittaamiseen">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Tekijänoikeudet (c) 2023-2024, Oliver Saal</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action"><i class="bi bi-github"></i>Ilmoita ongelmasta</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
