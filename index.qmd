@@ -32,8 +32,8 @@ Tämä verkkokirja käyttää [Creative Commons Nimeä-EiKaupallinen 4.0 Kansain
 
 Voit viitata tähän kirjaan muodossa:
 
-> Saal, O. (2023). Kvantitatiiviset menetelmät -kurssin verkkokirja. \[Versio {{< var version >}}\]. https://osaal.github.io/KVANT-23-PEO/.
+> Saal, O. (2024). Kvantitatiiviset menetelmät -kurssin verkkokirja. \[Versio {{< var version >}}\]. https://osaal.github.io/KVANT-23-PEO/.
 
 ## Uusin päivitys {#sec-uusin-paivitys}
 
-{{< include historia/_1.3.qmd >}}
+{{< include historia/_1.3.1.qmd >}}

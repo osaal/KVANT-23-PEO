@@ -1,0 +1,75 @@
+# Grafiikka Excelissä {#sec-grafiikka-excelissä}
+
+Grafiikan teko Excelissä on suht yksinkertaista (verrattuna moneen muuhun tilastotyökaluun). Helpointa on valita data-alue, jonka haluaa esitellä kuvissa, valita mieluinen graaffinen esittely, ja muokata se sopivaan muotoon.
+
+Tässä luvussa käydään läpi, miten tuotat Excelissä yleisimmät graaffiset asettelut: pylväskaavio, pistekaavio ja piiraskaavio. Jos et ole tutustunut tiedon visualisointiin yleisemmin, lue @sec-visualisoinnin-alkeet.
+
+## Yleiset periaatteet kaavioiden teossa Excelissä {#sec-yleiset-periaatteet-kaavioiden-teossa-excelissä}
+
+1.  Laske tilastot, jotka haluat esittää kaaviossa, esim. kategoriamäärät (ks. @sec-toiminto06).
+2.  Valitse lasketut tilastot, ml. mahdolliset otsikot ja selitteet.
+3.  `Lisää > Suositellut kaaviot`, valitse mieluisesi kaavio.
+4.  Muokkaa kaaviota sopivaksi.
+5.  Leikkaa ja liimaa kaavio Wordiin, tai oikeaklikkaa kaaviota ja valitse `Tallenna kuvana...`
+
+Kaavioita voi tuottaa myös suoraan tilastoista, hyödyntäen Power-kaaviomenetelmää. Emme kuitenkaan käytä näitä tällä kurssilla.
+
+## Kaavion lisääminen {#sec-kaavion-lisääminen}
+
+Aloita valitsemalla haluamasi tilastot (kohta 2 yllä, @sec-yleiset-periaatteet-kaavioiden-teossa-excelissä).
+
+Navigoi sitten työkaluvälilehdessä kohtaan `Lisää > Suositellut kaaviot`. Voit valita kaaviosuosituksista tai kaikkien kaavioiden välillä `Kaikki kaaviot`-välilehdeltä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi perustuvan esikatselun kaavion ulkonäöstä (@fig-grafiikka-lisääkaavio).
+
+![Lisää kaavio -ikkuna.](../../pics/grafiikka/grafiikka_lisääkaavio.png){#fig-grafiikka-lisääkaavio fig-alt="Kuvakaappaus Excelin Lisää kaavio -ikkunasta. Välilehti \"Kaikki kaaviot\" on auki, kohdassa \"Pylväskaavio\"."}
+
+Kun olet löytänyt mieluisen (tai tarpeeksi mieluisen) kaavion, valitse se ja paina `OK`. Excel lisää kaavion työlehtiöön.
+
+Kaaviot ovat siinä mielessä erityisiä, että [vaikka ne elävät työlehtiöissä, niitä voi siirrellä vapaasti mihin tahansa lehtiön sisällä]{.underline} (tai jopa toiseen lehtiöön). Voit siis asettaa kaavion mieluiseen kohtaan lehtiötä, jossa se ei peitä muita työn alla olevia soluja.
+
+## Kaavion muokkaaminen {#sec-kaavion-muokkaaminen}
+
+Kun olet lisännyt kaavion, Excel tuottaa hyvin alkeellisen version siitä (@fig-grafiikka-raakapylväskaavio). Ennen kuin voit käyttää tätä, sinun tulee lisätä selitteitä ja muokata ulkonäköä sopivaksi. Jos kaksoisnäpäytät kaaviota jossain sen tyhjällä alueella, saat esille kaavioalueen muokkauspaneelin Excelin oikealle puolelle.
+
+![Pylväskaavio Excelissä. Kaavion data-alueet ovat määriteltynä kaavion oikealla puolella, violetilla ja sinisellä alueella.](../../pics/grafiikka/grafiikka_raakapylväskaavio.png){#fig-grafiikka-raakapylväskaavio fig-alt="Kuvakaappaus pylväskaaviosta Excelistä. Kaavio esittää muuttujan taajuuksia, jossa on neljä kategoriaa ja niitä vastaavat taajuusarvot. Kaavio on sininen pylväskaavio, ja sen otsikkona on \"Kaavion otsikko\"."}
+
+Jokaiselle kaavion osalle löytyy oma muokkausnäkymä, jonka saat esille näpäyttämällä muokkauspaneelin pudotusvalikkoa näkymän ylävasemmassa nurkassa (@fig-grafiikka-muokkauspaneeli). Voit myös näpäyttää mitä tahansa kaavion osaa nähdäksesi sen osan muokkausnäkymän paneelissa, kunhan paneeli on auki.
+
+![Kaavion muokkauspaneeli.](../../pics/grafiikka/grafiikka_muokkauspaneeli.png){#fig-grafiikka-muokkauspaneeli fig-alt="Kuvakaappaus Excelistä kaavion muokkauspaneelista. Muokkauspaneelin näkymä on \"Kaavion asetukset\", ja näkymien pudotusvalikko on auki."}
+
+[Uusia osia kuvaan voit lisätä]{.underline} painamalla ensin kaaviota kerran, ja sitten painamalla vihreää `+`-painiketta kaavion oikealla puolella. Lisäämisen jälkeen voit kaksoisnäpäyttää lisättyjä elementtejä (esim. akseleiden tai arvopisteiden otsikoita) muokataksesi niiden ulkonäköä ja sijoitusta.
+
+[Tärkeimmät muokattavat osuudet ovat]{.underline}:
+
+1.  [Selkeä otsikko kaaviolle]{.underline}. Jos raportoit tieteellisen aikakauslehteen, voit usein jättää kaavion otsikon pois ja lisätä se Wordissa kaavion alle. Tarkista kuitenkin lehden muotoiluvaatimukset ensin!
+2.  [Arvopisteiden otsikot]{.underline}. Vaikka visuaalisuus auttaa lukemisessa, usein tarkkojen arvojen näkeminen kaaviosta on hankalaa. Lisää siis jokaisen pylvään/piirasosuuden/pisteen arvot kuvioon, kunhan niitä ei ole liikaa. Jos kuvio on täynnä tekstiä, harkitse jotain muuta muotoilua arvojen esittämiseksi.
+3.  [Akseleiden otsikot]{.underline}. Kaaviossa tulee olla akseliotsikot (pois lukien piiraskaavioissa), jotka kertovat, mitä akseli esittää sekä millä mitta-asteikolla se on (esim. euroja, pisteitä, z-arvoja).
+4.  [Akseleiden koko]{.underline}. Yksimuuttujakaavioiden pystyakseli tulee aina alkaa nollasta, kaksimuuttujakaavioissa ei välttämättä.
+5.  [Värit]{.underline}. Vaihda aina värit saavutettaviksi. Hyödynnä kaksoisesittämistä, jolloin esität jokaisen kategorian sekä väreillä että graafisilla kuvioilla. Tällöin kaavio on paremmin luettavissa harmaaskaalaisena sekä värisokealle tai heikkonäköiselle henkilölle. Tarkista myös, että värien välinen kontrasti on tarpeeksi suuri - vaaleanharmaan ja valkoisen välillä voi olla hyvin vaikeaa erottaa[^excelgrafiikka-1], kuten esim. erisävyisten värien välillä.
+
+[^excelgrafiikka-1]: Jopa henkilöille, joilla muuten on täydellinen näkö!
+
+Alla on esimerkki kaaviosta, jonka olen muotoillut valmiiseen muotoon (@fig-grafiikka-valmispylväskaavio).
+
+![Valmis versio pylväskaaviosta.](../../pics/grafiikka/grafiikka_valmispylväskaavio.png){#fig-grafiikka-valmispylväskaavio fig-alt="Pylväskuvio, joka esittää palotarkastuksen koettua hyötyä. Vastausvaihtoehdot ovat neljän pisteen Likert-asteikolla erittäin hyödyttömästä erittäin hyödylliseen, ilman neutraalia vaihtoehtoa. 44 vastaajaa valitsivat melko hyödyllisen, ja vain 2 vastaajaa erittäin hyödyttömän. Hyödyllisiä on selkeästi enemmän kuin hyödyttömiä."}
+
+Seuraavassa prosessikuvailussa oletan, että muokkauspaneeli on auki. Jos se ei ole, kaksoisnäpäytä kaavion tyhjää aluetta avataksesi sen.
+
+-   [Lisäsin kuvion otsikon, akseleiden otsikot sekä arvopisteiden otsikot]{.underline}:
+
+    -   **Lisääminen**: Paina kaavaa \> Paina vihreää `+`-kuvaketta \> `Kaavion otsikko, Akselien otsikot, Arvopisteiden otsikot`
+
+    -   **Tekstin muokkaaminen**: Kaksoisnäpäytä haluttua tekstiä ja kirjoita uusi teksti.
+
+-   [Arvopisteiden otsikkojen taustaväriksi]{.underline} on valittu vaaleanharmaa, jotta se erottuisi hieman paremmin valkoisesta taustasta.
+
+    -   Näpäytä jotain arvopisteotsikkoa \> Valitse maalipurkki-ikoni \> Avaa `Täyttö`-pudotusvalikko \> `Tasainen täyttö` \> Määrittele `Väri`.
+
+-   [Väriksi on valittu Pelastusopiston punainen]{.underline}, sopiakseen Pelastusopiston graafiseen ulkonäköön. Hyödynnä opiston graafista ohjeistusta tähän.
+
+    -   Näpäytä jotain palkkia \> Valitse maalipurkki-ikoni \> Avaa `Täyttö`-pudotusvalikko \> `Tasainen täyttö` \> Määrittele `Väri`.
+
+-   [Vaihdoin kaavan selitealueen]{.underline}.
+
+    -   Kirjoita selitteet omiin soluihin jonnekin työlehtiöön (esim. arvojen viereen). Kirjoita ne samassa järjestyksessä, kuin ne ovat kaaviossa!
+
+    -   Selitealueen vaihtaminen: Oikeaklikkaa kaaviota \> `Valitse tiedot...` \> Vaaka-akselin ruudussa paina `Muokkaa` \> Valitse alue, johon olet kirjoittanut selitteet \> `OK` \> `OK`.

@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: docs
+  output-dir: site
   preview:
     port: 4200
     browser: true
@@ -14,37 +14,37 @@ book:
     - index.qmd
     - part: "Ohjeita"
       chapters:
-      - visualisoinninalkeet.qmd
-      - ohjeitaviittaamiseen.qmd
-      - tulostenraportointi.qmd
+      - "docs/ohjeita/visualisoinninalkeet.qmd"
+      - "docs/ohjeita/ohjeitaviittaamiseen.qmd"
+      - "docs/ohjeita/tulostenraportointi.qmd"
     - part: "Tilastotiede"
       chapters:
-      - mittaustasot.qmd
-      - hypoteesitestaus.qmd
-      - mallioletukset.qmd
-      - sijaintiluvut.qmd
-      - hajontaluvut.qmd
-      - merkitsevyysluvut.qmd
-      - eiparametrisettestit.qmd
-      - ttesti.qmd
-      - korrelaatio.qmd
-      - khiinneliö.qmd
+      - "docs/tilastotiede/mittaustasot.qmd"
+      - "docs/tilastotiede/hypoteesitestaus.qmd"
+      - "docs/tilastotiede/mallioletukset.qmd"
+      - "docs/tilastotiede/sijaintiluvut.qmd"
+      - "docs/tilastotiede/hajontaluvut.qmd"
+      - "docs/tilastotiede/merkitsevyysluvut.qmd"
+      - "docs/tilastotiede/eiparametrisettestit.qmd"
+      - "docs/tilastotiede/ttesti.qmd"
+      - "docs/tilastotiede/korrelaatio.qmd"
+      - "docs/tilastotiede/khiinneliö.qmd"
     - part: "Excel-toiminnot"
       chapters:
-      - excelinperusteet.qmd
-      - excelinkäyttöliittymä.qmd
-      - nimeäminenexcelissä.qmd
-      - yleisiätoimintoja.qmd
-      - excelgrafiikka.qmd
-      - funktiot.qmd
-      - lambdakaavat.qmd
+      - "docs/excel/excelinperusteet.qmd"
+      - "docs/excel/excelinkäyttöliittymä.qmd"
+      - "docs/excel/nimeäminenexcelissä.qmd"
+      - "docs/excel/yleisiätoimintoja.qmd"
+      - "docs/excel/excelgrafiikka.qmd"
+      - "docs/excel/funktiot.qmd"
+      - "docs/excel/lambdakaavat.qmd"
     - part: "Työkalut"
       chapters:
-      - webropol.qmd
-      - tilastotyökalut.qmd
-      - dmptuuli.qmd
-      - tietoarkistot.qmd
-      - zotero.qmd
+      - "docs/työkalut/webropol.qmd"
+      - "docs/työkalut/tilastotyökalut.qmd"
+      - "docs/työkalut/dmptuuli.qmd"
+      - "docs/työkalut/tietoarkistot.qmd"
+      - "docs/työkalut/zotero.qmd"
     - viiteluettelo.qmd
     - history.qmd
   sidebar:
@@ -56,40 +56,40 @@ book:
       logo: "pics/logo_nimi_nega.png"
       logo-alt: "Pelastusopiston logo"
       contents:
-        - visualisoinninalkeet.qmd
-        - ohjeitaviittaamiseen.qmd
-        - tulostenraportointi.qmd
+        - "docs/ohjeita/visualisoinninalkeet.qmd"
+        - "docs/ohjeita/ohjeitaviittaamiseen.qmd"
+        - "docs/ohjeita/tulostenraportointi.qmd"
     - id: tilastotiede
       title: "Tilastotiede"
       contents:
-        - mittaustasot.qmd
-        - hypoteesitestaus.qmd
-        - mallioletukset.qmd
-        - sijaintiluvut.qmd
-        - hajontaluvut.qmd
-        - merkitsevyysluvut.qmd
-        - eiparametrisettestit.qmd
-        - ttesti.qmd
-        - korrelaatio.qmd
-        - khiinneliö.qmd
+        - "docs/tilastotiede/mittaustasot.qmd"
+        - "docs/tilastotiede/hypoteesitestaus.qmd"
+        - "docs/tilastotiede/mallioletukset.qmd"
+        - "docs/tilastotiede/sijaintiluvut.qmd"
+        - "docs/tilastotiede/hajontaluvut.qmd"
+        - "docs/tilastotiede/merkitsevyysluvut.qmd"
+        - "docs/tilastotiede/eiparametrisettestit.qmd"
+        - "docs/tilastotiede/ttesti.qmd"
+        - "docs/tilastotiede/korrelaatio.qmd"
+        - "docs/tilastotiede/khiinneliö.qmd"
     - id: exceltoiminnot
       title: "Excel-toiminnot"
       contents:
-        - excelinperusteet.qmd
-        - excelinkäyttöliittymä.qmd
-        - nimeäminenexcelissä.qmd
-        - yleisiätoimintoja.qmd
-        - excelgrafiikka.qmd
-        - funktiot.qmd
-        - lambdakaavat.qmd
+        - "docs/excel/excelinperusteet.qmd"
+        - "docs/excel/excelinkäyttöliittymä.qmd"
+        - "docs/excel/nimeäminenexcelissä.qmd"
+        - "docs/excel/yleisiätoimintoja.qmd"
+        - "docs/excel/excelgrafiikka.qmd"
+        - "docs/excel/funktiot.qmd"
+        - "docs/excel/lambdakaavat.qmd"
     - id: työkalut
       title: "Työkalut"
       contents:
-        - webropol.qmd
-        - tilastotyökalut.qmd
-        - dmptuuli.qmd
-        - tietoarkistot.qmd
-        - zotero.qmd
+        - "docs/työkalut/webropol.qmd"
+        - "docs/työkalut/tilastotyökalut.qmd"
+        - "docs/työkalut/dmptuuli.qmd"
+        - "docs/työkalut/tietoarkistot.qmd"
+        - "docs/työkalut/zotero.qmd"
   navbar:
     background: primary
     title: "Kvantitatiiviset menetelmät"
@@ -105,7 +105,7 @@ book:
   repo-url: https://github.com/osaal/KVANT-23-PEO/
   repo-actions: [issue]
   page-footer:
-    center: "Tekijänoikeudet (c) 2023, Oliver Saal"
+    center: "Tekijänoikeudet (c) 2023-2024, Oliver Saal"
     background: primary
     border: false
   twitter-card: true

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>18&nbsp; Grafiikka Excelissä – Kvantitatiiviset menetelmät -kurssin verkkokirja</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./funktiot.html" rel="next">
+<link href="./yleisiätoimintoja.html" rel="prev">
+<link href="./pics/logo_lapinakyva.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="twitter:title" content="18&nbsp; Grafiikka Excelissä – Kvantitatiiviset menetelmät -kurssin verkkokirja">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kvantitatiiviset menetelmät</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Hae"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Vaihda navigointi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Aluksi</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ohjeita" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ohjeita</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ohjeita">    
+        <li>
+    <a class="dropdown-item" href="./visualisoinninalkeet.html">
+ <span class="dropdown-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualisoinnin alkeet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ohjeitaviittaamiseen.html">
+ <span class="dropdown-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ohjeita viittaamiseen</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tulostenraportointi.html">
+ <span class="dropdown-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tulosten raportointi</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tilastotiede" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tilastotiede</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tilastotiede">    
+        <li>
+    <a class="dropdown-item" href="./mittaustasot.html">
+ <span class="dropdown-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Muuttuja ja mittaustasot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hypoteesitestaus.html">
+ <span class="dropdown-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hypoteesitestaus</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mallioletukset.html">
+ <span class="dropdown-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallioletukset ja virhe</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sijaintiluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sijaintiluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./hajontaluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Hajontaluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./merkitsevyysluvut.html">
+ <span class="dropdown-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Merkitsevyysluvut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./eiparametrisettestit.html">
+ <span class="dropdown-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Ei-parametriset testit</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ttesti.html">
+ <span class="dropdown-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">T-testi</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./korrelaatio.html">
+ <span class="dropdown-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Korrelaatio</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./khiinneliö.html">
+ <span class="dropdown-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Khiin neliö <span class="math inline">\(\chi^2\)</span></span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-excel-toiminnot" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Excel-toiminnot</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-excel-toiminnot">    
+        <li>
+    <a class="dropdown-item" href="./excelinperusteet.html">
+ <span class="dropdown-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelinkäyttöliittymä.html">
+ <span class="dropdown-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nimeäminenexcelissä.html">
+ <span class="dropdown-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./yleisiätoimintoja.html">
+ <span class="dropdown-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./excelgrafiikka.html">
+ <span class="dropdown-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./funktiot.html">
+ <span class="dropdown-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lambdakaavat.html">
+ <span class="dropdown-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-työkalut" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Työkalut</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-työkalut">    
+        <li>
+    <a class="dropdown-item" href="./webropol.html">
+ <span class="dropdown-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Webropol</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tilastotyökalut.html">
+ <span class="dropdown-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tilastotyökalut</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dmptuuli.html">
+ <span class="dropdown-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">DMPTuuli</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tietoarkistot.html">
+ <span class="dropdown-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Tietoarkistot</span></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zotero.html">
+ <span class="dropdown-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Zotero-lähdehallintatyökalu</span></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./viiteluettelo.html"> 
+<span class="menu-text">Viiteluettelo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./history.html"> 
+<span class="menu-text">Päivityshistoria</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/osaal/KVANT-23-PEO/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excelgrafiikka.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./pics/logo_nimi_nega.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelinperusteet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Excelin perusteet</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelinkäyttöliittymä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Excelin käyttöliittymä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nimeäminenexcelissä.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Nimeäminen Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./yleisiätoimintoja.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excelgrafiikka.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funktiot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Funktiot</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lambdakaavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">LAMBDA-kaavoja</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Sisällysluettelo</h2>
+   
+  <ul>
+  <li><a href="#sec-yleiset-periaatteet-kaavioiden-teossa-excelissä" id="toc-sec-yleiset-periaatteet-kaavioiden-teossa-excelissä" class="nav-link active" data-scroll-target="#sec-yleiset-periaatteet-kaavioiden-teossa-excelissä"><span class="header-section-number">18.1</span> Yleiset periaatteet kaavioiden teossa Excelissä</a></li>
+  <li><a href="#sec-kaavion-lisääminen" id="toc-sec-kaavion-lisääminen" class="nav-link" data-scroll-target="#sec-kaavion-lisääminen"><span class="header-section-number">18.2</span> Kaavion lisääminen</a></li>
+  <li><a href="#sec-kaavion-muokkaaminen" id="toc-sec-kaavion-muokkaaminen" class="nav-link" data-scroll-target="#sec-kaavion-muokkaaminen"><span class="header-section-number">18.3</span> Kaavion muokkaaminen</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action"><i class="bi bi-github"></i>Ilmoita ongelmasta</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-grafiikka-excelissä" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Grafiikka Excelissä</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Grafiikan teko Excelissä on suht yksinkertaista (verrattuna moneen muuhun tilastotyökaluun). Helpointa on valita data-alue, jonka haluaa esitellä kuvissa, valita mieluinen graaffinen esittely, ja muokata se sopivaan muotoon.</p>
+<p>Tässä luvussa käydään läpi, miten tuotat Excelissä yleisimmät graaffiset asettelut: pylväskaavio, pistekaavio ja piiraskaavio. Jos et ole tutustunut tiedon visualisointiin yleisemmin, lue <a href="visualisoinninalkeet.html" class="quarto-xref"><span>Luku 1</span></a>.</p>
+<section id="sec-yleiset-periaatteet-kaavioiden-teossa-excelissä" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="sec-yleiset-periaatteet-kaavioiden-teossa-excelissä"><span class="header-section-number">18.1</span> Yleiset periaatteet kaavioiden teossa Excelissä</h2>
+<ol type="1">
+<li>Laske tilastot, jotka haluat esittää kaaviossa, esim. kategoriamäärät (ks. <a href="yleisiätoimintoja.html#sec-toiminto06" class="quarto-xref"><span>Alaluku 17.6</span></a>).</li>
+<li>Valitse lasketut tilastot, ml. mahdolliset otsikot ja selitteet.</li>
+<li><code>Lisää &gt; Suositellut kaaviot</code>, valitse mieluisesi kaavio.</li>
+<li>Muokkaa kaaviota sopivaksi.</li>
+<li>Leikkaa ja liimaa kaavio Wordiin, tai oikeaklikkaa kaaviota ja valitse <code>Tallenna kuvana...</code></li>
+</ol>
+<p>Kaavioita voi tuottaa myös suoraan tilastoista, hyödyntäen Power-kaaviomenetelmää. Emme kuitenkaan käytä näitä tällä kurssilla.</p>
+</section>
+<section id="sec-kaavion-lisääminen" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="sec-kaavion-lisääminen"><span class="header-section-number">18.2</span> Kaavion lisääminen</h2>
+<p>Aloita valitsemalla haluamasi tilastot (kohta 2 yllä, <a href="#sec-yleiset-periaatteet-kaavioiden-teossa-excelissä" class="quarto-xref"><span>Alaluku 18.1</span></a>).</p>
+<p>Navigoi sitten työkaluvälilehdessä kohtaan <code>Lisää &gt; Suositellut kaaviot</code>. Voit valita kaaviosuosituksista tai kaikkien kaavioiden välillä <code>Kaikki kaaviot</code>-välilehdeltä. Jokaisen kaavion kohdalla näet valitsemaasi dataasi perustuvan esikatselun kaavion ulkonäöstä (<a href="#fig-grafiikka-lisääkaavio" class="quarto-xref">Kuva&nbsp;<span>18.1</span></a>).</p>
+<div id="fig-grafiikka-lisääkaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kuvakaappaus Excelin Lisää kaavio -ikkunasta. Välilehti &quot;Kaikki kaaviot&quot; on auki, kohdassa &quot;Pylväskaavio&quot;.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafiikka-lisääkaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/grafiikka/grafiikka_lisääkaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelin Lisää kaavio -ikkunasta. Välilehti &quot;Kaikki kaaviot&quot; on auki, kohdassa &quot;Pylväskaavio&quot;.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafiikka-lisääkaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;18.1: Lisää kaavio -ikkuna.
+</figcaption>
+</figure>
+</div>
+<p>Kun olet löytänyt mieluisen (tai tarpeeksi mieluisen) kaavion, valitse se ja paina <code>OK</code>. Excel lisää kaavion työlehtiöön.</p>
+<p>Kaaviot ovat siinä mielessä erityisiä, että <u>vaikka ne elävät työlehtiöissä, niitä voi siirrellä vapaasti mihin tahansa lehtiön sisällä</u> (tai jopa toiseen lehtiöön). Voit siis asettaa kaavion mieluiseen kohtaan lehtiötä, jossa se ei peitä muita työn alla olevia soluja.</p>
+</section>
+<section id="sec-kaavion-muokkaaminen" class="level2 page-columns page-full" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="sec-kaavion-muokkaaminen"><span class="header-section-number">18.3</span> Kaavion muokkaaminen</h2>
+<p>Kun olet lisännyt kaavion, Excel tuottaa hyvin alkeellisen version siitä (<a href="#fig-grafiikka-raakapylväskaavio" class="quarto-xref">Kuva&nbsp;<span>18.2</span></a>). Ennen kuin voit käyttää tätä, sinun tulee lisätä selitteitä ja muokata ulkonäköä sopivaksi. Jos kaksoisnäpäytät kaaviota jossain sen tyhjällä alueella, saat esille kaavioalueen muokkauspaneelin Excelin oikealle puolelle.</p>
+<div id="fig-grafiikka-raakapylväskaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kuvakaappaus pylväskaaviosta Excelistä. Kaavio esittää muuttujan taajuuksia, jossa on neljä kategoriaa ja niitä vastaavat taajuusarvot. Kaavio on sininen pylväskaavio, ja sen otsikkona on &quot;Kaavion otsikko&quot;.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafiikka-raakapylväskaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/grafiikka/grafiikka_raakapylväskaavio.png" class="img-fluid figure-img" alt="Kuvakaappaus pylväskaaviosta Excelistä. Kaavio esittää muuttujan taajuuksia, jossa on neljä kategoriaa ja niitä vastaavat taajuusarvot. Kaavio on sininen pylväskaavio, ja sen otsikkona on &quot;Kaavion otsikko&quot;.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafiikka-raakapylväskaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;18.2: Pylväskaavio Excelissä. Kaavion data-alueet ovat määriteltynä kaavion oikealla puolella, violetilla ja sinisellä alueella.
+</figcaption>
+</figure>
+</div>
+<p>Jokaiselle kaavion osalle löytyy oma muokkausnäkymä, jonka saat esille näpäyttämällä muokkauspaneelin pudotusvalikkoa näkymän ylävasemmassa nurkassa (<a href="#fig-grafiikka-muokkauspaneeli" class="quarto-xref">Kuva&nbsp;<span>18.3</span></a>). Voit myös näpäyttää mitä tahansa kaavion osaa nähdäksesi sen osan muokkausnäkymän paneelissa, kunhan paneeli on auki.</p>
+<div id="fig-grafiikka-muokkauspaneeli" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kuvakaappaus Excelistä kaavion muokkauspaneelista. Muokkauspaneelin näkymä on &quot;Kaavion asetukset&quot;, ja näkymien pudotusvalikko on auki.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafiikka-muokkauspaneeli-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/grafiikka/grafiikka_muokkauspaneeli.png" class="img-fluid figure-img" alt="Kuvakaappaus Excelistä kaavion muokkauspaneelista. Muokkauspaneelin näkymä on &quot;Kaavion asetukset&quot;, ja näkymien pudotusvalikko on auki.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafiikka-muokkauspaneeli-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;18.3: Kaavion muokkauspaneeli.
+</figcaption>
+</figure>
+</div>
+<p><u>Uusia osia kuvaan voit lisätä</u> painamalla ensin kaaviota kerran, ja sitten painamalla vihreää <code>+</code>-painiketta kaavion oikealla puolella. Lisäämisen jälkeen voit kaksoisnäpäyttää lisättyjä elementtejä (esim. akseleiden tai arvopisteiden otsikoita) muokataksesi niiden ulkonäköä ja sijoitusta.</p>
+<p><u>Tärkeimmät muokattavat osuudet ovat</u>:</p>
+<ol type="1">
+<li><u>Selkeä otsikko kaaviolle</u>. Jos raportoit tieteellisen aikakauslehteen, voit usein jättää kaavion otsikon pois ja lisätä se Wordissa kaavion alle. Tarkista kuitenkin lehden muotoiluvaatimukset ensin!</li>
+<li><u>Arvopisteiden otsikot</u>. Vaikka visuaalisuus auttaa lukemisessa, usein tarkkojen arvojen näkeminen kaaviosta on hankalaa. Lisää siis jokaisen pylvään/piirasosuuden/pisteen arvot kuvioon, kunhan niitä ei ole liikaa. Jos kuvio on täynnä tekstiä, harkitse jotain muuta muotoilua arvojen esittämiseksi.</li>
+<li><u>Akseleiden otsikot</u>. Kaaviossa tulee olla akseliotsikot (pois lukien piiraskaavioissa), jotka kertovat, mitä akseli esittää sekä millä mitta-asteikolla se on (esim. euroja, pisteitä, z-arvoja).</li>
+<li><u>Akseleiden koko</u>. Yksimuuttujakaavioiden pystyakseli tulee aina alkaa nollasta, kaksimuuttujakaavioissa ei välttämättä.</li>
+<li><u>Värit</u>. Vaihda aina värit saavutettaviksi. Hyödynnä kaksoisesittämistä, jolloin esität jokaisen kategorian sekä väreillä että graafisilla kuvioilla. Tällöin kaavio on paremmin luettavissa harmaaskaalaisena sekä värisokealle tai heikkonäköiselle henkilölle. Tarkista myös, että värien välinen kontrasti on tarpeeksi suuri - vaaleanharmaan ja valkoisen välillä voi olla hyvin vaikeaa erottaa<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, kuten esim. erisävyisten värien välillä.</li>
+</ol>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Jopa henkilöille, joilla muuten on täydellinen näkö!</p></div></div><p>Alla on esimerkki kaaviosta, jonka olen muotoillut valmiiseen muotoon (<a href="#fig-grafiikka-valmispylväskaavio" class="quarto-xref">Kuva&nbsp;<span>18.4</span></a>).</p>
+<div id="fig-grafiikka-valmispylväskaavio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pylväskuvio, joka esittää palotarkastuksen koettua hyötyä. Vastausvaihtoehdot ovat neljän pisteen Likert-asteikolla erittäin hyödyttömästä erittäin hyödylliseen, ilman neutraalia vaihtoehtoa. 44 vastaajaa valitsivat melko hyödyllisen, ja vain 2 vastaajaa erittäin hyödyttömän. Hyödyllisiä on selkeästi enemmän kuin hyödyttömiä.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafiikka-valmispylväskaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/grafiikka/grafiikka_valmispylväskaavio.png" class="img-fluid figure-img" alt="Pylväskuvio, joka esittää palotarkastuksen koettua hyötyä. Vastausvaihtoehdot ovat neljän pisteen Likert-asteikolla erittäin hyödyttömästä erittäin hyödylliseen, ilman neutraalia vaihtoehtoa. 44 vastaajaa valitsivat melko hyödyllisen, ja vain 2 vastaajaa erittäin hyödyttömän. Hyödyllisiä on selkeästi enemmän kuin hyödyttömiä.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafiikka-valmispylväskaavio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;18.4: Valmis versio pylväskaaviosta.
+</figcaption>
+</figure>
+</div>
+<p>Seuraavassa prosessikuvailussa oletan, että muokkauspaneeli on auki. Jos se ei ole, kaksoisnäpäytä kaavion tyhjää aluetta avataksesi sen.</p>
+<ul>
+<li><p><u>Lisäsin kuvion otsikon, akseleiden otsikot sekä arvopisteiden otsikot</u>:</p>
+<ul>
+<li><p><strong>Lisääminen</strong>: Paina kaavaa &gt; Paina vihreää <code>+</code>-kuvaketta &gt; <code>Kaavion otsikko, Akselien otsikot, Arvopisteiden otsikot</code></p></li>
+<li><p><strong>Tekstin muokkaaminen</strong>: Kaksoisnäpäytä haluttua tekstiä ja kirjoita uusi teksti.</p></li>
+</ul></li>
+<li><p><u>Arvopisteiden otsikkojen taustaväriksi</u> on valittu vaaleanharmaa, jotta se erottuisi hieman paremmin valkoisesta taustasta.</p>
+<ul>
+<li>Näpäytä jotain arvopisteotsikkoa &gt; Valitse maalipurkki-ikoni &gt; Avaa <code>Täyttö</code>-pudotusvalikko &gt; <code>Tasainen täyttö</code> &gt; Määrittele <code>Väri</code>.</li>
+</ul></li>
+<li><p><u>Väriksi on valittu Pelastusopiston punainen</u>, sopiakseen Pelastusopiston graafiseen ulkonäköön. Hyödynnä opiston graafista ohjeistusta tähän.</p>
+<ul>
+<li>Näpäytä jotain palkkia &gt; Valitse maalipurkki-ikoni &gt; Avaa <code>Täyttö</code>-pudotusvalikko &gt; <code>Tasainen täyttö</code> &gt; Määrittele <code>Väri</code>.</li>
+</ul></li>
+<li><p><u>Vaihdoin kaavan selitealueen</u>.</p>
+<ul>
+<li><p>Kirjoita selitteet omiin soluihin jonnekin työlehtiöön (esim. arvojen viereen). Kirjoita ne samassa järjestyksessä, kuin ne ovat kaaviossa!</p></li>
+<li><p>Selitealueen vaihtaminen: Oikeaklikkaa kaaviota &gt; <code>Valitse tiedot...</code> &gt; Vaaka-akselin ruudussa paina <code>Muokkaa</code> &gt; Valitse alue, johon olet kirjoittanut selitteet &gt; <code>OK</code> &gt; <code>OK</code>.</p></li>
+</ul></li>
+</ul>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopioitu!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopioitu!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./yleisiätoimintoja.html" class="pagination-link" aria-label="Yleisiä toimintoja Excelissä">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Yleisiä toimintoja Excelissä</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./funktiot.html" class="pagination-link" aria-label="Funktiot">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Funktiot</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Tekijänoikeudet (c) 2023, Oliver Saal</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/osaal/KVANT-23-PEO/issues/new" class="toc-action"><i class="bi bi-github"></i>Ilmoita ongelmasta</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

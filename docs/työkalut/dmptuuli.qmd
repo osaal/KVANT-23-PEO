@@ -1,0 +1,43 @@
+# DMPTuuli {#sec-dmptuuli}
+
+[**DMPTuuli**](https://dmptuuli.fi/) on DMP-konsortion ylläpitämä työkalu, jolla voit luoda tietojenkäsittelysuunnitelmia tutkimuksellesi. Pelastusopistolla ei tällä hetkellä ole käyttöoikeuksia DMPTuuliin, mutta useimmilla yliopistoilla, tutkimuslaitoksilla, ammattikorkeakouluilla sekä joillain ministeriöillä pääsee käyttämään työkalua. Voit kuitenkin ladata valmiita tiedonhallintasuunnitelmia ilman rekisteröintiä.
+
+Kirjaudu käyttämällä organisaatiosi HAKA-tunnistusta. Tämän jälkeen sinun tulee tehdä käyttäjätili DMPTuuleen, jonka avulla voit myöhemmin kirjautua ilman HAKA-tunnistusta.
+
+## Yleisnäkymä {#sec-yleisnäkymä}
+
+Kirjautuessasi sisään näet DMPTuulen **yleisnäkymän** (@fig-dmptuuli-yleisnäkymä).
+
+![DMPTuulen yleisnäkymä](../../pics/dmptuuli/dmptuuli_yleisnäkymä.png){#fig-dmptuuli-yleisnäkymä fig-alt="DMPTuulen yleisnäkymä. Suunnitelmia on yksi. Kirjautumisnäkymä on Åbo Akademin."}
+
+Alueen keskeltä voit nähdä omat suunnitelmasi, sekä laatia uuden suunnitelman. Jos painat "**Uusi suunnitelma**" -nappia, pääset määrittelemään suunitelman nimen, organisaation ja rahoittajan (@fig-dmptuuli-uusisuunnitelma). Nämä vaikuttavat suunnitelman osiin - tietyt rahoittajat vaativat tietynlaisia osuuksia suunnitelmassa.
+
+![Uuden suunnitelman laatiminen](../../pics/dmptuuli/dmptuuli_uusisuunnitelma.png){#fig-dmptuuli-uusisuunnitelma fig-alt="Uuden suunnitelman laatiminen. Projektin nimi on Testisuunnitelma. Projektille on merkitty, että se on testaamista varten, eikä sille löydy organisaatiota tai rahoittajaa."}
+
+## Suunnitelman muokkaus ja tallennus {#sec-suunnitelman-muokkaus-ja-tallennus}
+
+Kun olet tehnyt suunnitelman pääset **muokkausnäkymään**. Näkymä on jaettu välilehtiin. Ensimmäisessä välilehdessä syötät projektin yleistietoja (@fig-dmptuuli-projektintiedot). Tähän voit syöttää abstraktin, tutkimusalueen, projektin ajanjakson sekä rahoittajatietoja.
+
+![Projektin tiedot -välilehti](../../pics/dmptuuli/dmptuuli_projektintiedot.png){#fig-dmptuuli-projektintiedot fig-alt="Projektin tiedot -välilehti. Projektin nimi on testisuunnitelma, eikä tiivistelmää ole lisätty. Projekti on tutkimusalueelta sosiologia, alkaa tammikuun ensimmäisenä päivänä vuonna 2024 ja loppuu vuoden loppuun. Rahoittajaa ei olla määritelty."}
+
+**Osallistujat**-välilehdellä voit määritellä, ketkä tahot ovat mukana kirjoittamassa projektin suunnitelmaa. Paina "Lisää uusi osallistuja" määritelläksesi osallistujan tiedot, sekä mitkä roolit hän ottaa tietojenkäsittelysuunnitelman myötä (@fig-dmptuuli-uusiosallistuja). Nämä ovat henkilötietojen lailliset käsittelijäryhmät, ja vaikuttavat myös siihen, mitä henkilö voi tehdä DMPTuuleen tallennetussa suunnitelmassa.
+
+![Uuden osallistujan lisääminen](../../pics/dmptuuli/dmptuuli_uusiosallistuja.png){#fig-dmptuuli-uusiosallistuja fig-alt="Uuden osallistujan lisääminen."}
+
+**Kirjoita suunnitelma** -osioissa täytät itse suunnitelman tiedot (@fig-dmptuuli-kirjoitasuunnitelma). Riippuen siitä, minkä pohjan järjestelmä on antanut sinulle (mikä itsessään riippuu mm. kotiorganisaatiosta ja rahoittajasta), voit nähdä osittain erilaisen näkymän kuin kuvassa. Suunnitelma on jaettu osioihin, jotka voit avata erikseen ja täyttää tiedoillasi. Jokaiselle alueelle on oma ohjeistuksensa. Helpointa on ensin kirjoittaa teksti johonkin tiedostoon, ja sitten siirtää se DMPTuuleen oikeaan osioon, jos verkkoyhteytesi katkeaa kesken kirjoittamisen.
+
+![Kirjoita suunnitelma -välilehti](../../pics/dmptuuli/dmptuuli_kirjoitasuunnitelma.png){#fig-dmptuuli-kirjoitasuunnitelma fig-alt="Kirjoita suunnitelma -välilehti. Näkymällä on kuusi kategoriaa englanniksi. Kaikki kategoriat ovat suljettuina, mutta voi avata painamalla niitä."}
+
+**Tutkimustulokset**-alueella voit lisätä yksittäisiä tutkimustuloksia, määritellä niiden tyypit, arkistot ja metadatajärjestelmät, sekä ilmaista, millä lisenssillä ne julkaistaan (jos julkaistaan). Järjestelmä ohjeistaa sinua tekemään tämän vasta projektin lopussa, koska tuotannot voivat muuttua - muistakin, että tietojenkäsittelysuunnitelma on elävä dokumentti, jota kannattaa päivitellä koko projektin elinkaaren aikana.
+
+![Tutkimustulokset-välilehti](../../pics/dmptuuli/dmptuuli_tutkimustulokset.png){#fig-dmptuuli-tutkimustulokset fig-alt="Tutkimustulokset-välilehti. Osioon on lisätty yksi tutkimustulos: kerätty datasetti, tyypiltä 'Dataset'. Sen ilmaistaan julkaistavaksi Zenodo-arkistossa tammikuun ensimmäisenä päivänä vuonna 2025, käyttöoikeustasoltaan 'Open'- eli avoimella tasolla."}
+
+**Jaa**-välilehdeltä voit jaata DMPTuulen suunnitelman eri tahoille sekä määritellä sen näkyvyyden muille organisaation toimijoille (tai kaikille avoimeksi, jos haluat).
+
+**Lataa**-välilehdeltä voit ladata suunnitelman monessa eri muodossa, sekä muokata ladattavan tiedoston muotoilua ja sisältöä.
+
+## Valmiin mallin lataaminen {#sec-valmiin-mallin-lataaminen}
+
+[Voit ladata DMPTuulista valmiita suunnitelmapohjia]{.underline}, joita voit täytellä suoraan Wordissa tai muussa tekstinkäsittelyohjelmassa. Jos olet kirjautunut, löydät ne yläpalkista osiosta "Esimerkit \> Julkiset suunnitelmapohjat"; jos et ole kirjautunut, yläpalkissa lukeekin vain "Julkiset suunnitelmapohjat".
+
+Pohjia löytyy erittäin paljon, ja voit hakea niitä nimen tai rahoittajan mukaan. Pohja nimeltä "**General Finnish DMP template**" on yleismalli, jota voit hyödyntää omassa työssäsi. Voit ladata pohjan PDF- tai Word-tiedostona ja selailla sitä. Pohjasta näet samat osiot kuin mitä täyttäisit DMPTuulen käytössä (ks. @sec-suunnitelman-muokkaus-ja-tallennus).
