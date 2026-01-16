@@ -5,6 +5,9 @@ project:
     port: 4200
     browser: true
 
+resources:
+- CNAME
+
 book:
   title: "Kvantitatiiviset menetelmät -kurssin verkkokirja"
   author: "Oliver Saal"
